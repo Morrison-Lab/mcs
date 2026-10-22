@@ -33,12 +33,12 @@ Use your stylistic judgment to determine when this rule applies.
 
 ❌ **Don't** use comma-separated lists for three or more items:
 ```
-The template includes GitHub Actions workflows for publishing, link checking, and spell checking.
+This repository includes GitHub Actions workflows for publishing, link checking, and spell checking.
 ```
 
 ✅ **Do** use bullet lists instead:
 ```
-The template includes GitHub Actions workflows for:
+This repository includes GitHub Actions workflows for:
 
 - Publishing
 - Link checking

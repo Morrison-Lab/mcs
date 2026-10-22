@@ -5,8 +5,9 @@ The same conventions apply to GitHub Copilot --- see [`.github/copilot-instructi
 
 ## Project context
 
-`qwt` (Quarto Website Template) is a template repository for [Quarto](https://quarto.org/) websites maintained by the UCD-SERG lab.
-Downstream repos are created from this template via the GitHub "Use this template" button, so changes here propagate to new books.
+`mcs` holds the lecture notes for CSCI 201, math for computer science, as a [Quarto](https://quarto.org/) website.
+It was created from the [`Morrison-Lab/qwt`](https://github.com/Morrison-Lab/qwt) template, and general mathematics lives in [`Morrison-Lab/mds`](https://github.com/Morrison-Lab/mds), which these notes link to rather than duplicate.
+Assessments, solutions and labs belong in the private `Morrison-Lab/mcsg` repository, never here.
 
 Authoritative style guides:
 
@@ -78,14 +79,12 @@ Key points:
 `.claude/settings.json` declares the `Morrison-Lab` marketplace (source:
 [`Morrison-Lab/ai-config`](https://github.com/Morrison-Lab/ai-config)) and enables
 its `ai-config@Morrison-Lab` plugin, along with the `posit-dev-skills` and `sembr`
-marketplaces this template also carries, matching
+marketplaces the qwt template also carries, matching
 [`Morrison-Lab/qbt`](https://github.com/Morrison-Lab/qbt).
 Declaring is not
 installing: a local session still needs `claude plugin install ai-config@Morrison-Lab`
 once.
-Because this is a template repository, this declaration is copied once into
-every repo created from it --- an omission here silently ships to every downstream
-site.
+This declaration came from the qwt template.
 
 ## Pull request expectations
 
@@ -97,7 +96,7 @@ site.
 ## Things to avoid
 
 - Adding new top-level dependencies (R packages, Quarto extensions) without a clear reason;
-  this is a template, so every dependency lands in every downstream book.
+  each dependency is one more thing to keep updated.
 - Reformatting unrelated files.
 - Inventing URLs or citations --- only use sources actually present in `references.bib` or explicitly provided.
 

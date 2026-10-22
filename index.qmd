@@ -12,7 +12,8 @@ format:
 
 # Welcome {.unnumbered}
 
-This is a Quarto website template that you can use to create your own website.
+These are the lecture notes for CSCI 201, math for computer science (discrete mathematics), at Western Washington University.
+General mathematics that several courses share, such as logic, sets and functions, is kept in the [mathematics prerequisites](https://morrison-lab.github.io/mds/) site, and these notes link to it.
 
 The notes are available in multiple formats:
 
@@ -24,19 +25,7 @@ The notes are available in multiple formats:
 ## About this website
 
 This website is built with [Quarto](https://quarto.org/), an open-source scientific and technical publishing system.
-You can use Quarto to create books, websites, blogs, presentations, and more from markdown files.
-
-## Getting Started
-
-To use this template:
-
-1. **Update the configuration**: Edit `_quarto-website.yml` to change the website title, site URL, and navigation menu.
-
-2. **Add your content**: Create new `.qmd` files for each page and add them to the navigation menu and the sidebar in `_quarto-website.yml` (the sidebar order sets the previous/next page links).
-
-3. **Customize the style**: Modify `styles.css` to change the appearance of your website.
-
-4. **Add references**: Update `references.bib` with your citations.
+It was created from the [Morrison-Lab/qwt](https://github.com/Morrison-Lab/qwt) template.
 
 ## Building the website
 
@@ -52,25 +41,11 @@ To preview the website with live reload:
 quarto preview
 ```
 
-The rendered output will be in the `_site/` directory, which can be published to GitHub Pages.
-
-## Publishing to GitHub Pages
-
-This template includes a GitHub Actions workflow that automatically builds and publishes your website to GitHub Pages when you push to the main branch.
-
-To enable GitHub Pages:
-
-1. Go to your repository settings
-2. Navigate to "Pages" in the left sidebar
-3. Under "Build and deployment", set Source to "GitHub Actions"
-4. Push your changes to the main branch
-5. The workflow will automatically build and deploy your website
-
-Your website will be available at `https://YOUR-USERNAME.github.io/YOUR-REPO/`
+The rendered output will be in the `_site/` directory, which GitHub Actions publishes to GitHub Pages at <https://morrison-lab.github.io/mcs/>.
 
 ## License
 
-Add your license information here.
+The notes are released under the MIT License; see the `LICENSE` file.
 
 ## References {.unnumbered}
 

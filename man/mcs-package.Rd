@@ -17,7 +17,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Your Name \email{your.email@example.com}
+\strong{Maintainer}: Ezra Morrison \email{d.ezra.morrison@gmail.com}
 
 }
 \keyword{internal}
