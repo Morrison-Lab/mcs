@@ -1,8 +1,10 @@
 # Keep git submodules and pinned GitHub Actions up to date automatically.
 #
-# This repository embeds the shared `macros` repo as the `latex-macros` git submodule. Dependabot's
+# This repository embeds the shared `macros` repo as the `latex-macros` git submodule.
+# Dependabot's
 # `gitsubmodule` updater opens a PR whenever a submodule's default branch
-# (currently `main`) advances, so nobody has to bump the pointer by hand. See the ADR at Morrison-Lab/macros
+# (currently `main`) advances, so nobody has to bump the pointer by hand.
+# See the ADR at Morrison-Lab/macros
 # (docs/adr/0001-macros-submodule-versioning.md) for why we track `main` rather
 # than a pinned release tag.
 version: 2
