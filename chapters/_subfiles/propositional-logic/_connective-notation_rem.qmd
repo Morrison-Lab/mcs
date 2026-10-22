@@ -8,6 +8,6 @@ and Java and C write `!p`, `p && q` and `p || q`.
 
 In everyday English, "soup or salad" often means one but not both.
 The logical "or" always allows both,
-as the first row of its truth table shows.
+as the first row of the table for $P \lor Q$ in @exr-decode-connectives shows.
 
 :::
