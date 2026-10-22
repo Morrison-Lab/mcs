@@ -1,0 +1,15 @@
+::: {#sol-evaluate-not-and}
+
+$$
+\begin{aligned}
+\neg (P \land Q) \lor R
+&= \neg (\mathrm{T} \land \mathrm{F}) \lor \mathrm{F} \\
+&= \neg \mathrm{F} \lor \mathrm{F} \\
+&= \mathrm{T} \lor \mathrm{F} \\
+&= \mathrm{T}
+\end{aligned}
+$$
+
+The proposition is true.
+
+:::

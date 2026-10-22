@@ -13,7 +13,8 @@ format:
 # Welcome {.unnumbered}
 
 These are the lecture notes for CSCI 201, math for computer science (discrete mathematics), at Western Washington University.
-General mathematics that several courses share, such as logic, sets and functions, is kept in the [mathematics prerequisites](https://morrison-lab.github.io/mds/) site, and these notes link to it.
+General mathematics that several courses share, such as logic, sets and functions, is kept in the [mathematics prerequisites](https://morrison-lab.github.io/mds/) site.
+These notes include its definitions, from the `mds` submodule, so each definition is written once and reads the same in both places.
 
 The notes are available in multiple formats:
 

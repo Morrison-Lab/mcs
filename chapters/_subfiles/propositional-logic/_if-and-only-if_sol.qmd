@@ -1,0 +1,8 @@
+::: {#sol-if-and-only-if}
+
+- "$P$ if $Q$" is $Q \Rightarrow P$ (@rem-conditional-phrasings).
+- "$P$ only if $Q$" is $P \Rightarrow Q$ (@sol-only-if).
+
+So "$P$ if and only if $Q$" says that $P \Rightarrow Q$ and $Q \Rightarrow P$ are both true.
+
+:::

@@ -1,0 +1,14 @@
+::: {#sol-broken-promise}
+
+Only in the second row:
+the child cleaned the room and got no dessert.
+
+When the room was not cleaned,
+the promise says nothing about dessert,
+so the parent kept it whether or not dessert came.
+
+Writing $P$ for "you clean your room"
+and $Q$ for "you get dessert",
+the promise "if $P$, then $Q$" is false only when $P$ is true and $Q$ is false.
+
+:::

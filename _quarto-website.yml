@@ -12,6 +12,9 @@ project:
     # directly: macros-table.qmd uses DT::datatable() (an HTML widget) that
     # errors when the project also renders to PDF.
     - "!latex-macros/"
+    # The `mds` git submodule supplies shared definitions that chapters
+    # include; its own pages belong to the mds site, not this one.
+    - "!mds/"
 
 website:
   title: "Math for Computer Science"
@@ -33,14 +36,8 @@ website:
     left:
       - text: "Home"
         href: index.qmd
-      - text: "Chapters"
-        menu:
-          - text: "Chapter 1: Introduction"
-            href: chapters/chapter1.qmd
-          - text: "Chapter 2: Advanced Topics"
-            href: chapters/chapter2.qmd
-          - text: "Theorem Examples"
-            href: chapters/theorem-examples.qmd
+      - text: "Propositional Logic"
+        href: chapters/propositional-logic.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mcs
@@ -59,11 +56,7 @@ website:
     contents:
       - text: "Home"
         href: index.qmd
-      - section: "Chapters"
-        contents:
-          - chapters/chapter1.qmd
-          - chapters/chapter2.qmd
-          - chapters/theorem-examples.qmd
+      - chapters/propositional-logic.qmd
 
 callouty-theorem:
   thm:

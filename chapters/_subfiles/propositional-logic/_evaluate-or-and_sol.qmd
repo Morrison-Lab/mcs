@@ -1,0 +1,18 @@
+::: {#sol-evaluate-or-and}
+
+Substitute the truth values,
+then evaluate from the innermost parentheses outward:
+
+$$
+\begin{aligned}
+(\neg P \lor Q) \land \neg R
+&= (\neg \mathrm{T} \lor \mathrm{F}) \land \neg \mathrm{F} \\
+&= (\mathrm{F} \lor \mathrm{F}) \land \mathrm{T} \\
+&= \mathrm{F} \land \mathrm{T} \\
+&= \mathrm{F}
+\end{aligned}
+$$
+
+The proposition is false.
+
+:::

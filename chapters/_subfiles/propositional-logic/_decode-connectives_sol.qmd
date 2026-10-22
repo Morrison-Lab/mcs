@@ -1,0 +1,12 @@
+::: {#sol-decode-connectives}
+
+- $P \land Q$ is true only in the first row, where $P$ and $Q$ are both true.
+  It reads "$P$ and $Q$".
+- $P \lor Q$ is false only in the last row, where $P$ and $Q$ are both false,
+  so it is true when at least one of them is true.
+  It reads "$P$ or $Q$".
+  It is true in the first row too, where both are true.
+- $\neg P$ has the opposite truth value to $P$.
+  It reads "not $P$".
+
+:::

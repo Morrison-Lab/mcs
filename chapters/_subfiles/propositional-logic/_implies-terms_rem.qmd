@@ -1,0 +1,11 @@
+::: {#rem-implies-terms}
+#### Names for the parts, and other notation
+
+In $P \Rightarrow Q$,
+$P$ is the *premise* (also called the *hypothesis* or *antecedent*)
+and $Q$ is the *conclusion* (also called the *consequent*).
+A proposition of this form is also called a *conditional* or an *implication*.
+
+Many textbooks write $P \rightarrow Q$ for $P \Rightarrow Q$.
+
+:::

@@ -1,0 +1,28 @@
+::: {#exr-decode-connectives}
+#### What do these symbols mean?
+
+Each table lists every combination of truth values of propositions $P$ and $Q$
+(T for true, F for false),
+and the truth value of a new proposition built from them.
+Describe in words when each new proposition is true.
+
+| $P$ | $Q$ | $P \land Q$ |
+|:---:|:---:|:---:|
+| T | T | T |
+| T | F | F |
+| F | T | F |
+| F | F | F |
+
+| $P$ | $Q$ | $P \lor Q$ |
+|:---:|:---:|:---:|
+| T | T | T |
+| T | F | T |
+| F | T | T |
+| F | F | F |
+
+| $P$ | $\neg P$ |
+|:---:|:---:|
+| T | F |
+| F | T |
+
+:::

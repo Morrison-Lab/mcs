@@ -1,0 +1,7 @@
+::: {#exr-if-and-only-if}
+#### Split "if and only if"
+
+"$P$ if and only if $Q$" combines "$P$ if $Q$" and "$P$ only if $Q$".
+Write each of the two halves as an implication.
+
+:::

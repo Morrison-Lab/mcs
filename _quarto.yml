@@ -1,7 +1,11 @@
 profile:
   default: website
 
-bibliography: references.bib
+# mds/references.bib holds the citations in the definitions included from the
+# mds submodule.
+bibliography:
+  - references.bib
+  - mds/references.bib
 
 editor_options:
   chunk_output_type: console

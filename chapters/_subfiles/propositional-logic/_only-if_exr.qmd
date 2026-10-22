@@ -1,0 +1,7 @@
+::: {#exr-only-if}
+#### "Only if"
+
+Rewrite "I go to class only if I am healthy"
+in the form "if $P$, then $Q$".
+
+:::

@@ -1,3 +1,6 @@
 [submodule "latex-macros"]
 	path = latex-macros
 	url = https://github.com/Morrison-Lab/macros
+[submodule "mds"]
+	path = mds
+	url = https://github.com/Morrison-Lab/mds

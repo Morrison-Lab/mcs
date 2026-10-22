@@ -1,0 +1,15 @@
+::: {#exr-proposition}
+#### True, false, or neither?
+
+Which of these sentences and expressions are definitely true or definitely false?
+
+- Add 5 to both sides.
+- $42$
+- $42$ is an integer.
+- Adding 5 to both sides of $x - 5 = 37$ gives $x = 42$.
+- What is the solution of $2x = 84$?
+- The solution of $2x = 84$ is $41$.
+- $42$ is not a number.
+- $x$ is a multiple of $8$.
+
+:::

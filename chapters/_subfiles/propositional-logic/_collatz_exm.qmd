@@ -1,0 +1,19 @@
+::: {#exm-collatz}
+#### A proposition whose truth value nobody knows
+
+Start with a positive integer $n$.
+If $n$ is even, replace it with $n / 2$;
+if $n$ is odd, replace it with $3n + 1$.
+Repeat.
+Starting from $n = 6$ gives
+$6, 3, 10, 5, 16, 8, 4, 2, 1$.
+
+The *Collatz conjecture* [@wikipedia_collatz_conjecture]
+is the sentence
+"starting from any positive integer, the process reaches 1 after finitely many steps".
+It is a proposition,
+because it is either true or false,
+but nobody has yet proved which.
+A proposition needs a definite truth value, not a known one.
+
+:::

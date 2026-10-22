@@ -1,0 +1,9 @@
+::: {#sol-false-premise}
+
+Both are true.
+The premise "$7$ is even" is false,
+so each implication (@def-implies) is true whatever its conclusion says.
+The conclusion of the first is false and the conclusion of the second is true,
+and neither matters.
+
+:::

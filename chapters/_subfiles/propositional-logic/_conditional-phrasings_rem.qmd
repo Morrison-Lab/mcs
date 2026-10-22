@@ -1,0 +1,17 @@
+::: {#rem-conditional-phrasings}
+#### English phrasings of $P \Rightarrow Q$
+
+Each of these sentences means $P \Rightarrow Q$:
+
+- If $P$, then $Q$.
+- $Q$ if $P$.
+- $Q$ whenever $P$.
+- $Q$, provided that $P$.
+- Whenever $P$, then also $Q$.
+- $P$ is a sufficient condition for $Q$.
+- For $Q$, it is sufficient that $P$.
+- $Q$ is a necessary condition for $P$.
+- For $P$, it is necessary that $Q$.
+- $P$ only if $Q$.
+
+:::
