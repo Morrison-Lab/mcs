@@ -88,7 +88,8 @@ Try @exr-integration to practice basic integration.
 :::{.proof}
 ## Proof of the Pythagorean Theorem
 
-Consider a square with side length $a+b$. We can divide this square into four right triangles and a central square with side length $c$.
+Consider a square with side length $a+b$.
+We can divide this square into four right triangles and a central square with side length $c$.
 
 The area equations show:
 $$a^2 + b^2 = c^2$$
@@ -97,7 +98,8 @@ $$a^2 + b^2 = c^2$$
 :::{.proof}
 ## Proof that the derivative of a constant is zero
 
-Let $f(x) = c$ for some constant $c$. Then $f'(x) = 0$.
+Let $f(x) = c$ for some constant $c$.
+Then $f'(x) = 0$.
 :::
 
 # Solutions
@@ -122,7 +124,8 @@ This gives us $x = 3$ or $x = 2$.
 
 :::{#rem-convergence .remark}
 ## Convergence Note
-The limit in @def-derivative may not exist for all functions at all points. For example, the absolute value function $|x|$ is not differentiable at $x=0$.
+The limit in @def-derivative may not exist for all functions at all points.
+For example, the absolute value function $|x|$ is not differentiable at $x=0$.
 :::
 
 @rem-convergence highlights an important limitation of the derivative definition.
@@ -139,7 +142,8 @@ $$f'(c) = \frac{f(b) - f(a)}{b - a}$$
 
 :::{#exr-mvt-application}
 ## Applying the Mean Value Theorem
-Let $f(x) = x^2$ on $[0, 2]$. Find the value of $c$ guaranteed by the Mean Value Theorem (@thm-mean-value).
+Let $f(x) = x^2$ on $[0, 2]$.
+Find the value of $c$ guaranteed by the Mean Value Theorem (@thm-mean-value).
 :::
 
 :::{#sol-mvt-application .solution}

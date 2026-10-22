@@ -78,7 +78,8 @@ If you need to exclude certain URLs from checking (e.g., example URLs), add them
 
 #### Manual override for link checking
 
-If you have manually verified all links in your pull request and want to skip the automated link checker, you can add the **`links checked by hand`** label to your PR. This will cause the link checker workflow to skip the check for that specific pull request, while still running on the main branch and scheduled checks.
+If you have manually verified all links in your pull request and want to skip the automated link checker, you can add the **`links checked by hand`** label to your PR.
+This will cause the link checker workflow to skip the check for that specific pull request, while still running on the main branch and scheduled checks.
 
 ### Citations
 

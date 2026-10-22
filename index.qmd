@@ -23,7 +23,8 @@ The notes are available in multiple formats:
 
 ## About this website
 
-This website is built with [Quarto](https://quarto.org/), an open-source scientific and technical publishing system. You can use Quarto to create books, websites, blogs, presentations, and more from markdown files.
+This website is built with [Quarto](https://quarto.org/), an open-source scientific and technical publishing system.
+You can use Quarto to create books, websites, blogs, presentations, and more from markdown files.
 
 ## Getting Started
 

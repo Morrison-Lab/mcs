@@ -10,7 +10,8 @@ format:
     output-file: chapter2.docx
 ---
 
-This is the second chapter. Continue building your website with more chapters.
+This is the second chapter.
+Continue building your website with more chapters.
 
 # Mathematical Equations
 
@@ -49,19 +50,23 @@ Then reference the figure in text using `@fig-example`.
 # Callouts
 
 ::: {.callout-note}
-This is a note callout. Use it to highlight important information.
+This is a note callout.
+Use it to highlight important information.
 :::
 
 ::: {.callout-tip}
-This is a tip callout. Share helpful suggestions with your readers.
+This is a tip callout.
+Share helpful suggestions with your readers.
 :::
 
 ::: {.callout-warning}
-This is a warning callout. Alert readers to potential issues.
+This is a warning callout.
+Alert readers to potential issues.
 :::
 
 ::: {.callout-important}
-This is an important callout. Emphasize critical information.
+This is an important callout.
+Emphasize critical information.
 :::
 
 # Theorem-like Divs

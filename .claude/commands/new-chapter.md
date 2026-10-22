@@ -16,14 +16,17 @@ First, parse `$ARGUMENTS`: the first whitespace-delimited token is the **slug**
 Steps:
 
 1. Create `chapters/<slug>.qmd` with YAML frontmatter holding just `title:` (set
-   to the title). Do NOT set `date:` --- `_quarto-website.yml` sets
+   to the title).
+   Do NOT set `date:` --- `_quarto-website.yml` sets
    `date: last-modified` globally, and a per-page `date:` would override it and
-   freeze the date. Do NOT add a top-level `#` heading in the body --- Quarto
+   freeze the date.
+   Do NOT add a top-level `#` heading in the body --- Quarto
    renders the frontmatter `title:` as the page heading, so a `#` heading would
    duplicate it.
 2. Add an entry for the new chapter to the `website.navbar.left` "Chapters" menu
    in `_quarto-website.yml` (read the file first to find the menu; there is no
-   `chapters:` key in `_quarto.yml`). Use `text:` for the menu label and
+   `chapters:` key in `_quarto.yml`).
+   Use `text:` for the menu label and
    `href: chapters/<slug>.qmd`.
    Also add `chapters/<slug>.qmd` to the "Chapters" section of `website.sidebar`
    in the same position: the sidebar order sets the previous/next page links.

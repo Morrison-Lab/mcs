@@ -1,7 +1,8 @@
 # Branch rulesets
 
 Each JSON file here is a GitHub branch ruleset exported from the template's
-canonical configuration. Apply them to a new repo (after creating it from
+canonical configuration.
+Apply them to a new repo (after creating it from
 the template) with:
 
 ```sh
@@ -14,7 +15,8 @@ one with the same `name` already exists, rather than creating a duplicate.
 
 Requirements:
 
-- `gh` CLI authenticated as a repo admin (org or user). Branch rulesets
+- `gh` CLI authenticated as a repo admin (org or user).
+  Branch rulesets
   require admin scope to create.
 - `jq` available on PATH.
 
@@ -35,7 +37,8 @@ Applies to the default branch:
 ## Editing the ruleset
 
 Edit `main.json` here, then run `apply-rulesets.sh` to push the change to
-the live repo. Or edit in the GitHub UI (Settings → Rules → Rulesets) and
+the live repo.
+Or edit in the GitHub UI (Settings → Rules → Rulesets) and
 re-export with:
 
 ```sh

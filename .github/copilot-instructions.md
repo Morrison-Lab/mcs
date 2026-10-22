@@ -26,7 +26,8 @@ automatically (via each file's `applyTo:` glob) when you edit matching files:
 
 ### Lists
 
-When describing lists of three or more items, use a bullet list instead of a comma-separated list. Use your stylistic judgment to determine when this rule applies.
+When describing lists of three or more items, use a bullet list instead of a comma-separated list.
+Use your stylistic judgment to determine when this rule applies.
 
 **Examples:**
 
@@ -57,7 +58,9 @@ Always put a blank line before the start of a bullet-point list in markdown (`.m
 
 ### Code Folding
 
-HTML output folds code by default: `_quarto-website.yml` sets `code-fold: true` (with `code-tools: true`, so readers can show all code at once), as rme does. This allows readers to focus on the narrative and results while still having the option to view the code if they want to. Set `#| code-fold: false` on a chunk when readers should see its code without clicking.
+HTML output folds code by default: `_quarto-website.yml` sets `code-fold: true` (with `code-tools: true`, so readers can show all code at once), as rme does.
+This allows readers to focus on the narrative and results while still having the option to view the code if they want to.
+Set `#| code-fold: false` on a chunk when readers should see its code without clicking.
 
 **When to keep the default (folded):**
 
@@ -103,7 +106,8 @@ This ensures reviewers see working, polished output rather than discovering basi
 ### Check for Late-Arriving Comments
 
 Before declaring an agent session complete, re-read the issue/PR thread for
-comments that were posted *after* the request you started on. A follow-up or
+comments that were posted *after* the request you started on.
+A follow-up or
 correction can land while you're working, and ending the session without it
 means the next reviewer has to re-ask.
 

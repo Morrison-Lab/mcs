@@ -8,7 +8,8 @@ Review the requested changes as a Quarto-first code review for this repository.
 Scope:
 
 - Prioritize changed `.qmd`, `.R`, `.Rmd`, `.yml`, and `.yaml` files.
-- Treat files under `_extensions/` as vendored third-party code. Read them for
+- Treat files under `_extensions/` as vendored third-party code.
+  Read them for
   context if needed, but do not flag or request changes there.
 - Focus on behavior, rendering correctness, broken links or references, and
   validation gaps.

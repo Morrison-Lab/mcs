@@ -10,7 +10,8 @@ description: "Use when editing Quarto pages, chapters, slides, handouts, or narr
   list (not comma-separated prose) for three or more items.
 - Prefer Quarto div wrappers for new figures and tables.
 - HTML output folds code by default (`code-fold: true` in
-  `_quarto-website.yml`, as in rme). Keep the default when the *output* (plot,
+  `_quarto-website.yml`, as in rme).
+  Keep the default when the *output* (plot,
   table) is the point and the code is incidental; set `#| code-fold: false` on
   tutorial code, short examples, code that is the main focus, and chunks where
   the console output is the main content.
@@ -18,7 +19,8 @@ description: "Use when editing Quarto pages, chapters, slides, handouts, or narr
   `r, opt = val` arguments.
 - For a changed `.qmd` with R code, run
   `Rscript -e 'lintr::lint("path/to/file.qmd")'` before finishing.
-- Do not hard-code computed values in narrative text. Compute them in a chunk
+- Do not hard-code computed values in narrative text.
+  Compute them in a chunk
   and reference them with inline R.
 - Treat files under `_extensions/` as vendored third-party code: read them for
   context if needed, but do not reformat or edit them as part of a content

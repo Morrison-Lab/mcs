@@ -6,5 +6,7 @@ allowed-tools:
 
 Run `Rscript -e 'devtools::check()'` to run the full R package check suite.
 
-Report any ERRORs, WARNINGs, or NOTEs grouped by severity. For each issue explain
-what it means and suggest a fix. If the check passes cleanly, say so.
+Report any ERRORs, WARNINGs, or NOTEs grouped by severity.
+For each issue explain
+what it means and suggest a fix.
+If the check passes cleanly, say so.

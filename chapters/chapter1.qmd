@@ -10,7 +10,8 @@ format:
     output-file: chapter1.docx
 ---
 
-This is the first chapter of your website. Replace this content with your own.
+This is the first chapter of your website.
+Replace this content with your own.
 
 # Section 1.1 {#sec-1.1}
 
