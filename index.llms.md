@@ -1,0 +1,46 @@
+# Math for Computer Science
+
+Code
+
+Published
+
+Last modified: 2026-10-22 08:24:46 (PDT)
+
+# Welcome
+
+These are the lecture notes for CSCI 201, math for computer science (discrete mathematics), at Western Washington University. General mathematics that several courses share, such as logic, sets and functions, is kept in the [mathematics prerequisites](https://morrison-lab.github.io/mds/) site, and these notes link to it.
+
+The notes are available in multiple formats:
+
+- **HTML Website**: Navigate using the navbar for easy access to all pages
+- **RevealJS Slides**: Each chapter can generate a presentation format with `-slides.html` suffix
+- **PDF Handouts**: Each chapter can generate a PDF handout with `-handout.pdf` suffix
+- **DOCX Documents**: Each chapter can generate a Microsoft Word document with `.docx` extension
+
+## 0.1 About this website
+
+This website is built with [Quarto](https://quarto.org/), an open-source scientific and technical publishing system. It was created from the [Morrison-Lab/qwt](https://github.com/Morrison-Lab/qwt) template.
+
+## 0.2 Building the website
+
+To render the website locally:
+
+``` bash
+quarto render
+```
+
+To preview the website with live reload:
+
+``` bash
+quarto preview
+```
+
+The rendered output will be in the `_site/` directory, which GitHub Actions publishes to GitHub Pages.
+
+## 0.3 License
+
+The notes are released under the MIT License; see the `LICENSE` file.
+
+## References
+
+Back to top

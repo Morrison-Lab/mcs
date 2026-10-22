@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://morrison-lab.github.io/mcs/index.html</loc>
+    <lastmod>2026-10-22T15:24:46.661Z</lastmod>
+  </url>
+  <url>
+    <loc>https://morrison-lab.github.io/mcs/index-slides.html</loc>
+    <lastmod>2026-10-22T15:24:46.661Z</lastmod>
+  </url>
+  <url>
+    <loc>https://morrison-lab.github.io/mcs/chapters/chapter2.html</loc>
+    <lastmod>2026-10-22T15:24:46.661Z</lastmod>
+  </url>
+  <url>
+    <loc>https://morrison-lab.github.io/mcs/chapters/chapter2-slides.html</loc>
+    <lastmod>2026-10-22T15:24:46.661Z</lastmod>
+  </url>
+  <url>
+    <loc>https://morrison-lab.github.io/mcs/chapters/chapter1-slides.html</loc>
+    <lastmod>2026-10-22T15:24:46.660Z</lastmod>
+  </url>
+  <url>
+    <loc>https://morrison-lab.github.io/mcs/chapters/chapter1.html</loc>
+    <lastmod>2026-10-22T15:24:46.660Z</lastmod>
+  </url>
+  <url>
+    <loc>https://morrison-lab.github.io/mcs/chapters/{stem}-slides.html</loc>
+    <lastmod>2026-10-22T15:24:46.661Z</lastmod>
+  </url>
+  <url>
+    <loc>https://morrison-lab.github.io/mcs/chapters/theorem-examples.html</loc>
+    <lastmod>2026-10-22T15:24:46.661Z</lastmod>
+  </url>
+</urlset>
