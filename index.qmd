@@ -41,7 +41,7 @@ To preview the website with live reload:
 quarto preview
 ```
 
-The rendered output will be in the `_site/` directory, which GitHub Actions publishes to GitHub Pages at <https://morrison-lab.github.io/mcs/>.
+The rendered output will be in the `_site/` directory, which GitHub Actions publishes to GitHub Pages.
 
 ## License
 
