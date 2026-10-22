@@ -40,10 +40,11 @@ format:
         \AtBeginEnvironment{longtable}{\Needspace{8\baselineskip}}
         % Number theorem-type environments through the whole handout, as the
         % web page does, rather than within unnumbered sections ("0.1"
-        % repeated in each section). Same snippet as Morrison-Lab/mlg.
+        % repeated in each section). Same snippet as Morrison-Lab/mlg, plus
+        % refremark and refsolution, Quarto's counters for #rem- and #sol- divs.
         \makeatletter
         \AtBeginDocument{%
-          \@for\thm:=theorem,lemma,corollary,proposition,conjecture,definition,example,exercise,remark,solution\do{%
+          \@for\thm:=theorem,lemma,corollary,proposition,conjecture,definition,example,exercise,refremark,refsolution\do{%
             \@ifundefined{c@\thm}{}{\counterwithout{\thm}{section}}%
           }%
         }
