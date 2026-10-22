@@ -24,8 +24,10 @@ Authoritative style guides:
 - `_extensions/` --- vendored Quarto extensions (including `code-language-labels`, which labels each code block with its language in HTML and revealjs output;
   vendored from [`d-morrison/code-language-labels`](https://github.com/d-morrison/code-language-labels))
 - `latex-macros/` --- git submodule for shortcode/macro definitions (see `.gitmodules`)
-- `mds/` --- git submodule of [`Morrison-Lab/mds`](https://github.com/Morrison-Lab/mds), whose definition fragments the chapters include; excluded from the render (`!mds/`), with `mds/references.bib` in the bibliography
-- `chapters/<topic>.qmd` --- one chapter per topic, a spine of headings, slide breaks and includes; its units live in `chapters/_subfiles/<topic>/`, one div per file named `_<stem>_<type>.qmd`
+- `mds/` --- git submodule of [`Morrison-Lab/mds`](https://github.com/Morrison-Lab/mds), whose definition fragments the chapters include;
+  excluded from the render (`!mds/`), with `mds/references.bib` in the bibliography
+- `chapters/<topic>.qmd` --- one chapter per topic, a spine of headings, slide breaks and includes;
+  its units live in `chapters/_subfiles/<topic>/`, one div per file named `_<stem>_<type>.qmd`
 - `R/`, `man/`, `DESCRIPTION`, `NAMESPACE` --- the project is also a small R package
 - `references.bib` --- BibTeX bibliography
 - `offwhite.scss`, `theme-picker.html` --- the website's Light / Off-white / Parchment / Dark theme dropdown (`theme-picker.html` builds it, `offwhite.scss` styles the two tinted palettes);
