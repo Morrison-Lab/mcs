@@ -7,6 +7,7 @@
 - [Math for Computer Science](https://morrison-lab.github.io/mcs/index.llms.md)
 - [Propositional Logic](https://morrison-lab.github.io/mcs/chapters/propositional-logic.llms.md)
 - [Logical Equivalence and Negation](https://morrison-lab.github.io/mcs/chapters/equivalence-negation.llms.md)
+- [Contrapositive and Contradiction](https://morrison-lab.github.io/mcs/chapters/contrapositive-contradiction.llms.md)
 - [Inference and Direct Proof](https://morrison-lab.github.io/mcs/chapters/direct-proof.llms.md)
 - [Predicates and Quantifiers](https://morrison-lab.github.io/mcs/chapters/predicates-quantifiers.llms.md)
 - [WWU CSCI 201 Syllabus](https://morrison-lab.github.io/mcs/chapters/syllabus.llms.md)

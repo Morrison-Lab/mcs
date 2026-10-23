@@ -6,7 +6,7 @@ Winter 2027
 
 Published
 
-Last modified: 2026-10-23 13:40:29 (PDT)
+Last modified: 2026-10-23 14:33:57 (PDT)
 
 > **NOTE:**
 >
@@ -63,9 +63,9 @@ Office
 Communication Facility 463
 
 Email  
-<ezra.morrison@wwu.edu>, for confidential matters only
+<ezra.morrison@wwu.edu>, for matters unrelated to the course only (Teams chat is better for those)
 
-All other course correspondence goes through Canvas; see [Communication](#communication).
+All course-related correspondence goes through Canvas, including confidential matters; see [Communication](#communication).
 
 ## Course Description
 
@@ -107,7 +107,7 @@ The topics and dates of future lectures may change. Readings are sections of Epp
 | Week | Dates | Topics | Assigned work | Reading |
 |:---|:---|:---|:---|:---|
 | 1 | Jan 5–8 | Introduction to functional programming; [propositional logic](../chapters/propositional-logic.llms.md), [predicates and quantifiers](../chapters/predicates-quantifiers.llms.md), [logical equivalence and negation](../chapters/equivalence-negation.llms.md) | Quiz 0; Lab 1 | 1.1, 2.1–2.3, 3.1 |
-| 2 | Jan 11–15 | Proofs: [inference and direct proof](../chapters/direct-proof.llms.md), contrapositive, and contradiction | Lab 2; Homework 1 | 4.1–4.2, 4.4 |
+| 2 | Jan 11–15 | Proofs: [inference and direct proof](../chapters/direct-proof.llms.md), [contrapositive, and contradiction](../chapters/contrapositive-contradiction.llms.md) | Lab 2; Homework 1 | 4.1–4.2, 4.4 |
 | 3 | Jan 18–22 | Proofs, continued; sets and functions | Lab 3; Homework 2 | 1.2–1.3, 4.7–4.8 |
 | 4 | Jan 25–29 | Mathematical induction; loop invariants | **Midterm 1**, Wednesday, Jan 27 | 5.1–5.2 |
 | 5 | Feb 1–5 | Induction, continued; recurrence relations | Lab 4; Homework 3 | 5.4–5.6 |
@@ -126,7 +126,7 @@ The midterm dates are tentative. If a midterm’s date changes, I will announce 
 
 **Inbound.** All course-related correspondence goes through Canvas. Post nearly all questions and comments for me or the TAs on the class discussion forum, Canvas Discussions (link **TBD**). Anything that should not be posted there, such as a grading question or objection, goes in a Canvas message to me.
 
-The only class-related matters that should not go through Canvas at all are those containing confidential information (e.g., information about your health). Send those to my WWU email address, which is the one exception to using Canvas.
+Confidential matters, such as information about your health, also go in a Canvas message to me, not to my email.
 
 ## Questions and Corrections
 
