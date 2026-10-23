@@ -80,10 +80,13 @@ Name
 Office
 : Communication Facility 463
 
+Email
+: <ezra.morrison@wwu.edu>, for matters unrelated to the course only
+  (Teams chat is better for those)
+
 All course-related correspondence goes through Canvas,
 including confidential matters;
 see [Communication](#communication).
-Email and Teams chat are for matters unrelated to the course.
 
 ## Course Description {.unnumbered}
 
@@ -183,8 +186,6 @@ goes in a Canvas message to me.
 
 Confidential matters, such as information about your health,
 also go in a Canvas message to me, not to my email.
-Email is for matters unrelated to the course,
-and Teams chat is better for those.
 
 ## Questions and Corrections {.unnumbered}
 
