@@ -1,0 +1,12 @@
+::: {#exr-odd-linear}
+#### An odd input
+
+Show that if $n$ is an odd integer, then $3 n + 5$ is even.
+
+::: {.callout-tip}
+#### Hint
+
+What does @def-odd let you write in place of $n$?
+:::
+
+:::

@@ -1,0 +1,16 @@
+::: {#rem-fallacies}
+#### Two arguments that are not rules of inference
+
+Argument 2 of @exr-valid-arguments,
+$\dfrac{P \Rightarrow Q, \quad Q}{P}$,
+is called affirming the consequent.
+It is not a rule of inference (@def-rule-of-inference):
+$P$ false and $Q$ true make its premises true and its conclusion false.
+
+Denying the antecedent,
+$\dfrac{P \Rightarrow Q, \quad \neg P}{\neg Q}$,
+fails for the same values of $P$ and $Q$.
+Both read like modus ponens or modus tollens (@thm-inference-rules),
+which is why they are common mistakes.
+
+:::

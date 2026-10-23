@@ -1,0 +1,11 @@
+::: {#sol-divides-transitive}
+
+Suppose $a \mid b$ and $b \mid c$.
+By @def-divides, $b = a j$ and $c = b k$ for some integers $j$ and $k$.
+Then
+$$
+c = b k = (a j) k = a (j k).
+$$
+Since $j k$ is an integer, $a \mid c$, by @def-divides.
+
+:::

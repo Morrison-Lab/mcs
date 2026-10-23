@@ -1,0 +1,8 @@
+::: {#exm-direct-proof}
+#### A direct proof
+
+@sol-odd-linear is a direct proof (@def-direct-proof):
+it assumes $P$, "$n$ is an odd integer",
+and ends with $Q$, "$3 n + 5$ is even".
+
+:::

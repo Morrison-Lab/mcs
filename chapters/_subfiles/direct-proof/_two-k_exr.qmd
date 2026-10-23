@@ -1,0 +1,7 @@
+::: {#exr-two-k}
+#### Two times something, plus maybe one
+
+Write each of $14$, $15$, $-7$ and $0$
+as $2k$ or as $2k + 1$, for an integer $k$.
+
+:::

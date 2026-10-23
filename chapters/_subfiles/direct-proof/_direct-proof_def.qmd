@@ -1,0 +1,7 @@
+::: {#def-direct-proof}
+#### Direct proof
+
+A **direct proof** of a conditional $P \Rightarrow Q$ (@def-implies)
+is a proof (@def-proof) that assumes $P$ and ends with $Q$.
+
+:::

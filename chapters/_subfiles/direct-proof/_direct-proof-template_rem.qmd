@@ -1,0 +1,23 @@
+::: {#rem-direct-proof-template}
+#### The shape of a direct proof
+
+A direct proof (@def-direct-proof) of "if $P$, then $Q$" has this shape:
+
+> | Suppose $P$.
+> | $\vdots$
+> | Therefore $Q$.
+
+Write the first and last lines first,
+then fill in the middle,
+usually by replacing each defined term with its definition (@rem-definitions-iff).
+
+A direct proof needs no case for $P$ false,
+since $P \Rightarrow Q$ is true whenever $P$ is false (@def-implies).
+When the statement is about every element of a set,
+as in "for every odd integer $n$",
+the proof starts from an arbitrary element:
+"Suppose $n$ is an odd integer."
+Since it uses nothing about $n$ except that it is odd,
+the argument works for every odd integer.
+
+:::

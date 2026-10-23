@@ -1,0 +1,11 @@
+::: {#exm-divides}
+#### Divisors
+
+- $3 \mid 12$, because $12 = 3 \cdot 4$.
+- $-2 \mid 6$, because $6 = (-2) \cdot (-3)$.
+- $3 \nmid 13$: $3 \cdot 4 = 12$ and $3 \cdot 5 = 15$,
+  so no integer $c$ gives $3 c = 13$.
+- Every integer $a$ divides $0$, because $0 = a \cdot 0$.
+- $0$ divides only $0$, because $0 \cdot c = 0$ for every integer $c$.
+
+:::

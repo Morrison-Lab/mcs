@@ -1,0 +1,16 @@
+::: {#exr-valid-arguments}
+#### Which conclusions are safe?
+
+Let $P$ be "the tests pass", $Q$ be "the build is deployed"
+and $R$ be "the build is rolled back".
+In each argument below, the propositions before "so" are its premises,
+and the one after is its conclusion.
+For each argument, decide whether the conclusion must be true
+whenever all of the premises are true.
+
+1. $P \Rightarrow Q$ and $P$, so $Q$.
+2. $P \Rightarrow Q$ and $Q$, so $P$.
+3. $P \Rightarrow Q$ and $\neg Q$, so $\neg P$.
+4. $P \lor R$ and $\neg R$, so $P$.
+
+:::

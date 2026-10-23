@@ -1,0 +1,10 @@
+::: {#sol-divisible-by-three}
+
+Suppose $3 \mid m$ or $3 \mid n$.
+Without loss of generality, suppose $3 \mid m$.
+By @def-divides, $m = 3 k$ for some integer $k$.
+Then $m n = 3 (k n)$,
+and $k n$ is an integer,
+so $3 \mid m n$, by @def-divides.
+
+:::

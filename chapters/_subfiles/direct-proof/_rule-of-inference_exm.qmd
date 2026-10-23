@@ -1,0 +1,10 @@
+::: {#exm-rule-of-inference}
+#### A rule of inference
+
+Argument 1 of @exr-valid-arguments is an instance of the rule of inference (@def-rule-of-inference)
+$$
+\frac{P \Rightarrow Q, \quad P}{Q},
+$$
+which holds for any propositions $P$ and $Q$, not only for tests and builds.
+
+:::

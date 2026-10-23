@@ -1,0 +1,175 @@
+---
+title: "Inference and Direct Proof"
+subtitle: "What follows from what, and how to write it down"
+format:
+  html: default
+  revealjs:
+    output-file: direct-proof-slides.html
+  pdf:
+    output-file: direct-proof-handout.pdf
+  docx:
+    output-file: direct-proof.docx
+---
+
+{{< include ../latex-macros/macros.qmd >}}
+
+::: {.callout-note appearance='simple' collapse=true}
+## Source
+
+Adapted from Kameron Decker Harris's Fall 2026 lecture notes "Logic 4, Proofs Intro, Direct Proof",
+which he typeset from Scott Wehrwein's Spring 2025 handwritten lecture notes.
+The rules of inference, the definition of "divides",
+the observation that a definition's "if" means "if and only if",
+and the template for a direct proof come from those notes;
+the exercises are new.
+
+The definitions of logical entailment, the integers, even and odd integers,
+and proof are included from the
+[mathematics prerequisites](https://morrison-lab.github.io/mds/) notes,
+so they read the same in both places.
+:::
+
+# Rules of inference {#sec-inference}
+
+{{< include _subfiles/direct-proof/_valid-arguments_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_valid-arguments_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/proof-writing/_def-logical-entailment.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_logical-entailment_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_rule-of-inference_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_rule-of-inference_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_inference-rules_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_inference-rules_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_fallacies_rem.qmd >}}
+
+# Even, odd and divisible {#sec-even-odd-divides}
+
+{{< include _subfiles/direct-proof/_two-k_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_two-k_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/number-systems/_def-integers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/number-systems/_exm-integers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/number-systems/_def-even-odd.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/number-systems/_exm-even-odd.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_definitions-iff_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_divides_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_divides_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_racket-divides_rem.qmd >}}
+
+# Direct proof {#sec-direct-proof}
+
+{{< include _subfiles/direct-proof/_odd-linear_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_odd-linear_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/proof-writing/_def-proof.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_proof_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_direct-proof_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_direct-proof_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_direct-proof-template_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_divides-transitive_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_divides-transitive_sol.qmd >}}
+
+# Proof by cases {#sec-proof-by-cases}
+
+{{< include _subfiles/direct-proof/_consecutive-product_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_consecutive-product_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_proof-by-cases_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_proof-by-cases_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_divisible-by-three_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_divisible-by-three_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_wlog_rem.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

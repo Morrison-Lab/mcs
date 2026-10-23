@@ -42,6 +42,8 @@ website:
         href: chapters/predicates-quantifiers.qmd
       - text: "Logical Equivalence and Negation"
         href: chapters/equivalence-negation.qmd
+      - text: "Inference and Direct Proof"
+        href: chapters/direct-proof.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mcs
@@ -63,6 +65,7 @@ website:
       - chapters/propositional-logic.qmd
       - chapters/predicates-quantifiers.qmd
       - chapters/equivalence-negation.qmd
+      - chapters/direct-proof.qmd
 
 callouty-theorem:
   thm:

@@ -1,0 +1,13 @@
+::: {#exr-consecutive-product}
+#### Even for every integer
+
+Prove that $n^2 + n$ is even for every integer $n$.
+
+::: {.callout-tip}
+#### Hint
+
+Every integer is even or odd.
+Handle the two kinds separately.
+:::
+
+:::

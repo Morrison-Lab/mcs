@@ -1,0 +1,22 @@
+::: {#sol-consecutive-product}
+
+Let $n$ be an integer.
+Every integer is even or odd,
+so one of these cases holds.
+
+**Case 1: $n$ is even.**
+By @def-even-odd, $n = 2 k$ for some integer $k$, and
+$$
+n^2 + n = 4 k^2 + 2 k = 2 (2 k^2 + k).
+$$
+
+**Case 2: $n$ is odd.**
+By @def-odd, $n = 2 k + 1$ for some integer $k$, and
+$$
+n^2 + n = (4 k^2 + 4 k + 1) + (2 k + 1) = 4 k^2 + 6 k + 2 = 2 (2 k^2 + 3 k + 1).
+$$
+
+In each case, $n^2 + n$ is $2$ times an integer,
+so $n^2 + n$ is even, by @def-even-odd.
+
+:::

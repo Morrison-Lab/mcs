@@ -1,0 +1,8 @@
+::: {#def-proof-by-cases}
+#### Proof by cases
+
+A **proof by cases** splits the situation into cases
+that together cover every possibility,
+and proves the conclusion separately in each case.
+
+:::

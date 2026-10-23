@@ -1,0 +1,18 @@
+::: {#sol-valid-arguments}
+
+1. Yes.
+   $P \Rightarrow Q$ is false when $P$ is true and $Q$ is false (@def-implies),
+   so if both premises are true, $Q$ is true.
+2. No.
+   If the tests fail but someone deploys the build by hand,
+   $P$ is false and $Q$ is true.
+   Then both premises are true, and the conclusion $P$ is false.
+3. Yes.
+   If $Q$ is false and $P$ were true, $P \Rightarrow Q$ would be false,
+   so $P$ is false and $\neg P$ is true.
+4. Yes.
+   $\neg R$ makes $R$ false,
+   and $P \lor R$ is true only if $P$ or $R$ is true (@def-or),
+   so $P$ is true.
+
+:::

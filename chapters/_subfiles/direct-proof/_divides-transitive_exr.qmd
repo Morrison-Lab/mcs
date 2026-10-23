@@ -1,0 +1,7 @@
+::: {#exr-divides-transitive}
+#### Divisors of divisors
+
+Let $a$, $b$ and $c$ be integers.
+Prove that if $a \mid b$ and $b \mid c$, then $a \mid c$.
+
+:::
