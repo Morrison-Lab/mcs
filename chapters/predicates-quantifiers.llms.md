@@ -6,11 +6,11 @@ For all, there exists, and the order they come in
 
 Published
 
-Last modified: 2026-10-23 14:42:37 (PDT)
+Last modified: 2026-10-23 14:52:29 (PDT)
 
 > **NOTE:**
 >
-> Adapted from Kameron Decker Harris’s Fall 2026 lecture notes “Logic 2” and “Logic 3”, which he typeset from Scott Wehrwein’s Spring 2025 handwritten lecture notes. The convention that a conditional about a variable means “for all” comes from those notes; the exercises are new.
+> Adapted from Kameron Decker Harris’s Fall 2026 lecture notes “Logic 2” and “Logic 3”, which are typed transcriptions of Scott Wehrwein’s Spring 2025 handwritten lecture notes. The convention that a conditional about a variable means “for all” comes from those notes; the exercises are new.
 >
 > The definitions are included from the [mathematics prerequisites](https://morrison-lab.github.io/mds/proof-writing.html#sec-proof-definitions) notes, so they read the same in both places.
 

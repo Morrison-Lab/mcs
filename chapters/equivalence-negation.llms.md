@@ -6,11 +6,11 @@ When two propositions say the same thing, and how to say the opposite
 
 Published
 
-Last modified: 2026-10-23 14:42:37 (PDT)
+Last modified: 2026-10-23 14:52:29 (PDT)
 
 > **NOTE:**
 >
-> Adapted from Kameron Decker Harris’s Fall 2026 lecture notes “Logic 3”, which he typeset from Scott Wehrwein’s Spring 2025 handwritten lecture notes. The truth table for the distributive law of “and” over “or” comes from those notes; the exercises are new.
+> Adapted from Kameron Decker Harris’s Fall 2026 lecture notes “Logic 3”, which are typed transcriptions of Scott Wehrwein’s Spring 2025 handwritten lecture notes. The truth table for the distributive law of “and” over “or” comes from those notes; the exercises are new.
 
 # 1 Logical equivalence
 

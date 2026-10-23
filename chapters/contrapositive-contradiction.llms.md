@@ -6,11 +6,11 @@ Proving a statement by way of its negation
 
 Published
 
-Last modified: 2026-10-23 14:42:37 (PDT)
+Last modified: 2026-10-23 14:52:29 (PDT)
 
 > **NOTE:**
 >
-> Adapted from Kameron Decker Harris’s Fall 2026 lecture notes “Contrapositive Proof” and “Proof by Contradiction”, which he typeset from Scott Wehrwein’s Spring 2025 handwritten lecture notes. These come from those notes:
+> Adapted from Kameron Decker Harris’s Fall 2026 lecture notes “Contrapositive Proof” and “Proof by Contradiction”, which are typed transcriptions of Scott Wehrwein’s Spring 2025 handwritten lecture notes. These come from those notes:
 >
 > - the definition of congruence modulo \\n\\, and the point that it is not the mod operator;
 > - the human and mammal illustration of a contrapositive;
@@ -108,7 +108,7 @@ Last modified: 2026-10-23 14:42:37 (PDT)
 >
 > **Example 4 (A product not divisible by \\5\\)** Claim: let \\x\\ and \\y\\ be integers. If \\5 \nmid xy\\, then \\5 \nmid x\\ and \\5 \nmid y\\.
 >
-> A direct proof would start from \\5 \nmid xy\\, which says only that \\xy\\ is not \\5\\ times an integer, and gives no equation to work with. By De Morgan’s laws ([Theorem: De Morgan's laws](../chapters/equivalence-negation.llms.md#thm-de-morgan-logic)), the negation of “\\5 \nmid x\\ and \\5 \nmid y\\” is “\\5 \mid x\\ or \\5 \mid y\\”, so the contrapositive ([Definition 2](#def-contrapositive)) is “if \\5 \mid x\\ or \\5 \mid y\\, then \\5 \mid xy\\”. We prove it by cases ([Definition: Proof by cases](../chapters/direct-proof.llms.md#def-proof-by-cases)).
+> A direct proof would start from \\5 \nmid xy\\, which says only that \\xy\\ is not \\5\\ times an integer, and gives no equation to work with. By De Morgan’s laws ([Theorem: De Morgan’s laws](../chapters/equivalence-negation.llms.md#thm-de-morgan-logic)), the negation of “\\5 \nmid x\\ and \\5 \nmid y\\” is “\\5 \mid x\\ or \\5 \mid y\\”, so the contrapositive ([Definition 2](#def-contrapositive)) is “if \\5 \mid x\\ or \\5 \mid y\\, then \\5 \mid xy\\”. We prove it by cases ([Definition: Proof by cases](../chapters/direct-proof.llms.md#def-proof-by-cases)).
 >
 > **Case 1: \\5 \mid x\\.** Then \\x = 5c\\ for some integer \\c\\ ([Definition: Divides](../chapters/direct-proof.llms.md#def-divides)), so
 >

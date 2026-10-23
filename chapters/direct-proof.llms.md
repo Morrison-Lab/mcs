@@ -6,11 +6,11 @@ What follows from what, and how to write it down
 
 Published
 
-Last modified: 2026-10-23 14:42:37 (PDT)
+Last modified: 2026-10-23 14:52:29 (PDT)
 
 > **NOTE:**
 >
-> Adapted from Kameron Decker Harris’s Fall 2026 lecture notes “Logic 4, Proofs Intro, Direct Proof”, which he typeset from Scott Wehrwein’s Spring 2025 handwritten lecture notes. The rules of inference, the definition of “divides”, the observation that a definition’s “if” means “if and only if”, the template for a direct proof, and the ideas of proof by cases and “without loss of generality” come from those notes; the exercises are new.
+> Adapted from Kameron Decker Harris’s Fall 2026 lecture notes “Logic 4, Proofs Intro, Direct Proof”, which are typed transcriptions of Scott Wehrwein’s Spring 2025 handwritten lecture notes. The rules of inference, the definition of “divides”, the observation that a definition’s “if” means “if and only if”, the template for a direct proof, and the ideas of proof by cases and “without loss of generality” come from those notes; the exercises are new.
 >
 > The definitions of logical entailment, the integers, even and odd integers, and proof are included from the [mathematics prerequisites](https://morrison-lab.github.io/mds/) notes, so they read the same in both places.
 
