@@ -1,0 +1,16 @@
+::: {#exm-biconditional-split}
+#### Proving both directions
+
+Claim: let $n$ be an integer.
+Then $n$ is even if and only if $n + 2$ is even.
+
+By @thm-biconditional-split, it is enough to prove two conditionals.
+
+- If $n$ is even, then $n = 2k$ for some integer $k$ (@def-even-odd),
+  so $n + 2 = 2k + 2 = 2(k + 1)$, and $k + 1$ is an integer (@rem-integer-closure).
+  So $n + 2$ is even.
+- If $n + 2$ is even, then $n + 2 = 2m$ for some integer $m$,
+  so $n = 2m - 2 = 2(m - 1)$, and $m - 1$ is an integer.
+  So $n$ is even.
+
+:::

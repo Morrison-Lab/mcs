@@ -15,7 +15,7 @@ format:
 ## Source
 
 Adapted from Kameron Decker Harris's Fall 2026 lecture notes "Logic 1" and "Logic 2",
-which he typeset from Scott Wehrwein's Spring 2025 handwritten lecture notes.
+which are typed transcriptions of Scott Wehrwein's Spring 2025 handwritten lecture notes.
 The examples of propositions, the truth tables to decode,
 the list of English phrasings of a conditional,
 and the "only if" example come from those notes;

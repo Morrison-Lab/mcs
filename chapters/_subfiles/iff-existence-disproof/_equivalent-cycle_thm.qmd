@@ -1,0 +1,27 @@
+::: {#thm-equivalent-cycle}
+#### A cycle of conditionals
+
+Let $P_1, P_2, \ldots, P_k$ be propositions.
+If $P_1 \Rightarrow P_2$, $P_2 \Rightarrow P_3$, $\ldots$, $P_{k-1} \Rightarrow P_k$ and $P_k \Rightarrow P_1$ are all true,
+then $P_1, \ldots, P_k$ all have the same truth value.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Suppose one of the propositions, $P_i$, is true.
+By modus ponens (@thm-inference-rules), $P_i \Rightarrow P_{i+1}$ makes $P_{i+1}$ true,
+then $P_{i+1} \Rightarrow P_{i+2}$ makes $P_{i+2}$ true,
+and so on around the cycle,
+with $P_k \Rightarrow P_1$ leading from $P_k$ back to $P_1$,
+until every proposition in the list is true.
+So either all of $P_1, \ldots, P_k$ are true,
+or none of them is true, and then all of them are false.
+
+:::
+
+:::

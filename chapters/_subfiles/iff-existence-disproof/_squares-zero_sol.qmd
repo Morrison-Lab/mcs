@@ -1,0 +1,24 @@
+::: {#sol-squares-zero}
+
+**If $x = 0$ and $y = 0$, then $x^2 + y^2 = 0$.**
+Suppose $x = 0$ and $y = 0$.
+Then $x^2 + y^2 = 0^2 + 0^2 = 0$.
+
+**If $x^2 + y^2 = 0$, then $x = 0$ and $y = 0$.**
+Suppose $x^2 + y^2 = 0$.
+A square of a real number is never negative, so $y^2 \ge 0$, and
+
+$$
+\ba
+x^2
+&= -y^2
+&& \text{(subtract } y^2 \text{ from both sides of } x^2 + y^2 = 0 \text{)}
+\\&\le 0.
+&& \text{(} y^2 \ge 0 \text{)}
+\ea
+$$
+
+Also $x^2 \ge 0$, so $x^2 = 0$, and so $x = 0$.
+The same steps with $x$ and $y$ swapped give $y = 0$.
+
+:::

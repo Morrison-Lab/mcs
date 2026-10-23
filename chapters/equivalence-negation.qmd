@@ -15,7 +15,7 @@ format:
 ## Source
 
 Adapted from Kameron Decker Harris's Fall 2026 lecture notes "Logic 3",
-which he typeset from Scott Wehrwein's Spring 2025 handwritten lecture notes.
+which are typed transcriptions of Scott Wehrwein's Spring 2025 handwritten lecture notes.
 The truth table for the distributive law of "and" over "or" comes from those notes;
 the exercises are new.
 :::

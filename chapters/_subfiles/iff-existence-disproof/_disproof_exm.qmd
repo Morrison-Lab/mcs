@@ -1,0 +1,14 @@
+::: {#exm-disproof}
+#### No integer squares to two
+
+Claim to disprove: there is an integer $n$ with $n^2 = 2$.
+
+By @thm-negate-quantifiers, its negation is "for every integer $n$, $n^2 \ne 2$".
+We prove the negation by cases (@def-proof-by-cases).
+Let $n$ be an integer.
+
+- If $n$ is $-1$, $0$ or $1$, then $n^2$ is $1$, $0$ or $1$, which is not $2$.
+- Otherwise $n \le -2$ or $n \ge 2$, so $\abs{n} \ge 2$,
+  and $n^2 = \abs{n}^2 \ge 2^2 = 4$, so $n^2 \ne 2$.
+
+:::

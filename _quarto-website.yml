@@ -48,6 +48,8 @@ website:
         href: chapters/direct-proof.qmd
       - text: "Contrapositive and Contradiction"
         href: chapters/contrapositive-contradiction.qmd
+      - text: "Proving Non-Conditional Statements"
+        href: chapters/iff-existence-disproof.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mcs
@@ -72,6 +74,7 @@ website:
       - chapters/equivalence-negation.qmd
       - chapters/direct-proof.qmd
       - chapters/contrapositive-contradiction.qmd
+      - chapters/iff-existence-disproof.qmd
 
 callouty-theorem:
   thm:

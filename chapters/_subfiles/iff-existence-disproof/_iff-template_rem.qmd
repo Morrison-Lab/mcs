@@ -1,0 +1,20 @@
+::: {#rem-iff-template}
+#### The shape of an "if and only if" proof
+
+A proof of "$P$ if and only if $Q$" has two parts:
+
+> | ($\Rightarrow$) Suppose $P$.
+> | $\vdots$
+> | Therefore $Q$.
+> |
+> | ($\Leftarrow$) Suppose $Q$.
+> | $\vdots$
+> | Therefore $P$.
+
+Each part is a proof of a conditional,
+so each can be a direct proof (@def-direct-proof),
+a proof by contrapositive (@def-proof-by-contrapositive),
+or a proof by contradiction (@def-proof-by-contradiction),
+and the two parts need not use the same method.
+
+:::

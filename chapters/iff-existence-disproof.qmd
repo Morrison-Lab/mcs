@@ -1,0 +1,121 @@
+---
+title: "Proving Non-Conditional Statements"
+subtitle: "If and only if, existence, and disproof"
+format:
+  html: default
+  revealjs:
+    output-file: iff-existence-disproof-slides.html
+  pdf:
+    output-file: iff-existence-disproof-handout.pdf
+  docx:
+    output-file: iff-existence-disproof.docx
+---
+
+{{< include ../latex-macros/macros.qmd >}}
+
+::: {.callout-note appearance='simple' collapse=true}
+## Source
+
+Adapted from Kameron Decker Harris's Fall 2026 lecture notes
+"Proving Non-Conditional Statements, Disproof",
+which are typed transcriptions of Scott Wehrwein's Spring 2025 handwritten lecture notes.
+These come from those notes:
+
+- the outline of an "if and only if" proof;
+- the outline of an existence proof that names an element;
+- proving that several propositions are equivalent with a cycle of conditionals;
+- the constructive example of half of a positive number;
+- the non-constructive example of an irrational power of an irrational number;
+- disproving a proposition by proving its negation.
+
+The exercises are new.
+:::
+
+# Proving if and only if {#sec-iff-proofs}
+
+{{< include _subfiles/iff-existence-disproof/_squares-zero_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/iff-existence-disproof/_squares-zero_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/iff-existence-disproof/_biconditional-split_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/iff-existence-disproof/_biconditional-split_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/iff-existence-disproof/_iff-template_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/iff-existence-disproof/_equivalent-cycle_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/iff-existence-disproof/_equivalent-cycle_exm.qmd >}}
+
+# Proving existence {#sec-existence-proofs}
+
+{{< include _subfiles/iff-existence-disproof/_five-three_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/iff-existence-disproof/_five-three_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/iff-existence-disproof/_constructive_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/iff-existence-disproof/_constructive_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/iff-existence-disproof/_nonconstructive_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/iff-existence-disproof/_nonconstructive_exm.qmd >}}
+
+# Disproof {#sec-disproof}
+
+{{< include _subfiles/iff-existence-disproof/_squares-gt-one_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/iff-existence-disproof/_squares-gt-one_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/iff-existence-disproof/_disproof_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/iff-existence-disproof/_disproof_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/iff-existence-disproof/_six-four-two_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/iff-existence-disproof/_six-four-two_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/iff-existence-disproof/_six-four-three_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/iff-existence-disproof/_six-four-three_sol.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

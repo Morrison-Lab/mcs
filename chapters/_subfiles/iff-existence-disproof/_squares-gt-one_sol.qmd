@@ -1,0 +1,9 @@
+::: {#sol-squares-gt-one}
+
+The proposition is false.
+Take $x = -2$.
+Then $x^2 = 4 > 1$, but $x > 1$ is false.
+So $x = -2$ makes "if $x^2 > 1$, then $x > 1$" false (@def-implies),
+and so it is a counterexample (@def-counterexample) to the proposition.
+
+:::
