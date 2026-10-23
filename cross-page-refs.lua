@@ -272,7 +272,14 @@ function Pandoc(doc)
       if entry.title ~= "" then
         label = label .. ": " .. entry.title
       end
-      return pandoc.Link({ pandoc.Str(label) }, href)
+      -- A title can hold markup, such as math in "$\sqrt{2}$ is irrational",
+      -- so read the label as Markdown rather than keep it as one string.
+      local inlines = { pandoc.Str(label) }
+      local parsed = pandoc.read(label, "markdown").blocks[1]
+      if parsed and parsed.content then
+        inlines = parsed.content
+      end
+      return pandoc.Link(inlines, href)
     end,
 
     -- A link to `#id` that this page lacks, or to `page.qmd#id` where
