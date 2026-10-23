@@ -1,0 +1,7 @@
+::: {#sol-small-cubes}
+
+$1$, $2$, $3$ and $4$, whose cubes are $1$, $8$, $27$ and $64$.
+Every other natural number $n$ has $n \ge 5$,
+so $n^3 \ge 125$, which is not less than $100$.
+
+:::

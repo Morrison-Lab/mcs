@@ -1,0 +1,12 @@
+::: {#rem-sets-of-sets}
+#### Sets can be elements of sets
+
+The elements of a set can themselves be sets.
+For example, $S = \set{\set{1, 2}, 3, \set{3}}$ has three elements:
+the set $\set{1, 2}$, the number $3$, and the set $\set{3}$.
+So $\set{1, 2} \in S$, but $1 \notin S$,
+because $1$ is an element of an element of $S$, not an element of $S$.
+And $3 \ne \set{3}$: one is a number, and the other is a set with one element.
+So $\abs{S} = 3$ (@def-cardinality).
+
+:::

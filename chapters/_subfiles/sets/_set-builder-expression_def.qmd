@@ -1,0 +1,11 @@
+::: {#def-set-builder-expression}
+#### Set-builder notation with an expression
+
+For a set $A$ and an expression $f(x)$ that has a value for each element $x$ of $A$,
+the notation $\set{f(x) : x \in A}$
+denotes the set of the values $f(x)$ for $x \in A$
+[@wikipedia_set_builder_notation].
+That is, an object $y$ is an element of $\set{f(x) : x \in A}$
+when $y = f(x)$ for some $x \in A$.
+
+:::

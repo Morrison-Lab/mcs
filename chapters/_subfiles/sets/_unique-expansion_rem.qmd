@@ -1,0 +1,11 @@
+::: {#rem-unique-expansion}
+#### Numbers with only one decimal expansion
+
+These notes use one more fact about the real numbers without proving it.
+A real number has two decimal expansions only if one of them ends in repeating $9$s
+and the other in repeating $0$s,
+as $0.999\ldots$ and $1.000\ldots$ do (@rem-real-numbers-working-definition).
+So a number whose decimal places are all $4$s and $5$s,
+such as $0.545454\ldots$, has only one decimal expansion.
+
+:::

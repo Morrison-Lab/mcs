@@ -1,0 +1,10 @@
+::: {#def-tuple}
+#### Tuple
+
+For a natural number $n$, an **$n$-tuple** $(a_1, a_2, \ldots, a_n)$
+is a list of $n$ objects in order
+[@wikipedia_tuple].
+Two $n$-tuples are equal when their entries are equal in each position.
+A $2$-tuple is an ordered pair (@def-ordered-pair).
+
+:::

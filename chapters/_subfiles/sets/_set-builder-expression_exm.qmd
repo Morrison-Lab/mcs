@@ -1,0 +1,10 @@
+::: {#exm-set-builder-expression}
+#### Two ways to build a set
+
+- The numbers of @exr-small-cubes form the set $\set{n \in \Nat : n^3 < 100} = \set{1, 2, 3, 4}$ (@def-set-builder).
+- Their cubes form the set $\set{n^3 : n \in \set{1, 2, 3, 4}} = \set{1, 8, 27, 64}$ (@def-set-builder-expression).
+- $\set{2^k : k \in \Nat} = \set{2, 4, 8, 16, \ldots}$, the powers of $2$ after $2^0$.
+- $\set{(-1)^k : k \in \Nat} = \set{-1, 1}$:
+  many values of $k$ give the same value, and each value is one element of the set.
+
+:::

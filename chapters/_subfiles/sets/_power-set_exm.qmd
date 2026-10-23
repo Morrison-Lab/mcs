@@ -1,0 +1,12 @@
+::: {#exm-power-set}
+#### The subsets of a three-element set
+
+$$
+\mathcal{P}(\set{a, b, c}) = \set{\emptyset, \set{a}, \set{b}, \set{c}, \set{a, b}, \set{a, c}, \set{b, c}, \set{a, b, c}}.
+$$
+
+Each element of $\mathcal{P}(\set{a, b, c})$ is a set.
+For example, $\set{a} \in \mathcal{P}(\set{a, b, c})$, but $a \notin \mathcal{P}(\set{a, b, c})$.
+The list includes $\emptyset$ (@thm-empty-subset) and $\set{a, b, c}$ itself (@thm-subset-reflexive).
+
+:::

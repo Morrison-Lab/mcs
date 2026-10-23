@@ -1,0 +1,8 @@
+::: {#sol-build-sets}
+
+$A = \set{1, 2, 3}$ and $B = \set{2, 3, 4}$ work:
+the elements in both are $2$ and $3$,
+and the elements in one or the other are $1$, $2$, $3$ and $4$.
+So do $A = \set{1, 2, 3, 4}$ and $B = \set{2, 3}$.
+
+:::

@@ -1,0 +1,21 @@
+::: {#exm-reals-uncountable}
+#### The diagonal number for a list
+
+Suppose a list of real numbers starts
+
+$$
+\ba
+r_1 &= 0.\mathbf{7}071\ldots \\
+r_2 &= 3.1\mathbf{4}15\ldots \\
+r_3 &= -2.71\mathbf{8}2\ldots \\
+r_4 &= 0.555\mathbf{5}\ldots
+\ea
+$$
+
+The bold digits are the $n$th decimal places of the $r_n$: $7$, $4$, $8$ and $5$.
+The proof of @thm-reals-uncountable builds $d = 0.5554\ldots$,
+which differs from $r_1$ in the first decimal place, from $r_2$ in the second,
+from $r_3$ in the third, and from $r_4$ in the fourth.
+However the list continues, $d$ is not on it.
+
+:::

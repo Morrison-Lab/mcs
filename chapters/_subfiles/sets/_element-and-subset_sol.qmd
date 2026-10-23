@@ -1,0 +1,8 @@
+::: {#sol-element-and-subset}
+
+The set $\set{1}$ works.
+It is listed in $B$, so it is an element of $B$.
+And $1$, the one element of $\set{1}$, is also listed in $B$,
+so every element of $\set{1}$ is an element of $B$.
+
+:::

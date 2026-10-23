@@ -1,0 +1,7 @@
+::: {#exr-build-sets}
+#### Two sets from their overlap
+
+Find sets $A$ and $B$ whose common elements are exactly $2$ and $3$,
+and whose elements together are exactly $1$, $2$, $3$ and $4$.
+
+:::

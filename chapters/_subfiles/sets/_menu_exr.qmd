@@ -1,0 +1,9 @@
+::: {#exr-menu}
+#### Sandwich orders
+
+A sandwich shop makes sandwiches on rye or wheat bread,
+with a filling of ham, cheese or tomato.
+List every choice of one bread and one filling,
+writing each choice as (bread, filling).
+
+:::

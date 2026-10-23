@@ -1,0 +1,7 @@
+::: {#rem-difference-notation}
+#### Other notation for the set difference
+
+Some sources write $A - B$ for $A \setminus B$
+[@wikipedia_complement_set_theory].
+
+:::

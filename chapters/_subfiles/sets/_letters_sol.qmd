@@ -1,0 +1,7 @@
+::: {#sol-letters}
+
+Four: M, I, S and P.
+The set of its letters is $\set{\text{M}, \text{I}, \text{S}, \text{P}}$,
+and listing a letter again, as the word does, does not add an element (@exm-roster-notation).
+
+:::

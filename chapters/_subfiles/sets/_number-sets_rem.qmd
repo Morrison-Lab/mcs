@@ -1,0 +1,13 @@
+::: {#rem-number-sets}
+#### Sets of numbers
+
+These notes use these sets of numbers:
+
+| Symbol | Name | Elements |
+|:---:|:---|:---|
+| $\Nat$ | natural numbers (@def-natural-numbers) | $1, 2, 3, \ldots$ |
+| $\mathbb{Z}$ | integers (@def-integers) | $\ldots, -2, -1, 0, 1, 2, \ldots$ |
+| $\mathbb{Q}$ | rational numbers (@def-rational-numbers) | fractions $\frac{a}{b}$ of integers with $b \ne 0$ |
+| $\reals$ | real numbers (@def-real-numbers) | decimal expansions |
+
+:::

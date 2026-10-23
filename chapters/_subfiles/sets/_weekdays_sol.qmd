@@ -1,0 +1,5 @@
+::: {#sol-weekdays}
+
+$W = \set{\text{Tuesday}, \text{Thursday}}$.
+
+:::

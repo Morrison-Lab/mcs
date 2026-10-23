@@ -1,0 +1,12 @@
+::: {#def-power-set}
+#### Power set
+
+The **power set** of a set $A$, written $\mathcal{P}(A)$,
+is the set of all subsets (@def-subset) of $A$
+[@wikipedia_power_set]:
+
+$$
+\mathcal{P}(A) \eqdef \set{S : S \subseteq A}.
+$$
+
+:::
