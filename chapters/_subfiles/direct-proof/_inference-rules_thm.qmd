@@ -4,12 +4,30 @@
 For propositions $P$ and $Q$,
 each of the following is a rule of inference (@def-rule-of-inference):
 
-1. modus ponens: $\dfrac{P \Rightarrow Q, \quad P}{Q}$;
-2. modus tollens: $\dfrac{P \Rightarrow Q, \quad \neg Q}{\neg P}$;
-3. disjunctive syllogism: $\dfrac{P \lor Q, \quad \neg P}{Q}$;
-4. simplification: $\dfrac{P \land Q}{P}$;
-5. conjunction: $\dfrac{P, \quad Q}{P \land Q}$;
-6. addition: $\dfrac{P}{P \lor Q}$.
+1. modus ponens:
+   $$
+   \frac{P \Rightarrow Q, \quad P}{Q}
+   $$
+2. modus tollens:
+   $$
+   \frac{P \Rightarrow Q, \quad \neg Q}{\neg P}
+   $$
+3. disjunctive syllogism:
+   $$
+   \frac{P \lor Q, \quad \neg P}{Q}
+   $$
+4. simplification:
+   $$
+   \frac{P \land Q}{P}
+   $$
+5. conjunction:
+   $$
+   \frac{P, \quad Q}{P \land Q}
+   $$
+6. addition:
+   $$
+   \frac{P}{P \lor Q}
+   $$
 
 :::
 
