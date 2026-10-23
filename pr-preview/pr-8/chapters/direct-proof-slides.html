@@ -273,7 +273,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-23 12:55:51 (PDT)</p>
+  <p class="date">Last modified: 2026-10-23 13:04:03 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -366,12 +366,24 @@
 <div id="thm-inference-rules" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 1 (Common rules of inference)</strong></span> For propositions <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>, each of the following is a rule of inference (<a href="#/def-rule-of-inference" class="quarto-xref">Definition&nbsp;3</a>):</p>
 <ol type="1">
-<li>modus ponens: <span class="math inline">\(\dfrac{P \Rightarrow Q, \quad P}{Q}\)</span>;</li>
-<li>modus tollens: <span class="math inline">\(\dfrac{P \Rightarrow Q, \quad \neg Q}{\neg P}\)</span>;</li>
-<li>disjunctive syllogism: <span class="math inline">\(\dfrac{P \lor Q, \quad \neg P}{Q}\)</span>;</li>
-<li>simplification: <span class="math inline">\(\dfrac{P \land Q}{P}\)</span>;</li>
-<li>conjunction: <span class="math inline">\(\dfrac{P, \quad Q}{P \land Q}\)</span>;</li>
-<li>addition: <span class="math inline">\(\dfrac{P}{P \lor Q}\)</span>.</li>
+<li>modus ponens: <span class="math display">\[
+\frac{P \Rightarrow Q, \quad P}{Q}
+\]</span></li>
+<li>modus tollens: <span class="math display">\[
+\frac{P \Rightarrow Q, \quad \neg Q}{\neg P}
+\]</span></li>
+<li>disjunctive syllogism: <span class="math display">\[
+\frac{P \lor Q, \quad \neg P}{Q}
+\]</span></li>
+<li>simplification: <span class="math display">\[
+\frac{P \land Q}{P}
+\]</span></li>
+<li>conjunction: <span class="math display">\[
+\frac{P, \quad Q}{P \land Q}
+\]</span></li>
+<li>addition: <span class="math display">\[
+\frac{P}{P \lor Q}
+\]</span></li>
 </ol>
 </div>
 </section>
@@ -384,8 +396,12 @@
 <section class="slide level2">
 
 <div id="rem-fallacies" class="proof remark">
-<p><span class="proof-title"><em>Remark 2</em> (Two arguments that are not rules of inference). </span>Argument 2 of <a href="#/exr-valid-arguments" class="quarto-xref">Exercise&nbsp;1</a>, <span class="math inline">\(\dfrac{P \Rightarrow Q, \quad Q}{P}\)</span>, is called affirming the consequent, since it concludes <span class="math inline">\(P\)</span> from the consequent <span class="math inline">\(Q\)</span> of <span class="math inline">\(P \Rightarrow Q\)</span> (<a href="../chapters/propositional-logic.html#rem-implies-terms">Remark: Names for the parts, and other notation</a>). It is not a rule of inference (<a href="#/def-rule-of-inference" class="quarto-xref">Definition&nbsp;3</a>): <span class="math inline">\(P\)</span> false and <span class="math inline">\(Q\)</span> true make its premises true and its conclusion false.</p>
-<p>Denying the antecedent, <span class="math inline">\(\dfrac{P \Rightarrow Q, \quad \neg P}{\neg Q}\)</span>, fails for the same values of <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>. Both read like modus ponens or modus tollens (<a href="#/thm-inference-rules" class="quarto-xref">Theorem&nbsp;1</a>), which is why they are common mistakes.</p>
+<p><span class="proof-title"><em>Remark 2</em> (Two arguments that are not rules of inference). </span>Argument 2 of <a href="#/exr-valid-arguments" class="quarto-xref">Exercise&nbsp;1</a>, <span class="math display">\[
+\frac{P \Rightarrow Q, \quad Q}{P},
+\]</span> is called affirming the consequent, since it concludes <span class="math inline">\(P\)</span> from the consequent <span class="math inline">\(Q\)</span> of <span class="math inline">\(P \Rightarrow Q\)</span> (<a href="../chapters/propositional-logic.html#rem-implies-terms">Remark: Names for the parts, and other notation</a>). It is not a rule of inference (<a href="#/def-rule-of-inference" class="quarto-xref">Definition&nbsp;3</a>): <span class="math inline">\(P\)</span> false and <span class="math inline">\(Q\)</span> true make its premises true and its conclusion false.</p>
+<p>Denying the antecedent, <span class="math display">\[
+\frac{P \Rightarrow Q, \quad \neg P}{\neg Q},
+\]</span> fails for the same values of <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>. Both read like modus ponens or modus tollens (<a href="#/thm-inference-rules" class="quarto-xref">Theorem&nbsp;1</a>), which is why they are common mistakes.</p>
 </div>
 </section></section>
 <section>

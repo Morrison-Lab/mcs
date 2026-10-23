@@ -6,7 +6,7 @@ What follows from what, and how to write it down
 
 Published
 
-Last modified: 2026-10-23 12:55:51 (PDT)
+Last modified: 2026-10-23 13:04:03 (PDT)
 
 > **NOTE:**
 >
@@ -62,12 +62,12 @@ Last modified: 2026-10-23 12:55:51 (PDT)
 >
 > **Theorem 1 (Common rules of inference)** For propositions \\P\\ and \\Q\\, each of the following is a rule of inference ([Definition 3](#def-rule-of-inference)):
 >
-> 1.  modus ponens: \\\dfrac{P \Rightarrow Q, \quad P}{Q}\\;
-> 2.  modus tollens: \\\dfrac{P \Rightarrow Q, \quad \neg Q}{\neg P}\\;
-> 3.  disjunctive syllogism: \\\dfrac{P \lor Q, \quad \neg P}{Q}\\;
-> 4.  simplification: \\\dfrac{P \land Q}{P}\\;
-> 5.  conjunction: \\\dfrac{P, \quad Q}{P \land Q}\\;
-> 6.  addition: \\\dfrac{P}{P \lor Q}\\.
+> 1.  modus ponens: \\ \frac{P \Rightarrow Q, \quad P}{Q} \\
+> 2.  modus tollens: \\ \frac{P \Rightarrow Q, \quad \neg Q}{\neg P} \\
+> 3.  disjunctive syllogism: \\ \frac{P \lor Q, \quad \neg P}{Q} \\
+> 4.  simplification: \\ \frac{P \land Q}{P} \\
+> 5.  conjunction: \\ \frac{P, \quad Q}{P \land Q} \\
+> 6.  addition: \\ \frac{P}{P \lor Q} \\
 
 > **NOTE:**
 >
@@ -86,9 +86,9 @@ Last modified: 2026-10-23 12:55:51 (PDT)
 
 > **NOTE:**
 >
-> *Remark 2* (Two arguments that are not rules of inference). Argument 2 of [Exercise 1](#exr-valid-arguments), \\\dfrac{P \Rightarrow Q, \quad Q}{P}\\, is called affirming the consequent, since it concludes \\P\\ from the consequent \\Q\\ of \\P \Rightarrow Q\\ ([Remark: Names for the parts, and other notation](../chapters/propositional-logic.llms.md#rem-implies-terms)). It is not a rule of inference ([Definition 3](#def-rule-of-inference)): \\P\\ false and \\Q\\ true make its premises true and its conclusion false.
+> *Remark 2* (Two arguments that are not rules of inference). Argument 2 of [Exercise 1](#exr-valid-arguments), \\ \frac{P \Rightarrow Q, \quad Q}{P}, \\ is called affirming the consequent, since it concludes \\P\\ from the consequent \\Q\\ of \\P \Rightarrow Q\\ ([Remark: Names for the parts, and other notation](../chapters/propositional-logic.llms.md#rem-implies-terms)). It is not a rule of inference ([Definition 3](#def-rule-of-inference)): \\P\\ false and \\Q\\ true make its premises true and its conclusion false.
 >
-> Denying the antecedent, \\\dfrac{P \Rightarrow Q, \quad \neg P}{\neg Q}\\, fails for the same values of \\P\\ and \\Q\\. Both read like modus ponens or modus tollens ([Theorem 1](#thm-inference-rules)), which is why they are common mistakes.
+> Denying the antecedent, \\ \frac{P \Rightarrow Q, \quad \neg P}{\neg Q}, \\ fails for the same values of \\P\\ and \\Q\\. Both read like modus ponens or modus tollens ([Theorem 1](#thm-inference-rules)), which is why they are common mistakes.
 
 # 2 Even, odd and divisible
 
