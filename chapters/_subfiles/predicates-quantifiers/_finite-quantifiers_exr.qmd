@@ -1,0 +1,12 @@
+::: {#exr-finite-quantifiers}
+#### All or some
+
+Let $S = \{2, 3, 5, 7\}$.
+Which of these four sentences are true?
+
+1. Every element of $S$ is prime.
+2. Every element of $S$ is odd.
+3. Some element of $S$ is even.
+4. Some element of $S$ is greater than 10.
+
+:::

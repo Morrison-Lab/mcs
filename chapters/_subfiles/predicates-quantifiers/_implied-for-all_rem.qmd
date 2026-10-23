@@ -1,0 +1,11 @@
+::: {#rem-implied-for-all}
+#### A conditional about a variable means "for all"
+
+By convention, a conditional whose parts are predicates,
+such as "if $x > 3$, then $x > 1$",
+means the universal statement $\forall x, (x > 3 \Rightarrow x > 1)$,
+even though no quantifier is written.
+Mathematical statements leave out "for all" in this way all the time,
+so put it back before deciding whether the statement is true.
+
+:::

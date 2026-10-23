@@ -1,0 +1,14 @@
+::: {#sol-euler-polynomial}
+
+1. The values are $41$, $43$, $47$ and $53$, which are all prime.
+2. Take $n = 41$:
+   $41^2 + 41 + 41 = 41 \cdot (41 + 1 + 1) = 41 \cdot 43$,
+   which is not prime.
+   The value $n = 40$ also fails:
+   $40^2 + 40 + 41 = 1681 = 41^2$.
+
+The claim held for every value we checked in part 1,
+and it is still false:
+checking some cases cannot prove a universal claim.
+
+:::

@@ -1,0 +1,14 @@
+::: {#exr-implied-for-all}
+#### A hidden "for all"
+
+Consider the sentence
+"if a string has more than 3 characters, then it is not empty".
+Let $L(s)$ be "$s$ has more than 3 characters"
+and $N(s)$ be "$s$ is not empty",
+for strings $s$.
+
+1. Write the sentence in symbols, with its quantifier.
+2. Is it true?
+3. Is its converse (@def-converse) true?
+
+:::

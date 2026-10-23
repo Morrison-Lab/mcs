@@ -1,0 +1,16 @@
+::: {#rem-quantifier-order}
+#### Order of quantifiers
+
+Read nested quantifiers from left to right.
+In $\forall s, \exists c, E(s, c)$,
+the course $c$ is chosen after the student $s$, so it may depend on $s$.
+In $\exists c, \forall s, E(s, c)$,
+one course $c$ must work for every student.
+
+Swapping two quantifiers of the same kind does not change the meaning:
+$\forall x, \forall y, P(x, y)$ means the same as $\forall y, \forall x, P(x, y)$,
+and likewise for $\exists$.
+Swapping a $\forall$ and an $\exists$ can change it,
+as parts 1 and 2 of @exr-enrollment show.
+
+:::

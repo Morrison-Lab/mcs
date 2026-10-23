@@ -1,0 +1,22 @@
+::: {#exr-enrollment}
+#### Who takes what
+
+Three students take courses as follows.
+
+| Student | Courses |
+|---|---|
+| Ana | 201, 241 |
+| Ben | 241 |
+| Cy | 201, 247 |
+
+Let $E(s, c)$ be "student $s$ takes course $c$",
+where $s$ ranges over the students
+and $c$ over the courses 201, 241 and 247.
+Which of these are true?
+
+1. $\forall s, \exists c, E(s, c)$
+2. $\exists c, \forall s, E(s, c)$
+3. $\forall c, \exists s, E(s, c)$
+4. $\exists s, \forall c, E(s, c)$
+
+:::

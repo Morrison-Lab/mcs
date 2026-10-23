@@ -38,6 +38,8 @@ website:
         href: index.qmd
       - text: "Propositional Logic"
         href: chapters/propositional-logic.qmd
+      - text: "Predicates and Quantifiers"
+        href: chapters/predicates-quantifiers.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mcs
@@ -57,6 +59,7 @@ website:
       - text: "Home"
         href: index.qmd
       - chapters/propositional-logic.qmd
+      - chapters/predicates-quantifiers.qmd
 
 callouty-theorem:
   thm:

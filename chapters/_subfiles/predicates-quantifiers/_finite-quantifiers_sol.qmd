@@ -1,0 +1,10 @@
+::: {#sol-finite-quantifiers}
+
+1. True: $2$, $3$, $5$ and $7$ are all prime.
+2. False: $2$ is not odd.
+   One element that fails is enough.
+3. True: $2$ is even.
+   One element that works is enough.
+4. False: none of $2$, $3$, $5$ and $7$ is greater than $10$.
+
+:::

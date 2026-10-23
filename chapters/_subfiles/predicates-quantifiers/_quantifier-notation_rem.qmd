@@ -1,0 +1,14 @@
+::: {#rem-quantifier-notation}
+#### Reading and writing quantifiers
+
+English has many phrasings of each quantifier:
+
+- $\forall$: "for all", "for every", "for each", "for any", "every", "all".
+- $\exists$: "there exists", "there is", "for some", "some", "at least one".
+
+Books also differ in punctuation:
+$\forall x \in S, P(x)$ is also written
+$\forall x \in S : P(x)$, $(\forall x \in S)\, P(x)$, or $\forall x \in S .\, P(x)$.
+When the domain is clear, it is often left out, as in $\forall x, P(x)$.
+
+:::

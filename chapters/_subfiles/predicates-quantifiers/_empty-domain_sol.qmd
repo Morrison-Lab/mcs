@@ -1,0 +1,14 @@
+::: {#sol-empty-domain}
+
+$\forall x \in \emptyset, x > 5$ is true.
+It would be false only if some element of $\emptyset$ were not greater than $5$,
+and $\emptyset$ has no elements.
+
+$\exists x \in \emptyset, x > 5$ is false,
+since $\emptyset$ has no element at all, let alone one greater than $5$.
+
+Racket agrees:
+`(andmap positive? '())` returns `#t`,
+and `(ormap positive? '())` returns `#f`.
+
+:::

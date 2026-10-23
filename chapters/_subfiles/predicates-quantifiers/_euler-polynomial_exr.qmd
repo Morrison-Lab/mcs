@@ -1,0 +1,16 @@
+::: {#exr-euler-polynomial}
+#### A pattern that breaks
+
+Consider the claim
+"for every integer $n \ge 0$, $n^2 + n + 41$ is prime".
+
+1. Check the claim for $n = 0, 1, 2, 3$.
+2. Find an integer $n \ge 0$ for which the claim fails.
+
+::: {.callout-tip}
+#### Hint
+
+Look for an $n$ that makes every term of $n^2 + n + 41$ a multiple of $41$.
+:::
+
+:::

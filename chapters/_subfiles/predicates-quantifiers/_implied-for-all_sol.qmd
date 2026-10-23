@@ -1,0 +1,12 @@
+::: {#sol-implied-for-all}
+
+1. The sentence is about every string, so it is
+   $\forall s, (L(s) \Rightarrow N(s))$.
+2. True: a string with more than 3 characters has at least 1 character, so it is not empty.
+3. The converse is $\forall s, (N(s) \Rightarrow L(s))$:
+   "if a string is not empty, then it has more than 3 characters".
+   It is false.
+   The string `"ab"` is a counterexample:
+   it is not empty, but it has only 2 characters.
+
+:::

@@ -1,0 +1,15 @@
+::: {#rem-racket-predicates}
+#### Predicates in Racket
+
+A Racket procedure that returns `#t` or `#f` is also called a predicate,
+and by convention its name ends in `?`, as in `even?` and `string?`.
+The predicate $L(s)$ from @exr-predicate-values is
+
+```racket
+(define (long? s)
+  (> (string-length s) 3))
+```
+
+and `(long? "logic")` returns `#t`.
+
+:::

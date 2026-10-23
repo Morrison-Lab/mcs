@@ -1,0 +1,9 @@
+::: {#exr-predicate-values}
+#### Plug in a value
+
+Let $L(s)$ be the sentence "the string $s$ has more than 3 characters".
+
+1. Is $L(s)$ true or false?
+2. What are the truth values of $L(\texttt{"cat"})$, $L(\texttt{"logic"})$ and $L(\texttt{""})$?
+
+:::
