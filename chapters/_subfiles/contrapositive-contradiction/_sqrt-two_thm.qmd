@@ -1,0 +1,50 @@
+::: {#thm-sqrt-two}
+#### $\sqrt{2}$ is irrational
+
+The square root of $2$ is irrational (@def-irrational-numbers)
+[@wikipedia_square_root_of_2].
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Suppose, for contradiction, that $\sqrt{2}$ is rational (@def-rational-numbers).
+Then $\sqrt{2} = \frac{a}{b}$ for some integers $a$ and $b$ with $b \ne 0$.
+Since $\sqrt{2} > 0$, we can take $a$ and $b$ positive
+(if $b < 0$, replace $a$ and $b$ with $-a$ and $-b$).
+So the set of positive integers $b$ for which $\sqrt{2}\, b$ is an integer has an element,
+and by @rem-well-ordering it has a smallest element.
+Let $b$ be that smallest element, and let $a = \sqrt{2}\, b$, a positive integer.
+
+By @sol-sqrt-bounds, $b < a < 2b$,
+so $b' = a - b$ is an integer with $0 < b' < b$.
+Let $a' = 2b - a$, also an integer. Then
+
+$$
+\ba
+\sqrt{2}\, b'
+&= \sqrt{2}\, (a - b)
+&& \text{(definition of } b' \text{)}
+\\&= \sqrt{2}\, a - \sqrt{2}\, b
+&& \text{(distributive law)}
+\\&= \sqrt{2}\, \sqrt{2}\, b - a
+&& \text{(substitute } a = \sqrt{2}\, b \text{ in each term)}
+\\&= 2b - a
+&& \text{(} \sqrt{2}\, \sqrt{2} = 2 \text{)}
+\\&= a'.
+&& \text{(definition of } a' \text{)}
+\ea
+$$
+
+So $b'$ is a positive integer for which $\sqrt{2}\, b'$ is an integer,
+and $b' < b$.
+That contradicts the choice of $b$ as the smallest such integer.
+So $\sqrt{2}$ is not rational.
+
+:::
+
+:::

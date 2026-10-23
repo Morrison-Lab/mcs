@@ -1,0 +1,12 @@
+::: {#exm-contradiction-works}
+#### The six and nine proof, read through the theorem
+
+In @sol-six-nine,
+$P$ is "there are no integers $m$ and $n$ with $6m + 9n = 1$",
+and $C$ is "$3 \mid 1$".
+The solution assumed $\neg P$, that such integers exist,
+and derived both $C$ and $\neg C$.
+That proves $\neg P \Rightarrow (C \land \neg C)$,
+so, by @thm-contradiction-works, it proves $P$.
+
+:::

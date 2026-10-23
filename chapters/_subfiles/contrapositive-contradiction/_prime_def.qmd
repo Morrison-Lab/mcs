@@ -1,0 +1,7 @@
+::: {#def-prime}
+#### Prime number
+
+An integer $n \ge 2$ is **prime** if its only positive divisors (@def-divides) are $1$ and $n$
+[@wikipedia_prime_number].
+
+:::

@@ -1,0 +1,16 @@
+::: {#rem-conditional-contradiction}
+#### Proving a conditional by contradiction
+
+To prove "if $P$, then $Q$" by contradiction,
+suppose its negation, which is "$P$ and $\neg Q$" (@thm-negate-conditional):
+
+> | Suppose $P$ and $\neg Q$.
+> | $\vdots$
+> | Therefore $C$ and $\neg C$.
+
+A proof by contrapositive (@rem-contrapositive-template) assumes only $\neg Q$,
+and has the fixed goal $\neg P$.
+A proof by contradiction assumes both $P$ and $\neg Q$,
+and any contradiction will do.
+
+:::

@@ -1,0 +1,10 @@
+::: {#rem-choosing-method}
+#### Which method to try
+
+- Try a direct proof (@def-direct-proof) first.
+- Try the contrapositive (@def-proof-by-contrapositive) when $\neg Q$ is the easier assumption (@rem-contrapositive-template).
+- Try contradiction (@def-proof-by-contradiction) when the proposition says that something does not exist or is not true,
+  as in "no integers satisfy", "is irrational" or "infinitely many":
+  its negation hands you an object to work with.
+
+:::

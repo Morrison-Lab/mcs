@@ -1,0 +1,8 @@
+::: {#exr-six-nine}
+#### No solution in integers
+
+Show that there are no integers $m$ and $n$ with $6m + 9n = 1$.
+
+Hint: suppose there were. What would $6m + 9n = 1$ say about $3$ and $1$?
+
+:::

@@ -1,0 +1,10 @@
+::: {#rem-prime-divisor}
+#### Every integer above one has a prime divisor
+
+These notes use one more fact without proving it:
+
+- every integer $n \ge 2$ is divisible by at least one prime (@def-prime).
+
+For example, $91$ is divisible by the primes $7$ and $13$, since $91 = 7 \cd 13$.
+
+:::

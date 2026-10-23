@@ -1,0 +1,7 @@
+::: {#exr-sqrt-bounds}
+#### Bounds on a fraction for $\sqrt{2}$
+
+Suppose $a$ and $b$ are positive integers with $\frac{a}{b} = \sqrt{2}$.
+Use $1 < 2 < 4$ to show that $b < a < 2b$.
+
+:::

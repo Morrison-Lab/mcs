@@ -1,0 +1,13 @@
+::: {#rem-well-ordering}
+#### Smallest elements
+
+These notes use one more fact about the integers without proving it
+[@wikipedia_well_ordering_principle]:
+
+- every set of positive integers that has at least one element has a smallest element.
+
+For example, the set of positive integers $b$ for which $\frac{3}{4} b$ is an integer
+has the elements $4$, $8$, $12$ and so on,
+and its smallest element is $4$.
+
+:::

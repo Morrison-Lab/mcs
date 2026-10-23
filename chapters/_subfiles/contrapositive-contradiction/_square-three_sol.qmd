@@ -1,0 +1,24 @@
+::: {#sol-square-three}
+
+We prove the contrapositive (@def-proof-by-contrapositive):
+if $3 \mid n$, then $3 \mid n^2$.
+
+Suppose $3 \mid n$.
+Then $n = 3c$ for some integer $c$ (@def-divides), so
+
+$$
+\ba
+n^2
+&= (3c)^2
+&& \text{(substitute } n = 3c \text{)}
+\\&= 9 c^2
+&& \text{(square each factor)}
+\\&= 3 (3 c^2),
+&& \text{(write } 9 = 3 \cd 3 \text{)}
+\ea
+$$
+
+and $3 c^2$ is an integer (@rem-integer-closure), so $3 \mid n^2$.
+By @thm-contrapositive, this proves the original proposition.
+
+:::
