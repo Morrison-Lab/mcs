@@ -6,7 +6,7 @@ For all, there exists, and the order they come in
 
 Published
 
-Last modified: 2026-10-23 11:18:30 (PDT)
+Last modified: 2026-10-23 12:01:03 (PDT)
 
 > **NOTE:**
 >
@@ -149,14 +149,12 @@ Last modified: 2026-10-23 11:18:30 (PDT)
 >
 > *Remark 5* (One example, or every element). Settling a quantified proposition takes one element in two cases, and every element of the domain in the other two:
 >
-> | To show that | it is enough to |
-> |----|----|
-> | \\\exists x \in S, P(x)\\ is true | find one \\x\\ in \\S\\ with \\P(x)\\ true |
-> | \\\forall x \in S, P(x)\\ is false | find one \\x\\ in \\S\\ with \\P(x)\\ false |
-> | \\\forall x \in S, P(x)\\ is true | show \\P(x)\\ for every \\x\\ in \\S\\ |
-> | \\\exists x \in S, P(x)\\ is false | show \\P(x)\\ is false for every \\x\\ in \\S\\ |
+> - To show that \\\exists x \in S, P(x)\\ is true, it is enough to find one \\x\\ in \\S\\ with \\P(x)\\ true.
+> - To show that \\\forall x \in S, P(x)\\ is false, it is enough to find one \\x\\ in \\S\\ with \\P(x)\\ false.
+> - To show that \\\forall x \in S, P(x)\\ is true, show \\P(x)\\ for every \\x\\ in \\S\\.
+> - To show that \\\exists x \in S, P(x)\\ is false, show that \\P(x)\\ is false for every \\x\\ in \\S\\.
 >
-> When \\S\\ is infinite, the last two rows need a proof rather than a check of each element.
+> When \\S\\ is infinite, the last two need a proof rather than a check of each element.
 
 # 4 Quantified conditionals
 
