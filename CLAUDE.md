@@ -38,7 +38,7 @@ Authoritative style guides:
   (the same file as in `Morrison-Lab/lds`)
 - `styles.css` --- website styling;
   `styles-reveal.scss`, `qwt-reveal-toggle.html` (the same four-theme dropdown for slides), and the `revealjs-*.lua` filters drive the reveal.js slide output
-- `assets/`, `images/` --- static image and asset files (site pages, docs, CI/PR screenshots)
+- `images/` --- figures for the pages (create it with the first figure)
 - `.github/workflows/` --- CI workflow definitions
 - `.github/scripts/` --- helper scripts used by workflows
 - `.github/instructions/` --- path-scoped Copilot rules that attach by file glob (see `.github/copilot-instructions.md`)
@@ -59,12 +59,13 @@ Key points:
   Run `lintr::lint_dir()` before declaring R changes done.
 - **Navigation**: `_quarto-website.yml` defines a docked sidebar because `page-navigation: true` builds its previous/next links from the sidebar.
   Add each new page to both the navbar and the sidebar, in the same order.
-  Keep Home as the first sidebar entry and keep `page-navigation.html` included, which fixes the navbar highlighting that entry would otherwise break (see the README's "Page navigation" section).
+  Keep Home as the first sidebar entry and keep `page-navigation.html` included, which fixes the navbar highlighting that entry would otherwise break (see the comments in `_quarto-website.yml` and `page-navigation.html`).
 - **Quarto chunks**: prefer chunk options as YAML-style `#|` directives, not as inline `r, opt = val` arguments.
 
 ## Working in this repo
 
-- **Don't edit generated files**: `README.md` is built from `README.Rmd`; `_site/` and `_freeze/` are build outputs.
+- **Don't edit generated files**: `_site/` and `_freeze/` are build outputs.
+  `README.md` is written by hand (there is no `README.Rmd`).
 - **Local preview**: `quarto preview` (live reload).
   Full build: `quarto render`.
   When verifying a single edited page, render just that page (`quarto render <file>.qmd --to html`) rather than the whole site --- the `/render` command is for the full build.

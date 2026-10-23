@@ -1,17 +1,13 @@
 ^renv$
 ^renv\.lock$
 ^LICENSE\.md$
-^CODE_OF_CONDUCT\.md$
 ^.*\.Rproj$
 ^\.Rproj\.user$
-_book/
 _site/
 _freeze/
 .*_cache/
 .*_files/
 ^\.github$
-^README\.Rmd$
-^data-raw$
 ^\.quarto$
 ^AGENTS\.md$
 ^CLAUDE\.md$
