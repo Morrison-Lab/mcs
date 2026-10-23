@@ -5,8 +5,10 @@ Claim (false): in every group of $n \ge 1$ horses, all the horses are the same c
 
 "Proof":
 
-- **Base case.** A group of 1 horse has only one color.
-- **Inductive step.** Suppose every group of $k$ horses is all one color,
+- **Base case.**
+  A group of 1 horse has only one color.
+- **Inductive step.**
+  Suppose every group of $k$ horses is all one color,
   and take a group of $k + 1$ horses.
   Leaving out the first horse leaves $k$ horses, which are all one color,
   and leaving out the last horse leaves $k$ horses, which are all one color.

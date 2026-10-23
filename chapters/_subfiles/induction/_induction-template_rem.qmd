@@ -3,9 +3,11 @@
 
 A proof by induction that $P(n)$ holds for every integer $n \ge n_0$ has two parts:
 
-> | **Base case.** Show $P(n_0)$.
+> | **Base case.**
+>   Show $P(n_0)$.
 > |
-> | **Inductive step.** Let $k \ge n_0$ be an integer, and suppose $P(k)$.
+> | **Inductive step.**
+>   Let $k \ge n_0$ be an integer, and suppose $P(k)$.
 > | $\vdots$
 > | Therefore $P(k + 1)$.
 > |
