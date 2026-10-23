@@ -117,7 +117,7 @@ The course notes are this site,
 [*Math for Computer Science* (mcs)](https://morrison-lab.github.io/mcs/).
 Its definitions come from the lab's
 [*Math for Data Science* (mds)](https://morrison-lab.github.io/mds/) notes,
-which also cover the precalculus and calculus this course assumes.
+which also cover background mathematics this course builds on.
 
 The readings in the [schedule](#schedule) are sections of:
 
@@ -146,16 +146,16 @@ Monday, January 18 (Martin Luther King Jr. Day)
 and Monday, February 15 (Presidents' Day)
 are university holidays, with no class.
 
-| Week | Dates | Topics | Assessments | Reading |
+| Week | Dates | Topics | Assigned work | Reading |
 |:-----|:------|:-------|:------------|:--------|
-| 1 | Jan 4--8 | Introduction to functional programming; [propositional logic](propositional-logic.qmd), [predicates and quantifiers](predicates-quantifiers.qmd), [logical equivalence and negation](equivalence-negation.qmd) | Quiz 0; Lab 1 | 1.1, 2.1--2.3, 3.1 |
+| 1 | Jan 5--8 | Introduction to functional programming; [propositional logic](propositional-logic.qmd), [predicates and quantifiers](predicates-quantifiers.qmd), [logical equivalence and negation](equivalence-negation.qmd) | Quiz 0; Lab 1 | 1.1, 2.1--2.3, 3.1 |
 | 2 | Jan 11--15 | Proofs: [inference and direct proof](direct-proof.qmd), contrapositive, and contradiction | Lab 2; Homework 1 | 4.1--4.2, 4.4 |
 | 3 | Jan 18--22 | Proofs, continued; sets and functions | Lab 3; Homework 2 | 1.2--1.3, 4.7--4.8 |
 | 4 | Jan 25--29 | Mathematical induction; loop invariants | **Midterm 1**, Wednesday, Jan 27 | 5.1--5.2 |
 | 5 | Feb 1--5 | Induction, continued; recurrence relations | Lab 4; Homework 3 | 5.4--5.6 |
 | 6 | Feb 8--12 | Growth rates of functions (big-O and asymptotic notation) | Lab 5; Homework 4 | 11.2--11.3 |
 | 7 | Feb 15--19 | Relations; graphs: paths, cycles, and connectivity | **Midterm 2**, Wednesday, Feb 17 | 1.4, 8.1--8.3, 10.1 |
-| 8 | Feb 22--26 | Graphs: breadth-first and depth-first traversal | Lab 6; Homework 5 | 10.1, 10.3 |
+| 8 | Feb 22--26 | Graphs: breadth-first and depth-first traversal | Lab 6; Homework 5 | 10.1, 10.3, class notes |
 | 9 | Mar 1--5 | State machines and finite automata | Lab 7; Homework 6 | 12.2 |
 | 10 | Mar 8--12 | Trees and their traversal | Lab 8 | 10.4--10.6 |
 | Finals | Mar 15--19 | | **Final exam**, **TBD** | |
@@ -175,8 +175,8 @@ set the **Announcement** row's **Email** column to **Notify immediately**.
 
 **Inbound.**
 All course-related correspondence goes through Canvas.
-Nearly all questions or comments from you to me and/or the TAs should be posted on
-the class discussion forum, Canvas Discussions (link **TBD**).
+Post nearly all questions and comments for me or the TAs
+on the class discussion forum, Canvas Discussions (link **TBD**).
 Anything that should not be posted there, such as a grading question or objection,
 goes in a Canvas message to me.
 
@@ -258,7 +258,7 @@ Course grades are letter grades, based on:
 | Midterm 2               | 10%    |
 | Final exam              | 25%    |
 
-I will assign final letter grades based on the weighted average of assignment scores,
+I will assign final letter grades based on the weighted average of the categories above,
 by the standard scale:
 
 | Cumulative score         | Letter grade |
@@ -288,7 +288,7 @@ The lowest worksheet score is dropped.
 
 **Quiz 0** is a short quiz in the first week
 that checks the CSCI 145 and precalculus material this course assumes.
-It is graded on completion, like a worksheet,
+It is graded on completion and counts as one worksheet,
 and its main purpose is to show you (and me) what to review.
 
 When writing up your work:
@@ -308,7 +308,8 @@ When writing up your work:
 Weekly labs give hands-on programming practice,
 with a TA available to answer questions during the lab period.
 To get full credit, **you must both attend lab and submit the deliverable by its deadline**,
-which will typically be 10pm on the Monday after the lab.
+which will typically be 10pm on the Monday after the lab
+(or the next class day, when that Monday is a holiday).
 
 - If you do not attend lab but submit the deliverable on time,
   your score is multiplied by 0.5.
@@ -349,7 +350,7 @@ Canvas lists every due date.
 - Homework is due Friday at 10pm,
   with no-penalty extensions until Sunday at 10pm.
   I will not be available for help on weekends.
-- The last homework is due during week 10 and has no extension.
+- The last homework, Homework 6, is due before finals week and has no extension.
 - Lab deliverables are due as described under [Labs](#labs).
 
 Please talk to me *in advance* if you need an accommodation or an extension;
@@ -382,7 +383,7 @@ AI tools are not allowed on lab work,
 including lab work you finish after the lab period.
 
 **Exams** are solo:
-work alone, without help from anyone else and without AI tools or other devices;
+work alone, without help from anyone else and without AI tools;
 the only aid allowed is your page(s) of notes, as described under [Exams](#exams).
 
 ## Academic Honesty {.unnumbered}
