@@ -17,7 +17,7 @@ format:
 ## Source
 
 Adapted from Kameron Decker Harris's Fall 2026 lecture notes "Logic 4, Proofs Intro, Direct Proof",
-which he typeset from Scott Wehrwein's Spring 2025 handwritten lecture notes.
+which are typed transcriptions of Scott Wehrwein's Spring 2025 handwritten lecture notes.
 The rules of inference, the definition of "divides",
 the observation that a definition's "if" means "if and only if",
 the template for a direct proof,
