@@ -1,0 +1,8 @@
+::: {#def-nonconstructive-proof}
+#### Non-constructive proof
+
+A **non-constructive proof** of a proposition $\exists x \in S,\ P(x)$
+shows that it is true without naming any element $x$ of $S$ for which $P(x)$ is true
+[@wikipedia_constructive_proof].
+
+:::

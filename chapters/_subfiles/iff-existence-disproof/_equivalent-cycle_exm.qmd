@@ -1,0 +1,19 @@
+::: {#exm-equivalent-cycle}
+#### Three ways to say "odd"
+
+Let $n$ be an integer, and consider
+
+- $P_1$: $n$ is odd;
+- $P_2$: $n + 1$ is even;
+- $P_3$: $n - 1$ is even.
+
+By @thm-equivalent-cycle, three conditionals show that all three have the same truth value.
+
+- $P_1 \Rightarrow P_2$: if $n = 2k + 1$ (@def-odd), then $n + 1 = 2k + 2 = 2(k + 1)$.
+- $P_2 \Rightarrow P_3$: if $n + 1 = 2m$, then $n - 1 = 2m - 2 = 2(m - 1)$.
+- $P_3 \Rightarrow P_1$: if $n - 1 = 2j$, then $n = 2j + 1$.
+
+In each step the new multiplier, $k + 1$, $m - 1$ or $j$, is an integer (@rem-integer-closure).
+Proving all six conditionals between pairs would have taken twice as many steps.
+
+:::

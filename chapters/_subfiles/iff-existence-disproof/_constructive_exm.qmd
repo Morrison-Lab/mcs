@@ -1,0 +1,27 @@
+::: {#exm-constructive-proof}
+#### Half of a positive number
+
+Claim: for every positive real number $x$,
+there is a positive real number $y$ with $y < x$.
+
+Let $x$ be a positive real number, and take $y = \frac{x}{2}$.
+Then $y > 0$, because $x > 0$, and
+
+$$
+\ba
+x - y
+&= x - \frac{x}{2}
+&& \text{(substitute } y = \tfrac{x}{2} \text{)}
+\\&= \frac{x}{2}
+&& \text{(arithmetic)}
+\\&> 0,
+&& \text{(} x > 0 \text{)}
+\ea
+$$
+
+so $y < x$.
+The witness $\frac{x}{2}$ depends on $x$,
+which a "for every $x$, there is a $y$" statement allows.
+The solution to @exr-five-three is also a constructive proof, with witnesses $x = 2$ and $y = -3$.
+
+:::

@@ -1,0 +1,6 @@
+::: {#exr-squares-gt-one}
+#### Prove or disprove
+
+Prove or disprove: for every real number $x$, if $x^2 > 1$, then $x > 1$.
+
+:::

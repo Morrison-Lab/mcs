@@ -1,0 +1,9 @@
+::: {#def-constructive-proof}
+#### Constructive proof
+
+A **constructive proof** of a proposition $\exists x \in S,\ P(x)$ (@def-existential-quantifier)
+names a particular element $x$ of $S$, called a **witness**,
+and shows that $P(x)$ is true
+[@wikipedia_constructive_proof].
+
+:::

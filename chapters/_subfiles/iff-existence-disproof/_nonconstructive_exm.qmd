@@ -1,0 +1,33 @@
+::: {#exm-nonconstructive-proof}
+#### An irrational power of an irrational number
+
+Claim: there are irrational numbers $x$ and $y$ (@def-irrational-numbers) for which $x^y$ is rational (@def-rational-numbers).
+
+The number $\sqrt{2}$ is irrational (@thm-sqrt-two).
+Consider $\sqrt{2}^{\sqrt{2}}$, and take two cases (@def-proof-by-cases).
+
+**Case 1: $\sqrt{2}^{\sqrt{2}}$ is rational.**
+Then $x = \sqrt{2}$ and $y = \sqrt{2}$ work.
+
+**Case 2: $\sqrt{2}^{\sqrt{2}}$ is irrational.**
+Then take $x = \sqrt{2}^{\sqrt{2}}$ and $y = \sqrt{2}$, both irrational, and
+
+$$
+\ba
+x^y
+&= \paren{\sqrt{2}^{\sqrt{2}}}^{\sqrt{2}}
+&& \text{(substitute } x \text{ and } y \text{)}
+\\&= \sqrt{2}^{\sqrt{2} \cd \sqrt{2}}
+&& \text{(a power of a power multiplies the exponents)}
+\\&= \sqrt{2}^{2}
+&& \text{(} \sqrt{2} \cd \sqrt{2} = 2 \text{)}
+\\&= 2,
+\ea
+$$
+
+which is rational, since $2 = \frac{2}{1}$.
+
+Every number is rational or irrational, so one of the cases holds, and the claim is true.
+The proof does not say which case holds, so it does not name a pair $x, y$ that works.
+
+:::

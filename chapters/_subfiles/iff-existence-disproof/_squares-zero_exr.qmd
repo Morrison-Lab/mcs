@@ -1,0 +1,9 @@
+::: {#exr-squares-zero}
+#### A sum of squares equal to zero
+
+Let $x$ and $y$ be real numbers.
+Prove: $x^2 + y^2 = 0$ if and only if $x = 0$ and $y = 0$ (@def-iff).
+
+Hint: prove the two directions one at a time.
+
+:::

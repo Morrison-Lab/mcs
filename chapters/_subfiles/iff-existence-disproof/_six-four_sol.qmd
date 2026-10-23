@@ -1,0 +1,14 @@
+::: {#sol-six-four}
+
+1. True.
+   Take $m = 1$ and $n = -1$: then $6m + 4n = 6 - 4 = 2$.
+2. False.
+   Its negation (@thm-negate-quantifiers) is "for all integers $m$ and $n$, $6m + 4n \ne 3$".
+   Let $m$ and $n$ be integers.
+   Then $6m + 4n = 2(3m + 2n)$, and $3m + 2n$ is an integer (@rem-integer-closure),
+   so $6m + 4n$ is even (@def-even-odd).
+   But $3 = 2 \cd 1 + 1$ is odd (@def-odd),
+   and no integer is both even and odd (@rem-integer-closure),
+   so $6m + 4n \ne 3$.
+
+:::
