@@ -1,101 +1,70 @@
-# Contributing to Your Quarto Book
+# Contributing to the CSCI 201 notes
 
-Thank you for your interest in contributing to this book!
+These are the lecture notes for CSCI 201, math for computer science.
+Style and conventions live in [CLAUDE.md](CLAUDE.md) and [`.github/copilot-instructions.md`](.github/copilot-instructions.md);
+this file covers the workflow.
 
-## How to contribute
+Never commit an answer to anything that is graded:
+assessments, solutions and labs belong in the private `Morrison-Lab/mcsg` repository.
 
-### For book authors
+## Workflow
 
-If you're working on content for this book:
+1. Clone with the submodules, or fetch them after cloning:
 
-1. **Create a new branch** for your work:
    ```bash
-   git checkout -b chapter/your-topic
+   git submodule update --init --recursive
    ```
 
-2. **Edit or create `.qmd` files** for your chapter
+2. Create a branch for your work:
 
-3. **Preview your changes** locally:
+   ```bash
+   git checkout -b <topic>
+   ```
+
+3. Edit or add pages.
+   A chapter is `chapters/<topic>.qmd`, with its units in `chapters/_subfiles/<topic>/`, one div per file.
+   Add each new chapter to both the navbar and the sidebar in `_quarto-website.yml`, in course order.
+
+4. Preview your changes locally:
+
    ```bash
    quarto preview
    ```
 
-4. **Commit your changes**:
+   or render just the page you changed:
+
    ```bash
-   git add .
-   git commit -m "Add chapter on your topic"
+   quarto render chapters/<topic>.qmd --to html
    ```
 
-5. **Push and create a pull request**:
-   ```bash
-   git push origin chapter/your-topic
-   ```
+5. Commit, push, and open a pull request.
+   Each pull request gets a preview build, and the checks below.
 
-### Content guidelines
+## Checks
 
-- Use clear, concise language
-- Include code examples where appropriate
-- Add references to `references.bib` for any citations
-- Use appropriate headings (h2 `##` for main sections, h3 `###` for subsections)
-- Include images in an `images/` or `figures/` directory
-- Test code examples to ensure they work
+- **Spelling**: add legitimate words to `inst/WORDLIST` rather than disabling the check.
+- **Links**: an automated link checker runs on every pull request and weekly.
+  Prefer HTTPS and permanent links, and fix a broken link rather than excluding it in `lychee.toml`.
+  If you have checked every link in your pull request by hand, the **`links checked by hand`** label skips the check for that pull request.
+- **Bibliography DOIs** and **non-standard characters**: fix the flagged source rather than relaxing the check.
 
-### Markdown formatting
+## Images
 
-- Use **bold** for emphasis on terms
-- Use `code` formatting for inline code, file names, and commands
-- Use code blocks with language specification for longer code examples
-- Use callout boxes for important information:
-  ```markdown
-  ::: {.callout-note}
-  Important information here
-  :::
-  ```
+Put figures in `images/` and reference them from a figure div:
 
-### Adding images
+```markdown
+::: {#fig-label}
+![](images/your-image.png)
 
-1. Place images in the `images/` directory
-2. Reference them in your `.qmd` file:
-   ```markdown
-   ![Caption text](images/your-image.png){#fig-label}
-   ```
-
-### Adding URLs
-
-When adding external links to your content, please ensure:
-
-1. **URLs are valid and reachable** - The repository has an automated link checker that runs weekly and on every push/pull request
-2. **Use HTTPS when possible** - Prefer secure URLs over HTTP
-3. **Check link stability** - Use permanent links (permalinks) when available rather than URLs that might change
-
-The link checker workflow will automatically:
-
-- Check all URLs in `.qmd`, `.md`, and `.html` files
-- Report broken or unreachable links
-- Create issues for broken links that need attention
-
-If you need to exclude certain URLs from checking (e.g., example URLs), add them to the `lychee.toml` configuration file.
-
-#### Manual override for link checking
-
-If you have manually verified all links in your pull request and want to skip the automated link checker, you can add the **`links checked by hand`** label to your PR.
-This will cause the link checker workflow to skip the check for that specific pull request, while still running on the main branch and scheduled checks.
-
-### Citations
-
-Add BibTeX entries to `references.bib`:
-
-```bibtex
-@article{authorYEAR,
-  title={Article Title},
-  author={Author, First and Author, Second},
-  journal={Journal Name},
-  year={2024}
-}
+Caption text.
+:::
 ```
 
-Then cite in text: `@authorYEAR`
+## Citations
 
-## Questions?
+Add BibTeX entries to `references.bib` and cite them in the text as `@key`.
+Cite only sources you have read; never invent a citation.
 
-If you have questions about contributing, please open an issue in the repository.
+## Questions
+
+Open an issue in the repository.

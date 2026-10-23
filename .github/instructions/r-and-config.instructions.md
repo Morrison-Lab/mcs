@@ -23,8 +23,8 @@ description: "Use when editing R source, Quarto configuration, or GitHub workflo
   reason.
   Align workflow and render changes with the existing CI patterns
   instead of inventing parallel setup.
-- Do not edit generated files (`README.md` is built from `README.Rmd`; `_site/`,
-  `_freeze/`, and `.quarto/` are build outputs).
+- Do not edit generated files (`_site/`, `_freeze/`, and `.quarto/` are build
+  outputs).
 
 See also:
 

@@ -78,7 +78,6 @@ jobs:
 
         3. **Build hygiene**
            - No accidental commits of `_site/`, `_freeze/`, or `.quarto/`.
-           - `README.md` is generated; edits should go to `README.Rmd`.
            - Bibliography entries in `references.bib` are well-formed BibTeX.
 
         4. **CI impact**

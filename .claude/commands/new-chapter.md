@@ -23,13 +23,12 @@ Steps:
    Do NOT add a top-level `#` heading in the body --- Quarto
    renders the frontmatter `title:` as the page heading, so a `#` heading would
    duplicate it.
-2. Add an entry for the new chapter to the `website.navbar.left` "Chapters" menu
-   in `_quarto-website.yml` (read the file first to find the menu; there is no
-   `chapters:` key in `_quarto.yml`).
-   Use `text:` for the menu label and
-   `href: chapters/<slug>.qmd`.
-   Also add `chapters/<slug>.qmd` to the "Chapters" section of `website.sidebar`
-   in the same position: the sidebar order sets the previous/next page links.
+2. Add an entry for the new chapter to `website.navbar.left` in
+   `_quarto-website.yml` (read the file first; there is no `chapters:` key in
+   `_quarto.yml`).
+   Use `text:` for the label and `href: chapters/<slug>.qmd`, in course order.
+   Also add `chapters/<slug>.qmd` to `website.sidebar.contents` in the same
+   position: the sidebar order sets the previous/next page links.
 3. Confirm it renders: `quarto render chapters/<slug>.qmd`.
 
 Style rules (from CLAUDE.md):
