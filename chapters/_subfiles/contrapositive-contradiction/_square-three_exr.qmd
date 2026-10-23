@@ -1,0 +1,7 @@
+::: {#exr-square-three}
+#### A square not divisible by three
+
+Let $n$ be an integer.
+Prove: if $3 \nmid n^2$, then $3 \nmid n$.
+
+:::

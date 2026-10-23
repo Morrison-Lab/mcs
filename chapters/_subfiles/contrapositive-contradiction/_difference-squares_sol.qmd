@@ -1,0 +1,24 @@
+::: {#sol-difference-squares}
+
+Suppose, for contradiction, that $x$ and $y$ are positive integers with $x^2 - y^2 = 1$.
+Then
+
+$$
+\ba
+1
+&= x^2 - y^2
+&& \text{(the assumption, read from right to left)}
+\\&= (x - y)(x + y).
+&& \text{(difference of squares)}
+\ea
+$$
+
+Since $x \ge 1$ and $y \ge 1$, $x + y \ge 2$.
+Dividing both sides by $x + y$ gives $x - y = \frac{1}{x + y}$,
+and $0 < \frac{1}{x + y} \le \frac{1}{2}$,
+so $x - y$ is strictly between $0$ and $1$ and is not an integer.
+But $x - y$ is an integer (@rem-integer-closure).
+That is a contradiction,
+so there are no such $x$ and $y$.
+
+:::

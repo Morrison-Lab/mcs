@@ -46,6 +46,8 @@ website:
         href: chapters/equivalence-negation.qmd
       - text: "Inference and Direct Proof"
         href: chapters/direct-proof.qmd
+      - text: "Contrapositive and Contradiction"
+        href: chapters/contrapositive-contradiction.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mcs
@@ -69,6 +71,7 @@ website:
       - chapters/predicates-quantifiers.qmd
       - chapters/equivalence-negation.qmd
       - chapters/direct-proof.qmd
+      - chapters/contrapositive-contradiction.qmd
 
 callouty-theorem:
   thm:

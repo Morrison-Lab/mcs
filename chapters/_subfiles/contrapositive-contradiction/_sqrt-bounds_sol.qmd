@@ -1,0 +1,9 @@
+::: {#sol-sqrt-bounds}
+
+Square roots keep the order of positive numbers,
+so $1 < 2 < 4$ gives $1 < \sqrt{2} < 2$,
+that is, $1 < \frac{a}{b} < 2$.
+Multiplying each part by $b$, which is positive, keeps the order,
+and gives $b < a < 2b$.
+
+:::

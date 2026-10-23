@@ -1,0 +1,10 @@
+::: {#exm-contrapositive-not-converse}
+#### A proposition and its contrapositive
+
+Take "if today is Saturday, then today is a weekend day", which is true.
+
+Its contrapositive is "if today is not a weekend day, then today is not Saturday".
+It is also true, as @thm-contrapositive says it must be:
+Monday through Friday are the days that are not weekend days, and none of them is Saturday.
+
+:::

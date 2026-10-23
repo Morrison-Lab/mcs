@@ -1,0 +1,15 @@
+::: {#rem-contradiction-template}
+#### The shape of a proof by contradiction
+
+A proof by contradiction (@def-proof-by-contradiction) of a proposition $P$ has this shape:
+
+> | Suppose $\neg P$.
+> | $\vdots$
+> | Therefore $C$ and $\neg C$.
+
+Two things differ from a proof by contrapositive (@rem-contrapositive-template).
+$P$ need not be a conditional.
+And the proof does not know $C$ in advance:
+any proposition $C$ for which the argument derives both $C$ and $\neg C$ will do.
+
+:::

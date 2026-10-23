@@ -1,0 +1,50 @@
+::: {#thm-infinitely-many-primes}
+#### There are infinitely many primes
+
+There are infinitely many prime numbers (@def-prime)
+[@wikipedia_euclids_theorem].
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Suppose, for contradiction, that there are only finitely many primes,
+and list them all as $p_1, p_2, \ldots, p_k$.
+The list is not empty, because $2$ is prime.
+Let
+
+$$
+N = p_1 p_2 \cdots p_k + 1.
+$$
+
+Each $p_i \ge 2$, so $N \ge 3$,
+and by @rem-prime-divisor some prime $p$ divides $N$: $N = p s$ for some integer $s$.
+The list holds every prime, so $p$ is one of $p_1, \ldots, p_k$,
+and so $p$ also divides their product: $p_1 p_2 \cdots p_k = p t$ for some integer $t$.
+Then
+
+$$
+\ba
+1
+&= N - p_1 p_2 \cdots p_k
+&& \text{(definition of } N \text{)}
+\\&= p s - p t
+&& \text{(substitute both products)}
+\\&= p (s - t).
+&& \text{(distributive law, read from right to left)}
+\ea
+$$
+
+Since $s - t$ is an integer (@rem-integer-closure), $p \mid 1$.
+But $p \ge 2$, and $p \cd 0 = 0 < 1 < p = p \cd 1$,
+so no integer $c$ has $p c = 1$, and $p \nmid 1$.
+That is a contradiction,
+so there are infinitely many primes.
+
+:::
+
+:::

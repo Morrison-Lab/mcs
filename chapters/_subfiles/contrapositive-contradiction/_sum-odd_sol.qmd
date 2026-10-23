@@ -1,0 +1,17 @@
+::: {#sol-sum-odd}
+
+The direct start gives $x + y = 2k + 1$ for some integer $k$ (@def-odd),
+which says little about whether $x$ and $y$ are equal.
+
+The second start goes further.
+Suppose $x = y$.
+Then $x + y = x + x = 2x$,
+and $x$ is an integer, so $x + y$ is even (@def-even-odd).
+No integer is both even and odd (@rem-integer-closure),
+so $x + y$ is not odd.
+
+That proves "if $x = y$, then $x + y$ is not odd".
+Why proving this proposition proves the one we were asked about
+is the subject of this section.
+
+:::
