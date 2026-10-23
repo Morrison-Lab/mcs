@@ -46,7 +46,7 @@ Lab
   (see [Sections](#sections))
 
 Office hours
-: **TBD**, in my office (CF 463) unless otherwise noted
+: **TBD**, in my office (Communication Facility 463) unless otherwise noted
 
 Prerequisites
 : CSCI 145,
@@ -78,7 +78,7 @@ Name
 : Ezra Morrison
 
 Office
-: CF 463
+: Communication Facility 463
 
 Email
 : <ezra.morrison@wwu.edu>, for confidential matters only
@@ -142,6 +142,8 @@ linked under **Other Formats** on the chapter's page.
 
 The topics and dates of future lectures may change.
 Readings are sections of Epp's *Discrete Mathematics with Applications* (5th ed.).
+Classes begin on Tuesday, January 5,
+so the first lecture is on Wednesday, January 6.
 Monday, January 18 (Martin Luther King Jr. Day)
 and Monday, February 15 (Presidents' Day)
 are university holidays, with no class.
@@ -421,9 +423,9 @@ under the license on the [home page](../index.qmd).
 
 Reasonable accommodation for persons with documented disabilities
 should be established within the first two weeks of class
-and arranged through Disability Resources for Students:
-telephone 360-650-3083; email <drs@wwu.edu>;
-and on the web at [Disability Resources](https://disability.wwu.edu/).
+and arranged through the Disability Access Center:
+telephone 360-650-3083; email <drsfrontdesk@wwu.edu>;
+and on the web at [Disability Access Center](https://disability.wwu.edu/).
 
 ## Student Services {.unnumbered}
 
@@ -433,15 +435,15 @@ Western encourages students to seek assistance and support at the onset of an il
   please contact the Health Center: 360-650-3400,
   or visit [Student Health](https://studenthealth.wwu.edu/).
 - In the case of an emotional or psychological concern or question,
-  please contact the Counseling Center: 360-650-3400,
-  or visit [Counseling Services](https://cwc.wwu.edu/).
+  please contact the Counseling and Wellness Center: 360-650-3164,
+  or visit [Counseling and Wellness Center](https://cwc.wwu.edu/).
 - In the case of a health and safety concern,
   please contact the University Police: 360-650-3555,
   or visit [University Police](https://police.wwu.edu/).
 - In the case of a family or personal crisis or emergency,
   please contact the [Dean of Students](https://www.wwu.edu/dean-students).
 - To seek confidential support related to sexual violence,
-  please contact CASAS (360-650-3700), the Student Health Center, and/or the Counseling Center.
+  please contact CASAS (360-650-3700), the Student Health Center, and/or the Counseling and Wellness Center.
   To report sexual violence, please contact University Police, Bellingham Police,
   and/or the Title IX Coordinator
   in Western's [Civil Rights and Title IX Compliance](https://crtc.wwu.edu/) office (360-650-3307).
