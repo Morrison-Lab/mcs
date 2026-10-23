@@ -24,4 +24,8 @@ exclude = [
   "https://127.0.0.1.*",
   # quarto.org is a trusted site but may be unreachable from CI runners
   "https://quarto.org/.*",
+  # These pages load in a browser but answer CI's link checker with
+  # 403 Forbidden (checked by hand 2026-10-23).
+  "https://www.acm.org/code-of-ethics",
+  "https://www.wwu.edu/dean-students",
 ]

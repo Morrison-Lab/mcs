@@ -121,13 +121,13 @@ which also cover background mathematics this course builds on.
 
 The readings in the [schedule](#schedule) are sections of:
 
-- *Discrete Mathematics with Applications* (5th ed.), by Susanna S. Epp.
+- *Discrete Mathematics with Applications* (5th ed.), by Susanna Epp.
 
 Other useful references:
 
-- *Discrete Mathematics and Its Applications*, by Kenneth H. Rosen;
+- *Discrete Mathematics and Its Applications*, by Kenneth Rosen;
   any recent edition.
-- *Building Blocks for Theoretical Computer Science*, by Margaret M. Fleck,
+- *Building Blocks for Theoretical Computer Science*, by Margaret Fleck,
   which can be read at no cost on
   [the author's webpage](https://mfleck.cs.illinois.edu/building-blocks/index-sp2020.html).
 
@@ -423,7 +423,7 @@ Reasonable accommodation for persons with documented disabilities
 should be established within the first two weeks of class
 and arranged through Disability Resources for Students:
 telephone 360-650-3083; email <drs@wwu.edu>;
-and on the web at [Disability Resources](http://www.wwu.edu/disability/).
+and on the web at [Disability Resources](https://disability.wwu.edu/).
 
 ## Student Services {.unnumbered}
 
@@ -434,10 +434,10 @@ Western encourages students to seek assistance and support at the onset of an il
   or visit [Student Health](https://studenthealth.wwu.edu/).
 - In the case of an emotional or psychological concern or question,
   please contact the Counseling Center: 360-650-3400,
-  or visit [Counseling Services](https://counseling.wwu.edu/).
+  or visit [Counseling Services](https://cwc.wwu.edu/).
 - In the case of a health and safety concern,
   please contact the University Police: 360-650-3555,
-  or visit [University Police](http://www.wwu.edu/ps/police/index.shtml).
+  or visit [University Police](https://police.wwu.edu/).
 - In the case of a family or personal crisis or emergency,
   please contact the [Dean of Students](https://www.wwu.edu/dean-students).
 - To seek confidential support related to sexual violence,
