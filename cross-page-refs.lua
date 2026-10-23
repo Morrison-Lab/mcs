@@ -51,6 +51,14 @@ local function read_file(file)
   return text
 end
 
+local function exists(file)
+  local f = io.open(file, "r")
+  if f then
+    f:close()
+  end
+  return f ~= nil
+end
+
 -- Record each id that `file` defines, with its title, as found on `page`.
 -- Includes are followed relative to the file that holds them, or else
 -- relative to the page, which is how the mds pages write theirs
@@ -76,9 +84,11 @@ local function scan(file, page, found, seen, page_dir)
   end
   for i, line in ipairs(lines) do
     local include = line:match("{{<%s*include%s+(%S+)%s*>}}")
-    if include then
+    -- The math macros define no ids, and mds's own copy is a nested
+    -- submodule that a non-recursive checkout leaves empty.
+    if include and not include:match("latex%-macros/") then
       local target = path.normalize(path.join({ here, include }))
-      if not read_file(target) then
+      if not exists(target) then
         target = path.normalize(path.join({ page_dir, include }))
       end
       scan(target, page, found, seen, page_dir)
@@ -196,11 +206,21 @@ function Pandoc(doc)
   local depth = select(2, current:gsub("/", ""))
 
   -- The page that defines `id`, here or else in mds, and the link to it.
-  local function resolve(id)
+  -- `named` is the page a link names, such as "algebra.qmd"; mds includes
+  -- one subfile on several pages, so the named page wins when it has the id.
+  local function resolve(id, named)
     local pages = index[id]
     local base
     if pages then
       base = (html or not site) and string.rep("../", depth) or site
+      if #pages > 1 then
+        local names = {}
+        for _, p in ipairs(pages) do
+          table.insert(names, p.page)
+        end
+        warn(id .. " is defined on several pages (" .. table.concat(names, ", ")
+          .. "); linking to " .. pages[1].page)
+      end
     else
       pages = mds_index[id]
       base = mds_site
@@ -208,23 +228,29 @@ function Pandoc(doc)
     if not pages or not base then
       return nil
     end
-    if #pages > 1 then
-      local names = {}
-      for _, p in ipairs(pages) do
-        table.insert(names, p.page)
-      end
-      warn(id .. " is defined on several pages (" .. table.concat(names, ", ")
-        .. "); linking to " .. pages[1].page)
-    end
     local entry = pages[1]
+    for _, p in ipairs(pages) do
+      if p.page == named then
+        entry = p
+      end
+    end
     return base .. entry.page:gsub("%.qmd$", ".html") .. "#" .. id, entry
+  end
+
+  -- An mds citation is followed only for the div types the scan sees in
+  -- full here too; an id such as a chunk-labelled figure on this site
+  -- would otherwise be taken for an mds one of the same name.
+  local function in_mds(id)
+    local prefix = id:match("^(%a+)%-")
+    return mds_index[id] ~= nil and prefix ~= "fig" and prefix ~= "tbl"
+      and prefix ~= "sec"
   end
 
   return doc:walk({
     Cite = function(cite)
       local away = {}
       for _, c in ipairs(cite.citations) do
-        if (index[c.id] or mds_index[c.id]) and not on_this_page(c.id) then
+        if (index[c.id] or in_mds(c.id)) and not on_this_page(c.id) then
           table.insert(away, c.id)
         end
       end
@@ -249,8 +275,11 @@ function Pandoc(doc)
       return pandoc.Link({ pandoc.Str(label) }, href)
     end,
 
-    -- A link to `#id` that this page lacks, or to `page.qmd#id` where this
-    -- site has no such page: both come from mds text included here.
+    -- A link to `#id` that this page lacks, or to `page.qmd#id` where
+    -- `page.qmd` does not exist beside the current page: in practice both
+    -- come from mds text included here. An unresolved `#id` is left alone
+    -- without a warning, since the scan does not see every kind of anchor
+    -- (`#refs`, a chunk label).
     Link = function(link)
       local file, id = link.target:match("^([^#]*)#(.+)$")
       if not id then
@@ -264,14 +293,16 @@ function Pandoc(doc)
         return nil
       else
         local dir = path.directory(path.join({ root, current }))
-        if read_file(path.join({ dir, file })) then
+        if exists(path.join({ dir, file })) then
           return nil
         end
       end
-      local href = resolve(id)
+      local href = resolve(id, file ~= "" and file or nil)
       if not href then
-        warn("cannot resolve the link to " .. link.target
-          .. " on any page of this site or of mds")
+        if file ~= "" then
+          warn("cannot resolve the link to " .. link.target
+            .. " on any page of this site or of mds")
+        end
         return nil
       end
       link.target = href
