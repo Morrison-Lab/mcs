@@ -1,0 +1,16 @@
+# Math for Computer Science
+
+> Lecture notes for CSCI 201, math for computer science
+
+## Pages
+
+- [Math for Computer Science](https://morrison-lab.github.io/mcs/index.llms.md)
+- [Sets](https://morrison-lab.github.io/mcs/chapters/sets.llms.md)
+- [Propositional Logic](https://morrison-lab.github.io/mcs/chapters/propositional-logic.llms.md)
+- [Proving Non-Conditional Statements](https://morrison-lab.github.io/mcs/chapters/iff-existence-disproof.llms.md)
+- [Inference and Direct Proof](https://morrison-lab.github.io/mcs/chapters/direct-proof.llms.md)
+- [Contrapositive and Contradiction](https://morrison-lab.github.io/mcs/chapters/contrapositive-contradiction.llms.md)
+- [Logical Equivalence and Negation](https://morrison-lab.github.io/mcs/chapters/equivalence-negation.llms.md)
+- [Predicates and Quantifiers](https://morrison-lab.github.io/mcs/chapters/predicates-quantifiers.llms.md)
+- [Proofs with Sets](https://morrison-lab.github.io/mcs/chapters/set-proofs.llms.md)
+- [WWU CSCI 201 Syllabus](https://morrison-lab.github.io/mcs/chapters/syllabus.llms.md)

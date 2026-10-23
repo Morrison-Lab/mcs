@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.19">
+
+  <title>Math for Computer Science – Sets</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-3a7eae3b872f08785a56513611f0329a.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <!--
+    Colour-theme dropdown for the qwt revealjs format: Light, Off-white,
+    Parchment, Dark. Pulled into every slide deck via the `include-in-header`
+    entry in the `revealjs:` block of `_quarto-website.yml`. Pairs with
+    `styles-reveal.scss`, which defines the palette CSS variables; the select
+    reads those vars so it stays legible in every palette. Light is the
+    default variable set, Off-white and Parchment are a data-palette attribute
+    on <html>, and Dark is the body.qwt-dark class. The choice is saved under
+    "mln-theme", the key the website's theme dropdown (theme-picker.html) uses,
+    so it carries across the site and the decks. First-time visitors get
+    Dark if their system prefers it, and Off-white otherwise.
+  -->
+  <style>
+    #qwt-theme-select {
+      position: fixed;
+      bottom: 8px;
+      left: 8px;
+      /* Matches reveal.js's `.slide-number` and the `#revealjs-html-link` chip
+         from `revealjs-html-links.lua`; the three elements occupy different
+         corners so they don't overlap. Keep them aligned if you bump this. */
+      z-index: 31;
+      padding: 2px 4px;
+      border: 1px solid var(--qwt-border, rgba(0, 0, 0, 0.2));
+      border-radius: 4px;
+      background: var(--qwt-chip-bg, rgba(255, 255, 255, 0.8));
+      color: var(--qwt-fg, #000);
+      cursor: pointer;
+      font: 12px sans-serif;
+      opacity: 0.7;
+    }
+    #qwt-theme-select:hover,
+    #qwt-theme-select:focus-visible {
+      opacity: 1;
+      border-color: var(--qwt-fg, rgba(0, 0, 0, 0.4));
+    }
+    #qwt-theme-select:focus-visible {
+      outline: 2px solid var(--qwt-link, #2a76dd);
+      outline-offset: 2px;
+    }
+    @media print { #qwt-theme-select { display: none; } }
+  </style>
+  <script>
+  (function () {
+    "use strict";
+    var KEY = "mln-theme";
+    var DARK_CLASS = "qwt-dark";
+    var OPTIONS = [["light", "Light"], ["offwhite", "Off-white"], ["parchment", "Parchment"], ["dark", "Dark"]];
+    var root = document.documentElement;
+
+    function valid(choice) {
+      return OPTIONS.some(function (o) { return o[0] === choice; });
+    }
+
+    function stored() {
+      try { return localStorage.getItem(KEY); } catch (e) { return null; }
+    }
+
+    function initialTheme() {
+      var saved = stored();
+      if (valid(saved)) return saved;
+      if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        return "dark";
+      }
+      return "offwhite";
+    }
+
+    function applyTheme(choice) {
+      if (choice === "offwhite" || choice === "parchment") {
+        root.setAttribute("data-palette", choice);
+      } else {
+        root.removeAttribute("data-palette");
+      }
+      // The body can be missing when this runs from <head>; init() re-applies it.
+      if (document.body) document.body.classList.toggle(DARK_CLASS, choice === "dark");
+    }
+
+    var start = initialTheme();
+    applyTheme(start); // set the palette before first paint
+
+    function init() {
+      if (document.getElementById("qwt-theme-select")) return;
+      applyTheme(start);
+      var sel = document.createElement("select");
+      sel.id = "qwt-theme-select";
+      sel.setAttribute("aria-label", "Colour theme");
+      OPTIONS.forEach(function (o) {
+        var opt = document.createElement("option");
+        opt.value = o[0];
+        opt.textContent = o[1];
+        sel.appendChild(opt);
+      });
+      sel.value = start;
+      sel.addEventListener("change", function () {
+        applyTheme(sel.value);
+        try { localStorage.setItem(KEY, sel.value); } catch (e) { /* private mode */ }
+      });
+      document.body.appendChild(sel);
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init);
+    } else {
+      init();
+    }
+  })();
+  </script>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Sets</h1>
+  <p class="subtitle">Elements, subsets, products and operations</p>
+
+<div class="quarto-title-authors">
+</div>
+
+  <p class="date">Last modified: 2026-10-23 15:03:02 (PDT)</p>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-note callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Source</strong></p>
+</div>
+<div class="callout-content">
+<p>Adapted from Kameron Decker Harris’s Fall 2026 lecture notes “Sets 0” to “Sets 3”, which are typed transcriptions of Scott Wehrwein’s Spring 2025 handwritten lecture notes. These come from those notes:</p>
+<ul>
+<li>roster notation, and that order and repetition do not matter in a set;</li>
+<li>the table of sets of numbers;</li>
+<li>set-builder notation with a test and with an expression;</li>
+<li>cardinality, and the pattern of the example of a set whose elements are sets;</li>
+<li>countably infinite sets, and the diagonal argument that the real numbers are not countable;</li>
+<li>subsets, strict subsets and power sets;</li>
+<li>tuples and Cartesian products, including products of three sets;</li>
+<li>union, intersection, difference, complement and the universal set (with its example of the even integers), with their other notations;</li>
+<li>Venn diagrams.</li>
+</ul>
+<p>The exercises are new.</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<section id="sec-sets" class="title-slide slide level1 center" data-number="1">
+<h1><span class="header-section-number">1</span> Sets and their elements</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-weekdays" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1 (Days that begin with T)</strong></span> Let <span class="math inline">\(W\)</span> be the set of days of the week whose English names begin with the letter T. List the elements of <span class="math inline">\(W\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-weekdays" class="proof solution">
+<p><span class="proof-title"><em>Solution 1</em>. </span><span class="math inline">\(W = {\mathopen{}\left\{\text{Tuesday}, \text{Thursday}\right\}\mathclose{}}\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-set" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 (Set)</strong></span> A <strong>set</strong> <span class="citation" data-cites="wikipedia_set_mathematics">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026n</a>)</span> is a collection of distinct objects, called its elements. We write <span class="math inline">\(a \in A\)</span> when <span class="math inline">\(a\)</span> is an element of the set <span class="math inline">\(A\)</span>, and <span class="math inline">\(a \notin A\)</span> when it is not. Two sets are equal when they have exactly the same elements.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-naive-set" class="proof remark">
+<p><span class="proof-title"><em>Remark 1</em> (Naive and formal set theory). </span><a href="#/def-set" class="quarto-xref">Definition&nbsp;1</a> is the informal (“naive”) notion of a set, which is all these notes need. Formal set theory states axioms for sets instead <span class="citation" data-cites="wikipedia_set_mathematics">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026n</a>)</span>. For example, the last sentence of <a href="#/def-set" class="quarto-xref">Definition&nbsp;1</a>, that two sets are equal when they have exactly the same elements, is one of those axioms, the <em>axiom of extensionality</em>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-set" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1 (Sets of die rolls)</strong></span> The possible results of rolling a six-sided die form the set <span class="math inline">\({\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}\)</span>, with <span class="math inline">\(3 \in {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}\)</span> and <span class="math inline">\(7 \notin {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}\)</span>. The sets <span class="math inline">\({\mathopen{}\left\{1, 2, 3\right\}\mathclose{}}\)</span> and <span class="math inline">\({\mathopen{}\left\{3, 2, 1\right\}\mathclose{}}\)</span> are equal, because they have the same elements; the order in which the elements are listed does not matter.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-roster-notation" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2 (Roster notation)</strong></span> Writing a set (<a href="#/def-set" class="quarto-xref">Definition&nbsp;1</a>) by listing its elements between braces, as in <span class="math inline">\({\mathopen{}\left\{1, 2, 3\right\}\mathclose{}}\)</span>, is called <strong>roster notation</strong> <span class="citation" data-cites="wikipedia_set_mathematics">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026n</a>)</span>. An ellipsis, “<span class="math inline">\(\ldots\)</span>”, can stand for elements that follow a clear pattern, as in <span class="math inline">\({\mathopen{}\left\{10, 20, 30, \ldots, 90\right\}\mathclose{}}\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-roster-notation" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2 (Order and repetition do not matter)</strong></span> The sets <span class="math inline">\({\mathopen{}\left\{3, 1, 2\right\}\mathclose{}}\)</span>, <span class="math inline">\({\mathopen{}\left\{1, 2, 3\right\}\mathclose{}}\)</span> and <span class="math inline">\({\mathopen{}\left\{1, 1, 2, 3, 3\right\}\mathclose{}}\)</span> are equal, because each has exactly the elements <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span> and <span class="math inline">\(3\)</span> (<a href="#/def-set" class="quarto-xref">Definition&nbsp;1</a>). A roster can list any objects, not only numbers: <span class="math inline">\({\mathopen{}\left\{\text{red}, \text{green}, \text{blue}\right\}\mathclose{}}\)</span> is a set with three elements.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-natural-numbers" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3 (Natural numbers (our convention))</strong></span> In these notes, the <strong>natural numbers</strong> <span class="citation" data-cites="wikipedia_natural_number">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026j</a>)</span> are the positive integers (<a href="../chapters/direct-proof.html#def-positive-integer">Definition: Positive integers</a>):</p>
+<p><span class="math display">\[\mathbb{N}\stackrel{\text{def}}{=}\mathopen{}\left\{1, 2, 3, \ldots\right\}\mathclose{}\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Other conventions for the natural numbers</strong></p>
+</div>
+<div class="callout-content">
+<p>Other sources may define <span class="math inline">\(\mathbb{N}\)</span> differently, so check each source’s definition before reading its formulas:</p>
+<ul>
+<li>Many sources include <span class="math inline">\(0\)</span> in <span class="math inline">\(\mathbb{N}\)</span>. The international standard ISO 80000-2 defines <span class="math inline">\(\mathbb{N}\)</span> to include <span class="math inline">\(0\)</span>, continuing the earlier standard ISO 31-11 (1978).</li>
+<li>Other sources start <span class="math inline">\(\mathbb{N}\)</span> at <span class="math inline">\(1\)</span>, as these notes do.</li>
+<li>To remove the ambiguity, some sources write <span class="math inline">\(\mathbb{N}_1\)</span> or <span class="math inline">\(\mathbb{Z}^+\)</span> for <span class="math inline">\(\mathopen{}\left\{1, 2, 3, \ldots\right\}\mathclose{}\)</span>, and <span class="math inline">\(\mathbb{N}_0\)</span> or <span class="math inline">\(\mathbb{Z}^{0+}\)</span> for <span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span>.</li>
+<li>The words vary too. “Positive integers” (<span class="math inline">\(\mathopen{}\left\{1, 2, 3, \ldots\right\}\mathclose{}\)</span>) and “non-negative integers” (<span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span>) are unambiguous. “Whole numbers” usually includes <span class="math inline">\(0\)</span>, but can also mean all of the integers, negative ones included. “Counting numbers” usually starts at <span class="math inline">\(1\)</span>, but some sources include <span class="math inline">\(0\)</span>.</li>
+<li>Some older texts write <span class="math inline">\(J\)</span> for the natural numbers.</li>
+</ul>
+<p>When a formula’s meaning depends on whether <span class="math inline">\(0\)</span> is included, we write the set out explicitly, for example <span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span> or <span class="math inline">\(\mathopen{}\left\{1, \ldots, n\right\}\mathclose{}\)</span>.</p>
+<p>Source: <a href="https://en.wikipedia.org/w/index.php?title=Natural_number&amp;oldid=1375965996">Wikipedia, “Natural number”, “Terminology and notation” and “Zero as natural number”</a>, which cites ISO 80000-2:2019 and the textbooks using each notation.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-real-numbers" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 4 (Real numbers)</strong></span> A <strong>real number</strong> <span class="citation" data-cites="wikipedia_real_number">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026m</a>)</span> is a number that can be written as a decimal expansion: an integer part, followed by a decimal point and a finite or infinite list of decimal places after it. Equivalently, the real numbers are the points on the number line. The set of real numbers is written <span class="math inline">\(\mathbb{R}\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-real-numbers-working-definition" class="proof remark">
+<p><span class="proof-title"><em>Remark 2</em> (A working definition). </span><a href="#/def-real-numbers" class="quarto-xref">Definition&nbsp;4</a> is a working definition, not a construction: it does not say what an infinite decimal expansion is, or how to add or multiply two of them. <span class="citation" data-cites="rudin1976principles">Rudin (<a href="#/references" role="doc-biblioref" onclick="">1976</a>, Appendix to Chapter 1)</span> constructs the real numbers rigorously. Some real numbers have two decimal expansions: for example, <span class="math inline">\(0.999\ldots\)</span> and <span class="math inline">\(1.000\ldots\)</span> are the same real number, <span class="math inline">\(1\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-number-sets" class="proof remark">
+<p><span class="proof-title"><em>Remark 3</em> (Sets of numbers). </span>These notes use these sets of numbers:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Elements</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\mathbb{N}\)</span></td>
+<td style="text-align: left;">natural numbers (<a href="#/def-natural-numbers" class="quarto-xref">Definition&nbsp;3</a>)</td>
+<td style="text-align: left;"><span class="math inline">\(1, 2, 3, \ldots\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\mathbb{Z}\)</span></td>
+<td style="text-align: left;">integers (<a href="../chapters/direct-proof.html#def-integers">Definition: Integers</a>)</td>
+<td style="text-align: left;"><span class="math inline">\(\ldots, -2, -1, 0, 1, 2, \ldots\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\mathbb{Q}\)</span></td>
+<td style="text-align: left;">rational numbers (<a href="../chapters/contrapositive-contradiction.html#def-rational-numbers">Definition: Rational numbers</a>)</td>
+<td style="text-align: left;">fractions <span class="math inline">\(\frac{a}{b}\)</span> of integers with <span class="math inline">\(b \ne 0\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\mathbb{R}\)</span></td>
+<td style="text-align: left;">real numbers (<a href="#/def-real-numbers" class="quarto-xref">Definition&nbsp;4</a>)</td>
+<td style="text-align: left;">decimal expansions</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section></section>
+<section>
+<section id="sec-set-builder" class="title-slide slide level1 center" data-number="2">
+<h1><span class="header-section-number">2</span> Set-builder notation</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-small-cubes" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2 (Natural numbers with small cubes)</strong></span> List the natural numbers (<a href="#/def-natural-numbers" class="quarto-xref">Definition&nbsp;3</a>) <span class="math inline">\(n\)</span> with <span class="math inline">\(n^3 &lt; 100\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-small-cubes" class="proof solution">
+<p><span class="proof-title"><em>Solution 2</em>. </span><span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(3\)</span> and <span class="math inline">\(4\)</span>, whose cubes are <span class="math inline">\(1\)</span>, <span class="math inline">\(8\)</span>, <span class="math inline">\(27\)</span> and <span class="math inline">\(64\)</span>. Every other natural number <span class="math inline">\(n\)</span> has <span class="math inline">\(n \ge 5\)</span>, so <span class="math inline">\(n^3 \ge 125\)</span>, which is not less than <span class="math inline">\(100\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-set-builder" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5 (Set-builder notation)</strong></span> For a set <span class="math inline">\(A\)</span> and a statement <span class="math inline">\(P(x)\)</span> about an element <span class="math inline">\(x\)</span>, <strong>set-builder notation</strong> <span class="citation" data-cites="wikipedia_set_builder_notation">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026o</a>)</span> <span class="math inline">\({\mathopen{}\left\{x \in A : P(x)\right\}\mathclose{}}\)</span> denotes the set of elements <span class="math inline">\(x\)</span> of <span class="math inline">\(A\)</span> for which <span class="math inline">\(P(x)\)</span> is true.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-set-builder" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3 (Even die rolls in set-builder notation)</strong></span> <span class="math inline">\({\mathopen{}\left\{x \in {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}} : x \text{ is even}\right\}\mathclose{}} = {\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}\)</span> is the set of <a href="../chapters/direct-proof.html#def-even-odd">even</a> rolls, and <span class="math inline">\({\mathopen{}\left\{x \in \mathbb{R}: x &gt; 0\right\}\mathclose{}}\)</span> is the set of positive <a href="../chapters/sets.html#def-real-numbers">real numbers</a>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-empty-set" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 6 (Empty set)</strong></span> The <strong>empty set</strong> <span class="citation" data-cites="wikipedia_empty_set">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026f</a>)</span>, denoted <span class="math inline">\(\emptyset\)</span>, is the set that has no elements.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-empty-set-notation" class="proof remark">
+<p><span class="proof-title"><em>Remark 4</em> (Other notation for the empty set). </span>Other sources write <span class="math inline">\({\mathopen{}\left\{\right\}\mathclose{}}\)</span> for <span class="math inline">\(\emptyset\)</span> <span class="citation" data-cites="wikipedia_empty_set">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026f</a>)</span>. Some sources call it the <strong>null set</strong>, but in measure theory a “null set” usually means a set of <a href="https://morrison-lab.github.io/mds/measures.html#def-measure-zero">measure zero</a>, which need not be empty. For example, the interval <span class="math inline">\([0, 0] = {\mathopen{}\left\{0\right\}\mathclose{}}\)</span> has length <span class="math inline">\(0 - 0 = 0\)</span>, so it is a null set in that sense, but it is not empty, because <span class="math inline">\(0 \in {\mathopen{}\left\{0\right\}\mathclose{}}\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-empty-set" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4 (Impossible die rolls)</strong></span> No roll of a six-sided die is greater than 6, so <span class="math inline">\({\mathopen{}\left\{x \in {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}} : x &gt; 6\right\}\mathclose{}} = \emptyset\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-set-builder-expression" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 7 (Set-builder notation with an expression)</strong></span> For a set <span class="math inline">\(A\)</span> and an expression <span class="math inline">\(f(x)\)</span> that has a value for each element <span class="math inline">\(x\)</span> of <span class="math inline">\(A\)</span>, the notation <span class="math inline">\({\mathopen{}\left\{f(x) : x \in A\right\}\mathclose{}}\)</span> denotes the set of the values <span class="math inline">\(f(x)\)</span> for <span class="math inline">\(x \in A\)</span> <span class="citation" data-cites="wikipedia_set_builder_notation">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026o</a>)</span>. That is, an object <span class="math inline">\(y\)</span> is an element of <span class="math inline">\({\mathopen{}\left\{f(x) : x \in A\right\}\mathclose{}}\)</span> when <span class="math inline">\(y = f(x)\)</span> for some <span class="math inline">\(x \in A\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-set-builder-expression" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5 (Two ways to build a set)</strong></span> &nbsp;</p>
+<ul>
+<li>The numbers of <a href="#/exr-small-cubes" class="quarto-xref">Exercise&nbsp;2</a> form the set <span class="math inline">\({\mathopen{}\left\{n \in \mathbb{N}: n^3 &lt; 100\right\}\mathclose{}} = {\mathopen{}\left\{1, 2, 3, 4\right\}\mathclose{}}\)</span> (<a href="#/def-set-builder" class="quarto-xref">Definition&nbsp;5</a>).</li>
+<li>Their cubes form the set <span class="math inline">\({\mathopen{}\left\{n^3 : n \in {\mathopen{}\left\{1, 2, 3, 4\right\}\mathclose{}}\right\}\mathclose{}} = {\mathopen{}\left\{1, 8, 27, 64\right\}\mathclose{}}\)</span> (<a href="#/def-set-builder-expression" class="quarto-xref">Definition&nbsp;7</a>).</li>
+<li><span class="math inline">\({\mathopen{}\left\{2^k : k \in \mathbb{N}\right\}\mathclose{}} = {\mathopen{}\left\{2, 4, 8, 16, \ldots\right\}\mathclose{}}\)</span>, the powers of <span class="math inline">\(2\)</span> after <span class="math inline">\(2^0\)</span>.</li>
+<li><span class="math inline">\({\mathopen{}\left\{(-1)^k : k \in \mathbb{N}\right\}\mathclose{}} = {\mathopen{}\left\{-1, 1\right\}\mathclose{}}\)</span>: many values of <span class="math inline">\(k\)</span> give the same value, and each value is one element of the set.</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="sec-cardinality" class="title-slide slide level1 center" data-number="3">
+<h1><span class="header-section-number">3</span> Cardinality</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-letters" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3 (Letters in a word)</strong></span> How many different letters does the word MISSISSIPPI use?</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-letters" class="proof solution">
+<p><span class="proof-title"><em>Solution 3</em>. </span>Four: M, I, S and P. The set of its letters is <span class="math inline">\({\mathopen{}\left\{\text{M}, \text{I}, \text{S}, \text{P}\right\}\mathclose{}}\)</span>, and listing a letter again, as the word does, does not add an element (<a href="#/exm-roster-notation" class="quarto-xref">Example&nbsp;2</a>).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-finite-set" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 8 (Finite set)</strong></span> A set <span class="math inline">\(A\)</span> is <strong>finite</strong> <span class="citation" data-cites="wikipedia_finite_set">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026g</a>)</span> if it is empty, or if, for some natural number <span class="math inline">\(n\)</span>, its elements can be listed as a finite sequence (<a href="https://morrison-lab.github.io/mds/functions.html#def-finite-sequence">Definition: Finite sequence</a>) <span class="math inline">\(a_1, \ldots, a_n\)</span> in which each element of <span class="math inline">\(A\)</span> appears exactly once.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-cardinality" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 9 (Cardinality)</strong></span> For a finite set <span class="math inline">\(A\)</span> (<a href="#/def-finite-set" class="quarto-xref">Definition&nbsp;8</a>), the number <span class="math inline">\(n\)</span> in such a list is the <strong>cardinality</strong> <span class="citation" data-cites="wikipedia_cardinality">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026b</a>)</span> of <span class="math inline">\(A\)</span>, its number of elements, written <span class="math inline">\(\mathopen{}\left|A\right|\mathclose{}\)</span>; the empty set has cardinality <span class="math inline">\(\mathopen{}\left|\emptyset\right|\mathclose{} = 0\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-cardinality-bars" class="proof remark">
+<p><span class="proof-title"><em>Remark 5</em> (Two meanings of <span class="math inline">\(\mathopen{}\left|\cdot\right|\mathclose{}\)</span>). </span>Applied to a set, the bars <span class="math inline">\(\mathopen{}\left|A\right|\mathclose{}\)</span> mean the cardinality of <span class="math inline">\(A\)</span>. Applied to a number, <span class="math inline">\(\mathopen{}\left|x\right|\mathclose{}\)</span> means its <a href="https://morrison-lab.github.io/mds/algebra.html#def-absolute-value">absolute value</a>, or its <a href="https://morrison-lab.github.io/mds/algebra.html#def-complex-modulus">modulus</a> when <span class="math inline">\(x\)</span> is complex. For example, <span class="math inline">\(\mathopen{}\left|{\mathopen{}\left\{-3\right\}\mathclose{}}\right|\mathclose{} = 1\)</span>, but <span class="math inline">\(\mathopen{}\left|-3\right|\mathclose{} = 3\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-infinite-set" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 10 (Infinite set)</strong></span> A set that is not finite (<a href="#/def-finite-set" class="quarto-xref">Definition&nbsp;8</a>) is <strong>infinite</strong> <span class="citation" data-cites="wikipedia_infinite_set">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026h</a>)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-finite-set" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6 (Finite and infinite sets)</strong></span> &nbsp;</p>
+<ul>
+<li><span class="math inline">\({\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}\)</span> is finite, with <span class="math inline">\(\mathopen{}\left|{\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}\right|\mathclose{} = 3\)</span>.</li>
+<li><span class="math inline">\({\mathopen{}\left\{1, 1, 2\right\}\mathclose{}} = {\mathopen{}\left\{1, 2\right\}\mathclose{}}\)</span>, so <span class="math inline">\(\mathopen{}\left|{\mathopen{}\left\{1, 1, 2\right\}\mathclose{}}\right|\mathclose{} = 2\)</span>: a repeated listing does not count twice.</li>
+<li><span class="math inline">\(\emptyset\)</span> is finite, with <span class="math inline">\(\mathopen{}\left|\emptyset\right|\mathclose{} = 0\)</span>.</li>
+<li>The natural numbers <span class="math inline">\(\mathbb{N}= {\mathopen{}\left\{1, 2, 3, \ldots\right\}\mathclose{}}\)</span> are infinite: for any <span class="math inline">\(n\)</span>, a list <span class="math inline">\(a_1, \ldots, a_n\)</span> of natural numbers misses the natural number <span class="math inline">\(a_1 + \cdots + a_n + 1\)</span>, which is larger than every number in the list.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-sets-of-sets" class="proof remark">
+<p><span class="proof-title"><em>Remark 6</em> (Sets can be elements of sets). </span>The elements of a set can themselves be sets. For example, <span class="math inline">\(S = {\mathopen{}\left\{{\mathopen{}\left\{1, 2\right\}\mathclose{}}, 3, {\mathopen{}\left\{3\right\}\mathclose{}}\right\}\mathclose{}}\)</span> has three elements: the set <span class="math inline">\({\mathopen{}\left\{1, 2\right\}\mathclose{}}\)</span>, the number <span class="math inline">\(3\)</span>, and the set <span class="math inline">\({\mathopen{}\left\{3\right\}\mathclose{}}\)</span>. So <span class="math inline">\({\mathopen{}\left\{1, 2\right\}\mathclose{}} \in S\)</span>, but <span class="math inline">\(1 \notin S\)</span>, because <span class="math inline">\(1\)</span> is an element of an element of <span class="math inline">\(S\)</span>, not an element of <span class="math inline">\(S\)</span>. And <span class="math inline">\(3 \ne {\mathopen{}\left\{3\right\}\mathclose{}}\)</span>: one is a number, and the other is a set with one element. So <span class="math inline">\(\mathopen{}\left|S\right|\mathclose{} = 3\)</span> (<a href="#/def-cardinality" class="quarto-xref">Definition&nbsp;9</a>).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-countable-set" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 11 (Countable set)</strong></span> A set is <strong>countable</strong> <span class="citation" data-cites="wikipedia_countable_set">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026e</a>)</span> if it is finite (<a href="#/def-finite-set" class="quarto-xref">Definition&nbsp;8</a>), or if its elements can be listed as a sequence (<a href="https://morrison-lab.github.io/mds/functions.html#def-sequence">Definition: Sequence</a>) <span class="math inline">\(a_1, a_2, a_3, \ldots\)</span> in which every element appears.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-countably-infinite" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 12 (Countably infinite set)</strong></span> A set is <strong>countably infinite</strong> if it is <a href="#/def-countable-set">countable</a> and not finite.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-countable-set" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7 (Countable and uncountable sets)</strong></span> &nbsp;</p>
+<ul>
+<li><span class="math inline">\({\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}\)</span> is countable, because it is finite.</li>
+<li>The <a href="https://morrison-lab.github.io/mds/number-systems.html#def-nonnegative-integers">non-negative integers</a> <span class="math inline">\({\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}}\)</span> are countably infinite: the sequence <span class="math inline">\(0, 1, 2, \ldots\)</span> lists them.</li>
+<li>The <a href="../chapters/direct-proof.html#def-integers">integers</a> are countably infinite too: the sequence <span class="math inline">\(0, 1, -1, 2, -2, 3, -3, \ldots\)</span> lists every one of them.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-unique-expansion" class="proof remark">
+<p><span class="proof-title"><em>Remark 7</em> (Numbers with only one decimal expansion). </span>These notes use one more fact about the real numbers without proving it. A real number has two decimal expansions only if one of them ends in repeating <span class="math inline">\(9\)</span>s and the other in repeating <span class="math inline">\(0\)</span>s, as <span class="math inline">\(0.999\ldots\)</span> and <span class="math inline">\(1.000\ldots\)</span> do (<a href="#/rem-real-numbers-working-definition" class="quarto-xref">Remark&nbsp;2</a>). So a number whose decimal places are all <span class="math inline">\(4\)</span>s and <span class="math inline">\(5\)</span>s, such as <span class="math inline">\(0.545454\ldots\)</span>, has only one decimal expansion.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-reals-uncountable" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 (The real numbers are not countable)</strong></span> The set of real numbers <span class="math inline">\(\mathbb{R}\)</span> (<a href="#/def-real-numbers" class="quarto-xref">Definition&nbsp;4</a>) is not countable (<a href="#/def-countable-set" class="quarto-xref">Definition&nbsp;11</a>) <span class="citation" data-cites="wikipedia_cantors_diagonal_argument">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026a</a>)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-reals-uncountable" class="theorem example">
+<p><span class="theorem-title"><strong>Example 8 (The diagonal number for a list)</strong></span> Suppose a list of real numbers starts</p>
+<p><span class="math display">\[
+\begin{aligned}
+r_1 &amp;= 0.\mathbf{7}071\ldots \\
+r_2 &amp;= 3.1\mathbf{4}15\ldots \\
+r_3 &amp;= -2.71\mathbf{8}2\ldots \\
+r_4 &amp;= 0.555\mathbf{5}\ldots
+\end{aligned}
+\]</span></p>
+<p>The bold digits are the <span class="math inline">\(n\)</span>th decimal places of the <span class="math inline">\(r_n\)</span>: <span class="math inline">\(7\)</span>, <span class="math inline">\(4\)</span>, <span class="math inline">\(8\)</span> and <span class="math inline">\(5\)</span>. The proof of <a href="#/thm-reals-uncountable" class="quarto-xref">Theorem&nbsp;1</a> builds <span class="math inline">\(d = 0.5554\ldots\)</span>, which differs from <span class="math inline">\(r_1\)</span> in the first decimal place, from <span class="math inline">\(r_2\)</span> in the second, from <span class="math inline">\(r_3\)</span> in the third, and from <span class="math inline">\(r_4\)</span> in the fourth. However the list continues, <span class="math inline">\(d\)</span> is not on it.</p>
+</div>
+</section></section>
+<section>
+<section id="sec-subsets" class="title-slide slide level1 center" data-number="4">
+<h1><span class="header-section-number">4</span> Subsets and power sets</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-element-and-subset" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 4 (An element that is also a subset)</strong></span> Let <span class="math inline">\(B = {\mathopen{}\left\{1, {\mathopen{}\left\{1\right\}\mathclose{}}\right\}\mathclose{}}\)</span>. A set <span class="math inline">\(A\)</span> is a subset of <span class="math inline">\(B\)</span> when every element of <span class="math inline">\(A\)</span> is an element of <span class="math inline">\(B\)</span>. Find a set that is both an element of <span class="math inline">\(B\)</span> and a subset of <span class="math inline">\(B\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-element-and-subset" class="proof solution">
+<p><span class="proof-title"><em>Solution 4</em>. </span>The set <span class="math inline">\({\mathopen{}\left\{1\right\}\mathclose{}}\)</span> works. It is listed in <span class="math inline">\(B\)</span>, so it is an element of <span class="math inline">\(B\)</span>. And <span class="math inline">\(1\)</span>, the one element of <span class="math inline">\({\mathopen{}\left\{1\right\}\mathclose{}}\)</span>, is also listed in <span class="math inline">\(B\)</span>, so every element of <span class="math inline">\({\mathopen{}\left\{1\right\}\mathclose{}}\)</span> is an element of <span class="math inline">\(B\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-subset" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 13 (Subset)</strong></span> A set <span class="math inline">\(A\)</span> is a <strong>subset</strong> <span class="citation" data-cites="wikipedia_subset">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026p</a>)</span> of a set <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \subseteq B\)</span>, if every element of <span class="math inline">\(A\)</span> is an element of <span class="math inline">\(B\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-subset" class="theorem example">
+<p><span class="theorem-title"><strong>Example 9 (Even die rolls)</strong></span> The even die rolls form a subset of the possible rolls: <span class="math inline">\({\mathopen{}\left\{2, 4, 6\right\}\mathclose{}} \subseteq {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}\)</span>, because each of <span class="math inline">\(2\)</span>, <span class="math inline">\(4\)</span>, and <span class="math inline">\(6\)</span> is a possible roll. The set <span class="math inline">\({\mathopen{}\left\{2, 4, 7\right\}\mathclose{}}\)</span> is not a subset of <span class="math inline">\({\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}\)</span>, because <span class="math inline">\(7\)</span> is not a possible roll.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-strict-subset" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 14 (Strict subset (proper subset))</strong></span> A <a href="#/def-set">set</a> <span class="math inline">\(A\)</span> is a <strong>strict subset</strong> (also called a <strong>proper subset</strong>) of a set <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \subsetneq B\)</span>, if <span class="math inline">\(A\)</span> is a <a href="#/def-subset">subset</a> of <span class="math inline">\(B\)</span> and <span class="math inline">\(A \neq B\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-subset-symbol" class="proof remark">
+<p><span class="proof-title"><em>Remark 8</em> (The symbol <span class="math inline">\(\subset\)</span>). </span>Sources disagree about the symbol <span class="math inline">\(\subset\)</span>: some use it for “subset” (<span class="math inline">\(\subseteq\)</span>), and others for “strict subset” (<span class="math inline">\(\subsetneq\)</span>) <span class="citation" data-cites="wikipedia_subset">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026p</a>)</span>. For example, <span class="math inline">\({\mathopen{}\left\{1, 2\right\}\mathclose{}} \subset {\mathopen{}\left\{1, 2\right\}\mathclose{}}\)</span> is true in the first reading, because <span class="math inline">\({\mathopen{}\left\{1, 2\right\}\mathclose{}} \subseteq {\mathopen{}\left\{1, 2\right\}\mathclose{}}\)</span>, and false in the second, because the two sets are equal. These notes avoid <span class="math inline">\(\subset\)</span> and write <span class="math inline">\(\subseteq\)</span> or <span class="math inline">\(\subsetneq\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-strict-subset" class="theorem example">
+<p><span class="theorem-title"><strong>Example 10 (Strict subsets)</strong></span> &nbsp;</p>
+<ul>
+<li><span class="math inline">\({\mathopen{}\left\{2, 4, 6\right\}\mathclose{}} \subsetneq {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}\)</span>, because <span class="math inline">\({\mathopen{}\left\{2, 4, 6\right\}\mathclose{}} \subseteq {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}\)</span> (<a href="#/exm-subset" class="quarto-xref">Example&nbsp;9</a>), and <span class="math inline">\(1\)</span> is in the second set but not the first.</li>
+<li><span class="math inline">\(\mathbb{N}\subsetneq \mathbb{Z}\)</span>, because every natural number is an integer, and <span class="math inline">\(-1\)</span> is an integer that is not a natural number.</li>
+<li><span class="math inline">\(\mathbb{Z} \subseteq \mathbb{Z}\)</span>, because every integer is an integer, but <span class="math inline">\(\mathbb{Z}\)</span> is not a strict subset of itself.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-empty-subset" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2 (The empty set is a subset of every set)</strong></span> For every set <span class="math inline">\(A\)</span>, <span class="math inline">\(\emptyset \subseteq A\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>By <a href="#/def-subset" class="quarto-xref">Definition&nbsp;13</a>, <span class="math inline">\(\emptyset \subseteq A\)</span> fails only if some element of <span class="math inline">\(\emptyset\)</span> is not in <span class="math inline">\(A\)</span>. The <a href="#/def-empty-set">empty set</a> has no elements, so no such element exists.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-subset-reflexive" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 3 (Every set is a subset of itself)</strong></span> For every set <span class="math inline">\(A\)</span>, <span class="math inline">\(A \subseteq A\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Every element of <span class="math inline">\(A\)</span> is an element of <span class="math inline">\(A\)</span>, which is <a href="#/def-subset" class="quarto-xref">Definition&nbsp;13</a> with <span class="math inline">\(B = A\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-power-set" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 15 (Power set)</strong></span> The <strong>power set</strong> of a set <span class="math inline">\(A\)</span>, written <span class="math inline">\(\mathcal{P}(A)\)</span>, is the set of all subsets (<a href="#/def-subset" class="quarto-xref">Definition&nbsp;13</a>) of <span class="math inline">\(A\)</span> <span class="citation" data-cites="wikipedia_power_set">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026l</a>)</span>:</p>
+<p><span class="math display">\[
+\mathcal{P}(A) \stackrel{\text{def}}{=}{\mathopen{}\left\{S : S \subseteq A\right\}\mathclose{}}.
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-power-set" class="theorem example">
+<p><span class="theorem-title"><strong>Example 11 (The subsets of a three-element set)</strong></span> <span class="math display">\[
+\mathcal{P}({\mathopen{}\left\{a, b, c\right\}\mathclose{}}) = {\mathopen{}\left\{\emptyset, {\mathopen{}\left\{a\right\}\mathclose{}}, {\mathopen{}\left\{b\right\}\mathclose{}}, {\mathopen{}\left\{c\right\}\mathclose{}}, {\mathopen{}\left\{a, b\right\}\mathclose{}}, {\mathopen{}\left\{a, c\right\}\mathclose{}}, {\mathopen{}\left\{b, c\right\}\mathclose{}}, {\mathopen{}\left\{a, b, c\right\}\mathclose{}}\right\}\mathclose{}}.
+\]</span></p>
+<p>Each element of <span class="math inline">\(\mathcal{P}({\mathopen{}\left\{a, b, c\right\}\mathclose{}})\)</span> is a set. For example, <span class="math inline">\({\mathopen{}\left\{a\right\}\mathclose{}} \in \mathcal{P}({\mathopen{}\left\{a, b, c\right\}\mathclose{}})\)</span>, but <span class="math inline">\(a \notin \mathcal{P}({\mathopen{}\left\{a, b, c\right\}\mathclose{}})\)</span>. The list includes <span class="math inline">\(\emptyset\)</span> (<a href="#/thm-empty-subset" class="quarto-xref">Theorem&nbsp;2</a>) and <span class="math inline">\({\mathopen{}\left\{a, b, c\right\}\mathclose{}}\)</span> itself (<a href="#/thm-subset-reflexive" class="quarto-xref">Theorem&nbsp;3</a>).</p>
+</div>
+</section></section>
+<section>
+<section id="sec-cartesian-products" class="title-slide slide level1 center" data-number="5">
+<h1><span class="header-section-number">5</span> Ordered pairs and Cartesian products</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-menu" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5 (Sandwich orders)</strong></span> A sandwich shop makes sandwiches on rye or wheat bread, with a filling of ham, cheese or tomato. List every choice of one bread and one filling, writing each choice as (bread, filling).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-menu" class="proof solution">
+<p><span class="proof-title"><em>Solution 5</em>. </span>(rye, ham), (rye, cheese), (rye, tomato), (wheat, ham), (wheat, cheese) and (wheat, tomato).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-ordered-pair" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 16 (Ordered pair)</strong></span> An <strong>ordered pair</strong> <span class="citation" data-cites="wikipedia_ordered_pair">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026k</a>)</span> <span class="math inline">\((a, b)\)</span> is a pair of objects listed in order, with <span class="math inline">\(a\)</span> first and <span class="math inline">\(b\)</span> second; two ordered pairs are equal, <span class="math inline">\((a, b) = (c, d)\)</span>, when <span class="math inline">\(a = c\)</span> and <span class="math inline">\(b = d\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-tuple" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 17 (Tuple)</strong></span> For a natural number <span class="math inline">\(n\)</span>, an <strong><span class="math inline">\(n\)</span>-tuple</strong> <span class="math inline">\((a_1, a_2, \ldots, a_n)\)</span> is a list of <span class="math inline">\(n\)</span> objects in order <span class="citation" data-cites="wikipedia_tuple">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026q</a>)</span>. Two <span class="math inline">\(n\)</span>-tuples are equal when their entries are equal in each position. A <span class="math inline">\(2\)</span>-tuple is an ordered pair (<a href="#/def-ordered-pair" class="quarto-xref">Definition&nbsp;16</a>).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-tuple" class="theorem example">
+<p><span class="theorem-title"><strong>Example 12 (Tuples are not sets)</strong></span> &nbsp;</p>
+<ul>
+<li><span class="math inline">\((1, 2) \ne (2, 1)\)</span>, because their first entries differ, but <span class="math inline">\({\mathopen{}\left\{1, 2\right\}\mathclose{}} = {\mathopen{}\left\{2, 1\right\}\mathclose{}}\)</span>, because order does not matter in a set (<a href="#/def-set" class="quarto-xref">Definition&nbsp;1</a>).</li>
+<li><span class="math inline">\((4, 4, 1)\)</span> is a <span class="math inline">\(3\)</span>-tuple whose first two entries are equal, but <span class="math inline">\({\mathopen{}\left\{4, 4, 1\right\}\mathclose{}} = {\mathopen{}\left\{1, 4\right\}\mathclose{}}\)</span> has two elements.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-cartesian-product" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 18 (Cartesian product)</strong></span> The <strong>Cartesian product</strong> <span class="citation" data-cites="wikipedia_cartesian_product">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026c</a>)</span> of sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \times B\)</span>, is the set of ordered pairs whose first entry is in <span class="math inline">\(A\)</span> and whose second entry is in <span class="math inline">\(B\)</span>:</p>
+<p><span class="math display">\[A \times B \stackrel{\text{def}}{=}{\mathopen{}\left\{(a, b) : a \in A \text{ and } b \in B\right\}\mathclose{}}\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-cartesian-product-many" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 19 (Cartesian product of several sets)</strong></span> For a natural number <span class="math inline">\(n\)</span> and sets <span class="math inline">\(A_1, A_2, \ldots, A_n\)</span>, the <strong>Cartesian product</strong> <span class="math inline">\(A_1 \times A_2 \times \cdots \times A_n\)</span> is the set of <span class="math inline">\(n\)</span>-tuples (<a href="#/def-tuple" class="quarto-xref">Definition&nbsp;17</a>) whose <span class="math inline">\(i\)</span>th entry is in <span class="math inline">\(A_i\)</span> for each <span class="math inline">\(i\)</span> <span class="citation" data-cites="wikipedia_cartesian_product">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026c</a>)</span>:</p>
+<p><span class="math display">\[
+A_1 \times \cdots \times A_n \stackrel{\text{def}}{=}{\mathopen{}\left\{(a_1, \ldots, a_n) : a_i \in A_i \text{ for each } i\right\}\mathclose{}}.
+\]</span></p>
+<p>For <span class="math inline">\(n = 2\)</span> this is <a href="#/def-cartesian-product" class="quarto-xref">Definition&nbsp;18</a>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-cartesian-product-menu" class="theorem example">
+<p><span class="theorem-title"><strong>Example 13 (Cartesian products)</strong></span> &nbsp;</p>
+<ul>
+<li>The choices in <a href="#/exr-menu" class="quarto-xref">Exercise&nbsp;5</a> are the Cartesian product <span class="math inline">\({\mathopen{}\left\{\text{rye}, \text{wheat}\right\}\mathclose{}} \times {\mathopen{}\left\{\text{ham}, \text{cheese}, \text{tomato}\right\}\mathclose{}}\)</span> (<a href="#/def-cartesian-product" class="quarto-xref">Definition&nbsp;18</a>).</li>
+<li><span class="math inline">\({\mathopen{}\left\{\text{ham}, \text{cheese}, \text{tomato}\right\}\mathclose{}} \times {\mathopen{}\left\{\text{rye}, \text{wheat}\right\}\mathclose{}}\)</span> is a different set: it holds <span class="math inline">\((\text{ham}, \text{rye})\)</span>, which is not <span class="math inline">\((\text{rye}, \text{ham})\)</span> (<a href="#/exm-tuple" class="quarto-xref">Example&nbsp;12</a>).</li>
+<li><span class="math inline">\(\mathbb{R}\times \mathbb{R}\)</span> is the set of points <span class="math inline">\((x, y)\)</span> in the plane.</li>
+<li>Adding a choice of drink gives <span class="math inline">\(3\)</span>-tuples (<a href="#/def-cartesian-product-many" class="quarto-xref">Definition&nbsp;19</a>), such as <span class="math inline">\((\text{rye}, \text{ham}, \text{tea}) \in {\mathopen{}\left\{\text{rye}, \text{wheat}\right\}\mathclose{}} \times {\mathopen{}\left\{\text{ham}, \text{cheese}, \text{tomato}\right\}\mathclose{}} \times {\mathopen{}\left\{\text{tea}, \text{juice}\right\}\mathclose{}}\)</span>.</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="sec-set-operations" class="title-slide slide level1 center" data-number="6">
+<h1><span class="header-section-number">6</span> Set operations</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-build-sets" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6 (Two sets from their overlap)</strong></span> Find sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> whose common elements are exactly <span class="math inline">\(2\)</span> and <span class="math inline">\(3\)</span>, and whose elements together are exactly <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(3\)</span> and <span class="math inline">\(4\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-build-sets" class="proof solution">
+<p><span class="proof-title"><em>Solution 6</em>. </span><span class="math inline">\(A = {\mathopen{}\left\{1, 2, 3\right\}\mathclose{}}\)</span> and <span class="math inline">\(B = {\mathopen{}\left\{2, 3, 4\right\}\mathclose{}}\)</span> work: the elements in both are <span class="math inline">\(2\)</span> and <span class="math inline">\(3\)</span>, and the elements in one or the other are <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(3\)</span> and <span class="math inline">\(4\)</span>. So do <span class="math inline">\(A = {\mathopen{}\left\{1, 2, 3, 4\right\}\mathclose{}}\)</span> and <span class="math inline">\(B = {\mathopen{}\left\{2, 3\right\}\mathclose{}}\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-union" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 20 (Union)</strong></span> The <strong>union</strong> <span class="citation" data-cites="wikipedia_union_set_theory">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026r</a>)</span> of sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \cup B\)</span>, is the set of elements that are in <span class="math inline">\(A\)</span>, in <span class="math inline">\(B\)</span>, or in both:</p>
+<p><span class="math display">\[A \cup B \stackrel{\text{def}}{=}{\mathopen{}\left\{x : x \in A \text{ or } x \in B\right\}\mathclose{}}\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-intersection" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 21 (Intersection)</strong></span> The <strong>intersection</strong> <span class="citation" data-cites="wikipedia_intersection_set_theory">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026i</a>)</span> of sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \cap B\)</span>, is the set of elements that are in both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>:</p>
+<p><span class="math display">\[A \cap B \stackrel{\text{def}}{=}{\mathopen{}\left\{x : x \in A \text{ and } x \in B\right\}\mathclose{}}\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-set-difference" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 22 (Set difference)</strong></span> The <strong>set difference</strong> <span class="citation" data-cites="wikipedia_complement_set_theory">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span> of sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \setminus B\)</span>, is the set of elements of <span class="math inline">\(A\)</span> that are not in <span class="math inline">\(B\)</span>:</p>
+<p><span class="math display">\[A \setminus B \stackrel{\text{def}}{=}{\mathopen{}\left\{x \in A : x \notin B\right\}\mathclose{}}\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-difference-notation" class="proof remark">
+<p><span class="proof-title"><em>Remark 9</em> (Other notation for the set difference). </span>Some sources write <span class="math inline">\(A - B\)</span> for <span class="math inline">\(A \setminus B\)</span> <span class="citation" data-cites="wikipedia_complement_set_theory">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-set-operations" class="theorem example">
+<p><span class="theorem-title"><strong>Example 14 (Combining sets of die rolls)</strong></span> Let <span class="math inline">\(A = {\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}\)</span> (the even rolls) and <span class="math inline">\(B = {\mathopen{}\left\{1, 2, 3\right\}\mathclose{}}\)</span> (the rolls of at most 3). Then:</p>
+<ul>
+<li><span class="math inline">\(A \cup B = {\mathopen{}\left\{1, 2, 3, 4, 6\right\}\mathclose{}}\)</span>, the rolls that are even or at most 3;</li>
+<li><span class="math inline">\(A \cap B = {\mathopen{}\left\{2\right\}\mathclose{}}\)</span>, the only roll that is both;</li>
+<li><span class="math inline">\(A \setminus B = {\mathopen{}\left\{4, 6\right\}\mathclose{}}\)</span>, the even rolls greater than 3;</li>
+<li><span class="math inline">\({\mathopen{}\left\{2, 4, 6\right\}\mathclose{}} \cap {\mathopen{}\left\{1, 3, 5\right\}\mathclose{}} = \emptyset\)</span>: no roll is both even and odd.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-complement" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 23 (Complement)</strong></span> Let <span class="math inline">\(A\)</span> be a <a href="#/def-subset">subset</a> of a set <span class="math inline">\(S\)</span>. The <strong>complement</strong> <span class="citation" data-cites="wikipedia_complement_set_theory">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span> of <span class="math inline">\(A\)</span> in <span class="math inline">\(S\)</span> is the set difference (<a href="#/def-set-difference" class="quarto-xref">Definition&nbsp;22</a>) <span class="math inline">\(S \setminus A\)</span>: the elements of <span class="math inline">\(S\)</span> that are not in <span class="math inline">\(A\)</span>. When the set <span class="math inline">\(S\)</span> is clear from context, the complement of <span class="math inline">\(A\)</span> is written <span class="math inline">\(A^c\)</span>:</p>
+<p><span class="math display">\[A^c \stackrel{\text{def}}{=}S \setminus A = {\mathopen{}\left\{x \in S : x \notin A\right\}\mathclose{}}\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-complement-notation" class="proof remark">
+<p><span class="proof-title"><em>Remark 10</em> (The universal set, and other notation for the complement). </span>The set <span class="math inline">\(S\)</span> in <a href="#/def-complement" class="quarto-xref">Definition&nbsp;23</a> is sometimes called the <em>universal set</em>. Which universal set to use depends on the context: for a set of even integers it might be <span class="math inline">\(\mathbb{Z}\)</span>, and for a set of letters it might be the 26 letters of the alphabet. Some sources write <span class="math inline">\(\overline{A}\)</span> for <span class="math inline">\(A^c\)</span> <span class="citation" data-cites="wikipedia_complement_set_theory">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-complement" class="theorem example">
+<p><span class="theorem-title"><strong>Example 15 (Complements of sets of die rolls)</strong></span> Let <span class="math inline">\(S = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}\)</span> be the possible rolls of a die.</p>
+<ul>
+<li>The complement of the even rolls <span class="math inline">\(A = {\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}\)</span> is <span class="math inline">\(A^c = {\mathopen{}\left\{1, 3, 5\right\}\mathclose{}}\)</span>, the odd rolls.</li>
+<li>The complement of <span class="math inline">\(S\)</span> itself is <span class="math inline">\(S^c = \emptyset\)</span>, and the complement of <span class="math inline">\(\emptyset\)</span> is <span class="math inline">\(\emptyset^c = S\)</span>.</li>
+</ul>
+<p>The complement depends on <span class="math inline">\(S\)</span>: in <span class="math inline">\(S = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}\)</span>, the complement of <span class="math inline">\({\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}\)</span> is <span class="math inline">\({\mathopen{}\left\{1, 3, 5\right\}\mathclose{}}\)</span>, but in <span class="math inline">\(S = {\mathopen{}\left\{2, 4, 6, 8\right\}\mathclose{}}\)</span>, it is <span class="math inline">\({\mathopen{}\left\{8\right\}\mathclose{}}\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-venn-diagram" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 24 (Venn diagram)</strong></span> A <strong>Venn diagram</strong> draws sets as overlapping circles inside a rectangle, which stands for the set <span class="math inline">\(S\)</span> that the sets are subsets of, as in <a href="#/def-complement" class="quarto-xref">Definition&nbsp;23</a>. Each region of the picture stands for the elements that are in some of the sets and not in the others.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-venn-diagram" class="theorem example">
+<p><span class="theorem-title"><strong>Example 16 (Letters of two words)</strong></span> Let <span class="math inline">\(L\)</span> be the set of letters in the word LOGIC, and <span class="math inline">\(M\)</span> the set of letters in the word MAGIC, inside the set <span class="math inline">\(S\)</span> of the 26 letters of the alphabet. <a href="#/fig-venn-letters" class="quarto-xref">Figure&nbsp;1</a> draws them.</p>
+<div id="fig-venn-letters" class="quarto-float quarto-figure quarto-figure-center" alt="A Venn diagram: inside a rectangle labelled S, circle L holds L and O, circle M holds M and A, and their shaded overlap holds G, I and C.">
+<figure class="quarto-float quarto-float-fig">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-venn-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The letters of LOGIC (<span class="math inline">\(L\)</span>) and of MAGIC (<span class="math inline">\(M\)</span>), with <span class="math inline">\(L \cap M\)</span> shaded.
+</figcaption>
+<div aria-describedby="fig-venn-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/venn-letters.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: The letters of LOGIC (L) and of MAGIC (M), with L \cap M shaded."><img data-src="../images/venn-letters.png" style="width:60.0%" alt="A Venn diagram: inside a rectangle labelled S, circle L holds L and O, circle M holds M and A, and their shaded overlap holds G, I and C."></a>
+</div>
+</figure>
+</div>
+<ul>
+<li>The shaded region, inside both circles, is <span class="math inline">\(L \cap M = {\mathopen{}\left\{\text{G}, \text{I}, \text{C}\right\}\mathclose{}}\)</span>.</li>
+<li>The part of circle <span class="math inline">\(L\)</span> outside circle <span class="math inline">\(M\)</span> is <span class="math inline">\(L \setminus M = {\mathopen{}\left\{\text{L}, \text{O}\right\}\mathclose{}}\)</span>.</li>
+<li>Everything inside either circle is <span class="math inline">\(L \cup M = {\mathopen{}\left\{\text{L}, \text{O}, \text{G}, \text{I}, \text{C}, \text{M}, \text{A}\right\}\mathclose{}}\)</span>.</li>
+<li>Everything in the rectangle outside circle <span class="math inline">\(L\)</span> is <span class="math inline">\(L^c\)</span>, the 21 letters not in LOGIC.</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="references" class="title-slide slide level1 unnumbered center">
+<h1>References</h1>
+
+</section>
+<section class="slide level2 smaller scrollable" id="references">
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-rudin1976principles" class="csl-entry" role="listitem">
+Rudin, Walter. 1976. <em>Principles of Mathematical Analysis</em>. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill.
+</div>
+<div id="ref-wikipedia_cantors_diagonal_argument" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026a. <em>Cantor’s Diagonal Argument — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument">https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument</a>.
+</div>
+<div id="ref-wikipedia_cardinality" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026b. <em>Cardinality — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Cardinality">https://en.wikipedia.org/wiki/Cardinality</a>.
+</div>
+<div id="ref-wikipedia_cartesian_product" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026c. <em>Cartesian Product — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Cartesian_product">https://en.wikipedia.org/wiki/Cartesian_product</a>.
+</div>
+<div id="ref-wikipedia_complement_set_theory" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026d. <em>Complement (Set Theory) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Complement_(set_theory)">https://en.wikipedia.org/wiki/Complement_(set_theory)</a>.
+</div>
+<div id="ref-wikipedia_countable_set" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026e. <em>Countable Set — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Countable_set">https://en.wikipedia.org/wiki/Countable_set</a>.
+</div>
+<div id="ref-wikipedia_empty_set" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026f. <em>Empty Set — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Empty_set">https://en.wikipedia.org/wiki/Empty_set</a>.
+</div>
+<div id="ref-wikipedia_finite_set" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026g. <em>Finite Set — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Finite_set">https://en.wikipedia.org/wiki/Finite_set</a>.
+</div>
+<div id="ref-wikipedia_infinite_set" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026h. <em>Infinite Set — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Infinite_set">https://en.wikipedia.org/wiki/Infinite_set</a>.
+</div>
+<div id="ref-wikipedia_intersection_set_theory" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026i. <em>Intersection (Set Theory) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Intersection_(set_theory)">https://en.wikipedia.org/wiki/Intersection_(set_theory)</a>.
+</div>
+<div id="ref-wikipedia_natural_number" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026j. <em>Natural Number — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Natural_number">https://en.wikipedia.org/wiki/Natural_number</a>.
+</div>
+<div id="ref-wikipedia_ordered_pair" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026k. <em>Ordered Pair — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Ordered_pair">https://en.wikipedia.org/wiki/Ordered_pair</a>.
+</div>
+<div id="ref-wikipedia_power_set" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026l. <em>Power Set — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Power_set">https://en.wikipedia.org/wiki/Power_set</a>.
+</div>
+<div id="ref-wikipedia_real_number" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026m. <em>Real Number — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Real_number">https://en.wikipedia.org/wiki/Real_number</a>.
+</div>
+<div id="ref-wikipedia_set_mathematics" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026n. <em>Set (Mathematics) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Set_(mathematics)">https://en.wikipedia.org/wiki/Set_(mathematics)</a>.
+</div>
+<div id="ref-wikipedia_set_builder_notation" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026o. <em>Set-Builder Notation — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Set-builder_notation">https://en.wikipedia.org/wiki/Set-builder_notation</a>.
+</div>
+<div id="ref-wikipedia_subset" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026p. <em>Subset — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Subset">https://en.wikipedia.org/wiki/Subset</a>.
+</div>
+<div id="ref-wikipedia_tuple" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026q. <em>Tuple — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Tuple">https://en.wikipedia.org/wiki/Tuple</a>.
+</div>
+<div id="ref-wikipedia_union_set_theory" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026r. <em>Union (Set Theory) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Union_(set_theory)">https://en.wikipedia.org/wiki/Union_(set_theory)</a>.
+</div>
+</div>
+
+
+<script>
+const defaultAnchorIconFallback = "#";
+
+function getDefaultAnchorTemplate() {
+  const defaultAnchor = document.querySelector("a.anchorjs-link[data-anchorjs-icon]");
+  if (!defaultAnchor) {
+    return null;
+  }
+
+  return {
+    icon: defaultAnchor.getAttribute("data-anchorjs-icon"),
+    style: defaultAnchor.getAttribute("style")
+  };
+}
+
+function alignEquationAnchorWithDefault(anchor, template) {
+  if (!anchor) {
+    return;
+  }
+
+  anchor.classList.remove("external");
+
+  if (template && template.icon) {
+    anchor.setAttribute("data-anchorjs-icon", template.icon);
+    anchor.textContent = "";
+  } else if (!anchor.textContent) {
+    anchor.textContent = defaultAnchorIconFallback;
+  }
+
+  if (template && template.style) {
+    anchor.setAttribute("style", template.style);
+  } else {
+    anchor.removeAttribute("style");
+  }
+}
+
+function alignEquationAnchorsWithDefault() {
+  const template = getDefaultAnchorTemplate();
+  document.querySelectorAll("a.equation-anchor").forEach(function (anchor) {
+    alignEquationAnchorWithDefault(anchor, template);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const equations = document.querySelectorAll("span[id^='eq-']");
+  equations.forEach(function (equation) {
+    if (equation.querySelector(".equation-anchor")) {
+      return;
+    }
+
+    if (!equation.querySelector(".math.display")) {
+      return;
+    }
+
+    const id = equation.getAttribute("id");
+    if (!id) {
+      return;
+    }
+
+    equation.classList.add("equation-anchor-target");
+
+    const anchor = document.createElement("a");
+    anchor.className = "equation-anchor anchorjs-link";
+    anchor.href = "#" + id;
+    anchor.setAttribute("aria-label", "Permalink to this equation");
+    equation.appendChild(anchor);
+  });
+
+  alignEquationAnchorsWithDefault();
+});
+
+window.addEventListener("load", alignEquationAnchorsWithDefault);
+</script>
+
+<script>
+(function () {
+  var css = [
+    "#revealjs-html-link {",
+    "  position: fixed;",
+    "  top: 8px;",
+    "  right: 8px;",
+    "  z-index: 31;",
+    "  font-size: 0.55em;",
+    "  line-height: 1;",
+    "}",
+    "#revealjs-html-link a {",
+    "  color: var(--qwt-muted, rgba(0, 0, 0, 0.5));",
+    "  text-decoration: none;",
+    "  border: 1px solid var(--qwt-border, rgba(0, 0, 0, 0.2));",
+    "  padding: 4px 8px;",
+    "  border-radius: 4px;",
+    "  background: var(--qwt-chip-bg, rgba(255, 255, 255, 0.8));",
+    "  transition: color 0.15s, background 0.15s, border-color 0.15s;",
+    "}",
+    "#revealjs-html-link a:hover {",
+    "  color: var(--qwt-fg, rgba(0, 0, 0, 0.9));",
+    "  background: var(--qwt-chip-bg-hover, rgba(255, 255, 255, 0.98));",
+    "  border-color: var(--qwt-fg, rgba(0, 0, 0, 0.4));",
+    "}"
+  ].join("\n");
+
+  function getHtmlBase() {
+    var url = window.location.href.split("#")[0];
+    return url.replace(/-slides\.html$/, ".html");
+  }
+
+  function getCurrentSectionId() {
+    if (typeof Reveal === "undefined" || !Reveal.getCurrentSlide) {
+      return null;
+    }
+    var slide = Reveal.getCurrentSlide();
+    if (!slide) {
+      return null;
+    }
+    // If the current slide itself has an id, use it
+    if (slide.id) {
+      return slide.id;
+    }
+    // Walk backwards through sibling sections to find the nearest one with an id
+    var sibling = slide.previousElementSibling;
+    while (sibling) {
+      if (sibling.tagName === "SECTION" && sibling.id) {
+        return sibling.id;
+      }
+      sibling = sibling.previousElementSibling;
+    }
+    // Fall back to the first section[id] inside the parent container
+    var parent = slide.parentElement;
+    if (parent && parent.tagName === "SECTION") {
+      var firstNamed = parent.querySelector("section[id]");
+      if (firstNamed) {
+        return firstNamed.id;
+      }
+    }
+    return null;
+  }
+
+  function updateHtmlLink() {
+    var anchor = document.getElementById("revealjs-html-anchor");
+    if (!anchor) {
+      return;
+    }
+    var sectionId = getCurrentSectionId();
+    anchor.href = getHtmlBase() + (sectionId ? "#" + sectionId : "");
+  }
+
+  function initRevealJsHtmlLink() {
+    var htmlBase = getHtmlBase();
+
+    // Don't add the link if the URL doesn't follow the -slides.html convention
+    if (htmlBase === window.location.href.split("#")[0]) {
+      return;
+    }
+
+    // Inject styles
+    var styleElement = document.createElement("style");
+    styleElement.textContent = css;
+    document.head.appendChild(styleElement);
+
+    // Create the link element and append it directly to body so it stays
+    // visible across all slides regardless of Reveal.js section visibility
+    var div = document.createElement("div");
+    div.id = "revealjs-html-link";
+    var anchor = document.createElement("a");
+    anchor.id = "revealjs-html-anchor";
+    anchor.href = htmlBase;
+    anchor.target = "_blank";
+    anchor.title = "View this section in the HTML notes";
+    anchor.setAttribute("aria-label", "View this section in the HTML notes");
+    anchor.innerHTML = "&#128196;&nbsp;Webpage version";
+    div.appendChild(anchor);
+    document.body.appendChild(div);
+
+    // Register Reveal.js slide-change listener to keep the link updated
+    if (typeof Reveal !== "undefined") {
+      Reveal.on("ready", updateHtmlLink);
+      Reveal.on("slidechanged", updateHtmlLink);
+    }
+
+    updateHtmlLink();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initRevealJsHtmlLink);
+  } else {
+    initRevealJsHtmlLink();
+  }
+})();
+</script>
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/morrison-lab\.github\.io\/mcs\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
+    
+
+</body></html>
