@@ -5,6 +5,6 @@ The site links prerequisite definitions in [Morrison-Lab/mds](https://github.com
 
 Built from the [Morrison-Lab/qwt](https://github.com/Morrison-Lab/qwt) template.
 
-Preview the site with live reload with `quarto preview`, and build it with `quarto render`.
+Preview the site with `quarto preview`, which reloads as you edit, and build it with `quarto render`.
 The build goes to `_site/`, which GitHub Actions publishes to GitHub Pages.
 See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add a chapter.

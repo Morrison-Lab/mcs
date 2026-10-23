@@ -54,7 +54,7 @@ Put figures in `images/` and reference them from a figure div:
 
 ```markdown
 ::: {#fig-label}
-![](images/your-image.png)
+![Alt text describing the figure](images/your-image.png)
 
 Caption text.
 :::
