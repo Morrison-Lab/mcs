@@ -1,0 +1,42 @@
+::: {#thm-chocolate}
+#### Breaking a chocolate bar takes one break fewer than its squares
+
+For every natural number (@def-natural-numbers) $n$,
+splitting a bar of chocolate, a row of $n$ squares, into single squares takes exactly $n - 1$ breaks,
+however the breaks are made.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+We use strong induction (@def-strong-induction).
+Let $P(n)$ be the claim for a bar of $n$ squares,
+let $n$ be a natural number, and suppose $P(k)$ holds for every natural number $k < n$.
+
+If $n = 1$, the bar is already a single square, so it takes $0 = n - 1$ breaks.
+
+If $n \ge 2$, the first break splits the bar into two pieces of $a$ and $b$ squares,
+with $a + b = n$, $a \ge 1$ and $b \ge 1$, so $a < n$ and $b < n$.
+Each later break splits a single piece, so it falls inside one of these two pieces,
+and the later breaks are the breaks of the $a$-square piece together with the breaks of the $b$-square piece.
+By the strong induction hypothesis,
+the piece of $a$ squares takes $a - 1$ breaks and the piece of $b$ squares takes $b - 1$ breaks.
+So the whole bar takes
+
+$$
+\ba
+1 + (a - 1) + (b - 1)
+&= a + b - 1
+\\&= n - 1
+\ea
+$$
+
+breaks.
+
+:::
+
+:::

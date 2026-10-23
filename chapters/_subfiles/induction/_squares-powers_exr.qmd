@@ -1,0 +1,8 @@
+::: {#exr-squares-powers}
+#### When does $2^n$ catch up with $n^2$?
+
+Compare $n^2$ with $2^n$ for $n = 1, 2, \ldots, 6$.
+Find the smallest natural number $n_0$ such that $n^2 \le 2^n$
+holds for $n_0$ and for every $n$ you checked after it.
+
+:::

@@ -1,0 +1,9 @@
+::: {#exr-chocolate-small}
+#### Breaking a chocolate bar
+
+A chocolate bar is a row of $n$ squares.
+One break splits one piece into two pieces along a line between squares.
+How many breaks does it take to split a bar of 1, 2, 3 or 4 squares into single squares?
+Does the answer depend on where you break first?
+
+:::

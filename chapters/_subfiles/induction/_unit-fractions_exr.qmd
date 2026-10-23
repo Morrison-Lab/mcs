@@ -1,0 +1,15 @@
+::: {#exr-unit-fractions}
+#### Adding unit fractions of neighbors
+
+Consider the claim that for every natural number (@def-natural-numbers) $n$,
+
+$$
+\frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdots + \frac{1}{n(n + 1)} = \frac{n}{n + 1}.
+$$
+
+1. Check the claim for $n = 1$, $n = 2$ and $n = 3$.
+2. Suppose the claim holds for some natural number $k$.
+   Add the next term, $\frac{1}{(k + 1)(k + 2)}$, to both sides,
+   and show that the claim then holds for $k + 1$.
+
+:::

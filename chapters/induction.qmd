@@ -1,0 +1,114 @@
+---
+title: "Mathematical Induction"
+subtitle: "Ordinary and strong induction"
+format:
+  html: default
+  revealjs:
+    output-file: induction-slides.html
+  pdf:
+    output-file: induction-handout.pdf
+  docx:
+    output-file: induction.docx
+---
+
+{{< include ../latex-macros/macros.qmd >}}
+
+::: {.callout-note appearance='simple' collapse=true}
+## Source
+
+Adapted from Kameron Decker Harris's Fall 2026 lecture notes "Induction" and "More Induction!",
+which are typed transcriptions of Scott Wehrwein's Spring 2025 handwritten lecture notes.
+These come from those notes:
+
+- the names of the parts of a proof by induction: base case, induction hypothesis and inductive step;
+- the comparison of ordinary and strong induction;
+- the chocolate bar example of strong induction, with its proof;
+- the false claim that all horses are the same color, and where an induction proof of it fails.
+
+The exercises, the other examples and the text of the false proof are new.
+:::
+
+# Proof by induction {#sec-induction}
+
+{{< include _subfiles/induction/_unit-fractions_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/induction/_unit-fractions_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/proof-writing/_def-proof-by-induction.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/induction/_step-forms_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/induction/_induction-template_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/induction/_consecutive-products_exm.qmd >}}
+
+# Starting at another integer {#sec-induction-start}
+
+{{< include _subfiles/induction/_squares-powers_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/induction/_squares-powers_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/induction/_squares-powers_exm.qmd >}}
+
+# Strong induction {#sec-strong-induction}
+
+{{< include _subfiles/induction/_chocolate-small_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/induction/_chocolate-small_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/induction/_def-strong-induction.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/induction/_chocolate_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/induction/_chocolate-strong_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/induction/_def-recursive-sequence.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/induction/_exm-recursive-sequence.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/induction/_def-fibonacci-sequence.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/induction/_exm-fibonacci-sequence.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/induction/_exm-strong-induction.qmd >}}
+
+# A proof by induction that fails {#sec-induction-fails}
+
+{{< include _subfiles/induction/_all-horses_exm.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
