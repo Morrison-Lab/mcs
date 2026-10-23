@@ -3,10 +3,9 @@
 
 Let $P$ be "the tests pass", $Q$ be "the build is deployed"
 and $R$ be "the build is rolled back".
-In each argument below, the propositions before "so" are its premises,
-and the one after is its conclusion.
-For each argument, decide whether the conclusion must be true
-whenever all of the premises are true.
+Each argument below lists some propositions, then "so", then one more proposition.
+For each argument, decide whether the proposition after "so" must be true
+whenever all of the propositions before it are true.
 
 1. $P \Rightarrow Q$ and $P$, so $Q$.
 2. $P \Rightarrow Q$ and $Q$, so $P$.

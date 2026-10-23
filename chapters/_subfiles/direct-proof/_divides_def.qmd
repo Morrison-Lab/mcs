@@ -1,11 +1,9 @@
 ::: {#def-divides}
-#### Divides (divisor, multiple)
+#### Divides
 
 Let $a$ and $b$ be integers (@def-integers).
-$a$ **divides** $b$, written $a \mid b$,
+We say that $a$ **divides** $b$, written $a \mid b$,
 if $b = a c$ for some integer $c$.
-Then $a$ is a **divisor** of $b$,
-and $b$ is a **multiple** of $a$.
 When $a$ does not divide $b$, we write $a \nmid b$.
 
 :::

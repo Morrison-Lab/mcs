@@ -1,11 +1,12 @@
 ::: {#rem-wlog}
 #### Without loss of generality
 
-@sol-divisible-by-three is a proof by cases (@def-proof-by-cases)
-with two cases, $3 \mid m$ and $3 \mid n$.
+@sol-max-min is a proof by cases (@def-proof-by-cases)
+with two cases, $x \le y$ and $y \le x$.
 The proof of the second case is the proof of the first
-with the names $m$ and $n$ swapped, since $m n = n m$.
-"Without loss of generality, suppose $3 \mid m$"
+with the names $x$ and $y$ swapped,
+which changes neither side of the equation.
+"Without loss of generality, suppose $x \le y$"
 says this, and writes out only the first case.
 Use it only when the other cases really are the same proof with names changed.
 

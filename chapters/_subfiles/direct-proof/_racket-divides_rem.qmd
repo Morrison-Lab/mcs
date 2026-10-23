@@ -1,8 +1,9 @@
 ::: {#rem-racket-divides}
 #### Divisibility in Racket
 
-For a nonzero integer $a$, $a \mid b$ exactly when dividing $b$ by $a$ leaves remainder $0$.
-In Racket,
+For a nonzero integer `a`,
+Racket's `(remainder b a)` returns `0` exactly when $a \mid b$ (@def-divides),
+so `(zero? (remainder b a))` tests divisibility.
 `(zero? (remainder 12 3))` returns `#t`
 and `(zero? (remainder 13 3))` returns `#f`,
 as in @exm-divides.

@@ -6,6 +6,6 @@ Then
 $$
 c = b k = (a j) k = a (j k).
 $$
-Since $j k$ is an integer, $a \mid c$, by @def-divides.
+Since $j k$ is an integer (@rem-integer-closure), $a \mid c$, by @def-divides.
 
 :::

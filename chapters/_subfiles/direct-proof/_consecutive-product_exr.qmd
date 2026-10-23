@@ -6,7 +6,7 @@ Prove that $n^2 + n$ is even for every integer $n$.
 ::: {.callout-tip}
 #### Hint
 
-Every integer is even or odd.
+Every integer is even or odd (@rem-integer-closure).
 Handle the two kinds separately.
 :::
 

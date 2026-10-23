@@ -1,0 +1,9 @@
+::: {#def-argument}
+#### Argument
+
+An **argument** is a list of propositions (@def-proposition),
+called its premises,
+together with one more proposition, called its conclusion.
+An argument is written with "so" or $\therefore$ before its conclusion.
+
+:::

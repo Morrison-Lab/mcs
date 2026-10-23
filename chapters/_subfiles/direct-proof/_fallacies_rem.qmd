@@ -3,7 +3,8 @@
 
 Argument 2 of @exr-valid-arguments,
 $\dfrac{P \Rightarrow Q, \quad Q}{P}$,
-is called affirming the consequent.
+is called affirming the consequent,
+since it concludes $P$ from the consequent $Q$ of $P \Rightarrow Q$ (@rem-implies-terms).
 It is not a rule of inference (@def-rule-of-inference):
 $P$ false and $Q$ true make its premises true and its conclusion false.
 

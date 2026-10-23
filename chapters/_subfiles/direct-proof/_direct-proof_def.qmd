@@ -2,6 +2,6 @@
 #### Direct proof
 
 A **direct proof** of a conditional $P \Rightarrow Q$ (@def-implies)
-is a proof (@def-proof) that assumes $P$ and ends with $Q$.
+is a proof (@def-proof) of $Q$ in which $P$ is an assumption.
 
 :::

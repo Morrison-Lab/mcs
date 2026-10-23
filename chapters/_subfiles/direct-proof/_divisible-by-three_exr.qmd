@@ -1,7 +1,0 @@
-::: {#exr-divisible-by-three}
-#### A factor of three
-
-Let $m$ and $n$ be integers.
-Prove that if $3 \mid m$ or $3 \mid n$, then $3 \mid m n$.
-
-:::

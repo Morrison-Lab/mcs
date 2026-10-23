@@ -1,0 +1,10 @@
+::: {#exr-max-min}
+#### Larger plus smaller
+
+For real numbers $x$ and $y$,
+let $\max(x, y)$ be the larger of $x$ and $y$
+and $\min(x, y)$ the smaller
+(both equal $x$ when $x = y$).
+Prove that $\max(x, y) + \min(x, y) = x + y$.
+
+:::

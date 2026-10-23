@@ -1,0 +1,12 @@
+::: {#sol-max-min}
+
+Let $x$ and $y$ be real numbers.
+Either $x \le y$ or $y \le x$.
+Both sides of the equation stay the same when $x$ and $y$ are swapped,
+so without loss of generality, suppose $x \le y$.
+Then $\max(x, y) = y$ and $\min(x, y) = x$, so
+$$
+\max(x, y) + \min(x, y) = y + x = x + y.
+$$
+
+:::

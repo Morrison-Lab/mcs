@@ -1,11 +1,11 @@
 ::: {#exm-proof-odd-linear}
 #### A proof, statement by statement
 
-@sol-odd-linear is a proof (@def-proof) of
-"if $n$ is an odd integer, then $3 n + 5$ is even".
+@sol-odd-linear is a proof (@def-proof) of "$3 n + 5$ is even"
+in which "$n$ is an odd integer" is an assumption.
 Its statements are:
 
-- an assumption: $n$ is an odd integer;
+- the assumption: $n$ is an odd integer;
 - a definition: $n = 2 k + 1$ for some integer $k$, by @def-odd;
 - consequences by algebra: $3 n + 5 = 6 k + 8 = 2 (3 k + 4)$;
 - a definition: $3 n + 5$ is even, by @def-even-odd, since $3 k + 4$ is an integer.

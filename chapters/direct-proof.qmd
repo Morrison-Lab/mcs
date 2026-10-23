@@ -20,7 +20,8 @@ Adapted from Kameron Decker Harris's Fall 2026 lecture notes "Logic 4, Proofs In
 which he typeset from Scott Wehrwein's Spring 2025 handwritten lecture notes.
 The rules of inference, the definition of "divides",
 the observation that a definition's "if" means "if and only if",
-and the template for a direct proof come from those notes;
+the template for a direct proof,
+and the ideas of proof by cases and "without loss of generality" come from those notes;
 the exercises are new.
 
 The definitions of logical entailment, the integers, even and odd integers,
@@ -36,6 +37,14 @@ so they read the same in both places.
 {{< slidebreak >}}
 
 {{< include _subfiles/direct-proof/_valid-arguments_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_argument_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_argument_rem.qmd >}}
 
 {{< slidebreak >}}
 
@@ -88,6 +97,10 @@ so they read the same in both places.
 {{< slidebreak >}}
 
 {{< include ../mds/_subfiles/number-systems/_exm-even-odd.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/direct-proof/_integer-closure_rem.qmd >}}
 
 {{< slidebreak >}}
 
@@ -159,11 +172,11 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/direct-proof/_divisible-by-three_exr.qmd >}}
+{{< include _subfiles/direct-proof/_max-min_exr.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/direct-proof/_divisible-by-three_sol.qmd >}}
+{{< include _subfiles/direct-proof/_max-min_sol.qmd >}}
 
 {{< slidebreak >}}
 
