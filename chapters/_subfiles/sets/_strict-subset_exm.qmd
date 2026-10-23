@@ -1,0 +1,13 @@
+::: {#exm-strict-subset}
+#### Strict subsets
+
+- $\set{2, 4, 6} \subsetneq \set{1, 2, 3, 4, 5, 6}$,
+  because $\set{2, 4, 6} \subseteq \set{1, 2, 3, 4, 5, 6}$ (@exm-subset),
+  and $1$ is in the second set but not the first.
+- $\Nat \subsetneq \mathbb{Z}$,
+  because every natural number is an integer,
+  and $-1$ is an integer that is not a natural number.
+- $\mathbb{Z} \subseteq \mathbb{Z}$, because every integer is an integer,
+  but $\mathbb{Z}$ is not a strict subset of itself.
+
+:::

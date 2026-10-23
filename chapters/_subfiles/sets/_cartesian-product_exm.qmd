@@ -1,0 +1,12 @@
+::: {#exm-cartesian-product-menu}
+#### Cartesian products
+
+- The choices in @exr-menu are the Cartesian product
+  $\set{\text{rye}, \text{wheat}} \times \set{\text{ham}, \text{cheese}, \text{tomato}}$ (@def-cartesian-product).
+- $\set{\text{ham}, \text{cheese}, \text{tomato}} \times \set{\text{rye}, \text{wheat}}$
+  is a different set: it holds $(\text{ham}, \text{rye})$, which is not $(\text{rye}, \text{ham})$ (@exm-tuple).
+- $\reals \times \reals$ is the set of points $(x, y)$ in the plane.
+- Adding a choice of drink gives $3$-tuples (@def-cartesian-product-many), such as
+  $(\text{rye}, \text{ham}, \text{tea}) \in \set{\text{rye}, \text{wheat}} \times \set{\text{ham}, \text{cheese}, \text{tomato}} \times \set{\text{tea}, \text{juice}}$.
+
+:::

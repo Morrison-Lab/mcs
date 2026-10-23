@@ -1,0 +1,8 @@
+::: {#exr-element-and-subset}
+#### An element that is also a subset
+
+Let $B = \set{1, \set{1}}$.
+A set $A$ is a subset of $B$ when every element of $A$ is an element of $B$.
+Find a set that is both an element of $B$ and a subset of $B$.
+
+:::

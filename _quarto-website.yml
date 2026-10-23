@@ -50,6 +50,8 @@ website:
         href: chapters/contrapositive-contradiction.qmd
       - text: "Proving Non-Conditional Statements"
         href: chapters/iff-existence-disproof.qmd
+      - text: "Sets"
+        href: chapters/sets.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mcs
@@ -75,6 +77,7 @@ website:
       - chapters/direct-proof.qmd
       - chapters/contrapositive-contradiction.qmd
       - chapters/iff-existence-disproof.qmd
+      - chapters/sets.qmd
 
 callouty-theorem:
   thm:

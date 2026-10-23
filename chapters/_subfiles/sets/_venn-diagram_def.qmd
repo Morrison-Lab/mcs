@@ -1,0 +1,10 @@
+::: {#def-venn-diagram}
+#### Venn diagram
+
+A **Venn diagram** draws sets as overlapping circles inside a rectangle,
+which stands for the set $S$ that the sets are subsets of, as in @def-complement
+[@wikipedia_venn_diagram].
+Each region of the picture stands for the elements
+that are in some of the sets and not in the others.
+
+:::

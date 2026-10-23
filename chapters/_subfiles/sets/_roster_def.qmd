@@ -1,0 +1,11 @@
+::: {#def-roster-notation}
+#### Roster notation
+
+Writing a set (@def-set) by listing its elements between braces,
+as in $\set{1, 2, 3}$,
+is called **roster notation**
+[@wikipedia_set_mathematics].
+An ellipsis, "$\ldots$", can stand for elements that follow a clear pattern,
+as in $\set{10, 20, 30, \ldots, 90}$.
+
+:::

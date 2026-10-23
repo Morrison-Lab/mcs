@@ -1,0 +1,6 @@
+::: {#exr-small-cubes}
+#### Natural numbers with small cubes
+
+List the natural numbers (@def-natural-numbers) $n$ with $n^3 < 100$.
+
+:::

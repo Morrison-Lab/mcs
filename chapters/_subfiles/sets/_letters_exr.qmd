@@ -1,0 +1,6 @@
+::: {#exr-letters}
+#### Letters in a word
+
+How many different letters does the word MISSISSIPPI use?
+
+:::

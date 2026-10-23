@@ -1,0 +1,279 @@
+---
+title: "Sets"
+subtitle: "Elements, subsets, products and operations"
+format:
+  html: default
+  revealjs:
+    output-file: sets-slides.html
+  pdf:
+    output-file: sets-handout.pdf
+  docx:
+    output-file: sets.docx
+---
+
+{{< include ../latex-macros/macros.qmd >}}
+
+::: {.callout-note appearance='simple' collapse=true}
+## Source
+
+Adapted from Kameron Decker Harris's Fall 2026 lecture notes "Sets 0" to "Sets 3",
+which are typed transcriptions of Scott Wehrwein's Spring 2025 handwritten lecture notes.
+These come from those notes:
+
+- roster notation, and that order and repetition do not matter in a set;
+- the table of sets of numbers;
+- set-builder notation with a test and with an expression;
+- cardinality, and the pattern of the example of a set whose elements are sets;
+- countably infinite sets, and the diagonal argument that the real numbers are not countable;
+- subsets, strict subsets and power sets;
+- tuples and Cartesian products, including products of three sets;
+- union, intersection, difference, complement and the universal set (with its example of the even integers), with their other notations;
+- Venn diagrams.
+
+The exercises are new.
+:::
+
+# Sets and their elements {#sec-sets}
+
+{{< include _subfiles/sets/_weekdays_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_weekdays_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/sets/_def-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/sets/_exm-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_roster_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_roster_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/number-systems/_def-natural-numbers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/number-systems/_note-natural-numbers-other-conventions.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/number-systems/_def-real-numbers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_number-sets_rem.qmd >}}
+
+# Set-builder notation {#sec-set-builder}
+
+{{< include _subfiles/sets/_small-cubes_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_small-cubes_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/sets/_def-set-builder.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/sets/_exm-set-builder.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/sets/_def-empty-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/sets/_exm-empty-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_set-builder-expression_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_set-builder-expression_exm.qmd >}}
+
+# Cardinality {#sec-cardinality}
+
+{{< include _subfiles/sets/_letters_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_letters_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/functions/_def-finite-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/functions/_def-infinite-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/functions/_exm-finite-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_sets-of-sets_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/functions/_def-countable-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/functions/_def-countably-infinite.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/functions/_exm-countable-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_unique-expansion_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_reals-uncountable_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_reals-uncountable_exm.qmd >}}
+
+# Subsets and power sets {#sec-subsets}
+
+{{< include _subfiles/sets/_element-and-subset_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_element-and-subset_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/sets/_def-subset.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/sets/_exm-subset.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/sets/_def-strict-subset.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_strict-subset_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/sets/_thm-empty-subset.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/sets/_thm-subset-reflexive.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_power-set_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_power-set_exm.qmd >}}
+
+# Ordered pairs and Cartesian products {#sec-cartesian-products}
+
+{{< include _subfiles/sets/_menu_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_menu_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/sets/_def-ordered-pair.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_tuple_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_tuple_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/sets/_def-cartesian-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_cartesian-product-many_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_cartesian-product_exm.qmd >}}
+
+# Set operations {#sec-set-operations}
+
+{{< include _subfiles/sets/_build-sets_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_build-sets_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/sets/_def-union.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/sets/_def-intersection.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/sets/_def-set-difference.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_difference-notation_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/sets/_exm-set-operations.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/sets/_def-complement.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_complement-notation_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/sets/_exm-complement.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_venn-diagram_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_venn-diagram_exm.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

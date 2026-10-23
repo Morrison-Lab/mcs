@@ -1,0 +1,9 @@
+::: {#exm-tuple}
+#### Tuples are not sets
+
+- $(1, 2) \ne (2, 1)$, because their first entries differ,
+  but $\set{1, 2} = \set{2, 1}$, because order does not matter in a set (@def-set).
+- $(4, 4, 1)$ is a $3$-tuple whose first two entries are equal,
+  but $\set{4, 4, 1} = \set{1, 4}$ has two elements.
+
+:::

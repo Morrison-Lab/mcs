@@ -1,0 +1,6 @@
+::: {#sol-menu}
+
+(rye, ham), (rye, cheese), (rye, tomato),
+(wheat, ham), (wheat, cheese) and (wheat, tomato).
+
+:::

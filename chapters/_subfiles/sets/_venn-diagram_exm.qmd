@@ -1,0 +1,22 @@
+::: {#exm-venn-diagram}
+#### Letters of two words
+
+Let $L$ be the set of letters in the word LOGIC,
+and $M$ the set of letters in the word MAGIC,
+inside the set $S$ of the 26 letters of the alphabet.
+@fig-venn-letters draws them.
+
+::: {#fig-venn-letters}
+
+![](../images/venn-letters.png){fig-alt="A Venn diagram: inside a rectangle labelled S, circle L holds L and O, circle M holds M and A, and their shaded overlap holds G, I and C." width="60%"}
+
+The letters of LOGIC ($L$) and of MAGIC ($M$), with $L \cap M$ shaded.
+
+:::
+
+- The shaded region, inside both circles, is $L \cap M = \set{\text{G}, \text{I}, \text{C}}$.
+- The part of circle $L$ outside circle $M$ is $L \setminus M = \set{\text{L}, \text{O}}$.
+- Everything inside either circle is $L \cup M = \set{\text{L}, \text{O}, \text{G}, \text{I}, \text{C}, \text{M}, \text{A}}$.
+- Everything in the rectangle outside circle $L$ is $L^c$, the 21 letters not in LOGIC.
+
+:::

@@ -1,0 +1,7 @@
+::: {#exr-weekdays}
+#### Days that begin with T
+
+Let $W$ be the set of days of the week whose English names begin with the letter T.
+List the elements of $W$.
+
+:::

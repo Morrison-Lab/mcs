@@ -1,0 +1,36 @@
+::: {#thm-reals-uncountable}
+#### The real numbers are not countable
+
+The set of real numbers $\reals$ (@def-real-numbers) is not countable (@def-countable-set)
+[@wikipedia_cantors_diagonal_argument].
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Suppose, for contradiction (@def-proof-by-contradiction), that $\reals$ is countable.
+$\reals$ is not finite, because it contains the natural numbers,
+and a list of every real number would include a list of every natural number,
+which cannot be finite (@exm-finite-set).
+So the elements of $\reals$ can be listed as a sequence $r_1, r_2, r_3, \ldots$ in which every real number appears.
+Write each $r_n$ as a decimal expansion,
+choosing one if $r_n$ has two.
+Let $d$ be the number between $0$ and $1$ whose $n$th decimal place is
+
+- $5$, if the $n$th decimal place of $r_n$ is not $5$;
+- $4$, if the $n$th decimal place of $r_n$ is $5$.
+
+Then $d$ is a real number, so $d = r_m$ for some $m$.
+The decimal places of $d$ are all $4$s and $5$s,
+so $d$ has only one decimal expansion (@rem-unique-expansion),
+and the expansion chosen for $r_m$ must be that one.
+But the two expansions differ in the $m$th decimal place, by the choice of $d$.
+That is a contradiction, so $\reals$ is not countable.
+
+:::
+
+:::

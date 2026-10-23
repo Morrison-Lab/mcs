@@ -1,0 +1,11 @@
+::: {#rem-complement-notation}
+#### The universal set, and other notation for the complement
+
+The set $S$ in @def-complement is sometimes called the *universal set*.
+Which universal set to use depends on the context:
+for a set of even integers it might be $\mathbb{Z}$,
+and for a set of letters it might be the 26 letters of the alphabet.
+Some sources write $\overline{A}$ for $A^c$
+[@wikipedia_complement_set_theory].
+
+:::

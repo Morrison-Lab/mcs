@@ -1,0 +1,9 @@
+::: {#exm-roster-notation}
+#### Order and repetition do not matter
+
+The sets $\set{3, 1, 2}$, $\set{1, 2, 3}$ and $\set{1, 1, 2, 3, 3}$ are equal,
+because each has exactly the elements $1$, $2$ and $3$ (@def-set).
+A roster can list any objects, not only numbers:
+$\set{\text{red}, \text{green}, \text{blue}}$ is a set with three elements.
+
+:::
