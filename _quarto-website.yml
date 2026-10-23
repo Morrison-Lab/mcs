@@ -36,6 +36,8 @@ website:
     left:
       - text: "Home"
         href: index.qmd
+      - text: "Syllabus"
+        href: chapters/syllabus.qmd
       - text: "Propositional Logic"
         href: chapters/propositional-logic.qmd
       - text: "Predicates and Quantifiers"
@@ -62,6 +64,7 @@ website:
     contents:
       - text: "Home"
         href: index.qmd
+      - chapters/syllabus.qmd
       - chapters/propositional-logic.qmd
       - chapters/predicates-quantifiers.qmd
       - chapters/equivalence-negation.qmd
