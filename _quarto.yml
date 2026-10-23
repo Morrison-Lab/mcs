@@ -21,6 +21,9 @@ execute:
   freeze: auto
 
 filters:
+  # Runs first, so a cited id on another page becomes a link before
+  # Quarto's cross-reference filter marks it unresolved.
+  - cross-page-refs.lua
   - div-anchors
   - slidebreak
   - equation-anchors

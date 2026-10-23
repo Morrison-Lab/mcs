@@ -1,0 +1,20 @@
+::: {#sol-translate}
+
+1. $\exists n \in \mathbb{Z}, n^2 = n$.
+   True: $0^2 = 0$ and $1^2 = 1$.
+2. $\forall n \in \mathbb{Z}, \neg (n > 0 \land n < 0)$.
+   True: an integer greater than $0$ is not less than $0$.
+3. Let $\mathcal{L}$ be the set of lists of integers.
+   The sentence says that each list $\ell$ has an element $m$
+   that is at least as large as every element $x$ of $\ell$:
+   $$
+   \forall \ell \in \mathcal{L},\
+   \exists m \in \ell,\
+   \forall x \in \ell,\
+   x \le m.
+   $$
+   Here "$m \in \ell$" means "$m$ is an element of the list $\ell$".
+   False: the empty list has no elements, so it has no largest element.
+   The sentence is true for every nonempty list.
+
+:::

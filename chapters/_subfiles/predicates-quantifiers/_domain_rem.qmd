@@ -1,0 +1,10 @@
+::: {#rem-domain}
+#### Domain
+
+The set of values a predicate's variable may take is its **domain**,
+also called the **domain of discourse** or the **universe of discourse**.
+The domain of $L(s)$ in @exr-predicate-values is the set of strings.
+A predicate can have more than one variable:
+"$x < y$" is a predicate $P(x, y)$ in the two variables $x$ and $y$.
+
+:::

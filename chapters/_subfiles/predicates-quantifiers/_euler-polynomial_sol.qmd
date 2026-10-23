@@ -1,0 +1,12 @@
+::: {#sol-euler-polynomial}
+
+1. The values are $41$, $43$, $47$ and $53$, which are all prime.
+2. Take $n = 41$:
+   $41^2 + 41 + 41 = 41 \cdot (41 + 1 + 1) = 41 \cdot 43$,
+   which is not prime.
+   The smallest $n$ that works is $n = 40$:
+   $40^2 + 40 + 41 = 1681 = 41^2$.
+   For every $n$ from $0$ to $39$, $n^2 + n + 41$ is prime,
+   so checking many cases did not prove the claim.
+
+:::

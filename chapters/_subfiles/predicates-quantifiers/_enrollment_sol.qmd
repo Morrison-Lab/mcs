@@ -1,0 +1,15 @@
+::: {#sol-enrollment}
+
+1. True: "every student takes some course".
+   Ana takes 201, Ben takes 241, and Cy takes 201.
+2. False: "some course is taken by every student".
+   Ben does not take 201, Cy does not take 241, and Ana does not take 247.
+3. True: "every course has some student".
+   Ana takes 201 and 241, and Cy takes 247.
+4. False: "some student takes every course".
+   Ana does not take 247, Ben does not take 201, and Cy does not take 241.
+
+Parts 1 and 2 use the same quantifiers and the same predicate in a different order,
+and they have different truth values.
+
+:::

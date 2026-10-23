@@ -1,0 +1,131 @@
+---
+title: "Predicates and Quantifiers"
+subtitle: "For all, there exists, and the order they come in"
+format:
+  html: default
+  revealjs:
+    output-file: predicates-quantifiers-slides.html
+  pdf:
+    output-file: predicates-quantifiers-handout.pdf
+  docx:
+    output-file: predicates-quantifiers.docx
+---
+
+::: {.callout-note appearance='simple' collapse=true}
+## Source
+
+Adapted from Kameron Decker Harris's Fall 2026 lecture notes "Logic 2" and "Logic 3",
+which he typeset from Scott Wehrwein's Spring 2025 handwritten lecture notes.
+The convention that a conditional about a variable means "for all"
+comes from those notes;
+the exercises are new.
+
+The definitions are included from the
+[mathematics prerequisites](https://morrison-lab.github.io/mds/proof-writing.html#sec-proof-definitions)
+notes, so they read the same in both places.
+:::
+
+# Predicates {#sec-predicates}
+
+{{< include _subfiles/predicates-quantifiers/_predicate-values_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/predicates-quantifiers/_predicate-values_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/predicates-quantifiers/_domain_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/predicates-quantifiers/_racket-predicates_rem.qmd >}}
+
+# Quantifiers {#sec-quantifiers}
+
+{{< include _subfiles/predicates-quantifiers/_finite-quantifiers_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/predicates-quantifiers/_finite-quantifiers_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/proof-writing/_def-quantifier.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/proof-writing/_def-universal-quantifier.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/proof-writing/_def-existential-quantifier.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/predicates-quantifiers/_quantifier-notation_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/predicates-quantifiers/_empty-domain_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/predicates-quantifiers/_empty-domain_sol.qmd >}}
+
+# Counterexamples {#sec-counterexamples}
+
+{{< include _subfiles/predicates-quantifiers/_euler-polynomial_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/predicates-quantifiers/_euler-polynomial_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/proof-writing/_def-counterexample.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/proof-writing/_exm-counterexample.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/predicates-quantifiers/_one-or-all_rem.qmd >}}
+
+# Quantified conditionals {#sec-quantified-conditionals}
+
+{{< include _subfiles/predicates-quantifiers/_implied-for-all_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/predicates-quantifiers/_implied-for-all_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/predicates-quantifiers/_implied-for-all_rem.qmd >}}
+
+# Nested quantifiers {#sec-nested-quantifiers}
+
+{{< include _subfiles/predicates-quantifiers/_enrollment_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/predicates-quantifiers/_enrollment_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/predicates-quantifiers/_quantifier-order_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/predicates-quantifiers/_translate_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/predicates-quantifiers/_translate_sol.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

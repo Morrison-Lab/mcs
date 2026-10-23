@@ -1,0 +1,15 @@
+::: {#exr-empty-domain}
+#### Nothing to check
+
+What are the truth values of
+$\forall x \in \emptyset, x > 5$
+and
+$\exists x \in \emptyset, x > 5$?
+
+::: {.callout-tip}
+#### Hint
+
+What would make each one false?
+:::
+
+:::

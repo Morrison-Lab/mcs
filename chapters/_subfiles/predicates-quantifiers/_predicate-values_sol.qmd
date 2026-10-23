@@ -1,0 +1,11 @@
+::: {#sol-predicate-values}
+
+1. Neither: $L(s)$ has no truth value until we know which string $s$ is.
+   It is a predicate (@def-predicate), not a proposition.
+2. Each value of $s$ turns $L(s)$ into a proposition:
+
+   - $L(\texttt{"cat"})$ is false, since `"cat"` has 3 characters.
+   - $L(\texttt{"logic"})$ is true, since `"logic"` has 5 characters.
+   - $L(\texttt{""})$ is false, since the empty string has 0 characters.
+
+:::
