@@ -6,7 +6,7 @@ If and only if, existence, and disproof
 
 Published
 
-Last modified: 2026-10-23 14:22:17 (PDT)
+Last modified: 2026-10-23 14:30:12 (PDT)
 
 > **NOTE:**
 >
@@ -139,7 +139,7 @@ Last modified: 2026-10-23 14:22:17 (PDT)
 >
 > **Example 4 (An irrational power of an irrational number)** Claim: there are irrational numbers \\x\\ and \\y\\ ([Definition: Irrational numbers](../chapters/contrapositive-contradiction.llms.md#def-irrational-numbers)) for which \\x^y\\ is rational ([Definition: Rational numbers](../chapters/contrapositive-contradiction.llms.md#def-rational-numbers)).
 >
-> The number \\\sqrt{2}\\ is irrational ([Theorem: \$\sqrt{2}\$ is irrational](../chapters/contrapositive-contradiction.llms.md#thm-sqrt-two)). Consider \\\sqrt{2}^{\sqrt{2}}\\, and take two cases ([Definition: Proof by cases](../chapters/direct-proof.llms.md#def-proof-by-cases)).
+> The number \\\sqrt{2}\\ is irrational ([Theorem: \\\sqrt{2}\\ is irrational](../chapters/contrapositive-contradiction.llms.md#thm-sqrt-two)). Consider \\\sqrt{2}^{\sqrt{2}}\\, and take two cases ([Definition: Proof by cases](../chapters/direct-proof.llms.md#def-proof-by-cases)).
 >
 > **Case 1: \\\sqrt{2}^{\sqrt{2}}\\ is rational.** Then \\x = \sqrt{2}\\ and \\y = \sqrt{2}\\ work.
 >
