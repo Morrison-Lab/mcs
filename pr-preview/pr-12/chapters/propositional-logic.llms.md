@@ -6,7 +6,7 @@ Propositions, connectives, and conditionals
 
 Published
 
-Last modified: 2026-10-23 13:47:53 (PDT)
+Last modified: 2026-10-23 13:57:50 (PDT)
 
 > **NOTE:**
 >

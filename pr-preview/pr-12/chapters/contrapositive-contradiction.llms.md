@@ -6,7 +6,7 @@ Proving a statement by way of its negation
 
 Published
 
-Last modified: 2026-10-23 13:47:53 (PDT)
+Last modified: 2026-10-23 13:57:50 (PDT)
 
 > **NOTE:**
 >
@@ -53,7 +53,7 @@ Last modified: 2026-10-23 13:47:53 (PDT)
 
 > **NOTE:**
 >
-> *Remark 1* (Two meanings of \\\equiv\\, and the mod operator). The symbol \\\equiv\\ also means logical equivalence ([Definition: Logical equivalence](../chapters/equivalence-negation.llms.md#def-logical-equivalence)). The “\\\pmod{n}\\” after it says which meaning is in use: \\23 \equiv 8 \pmod{5}\\ is a statement about two integers, and \\P \equiv Q\\ is a statement about two propositions.
+> *Remark 1* (Two meanings of \\\equiv\\, and the mod operator). The symbol \\\equiv\\ also means logical equivalence ([Definition: Logical equivalence](../chapters/equivalence-negation.llms.md#def-logical-equivalence)). The “\\(\operatorname{mod} n)\\” after it says which meaning is in use: \\23 \equiv 8 \pmod{5}\\ is a statement about two integers, and \\P \equiv Q\\ is a statement about two propositions.
 >
 > Congruence is related to the mod operator of a programming language, but it is not the same thing. In Racket, `(modulo 23 5)` is the number \\3\\, while \\23 \equiv 8 \pmod{5}\\ is a proposition ([Definition: Proposition (statement)](../chapters/propositional-logic.llms.md#def-proposition)), which is true or false.
 
@@ -294,7 +294,7 @@ Last modified: 2026-10-23 13:47:53 (PDT)
 >
 > By [Solution 6](#sol-sqrt-bounds), \\b \< a \< 2b\\, so \\b' = a - b\\ is an integer with \\0 \< b' \< b\\. Let \\a' = 2b - a\\, also an integer. Then
 >
-> \\ \begin{aligned} \sqrt{2}\\ b' &= \sqrt{2}\\ (a - b) && \text{(definition of } b' \text{)} \\&= \sqrt{2}\\ a - \sqrt{2}\\ b && \text{(distributive law)} \\&= \sqrt{2}\\ \sqrt{2}\\ b - a && \text{(substitute } a = \sqrt{2}\\ b \text{ in each term)} \\&= 2b - a && \text{(} \sqrt{2}\\ \sqrt{2} = 2 \text{)} \\&= a'. && \text{(definition of } a' \text{)} \end{aligned} \\
+> \\ \begin{aligned} \sqrt{2}\\ b' &= \sqrt{2}\\ (a - b) && \text{(definition of } b' \text{)} \\&= \sqrt{2}\\ a - \sqrt{2}\\ b && \text{(distributive law)} \\&= \sqrt{2}\\ \sqrt{2}\\ b - a && \text{(substitute } a = \sqrt{2}\\ b \text{ in the first term, and } \sqrt{2}\\ b = a \text{ in the second)} \\&= 2b - a && \text{(} \sqrt{2}\\ \sqrt{2} = 2 \text{)} \\&= a'. && \text{(definition of } a' \text{)} \end{aligned} \\
 >
 > So \\b'\\ is a positive integer for which \\\sqrt{2}\\ b'\\ is an integer, and \\b' \< b\\. That contradicts the choice of \\b\\ as the smallest such integer. So \\\sqrt{2}\\ is not rational.
 
