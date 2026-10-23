@@ -6,7 +6,7 @@ Membership, subsets and set equality
 
 Published
 
-Last modified: 2026-10-23 15:15:41 (PDT)
+Last modified: 2026-10-23 16:22:15 (PDT)
 
 > **NOTE:**
 >
@@ -218,5 +218,7 @@ Last modified: 2026-10-23 15:15:41 (PDT)
 > **Example 7 (A union does not cancel)** Claim to disprove: for all sets \\A\\, \\B\\ and \\C\\, if \\A \cup B = A \cup C\\, then \\B = C\\.
 >
 > Let \\A = {\mathopen{}\left\\1\right\\\mathclose{}}\\, \\B = {\mathopen{}\left\\1\right\\\mathclose{}}\\ and \\C = \emptyset\\. Then \\A \cup B = {\mathopen{}\left\\1\right\\\mathclose{}}\\ and \\A \cup C = {\mathopen{}\left\\1\right\\\mathclose{}}\\, so \\A \cup B = A \cup C\\, but \\B \ne C\\. So the claim is false.
+
+# References
 
 Back to top

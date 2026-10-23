@@ -34,7 +34,26 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-3a7eae3b872f08785a56513611f0329a.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -254,7 +273,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-23 15:15:41 (PDT)</p>
+  <p class="date">Last modified: 2026-10-23 16:22:15 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -398,14 +417,14 @@ So <span class="math inline">\(A \subseteq B\)</span>.</div>
 </section>
 <section class="slide level2">
 
-<div id="exr-absorption" class="theorem exercise">
+<div id="exr-set-absorption" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 3 (Absorbing an intersection)</strong></span> Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be sets. Prove that <span class="math inline">\(A \cup (A \cap B) = A\)</span> (<a href="../chapters/sets.html#def-union">Definition: Union</a>, <a href="../chapters/sets.html#def-intersection">Definition: Intersection</a>).</p>
 <p>Hint: prove that each side is a subset of the other.</p>
 </div>
 </section>
 <section class="slide level2">
 
-<div id="sol-absorption" class="proof solution">
+<div id="sol-set-absorption" class="proof solution">
 <p><span class="proof-title"><em>Solution 3</em>. </span><strong><span class="math inline">\(A \cup (A \cap B) \subseteq A\)</span>.</strong> Let <span class="math inline">\(x \in A \cup (A \cap B)\)</span>. Then <span class="math inline">\(x \in A\)</span> or <span class="math inline">\(x \in A \cap B\)</span>. In the first case, <span class="math inline">\(x \in A\)</span>. In the second case, <span class="math inline">\(x \in A\)</span> and <span class="math inline">\(x \in B\)</span>, so again <span class="math inline">\(x \in A\)</span>. Either way, <span class="math inline">\(x \in A\)</span> (<a href="../chapters/direct-proof.html#def-proof-by-cases">Definition: Proof by cases</a>).</p>
 <p><strong><span class="math inline">\(A \subseteq A \cup (A \cap B)\)</span>.</strong> Let <span class="math inline">\(x \in A\)</span>. Then “<span class="math inline">\(x \in A\)</span> or <span class="math inline">\(x \in A \cap B\)</span>” is true, since its first part is true (<a href="../chapters/propositional-logic.html#def-or">Definition: Or</a>), so <span class="math inline">\(x \in A \cup (A \cap B)\)</span>.</p>
 <p>Each side is a subset of the other, so an element is in one side exactly when it is in the other, and the two sets are equal (<a href="../chapters/sets.html#def-set">Definition: Set</a>).</p>
@@ -523,6 +542,17 @@ A - (B - C)
 <div id="exm-union-cancel" class="theorem example">
 <p><span class="theorem-title"><strong>Example 7 (A union does not cancel)</strong></span> Claim to disprove: for all sets <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span>, if <span class="math inline">\(A \cup B = A \cup C\)</span>, then <span class="math inline">\(B = C\)</span>.</p>
 <p>Let <span class="math inline">\(A = {\mathopen{}\left\{1\right\}\mathclose{}}\)</span>, <span class="math inline">\(B = {\mathopen{}\left\{1\right\}\mathclose{}}\)</span> and <span class="math inline">\(C = \emptyset\)</span>. Then <span class="math inline">\(A \cup B = {\mathopen{}\left\{1\right\}\mathclose{}}\)</span> and <span class="math inline">\(A \cup C = {\mathopen{}\left\{1\right\}\mathclose{}}\)</span>, so <span class="math inline">\(A \cup B = A \cup C\)</span>, but <span class="math inline">\(B \ne C\)</span>. So the claim is false.</p>
+</div>
+</section></section>
+<section>
+<section id="references" class="title-slide slide level1 unnumbered center">
+<h1>References</h1>
+
+</section>
+<section class="slide level2 smaller scrollable" id="references">
+
+<div id="refs" role="list">
+
 </div>
 
 

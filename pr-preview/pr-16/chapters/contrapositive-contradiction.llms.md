@@ -6,7 +6,7 @@ Proving a statement by way of its negation
 
 Published
 
-Last modified: 2026-10-23 15:15:41 (PDT)
+Last modified: 2026-10-23 16:22:15 (PDT)
 
 > **NOTE:**
 >

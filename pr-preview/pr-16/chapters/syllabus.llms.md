@@ -6,7 +6,7 @@ Winter 2027
 
 Published
 
-Last modified: 2026-10-23 15:15:41 (PDT)
+Last modified: 2026-10-23 16:22:15 (PDT)
 
 > **NOTE:**
 >
@@ -102,7 +102,7 @@ I will distribute worksheets, homework, and lab materials on Canvas. The lecture
 
 ## Schedule
 
-The topics and dates of future lectures may change. Readings are sections of Epp’s *Discrete Mathematics with Applications* (5th ed.). Classes begin on Tuesday, January 5, so the first lecture is on Wednesday, January 6. Monday, January 18 (Martin Luther King Jr. Day) and Monday, February 15 (Presidents’ Day) are university holidays, with no class.
+The topics and dates of future lectures may change. The [course calendar](../chapters/calendar.llms.md) gives the day-by-day agenda, including every deadline; the table below gives the topics and readings week by week. Readings are sections of Epp’s *Discrete Mathematics with Applications* (5th ed.). Classes begin on Tuesday, January 5, so the first lecture is on Wednesday, January 6. Monday, January 18 (Martin Luther King Jr. Day) and Monday, February 15 (Presidents’ Day) are university holidays, with no class.
 
 | Week | Dates | Topics | Assigned work | Reading |
 |:---|:---|:---|:---|:---|
@@ -116,7 +116,7 @@ The topics and dates of future lectures may change. Readings are sections of Epp
 | 8 | Feb 22–26 | Graphs: breadth-first and depth-first traversal | Lab 6; Homework 5 | 10.1, 10.3, class notes |
 | 9 | Mar 1–5 | State machines and finite automata | Lab 7; Homework 6 | 12.2 |
 | 10 | Mar 8–12 | Trees and their traversal | Lab 8 | 10.4–10.6 |
-| Finals | Mar 15–19 |  | **Final exam**, **TBD** |  |
+| Finals | Mar 15–19 |  | **Final exam**: Tuesday, Mar 16 (CRNs 13745, 13746) or Thursday, Mar 18 (CRNs 13747, 13748), 10:30am–12:30pm |  |
 
 The midterm dates are tentative. If a midterm’s date changes, I will announce the change at least two weeks before that exam is given.
 
@@ -209,7 +209,7 @@ Weekly labs give hands-on programming practice, with a TA available to answer qu
 
 ### Exams
 
-The course has two in-class midterm exams, tentatively on Wednesday, January 27 (week 4) and Wednesday, February 17 (week 7), and a cumulative final exam during finals week (**TBD**), in our classroom at the time WWU’s [finals schedule](https://registrar.wwu.edu/calendars/finals) assigns.
+The course has two in-class midterm exams, tentatively on Wednesday, January 27 (week 4) and Wednesday, February 17 (week 7), and a cumulative final exam during finals week, in our classroom at the time WWU’s [finals schedule](https://registrar.wwu.edu/calendars/finals) assigns, which is set by the lecture time: Tuesday, March 16 for the 11:00 sections (CRNs 13745 and 13746) and Thursday, March 18 for the 9:00 sections (CRNs 13747 and 13748), both 10:30am–12:30pm.
 
 - Each midterm lasts 50 minutes, and you may bring one page of notes (front and back).
 - The final exam lasts 120 minutes, and you may bring two pages of notes (front and back).
