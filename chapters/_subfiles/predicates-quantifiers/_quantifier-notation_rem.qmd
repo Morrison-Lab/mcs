@@ -11,9 +11,4 @@ $\forall x \in S, P(x)$ is also written
 $\forall x \in S : P(x)$, $(\forall x \in S)\, P(x)$, or $\forall x \in S .\, P(x)$.
 When the domain is clear, it is often left out, as in $\forall x, P(x)$.
 
-On a finite list, Racket computes the two quantifiers with `andmap` and `ormap`:
-`(andmap even? (list 2 3 5 7))` returns `#f`,
-and `(ormap even? (list 2 3 5 7))` returns `#t`,
-which match parts 2 and 3 of @exr-finite-quantifiers.
-
 :::

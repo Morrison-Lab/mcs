@@ -1,7 +1,7 @@
 ::: {#sol-translate}
 
-1. $\exists n \in \mathbb{Z}, n^2 = n$.
-   True: $0^2 = 0$ and $1^2 = 1$.
+1. $\exists n \in \mathbb{Z}, n^2 = 2n + 3$.
+   True: $3^2 = 9 = 2 \cdot 3 + 3$.
 2. $\forall n \in \mathbb{Z}, \neg (n > 0 \land n < 0)$.
    True: an integer greater than $0$ is not less than $0$.
 3. Let $\mathcal{L}$ be the set of lists of integers.

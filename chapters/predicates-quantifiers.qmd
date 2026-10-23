@@ -35,6 +35,10 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
+{{< include _subfiles/predicates-quantifiers/_domain_def.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include _subfiles/predicates-quantifiers/_domain_rem.qmd >}}
 
 {{< slidebreak >}}
@@ -67,11 +71,19 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
+{{< include _subfiles/predicates-quantifiers/_racket-quantifiers_rem.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include _subfiles/predicates-quantifiers/_empty-domain_exr.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include _subfiles/predicates-quantifiers/_empty-domain_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/predicates-quantifiers/_vacuous-truth_def.qmd >}}
 
 # Counterexamples {#sec-counterexamples}
 
@@ -84,10 +96,6 @@ notes, so they read the same in both places.
 {{< slidebreak >}}
 
 {{< include ../mds/_subfiles/proof-writing/_def-counterexample.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include ../mds/_subfiles/proof-writing/_exm-counterexample.qmd >}}
 
 {{< slidebreak >}}
 

@@ -1,0 +1,8 @@
+::: {#def-vacuous-truth}
+#### Vacuous truth
+
+A universally quantified proposition $\forall x \in S, P(x)$
+whose domain $S$ is empty is **vacuously true**:
+it is true, because $S$ has no element $x$ for which $P(x)$ could be false.
+
+:::

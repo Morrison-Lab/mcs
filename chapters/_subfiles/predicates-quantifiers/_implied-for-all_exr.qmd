@@ -9,6 +9,6 @@ for strings $s$.
 
 1. Write the sentence in symbols, with its quantifier.
 2. Is it true?
-3. Is its converse true?
+3. Is its converse (@def-converse) true?
 
 :::

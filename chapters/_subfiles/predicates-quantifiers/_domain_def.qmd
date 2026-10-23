@@ -1,0 +1,8 @@
+::: {#def-domain}
+#### Domain (domain of discourse, universe of discourse)
+
+The **domain** of a predicate (@def-predicate),
+also called its **domain of discourse** or **universe of discourse**,
+is the set of values its variable may take.
+
+:::

@@ -3,7 +3,7 @@
 
 Write each sentence in symbols, and say whether it is true.
 
-1. Some integer is equal to its own square.
+1. Some integer $n$ satisfies $n^2 = 2n + 3$.
 2. No integer is both positive and negative.
 3. Every list of integers has a largest element.
 

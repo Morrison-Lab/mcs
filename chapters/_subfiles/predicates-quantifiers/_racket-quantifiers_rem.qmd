@@ -1,0 +1,10 @@
+::: {#rem-racket-quantifiers}
+#### Quantifiers in Racket
+
+On a finite list, Racket computes the two quantifiers with `andmap` and `ormap`.
+`(andmap odd? (list 2 3 5 7))` returns `#f`,
+as in part 2 of @exr-finite-quantifiers,
+and `(ormap even? (list 2 3 5 7))` returns `#t`,
+as in part 3.
+
+:::
