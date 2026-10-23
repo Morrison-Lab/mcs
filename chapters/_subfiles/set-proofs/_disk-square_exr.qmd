@@ -1,0 +1,7 @@
+::: {#exr-disk-square}
+#### A disk inside a square
+
+Let $D = \set{(x, y) \in \reals \times \reals : x^2 + y^2 \le 1}$, the points of the plane at distance at most 1 from the origin.
+Prove that $D \subseteq [-1, 1] \times [-1, 1]$, where $[-1, 1] = \set{x \in \reals : -1 \le x \le 1}$ (@def-subset, @def-cartesian-product, @def-closed-interval).
+
+:::

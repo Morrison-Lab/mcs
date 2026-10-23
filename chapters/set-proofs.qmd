@@ -26,8 +26,10 @@ These come from those notes:
 - the theorem that a nonempty factor cancels from both sides of an equation between Cartesian products,
   with the proof of its first half.
 
-The exercises, the second half of that proof, the membership test for a set built with an expression,
-and the section on disproving a claim about sets are new.
+Everything else is new:
+the exercises, the other examples and theorems, the second half of that proof,
+the membership test for a set built with an expression,
+and the section on disproving a claim about sets.
 :::
 
 # Proving membership {#sec-membership}
@@ -48,11 +50,11 @@ and the section on disproving a claim about sets are new.
 
 # Proving a subset {#sec-subset-proofs}
 
-{{< include _subfiles/set-proofs/_between-roots_exr.qmd >}}
+{{< include _subfiles/set-proofs/_disk-square_exr.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/set-proofs/_between-roots_sol.qmd >}}
+{{< include _subfiles/set-proofs/_disk-square_sol.qmd >}}
 
 {{< slidebreak >}}
 

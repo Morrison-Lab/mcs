@@ -1,11 +1,11 @@
 ::: {#exm-subset-transitive}
 #### A chain of subsets
 
-@sol-between-roots shows that
-$\set{x \in \reals : x^2 - 3x + 2 < 0} \subseteq \set{x \in \reals : 0 < x < 3}$,
-and every real number between 0 and 3 is positive, so
-$\set{x \in \reals : 0 < x < 3} \subseteq \set{x \in \reals : x > 0}$.
-By @thm-subset-transitive,
-$\set{x \in \reals : x^2 - 3x + 2 < 0} \subseteq \set{x \in \reals : x > 0}$.
+Let $D$ be the disk of @exr-disk-square,
+and let $H = \set{(x, y) \in \reals \times \reals : x + y \le 2}$.
+@sol-disk-square shows that $D \subseteq [-1, 1] \times [-1, 1]$.
+Every point $(x, y)$ of $[-1, 1] \times [-1, 1]$ has $x \le 1$ and $y \le 1$, so $x + y \le 2$,
+and so $[-1, 1] \times [-1, 1] \subseteq H$.
+By @thm-subset-transitive, $D \subseteq H$.
 
 :::

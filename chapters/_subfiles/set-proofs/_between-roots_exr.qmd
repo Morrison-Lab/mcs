@@ -1,9 +1,0 @@
-::: {#exr-between-roots}
-#### Where a quadratic is negative
-
-Prove that $\set{x \in \reals : x^2 - 3x + 2 < 0} \subseteq \set{x \in \reals : 0 < x < 3}$
-(@def-subset).
-
-Hint: factor $x^2 - 3x + 2$.
-
-:::
