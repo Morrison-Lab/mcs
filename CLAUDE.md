@@ -29,7 +29,9 @@ Authoritative style guides:
 - `chapters/<topic>.qmd` --- one chapter per topic, a spine of headings, slide breaks and includes;
   its units live in `chapters/_subfiles/<topic>/`, one div per file named `_<stem>_<type>.qmd`
 - `cross-page-refs.lua` --- turns a cross-reference to a div on another page (`@def-predicate`, cited by an mds definition) into a link to that page;
-  Quarto resolves `@id` only within a page, so without it the reference renders as "?@def-predicate"
+  Quarto resolves `@id` only within a page, so without it the reference renders as "?@def-predicate".
+  It also repoints the links mds text carries (`[text](#def-foo)`, `[text](number-systems.qmd#def-foo)`) at the page here that defines the id,
+  and sends an id no page here defines to the published mds page, so an mds subfile with such links can be included
 - `R/`, `man/`, `DESCRIPTION`, `NAMESPACE` --- the project is also a small R package
 - `references.bib` --- BibTeX bibliography
 - `offwhite.scss`, `theme-picker.html` --- the website's Light / Off-white / Parchment / Dark theme dropdown (`theme-picker.html` builds it, `offwhite.scss` styles the two tinted palettes);
