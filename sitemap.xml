@@ -2,26 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://morrison-lab.github.io/mcs/index.html</loc>
-    <lastmod>2026-10-23T19:06:15.154Z</lastmod>
+    <lastmod>2026-10-23T19:46:33.967Z</lastmod>
   </url>
   <url>
     <loc>https://morrison-lab.github.io/mcs/index-slides.html</loc>
-    <lastmod>2026-10-23T19:06:15.154Z</lastmod>
+    <lastmod>2026-10-23T19:46:33.967Z</lastmod>
   </url>
   <url>
     <loc>https://morrison-lab.github.io/mcs/chapters/predicates-quantifiers.html</loc>
-    <lastmod>2026-10-23T19:06:15.154Z</lastmod>
+    <lastmod>2026-10-23T19:46:33.967Z</lastmod>
   </url>
   <url>
     <loc>https://morrison-lab.github.io/mcs/chapters/predicates-quantifiers-slides.html</loc>
-    <lastmod>2026-10-23T19:06:15.154Z</lastmod>
+    <lastmod>2026-10-23T19:46:33.967Z</lastmod>
+  </url>
+  <url>
+    <loc>https://morrison-lab.github.io/mcs/chapters/equivalence-negation-slides.html</loc>
+    <lastmod>2026-10-23T19:46:33.967Z</lastmod>
+  </url>
+  <url>
+    <loc>https://morrison-lab.github.io/mcs/chapters/equivalence-negation.html</loc>
+    <lastmod>2026-10-23T19:46:33.967Z</lastmod>
   </url>
   <url>
     <loc>https://morrison-lab.github.io/mcs/chapters/propositional-logic-slides.html</loc>
-    <lastmod>2026-10-23T19:06:15.154Z</lastmod>
+    <lastmod>2026-10-23T19:46:33.967Z</lastmod>
   </url>
   <url>
     <loc>https://morrison-lab.github.io/mcs/chapters/propositional-logic.html</loc>
-    <lastmod>2026-10-23T19:06:15.154Z</lastmod>
+    <lastmod>2026-10-23T19:46:33.967Z</lastmod>
   </url>
 </urlset>
