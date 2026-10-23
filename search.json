@@ -4,27 +4,7 @@
     "href": "index.html",
     "title": "Math for Computer Science",
     "section": "",
-    "text": "These are the lecture notes for CSCI 201, math for computer science (discrete mathematics), at Western Washington University. General mathematics that several courses share, such as logic, sets and functions, is kept in the mathematics prerequisites site. These notes include its definitions, from the mds submodule, so each definition is written once and reads the same in both places.\nThe notes are available in multiple formats:\n\nHTML Website: Navigate using the navbar for easy access to all pages\nRevealJS Slides: Each chapter can generate a presentation format with -slides.html suffix\nPDF Handouts: Each chapter can generate a PDF handout with -handout.pdf suffix\nDOCX Documents: Each chapter can generate a Microsoft Word document with .docx extension\n\n\n\nThis website is built with Quarto, an open-source scientific and technical publishing system. It was created from the Morrison-Lab/qwt template.\n\n\n\nTo render the website locally:\nquarto render\nTo preview the website with live reload:\nquarto preview\nThe rendered output will be in the _site/ directory, which GitHub Actions publishes to GitHub Pages.\n\n\n\nThe notes are released under the MIT License; see the LICENSE file.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#about-this-website",
-    "href": "index.html#about-this-website",
-    "title": "Math for Computer Science",
-    "section": "",
-    "text": "This website is built with Quarto, an open-source scientific and technical publishing system. It was created from the Morrison-Lab/qwt template.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#building-the-website",
-    "href": "index.html#building-the-website",
-    "title": "Math for Computer Science",
-    "section": "",
-    "text": "To render the website locally:\nquarto render\nTo preview the website with live reload:\nquarto preview\nThe rendered output will be in the _site/ directory, which GitHub Actions publishes to GitHub Pages.",
+    "text": "These are the lecture notes for CSCI 201, math for computer science (discrete mathematics), at Western Washington University. General mathematics that several courses share, such as logic, sets and functions, is kept in the mathematics prerequisites site. These notes include its definitions, from the mds submodule, so each definition is written once and reads the same in both places.\nThe notes are available in multiple formats:\n\nHTML Website: Navigate using the navbar for easy access to all pages\nRevealJS Slides: Each chapter can generate a presentation format with -slides.html suffix\nPDF Handouts: Each chapter can generate a PDF handout with -handout.pdf suffix\nDOCX Documents: Each chapter can generate a Microsoft Word document with .docx extension\n\n\n\nThe notes are released under the MIT License; see the LICENSE file.",
     "crumbs": [
       "Home"
     ]
@@ -40,25 +20,11 @@
     ]
   },
   {
-    "objectID": "index-slides.html#about-this-website",
-    "href": "index-slides.html#about-this-website",
-    "title": "Math for Computer Science",
-    "section": "0.1 About this website",
-    "text": "0.1 About this website"
-  },
-  {
-    "objectID": "index-slides.html#building-the-website",
-    "href": "index-slides.html#building-the-website",
-    "title": "Math for Computer Science",
-    "section": "0.2 Building the website",
-    "text": "0.2 Building the website"
-  },
-  {
     "objectID": "index-slides.html#license",
     "href": "index-slides.html#license",
     "title": "Math for Computer Science",
-    "section": "0.3 License",
-    "text": "0.3 License"
+    "section": "0.1 License",
+    "text": "0.1 License"
   },
   {
     "objectID": "index-slides.html#references",

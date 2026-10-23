@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-23 02:26:00 (PDT)
+Last modified: 2026-10-23 02:39:16 (PDT)
 
 # Welcome
 
@@ -17,27 +17,7 @@ The notes are available in multiple formats:
 - **PDF Handouts**: Each chapter can generate a PDF handout with `-handout.pdf` suffix
 - **DOCX Documents**: Each chapter can generate a Microsoft Word document with `.docx` extension
 
-## 0.1 About this website
-
-This website is built with [Quarto](https://quarto.org/), an open-source scientific and technical publishing system. It was created from the [Morrison-Lab/qwt](https://github.com/Morrison-Lab/qwt) template.
-
-## 0.2 Building the website
-
-To render the website locally:
-
-``` bash
-quarto render
-```
-
-To preview the website with live reload:
-
-``` bash
-quarto preview
-```
-
-The rendered output will be in the `_site/` directory, which GitHub Actions publishes to GitHub Pages.
-
-## 0.3 License
+## 0.1 License
 
 The notes are released under the MIT License; see the `LICENSE` file.
 
