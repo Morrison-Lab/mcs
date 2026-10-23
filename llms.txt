@@ -5,4 +5,5 @@
 ## Pages
 
 - [Math for Computer Science](https://morrison-lab.github.io/mcs/index.llms.md)
+- [Predicates and Quantifiers](https://morrison-lab.github.io/mcs/chapters/predicates-quantifiers.llms.md)
 - [Propositional Logic](https://morrison-lab.github.io/mcs/chapters/propositional-logic.llms.md)
