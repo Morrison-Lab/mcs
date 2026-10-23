@@ -1,0 +1,11 @@
+::: {#exr-negate-forall}
+#### Not every test passes
+
+Let $T$ be the set of tests in a test suite,
+and let $P(t)$ be "test $t$ passes".
+The report "every test passes" is $\forall t \in T, P(t)$.
+
+Write the negation of this report in English and in symbols,
+without putting $\neg$ in front of a quantifier.
+
+:::

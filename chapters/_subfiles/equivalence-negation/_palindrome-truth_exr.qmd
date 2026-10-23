@@ -1,0 +1,9 @@
+::: {#exr-palindrome-truth}
+#### Which one is true?
+
+Which is true:
+$\forall s \in W,\ \exists t \in W,\ s t \text{ is a palindrome}$,
+from @exr-palindrome,
+or its negation?
+
+:::

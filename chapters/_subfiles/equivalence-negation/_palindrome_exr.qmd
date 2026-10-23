@@ -1,0 +1,16 @@
+::: {#exr-palindrome}
+#### Completing a palindrome
+
+Let $W$ be the set of words made of the letters a and b,
+including the empty word,
+and write $s t$ for word $s$ followed by word $t$.
+A palindrome is a word that reads the same forwards and backwards,
+such as abba.
+
+Write the negation of
+$$
+\forall s \in W,\ \exists t \in W,\ s t \text{ is a palindrome}
+$$
+without putting $\neg$ in front of a quantifier.
+
+:::

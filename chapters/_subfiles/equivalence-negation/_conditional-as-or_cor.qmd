@@ -1,0 +1,24 @@
+::: {#cor-conditional-as-or}
+#### A conditional without the arrow
+
+For propositions $P$ and $Q$, $P \Rightarrow Q \equiv \neg P \lor Q$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+By double negation (@thm-double-negation),
+$P \Rightarrow Q \equiv \neg \neg (P \Rightarrow Q)$.
+By @thm-negate-conditional and @thm-substitution,
+$\neg \neg (P \Rightarrow Q) \equiv \neg (P \land \neg Q)$.
+By De Morgan's law 1 (@thm-de-morgan-logic),
+$\neg (P \land \neg Q) \equiv \neg P \lor \neg \neg Q$,
+and by double negation again, that is logically equivalent to $\neg P \lor Q$.
+
+:::
+
+:::

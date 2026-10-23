@@ -1,0 +1,16 @@
+::: {#sol-not-and}
+
+| $P$ | $Q$ | $P \land Q$ | $\neg (P \land Q)$ | $\neg P$ | $\neg Q$ | $\neg P \land \neg Q$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| T | T | T | F | F | F | F |
+| T | F | F | T | F | T | F |
+| F | T | F | T | T | F | F |
+| F | F | F | T | T | T | T |
+
+No.
+The two columns differ in the second and third rows,
+where exactly one suite passes:
+then it is true that not both pass,
+but false that neither passes.
+
+:::

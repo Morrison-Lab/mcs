@@ -1,0 +1,46 @@
+::: {#thm-de-morgan-logic}
+#### De Morgan's laws
+
+For propositions $P$ and $Q$
+[@wikipedia_de_morgans_laws]:
+
+1. $\neg (P \land Q) \equiv \neg P \lor \neg Q$;
+2. $\neg (P \lor Q) \equiv \neg P \land \neg Q$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+For law 1, the fourth and last columns of this table match in every row:
+
+| $P$ | $Q$ | $P \land Q$ | $\neg (P \land Q)$ | $\neg P$ | $\neg Q$ | $\neg P \lor \neg Q$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| T | T | T | F | F | F | F |
+| T | F | F | T | F | T | T |
+| F | T | F | T | T | F | T |
+| F | F | F | T | T | T | T |
+
+Law 2 follows from law 1.
+Law 1 holds for any two propositions, so it holds for $\neg P$ and $\neg Q$:
+$$
+\neg (\neg P \land \neg Q) \equiv \neg \neg P \lor \neg \neg Q.
+$$
+By double negation (@thm-double-negation) and @thm-substitution,
+the right side is logically equivalent to $P \lor Q$, so
+$$
+\neg (\neg P \land \neg Q) \equiv P \lor Q.
+$$
+Negating both sides (@thm-substitution) gives
+$$
+\neg \neg (\neg P \land \neg Q) \equiv \neg (P \lor Q),
+$$
+and by double negation the left side is logically equivalent to $\neg P \land \neg Q$.
+So $\neg (P \lor Q) \equiv \neg P \land \neg Q$.
+
+:::
+
+:::

@@ -40,6 +40,8 @@ website:
         href: chapters/propositional-logic.qmd
       - text: "Predicates and Quantifiers"
         href: chapters/predicates-quantifiers.qmd
+      - text: "Logical Equivalence and Negation"
+        href: chapters/equivalence-negation.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mcs
@@ -60,6 +62,7 @@ website:
         href: index.qmd
       - chapters/propositional-logic.qmd
       - chapters/predicates-quantifiers.qmd
+      - chapters/equivalence-negation.qmd
 
 callouty-theorem:
   thm:

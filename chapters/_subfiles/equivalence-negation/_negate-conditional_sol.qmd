@@ -1,0 +1,13 @@
+::: {#sol-negate-conditional}
+
+The rule is broken on a day when the tests pass and the build is not deployed:
+$P \land \neg Q$.
+On a day when the tests fail, the rule is not broken,
+whether or not the build is deployed.
+
+"If the tests pass, then the build is not deployed", $P \Rightarrow \neg Q$,
+is not the negation:
+on a day when the tests fail,
+it is true, and so is the rule.
+
+:::

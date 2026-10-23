@@ -1,0 +1,9 @@
+::: {#exm-conditional-as-or}
+#### A rule as an "or"
+
+By @cor-conditional-as-or,
+"if the tests pass, then the build is deployed"
+is logically equivalent to
+"the tests fail or the build is deployed".
+
+:::

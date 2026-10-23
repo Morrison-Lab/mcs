@@ -1,0 +1,10 @@
+::: {#exm-substitution}
+#### Replacing a part
+
+Since $P \lor (P \land Q) \equiv P$ (@exm-logical-equivalence),
+@thm-substitution gives
+$R \land (P \lor (P \land Q)) \equiv R \land P$
+and
+$\neg (P \lor (P \land Q)) \equiv \neg P$.
+
+:::

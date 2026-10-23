@@ -1,0 +1,6 @@
+::: {#def-contradiction}
+#### Contradiction
+
+A **contradiction** is a proposition that is false in every row of its truth table (@def-truth-table).
+
+:::

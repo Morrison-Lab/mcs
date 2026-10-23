@@ -1,0 +1,14 @@
+::: {#sol-absorption}
+
+| $P$ | $Q$ | $P \land Q$ | $P \lor (P \land Q)$ |
+|:---:|:---:|:---:|:---:|
+| T | T | T | T |
+| T | F | F | T |
+| F | T | F | F |
+| F | F | F | F |
+
+The last column matches the $P$ column in every row,
+so the rule grants access exactly to the administrators,
+and the part about the office network changes nothing.
+
+:::

@@ -1,0 +1,24 @@
+::: {#thm-substitution}
+#### Replacing a part by an equivalent part
+
+If $A \equiv B$ (@def-logical-equivalence),
+then replacing $A$ by $B$ inside a larger proposition
+gives a proposition logically equivalent to the larger one.
+In particular, $\neg A \equiv \neg B$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+The truth value of the larger proposition in a row of its truth table
+depends on the truth value of $A$ in that row, not on how $A$ is written.
+$A$ and $B$ have the same truth value in every row,
+so the two larger propositions do too.
+
+:::
+
+:::

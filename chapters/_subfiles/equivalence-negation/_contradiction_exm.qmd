@@ -1,0 +1,11 @@
+::: {#exm-contradiction}
+#### A contradiction
+
+$P \land \neg P$ is a contradiction (@def-contradiction):
+
+| $P$ | $\neg P$ | $P \land \neg P$ |
+|:---:|:---:|:---:|
+| T | F | F |
+| F | T | F |
+
+:::

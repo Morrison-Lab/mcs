@@ -1,0 +1,12 @@
+::: {#exr-badge-check}
+#### When is the door locked?
+
+A door opens when the badge is valid, the PIN is correct, and it is a weekday.
+Let $B$ be "the badge is valid", $N$ be "the PIN is correct" and $W$ be "it is a weekday",
+so the door stays locked when $\neg (B \land N \land W)$ is true.
+
+Describe when the door stays locked
+with a sentence that puts "not" only in front of $B$, $N$ or $W$,
+never in front of a compound proposition.
+
+:::

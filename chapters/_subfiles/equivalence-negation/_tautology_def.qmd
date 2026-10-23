@@ -1,0 +1,6 @@
+::: {#def-tautology}
+#### Tautology
+
+A **tautology** is a proposition that is true in every row of its truth table (@def-truth-table).
+
+:::

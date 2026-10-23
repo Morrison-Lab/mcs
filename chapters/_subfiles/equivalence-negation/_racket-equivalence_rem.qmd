@@ -1,0 +1,19 @@
+::: {#rem-racket-equivalence}
+#### Checking an equivalence in Racket
+
+A truth table is a loop over every combination of truth values,
+so a program can check an equivalence.
+In Racket, `for*/and` runs its body for every combination of `p` and `q`,
+and returns `#f` as soon as the body returns `#f`, and `#t` if it never does:
+
+```racket
+(for*/and ([p '(#t #f)]
+           [q '(#t #f)])
+  (equal? (or p (and p q)) p))
+```
+
+This returns `#t`, as @exr-absorption found.
+Replacing the body with `(equal? (not (and p q)) (and (not p) (not q)))`
+returns `#f`, as @exr-not-and found.
+
+:::

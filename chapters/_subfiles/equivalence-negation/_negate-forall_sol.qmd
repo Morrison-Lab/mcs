@@ -1,0 +1,10 @@
+::: {#sol-negate-forall}
+
+"Some test fails": $\exists t \in T, \neg P(t)$.
+"Every test passes" is false exactly when at least one test does not pass.
+
+"Every test fails", $\forall t \in T, \neg P(t)$, is not the negation:
+when some tests pass and some fail,
+both it and "every test passes" are false.
+
+:::

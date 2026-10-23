@@ -1,0 +1,8 @@
+::: {#rem-contradiction-names}
+#### Contradictions in proofs
+
+A proof by contradiction is named for this kind of proposition:
+it assumes the negation of what it proves,
+and derives a contradiction (@def-contradiction), such as $Q \land \neg Q$.
+
+:::
