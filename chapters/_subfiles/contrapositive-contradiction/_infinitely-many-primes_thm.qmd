@@ -24,7 +24,8 @@ $$
 Each $p_i \ge 2$, so $N \ge 3$,
 and by @rem-prime-divisor some prime $p$ divides $N$: $N = p s$ for some integer $s$.
 The list holds every prime, so $p$ is one of $p_1, \ldots, p_k$,
-and so $p$ also divides their product: $p_1 p_2 \cdots p_k = p t$ for some integer $t$. Then
+and so $p$ also divides their product: $p_1 p_2 \cdots p_k = p t$ for some integer $t$.
+Then
 
 $$
 \ba

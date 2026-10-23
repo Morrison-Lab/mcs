@@ -22,7 +22,8 @@ Let $b$ be that smallest element, and let $a = \sqrt{2}\, b$, a positive integer
 
 By @sol-sqrt-bounds, $b < a < 2b$,
 so $b' = a - b$ is an integer with $0 < b' < b$.
-Let $a' = 2b - a$, also an integer. Then
+Let $a' = 2b - a$, also an integer.
+Then
 
 $$
 \ba
