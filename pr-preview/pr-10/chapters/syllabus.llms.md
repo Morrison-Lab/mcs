@@ -6,7 +6,7 @@ Winter 2027
 
 Published
 
-Last modified: 2026-10-23 13:33:56 (PDT)
+Last modified: 2026-10-23 13:40:29 (PDT)
 
 > **NOTE:**
 >
@@ -36,7 +36,7 @@ Lab
 One two-hour lab each week, on Thursday or Friday (see [Sections](#sections))
 
 Office hours  
-**TBD**, in my office (CF 463) unless otherwise noted
+**TBD**, in my office (Communication Facility 463) unless otherwise noted
 
 Prerequisites  
 CSCI 145, and one of MATH 124, 125, 134, 135, or 138 (or a score of 3 or higher on the AP Calculus AB or BC exam), each with a grade of C- or better.
@@ -60,7 +60,7 @@ Name
 Ezra Morrison
 
 Office  
-CF 463
+Communication Facility 463
 
 Email  
 <ezra.morrison@wwu.edu>, for confidential matters only
@@ -102,7 +102,7 @@ I will distribute worksheets, homework, and lab materials on Canvas. The lecture
 
 ## Schedule
 
-The topics and dates of future lectures may change. Readings are sections of Epp’s *Discrete Mathematics with Applications* (5th ed.). Monday, January 18 (Martin Luther King Jr. Day) and Monday, February 15 (Presidents’ Day) are university holidays, with no class.
+The topics and dates of future lectures may change. Readings are sections of Epp’s *Discrete Mathematics with Applications* (5th ed.). Classes begin on Tuesday, January 5, so the first lecture is on Wednesday, January 6. Monday, January 18 (Martin Luther King Jr. Day) and Monday, February 15 (Presidents’ Day) are university holidays, with no class.
 
 | Week | Dates | Topics | Assigned work | Reading |
 |:---|:---|:---|:---|:---|
@@ -252,17 +252,17 @@ Do not sell or distribute questions or answers to any assignment, quiz, or exam,
 
 ## Disabilities
 
-Reasonable accommodation for persons with documented disabilities should be established within the first two weeks of class and arranged through Disability Resources for Students: telephone 360-650-3083; email <drs@wwu.edu>; and on the web at [Disability Resources](https://disability.wwu.edu/).
+Reasonable accommodation for persons with documented disabilities should be established within the first two weeks of class and arranged through the Disability Access Center: telephone 360-650-3083; email <drsfrontdesk@wwu.edu>; and on the web at [Disability Access Center](https://disability.wwu.edu/).
 
 ## Student Services
 
 Western encourages students to seek assistance and support at the onset of an illness, difficulty, or crisis.
 
 - In the case of a medical concern or question, please contact the Health Center: 360-650-3400, or visit [Student Health](https://studenthealth.wwu.edu/).
-- In the case of an emotional or psychological concern or question, please contact the Counseling Center: 360-650-3400, or visit [Counseling Services](https://cwc.wwu.edu/).
+- In the case of an emotional or psychological concern or question, please contact the Counseling and Wellness Center: 360-650-3164, or visit [Counseling and Wellness Center](https://cwc.wwu.edu/).
 - In the case of a health and safety concern, please contact the University Police: 360-650-3555, or visit [University Police](https://police.wwu.edu/).
 - In the case of a family or personal crisis or emergency, please contact the [Dean of Students](https://www.wwu.edu/dean-students).
-- To seek confidential support related to sexual violence, please contact CASAS (360-650-3700), the Student Health Center, and/or the Counseling Center. To report sexual violence, please contact University Police, Bellingham Police, and/or the Title IX Coordinator in Western’s [Civil Rights and Title IX Compliance](https://crtc.wwu.edu/) office (360-650-3307). Faculty are responsible employees who are required to report sex discrimination, including sexual violence that they learn about, to the Title IX Coordinator.
+- To seek confidential support related to sexual violence, please contact CASAS (360-650-3700), the Student Health Center, and/or the Counseling and Wellness Center. To report sexual violence, please contact University Police, Bellingham Police, and/or the Title IX Coordinator in Western’s [Civil Rights and Title IX Compliance](https://crtc.wwu.edu/) office (360-650-3307). Faculty are responsible employees who are required to report sex discrimination, including sexual violence that they learn about, to the Title IX Coordinator.
 
 ## Other Policies
 
