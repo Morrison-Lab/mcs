@@ -6,7 +6,7 @@ Proving a statement by way of its negation
 
 Published
 
-Last modified: 2026-10-23 14:52:29 (PDT)
+Last modified: 2026-10-23 15:03:04 (PDT)
 
 > **NOTE:**
 >
@@ -266,7 +266,7 @@ Last modified: 2026-10-23 14:52:29 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Irrational numbers)** An **irrational number** ([Wikipedia contributors 2026c](#ref-wikipedia_irrational_number)) is a real number ([Definition: Real numbers](https://morrison-lab.github.io/mds/number-systems.html#def-real-numbers)) that is not rational ([Definition 5](#def-rational-numbers)).
+> **Definition 6 (Irrational numbers)** An **irrational number** ([Wikipedia contributors 2026c](#ref-wikipedia_irrational_number)) is a real number ([Definition: Real numbers](../chapters/sets.llms.md#def-real-numbers)) that is not rational ([Definition 5](#def-rational-numbers)).
 
 > **NOTE:**
 >
