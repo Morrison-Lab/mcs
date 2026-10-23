@@ -1,0 +1,8 @@
+::: {#rem-proposition-synonyms}
+#### Other names
+
+Many textbooks call a proposition a *statement*,
+and call a predicate an *open sentence* or a *propositional function*.
+These notes say proposition and predicate.
+
+:::

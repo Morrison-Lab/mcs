@@ -1,0 +1,8 @@
+::: {#exr-evaluate-not-and}
+#### Evaluate another compound proposition
+
+With the same truth values as @exr-evaluate-or-and
+($P$ true, $Q$ false, $R$ false),
+is $\neg (P \land Q) \lor R$ true or false?
+
+:::

@@ -1,0 +1,12 @@
+::: {#sol-iff-values}
+
+| $n$ | $n$ is even | $n$ is divisible by $3$ | biconditional |
+|:---:|:---:|:---:|:---:|
+| $6$ | T | T | T |
+| $4$ | T | F | F |
+| $5$ | F | F | T |
+
+By @def-iff, the biconditional is true exactly when its two sides have the same truth value.
+When $n = 5$, both sides are false, so the biconditional is true.
+
+:::

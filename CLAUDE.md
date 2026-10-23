@@ -6,7 +6,7 @@ The same conventions apply to GitHub Copilot --- see [`.github/copilot-instructi
 ## Project context
 
 `mcs` holds the lecture notes for CSCI 201, math for computer science, as a [Quarto](https://quarto.org/) website.
-It was created from the [`Morrison-Lab/qwt`](https://github.com/Morrison-Lab/qwt) template, and general mathematics lives in [`Morrison-Lab/mds`](https://github.com/Morrison-Lab/mds), which these notes link to rather than duplicate.
+It was created from the [`Morrison-Lab/qwt`](https://github.com/Morrison-Lab/qwt) template, and general mathematics lives in [`Morrison-Lab/mds`](https://github.com/Morrison-Lab/mds), which these notes include (from the `mds/` submodule, with `{{< include ../mds/_subfiles/... >}}`) or link to, rather than duplicate.
 Assessments, solutions and labs belong in the private `Morrison-Lab/mcsg` repository, never here.
 
 Authoritative style guides:
@@ -24,6 +24,10 @@ Authoritative style guides:
 - `_extensions/` --- vendored Quarto extensions (including `code-language-labels`, which labels each code block with its language in HTML and revealjs output;
   vendored from [`d-morrison/code-language-labels`](https://github.com/d-morrison/code-language-labels))
 - `latex-macros/` --- git submodule for shortcode/macro definitions (see `.gitmodules`)
+- `mds/` --- git submodule of [`Morrison-Lab/mds`](https://github.com/Morrison-Lab/mds), whose definition fragments the chapters include;
+  excluded from the render (`!mds/`), with `mds/references.bib` in the bibliography
+- `chapters/<topic>.qmd` --- one chapter per topic, a spine of headings, slide breaks and includes;
+  its units live in `chapters/_subfiles/<topic>/`, one div per file named `_<stem>_<type>.qmd`
 - `R/`, `man/`, `DESCRIPTION`, `NAMESPACE` --- the project is also a small R package
 - `references.bib` --- BibTeX bibliography
 - `offwhite.scss`, `theme-picker.html` --- the website's Light / Off-white / Parchment / Dark theme dropdown (`theme-picker.html` builds it, `offwhite.scss` styles the two tinted palettes);
@@ -64,7 +68,7 @@ Key points:
 - **Local preview**: `quarto preview` (live reload).
   Full build: `quarto render`.
   When verifying a single edited page, render just that page (`quarto render <file>.qmd --to html`) rather than the whole site --- the `/render` command is for the full build.
-- **Submodules**: `latex-macros/` is the only git submodule (see `.gitmodules`).
+- **Submodules**: `latex-macros/` and `mds/` are the git submodules (see `.gitmodules`).
   Run `git submodule update --init --recursive` after cloning.
 - **Spell check**: words go in `inst/WORDLIST` (see `.github/workflows/check-spelling.yaml`).
   Update the wordlist instead of disabling the check.

@@ -1,0 +1,8 @@
+::: {#sol-truth-table-rows}
+
+Each of $P$, $Q$ and $R$ is either true or false,
+independently of the other two,
+so there are $2 \times 2 \times 2 = 2^3 = 8$ choices.
+With $n$ propositions there are $2^n$.
+
+:::

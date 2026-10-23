@@ -1,0 +1,8 @@
+::: {#rem-iff-notation}
+#### Other names and notation
+
+"If and only if" is often shortened to "iff".
+A proposition of the form $P \Leftrightarrow Q$ is also called a *biconditional*,
+and many textbooks write $P \leftrightarrow Q$.
+
+:::

@@ -1,0 +1,13 @@
+::: {#exr-truth-table-not-and}
+#### A truth table with three propositions
+
+Make a truth table (@def-truth-table) for $\neg (P \land Q) \lor R$.
+
+::: {.callout-tip}
+#### Hint
+
+Add columns for the pieces, $P \land Q$ and $\neg (P \land Q)$,
+before the last column.
+:::
+
+:::

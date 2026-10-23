@@ -1,0 +1,13 @@
+::: {#sol-only-if}
+
+"If I go to class, then I am healthy."
+
+The sentence says that going to class requires being healthy,
+so whenever I go to class, I am healthy.
+It does not say "if I am healthy, then I go to class";
+that is its converse (@def-converse),
+and a healthy person may still skip class.
+
+In general, "$P$ only if $Q$" means $P \Rightarrow Q$.
+
+:::

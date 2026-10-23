@@ -1,0 +1,200 @@
+---
+title: "Propositional Logic"
+subtitle: "Propositions, connectives, and conditionals"
+format:
+  html: default
+  revealjs:
+    output-file: propositional-logic-slides.html
+  pdf:
+    output-file: propositional-logic-handout.pdf
+  docx:
+    output-file: propositional-logic.docx
+---
+
+::: {.callout-note appearance='simple' collapse=true}
+## Source
+
+Adapted from Kameron Decker Harris's Fall 2026 lecture notes "Logic 1" and "Logic 2",
+which he typeset from Scott Wehrwein's Spring 2025 handwritten lecture notes.
+The examples of propositions, the truth tables to decode,
+the list of English phrasings of a conditional,
+and the "only if" example come from those notes;
+the other exercises are new.
+
+The definitions are included from the
+[mathematics prerequisites](https://morrison-lab.github.io/mds/proof-writing.html#sec-proof-definitions)
+notes, so they read the same in both places.
+:::
+
+# Propositions {#sec-propositions}
+
+{{< include _subfiles/propositional-logic/_proposition_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_proposition_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/proof-writing/_def-proposition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/proof-writing/_def-predicate.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_proposition-synonyms_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_collatz_exm.qmd >}}
+
+# Logical connectives {#sec-connectives}
+
+{{< include _subfiles/propositional-logic/_decode-connectives_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_decode-connectives_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/proof-writing/_def-logical-connective.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/proof-writing/_def-not.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/proof-writing/_def-and.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/proof-writing/_def-or.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_connective-notation_rem.qmd >}}
+
+## Evaluating compound propositions {#sec-evaluating}
+
+{{< include _subfiles/propositional-logic/_evaluate-or-and_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_evaluate-or-and_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_evaluate-not-and_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_evaluate-not-and_sol.qmd >}}
+
+## Truth tables {#sec-truth-tables}
+
+{{< include _subfiles/propositional-logic/_truth-table-rows_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_truth-table-rows_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_truth-table_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_truth-table-not-and_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_truth-table-not-and_sol.qmd >}}
+
+# Conditionals {#sec-conditionals}
+
+{{< include _subfiles/propositional-logic/_broken-promise_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_broken-promise_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/proof-writing/_def-implies.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_implies-terms_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/proof-writing/_exm-implies.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_false-premise_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_false-premise_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_reading-implies_rem.qmd >}}
+
+## The converse {#sec-converse}
+
+{{< include _subfiles/propositional-logic/_converse_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_converse_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/proof-writing/_def-converse.qmd >}}
+
+## Conditionals in English {#sec-conditionals-english}
+
+{{< include _subfiles/propositional-logic/_only-if_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_only-if_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_conditional-phrasings_rem.qmd >}}
+
+# Biconditionals {#sec-biconditionals}
+
+{{< include _subfiles/propositional-logic/_if-and-only-if_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_if-and-only-if_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/proof-writing/_def-iff.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_iff-notation_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_iff-values_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_iff-values_sol.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

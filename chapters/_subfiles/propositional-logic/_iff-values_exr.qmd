@@ -1,0 +1,9 @@
+::: {#exr-iff-values}
+#### Check a biconditional
+
+Is "$n$ is even if and only if $n$ is divisible by $3$" true or false
+when $n = 6$?
+When $n = 4$?
+When $n = 5$?
+
+:::

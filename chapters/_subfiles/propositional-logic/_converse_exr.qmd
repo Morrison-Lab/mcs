@@ -1,0 +1,8 @@
+::: {#exr-converse}
+#### Reverse an implication
+
+For all real numbers $x$ and $y$,
+"if $x = y$, then $x^2 = y^2$" is true.
+Is "if $x^2 = y^2$, then $x = y$" also true for all real numbers $x$ and $y$?
+
+:::

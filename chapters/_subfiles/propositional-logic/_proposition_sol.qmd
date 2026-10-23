@@ -1,0 +1,17 @@
+::: {#sol-proposition}
+
+- "Add 5 to both sides" is an instruction, so it is neither true nor false.
+- "$42$" is a number, not a sentence, so it is neither true nor false.
+- "$42$ is an integer" is true.
+- "Adding 5 to both sides of $x - 5 = 37$ gives $x = 42$" is true.
+- "What is the solution of $2x = 84$?" is a question, so it is neither true nor false.
+- "The solution of $2x = 84$ is $41$" is false, since the solution is $42$.
+  A false sentence still has a definite truth value.
+- "$42$ is not a number" is false.
+- "$x$ is a multiple of $8$" is neither until we know $x$:
+  it is true when $x = 16$ and false when $x = 3$.
+
+The four sentences with a definite truth value are propositions.
+The last sentence, whose truth value depends on $x$, is a predicate.
+
+:::

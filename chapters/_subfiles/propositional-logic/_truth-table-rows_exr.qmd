@@ -1,0 +1,8 @@
+::: {#exr-truth-table-rows}
+#### How many cases?
+
+@exr-evaluate-not-and found the truth value of $\neg (P \land Q) \lor R$
+for one choice of truth values of $P$, $Q$ and $R$.
+How many different choices are there?
+
+:::

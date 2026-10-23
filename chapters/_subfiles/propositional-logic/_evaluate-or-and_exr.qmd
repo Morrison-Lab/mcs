@@ -1,0 +1,7 @@
+::: {#exr-evaluate-or-and}
+#### Evaluate a compound proposition
+
+Suppose $P$ is true, $Q$ is false, and $R$ is false.
+Is $(\neg P \lor Q) \land \neg R$ true or false?
+
+:::

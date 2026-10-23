@@ -1,0 +1,9 @@
+::: {#exr-false-premise}
+#### A false premise
+
+Is each of these propositions true or false?
+
+1. If $7$ is even, then $7$ is divisible by $4$.
+2. If $7$ is even, then $7$ is odd.
+
+:::

@@ -1,0 +1,13 @@
+::: {#rem-reading-implies}
+#### Reading an implication
+
+An implication with a false premise, as in @exr-false-premise,
+is sometimes called *vacuously true*.
+Three habits help with implications that sound strange:
+
+- Apply the definition (@def-implies) rather than intuition about the sentence.
+- Read $P \Rightarrow Q$ as a promise, as in @exr-broken-promise.
+- Look at the cases where $P$ is true;
+  they are the only cases where $P \Rightarrow Q$ can be false.
+
+:::

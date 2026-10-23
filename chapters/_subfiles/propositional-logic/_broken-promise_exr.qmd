@@ -1,0 +1,15 @@
+::: {#exr-broken-promise}
+#### When is a promise broken?
+
+A parent tells a child,
+"If you clean your room, then you get dessert."
+In which of these four situations did the parent break the promise?
+
+| Room cleaned? | Dessert? |
+|:---:|:---:|
+| yes | yes |
+| yes | no |
+| no | yes |
+| no | no |
+
+:::

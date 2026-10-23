@@ -1,0 +1,13 @@
+::: {#rem-connective-notation}
+#### Notation, and the inclusive "or"
+
+Some textbooks write $\sim P$ for $\neg P$.
+Programming languages spell the same three connectives as words or symbols:
+Racket writes `(not p)`, `(and p q)` and `(or p q)`,
+and Java and C write `!p`, `p && q` and `p || q`.
+
+In everyday English, "soup or salad" often means one but not both.
+The logical "or" always allows both,
+as the first row of the table for $P \lor Q$ in @exr-decode-connectives shows.
+
+:::
