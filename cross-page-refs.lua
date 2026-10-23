@@ -11,6 +11,13 @@
 -- and replaces a citation of an id that is not on the current page, but is
 -- on another page, with a link such as "Definition: Predicate". Citations of
 -- ids on the current page, and of bibliography keys, are left to Quarto.
+--
+-- The mds definitions also link to each other as `[text](#def-foo)`, and to
+-- other mds pages as `[text](number-systems.qmd#def-foo)`. Those links break
+-- here too, so the filter points each at the page of this site that defines
+-- the id. An id that no page here defines, cited or linked, goes to the
+-- published mds page that defines it, which the filter finds by indexing the
+-- mds pages the same way.
 
 local path = pandoc.path
 
@@ -45,8 +52,11 @@ local function read_file(file)
 end
 
 -- Record each id that `file` defines, with its title, as found on `page`.
--- Includes are followed relative to the file that holds them.
-local function scan(file, page, found, seen)
+-- Includes are followed relative to the file that holds them, or else
+-- relative to the page, which is how the mds pages write theirs
+-- (`mds/_subfiles/...`, through mds's `mds -> .` link).
+local function scan(file, page, found, seen, page_dir)
+  page_dir = page_dir or path.directory(file)
   if seen[file] then
     return
   end
@@ -67,7 +77,11 @@ local function scan(file, page, found, seen)
   for i, line in ipairs(lines) do
     local include = line:match("{{<%s*include%s+(%S+)%s*>}}")
     if include then
-      scan(path.normalize(path.join({ here, include })), page, found, seen)
+      local target = path.normalize(path.join({ here, include }))
+      if not read_file(target) then
+        target = path.normalize(path.join({ page_dir, include }))
+      end
+      scan(target, page, found, seen, page_dir)
     end
     local id = line:match("^%s*:::+%s*{#(%a+%-[%w%-_]+)")
     local title
@@ -100,12 +114,12 @@ local function excluded_pages(root)
   return out
 end
 
--- Index every rendered page: the root pages and chapters/. An id defined on
--- more than one page maps to all of them, so a citation can say so.
-local function build_index(root)
+-- Index every rendered page in `dirs` under `root`. An id defined on more
+-- than one page maps to all of them, so a citation can say so.
+local function build_index(root, dirs)
   local index = {}
   local skip = excluded_pages(root)
-  for _, dir in ipairs({ "", "chapters" }) do
+  for _, dir in ipairs(dirs) do
     local full = dir == "" and root or path.join({ root, dir })
     local entries = pandoc.system.list_directory(full)
     table.sort(entries)
@@ -148,7 +162,10 @@ function Pandoc(doc)
   -- Pages are named with "/" in links, whatever the platform.
   local current = path.make_relative(path.normalize(input), root)
     :gsub(path.separator, "/")
-  local index = build_index(root)
+  local index = build_index(root, { "", "chapters" })
+  local mds_root = path.join({ root, "mds" })
+  local mds_index = build_index(mds_root, { "" })
+  local mds_site = site_url(mds_root)
 
   local here = {}
   local function note(el)
@@ -158,24 +175,56 @@ function Pandoc(doc)
   end
   doc:walk({ Div = note, Header = note, Span = note, Image = note })
 
+  -- `here` misses theorem-type divs, which Quarto has already made custom
+  -- nodes, so also ask the index whether this page has the id.
+  local function on_this_page(id)
+    if here[id] then
+      return true
+    end
+    for _, p in ipairs(index[id] or {}) do
+      if p.page == current then
+        return true
+      end
+    end
+    return false
+  end
+
   -- A PDF or Word handout is read away from the site, so it links to the
   -- published page; a web page or slide deck links relatively.
   local html = FORMAT:match("html") or FORMAT:match("revealjs")
   local site = site_url(root)
   local depth = select(2, current:gsub("/", ""))
 
+  -- The page that defines `id`, here or else in mds, and the link to it.
+  local function resolve(id)
+    local pages = index[id]
+    local base
+    if pages then
+      base = (html or not site) and string.rep("../", depth) or site
+    else
+      pages = mds_index[id]
+      base = mds_site
+    end
+    if not pages or not base then
+      return nil
+    end
+    if #pages > 1 then
+      local names = {}
+      for _, p in ipairs(pages) do
+        table.insert(names, p.page)
+      end
+      warn(id .. " is defined on several pages (" .. table.concat(names, ", ")
+        .. "); linking to " .. pages[1].page)
+    end
+    local entry = pages[1]
+    return base .. entry.page:gsub("%.qmd$", ".html") .. "#" .. id, entry
+  end
+
   return doc:walk({
     Cite = function(cite)
       local away = {}
       for _, c in ipairs(cite.citations) do
-        local pages = index[c.id]
-        -- `here` misses theorem-type divs, which Quarto has already made
-        -- custom nodes, so also ask the index whether this page has the id.
-        local on_this_page = here[c.id]
-        for _, p in ipairs(pages or {}) do
-          on_this_page = on_this_page or p.page == current
-        end
-        if pages and not on_this_page then
+        if (index[c.id] or mds_index[c.id]) and not on_this_page(c.id) then
           table.insert(away, c.id)
         end
       end
@@ -188,28 +237,45 @@ function Pandoc(doc)
         return nil
       end
       local id = away[1]
-      local pages = index[id]
-      if #pages > 1 then
-        local names = {}
-        for _, p in ipairs(pages) do
-          table.insert(names, p.page)
-        end
-        warn(id .. " is defined on several pages (" .. table.concat(names, ", ")
-          .. "); linking to " .. pages[1].page)
-      end
-      local entry = pages[1]
-      local page_html = entry.page:gsub("%.qmd$", ".html")
-      local href
-      if html or not site then
-        href = string.rep("../", depth) .. page_html .. "#" .. id
-      else
-        href = site .. page_html .. "#" .. id
+      local href, entry = resolve(id)
+      if not href then
+        warn("cannot link " .. id .. ": mds has no site-url")
+        return nil
       end
       local label = PREFIXES[id:match("^(%a+)%-")] or "See"
       if entry.title ~= "" then
         label = label .. ": " .. entry.title
       end
       return pandoc.Link({ pandoc.Str(label) }, href)
+    end,
+
+    -- A link to `#id` that this page lacks, or to `page.qmd#id` where this
+    -- site has no such page: both come from mds text included here.
+    Link = function(link)
+      local file, id = link.target:match("^([^#]*)#(.+)$")
+      if not id then
+        return nil
+      end
+      if file == "" then
+        if on_this_page(id) then
+          return nil
+        end
+      elseif not file:match("%.qmd$") or file:match("^%a+:") then
+        return nil
+      else
+        local dir = path.directory(path.join({ root, current }))
+        if read_file(path.join({ dir, file })) then
+          return nil
+        end
+      end
+      local href = resolve(id)
+      if not href then
+        warn("cannot resolve the link to " .. link.target
+          .. " on any page of this site or of mds")
+        return nil
+      end
+      link.target = href
+      return link
     end,
   })
 end
