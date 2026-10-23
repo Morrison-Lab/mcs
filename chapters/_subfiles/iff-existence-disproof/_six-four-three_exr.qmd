@@ -1,0 +1,6 @@
+::: {#exr-six-four-three}
+#### An equation without a solution
+
+Prove or disprove: there are integers $m$ and $n$ with $6m + 4n = 3$.
+
+:::

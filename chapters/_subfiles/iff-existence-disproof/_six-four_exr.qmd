@@ -1,9 +1,0 @@
-::: {#exr-six-four}
-#### Two equations
-
-Prove or disprove each proposition.
-
-1. There are integers $m$ and $n$ with $6m + 4n = 2$.
-2. There are integers $m$ and $n$ with $6m + 4n = 3$.
-
-:::

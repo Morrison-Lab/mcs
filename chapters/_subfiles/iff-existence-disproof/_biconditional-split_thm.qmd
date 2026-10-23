@@ -15,7 +15,7 @@ $$
 
 ::: proof
 
-The fourth and last columns of this truth table (@def-truth-table) match in every row
+The fifth and last columns of this truth table (@def-truth-table) match in every row
 (@def-iff, @def-implies, @def-and):
 
 | $P$ | $Q$ | $P \Rightarrow Q$ | $Q \Rightarrow P$ | $(P \Rightarrow Q) \land (Q \Rightarrow P)$ | $P \Leftrightarrow Q$ |

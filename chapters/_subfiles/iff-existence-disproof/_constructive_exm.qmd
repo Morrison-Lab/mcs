@@ -4,7 +4,9 @@
 Claim: for every positive real number $x$,
 there is a positive real number $y$ with $y < x$.
 
-Let $x$ be a positive real number, and take $y = \frac{x}{2}$.
+Let $x$ be a positive real number.
+We give a constructive proof of "there is a positive real number $y$ with $y < x$" for this $x$:
+take $y = \frac{x}{2}$.
 Then $y > 0$, because $x > 0$, and
 
 $$
@@ -20,8 +22,10 @@ x - y
 $$
 
 so $y < x$.
-The witness $\frac{x}{2}$ depends on $x$,
+The element named, $\frac{x}{2}$, depends on $x$,
 which a "for every $x$, there is a $y$" statement allows.
-The solution to @exr-five-three is also a constructive proof, with witnesses $x = 2$ and $y = -3$.
+
+The solution to @exr-five-three is also a constructive proof:
+it names the integers $2$ and $-3$.
 
 :::

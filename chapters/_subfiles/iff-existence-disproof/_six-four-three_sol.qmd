@@ -1,0 +1,14 @@
+::: {#sol-six-four-three}
+
+The proposition is false.
+Applying @thm-negate-quantifiers to each of its two quantifiers in turn,
+its negation is "for all integers $m$ and $n$, $6m + 4n \ne 3$",
+and we prove that.
+Let $m$ and $n$ be integers.
+Then $6m + 4n = 2(3m + 2n)$, and $3m + 2n$ is an integer (@rem-integer-closure),
+so $6m + 4n$ is even (@def-even-odd).
+But $3 = 2 \cd 1 + 1$ is odd (@def-odd),
+and no integer is both even and odd (@rem-integer-closure),
+so $6m + 4n \ne 3$.
+
+:::

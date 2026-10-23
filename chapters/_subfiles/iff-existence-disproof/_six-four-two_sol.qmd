@@ -1,0 +1,7 @@
+::: {#sol-six-four-two}
+
+The proposition is true.
+Take $m = 1$ and $n = -1$.
+Then $6m + 4n = 6 - 4 = 2$.
+
+:::

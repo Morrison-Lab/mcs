@@ -22,6 +22,7 @@ which are typed transcriptions of Scott Wehrwein's Spring 2025 handwritten lectu
 These come from those notes:
 
 - the outline of an "if and only if" proof;
+- the outline of an existence proof that names an element;
 - proving that several propositions are equivalent with a cycle of conditionals;
 - the constructive example of half of a positive number;
 - the non-constructive example of an irrational power of an irrational number;
@@ -100,11 +101,19 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/iff-existence-disproof/_six-four_exr.qmd >}}
+{{< include _subfiles/iff-existence-disproof/_six-four-two_exr.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/iff-existence-disproof/_six-four_sol.qmd >}}
+{{< include _subfiles/iff-existence-disproof/_six-four-two_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/iff-existence-disproof/_six-four-three_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/iff-existence-disproof/_six-four-three_sol.qmd >}}
 
 # References {.unnumbered}
 

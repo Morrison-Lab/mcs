@@ -1,0 +1,6 @@
+::: {#exr-six-four-two}
+#### An equation with a solution
+
+Prove or disprove: there are integers $m$ and $n$ with $6m + 4n = 2$.
+
+:::

@@ -2,8 +2,11 @@
 #### Constructive proof
 
 A **constructive proof** of a proposition $\exists x \in S,\ P(x)$ (@def-existential-quantifier)
-names a particular element $x$ of $S$, called a **witness**,
-and shows that $P(x)$ is true
+names a particular element of $S$
+and shows that $P$ is true of it
 [@wikipedia_constructive_proof].
+A proposition with several existential quantifiers,
+such as "there are integers $m$ and $n$ with $m + n = 1$",
+gets a constructive proof that names one element for each quantifier.
 
 :::
