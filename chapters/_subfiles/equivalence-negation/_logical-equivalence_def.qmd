@@ -1,7 +1,7 @@
 ::: {#def-logical-equivalence}
 #### Logical equivalence
 
-Two propositions $A$ and $B$ built from the same propositions $P_1, \ldots, P_n$
+Two propositions $A$ and $B$, each built from some of the propositions $P_1, \ldots, P_n$,
 are **logically equivalent**, written $A \equiv B$,
 if they have the same truth value in every row of a truth table (@def-truth-table),
 that is, for every combination of truth values of $P_1, \ldots, P_n$.

@@ -1,16 +1,16 @@
 ::: {#rem-quantifier-de-morgan}
 #### De Morgan's laws for quantifiers
 
-These are often written $\neg \forall x, P(x) \equiv \exists x, \neg P(x)$
-and $\neg \exists x, P(x) \equiv \forall x, \neg P(x)$,
-but @def-logical-equivalence is about truth tables,
-and a quantified proposition has none,
-so @thm-negate-quantifiers states them as "same truth value"
-for every set $S$ and predicate $P(x)$.
+@thm-negate-quantifiers is often written
+$\neg \forall x, P(x) \equiv \exists x, \neg P(x)$
+and $\neg \exists x, P(x) \equiv \forall x, \neg P(x)$.
+These notes say "has the same truth value" instead,
+because $P(x)$ is a predicate, not a proposition,
+so @def-logical-equivalence, which compares truth tables, does not apply.
 
 On a finite set $S = \{a, b\}$,
-$\forall x \in S, P(x)$ is $P(a) \land P(b)$
-and $\exists x \in S, P(x)$ is $P(a) \lor P(b)$,
+$\forall x \in S, P(x)$ has the same truth value as $P(a) \land P(b)$,
+and $\exists x \in S, P(x)$ has the same truth value as $P(a) \lor P(b)$,
 so @thm-negate-quantifiers is De Morgan's laws (@thm-de-morgan-logic)
 applied to $P(a)$ and $P(b)$.
 

@@ -1,0 +1,9 @@
+::: {#sol-badge-check}
+
+The door stays locked when the badge is not valid,
+the PIN is not correct,
+or it is not a weekday:
+$\neg B \lor \neg N \lor \neg W$.
+$B \land N \land W$ is false exactly when at least one of $B$, $N$ and $W$ is false.
+
+:::

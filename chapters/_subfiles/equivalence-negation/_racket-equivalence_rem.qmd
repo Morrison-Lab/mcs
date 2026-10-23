@@ -4,7 +4,7 @@
 A truth table is a loop over every combination of truth values,
 so a program can check an equivalence.
 In Racket, `for*/and` runs its body for every combination of `p` and `q`,
-and returns `#t` only if the body is `#t` every time:
+and returns `#f` as soon as the body returns `#f`, and `#t` if it never does:
 
 ```racket
 (for*/and ([p '(#t #f)]

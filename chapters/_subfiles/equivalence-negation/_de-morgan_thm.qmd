@@ -9,9 +9,9 @@ For propositions $P$ and $Q$
 
 :::
 
-{{< slidebreak >}}
-
 ::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
 
 ::: proof
 

@@ -5,9 +5,9 @@ For propositions $P$ and $Q$, $P \Rightarrow Q \equiv \neg P \lor Q$.
 
 :::
 
-{{< slidebreak >}}
-
 ::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
 
 ::: proof
 

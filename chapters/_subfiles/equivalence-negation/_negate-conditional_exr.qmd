@@ -3,8 +3,8 @@
 
 A team's rule is "if the tests pass, then the build is deployed".
 Let $P$ be "the tests pass" and $Q$ be "the build is deployed".
+The rule is broken on the days when $\neg (P \Rightarrow Q)$ is true.
 
-On which days is the rule broken?
-Write the negation of $P \Rightarrow Q$ without $\Rightarrow$.
+Write $\neg (P \Rightarrow Q)$ without $\Rightarrow$, and in English.
 
 :::

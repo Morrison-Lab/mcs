@@ -34,6 +34,10 @@ the exercises are new.
 
 {{< slidebreak >}}
 
+{{< include _subfiles/equivalence-negation/_logical-equivalence_exm.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include _subfiles/equivalence-negation/_equivalence-notation_rem.qmd >}}
 
 {{< slidebreak >}}
@@ -50,15 +54,27 @@ the exercises are new.
 
 {{< slidebreak >}}
 
+{{< include _subfiles/equivalence-negation/_tautology_exm.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include _subfiles/equivalence-negation/_contradiction_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/equivalence-negation/_excluded-middle_exm.qmd >}}
+{{< include _subfiles/equivalence-negation/_contradiction_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/equivalence-negation/_contradiction-names_rem.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include _subfiles/equivalence-negation/_equivalence-iff_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/equivalence-negation/_equivalence-iff_exm.qmd >}}
 
 {{< slidebreak >}}
 
@@ -74,15 +90,19 @@ the exercises are new.
 
 {{< slidebreak >}}
 
+{{< include _subfiles/equivalence-negation/_distributive_exm.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include _subfiles/equivalence-negation/_racket-equivalence_rem.qmd >}}
 
 # Negation {#sec-negation}
 
-{{< include _subfiles/equivalence-negation/_file-check_exr.qmd >}}
+{{< include _subfiles/equivalence-negation/_badge-check_exr.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/equivalence-negation/_file-check_sol.qmd >}}
+{{< include _subfiles/equivalence-negation/_badge-check_sol.qmd >}}
 
 {{< slidebreak >}}
 
@@ -90,11 +110,23 @@ the exercises are new.
 
 {{< slidebreak >}}
 
+{{< include _subfiles/equivalence-negation/_double-negation_exm.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include _subfiles/equivalence-negation/_substitution_thm.qmd >}}
 
 {{< slidebreak >}}
 
+{{< include _subfiles/equivalence-negation/_substitution_exm.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include _subfiles/equivalence-negation/_de-morgan_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/equivalence-negation/_de-morgan_exm.qmd >}}
 
 {{< slidebreak >}}
 
@@ -110,7 +142,15 @@ the exercises are new.
 
 {{< slidebreak >}}
 
+{{< include _subfiles/equivalence-negation/_negate-conditional_exm.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include _subfiles/equivalence-negation/_conditional-as-or_cor.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/equivalence-negation/_conditional-as-or_exm.qmd >}}
 
 # Negating quantified propositions {#sec-negating-quantifiers}
 
@@ -123,6 +163,10 @@ the exercises are new.
 {{< slidebreak >}}
 
 {{< include _subfiles/equivalence-negation/_negate-quantifiers_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/equivalence-negation/_negate-quantifiers_exm.qmd >}}
 
 {{< slidebreak >}}
 
@@ -139,6 +183,14 @@ the exercises are new.
 {{< slidebreak >}}
 
 {{< include _subfiles/equivalence-negation/_palindrome_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/equivalence-negation/_palindrome-truth_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/equivalence-negation/_palindrome-truth_sol.qmd >}}
 
 # References {.unnumbered}
 

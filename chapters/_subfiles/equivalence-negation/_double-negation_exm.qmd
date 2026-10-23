@@ -1,0 +1,7 @@
+::: {#exm-double-negation}
+#### Not unreadable
+
+"It is not the case that the file is not readable"
+means "the file is readable" (@thm-double-negation).
+
+:::

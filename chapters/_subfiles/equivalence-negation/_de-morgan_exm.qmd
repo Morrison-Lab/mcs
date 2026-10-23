@@ -1,0 +1,10 @@
+::: {#exm-de-morgan-logic}
+#### Neither coordinate positive
+
+For real numbers $x$ and $y$,
+by law 2 of @thm-de-morgan-logic,
+"not ($x > 0$ or $y > 0$)"
+is logically equivalent to
+"$x \le 0$ and $y \le 0$".
+
+:::

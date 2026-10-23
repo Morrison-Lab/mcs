@@ -1,0 +1,8 @@
+::: {#sol-palindrome-truth}
+
+The original is true, so its negation is false.
+For any word $s$, let $t$ be $s$ written backwards;
+then $s t$ reads the same backwards.
+For example, for $s = \text{aab}$, $t = \text{baa}$ and $s t = \text{aabbaa}$.
+
+:::

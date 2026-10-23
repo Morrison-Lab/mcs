@@ -12,8 +12,8 @@
 | F | F | F | F | F | F | F | F |
 
 Yes: the fifth and last columns match in every row.
-Unlike addition over multiplication in arithmetic,
-which fails for $1 + 2 \cdot 3 \ne (1 + 2)(1 + 3)$,
-"or" distributes over "and".
+Addition does not distribute over multiplication in arithmetic:
+$1 + 2 \cdot 3 = 7$, but $(1 + 2)(1 + 3) = 12$.
+But "or" distributes over "and".
 
 :::

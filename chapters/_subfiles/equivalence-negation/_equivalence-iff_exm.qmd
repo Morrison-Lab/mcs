@@ -1,0 +1,8 @@
+::: {#exm-equivalence-iff}
+#### An equivalence as a tautology
+
+Since $P \lor (P \land Q) \equiv P$ (@exm-logical-equivalence),
+@thm-equivalence-iff says that
+$(P \lor (P \land Q)) \Leftrightarrow P$ is a tautology.
+
+:::

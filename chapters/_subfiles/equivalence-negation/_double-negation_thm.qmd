@@ -5,9 +5,9 @@ For a proposition $P$, $\neg \neg P \equiv P$ (@def-logical-equivalence).
 
 :::
 
-{{< slidebreak >}}
-
 ::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
 
 ::: proof
 

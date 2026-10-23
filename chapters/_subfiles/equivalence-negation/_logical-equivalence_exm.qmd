@@ -1,0 +1,8 @@
+::: {#exm-logical-equivalence}
+#### An equivalence
+
+By @exr-absorption, $P \lor (P \land Q) \equiv P$ (@def-logical-equivalence):
+the truth table of $P \lor (P \land Q)$ has the same column as $P$,
+in a table with columns for both $P$ and $Q$.
+
+:::

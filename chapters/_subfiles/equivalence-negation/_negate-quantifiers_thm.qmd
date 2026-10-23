@@ -1,16 +1,16 @@
 ::: {#thm-negate-quantifiers}
 #### Negating a quantifier
 
-For a set $S$ and a predicate $P(x)$ (@def-predicate) whose domain is $S$:
+For a set $S$ and a predicate $P(x)$ (@def-predicate) whose domain (@def-domain) is $S$:
 
 1. $\neg (\forall x \in S, P(x))$ and $\exists x \in S, \neg P(x)$ have the same truth value;
 2. $\neg (\exists x \in S, P(x))$ and $\forall x \in S, \neg P(x)$ have the same truth value.
 
 :::
 
-{{< slidebreak >}}
-
 ::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
 
 ::: proof
 

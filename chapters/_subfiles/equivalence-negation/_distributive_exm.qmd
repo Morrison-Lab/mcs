@@ -1,0 +1,9 @@
+::: {#exm-distributive}
+#### Distributing "and"
+
+For an integer $x$,
+"$x$ is even, and $x > 0$ or $x < 0$"
+is logically equivalent, by law 1 of @thm-distributive, to
+"$x$ is even and $x > 0$, or $x$ is even and $x < 0$".
+
+:::

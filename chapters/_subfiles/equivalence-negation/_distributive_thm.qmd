@@ -8,9 +8,9 @@ For propositions $A$, $B$ and $C$:
 
 :::
 
-{{< slidebreak >}}
-
 ::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
 
 ::: proof
 

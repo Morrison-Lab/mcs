@@ -1,13 +1,13 @@
 ::: {#rem-negation-procedure}
 #### Pushing a negation inward
 
-To negate a proposition,
+To negate a proposition built with $\neg$, $\land$, $\lor$, $\Rightarrow$ and quantifiers,
 move the $\neg$ inward one step at a time:
 
 - across a quantifier, with @thm-negate-quantifiers, which swaps $\forall$ and $\exists$;
 - across $\land$ or $\lor$, with De Morgan's laws (@thm-de-morgan-logic);
 - across $\Rightarrow$, with @thm-negate-conditional;
-- and cancel $\neg \neg$ with double negation (@thm-double-negation).
+- across another $\neg$, with double negation (@thm-double-negation).
 
 Stop when every $\neg$ sits in front of a proposition with no connective or quantifier inside it.
 The result is easier to read and to check than a $\neg$ in front of the whole proposition.

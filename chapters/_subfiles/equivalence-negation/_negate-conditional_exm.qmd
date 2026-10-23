@@ -1,0 +1,8 @@
+::: {#exm-negate-conditional}
+#### When a search claim fails
+
+The negation of "if the list is sorted, then binary search finds the key"
+is "the list is sorted and binary search does not find the key"
+(@thm-negate-conditional).
+
+:::

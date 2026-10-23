@@ -5,9 +5,9 @@ For propositions $P$ and $Q$, $\neg (P \Rightarrow Q) \equiv P \land \neg Q$.
 
 :::
 
-{{< slidebreak >}}
-
 ::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
 
 ::: proof
 

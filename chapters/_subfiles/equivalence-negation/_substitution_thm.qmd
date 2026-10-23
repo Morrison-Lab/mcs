@@ -8,9 +8,9 @@ In particular, $\neg A \equiv \neg B$.
 
 :::
 
-{{< slidebreak >}}
-
 ::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
 
 ::: proof
 
