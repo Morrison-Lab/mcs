@@ -169,7 +169,13 @@ function Pandoc(doc)
       local away = {}
       for _, c in ipairs(cite.citations) do
         local pages = index[c.id]
-        if pages and not here[c.id] then
+        -- `here` misses theorem-type divs, which Quarto has already made
+        -- custom nodes, so also ask the index whether this page has the id.
+        local on_this_page = here[c.id]
+        for _, p in ipairs(pages or {}) do
+          on_this_page = on_this_page or p.page == current
+        end
+        if pages and not on_this_page then
           table.insert(away, c.id)
         end
       end
