@@ -30,8 +30,8 @@ Starting from its left side,
 
 $$
 \ba
-1 \cdot 2 + \cdots + k(k + 1) + (k + 1)(k + 2)
-&= \frac{k(k + 1)(k + 2)}{3} + (k + 1)(k + 2)
+& 1 \cdot 2 + \cdots + k(k + 1) + (k + 1)(k + 2)
+\\&= \frac{k(k + 1)(k + 2)}{3} + (k + 1)(k + 2)
 && \text{(induction hypothesis)}
 \\&= \frac{k(k + 1)(k + 2) + 3(k + 1)(k + 2)}{3}
 && \text{(common denominator)}

@@ -9,8 +9,8 @@
 
    $$
    \ba
-   \frac{1}{1 \cdot 2} + \cdots + \frac{1}{k(k + 1)} + \frac{1}{(k + 1)(k + 2)}
-   &= \frac{k}{k + 1} + \frac{1}{(k + 1)(k + 2)}
+   & \frac{1}{1 \cdot 2} + \cdots + \frac{1}{k(k + 1)} + \frac{1}{(k + 1)(k + 2)}
+   \\&= \frac{k}{k + 1} + \frac{1}{(k + 1)(k + 2)}
    && \text{(the supposition)}
    \\&= \frac{k(k + 2) + 1}{(k + 1)(k + 2)}
    && \text{(common denominator)}
