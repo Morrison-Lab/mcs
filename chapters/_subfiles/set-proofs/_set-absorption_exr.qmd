@@ -1,4 +1,4 @@
-::: {#exr-absorption}
+::: {#exr-set-absorption}
 #### Absorbing an intersection
 
 Let $A$ and $B$ be sets.

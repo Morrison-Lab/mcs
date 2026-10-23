@@ -74,11 +74,11 @@ and the section on disproving a claim about sets.
 
 # Proving set equality {#sec-set-equality}
 
-{{< include _subfiles/set-proofs/_absorption_exr.qmd >}}
+{{< include _subfiles/set-proofs/_set-absorption_exr.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/set-proofs/_absorption_sol.qmd >}}
+{{< include _subfiles/set-proofs/_set-absorption_sol.qmd >}}
 
 {{< slidebreak >}}
 
@@ -123,3 +123,8 @@ and the section on disproving a claim about sets.
 {{< slidebreak >}}
 
 {{< include _subfiles/set-proofs/_union-cancel_exm.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

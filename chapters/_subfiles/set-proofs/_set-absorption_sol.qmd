@@ -1,4 +1,4 @@
-::: {#sol-absorption}
+::: {#sol-set-absorption}
 
 **$A \cup (A \cap B) \subseteq A$.**
 Let $x \in A \cup (A \cap B)$.
