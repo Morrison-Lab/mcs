@@ -33,7 +33,7 @@ $$
 \\&= \sqrt{2}\, a - \sqrt{2}\, b
 && \text{(distributive law)}
 \\&= \sqrt{2}\, \sqrt{2}\, b - a
-&& \text{(substitute } a = \sqrt{2}\, b \text{ in each term)}
+&& \text{(substitute } a = \sqrt{2}\, b \text{ in the first term, and } \sqrt{2}\, b = a \text{ in the second)}
 \\&= 2b - a
 && \text{(} \sqrt{2}\, \sqrt{2} = 2 \text{)}
 \\&= a'.

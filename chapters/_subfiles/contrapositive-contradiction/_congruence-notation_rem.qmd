@@ -2,7 +2,7 @@
 #### Two meanings of $\equiv$, and the mod operator
 
 The symbol $\equiv$ also means logical equivalence (@def-logical-equivalence).
-The "$\pmod{n}$" after it says which meaning is in use:
+The "$(\operatorname{mod} n)$" after it says which meaning is in use:
 $23 \equiv 8 \pmod{5}$ is a statement about two integers,
 and $P \equiv Q$ is a statement about two propositions.
 
