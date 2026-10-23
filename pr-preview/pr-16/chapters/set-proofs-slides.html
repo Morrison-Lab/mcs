@@ -254,7 +254,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-23 15:03:02 (PDT)</p>
+  <p class="date">Last modified: 2026-10-23 15:15:41 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -274,7 +274,7 @@
 <li>proving set equality by proving that each set is a subset of the other;</li>
 <li>the theorem that a nonempty factor cancels from both sides of an equation between Cartesian products, with the proof of its first half.</li>
 </ul>
-<p>The exercises, the second half of that proof, the membership test for a set built with an expression, and the section on disproving a claim about sets are new.</p>
+<p>Everything else is new: the exercises, the other examples and theorems, the second half of that proof, the membership test for a set built with an expression, and the section on disproving a claim about sets.</p>
 </div>
 </div>
 </div>
@@ -300,11 +300,11 @@
 <section class="slide level2">
 
 <div id="rem-membership" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (What to show for membership). </span>To prove that <span class="math inline">\(a\)</span> is an element of a set, show that <span class="math inline">\(a\)</span> passes the set’s test (<a href="../chapters/sets.html#def-set-builder">Definition: Set-builder notation</a>, <a href="../chapters/sets.html#def-set-builder-expression">Definition: Set-builder notation with an expression</a>):</p>
+<p><span class="proof-title"><em>Remark 1</em> (What to show for membership). </span>To prove that <span class="math inline">\(a\)</span> is an element of a set, show that <span class="math inline">\(a\)</span> passes the set’s test:</p>
 <ul>
-<li>for <span class="math inline">\(S = {\mathopen{}\left\{x : P(x)\right\}\mathclose{}}\)</span>, the same set-builder notation with no set <span class="math inline">\(A\)</span> named, show that <span class="math inline">\(P(a)\)</span> is true;</li>
-<li>for <span class="math inline">\(S = {\mathopen{}\left\{x \in A : P(x)\right\}\mathclose{}}\)</span>, show that <span class="math inline">\(a \in A\)</span> and that <span class="math inline">\(P(a)\)</span> is true;</li>
-<li>for <span class="math inline">\(S = {\mathopen{}\left\{f(k) : k \in A\right\}\mathclose{}}\)</span>, find some <span class="math inline">\(k \in A\)</span> with <span class="math inline">\(f(k) = a\)</span>.</li>
+<li>for <span class="math inline">\(S = {\mathopen{}\left\{x \in A : P(x)\right\}\mathclose{}}\)</span> (<a href="../chapters/sets.html#def-set-builder">Definition: Set-builder notation</a>), show that <span class="math inline">\(a \in A\)</span> and that <span class="math inline">\(P(a)\)</span> is true;</li>
+<li>for <span class="math inline">\(S = {\mathopen{}\left\{x : P(x)\right\}\mathclose{}}\)</span>, the same notation with no set <span class="math inline">\(A\)</span> named, show that <span class="math inline">\(P(a)\)</span> is true;</li>
+<li>for <span class="math inline">\(S = {\mathopen{}\left\{f(k) : k \in A\right\}\mathclose{}}\)</span> (<a href="../chapters/sets.html#def-set-builder-expression">Definition: Set-builder notation with an expression</a>), find some <span class="math inline">\(k \in A\)</span> with <span class="math inline">\(f(k) = a\)</span>.</li>
 </ul>
 <p>The last case is an existence proof, so it usually names the <span class="math inline">\(k\)</span> (<a href="../chapters/iff-existence-disproof.html#def-constructive-proof">Definition: Constructive proof</a>). To prove that <span class="math inline">\(a \notin S\)</span>, prove the negation of the test, often by contradiction, as in <a href="#/sol-three-k-plus-two" class="quarto-xref">Solution&nbsp;1</a>.</p>
 </div>
@@ -331,20 +331,24 @@
 </section>
 <section class="slide level2">
 
-<div id="exr-between-roots" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 2 (Where a quadratic is negative)</strong></span> Prove that <span class="math inline">\({\mathopen{}\left\{x \in \mathbb{R}: x^2 - 3x + 2 &lt; 0\right\}\mathclose{}} \subseteq {\mathopen{}\left\{x \in \mathbb{R}: 0 &lt; x &lt; 3\right\}\mathclose{}}\)</span> (<a href="../chapters/sets.html#def-subset">Definition: Subset</a>).</p>
-<p>Hint: factor <span class="math inline">\(x^2 - 3x + 2\)</span>.</p>
+<div id="exr-disk-square" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2 (A disk inside a square)</strong></span> Let <span class="math inline">\(D = {\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x^2 + y^2 \le 1\right\}\mathclose{}}\)</span>, the points of the plane at distance at most 1 from the origin. Prove that <span class="math inline">\(D \subseteq [-1, 1] \times [-1, 1]\)</span>, where <span class="math inline">\([-1, 1] = {\mathopen{}\left\{x \in \mathbb{R}: -1 \le x \le 1\right\}\mathclose{}}\)</span> (<a href="../chapters/sets.html#def-subset">Definition: Subset</a>, <a href="../chapters/sets.html#def-cartesian-product">Definition: Cartesian product</a>, <a href="https://morrison-lab.github.io/mds/sets.html#def-closed-interval">Definition: Closed interval</a>).</p>
 </div>
 </section>
 <section class="slide level2">
 
-<div id="sol-between-roots" class="proof solution">
-<p><span class="proof-title"><em>Solution 2</em>. </span>Let <span class="math inline">\(x \in {\mathopen{}\left\{x \in \mathbb{R}: x^2 - 3x + 2 &lt; 0\right\}\mathclose{}}\)</span>. Then <span class="math inline">\(x\)</span> is a real number, and <span class="math inline">\(x^2 - 3x + 2 = (x - 1)(x - 2) &lt; 0\)</span>. We show that <span class="math inline">\(1 &lt; x &lt; 2\)</span>, by ruling out the other two cases (<a href="../chapters/direct-proof.html#def-proof-by-cases">Definition: Proof by cases</a>).</p>
-<ul>
-<li>If <span class="math inline">\(x \le 1\)</span>, then <span class="math inline">\(x - 1 \le 0\)</span> and <span class="math inline">\(x - 2 &lt; 0\)</span>, so <span class="math inline">\((x - 1)(x - 2) \ge 0\)</span>, since the product of two numbers that are not positive is not negative. That contradicts <span class="math inline">\((x - 1)(x - 2) &lt; 0\)</span>.</li>
-<li>If <span class="math inline">\(x \ge 2\)</span>, then <span class="math inline">\(x - 1 &gt; 0\)</span> and <span class="math inline">\(x - 2 \ge 0\)</span>, so <span class="math inline">\((x - 1)(x - 2) \ge 0\)</span>, again a contradiction.</li>
-</ul>
-<p>So <span class="math inline">\(1 &lt; x &lt; 2\)</span>, and so <span class="math inline">\(0 &lt; x &lt; 3\)</span>. So <span class="math inline">\(x \in {\mathopen{}\left\{x \in \mathbb{R}: 0 &lt; x &lt; 3\right\}\mathclose{}}\)</span>.</p>
+<div id="sol-disk-square" class="proof solution">
+<p><span class="proof-title"><em>Solution 2</em>. </span>Let <span class="math inline">\((a, b) \in D\)</span>, so <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are real numbers with <span class="math inline">\(a^2 + b^2 \le 1\)</span>. Then</p>
+<p><span class="math display">\[
+\begin{aligned}
+a^2
+&amp;\le a^2 + b^2
+&amp;&amp; \text{(} b^2 \ge 0 \text{)}
+\\&amp;\le 1.
+&amp;&amp; \text{(} (a, b) \in D \text{)}
+\end{aligned}
+\]</span></p>
+<p>If <span class="math inline">\(a &gt; 1\)</span>, then <span class="math inline">\(a^2 = a \cdot a &gt; 1 \cdot 1 = 1\)</span>, and if <span class="math inline">\(a &lt; -1\)</span>, then <span class="math inline">\(a^2 = (-a)^2 &gt; 1\)</span>. Neither is possible, so <span class="math inline">\(-1 \le a \le 1\)</span>, that is, <span class="math inline">\(a \in [-1, 1]\)</span>. The same steps with <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> swapped give <span class="math inline">\(b \in [-1, 1]\)</span>. So <span class="math inline">\((a, b) \in [-1, 1] \times [-1, 1]\)</span>. Every element of <span class="math inline">\(D\)</span> is in <span class="math inline">\([-1, 1] \times [-1, 1]\)</span>, so <span class="math inline">\(D \subseteq [-1, 1] \times [-1, 1]\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -370,13 +374,9 @@ So <span class="math inline">\(A \subseteq B\)</span>.</div>
 <section class="slide level2">
 
 <div id="exm-subset-contrapositive" class="theorem example">
-<p><span class="theorem-title"><strong>Example 2 (A subset proof by contrapositive)</strong></span> Claim: <span class="math inline">\({\mathopen{}\left\{x \in \mathbb{R}: x^3 + x &gt; 0\right\}\mathclose{}} \subseteq {\mathopen{}\left\{x \in \mathbb{R}: x &gt; 0\right\}\mathclose{}}\)</span>.</p>
-<p>We use the contrapositive outline of <a href="#/rem-subset-template" class="quarto-xref">Remark&nbsp;2</a>. Suppose <span class="math inline">\(a \notin {\mathopen{}\left\{x \in \mathbb{R}: x &gt; 0\right\}\mathclose{}}\)</span>. If <span class="math inline">\(a\)</span> is not a real number, then <span class="math inline">\(a\)</span> is not in the left-hand set either, since every element of that set is a real number. Otherwise <span class="math inline">\(a\)</span> is a real number with <span class="math inline">\(a \le 0\)</span>. Then <span class="math inline">\(a^3 = a \cdot a^2 \le 0\)</span>, since <span class="math inline">\(a \le 0\)</span> and <span class="math inline">\(a^2 \ge 0\)</span>, so</p>
-<p><span class="math display">\[
-a^3 + a \le 0 + 0 = 0.
-\]</span></p>
-<p>So <span class="math inline">\(a \notin {\mathopen{}\left\{x \in \mathbb{R}: x^3 + x &gt; 0\right\}\mathclose{}}\)</span>.</p>
-<p>The direct outline would start from “<span class="math inline">\(a^3 + a &gt; 0\)</span>”, and would have to get from a cubic back to <span class="math inline">\(a\)</span>, which is harder.</p>
+<p><span class="theorem-title"><strong>Example 2 (A subset proof by contrapositive)</strong></span> Claim: <span class="math inline">\({\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x + y &gt; 2\right\}\mathclose{}} \subseteq {\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x &gt; 1 \text{ or } y &gt; 1\right\}\mathclose{}}\)</span>. If two numbers add up to more than 2, at least one of them is more than 1.</p>
+<p>We use the contrapositive outline of <a href="#/rem-subset-template" class="quarto-xref">Remark&nbsp;2</a>. Suppose <span class="math inline">\(p \notin {\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x &gt; 1 \text{ or } y &gt; 1\right\}\mathclose{}}\)</span>. If <span class="math inline">\(p\)</span> is not a pair of real numbers, then <span class="math inline">\(p\)</span> is not in the left-hand set either, since every element of that set is a pair of real numbers. Otherwise <span class="math inline">\(p = (a, b)\)</span> with <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> real, and “<span class="math inline">\(a &gt; 1\)</span> or <span class="math inline">\(b &gt; 1\)</span>” is false. By De Morgan’s laws (<a href="../chapters/equivalence-negation.html#thm-de-morgan-logic">Theorem: De Morgan’s laws</a>), <span class="math inline">\(a &gt; 1\)</span> is false and <span class="math inline">\(b &gt; 1\)</span> is false, that is, <span class="math inline">\(a \le 1\)</span> and <span class="math inline">\(b \le 1\)</span>, so <span class="math inline">\(a + b \le 1 + 1 = 2\)</span>. So <span class="math inline">\(p \notin {\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x + y &gt; 2\right\}\mathclose{}}\)</span>. So the left-hand set is a subset of the right-hand set.</p>
+<p>The contrapositive turns the conclusion “<span class="math inline">\(x &gt; 1\)</span> or <span class="math inline">\(y &gt; 1\)</span>”, which does not say which number is large, into the hypothesis “<span class="math inline">\(a \le 1\)</span> and <span class="math inline">\(b \le 1\)</span>”, which says something about both.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -388,7 +388,7 @@ a^3 + a \le 0 + 0 = 0.
 <section class="slide level2">
 
 <div id="exm-subset-transitive" class="theorem example">
-<p><span class="theorem-title"><strong>Example 3 (A chain of subsets)</strong></span> <a href="#/sol-between-roots" class="quarto-xref">Solution&nbsp;2</a> shows that <span class="math inline">\({\mathopen{}\left\{x \in \mathbb{R}: x^2 - 3x + 2 &lt; 0\right\}\mathclose{}} \subseteq {\mathopen{}\left\{x \in \mathbb{R}: 0 &lt; x &lt; 3\right\}\mathclose{}}\)</span>, and every real number between 0 and 3 is positive, so <span class="math inline">\({\mathopen{}\left\{x \in \mathbb{R}: 0 &lt; x &lt; 3\right\}\mathclose{}} \subseteq {\mathopen{}\left\{x \in \mathbb{R}: x &gt; 0\right\}\mathclose{}}\)</span>. By <a href="#/thm-subset-transitive" class="quarto-xref">Theorem&nbsp;1</a>, <span class="math inline">\({\mathopen{}\left\{x \in \mathbb{R}: x^2 - 3x + 2 &lt; 0\right\}\mathclose{}} \subseteq {\mathopen{}\left\{x \in \mathbb{R}: x &gt; 0\right\}\mathclose{}}\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 3 (A chain of subsets)</strong></span> Let <span class="math inline">\(D\)</span> be the disk of <a href="#/exr-disk-square" class="quarto-xref">Exercise&nbsp;2</a>, and let <span class="math inline">\(H = {\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x + y \le 2\right\}\mathclose{}}\)</span>. <a href="#/sol-disk-square" class="quarto-xref">Solution&nbsp;2</a> shows that <span class="math inline">\(D \subseteq [-1, 1] \times [-1, 1]\)</span>. Every point <span class="math inline">\((x, y)\)</span> of <span class="math inline">\([-1, 1] \times [-1, 1]\)</span> has <span class="math inline">\(x \le 1\)</span> and <span class="math inline">\(y \le 1\)</span>, so <span class="math inline">\(x + y \le 2\)</span>, and so <span class="math inline">\([-1, 1] \times [-1, 1] \subseteq H\)</span>. By <a href="#/thm-subset-transitive" class="quarto-xref">Theorem&nbsp;1</a>, <span class="math inline">\(D \subseteq H\)</span>.</p>
 </div>
 </section></section>
 <section>

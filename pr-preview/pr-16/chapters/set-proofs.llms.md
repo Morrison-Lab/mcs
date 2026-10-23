@@ -6,7 +6,7 @@ Membership, subsets and set equality
 
 Published
 
-Last modified: 2026-10-23 15:03:02 (PDT)
+Last modified: 2026-10-23 15:15:41 (PDT)
 
 > **NOTE:**
 >
@@ -17,7 +17,7 @@ Last modified: 2026-10-23 15:03:02 (PDT)
 > - proving set equality by proving that each set is a subset of the other;
 > - the theorem that a nonempty factor cancels from both sides of an equation between Cartesian products, with the proof of its first half.
 >
-> The exercises, the second half of that proof, the membership test for a set built with an expression, and the section on disproving a claim about sets are new.
+> Everything else is new: the exercises, the other examples and theorems, the second half of that proof, the membership test for a set built with an expression, and the section on disproving a claim about sets.
 
 # 1 Proving membership
 
@@ -33,11 +33,11 @@ Last modified: 2026-10-23 15:03:02 (PDT)
 
 > **NOTE:**
 >
-> *Remark 1* (What to show for membership). To prove that \\a\\ is an element of a set, show that \\a\\ passes the set’s test ([Definition: Set-builder notation](../chapters/sets.llms.md#def-set-builder), [Definition: Set-builder notation with an expression](../chapters/sets.llms.md#def-set-builder-expression)):
+> *Remark 1* (What to show for membership). To prove that \\a\\ is an element of a set, show that \\a\\ passes the set’s test:
 >
-> - for \\S = {\mathopen{}\left\\x : P(x)\right\\\mathclose{}}\\, the same set-builder notation with no set \\A\\ named, show that \\P(a)\\ is true;
-> - for \\S = {\mathopen{}\left\\x \in A : P(x)\right\\\mathclose{}}\\, show that \\a \in A\\ and that \\P(a)\\ is true;
-> - for \\S = {\mathopen{}\left\\f(k) : k \in A\right\\\mathclose{}}\\, find some \\k \in A\\ with \\f(k) = a\\.
+> - for \\S = {\mathopen{}\left\\x \in A : P(x)\right\\\mathclose{}}\\ ([Definition: Set-builder notation](../chapters/sets.llms.md#def-set-builder)), show that \\a \in A\\ and that \\P(a)\\ is true;
+> - for \\S = {\mathopen{}\left\\x : P(x)\right\\\mathclose{}}\\, the same notation with no set \\A\\ named, show that \\P(a)\\ is true;
+> - for \\S = {\mathopen{}\left\\f(k) : k \in A\right\\\mathclose{}}\\ ([Definition: Set-builder notation with an expression](../chapters/sets.llms.md#def-set-builder-expression)), find some \\k \in A\\ with \\f(k) = a\\.
 >
 > The last case is an existence proof, so it usually names the \\k\\ ([Definition: Constructive proof](../chapters/iff-existence-disproof.llms.md#def-constructive-proof)). To prove that \\a \notin S\\, prove the negation of the test, often by contradiction, as in [Solution 1](#sol-three-k-plus-two).
 
@@ -53,18 +53,15 @@ Last modified: 2026-10-23 15:03:02 (PDT)
 
 > **NOTE:**
 >
-> **Exercise 2 (Where a quadratic is negative)** Prove that \\{\mathopen{}\left\\x \in \mathbb{R}: x^2 - 3x + 2 \< 0\right\\\mathclose{}} \subseteq {\mathopen{}\left\\x \in \mathbb{R}: 0 \< x \< 3\right\\\mathclose{}}\\ ([Definition: Subset](../chapters/sets.llms.md#def-subset)).
->
-> Hint: factor \\x^2 - 3x + 2\\.
+> **Exercise 2 (A disk inside a square)** Let \\D = {\mathopen{}\left\\(x, y) \in \mathbb{R}\times \mathbb{R}: x^2 + y^2 \le 1\right\\\mathclose{}}\\, the points of the plane at distance at most 1 from the origin. Prove that \\D \subseteq \[-1, 1\] \times \[-1, 1\]\\, where \\\[-1, 1\] = {\mathopen{}\left\\x \in \mathbb{R}: -1 \le x \le 1\right\\\mathclose{}}\\ ([Definition: Subset](../chapters/sets.llms.md#def-subset), [Definition: Cartesian product](../chapters/sets.llms.md#def-cartesian-product), [Definition: Closed interval](https://morrison-lab.github.io/mds/sets.html#def-closed-interval)).
 
 > **NOTE:**
 >
-> *Solution 2*. Let \\x \in {\mathopen{}\left\\x \in \mathbb{R}: x^2 - 3x + 2 \< 0\right\\\mathclose{}}\\. Then \\x\\ is a real number, and \\x^2 - 3x + 2 = (x - 1)(x - 2) \< 0\\. We show that \\1 \< x \< 2\\, by ruling out the other two cases ([Definition: Proof by cases](../chapters/direct-proof.llms.md#def-proof-by-cases)).
+> *Solution 2*. Let \\(a, b) \in D\\, so \\a\\ and \\b\\ are real numbers with \\a^2 + b^2 \le 1\\. Then
 >
-> - If \\x \le 1\\, then \\x - 1 \le 0\\ and \\x - 2 \< 0\\, so \\(x - 1)(x - 2) \ge 0\\, since the product of two numbers that are not positive is not negative. That contradicts \\(x - 1)(x - 2) \< 0\\.
-> - If \\x \ge 2\\, then \\x - 1 \> 0\\ and \\x - 2 \ge 0\\, so \\(x - 1)(x - 2) \ge 0\\, again a contradiction.
+> \\ \begin{aligned} a^2 &\le a^2 + b^2 && \text{(} b^2 \ge 0 \text{)} \\&\le 1. && \text{(} (a, b) \in D \text{)} \end{aligned} \\
 >
-> So \\1 \< x \< 2\\, and so \\0 \< x \< 3\\. So \\x \in {\mathopen{}\left\\x \in \mathbb{R}: 0 \< x \< 3\right\\\mathclose{}}\\.
+> If \\a \> 1\\, then \\a^2 = a \cdot a \> 1 \cdot 1 = 1\\, and if \\a \< -1\\, then \\a^2 = (-a)^2 \> 1\\. Neither is possible, so \\-1 \le a \le 1\\, that is, \\a \in \[-1, 1\]\\. The same steps with \\a\\ and \\b\\ swapped give \\b \in \[-1, 1\]\\. So \\(a, b) \in \[-1, 1\] \times \[-1, 1\]\\. Every element of \\D\\ is in \\\[-1, 1\] \times \[-1, 1\]\\, so \\D \subseteq \[-1, 1\] \times \[-1, 1\]\\.
 
 > **NOTE:**
 >
@@ -86,15 +83,11 @@ Last modified: 2026-10-23 15:03:02 (PDT)
 
 > **NOTE:**
 >
-> **Example 2 (A subset proof by contrapositive)** Claim: \\{\mathopen{}\left\\x \in \mathbb{R}: x^3 + x \> 0\right\\\mathclose{}} \subseteq {\mathopen{}\left\\x \in \mathbb{R}: x \> 0\right\\\mathclose{}}\\.
+> **Example 2 (A subset proof by contrapositive)** Claim: \\{\mathopen{}\left\\(x, y) \in \mathbb{R}\times \mathbb{R}: x + y \> 2\right\\\mathclose{}} \subseteq {\mathopen{}\left\\(x, y) \in \mathbb{R}\times \mathbb{R}: x \> 1 \text{ or } y \> 1\right\\\mathclose{}}\\. If two numbers add up to more than 2, at least one of them is more than 1.
 >
-> We use the contrapositive outline of [Remark 2](#rem-subset-template). Suppose \\a \notin {\mathopen{}\left\\x \in \mathbb{R}: x \> 0\right\\\mathclose{}}\\. If \\a\\ is not a real number, then \\a\\ is not in the left-hand set either, since every element of that set is a real number. Otherwise \\a\\ is a real number with \\a \le 0\\. Then \\a^3 = a \cdot a^2 \le 0\\, since \\a \le 0\\ and \\a^2 \ge 0\\, so
+> We use the contrapositive outline of [Remark 2](#rem-subset-template). Suppose \\p \notin {\mathopen{}\left\\(x, y) \in \mathbb{R}\times \mathbb{R}: x \> 1 \text{ or } y \> 1\right\\\mathclose{}}\\. If \\p\\ is not a pair of real numbers, then \\p\\ is not in the left-hand set either, since every element of that set is a pair of real numbers. Otherwise \\p = (a, b)\\ with \\a\\ and \\b\\ real, and “\\a \> 1\\ or \\b \> 1\\” is false. By De Morgan’s laws ([Theorem: De Morgan’s laws](../chapters/equivalence-negation.llms.md#thm-de-morgan-logic)), \\a \> 1\\ is false and \\b \> 1\\ is false, that is, \\a \le 1\\ and \\b \le 1\\, so \\a + b \le 1 + 1 = 2\\. So \\p \notin {\mathopen{}\left\\(x, y) \in \mathbb{R}\times \mathbb{R}: x + y \> 2\right\\\mathclose{}}\\. So the left-hand set is a subset of the right-hand set.
 >
-> \\ a^3 + a \le 0 + 0 = 0. \\
->
-> So \\a \notin {\mathopen{}\left\\x \in \mathbb{R}: x^3 + x \> 0\right\\\mathclose{}}\\.
->
-> The direct outline would start from “\\a^3 + a \> 0\\”, and would have to get from a cubic back to \\a\\, which is harder.
+> The contrapositive turns the conclusion “\\x \> 1\\ or \\y \> 1\\”, which does not say which number is large, into the hypothesis “\\a \le 1\\ and \\b \le 1\\”, which says something about both.
 
 > **NOTE:**
 >
@@ -106,7 +99,7 @@ Last modified: 2026-10-23 15:03:02 (PDT)
 
 > **NOTE:**
 >
-> **Example 3 (A chain of subsets)** [Solution 2](#sol-between-roots) shows that \\{\mathopen{}\left\\x \in \mathbb{R}: x^2 - 3x + 2 \< 0\right\\\mathclose{}} \subseteq {\mathopen{}\left\\x \in \mathbb{R}: 0 \< x \< 3\right\\\mathclose{}}\\, and every real number between 0 and 3 is positive, so \\{\mathopen{}\left\\x \in \mathbb{R}: 0 \< x \< 3\right\\\mathclose{}} \subseteq {\mathopen{}\left\\x \in \mathbb{R}: x \> 0\right\\\mathclose{}}\\. By [Theorem 1](#thm-subset-transitive), \\{\mathopen{}\left\\x \in \mathbb{R}: x^2 - 3x + 2 \< 0\right\\\mathclose{}} \subseteq {\mathopen{}\left\\x \in \mathbb{R}: x \> 0\right\\\mathclose{}}\\.
+> **Example 3 (A chain of subsets)** Let \\D\\ be the disk of [Exercise 2](#exr-disk-square), and let \\H = {\mathopen{}\left\\(x, y) \in \mathbb{R}\times \mathbb{R}: x + y \le 2\right\\\mathclose{}}\\. [Solution 2](#sol-disk-square) shows that \\D \subseteq \[-1, 1\] \times \[-1, 1\]\\. Every point \\(x, y)\\ of \\\[-1, 1\] \times \[-1, 1\]\\ has \\x \le 1\\ and \\y \le 1\\, so \\x + y \le 2\\, and so \\\[-1, 1\] \times \[-1, 1\] \subseteq H\\. By [Theorem 1](#thm-subset-transitive), \\D \subseteq H\\.
 
 # 3 Proving set equality
 
