@@ -1,0 +1,144 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Math for Computer Science",
+    "section": "",
+    "text": "These are the lecture notes for CSCI 201, math for computer science (discrete mathematics), at Western Washington University. General mathematics that several courses share, such as logic, sets and functions, is kept in the mathematics prerequisites site. These notes include its definitions, from the mds submodule, so each definition is written once and reads the same in both places.\nThe notes are available in multiple formats:\n\nHTML Website: Navigate using the navbar for easy access to all pages\nRevealJS Slides: Each chapter can generate a presentation format with -slides.html suffix\nPDF Handouts: Each chapter can generate a PDF handout with -handout.pdf suffix\nDOCX Documents: Each chapter can generate a Microsoft Word document with .docx extension\n\n\n\nThe notes are released under the MIT License; see the LICENSE file.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "Math for Computer Science",
+    "section": "",
+    "text": "The notes are released under the MIT License; see the LICENSE file.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index-slides.html#license",
+    "href": "index-slides.html#license",
+    "title": "Math for Computer Science",
+    "section": "0.1 License",
+    "text": "0.1 License"
+  },
+  {
+    "objectID": "index-slides.html#references",
+    "href": "index-slides.html#references",
+    "title": "Math for Computer Science",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "chapters/predicates-quantifiers.html",
+    "href": "chapters/predicates-quantifiers.html",
+    "title": "Predicates and Quantifiers",
+    "section": "",
+    "text": "NoteSource\n\n\n\n\n\nAdapted from Kameron Decker Harris’s Fall 2026 lecture notes “Logic 2” and “Logic 3”, which he typeset from Scott Wehrwein’s Spring 2025 handwritten lecture notes. The convention that a conditional about a variable means “for all” comes from those notes; the exercises are new.\nThe definitions are included from the mathematics prerequisites notes, so they read the same in both places.\n\n\n\n\n1 Predicates\n\n\n\n\n\n\n\nExercise 1 (Plug in a value) Let \\(L(s)\\) be the sentence “the string \\(s\\) has more than 3 characters”.\n\nIs \\(L(s)\\) true or false?\nWhat are the truth values of \\(L(\\texttt{\"cat\"})\\), \\(L(\\texttt{\"logic\"})\\) and \\(L(\\texttt{\"\"})\\)?\n\n\n\n\n\n\n\n\n\n\n\nSolutionSolution\n\n\n\n\n\n\nSolution 1. \n\nNeither: \\(L(s)\\) has no truth value until we know which string \\(s\\) is. It is a predicate (Definition: Predicate), not a proposition (Definition: Proposition (statement)).\nEach value of \\(s\\) turns \\(L(s)\\) into a proposition:\n\n\\(L(\\texttt{\"cat\"})\\) is false, since \"cat\" has 3 characters.\n\\(L(\\texttt{\"logic\"})\\) is true, since \"logic\" has 5 characters.\n\\(L(\\texttt{\"\"})\\) is false, since the empty string has 0 characters.\n\n\n\n\n\n\n\n\n\n\n\n\n\nDefinition 1 (Domain (domain of discourse, universe of discourse)) The domain of a predicate (Definition: Predicate), also called its domain of discourse or universe of discourse, is the set of values its variable may take.\n\n\n\n\n\n\n\n\n\n\n\nRemark 1 (Predicates with more than one variable). A predicate can have more than one variable: “\\(x &lt; y\\)” is a predicate \\(P(x, y)\\) in the two variables \\(x\\) and \\(y\\). Its domain (Definition 1) is a set of pairs, such as the pairs \\((x, y)\\) of real numbers.\n\n\n\n\n\n\n\n\n\n\n\nRemark 2 (Predicates in Racket). A Racket procedure that returns #t or #f is also called a predicate, and by convention its name ends in ?, as in even? and string?. The predicate \\(L(s)\\) from Exercise 1 is\n(define (long? s)\n  (&gt; (string-length s) 3))\nand (long? \"logic\") returns #t.\n\n\n\n\n\n\n2 Quantifiers\n\n\n\n\n\n\n\nExercise 2 (All or some) Let \\(S = \\{2, 3, 5, 7\\}\\). Which of these four sentences are true?\n\nEvery element of \\(S\\) is prime.\nEvery element of \\(S\\) is odd.\nSome element of \\(S\\) is even.\nSome element of \\(S\\) is greater than 10.\n\n\n\n\n\n\n\n\n\n\n\nSolutionSolution\n\n\n\n\n\n\nSolution 2. \n\nTrue: \\(2\\), \\(3\\), \\(5\\) and \\(7\\) are all prime.\nFalse: \\(2\\) is not odd. One element that fails is enough.\nTrue: \\(2\\) is even. One element that works is enough.\nFalse: none of \\(2\\), \\(3\\), \\(5\\) and \\(7\\) is greater than \\(10\\).\n\n\n\n\n\n\n\n\n\n\n\n\nDefinition 2 (Quantifier) A quantifier (Wikipedia contributors 2026c) turns a predicate \\(P(x)\\) (Definition: Predicate) about the elements \\(x\\) of a set \\(S\\) into a proposition (Definition: Proposition (statement)). There are two, each defined next: the universal quantifier and the existential quantifier. \n\n\n\n\n\n\n\n\n\n\n\nDefinition 3 (Universal quantifier) The universal quantifier (Wikipedia contributors 2026d) “for all” is a quantifier (Definition 2): \\(\\forall x \\in S, P(x)\\) (“for every \\(x\\) in \\(S\\), \\(P(x)\\)”) is true when \\(P(x)\\) is true for every element \\(x\\) of \\(S\\), and false otherwise.\n\n\n\n\n\n\n\n\n\n\n\nDefinition 4 (Existential quantifier) The existential quantifier (Wikipedia contributors 2026b) “there exists” is a quantifier (Definition 2): \\(\\exists x \\in S, P(x)\\) (“there is an \\(x\\) in \\(S\\) such that \\(P(x)\\)”) is true when \\(P(x)\\) is true for at least one element \\(x\\) of \\(S\\), and false otherwise.\n\n\n\n\n\n\n\n\n\n\n\nRemark 3 (Reading and writing quantifiers). English has many phrasings of each quantifier:\n\n\\(\\forall\\): “for all”, “for every”, “for each”, “for any”, “every”, “all”.\n\\(\\exists\\): “there exists”, “there is”, “for some”, “some”, “at least one”.\n\nBooks also differ in punctuation: \\(\\forall x \\in S, P(x)\\) is also written \\(\\forall x \\in S : P(x)\\), \\((\\forall x \\in S)\\, P(x)\\), or \\(\\forall x \\in S .\\, P(x)\\). When the domain is clear, it is often left out, as in \\(\\forall x, P(x)\\).\n\n\n\n\n\n\n\n\n\n\n\nRemark 4 (Quantifiers in Racket). On a finite list, Racket computes the two quantifiers with andmap and ormap. (andmap odd? (list 2 3 5 7)) returns #f, as in part 2 of Exercise 2, and (ormap even? (list 2 3 5 7)) returns #t, as in part 3.\n\n\n\n\n\n\n\n\n\n\n\nExercise 3 (Nothing to check) Let \\(\\emptyset\\) be the empty set, the set with no elements. What are the truth values of \\(\\forall x \\in \\emptyset, x &gt; 5\\) and \\(\\exists x \\in \\emptyset, x &gt; 5\\)?\n\n\n\n\n\n\nTipHint\n\n\n\nWhat would make each one false?\n\n\n\n\n\n\n\n\n\n\n\n\nSolutionSolution\n\n\n\n\n\n\nSolution 3. \\(\\forall x \\in \\emptyset, x &gt; 5\\) is true. It would be false only if some element of \\(\\emptyset\\) were not greater than \\(5\\), and \\(\\emptyset\\) has no elements.\n\\(\\exists x \\in \\emptyset, x &gt; 5\\) is false, since \\(\\emptyset\\) has no element at all, let alone one greater than \\(5\\).\nRacket agrees: (andmap positive? '()) returns #t, and (ormap positive? '()) returns #f.\n\n\n\n\n\n\n\n\n\n\n\nDefinition 5 (Vacuous truth) A universally quantified proposition \\(\\forall x \\in S, P(x)\\) whose domain \\(S\\) is empty is vacuously true: it is true, because \\(S\\) has no element \\(x\\) for which \\(P(x)\\) could be false.\n\n\n\n\n\n\n3 Counterexamples\n\n\n\n\n\n\n\nExercise 4 (A pattern that breaks) Consider the claim “for every integer \\(n \\ge 0\\), \\(n^2 + n + 41\\) is prime”.\n\nCheck the claim for \\(n = 0, 1, 2, 3\\).\nFind an integer \\(n \\ge 0\\) for which the claim fails.\n\n\n\n\n\n\n\nTipHint\n\n\n\nLook for an \\(n\\) that makes every term of \\(n^2 + n + 41\\) a multiple of \\(41\\).\n\n\n\n\n\n\n\n\n\n\n\n\nSolutionSolution\n\n\n\n\n\n\nSolution 4. \n\nThe values are \\(41\\), \\(43\\), \\(47\\) and \\(53\\), which are all prime.\nTake \\(n = 41\\): \\(41^2 + 41 + 41 = 41 \\cdot (41 + 1 + 1) = 41 \\cdot 43\\), which is not prime. The value \\(n = 40\\) also fails: \\(40^2 + 40 + 41 = 1681 = 41^2\\).\n\nThe claim held for every value we checked in part 1, and it is still false: checking some cases cannot prove a universal claim.\n\n\n\n\n\n\n\n\n\n\n\nDefinition 6 (Counterexample) A counterexample (Wikipedia contributors 2026a) to a proposition of the form “for every \\(x\\) in \\(A\\), \\(P(x)\\)”, where \\(P(x)\\) is a predicate (Definition: Predicate), is an element \\(x\\) of \\(A\\) for which \\(P(x)\\) is false. A single counterexample shows that the proposition is false.\n\n\n\n\n\n\n\n\n\n\n\nRemark 5 (One example, or every element). Settling a quantified proposition takes one element in two cases, and every element of the domain in the other two:\n\n\n\n\n\n\n\nTo show that\nit is enough to\n\n\n\n\n\\(\\exists x \\in S, P(x)\\) is true\nfind one \\(x\\) in \\(S\\) with \\(P(x)\\) true\n\n\n\\(\\forall x \\in S, P(x)\\) is false\nfind one \\(x\\) in \\(S\\) with \\(P(x)\\) false\n\n\n\\(\\forall x \\in S, P(x)\\) is true\nshow \\(P(x)\\) for every \\(x\\) in \\(S\\)\n\n\n\\(\\exists x \\in S, P(x)\\) is false\nshow \\(P(x)\\) is false for every \\(x\\) in \\(S\\)\n\n\n\nWhen \\(S\\) is infinite, the last two rows need a proof rather than a check of each element.\n\n\n\n\n\n\n4 Quantified conditionals\n\n\n\n\n\n\n\nExercise 5 (A hidden “for all”) Consider the sentence “if a string has more than 3 characters, then it is not empty”. Let \\(L(s)\\) be “\\(s\\) has more than 3 characters” and \\(N(s)\\) be “\\(s\\) is not empty”, for strings \\(s\\).\n\nWrite the sentence in symbols, with its quantifier.\nIs it true?\nIs its converse (Definition: Converse) true?\n\n\n\n\n\n\n\n\n\n\n\nSolutionSolution\n\n\n\n\n\n\nSolution 5. \n\nThe sentence is about every string, so it is \\(\\forall s, (L(s) \\Rightarrow N(s))\\).\nTrue: a string with more than 3 characters has at least 1 character, so it is not empty.\nThe converse is \\(\\forall s, (N(s) \\Rightarrow L(s))\\): “if a string is not empty, then it has more than 3 characters”. It is false. The string \"ab\" is a counterexample: it is not empty, but it has only 2 characters.\n\n\n\n\n\n\n\n\n\n\n\n\nRemark 6 (A conditional about a variable means “for all”). By convention, a conditional whose parts are predicates, such as “if \\(x &gt; 3\\), then \\(x &gt; 1\\)”, means the universal statement \\(\\forall x, (x &gt; 3 \\Rightarrow x &gt; 1)\\), even though no quantifier is written. Mathematical statements leave out “for all” in this way all the time, so put it back before deciding whether the statement is true.\n\n\n\n\n\n\n5 Nested quantifiers\n\n\n\n\n\n\n\nExercise 6 (Who takes what) Three students take courses as follows.\n\n\n\nStudent\nCourses\n\n\n\n\nAna\n201, 241\n\n\nBen\n241\n\n\nCy\n201, 247\n\n\n\nLet \\(E(s, c)\\) be “student \\(s\\) takes course \\(c\\)”, where \\(s\\) ranges over the students and \\(c\\) over the courses 201, 241 and 247. Which of these are true?\n\n\\(\\forall s, \\exists c, E(s, c)\\)\n\\(\\exists c, \\forall s, E(s, c)\\)\n\\(\\forall c, \\exists s, E(s, c)\\)\n\\(\\exists s, \\forall c, E(s, c)\\)\n\n\n\n\n\n\n\n\n\n\n\nSolutionSolution\n\n\n\n\n\n\nSolution 6. \n\nTrue: “every student takes some course”. Ana takes 201, Ben takes 241, and Cy takes 201.\nFalse: “some course is taken by every student”. Ben does not take 201, Cy does not take 241, and Ana does not take 247.\nTrue: “every course has some student”. Ana takes 201 and 241, and Cy takes 247.\nFalse: “some student takes every course”. Ana does not take 247, Ben does not take 201, and Cy does not take 241.\n\nParts 1 and 2 use the same quantifiers and the same predicate in a different order, and they have different truth values.\n\n\n\n\n\n\n\n\n\n\n\nRemark 7 (Order of quantifiers). Read nested quantifiers from left to right. In \\(\\forall s, \\exists c, E(s, c)\\), the course \\(c\\) is chosen after the student \\(s\\), so it may depend on \\(s\\). In \\(\\exists c, \\forall s, E(s, c)\\), one course \\(c\\) must work for every student.\nSwapping two quantifiers of the same kind does not change the meaning: \\(\\forall x, \\forall y, P(x, y)\\) means the same as \\(\\forall y, \\forall x, P(x, y)\\), and likewise for \\(\\exists\\). Swapping a \\(\\forall\\) and an \\(\\exists\\) can change it, as parts 1 and 2 of Exercise 6 show.\n\n\n\n\n\n\n\n\n\n\n\nExercise 7 (English to symbols) Write each sentence in symbols, and say whether it is true.\n\nSome integer \\(n\\) satisfies \\(n^2 = 2n + 3\\).\nNo integer is both positive and negative.\nEvery list of integers has a largest element.\n\n\n\n\n\n\n\n\n\n\n\nSolutionSolution\n\n\n\n\n\n\nSolution 7. \n\n\\(\\exists n \\in \\mathbb{Z}, n^2 = 2n + 3\\). True: \\(3^2 = 9 = 2 \\cdot 3 + 3\\).\n\\(\\forall n \\in \\mathbb{Z}, \\neg (n &gt; 0 \\land n &lt; 0)\\). True: an integer greater than \\(0\\) is not less than \\(0\\).\nLet \\(\\mathcal{L}\\) be the set of lists of integers. The sentence says that each list \\(\\ell\\) has an element \\(m\\) that is at least as large as every element \\(x\\) of \\(\\ell\\): \\[\n\\forall \\ell \\in \\mathcal{L},\\\n\\exists m \\in \\ell,\\\n\\forall x \\in \\ell,\\\nx \\le m.\n\\] Here “\\(m \\in \\ell\\)” means “\\(m\\) is an element of the list \\(\\ell\\)”. False: the empty list has no elements, so it has no largest element. The sentence is true for every nonempty list.\n\n\n\n\n\n\n\nReferences\n\n\nWikipedia contributors. 2026a. Counterexample — Wikipedia, the Free Encyclopedia. https://en.wikipedia.org/wiki/Counterexample.\n\n\nWikipedia contributors. 2026b. Existential Quantification — Wikipedia, the Free Encyclopedia. https://en.wikipedia.org/wiki/Existential_quantification.\n\n\nWikipedia contributors. 2026c. Quantifier (Logic) — Wikipedia, the Free Encyclopedia. https://en.wikipedia.org/wiki/Quantifier_(logic).\n\n\nWikipedia contributors. 2026d. Universal Quantification — Wikipedia, the Free Encyclopedia. https://en.wikipedia.org/wiki/Universal_quantification.\n\n\n\n\n\n\n\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Home",
+      "Predicates and Quantifiers"
+    ]
+  },
+  {
+    "objectID": "chapters/predicates-quantifiers-slides.html#references",
+    "href": "chapters/predicates-quantifiers-slides.html#references",
+    "title": "Predicates and Quantifiers",
+    "section": "",
+    "text": "Wikipedia contributors. 2026a. Counterexample — Wikipedia, the Free Encyclopedia. https://en.wikipedia.org/wiki/Counterexample.\n\n\nWikipedia contributors. 2026b. Existential Quantification — Wikipedia, the Free Encyclopedia. https://en.wikipedia.org/wiki/Existential_quantification.\n\n\nWikipedia contributors. 2026c. Quantifier (Logic) — Wikipedia, the Free Encyclopedia. https://en.wikipedia.org/wiki/Quantifier_(logic).\n\n\nWikipedia contributors. 2026d. Universal Quantification — Wikipedia, the Free Encyclopedia. https://en.wikipedia.org/wiki/Universal_quantification."
+  },
+  {
+    "objectID": "chapters/propositional-logic-slides.html#sec-evaluating",
+    "href": "chapters/propositional-logic-slides.html#sec-evaluating",
+    "title": "Propositional Logic",
+    "section": "2.1 Evaluating compound propositions",
+    "text": "2.1 Evaluating compound propositions"
+  },
+  {
+    "objectID": "chapters/propositional-logic-slides.html#sec-truth-tables",
+    "href": "chapters/propositional-logic-slides.html#sec-truth-tables",
+    "title": "Propositional Logic",
+    "section": "2.2 Truth tables",
+    "text": "2.2 Truth tables"
+  },
+  {
+    "objectID": "chapters/propositional-logic-slides.html#sec-converse",
+    "href": "chapters/propositional-logic-slides.html#sec-converse",
+    "title": "Propositional Logic",
+    "section": "3.1 The converse",
+    "text": "3.1 The converse"
+  },
+  {
+    "objectID": "chapters/propositional-logic-slides.html#sec-conditionals-english",
+    "href": "chapters/propositional-logic-slides.html#sec-conditionals-english",
+    "title": "Propositional Logic",
+    "section": "3.2 Conditionals in English",
+    "text": "3.2 Conditionals in English"
+  },
+  {
+    "objectID": "chapters/propositional-logic-slides.html#references",
+    "href": "chapters/propositional-logic-slides.html#references",
+    "title": "Propositional Logic",
+    "section": "",
+    "text": "Wikipedia contributors. 2026a. Collatz Conjecture — Wikipedia, the Free Encyclopedia. https://en.wikipedia.org/wiki/Collatz_conjecture.\n\n\nWikipedia contributors. 2026b. Converse (Logic) — Wikipedia, the Free Encyclopedia. https://en.wikipedia.org/wiki/Converse_(logic).\n\n\nWikipedia contributors. 2026c. Logical Biconditional — Wikipedia, the Free Encyclopedia. https://en.wikipedia.org/wiki/Logical_biconditional.\n\n\nWikipedia contributors. 2026d. Logical Conjunction — Wikipedia, the Free Encyclopedia. https://en.wikipedia.org/wiki/Logical_conjunction.\n\n\nWikipedia contributors. 2026e. Logical Connective — Wikipedia, the Free Encyclopedia. https://en.wikipedia.org/wiki/Logical_connective.\n\n\nWikipedia contributors. 2026f. Logical Disjunction — Wikipedia, the Free Encyclopedia. https://en.wikipedia.org/wiki/Logical_disjunction.\n\n\nWikipedia contributors. 2026g. Material Conditional — Wikipedia, the Free Encyclopedia. https://en.wikipedia.org/wiki/Material_conditional.\n\n\nWikipedia contributors. 2026h. Negation — Wikipedia, the Free Encyclopedia. https://en.wikipedia.org/wiki/Negation.\n\n\nWikipedia contributors. 2026i. Predicate (Mathematical Logic) — Wikipedia, the Free Encyclopedia. https://en.wikipedia.org/wiki/Predicate_(mathematical_logic).\n\n\nWikipedia contributors. 2026j. Proposition — Wikipedia, the Free Encyclopedia. https://en.wikipedia.org/wiki/Proposition."
+  },
+  {
+    "objectID": "chapters/propositional-logic.html",
+    "href": "chapters/propositional-logic.html",
+    "title": "Propositional Logic",
+    "section": "",
+    "text": "NoteSource\n\n\n\n\n\nAdapted from Kameron Decker Harris’s Fall 2026 lecture notes “Logic 1” and “Logic 2”, which he typeset from Scott Wehrwein’s Spring 2025 handwritten lecture notes. The examples of propositions, the truth tables to decode, the list of English phrasings of a conditional, and the “only if” example come from those notes; the other exercises are new.\nThe definitions are included from the mathematics prerequisites notes, so they read the same in both places.",
+    "crumbs": [
+      "Home",
+      "Propositional Logic"
+    ]
+  },
+  {
+    "objectID": "chapters/propositional-logic.html#sec-evaluating",
+    "href": "chapters/propositional-logic.html#sec-evaluating",
+    "title": "Propositional Logic",
+    "section": "2.1 Evaluating compound propositions",
+    "text": "2.1 Evaluating compound propositions\n\n\n\n\n\n\n\nExercise 3 (Evaluate a compound proposition) Suppose \\(P\\) is true, \\(Q\\) is false, and \\(R\\) is false. Is \\((\\neg P \\lor Q) \\land \\neg R\\) true or false?\n\n\n\n\n\n\n\n\n\n\nSolutionSolution\n\n\n\n\n\n\nSolution 3. Substitute the truth values, then evaluate from the innermost parentheses outward:\n\\[\n\\begin{aligned}\n(\\neg P \\lor Q) \\land \\neg R\n&= (\\neg \\mathrm{T} \\lor \\mathrm{F}) \\land \\neg \\mathrm{F} \\\\\n&= (\\mathrm{F} \\lor \\mathrm{F}) \\land \\mathrm{T} \\\\\n&= \\mathrm{F} \\land \\mathrm{T} \\\\\n&= \\mathrm{F}\n\\end{aligned}\n\\]\nThe proposition is false.\n\n\n\n\n\n\n\n\n\n\n\nExercise 4 (Evaluate another compound proposition) With the same truth values as Exercise 3 (\\(P\\) true, \\(Q\\) false, \\(R\\) false), is \\(\\neg (P \\land Q) \\lor R\\) true or false?\n\n\n\n\n\n\n\n\n\n\nSolutionSolution\n\n\n\n\n\n\nSolution 4. \\[\n\\begin{aligned}\n\\neg (P \\land Q) \\lor R\n&= \\neg (\\mathrm{T} \\land \\mathrm{F}) \\lor \\mathrm{F} \\\\\n&= \\neg \\mathrm{F} \\lor \\mathrm{F} \\\\\n&= \\mathrm{T} \\lor \\mathrm{F} \\\\\n&= \\mathrm{T}\n\\end{aligned}\n\\]\nThe proposition is true.",
+    "crumbs": [
+      "Home",
+      "Propositional Logic"
+    ]
+  },
+  {
+    "objectID": "chapters/propositional-logic.html#sec-truth-tables",
+    "href": "chapters/propositional-logic.html#sec-truth-tables",
+    "title": "Propositional Logic",
+    "section": "2.2 Truth tables",
+    "text": "2.2 Truth tables\n\n\n\n\n\n\n\nExercise 5 (How many cases?) Exercise 4 found the truth value of \\(\\neg (P \\land Q) \\lor R\\) for one choice of truth values of \\(P\\), \\(Q\\) and \\(R\\). How many different choices are there?\n\n\n\n\n\n\n\n\n\n\nSolutionSolution\n\n\n\n\n\n\nSolution 5. Each of \\(P\\), \\(Q\\) and \\(R\\) is either true or false, independently of the other two, so there are \\(2 \\times 2 \\times 2 = 2^3 = 8\\) choices. With \\(n\\) propositions there are \\(2^n\\).\n\n\n\n\n\n\n\n\n\n\n\nDefinition 7 (Truth table) A truth table for a proposition built from \\(P_1, \\ldots, P_n\\) with logical connectives (Definition 3) has one row for each of the \\(2^n\\) combinations of truth values of \\(P_1, \\ldots, P_n\\), and gives the truth value of the proposition in each row.\n\n\n\n\n\n\n\n\n\n\n\nExercise 6 (A truth table with three propositions) Make a truth table (Definition 7) for \\(\\neg (P \\land Q) \\lor R\\).\n\n\n\n\n\n\nTipHint\n\n\n\nAdd columns for the pieces, \\(P \\land Q\\) and \\(\\neg (P \\land Q)\\), before the last column.\n\n\n\n\n\n\n\n\n\n\n\n\nSolutionSolution\n\n\n\n\n\n\nSolution 6. \n\n\n\n\n\n\n\n\n\n\n\n\\(P\\)\n\\(Q\\)\n\\(R\\)\n\\(P \\land Q\\)\n\\(\\neg (P \\land Q)\\)\n\\(\\neg (P \\land Q) \\lor R\\)\n\n\n\n\nT\nT\nT\nT\nF\nT\n\n\nT\nT\nF\nT\nF\nF\n\n\nT\nF\nT\nF\nT\nT\n\n\nT\nF\nF\nF\nT\nT\n\n\nF\nT\nT\nF\nT\nT\n\n\nF\nT\nF\nF\nT\nT\n\n\nF\nF\nT\nF\nT\nT\n\n\nF\nF\nF\nF\nT\nT\n\n\n\nThe proposition is false in only one row: \\(P\\) and \\(Q\\) true, and \\(R\\) false. The fourth row is the case in Exercise 4.",
+    "crumbs": [
+      "Home",
+      "Propositional Logic"
+    ]
+  },
+  {
+    "objectID": "chapters/propositional-logic.html#sec-converse",
+    "href": "chapters/propositional-logic.html#sec-converse",
+    "title": "Propositional Logic",
+    "section": "3.1 The converse",
+    "text": "3.1 The converse\n\n\n\n\n\n\n\nExercise 9 (Reverse an implication) For all real numbers \\(x\\) and \\(y\\), “if \\(x = y\\), then \\(x^2 = y^2\\)” is true. Is “if \\(x^2 = y^2\\), then \\(x = y\\)” also true for all real numbers \\(x\\) and \\(y\\)?\n\n\n\n\n\n\n\n\n\n\nSolutionSolution\n\n\n\n\n\n\nSolution 9. No. Take \\(x = 1\\) and \\(y = -1\\). Then \\(x^2 = 1 = y^2\\), so the premise is true, but \\(x \\ne y\\), so the conclusion is false.\nSwapping the premise and the conclusion of a true implication can give a false one.\n\n\n\n\n\n\n\n\n\n\n\nDefinition 9 (Converse) The converse (Wikipedia contributors 2026b) of the proposition “if \\(P\\), then \\(Q\\)” is the proposition “if \\(Q\\), then \\(P\\)”.",
+    "crumbs": [
+      "Home",
+      "Propositional Logic"
+    ]
+  },
+  {
+    "objectID": "chapters/propositional-logic.html#sec-conditionals-english",
+    "href": "chapters/propositional-logic.html#sec-conditionals-english",
+    "title": "Propositional Logic",
+    "section": "3.2 Conditionals in English",
+    "text": "3.2 Conditionals in English\n\n\n\n\n\n\n\nExercise 10 (“Only if”) Rewrite “I go to class only if I am healthy” in the form “if \\(P\\), then \\(Q\\)”.\n\n\n\n\n\n\n\n\n\n\nSolutionSolution\n\n\n\n\n\n\nSolution 10. “If I go to class, then I am healthy.”\nThe sentence says that going to class requires being healthy, so whenever I go to class, I am healthy. It does not say “if I am healthy, then I go to class”; that is its converse (Definition 9), and a healthy person may still skip class.\nIn general, “\\(P\\) only if \\(Q\\)” means \\(P \\Rightarrow Q\\).\n\n\n\n\n\n\n\n\n\n\n\nRemark 5 (English phrasings of \\(P \\Rightarrow Q\\)). Each of these sentences means \\(P \\Rightarrow Q\\):\n\nIf \\(P\\), then \\(Q\\).\n\\(Q\\) if \\(P\\).\n\\(Q\\) whenever \\(P\\).\n\\(Q\\), provided that \\(P\\).\nWhenever \\(P\\), then also \\(Q\\).\n\\(P\\) is a sufficient condition for \\(Q\\).\nFor \\(Q\\), it is sufficient that \\(P\\).\n\\(Q\\) is a necessary condition for \\(P\\).\nFor \\(P\\), it is necessary that \\(Q\\).\n\\(P\\) only if \\(Q\\).",
+    "crumbs": [
+      "Home",
+      "Propositional Logic"
+    ]
+  }
+]
