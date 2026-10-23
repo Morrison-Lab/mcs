@@ -1,0 +1,11 @@
+::: {#rem-set-counterexample}
+#### Disproving a claim about all sets
+
+A claim of the form "for all sets $A$, $B$, ..., some equation holds"
+is disproved by one choice of sets for which it fails (@def-disproof).
+Small sets, such as $\emptyset$ and $\set{1}$, are a good place to look.
+A Venn diagram (@def-venn-diagram) can suggest where to look:
+shade each side, find a region shaded on one side only,
+and put an element in that region.
+
+:::

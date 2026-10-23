@@ -1,0 +1,12 @@
+::: {#exm-cartesian-cancel}
+#### Why $C$ must not be empty
+
+The condition $C \ne \emptyset$ in @thm-cartesian-cancel is needed.
+Let $A = \set{1}$, $B = \set{2}$ and $C = \emptyset$.
+A pair in $A \times C$ would need a second entry in $C$, and $C$ has none,
+so $A \times C = \emptyset$, and likewise $B \times C = \emptyset$.
+So $A \times C = B \times C$, but $A \ne B$.
+
+The proof uses the condition in its first step, to find an element $c \in C$.
+
+:::

@@ -1,0 +1,35 @@
+::: {#thm-cartesian-cancel}
+#### Cancelling a factor of a Cartesian product
+
+Let $A$, $B$ and $C$ be sets with $C \ne \emptyset$.
+If $A \times C = B \times C$, then $A = B$ (@def-cartesian-product).
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Suppose $A \times C = B \times C$.
+Since $C \ne \emptyset$, there is some $c \in C$ (@def-empty-set).
+
+($\subseteq$)
+Let $a \in A$.
+Then $(a, c) \in A \times C$.
+Since $A \times C = B \times C$, also $(a, c) \in B \times C$,
+so $(a, c) = (b, c')$ for some $b \in B$ and $c' \in C$ (@def-cartesian-product).
+Two ordered pairs are equal only when their first entries are equal (@def-ordered-pair),
+so $a = b$, and $a \in B$.
+
+($\supseteq$)
+Let $b \in B$.
+Then $(b, c) \in B \times C = A \times C$,
+so $b \in A$, by the same steps with $A$ and $B$ swapped.
+
+So $A = B$ (@thm-double-inclusion).
+
+:::
+
+:::

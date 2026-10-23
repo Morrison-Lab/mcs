@@ -1,0 +1,24 @@
+::: {#rem-subset-template}
+#### The shape of a subset proof
+
+By @def-subset, $A \subseteq B$ means the conditional
+"if $a \in A$, then $a \in B$" is true for every $a$.
+So a proof of $A \subseteq B$ is a proof of that conditional,
+either directly (@def-direct-proof):
+
+> | Suppose $a \in A$.
+> | $\vdots$
+> | Therefore $a \in B$.
+> | So $A \subseteq B$.
+
+or by contrapositive (@def-proof-by-contrapositive):
+
+> | Suppose $a \notin B$.
+> | $\vdots$
+> | Therefore $a \notin A$.
+> | So $A \subseteq B$.
+
+The element $a$ is arbitrary: the proof may use only that $a \in A$ (or that $a \notin B$),
+nothing else about it.
+
+:::

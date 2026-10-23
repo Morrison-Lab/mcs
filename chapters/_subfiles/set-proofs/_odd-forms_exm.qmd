@@ -1,0 +1,26 @@
+::: {#exm-odd-forms}
+#### Two kinds of odd number
+
+Claim:
+$\set{4k + 1 : k \in \mathbb{Z}} \cup \set{4k + 3 : k \in \mathbb{Z}} = \set{2m + 1 : m \in \mathbb{Z}}$.
+
+($\subseteq$)
+Let $x$ be in the left-hand side.
+If $x = 4k + 1$ for some integer $k$, then $x = 2(2k) + 1$.
+If $x = 4k + 3$ for some integer $k$, then $x = 2(2k + 1) + 1$.
+Both $2k$ and $2k + 1$ are integers (@rem-integer-closure),
+so either way $x$ is in the right-hand side.
+
+($\supseteq$)
+Let $x = 2m + 1$ for some integer $m$.
+The integer $m$ is even or odd (@rem-integer-closure).
+
+- If $m$ is even, then $m = 2j$ for some integer $j$ (@def-even-odd),
+  so $x = 2(2j) + 1 = 4j + 1$, and $x \in \set{4k + 1 : k \in \mathbb{Z}}$.
+- If $m$ is odd, then $m = 2j + 1$ for some integer $j$ (@def-odd),
+  so $x = 2(2j + 1) + 1 = 4j + 3$, and $x \in \set{4k + 3 : k \in \mathbb{Z}}$.
+
+Either way, $x$ is in the left-hand side.
+So the two sets are equal (@thm-double-inclusion).
+
+:::

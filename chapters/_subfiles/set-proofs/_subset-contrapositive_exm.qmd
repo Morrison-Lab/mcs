@@ -1,0 +1,19 @@
+::: {#exm-subset-contrapositive}
+#### A subset proof by contrapositive
+
+Claim: $\set{(x, y) \in \reals \times \reals : x + y > 2} \subseteq \set{(x, y) \in \reals \times \reals : x > 1 \text{ or } y > 1}$.
+If two numbers add up to more than 2, at least one of them is more than 1.
+
+We use the contrapositive outline of @rem-subset-template.
+Suppose $p \notin \set{(x, y) \in \reals \times \reals : x > 1 \text{ or } y > 1}$.
+If $p$ is not a pair of real numbers, then $p$ is not in the left-hand set either,
+since every element of that set is a pair of real numbers.
+Otherwise $p = (a, b)$ with $a$ and $b$ real, and "$a > 1$ or $b > 1$" is false.
+By De Morgan's laws (@thm-de-morgan-logic), $a > 1$ is false and $b > 1$ is false, that is, $a \le 1$ and $b \le 1$, so $a + b \le 1 + 1 = 2$.
+So $p \notin \set{(x, y) \in \reals \times \reals : x + y > 2}$.
+So the left-hand set is a subset of the right-hand set.
+
+The contrapositive turns the conclusion "$x > 1$ or $y > 1$", which does not say which number is large,
+into the hypothesis "$a \le 1$ and $b \le 1$", which says something about both.
+
+:::

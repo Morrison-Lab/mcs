@@ -1,0 +1,21 @@
+::: {#exm-membership}
+#### A root of a polynomial
+
+Let $S = \set{x \in \reals : 2x^2 - x = 0}$.
+Then $\frac{1}{2} \in S$.
+
+The set has the form $\set{x \in A : P(x)}$, so there are two things to show
+(@rem-membership).
+First, $\frac{1}{2}$ is a real number.
+Second,
+
+$$
+\ba
+2 \paren{\frac{1}{2}}^2 - \frac{1}{2}
+&= 2 \cdot \frac{1}{4} - \frac{1}{2}
+\\&= \frac{1}{2} - \frac{1}{2}
+\\&= 0.
+\ea
+$$
+
+:::

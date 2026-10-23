@@ -1,0 +1,9 @@
+::: {#exr-set-absorption}
+#### Absorbing an intersection
+
+Let $A$ and $B$ be sets.
+Prove that $A \cup (A \cap B) = A$ (@def-union, @def-intersection).
+
+Hint: prove that each side is a subset of the other.
+
+:::

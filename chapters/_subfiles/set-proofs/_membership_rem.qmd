@@ -1,0 +1,16 @@
+::: {#rem-membership}
+#### What to show for membership
+
+To prove that $a$ is an element of a set,
+show that $a$ passes the set's test:
+
+- for $S = \set{x \in A : P(x)}$ (@def-set-builder), show that $a \in A$ and that $P(a)$ is true;
+- for $S = \set{x : P(x)}$, the same notation with no set $A$ named, show that $P(a)$ is true;
+- for $S = \set{f(k) : k \in A}$ (@def-set-builder-expression), find some $k \in A$ with $f(k) = a$.
+
+The last case is an existence proof,
+so it usually names the $k$ (@def-constructive-proof).
+To prove that $a \notin S$, prove the negation of the test,
+often by contradiction, as in @sol-three-k-plus-two.
+
+:::

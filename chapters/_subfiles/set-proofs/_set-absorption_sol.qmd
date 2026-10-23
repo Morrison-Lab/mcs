@@ -1,0 +1,20 @@
+::: {#sol-set-absorption}
+
+**$A \cup (A \cap B) \subseteq A$.**
+Let $x \in A \cup (A \cap B)$.
+Then $x \in A$ or $x \in A \cap B$.
+In the first case, $x \in A$.
+In the second case, $x \in A$ and $x \in B$, so again $x \in A$.
+Either way, $x \in A$ (@def-proof-by-cases).
+
+**$A \subseteq A \cup (A \cap B)$.**
+Let $x \in A$.
+Then "$x \in A$ or $x \in A \cap B$" is true,
+since its first part is true (@def-or),
+so $x \in A \cup (A \cap B)$.
+
+Each side is a subset of the other,
+so an element is in one side exactly when it is in the other,
+and the two sets are equal (@def-set).
+
+:::

@@ -1,0 +1,130 @@
+---
+title: "Proofs with Sets"
+subtitle: "Membership, subsets and set equality"
+format:
+  html: default
+  revealjs:
+    output-file: set-proofs-slides.html
+  pdf:
+    output-file: set-proofs-handout.pdf
+  docx:
+    output-file: set-proofs.docx
+---
+
+{{< include ../latex-macros/macros.qmd >}}
+
+::: {.callout-note appearance='simple' collapse=true}
+## Source
+
+Adapted from Kameron Decker Harris's Fall 2026 lecture notes "Proofs Involving Sets",
+which are typed transcriptions of Scott Wehrwein's Spring 2025 handwritten lecture notes.
+These come from those notes:
+
+- what to show to prove that an element is in a set given in set-builder notation;
+- the direct and contrapositive outlines of a subset proof;
+- proving set equality by proving that each set is a subset of the other;
+- the theorem that a nonempty factor cancels from both sides of an equation between Cartesian products,
+  with the proof of its first half.
+
+Everything else is new:
+the exercises, the other examples and theorems, the second half of that proof,
+the membership test for a set built with an expression,
+and the section on disproving a claim about sets.
+:::
+
+# Proving membership {#sec-membership}
+
+{{< include _subfiles/set-proofs/_three-k-plus-two_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/set-proofs/_three-k-plus-two_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/set-proofs/_membership_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/set-proofs/_membership_exm.qmd >}}
+
+# Proving a subset {#sec-subset-proofs}
+
+{{< include _subfiles/set-proofs/_disk-square_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/set-proofs/_disk-square_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/set-proofs/_subset-template_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/set-proofs/_subset-contrapositive_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/set-proofs/_subset-transitive_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/set-proofs/_subset-transitive_exm.qmd >}}
+
+# Proving set equality {#sec-set-equality}
+
+{{< include _subfiles/set-proofs/_set-absorption_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/set-proofs/_set-absorption_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/set-proofs/_double-inclusion_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/set-proofs/_double-inclusion_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/set-proofs/_odd-forms_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/set-proofs/_subset-intersection_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/set-proofs/_subset-intersection_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/set-proofs/_cartesian-cancel_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/set-proofs/_cartesian-cancel_exm.qmd >}}
+
+# Disproving a claim about sets {#sec-set-disproof}
+
+{{< include _subfiles/set-proofs/_difference-regroup_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/set-proofs/_difference-regroup_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/set-proofs/_set-counterexample_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/set-proofs/_union-cancel_exm.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

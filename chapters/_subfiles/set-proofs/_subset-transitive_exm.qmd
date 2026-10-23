@@ -1,0 +1,11 @@
+::: {#exm-subset-transitive}
+#### A chain of subsets
+
+Let $D$ be the disk of @exr-disk-square,
+and let $H = \set{(x, y) \in \reals \times \reals : x + y \le 2}$.
+@sol-disk-square shows that $D \subseteq [-1, 1] \times [-1, 1]$.
+Every point $(x, y)$ of $[-1, 1] \times [-1, 1]$ has $x \le 1$ and $y \le 1$, so $x + y \le 2$,
+and so $[-1, 1] \times [-1, 1] \subseteq H$.
+By @thm-subset-transitive, $D \subseteq H$.
+
+:::
