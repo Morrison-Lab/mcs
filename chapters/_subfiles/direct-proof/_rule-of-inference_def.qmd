@@ -1,0 +1,13 @@
+::: {#def-rule-of-inference}
+#### Rule of inference
+
+A **rule of inference** is a pattern of argument (@def-argument),
+written in terms of propositions $P, Q, \ldots$,
+whose premises logically entail its conclusion (@def-logical-entailment)
+whatever propositions are put in place of $P, Q, \ldots$.
+It is written with its premises above a line and its conclusion below:
+$$
+\frac{P_1, \ldots, P_n}{Q}.
+$$
+
+:::

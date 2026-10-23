@@ -1,0 +1,8 @@
+::: {#exm-proof-by-cases}
+#### Two cases
+
+@sol-consecutive-product is a proof by cases (@def-proof-by-cases):
+every integer is even or odd (@rem-integer-closure),
+so its two cases cover every integer $n$.
+
+:::

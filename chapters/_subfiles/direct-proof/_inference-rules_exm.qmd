@@ -1,0 +1,9 @@
+::: {#exm-inference-rules}
+#### Modus tollens on a slow page
+
+"If the cache is warm, then the page loads in under a second" and
+"the page did not load in under a second" together give
+"the cache is not warm",
+by modus tollens (@thm-inference-rules).
+
+:::

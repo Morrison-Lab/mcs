@@ -1,0 +1,9 @@
+::: {#rem-integer-closure}
+#### Facts about integers used without proof
+
+These notes use two facts about the integers (@def-integers) without proving them:
+
+- the sum, difference and product of two integers are integers;
+- every integer is even or odd (@def-even-odd, @def-odd), and none is both.
+
+:::

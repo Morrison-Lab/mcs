@@ -1,0 +1,9 @@
+::: {#def-divides}
+#### Divides
+
+Let $a$ and $b$ be integers (@def-integers).
+We say that $a$ **divides** $b$, written $a \mid b$,
+if $b = a c$ for some integer $c$.
+When $a$ does not divide $b$, we write $a \nmid b$.
+
+:::

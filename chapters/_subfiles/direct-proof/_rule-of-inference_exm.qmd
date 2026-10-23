@@ -1,0 +1,13 @@
+::: {#exm-rule-of-inference}
+#### Modus ponens
+
+Argument 1 of @exr-valid-arguments follows the pattern
+$$
+\frac{P \Rightarrow Q, \quad P}{Q},
+$$
+called modus ponens.
+It is a rule of inference (@def-rule-of-inference):
+by @sol-valid-arguments, its premises entail its conclusion
+for any propositions $P$ and $Q$, not only for tests and builds.
+
+:::

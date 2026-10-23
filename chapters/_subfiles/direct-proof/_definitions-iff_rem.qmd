@@ -1,0 +1,11 @@
+::: {#rem-definitions-iff}
+#### A definition's "if" means "if and only if"
+
+@def-even-odd says that $n$ is even "if" $n = 2k$ for some integer $k$,
+but it means "if and only if" (@def-iff):
+an integer is even exactly when it can be written as $2k$.
+So a proof can use a definition in both directions:
+to show that $n$ is even, write $n$ as $2k$;
+and from "$n$ is even", conclude that $n = 2k$ for some integer $k$.
+
+:::

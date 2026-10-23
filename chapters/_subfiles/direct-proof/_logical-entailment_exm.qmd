@@ -1,0 +1,10 @@
+::: {#exm-logical-entailment-arguments}
+#### Entailment in the deployment arguments
+
+In @exr-valid-arguments,
+the premises of arguments 1, 3 and 4 (@def-argument)
+logically entail their conclusions (@def-logical-entailment).
+The premises of argument 2 do not:
+the values $P$ false and $Q$ true make both premises true and the conclusion false.
+
+:::

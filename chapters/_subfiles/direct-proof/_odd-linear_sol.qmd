@@ -1,0 +1,12 @@
+::: {#sol-odd-linear}
+
+Suppose $n$ is an odd integer.
+By @def-odd, $n = 2 k + 1$ for some integer $k$.
+Then
+$$
+3 n + 5 = 3 (2 k + 1) + 5 = 6 k + 3 + 5 = 6 k + 8 = 2 (3 k + 4).
+$$
+Since $3 k + 4$ is an integer (@rem-integer-closure),
+$3 n + 5$ is even, by @def-even-odd.
+
+:::

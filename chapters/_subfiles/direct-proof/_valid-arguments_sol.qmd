@@ -1,0 +1,19 @@
+::: {#sol-valid-arguments}
+
+1. Yes.
+   $P \Rightarrow Q$ is false when $P$ is true and $Q$ is false (@def-implies),
+   so if $P \Rightarrow Q$ and $P$ are both true, $Q$ is true.
+2. No.
+   If the tests fail but someone deploys the build by hand,
+   $P$ is false and $Q$ is true.
+   Then $P \Rightarrow Q$ and $Q$ are both true, and $P$ is false.
+3. Yes.
+   $\neg Q$ is true, so $Q$ is false (@def-not).
+   If $P$ were true, $P \Rightarrow Q$ would be false,
+   so $P$ is false and $\neg P$ is true.
+4. Yes.
+   $\neg R$ is true, so $R$ is false (@def-not).
+   $P \lor R$ is true only if $P$ or $R$ is true (@def-or),
+   so $P$ is true.
+
+:::
