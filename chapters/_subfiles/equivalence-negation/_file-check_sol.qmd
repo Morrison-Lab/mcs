@@ -1,0 +1,7 @@
+::: {#sol-file-check}
+
+The program prints an error when the file does not exist
+or the file is not readable: $\neg E \lor \neg R$.
+$E \land R$ is false exactly when at least one of $E$ and $R$ is false.
+
+:::

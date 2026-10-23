@@ -1,0 +1,21 @@
+::: {#thm-negate-conditional}
+#### Negating a conditional
+
+For propositions $P$ and $Q$, $\neg (P \Rightarrow Q) \equiv P \land \neg Q$.
+
+:::
+
+{{< slidebreak >}}
+
+::: {.content-hidden when-format="revealjs"}
+
+::: proof
+
+By @def-implies, $P \Rightarrow Q$ is false exactly when $P$ is true and $Q$ is false,
+so $\neg (P \Rightarrow Q)$ is true exactly in that row.
+$P \land \neg Q$ is true exactly when $P$ is true and $\neg Q$ is true,
+which is the same row.
+
+:::
+
+:::

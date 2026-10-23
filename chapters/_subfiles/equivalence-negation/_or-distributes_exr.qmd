@@ -1,0 +1,9 @@
+::: {#exr-or-distributes}
+#### Does "or" distribute over "and"?
+
+In arithmetic, multiplication distributes over addition:
+$a (b + c) = a b + a c$.
+Use a truth table to decide whether "or" distributes over "and":
+is $A \lor (B \land C) \equiv (A \lor B) \land (A \lor C)$?
+
+:::

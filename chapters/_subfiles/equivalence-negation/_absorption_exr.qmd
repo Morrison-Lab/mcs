@@ -1,0 +1,12 @@
+::: {#exr-absorption}
+#### A rule with a redundant part
+
+A server grants access to a user who is an administrator,
+or who is an administrator and is on the office network.
+Let $P$ be "the user is an administrator"
+and $Q$ be "the user is on the office network".
+
+Make a truth table for $P \lor (P \land Q)$.
+In which rows does it have the same truth value as $P$?
+
+:::

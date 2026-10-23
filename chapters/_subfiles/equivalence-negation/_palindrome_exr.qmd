@@ -1,0 +1,17 @@
+::: {#exr-palindrome}
+#### Completing a palindrome
+
+Let $\Sigma^*$ be the set of strings of the letters a and b,
+including the empty string,
+and write $s t$ for string $s$ followed by string $t$.
+A palindrome is a string that reads the same forwards and backwards,
+such as abba.
+Consider
+$$
+\forall s \in \Sigma^*,\ \exists t \in \Sigma^*,\ s t \text{ is a palindrome}.
+$$
+
+1. Write its negation without putting $\neg$ in front of a quantifier.
+2. Which of the two is true?
+
+:::

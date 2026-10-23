@@ -1,0 +1,18 @@
+::: {#sol-palindrome}
+
+1. Apply @thm-negate-quantifiers twice, from the outside in.
+   First, the negation has the truth value of
+   $$
+   \exists s \in \Sigma^*,\ \neg (\exists t \in \Sigma^*,\ s t \text{ is a palindrome}),
+   $$
+   and then of
+   $$
+   \exists s \in \Sigma^*,\ \forall t \in \Sigma^*,\ s t \text{ is not a palindrome}.
+   $$
+   In English: some string cannot be made into a palindrome by adding letters at its end.
+2. The original is true, so the negation is false.
+   For any string $s$, let $t$ be $s$ written backwards;
+   then $s t$ reads the same backwards.
+   For example, for $s = \text{aab}$, $t = \text{baa}$ and $s t = \text{aabbaa}$.
+
+:::

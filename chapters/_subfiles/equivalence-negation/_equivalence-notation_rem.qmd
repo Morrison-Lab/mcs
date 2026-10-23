@@ -1,0 +1,12 @@
+::: {#rem-equivalence-notation}
+#### Notation for logical equivalence
+
+By @exr-absorption, $P \lor (P \land Q) \equiv P$.
+
+$A \equiv B$ is a claim about $A$ and $B$,
+not a new proposition built from them with a logical connective (@def-logical-connective).
+Some books write $A \Leftrightarrow B$ or $A \iff B$ for it instead,
+which is easy to confuse with the biconditional (@def-iff);
+these notes use $\equiv$.
+
+:::

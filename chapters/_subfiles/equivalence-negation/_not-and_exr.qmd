@@ -1,0 +1,12 @@
+::: {#exr-not-and}
+#### Not both
+
+A continuous integration server runs two test suites.
+Let $P$ be "the unit tests pass"
+and $Q$ be "the integration tests pass".
+
+Is "it is not the case that both suites pass", $\neg (P \land Q)$,
+logically equivalent (@def-logical-equivalence) to
+"neither suite passes", $\neg P \land \neg Q$?
+
+:::

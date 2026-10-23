@@ -1,0 +1,26 @@
+::: {#thm-negate-quantifiers}
+#### Negating a quantifier
+
+For a set $S$ and a predicate $P(x)$ (@def-predicate) whose domain is $S$:
+
+1. $\neg (\forall x \in S, P(x))$ and $\exists x \in S, \neg P(x)$ have the same truth value;
+2. $\neg (\exists x \in S, P(x))$ and $\forall x \in S, \neg P(x)$ have the same truth value.
+
+:::
+
+{{< slidebreak >}}
+
+::: {.content-hidden when-format="revealjs"}
+
+::: proof
+
+1. By @def-universal-quantifier,
+   $\forall x \in S, P(x)$ is false exactly when $P(x)$ is false for at least one $x$ in $S$,
+   which by @def-existential-quantifier is when $\exists x \in S, \neg P(x)$ is true.
+2. By @def-existential-quantifier,
+   $\exists x \in S, P(x)$ is false exactly when $P(x)$ is false for every $x$ in $S$,
+   which by @def-universal-quantifier is when $\forall x \in S, \neg P(x)$ is true.
+
+:::
+
+:::

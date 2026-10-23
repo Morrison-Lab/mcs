@@ -1,0 +1,20 @@
+::: {#rem-quantifier-de-morgan}
+#### De Morgan's laws for quantifiers
+
+These are often written $\neg \forall x, P(x) \equiv \exists x, \neg P(x)$
+and $\neg \exists x, P(x) \equiv \forall x, \neg P(x)$,
+but @def-logical-equivalence is about truth tables,
+and a quantified proposition has none,
+so @thm-negate-quantifiers states them as "same truth value"
+for every set $S$ and predicate $P(x)$.
+
+On a finite set $S = \{a, b\}$,
+$\forall x \in S, P(x)$ is $P(a) \land P(b)$
+and $\exists x \in S, P(x)$ is $P(a) \lor P(b)$,
+so @thm-negate-quantifiers is De Morgan's laws (@thm-de-morgan-logic)
+applied to $P(a)$ and $P(b)$.
+
+Racket shows the same pattern on a list:
+`(not (andmap even? (list 2 4 5)))` and `(ormap odd? (list 2 4 5))` both return `#t`.
+
+:::

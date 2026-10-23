@@ -1,0 +1,13 @@
+::: {#exr-file-check}
+#### When does the program complain?
+
+A program reads a file if the file exists and is readable,
+and prints an error otherwise.
+Let $E$ be "the file exists" and $R$ be "the file is readable".
+The program prints an error when $\neg (E \land R)$ is true.
+
+Describe when the program prints an error
+with a sentence that puts "not" only in front of $E$ or $R$,
+never in front of a compound proposition.
+
+:::
