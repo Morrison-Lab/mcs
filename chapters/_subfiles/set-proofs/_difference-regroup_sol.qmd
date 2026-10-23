@@ -1,0 +1,29 @@
+::: {#sol-difference-regroup}
+
+A counterexample (@def-counterexample) is one choice of $A$, $B$ and $C$ for which the two sides differ.
+Let $A = B = C = \set{1}$.
+Then
+
+$$
+\ba
+A - (B - C)
+&= \set{1} - (\set{1} - \set{1})
+\\&= \set{1} - \emptyset
+\\&= \set{1},
+\ea
+$$
+
+while
+
+$$
+\ba
+(A - B) - C
+&= (\set{1} - \set{1}) - \set{1}
+\\&= \emptyset - \set{1}
+\\&= \emptyset.
+\ea
+$$
+
+The two sides differ, so the claim is false.
+
+:::

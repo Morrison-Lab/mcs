@@ -1,0 +1,24 @@
+::: {#thm-double-inclusion}
+#### Equal sets are subsets of each other
+
+Let $A$ and $B$ be sets.
+Then $A = B$ if and only if $A \subseteq B$ and $B \subseteq A$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+By @def-set, $A = B$ means that every $x$ has $x \in A \Leftrightarrow x \in B$.
+By @thm-biconditional-split, that biconditional is the same as
+"$x \in A \Rightarrow x \in B$, and $x \in B \Rightarrow x \in A$".
+A conjunction is true for every $x$ exactly when each of its two parts is true for every $x$.
+The first conditional, for every $x$, is $A \subseteq B$ (@def-subset),
+and the second, for every $x$, is $B \subseteq A$.
+
+:::
+
+:::

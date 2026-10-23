@@ -1,0 +1,11 @@
+::: {#exm-subset-transitive}
+#### A chain of subsets
+
+@sol-between-roots shows that
+$\set{x \in \reals : x^2 - 3x + 2 < 0} \subseteq \set{x \in \reals : 0 < x < 3}$,
+and every real number between 0 and 3 is positive, so
+$\set{x \in \reals : 0 < x < 3} \subseteq \set{x \in \reals : x > 0}$.
+By @thm-subset-transitive,
+$\set{x \in \reals : x^2 - 3x + 2 < 0} \subseteq \set{x \in \reals : x > 0}$.
+
+:::

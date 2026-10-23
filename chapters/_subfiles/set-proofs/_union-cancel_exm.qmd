@@ -1,0 +1,12 @@
+::: {#exm-union-cancel}
+#### A union does not cancel
+
+Claim to disprove: for all sets $A$, $B$ and $C$,
+if $A \cup B = A \cup C$, then $B = C$.
+
+Let $A = \set{1}$, $B = \set{1}$ and $C = \emptyset$.
+Then $A \cup B = \set{1}$ and $A \cup C = \set{1}$, so $A \cup B = A \cup C$,
+but $B \ne C$.
+So the claim is false.
+
+:::

@@ -1,0 +1,7 @@
+::: {#exr-three-k-plus-two}
+#### In or out
+
+Let $T = \set{3k + 2 : k \in \mathbb{Z}}$ (@def-set-builder-expression).
+Prove that $17 \in T$ and that $19 \notin T$.
+
+:::

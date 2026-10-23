@@ -52,6 +52,8 @@ website:
         href: chapters/iff-existence-disproof.qmd
       - text: "Sets"
         href: chapters/sets.qmd
+      - text: "Proofs with Sets"
+        href: chapters/set-proofs.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mcs
@@ -78,6 +80,7 @@ website:
       - chapters/contrapositive-contradiction.qmd
       - chapters/iff-existence-disproof.qmd
       - chapters/sets.qmd
+      - chapters/set-proofs.qmd
 
 callouty-theorem:
   thm:

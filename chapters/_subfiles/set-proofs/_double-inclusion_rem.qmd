@@ -1,0 +1,20 @@
+::: {#rem-double-inclusion}
+#### The shape of a set equality proof
+
+By @thm-double-inclusion, a proof of $A = B$ has two parts,
+each a subset proof (@rem-subset-template):
+
+> | ($\subseteq$) Suppose $a \in A$.
+> | $\vdots$
+> | Therefore $a \in B$.
+> |
+> | ($\supseteq$) Suppose $a \in B$.
+> | $\vdots$
+> | Therefore $a \in A$.
+> |
+> | So $A = B$.
+
+This is the "if and only if" outline of @rem-iff-template,
+applied to $a \in A$ and $a \in B$.
+
+:::

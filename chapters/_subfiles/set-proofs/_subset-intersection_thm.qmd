@@ -1,0 +1,30 @@
+::: {#thm-subset-intersection}
+#### A subset is its own intersection
+
+Let $A$ and $B$ be sets.
+Then $A \subseteq B$ if and only if $A \cap B = A$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+($\Rightarrow$)
+Suppose $A \subseteq B$.
+We show $A \cap B = A$ with @thm-double-inclusion.
+If $x \in A \cap B$, then $x \in A$ (@def-intersection).
+If $x \in A$, then $x \in B$, since $A \subseteq B$,
+so $x \in A \cap B$.
+
+($\Leftarrow$)
+Suppose $A \cap B = A$, and let $x \in A$.
+Then $x \in A \cap B$, since the two sets are equal,
+so $x \in B$.
+So $A \subseteq B$.
+
+:::
+
+:::

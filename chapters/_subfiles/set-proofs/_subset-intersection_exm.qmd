@@ -1,0 +1,10 @@
+::: {#exm-subset-intersection}
+#### Intersecting with a larger set
+
+Let $B = \set{1, 2, 3, 4}$.
+
+- $\set{2, 4} \subseteq B$, and $\set{2, 4} \cap B = \set{2, 4}$, as @thm-subset-intersection says.
+- $\set{2, 5} \not\subseteq B$, since $5 \notin B$,
+  and $\set{2, 5} \cap B = \set{2}$, which is not $\set{2, 5}$.
+
+:::

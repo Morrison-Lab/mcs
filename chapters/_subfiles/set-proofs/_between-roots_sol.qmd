@@ -1,0 +1,16 @@
+::: {#sol-between-roots}
+
+Let $x \in \set{x \in \reals : x^2 - 3x + 2 < 0}$.
+Then $x$ is a real number, and $x^2 - 3x + 2 = (x - 1)(x - 2) < 0$.
+We show that $1 < x < 2$, by ruling out the other two cases (@def-proof-by-cases).
+
+- If $x \le 1$, then $x - 1 \le 0$ and $x - 2 < 0$,
+  so $(x - 1)(x - 2) \ge 0$, since the product of two numbers that are not positive is not negative.
+  That contradicts $(x - 1)(x - 2) < 0$.
+- If $x \ge 2$, then $x - 1 > 0$ and $x - 2 \ge 0$,
+  so $(x - 1)(x - 2) \ge 0$, again a contradiction.
+
+So $1 < x < 2$, and so $0 < x < 3$.
+So $x \in \set{x \in \reals : 0 < x < 3}$.
+
+:::

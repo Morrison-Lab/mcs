@@ -1,0 +1,22 @@
+::: {#thm-subset-transitive}
+#### Subsets of subsets
+
+Let $A$, $B$ and $C$ be sets.
+If $A \subseteq B$ and $B \subseteq C$, then $A \subseteq C$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Suppose $A \subseteq B$ and $B \subseteq C$, and let $a \in A$.
+Since $A \subseteq B$, $a \in B$ (@def-subset).
+Since $B \subseteq C$, $a \in C$.
+So every element of $A$ is in $C$, and $A \subseteq C$.
+
+:::
+
+:::

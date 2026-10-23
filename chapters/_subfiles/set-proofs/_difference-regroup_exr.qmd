@@ -1,0 +1,8 @@
+::: {#exr-difference-regroup}
+#### Regrouping differences
+
+Show that the claim
+"for all sets $A$, $B$ and $C$, $A - (B - C) = (A - B) - C$"
+is false (@def-set-difference).
+
+:::

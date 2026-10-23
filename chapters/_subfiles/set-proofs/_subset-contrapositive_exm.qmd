@@ -1,0 +1,22 @@
+::: {#exm-subset-contrapositive}
+#### A subset proof by contrapositive
+
+Claim: $\set{x \in \reals : x^3 + x > 0} \subseteq \set{x \in \reals : x > 0}$.
+
+We use the contrapositive outline of @rem-subset-template.
+Suppose $a \notin \set{x \in \reals : x > 0}$.
+If $a$ is not a real number, then $a$ is not in the left-hand set either,
+since every element of that set is a real number.
+Otherwise $a$ is a real number with $a \le 0$.
+Then $a^3 = a \cdot a^2 \le 0$, since $a \le 0$ and $a^2 \ge 0$, so
+
+$$
+a^3 + a \le 0 + 0 = 0.
+$$
+
+So $a \notin \set{x \in \reals : x^3 + x > 0}$.
+
+The direct outline would start from "$a^3 + a > 0$",
+and would have to get from a cubic back to $a$, which is harder.
+
+:::
