@@ -1,0 +1,10 @@
+::: {#exm-congruence}
+#### Congruences
+
+- By @sol-minus-eight,
+  $23 \equiv 8 \pmod{5}$, $38 \equiv 8 \pmod{5}$ and $-7 \equiv 8 \pmod{5}$,
+  but $50 \not\equiv 8 \pmod{5}$.
+- A 24-hour clock that reads $19$ shows the same hour as a 12-hour clock that reads $7$,
+  and $19 \equiv 7 \pmod{12}$, because $19 - 7 = 12 = 12 \cd 1$.
+
+:::

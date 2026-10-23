@@ -1,0 +1,16 @@
+::: {#sol-which-prime}
+
+- $51 = 3 \cd 17$, so $3$ divides $51$ (@def-divides).
+- $57 = 3 \cd 19$, so $3$ divides $57$.
+- $53$ is not divisible by $2$, $3$, $5$ or $7$, because it lies strictly between two multiples of each:
+  $2 \cd 26 = 52 < 53 < 54 = 2 \cd 27$,
+  $3 \cd 17 = 51 < 53 < 54 = 3 \cd 18$,
+  $5 \cd 10 = 50 < 53 < 55 = 5 \cd 11$, and
+  $7 \cd 7 = 49 < 53 < 56 = 7 \cd 8$.
+  A divisor $d$ of $53$ with $1 < d < 53$ would pair with $\frac{53}{d}$,
+  and one of the two would be at most $7$, because $8 \cd 8 = 64 > 53$.
+  It would be one of $2, \ldots, 7$,
+  and $4$ or $6$ would make $2$ a divisor too, since $2$ divides both (@exr-divides-transitive).
+  So $53$ has no positive divisors other than $1$ and $53$.
+
+:::

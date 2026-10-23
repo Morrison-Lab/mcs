@@ -1,0 +1,8 @@
+::: {#exm-prime}
+#### Prime and not prime
+
+- $2$, $3$, $5$, $7$, $11$ and $13$ are prime.
+- $9$ is not prime, because $3 \mid 9$, and $3$ is neither $1$ nor $9$.
+- $1$ is not prime, because @def-prime applies only to integers $n \ge 2$.
+
+:::

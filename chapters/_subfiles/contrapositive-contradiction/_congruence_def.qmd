@@ -1,0 +1,12 @@
+::: {#def-congruence}
+#### Congruence modulo $n$
+
+Let $a$ and $b$ be integers (@def-integers), and let $n$ be a positive integer.
+We say that $a$ is **congruent to $b$ modulo $n$**,
+written $a \equiv b \pmod{n}$,
+if $n \mid (a - b)$ (@def-divides)
+[@wikipedia_modular_arithmetic].
+When $a$ is not congruent to $b$ modulo $n$,
+we write $a \not\equiv b \pmod{n}$.
+
+:::

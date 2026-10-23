@@ -1,0 +1,26 @@
+::: {#sol-six-nine}
+
+Suppose there are integers $m$ and $n$ with $6m + 9n = 1$.
+Then
+
+$$
+\ba
+1
+&= 6m + 9n
+&& \text{(the assumption, read from right to left)}
+\\&= 3 (2m + 3n),
+&& \text{(distributive law, read from right to left)}
+\ea
+$$
+
+and $2m + 3n$ is an integer (@rem-integer-closure),
+so $3 \mid 1$ (@def-divides).
+
+But $3 \nmid 1$:
+since $3 \cd 0 = 0 < 1 < 3 = 3 \cd 1$,
+no integer $c$ has $3c = 1$.
+So $3 \mid 1$ and $3 \nmid 1$, which is impossible.
+The assumption must be false,
+so there are no integers $m$ and $n$ with $6m + 9n = 1$.
+
+:::

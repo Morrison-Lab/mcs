@@ -1,0 +1,6 @@
+::: {#exr-difference-squares}
+#### Squares one apart
+
+Prove that there are no positive integers $x$ and $y$ with $x^2 - y^2 = 1$.
+
+:::

@@ -1,0 +1,14 @@
+::: {#rem-contrapositive-template}
+#### The shape of a proof by contrapositive
+
+A proof by contrapositive (@def-proof-by-contrapositive) of "if $P$, then $Q$" has this shape:
+
+> | Suppose $\neg Q$.
+> | $\vdots$
+> | Therefore $\neg P$.
+
+Use it when $\neg Q$ gives you more to work with than $P$ does.
+In @exr-sum-odd, $\neg Q$ was the equation $x = y$,
+while $P$ said only that $x + y$ is odd.
+
+:::

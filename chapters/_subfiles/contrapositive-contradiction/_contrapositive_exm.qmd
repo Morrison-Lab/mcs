@@ -1,0 +1,11 @@
+::: {#exm-contrapositive}
+#### Contrapositives
+
+- The contrapositive of "if $x$ is a human, then $x$ is a mammal"
+  is "if $x$ is not a mammal, then $x$ is not a human".
+- In @exr-sum-odd, $P$ is "$x + y$ is odd" and $Q$ is "$x \ne y$".
+  The negation of $Q$ is "$x = y$" (@def-not),
+  so the contrapositive is "if $x = y$, then $x + y$ is not odd",
+  which is what @sol-sum-odd proved.
+
+:::

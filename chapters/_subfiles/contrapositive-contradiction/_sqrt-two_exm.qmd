@@ -1,0 +1,14 @@
+::: {#exm-sqrt-two-step}
+#### The step in the proof, on a fraction near $\sqrt{2}$
+
+The proof of @thm-sqrt-two turns a fraction $\frac{a}{b}$ into $\frac{2b - a}{a - b}$.
+Applied to $\frac{7}{5} = 1.4$, whose square is $\frac{49}{25} = 1.96$,
+it gives $\frac{10 - 7}{7 - 5} = \frac{3}{2} = 1.5$,
+whose square is $\frac{9}{4} = 2.25$.
+Neither fraction is exactly $\sqrt{2}$,
+and the step moved from denominator $5$ to the smaller denominator $2$.
+If some fraction were exactly $\sqrt{2}$,
+the step would give another fraction exactly equal to $\sqrt{2}$, with a smaller positive denominator,
+and a smallest positive denominator could not exist.
+
+:::

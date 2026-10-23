@@ -1,0 +1,8 @@
+::: {#exr-minus-eight}
+#### Differences divisible by five
+
+For each integer $a$ in the list $23$, $38$, $50$, $-7$,
+compute $a - 8$,
+and decide whether $5 \mid (a - 8)$ (@def-divides).
+
+:::

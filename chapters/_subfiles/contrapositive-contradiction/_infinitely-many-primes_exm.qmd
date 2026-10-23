@@ -1,0 +1,13 @@
+::: {#exm-euclid-number}
+#### The number $N$ in the proof
+
+The proof of @thm-infinitely-many-primes does not claim that $N$ is prime.
+
+- From the list $2, 3, 5$,
+  $N = 2 \cd 3 \cd 5 + 1 = 31$, which is prime.
+- From the list $2, 3, 5, 7, 11, 13$,
+  $N = 30030 + 1 = 30031 = 59 \cd 509$, which is not prime.
+  Its prime divisors $59$ and $509$ are not in the list,
+  which is what the proof needs: every list of primes misses some prime.
+
+:::

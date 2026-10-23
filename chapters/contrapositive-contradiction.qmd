@@ -1,0 +1,224 @@
+---
+title: "Contrapositive and Contradiction"
+subtitle: "Proving a statement by way of its negation"
+format:
+  html: default
+  revealjs:
+    output-file: contrapositive-contradiction-slides.html
+  pdf:
+    output-file: contrapositive-contradiction-handout.pdf
+  docx:
+    output-file: contrapositive-contradiction.docx
+---
+
+{{< include ../latex-macros/macros.qmd >}}
+
+::: {.callout-note appearance='simple' collapse=true}
+## Source
+
+Adapted from Kameron Decker Harris's Fall 2026 lecture notes
+"Contrapositive Proof" and "Proof by Contradiction",
+which he typeset from Scott Wehrwein's Spring 2025 handwritten lecture notes.
+These come from those notes:
+
+- the definition of congruence modulo $n$, and the point that it is not the mod operator;
+- the human and mammal illustration of a contrapositive;
+- the example of a product not divisible by $5$;
+- the truth table showing why a proof by contradiction works;
+- the outlines of a proof by contrapositive, a proof by contradiction,
+  and a proof of a conditional by contradiction;
+- the definition and examples of a prime number, and the fact that every integer above one has a prime divisor;
+- the statement that $\sqrt{2}$ is irrational (the proof here is different);
+- Euclid's proof that there are infinitely many primes.
+
+The exercises are new.
+
+The definitions of the contrapositive, proof by contrapositive, proof by contradiction,
+and rational and irrational numbers,
+their examples of a proof by contradiction and of rational and irrational numbers,
+and the theorem that a conditional is equivalent to its contrapositive,
+are included from the
+[mathematics prerequisites](https://morrison-lab.github.io/mds/) notes,
+so they read the same in both places.
+:::
+
+# Congruence modulo $n$ {#sec-congruence}
+
+{{< include _subfiles/contrapositive-contradiction/_minus-eight_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_minus-eight_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_congruence_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_congruence_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_congruence-notation_rem.qmd >}}
+
+# Proof by contrapositive {#sec-proof-by-contrapositive}
+
+{{< include _subfiles/contrapositive-contradiction/_sum-odd_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_sum-odd_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/proof-writing/_def-contrapositive.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_contrapositive_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/proof-writing/_thm-contrapositive.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_contrapositive-thm_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/proof-writing/_def-proof-by-contrapositive.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_proof-by-contrapositive_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_contrapositive-template_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_square-three_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_square-three_sol.qmd >}}
+
+# Proof by contradiction {#sec-proof-by-contradiction}
+
+{{< include _subfiles/contrapositive-contradiction/_six-nine_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_six-nine_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/proof-writing/_def-proof-by-contradiction.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/proof-writing/_exm-proof-by-contradiction.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_contradiction_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_contradiction-thm_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_contradiction-template_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_conditional-contradiction_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_conditional-contradiction_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_difference-squares_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_difference-squares_sol.qmd >}}
+
+# Irrational numbers {#sec-irrational}
+
+{{< include _subfiles/contrapositive-contradiction/_sqrt-bounds_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_sqrt-bounds_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/number-systems/_def-rational-numbers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/number-systems/_exm-rational-numbers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/number-systems/_def-irrational-numbers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/number-systems/_exm-irrational-numbers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_well-ordering_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_sqrt-two_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_sqrt-two_exm.qmd >}}
+
+# Infinitely many primes {#sec-primes}
+
+{{< include _subfiles/contrapositive-contradiction/_which-prime_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_which-prime_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_prime_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_prime_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_prime-divisor_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_infinitely-many-primes_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/contrapositive-contradiction/_infinitely-many-primes_exm.qmd >}}
+
+# Choosing a method {#sec-choosing-method}
+
+{{< include _subfiles/contrapositive-contradiction/_choosing-method_rem.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

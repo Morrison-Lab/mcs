@@ -1,0 +1,10 @@
+::: {#exr-sum-odd}
+#### An odd sum
+
+Let $x$ and $y$ be integers.
+Prove: if $x + y$ is odd, then $x \ne y$.
+
+First try a direct proof (@def-direct-proof), starting from "Suppose $x + y$ is odd."
+Then try starting from "Suppose $x = y$."
+
+:::
