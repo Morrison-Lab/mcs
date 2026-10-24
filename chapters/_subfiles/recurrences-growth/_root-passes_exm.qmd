@@ -1,0 +1,17 @@
+::: {#exm-root-passes}
+#### `root` takes $\Theta(\sqrt{n})$ steps
+
+The algorithm `root` of @exr-root-trace returns $r = \floor{\sqrt{n}}$ (@def-square-root), the largest integer whose square is at most $n$,
+and its body adds 1 to `r` on each pass, starting from 0.
+So on input $n$ the body runs exactly $\floor{\sqrt{n}}$ times.
+Let $f(n) = \floor{\sqrt{n}}$, for natural numbers $n$.
+
+- $f(n) \le \sqrt{n}$, so $f(n) = O(\sqrt{n})$ (@def-big-o) with witnesses (@def-witness) $c = 1$, $N = 1$.
+- $f(n) \ge 1$ since $n \ge 1$, and $\sqrt{n} < f(n) + 1 \le 2 f(n)$ by the definition of the floor (@def-floor),
+  so $f(n) > \frac{1}{2} \sqrt{n}$, and $f(n) = \Omega(\sqrt{n})$ (@def-big-omega) with $c = \frac{1}{2}$, $N = 1$.
+
+So $f(n) = \Theta(\sqrt{n})$ (@def-big-theta).
+Since $\sqrt{n} \le n$ for $n \ge 1$, the body of `root` runs no more times than the body of a loop with $n$ passes:
+on $n = 10^6$, its body runs $1000$ times.
+
+:::

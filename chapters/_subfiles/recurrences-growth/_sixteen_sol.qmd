@@ -1,0 +1,10 @@
+::: {#sol-sixteen}
+
+| $1$ | $\log_2 n$ | $n$ | $n \log_2 n$ | $n^2$ | $2^n$ | $n!$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 1 | 4 | 16 | 64 | 256 | 65536 | 20922789888000 |
+
+The values are already in increasing order.
+For $n!$, $1 \cdot 2 \cdots 16 = 20922789888000$, about $2 \times 10^{13}$.
+
+:::

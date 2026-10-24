@@ -1,0 +1,16 @@
+::: {#exr-table-loops}
+#### Printing a multiplication table
+
+The algorithm `table`, in the pseudocode of @rem-pseudocode, prints a multiplication table:
+
+```text
+procedure table(n)       // n is a natural number
+    for i := 1 to n
+        for j := 1 to n
+            print i * j
+```
+
+Here `print x` writes the value of `x` as output.
+How many times does the line `print i * j` run, as a function of $n$?
+
+:::

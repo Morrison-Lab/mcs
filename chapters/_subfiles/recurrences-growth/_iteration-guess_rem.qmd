@@ -1,0 +1,9 @@
+::: {#rem-iteration-guess}
+#### Iteration gives a guess
+
+In @exm-double-plus-power-iteration, the formula for general $k$ came from the three cases $k = 1, 2, 3$.
+Nothing proved that the pattern continues, so the closed form $b_n = n \cdot 2^n$ is still a guess.
+Induction (@def-proof-by-induction) turns such a guess into a theorem,
+with the recurrence relation in the inductive step.
+
+:::

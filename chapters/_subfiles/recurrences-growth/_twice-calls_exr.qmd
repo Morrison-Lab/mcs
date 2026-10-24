@@ -1,0 +1,16 @@
+::: {#exr-twice-calls}
+#### A function that calls itself twice
+
+This Racket function computes the double-minus-one sequence of @exm-doubling-sequence,
+but it finds $2 a_{n-1}$ as $a_{n-1} + a_{n-1}$, with two recursive calls:
+
+```racket
+(define (dm n)
+  (if (= n 0)
+      2
+      (- (+ (dm (- n 1)) (dm (- n 1))) 1)))
+```
+
+Write down every call of `dm` that running `(dm 2)` involves, counting `(dm 2)` itself, and the value that each call returns.
+
+:::

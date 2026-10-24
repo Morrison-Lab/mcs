@@ -1,0 +1,9 @@
+::: {#rem-size-step}
+#### The size of an input and a step
+
+To count the work an algorithm (@def-algorithm) does, we first fix two things:
+
+- the *size* of an input, such as the number of symbols in a string or the number of entries in an array;
+- what one *step* is, such as one comparison, one arithmetic operation or one call of a function.
+
+:::

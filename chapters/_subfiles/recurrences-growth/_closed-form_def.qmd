@@ -1,0 +1,9 @@
+::: {#def-closed-form}
+#### Closed form
+
+A **closed form** [@wikipedia_closed_form_expression] for a sequence $a_{n_0}, a_{n_0 + 1}, \ldots$ (@def-sequence)
+is a formula for $a_n$ that uses only $n$ and fixed numbers,
+combined by a fixed number of operations such as addition, multiplication, powers and floors (@def-floor),
+and that uses no other term of the sequence.
+
+:::

@@ -1,0 +1,11 @@
+::: {#rem-log-base}
+#### The base of a logarithm is a constant factor
+
+For every real number $x > 0$, let $y = \log_{10} x$ (@def-logarithm).
+Then $x = 10^y = \paren{2^{\log_2 10}}^y = 2^{y \log_2 10}$,
+so $\log_2 x = \log_2 10 \cdot \log_{10} x$.
+The factor $\log_2 10$, about 3.32, does not depend on $x$,
+so $\log_2 n = \Theta(\log_{10} n)$ (@def-big-theta), with $c = \log_2 10$ and $N = 1$ as witnesses (@def-witness) for both the big-O and the big-Omega bound.
+For this reason big-O bounds often write $\log n$ without a base.
+
+:::

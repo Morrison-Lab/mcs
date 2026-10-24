@@ -1,0 +1,15 @@
+::: {#exr-triple-plus-power-check}
+#### Checking a guess
+
+A sequence starts with $e_0 = 1$, and has the recurrence relation (@def-recurrence-relation)
+
+$$
+e_n = 3 e_{n-1} + 2^n
+\quad\text{for every integer } n \ge 1.
+$$
+
+Someone guesses the closed form (@def-closed-form) $e_n = 3^{n+1} - 2^{n+1}$.
+Find $e_1$, $e_2$ and $e_3$ from the recurrence relation,
+and check the guess for $n = 0, 1, 2, 3$.
+
+:::

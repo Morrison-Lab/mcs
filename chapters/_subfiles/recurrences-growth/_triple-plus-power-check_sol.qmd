@@ -1,0 +1,18 @@
+::: {#sol-triple-plus-power-check}
+
+From the recurrence relation,
+$e_1 = 3 \cdot 1 + 2 = 5$,
+$e_2 = 3 \cdot 5 + 4 = 19$
+and $e_3 = 3 \cdot 19 + 8 = 65$.
+
+| $n$ | 0 | 1 | 2 | 3 |
+|:---:|:---:|:---:|:---:|:---:|
+| $e_n$ | 1 | 5 | 19 | 65 |
+| $3^{n+1}$ | 3 | 9 | 27 | 81 |
+| $2^{n+1}$ | 2 | 4 | 8 | 16 |
+| $3^{n+1} - 2^{n+1}$ | 1 | 5 | 19 | 65 |
+
+The guess is right for $n = 0, 1, 2, 3$.
+Four cases do not prove it for every $n$.
+
+:::

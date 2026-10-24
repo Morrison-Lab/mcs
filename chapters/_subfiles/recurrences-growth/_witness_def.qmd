@@ -1,0 +1,9 @@
+::: {#def-witness}
+#### Witnesses
+
+A real number $c > 0$ and a natural number $N$ for which the inequality in @def-big-o holds for every natural number (@def-natural-numbers) $n \ge N$
+are a pair of **witnesses** for $f(n) = O(g(n))$.
+Witnesses for $f(n) = \Omega(g(n))$ are defined in the same way, from @def-big-omega.
+Some books write $n_0$ for $N$.
+
+:::

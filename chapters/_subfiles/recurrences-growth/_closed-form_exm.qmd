@@ -1,0 +1,10 @@
+::: {#exm-closed-form}
+#### Closed forms and recurrence relations
+
+The double-minus-one sequence of @exm-doubling-sequence has the recurrence relation (@def-recurrence-relation) $a_n = 2 a_{n-1} - 1$,
+which is not a closed form (@def-closed-form), since it uses the term $a_{n-1}$.
+By @thm-doubling-closed, $a_n = 2^n + 1$ is a closed form for the same sequence:
+it gives $a_{50} = 2^{50} + 1$ without finding $a_1$ through $a_{49}$ first.
+Finding a closed form for a sequence from its recurrence relation is called *solving* the recurrence relation.
+
+:::

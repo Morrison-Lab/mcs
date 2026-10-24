@@ -1,0 +1,24 @@
+::: {#exm-pal-big-o}
+#### The running time of `pal` is $O(n)$
+
+By @exm-pal-running-time, `pal` takes $T(n) = \floor{n / 2} + 1$ steps on a string of $n$ symbols.
+For every natural number $n \ge 2$,
+
+$$
+\ba
+\abs{T(n)}
+&= \floor{n / 2} + 1
+&& \text{(} T(n) > 0 \text{)}
+\\&\le n / 2 + 1
+&& \text{(definition of the floor)}
+\\&\le n / 2 + n / 2
+&& \text{(} 1 \le n / 2 \text{, since } n \ge 2 \text{)}
+\\&= n,
+\ea
+$$
+
+so $c = 1$ and $N = 2$ are witnesses (@def-witness) for $T(n) = O(n)$ (@def-big-o).
+At $n = 1$, also $T(1) = 1 \le 1$, so $c = 1$ and $N = 1$ are witnesses too.
+Witnesses are not unique: any larger $c$ or $N$ works as well.
+
+:::

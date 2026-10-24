@@ -1,0 +1,9 @@
+::: {#exr-substitute-once}
+#### Using the recurrence relation three times
+
+Let $b_0, b_1, \ldots$ be the sequence of @exm-double-plus-power-sequence, and let $n \ge 3$.
+Starting from $b_n = 2 b_{n-1} + 2^n$, replace $b_{n-1}$ by $2 b_{n-2} + 2^{n-1}$,
+and then replace $b_{n-2}$ by $2 b_{n-3} + 2^{n-2}$,
+to write $b_n$ in terms of $b_{n-3}$.
+
+:::

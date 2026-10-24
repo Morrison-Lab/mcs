@@ -1,0 +1,13 @@
+::: {#sol-not-big-o}
+
+We use proof by contradiction (@def-proof-by-contradiction).
+Suppose $n \cdot 2^n = O(2^n)$, with witnesses (@def-witness) $c > 0$ and $N$.
+Then $n \cdot 2^n \le c \cdot 2^n$ for every natural number $n \ge N$,
+and dividing by $2^n > 0$ gives $n \le c$ for every natural number $n \ge N$.
+
+Let $n = N + \floor{c} + 1$, where $\floor{c}$ is the floor (@def-floor) of $c$.
+Then $n$ is a natural number with $n \ge N$, so $n \le c$.
+But $\floor{c} + 1 > c$ by the definition of the floor, and $N \ge 1$, so $n > c$.
+This is a contradiction, so $n \cdot 2^n = O(2^n)$ is false.
+
+:::

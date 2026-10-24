@@ -1,0 +1,15 @@
+::: {#rem-count-loops}
+#### Counting the steps of loops
+
+To find the running time (@def-running-time) of an algorithm with loops:
+
+- a loop whose body takes the same number $s$ of steps on each of $p$ passes takes $p \cdot s$ steps,
+  so the steps of nested loops multiply, as in @sol-table-loops;
+- parts of an algorithm that run one after the other take the sum of their steps,
+  and @thm-sum-rule turns big-O bounds for the parts into a big-O bound for the sum.
+
+Each test of a loop's guard (@def-loop-guard) and each line of setup is also a step,
+but counting them too changes the count by at most a fixed multiple plus a fixed number,
+which does not change a $\Theta$ bound (@def-big-theta) on a count that is at least 1.
+
+:::

@@ -1,0 +1,40 @@
+::: {#exm-pal-running-time}
+#### The running time of `pal`
+
+Take the size (@rem-size-step) of the input of `pal` (@exr-palindrome-trace) to be the number $n$ of symbols in the string,
+and count each call of `pal` as one step,
+since apart from its recursive call each call does at most two comparisons.
+This assumes that the call on `s[2..n-1]` passes the shorter string as a pair of positions in `s`, which takes a fixed number of operations;
+copying its $n - 2$ symbols into a new string would add about $n$ steps to every call.
+Let $T(n)$ be the running time (@def-running-time).
+The running time of a call is the running time of its recursive call plus the work outside it.
+
+- When $n \le 1$, `pal` returns without calling itself, so $T(0) = T(1) = 1$.
+- When $n \ge 2$, the call that takes longest is one whose first and last symbols match,
+  since otherwise `pal` returns at once.
+  It calls `pal` on a string of $n - 2$ symbols, which can be any such string, so $T(n) = T(n - 2) + 1$.
+
+Iteration (@def-iteration) gives
+
+$$
+\ba
+T(n)
+&= T(n - 2) + 1
+\\&= T(n - 4) + 2
+\\&= T(n - 6) + 3,
+\ea
+$$
+
+and in general $T(n) = T(n - 2k) + k$, as long as $n - 2k \ge 0$.
+To reach an initial term, take $k = \floor{n / 2}$ (@def-floor):
+then $n - 2k$ is 0 when $n$ is even and 1 when $n$ is odd, and either way $T(n - 2k) = 1$.
+So the guess is
+
+$$
+T(n) = \floor{n / 2} + 1,
+$$
+
+which gives $T(8) = 5$, as in @sol-pal-calls.
+@thm-pal-running-time proves it.
+
+:::

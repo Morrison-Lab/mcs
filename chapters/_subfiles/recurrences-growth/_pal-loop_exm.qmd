@@ -1,0 +1,31 @@
+::: {#exm-pal-loop}
+#### A loop with the same recurrence as `pal`
+
+The algorithm `pal_loop` tests whether a string is a palindrome (@def-palindrome) with a loop instead of recursion:
+
+```text
+procedure pal_loop(s)    // s is a string s[1] s[2] ... s[n] of n symbols
+    i := 1
+    j := n
+    while i < j and s[i] = s[j]
+        i := i + 1
+        j := j - 1
+    return i >= j
+```
+
+The test `s[i] = s[j]` is made only when `i < j` is true.
+Let $L(n)$ be the largest number of passes through the body on a string of $n$ symbols.
+When $n \le 1$, the guard is false at once, so $L(0) = L(1) = 0$.
+When $n \ge 2$, the most passes come when the first and last symbols match;
+after the first pass, the loop then runs exactly as it would on the string $s[2..n-1]$ of $n - 2$ symbols,
+with every index one larger.
+So $L(n) = L(n - 2) + 1$, the same recurrence relation (@def-recurrence-relation) as for `pal` in @exm-pal-running-time,
+with initial terms one smaller.
+
+So $L(n) = \floor{n / 2}$ (@def-floor), by strong induction (@def-strong-induction) as in the proof of @thm-pal-running-time:
+if $n \le 1$, then $L(n) = 0 = \floor{n / 2}$,
+and if $n \ge 2$ and the formula holds for $n - 2$, then $L(n) = \floor{(n - 2) / 2} + 1 = \floor{n / 2} - 1 + 1 = \floor{n / 2}$.
+The guard is tested once more than the body runs, $\floor{n / 2} + 1$ times,
+which is the number of calls of `pal` by @thm-pal-running-time, and is $O(n)$ by @exm-pal-big-o.
+
+:::

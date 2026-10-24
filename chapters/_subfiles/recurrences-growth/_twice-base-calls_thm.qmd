@@ -1,0 +1,43 @@
+::: {#thm-twice-base-calls}
+#### Two calls of size $n - 1$ give $2^n$ base cases
+
+For every non-negative integer (@def-nonnegative-integers) $n$,
+the calls that `(dm n)` of @exr-twice-calls makes include exactly $2^n$ calls of `(dm 0)`,
+counting `(dm 0)` itself when $n = 0$.
+So, counting each call as one step, the running time (@def-running-time) of `dm` satisfies $T(n) \ge 2^n$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Let $B(n)$ be the number of calls of `(dm 0)` among the calls that `(dm n)` makes.
+Every call of `(dm n)` does the same work, so $B(n)$ depends only on $n$.
+When $n \ge 1$, `(dm n)` is not itself a call of `(dm 0)`, and it calls `(dm (- n 1))` twice, as in @sol-twice-calls, so
+
+$$
+B(0) = 1,
+\qquad
+B(n) = 2 B(n - 1)
+\quad\text{for } n \ge 1.
+$$
+
+We use induction (@def-proof-by-induction), following @rem-induction-template with $n_0 = 0$,
+with $P(n)$ the equation $B(n) = 2^n$.
+
+**Base case.**
+$B(0) = 1 = 2^0$.
+
+**Inductive step.**
+Let $k \ge 0$ be an integer, and suppose $B(k) = 2^k$.
+Then $B(k + 1) = 2 B(k) = 2 \cdot 2^k = 2^{k + 1}$.
+
+So $B(n) = 2^n$ for every non-negative integer $n$.
+Each of these calls is a step, so `(dm n)` takes at least $2^n$ steps.
+
+:::
+
+:::

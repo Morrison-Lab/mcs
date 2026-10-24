@@ -1,0 +1,36 @@
+::: {#thm-sum-rule}
+#### Sums of big-O functions
+
+Let $f$, $g$ and $h$ be functions (@def-function) from the natural numbers (@def-natural-numbers) to the real numbers (@def-real-numbers).
+If $f(n) = O(h(n))$ and $g(n) = O(h(n))$ (@def-big-o), then $f(n) + g(n) = O(h(n))$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Let $c_1$, $N_1$ be witnesses (@def-witness) for $f(n) = O(h(n))$,
+and $c_2$, $N_2$ witnesses for $g(n) = O(h(n))$.
+Let $N$ be the larger of $N_1$ and $N_2$.
+The triangle inequality [@wikipedia_triangle_inequality] says that $\abs{x + y} \le \abs{x} + \abs{y}$ for all real numbers $x$ and $y$.
+For every natural number $n \ge N$, both $n \ge N_1$ and $n \ge N_2$ hold, so
+
+$$
+\ba
+\abs{f(n) + g(n)}
+&\le \abs{f(n)} + \abs{g(n)}
+&& \text{(triangle inequality)}
+\\&\le c_1 \abs{h(n)} + c_2 \abs{h(n)}
+&& \text{(} n \ge N_1 \text{ and } n \ge N_2 \text{)}
+\\&= (c_1 + c_2) \abs{h(n)}.
+\ea
+$$
+
+So $c_1 + c_2$ and $N$ are witnesses for $f(n) + g(n) = O(h(n))$.
+
+:::
+
+:::

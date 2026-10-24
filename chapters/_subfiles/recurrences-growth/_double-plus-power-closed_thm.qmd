@@ -1,0 +1,43 @@
+::: {#thm-double-plus-power-closed}
+#### A closed form for $b_n = 2 b_{n-1} + 2^n$
+
+Let $b_0, b_1, \ldots$ be the sequence with $b_0 = 0$ and $b_n = 2 b_{n-1} + 2^n$ for every integer $n \ge 1$
+(@exm-double-plus-power-sequence).
+Then $b_n = n \cdot 2^n$ for every non-negative integer (@def-nonnegative-integers) $n$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+We use induction (@def-proof-by-induction), following @rem-induction-template with $n_0 = 0$.
+Let $P(n)$ be the equation $b_n = n \cdot 2^n$.
+
+**Base case.**
+$b_0 = 0 = 0 \cdot 2^0$.
+
+**Inductive step.**
+Let $k \ge 0$ be an integer, and suppose $P(k)$: $b_k = k \cdot 2^k$.
+The goal $P(k + 1)$ is $b_{k + 1} = (k + 1) \cdot 2^{k + 1}$.
+Since $k + 1 \ge 1$, the recurrence relation gives $b_{k + 1}$, and
+
+$$
+\ba
+b_{k + 1}
+&= 2 b_k + 2^{k + 1}
+&& \text{(recurrence relation)}
+\\&= 2 \cdot k \cdot 2^k + 2^{k + 1}
+&& \text{(induction hypothesis)}
+\\&= k \cdot 2^{k + 1} + 2^{k + 1}
+\\&= (k + 1) \cdot 2^{k + 1}.
+\ea
+$$
+
+So $P(k + 1)$ holds, and by induction $b_n = n \cdot 2^n$ for every non-negative integer $n$.
+
+:::
+
+:::

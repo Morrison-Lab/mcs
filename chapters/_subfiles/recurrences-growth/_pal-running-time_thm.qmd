@@ -1,0 +1,40 @@
+::: {#thm-pal-running-time}
+#### A closed form for the running time of `pal`
+
+Let $T(0) = T(1) = 1$ and $T(n) = T(n - 2) + 1$ for every integer $n \ge 2$, as in @exm-pal-running-time.
+Then $T(n) = \floor{n / 2} + 1$ (@def-floor) for every non-negative integer (@def-nonnegative-integers) $n$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+The recurrence relation uses $T(n - 2)$, not $T(n - 1)$, so we use strong induction (@def-strong-induction).
+Let $n \ge 0$ be an integer, and suppose $T(m) = \floor{m / 2} + 1$ for every integer $m$ with $0 \le m < n$.
+
+If $n \le 1$, then $T(n) = 1 = 0 + 1 = \floor{n / 2} + 1$.
+
+If $n \ge 2$, then $0 \le n - 2 < n$, and $\floor{(n - 2) / 2} = \floor{n / 2 - 1} = \floor{n / 2} - 1$,
+since subtracting the integer 1 from a real number subtracts 1 from its floor.
+So
+
+$$
+\ba
+T(n)
+&= T(n - 2) + 1
+&& \text{(recurrence relation)}
+\\&= \floor{(n - 2) / 2} + 1 + 1
+&& \text{(strong induction hypothesis)}
+\\&= \floor{n / 2} - 1 + 2
+\\&= \floor{n / 2} + 1.
+\ea
+$$
+
+So the formula holds for $n$, and by strong induction it holds for every non-negative integer $n$.
+
+:::
+
+:::

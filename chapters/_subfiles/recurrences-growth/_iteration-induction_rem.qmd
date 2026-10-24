@@ -1,0 +1,10 @@
+::: {#rem-iteration-induction}
+#### Finding a closed form, then proving it
+
+Iteration (@def-iteration) and checking small cases, as in @exr-triple-plus-power-check, find a closed form (@def-closed-form) to try.
+Induction proves it, as in @thm-double-plus-power-closed and @thm-triple-plus-power-closed,
+or shows that it is wrong, as in @exm-wrong-guess.
+A proof by induction needs the closed form before it starts:
+it can check a formula, but it cannot find one.
+
+:::

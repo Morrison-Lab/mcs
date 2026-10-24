@@ -1,0 +1,22 @@
+::: {#sol-twice-calls}
+
+`(dm 2)` calls `(dm 1)` twice, and each of those calls `(dm 0)` twice:
+
+```text
+(dm 2)
+  (dm 1)
+    (dm 0)  returns 2
+    (dm 0)  returns 2
+  returns 2 + 2 - 1 = 3
+  (dm 1)
+    (dm 0)  returns 2
+    (dm 0)  returns 2
+  returns 2 + 2 - 1 = 3
+returns 3 + 3 - 1 = 5
+```
+
+That is 7 calls, counting `(dm 2)` itself, and 4 of them are calls of `(dm 0)`.
+`(dm 2)` returns 5, which is $a_2$.
+The two calls of `(dm 1)` do exactly the same work.
+
+:::

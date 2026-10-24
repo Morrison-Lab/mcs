@@ -1,0 +1,43 @@
+::: {#thm-triple-plus-power-closed}
+#### A closed form for $e_n = 3 e_{n-1} + 2^n$
+
+Let $e_0, e_1, \ldots$ be the sequence with $e_0 = 1$ and $e_n = 3 e_{n-1} + 2^n$ for every integer $n \ge 1$.
+Then $e_n = 3^{n+1} - 2^{n+1}$, as guessed in @exr-triple-plus-power-check, for every non-negative integer (@def-nonnegative-integers) $n$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+We use induction (@def-proof-by-induction), following @rem-induction-template with $n_0 = 0$.
+Let $P(n)$ be the equation $e_n = 3^{n+1} - 2^{n+1}$.
+
+**Base case.**
+$e_0 = 1 = 3 - 2 = 3^1 - 2^1$.
+
+**Inductive step.**
+Let $k \ge 0$ be an integer, and suppose $P(k)$: $e_k = 3^{k+1} - 2^{k+1}$.
+The goal $P(k + 1)$ is $e_{k + 1} = 3^{k+2} - 2^{k+2}$.
+Since $k + 1 \ge 1$, the recurrence relation gives $e_{k + 1}$, and
+
+$$
+\ba
+e_{k + 1}
+&= 3 e_k + 2^{k + 1}
+&& \text{(recurrence relation)}
+\\&= 3 \paren{3^{k+1} - 2^{k+1}} + 2^{k + 1}
+&& \text{(induction hypothesis)}
+\\&= 3^{k+2} - 3 \cdot 2^{k+1} + 2^{k + 1}
+\\&= 3^{k+2} - 2 \cdot 2^{k+1}
+\\&= 3^{k+2} - 2^{k+2}.
+\ea
+$$
+
+So $P(k + 1)$ holds, and by induction $e_n = 3^{n+1} - 2^{n+1}$ for every non-negative integer $n$.
+
+:::
+
+:::

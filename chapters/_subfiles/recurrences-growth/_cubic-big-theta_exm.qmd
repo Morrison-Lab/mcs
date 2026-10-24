@@ -1,0 +1,9 @@
+::: {#exm-cubic-big-theta}
+#### $2 n^3 + 40 = \Theta(n^3)$
+
+By @exm-cubic-big-o, $2 n^3 + 40 = O(n^3)$,
+and by @exm-cubic-big-omega, $2 n^3 + 40 = \Omega(n^3)$.
+So $2 n^3 + 40 = \Theta(n^3)$ by @def-big-theta.
+The constant 40 and the factor 2 do not change how fast $2 n^3 + 40$ grows.
+
+:::

@@ -62,6 +62,8 @@ website:
         href: chapters/loop-invariants.qmd
       - text: "Recursion"
         href: chapters/recursion.qmd
+      - text: "Recurrences and Growth"
+        href: chapters/recurrences-growth.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mcs
@@ -93,6 +95,7 @@ website:
       - chapters/induction.qmd
       - chapters/loop-invariants.qmd
       - chapters/recursion.qmd
+      - chapters/recurrences-growth.qmd
 
 callouty-theorem:
   thm:

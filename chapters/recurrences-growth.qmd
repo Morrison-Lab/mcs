@@ -1,0 +1,256 @@
+---
+title: "Recurrence Relations and Growth Rates"
+subtitle: "Solving recurrence relations, running times, and big-O notation"
+format:
+  html: default
+  revealjs:
+    output-file: recurrences-growth-slides.html
+  pdf:
+    output-file: recurrences-growth-handout.pdf
+  docx:
+    output-file: recurrences-growth.docx
+---
+
+{{< include ../latex-macros/macros.qmd >}}
+
+::: {.callout-note appearance='simple' collapse=true}
+## Source
+
+The topics of this chapter follow the course calendar and Kameron Decker Harris's Fall 2026 lecture notes,
+which name recurrence relations and order of growth as the topics after recursive algorithms.
+One idea comes from those notes:
+the running time of a recursive function is the running time of its recursive call plus the work outside it.
+
+Everything else is new:
+the exercises, the examples, the algorithms `pal_loop`, `table` and `pairs`, the Racket functions, the theorems and their proofs.
+The algorithms `pal` and `root` come from earlier chapters of these notes.
+:::
+
+# Recurrence relations {#sec-recurrence-relations}
+
+{{< include _subfiles/recurrences-growth/_double-plus-power-terms_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_double-plus-power-terms_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_recurrence-relation_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_double-plus-power-sequence_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_closed-form_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_closed-form_exm.qmd >}}
+
+# Solving recurrence relations by iteration {#sec-iteration}
+
+{{< include _subfiles/recurrences-growth/_substitute-once_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_substitute-once_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_iteration_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_double-plus-power-iteration_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_iteration-guess_rem.qmd >}}
+
+# Checking a closed form by induction {#sec-closed-form-induction}
+
+{{< include _subfiles/recurrences-growth/_triple-plus-power-check_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_triple-plus-power-check_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_double-plus-power-closed_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_triple-plus-power-closed_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_wrong-guess_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_iteration-induction_rem.qmd >}}
+
+# Running times of recursive algorithms {#sec-recursive-running-time}
+
+{{< include _subfiles/recurrences-growth/_pal-calls_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_pal-calls_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_size-step_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_running-time_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_pal-running-time_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_pal-running-time_thm.qmd >}}
+
+# Two recursive calls {#sec-two-calls}
+
+{{< include _subfiles/recurrences-growth/_twice-calls_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_twice-calls_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_twice-base-calls_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_twice-fix_rem.qmd >}}
+
+# Asymptotic notation {#sec-asymptotic-notation}
+
+{{< include _subfiles/recurrences-growth/_linear-quadratic_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_linear-quadratic_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/growth-rates/_def-big-o.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_witness_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_pal-big-o_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_cubic-big-o_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/growth-rates/_def-big-omega.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_cubic-big-omega_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/growth-rates/_def-big-theta.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_cubic-big-theta_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_sum-rule_thm.qmd >}}
+
+# Disproving a bound {#sec-disproving-bounds}
+
+{{< include _subfiles/recurrences-growth/_not-big-o_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_not-big-o_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_disprove-big-o_rem.qmd >}}
+
+# Common growth rates {#sec-growth-rates}
+
+{{< include _subfiles/recurrences-growth/_sixteen_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_sixteen_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_logarithm_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_logarithm_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_log-base_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_factorial_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_factorial_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_growth-chain_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_growth-chain_rem.qmd >}}
+
+# Counting the steps of loops {#sec-loop-steps}
+
+{{< include _subfiles/recurrences-growth/_table-loops_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_table-loops_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_count-loops_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_loops-in-sequence_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_pal-loop_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recurrences-growth/_root-passes_exm.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
