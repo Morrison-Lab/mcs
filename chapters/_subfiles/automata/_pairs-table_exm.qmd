@@ -1,0 +1,14 @@
+::: {#exm-pairs-table}
+#### The table of the checker
+
+The state-transition table (@def-transition-table) of the DFA $A$ of @exm-pairs-dfa is
+
+| state | $\mathtt{a}$ | $\mathtt{b}$ |
+|:---|:---:|:---:|
+| $\to * \, q_0$ | $q_1$ | $q_0$ |
+| $q_1$ | $q_2$ | $q_0$ |
+| $q_2$ | $q_2$ | $q_2$ |
+
+The row of the dead state (@def-dead-state) $q_2$ is $q_2$ in every column.
+
+:::

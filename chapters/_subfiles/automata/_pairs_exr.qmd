@@ -1,0 +1,12 @@
+::: {#exr-pairs}
+#### Every a needs a b
+
+A program reads a string (@def-string) of the symbols $\mathtt{a}$ and $\mathtt{b}$,
+and must check that every $\mathtt{a}$ in it is immediately followed by a $\mathtt{b}$.
+Which of these strings pass the check?
+
+$$
+\mathtt{abab}, \quad \mathtt{aab}, \quad \mathtt{ba}, \quad \mathtt{bbab}, \quad \lambda
+$$
+
+:::

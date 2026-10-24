@@ -1,0 +1,30 @@
+::: {#exm-table-language}
+#### What the table's DFA accepts
+
+@fig-110 draws the DFA $W$ of @exr-table-trace.
+Its language (@def-automaton-language) is the set of strings over $\set{\mathtt{0}, \mathtt{1}}$
+that contain $\mathtt{110}$ as three symbols in a row.
+Each state records how much of $\mathtt{110}$ the last symbols read have matched:
+
+- $p_0$: none of it;
+- $p_1$: the last symbol read is a $\mathtt{1}$ that follows no other $\mathtt{1}$, the start of $\mathtt{110}$;
+- $p_2$: the last two symbols read are $\mathtt{11}$;
+- $p_3$: $\mathtt{110}$ has appeared, and $p_3$ is accepting, with both of its arrows leading back to it.
+
+A $\mathtt{0}$ read at $p_1$ goes back to $p_0$, since a string ending in $\mathtt{10}$ has matched none of $\mathtt{110}$,
+while a $\mathtt{1}$ read at $p_2$ stays at $p_2$, since a string ending in $\mathtt{111}$ still ends in $\mathtt{11}$.
+So $W$ accepts $\mathtt{0101100}$, as in @sol-table-trace, and rejects $\mathtt{101011}$, which does not contain $\mathtt{110}$.
+
+::: {#fig-110}
+
+![](../images/automata-110.png){fig-alt="Four circles in a row labeled p0, p1, p2 and p3.
+An arrow from the left, starting at no circle, points to p0.
+A curved arrow labeled 1 goes from p0 to p1, and a curved arrow labeled 0 goes from p1 back to p0.
+A straight arrow labeled 1 goes from p1 to p2, and a straight arrow labeled 0 goes from p2 to p3.
+p0 has a loop labeled 0, p2 has a loop labeled 1, and p3, a double circle, has a loop labeled 0,1." width="75%"}
+
+The DFA $W$, which accepts the strings that contain $\mathtt{110}$.
+
+:::
+
+:::

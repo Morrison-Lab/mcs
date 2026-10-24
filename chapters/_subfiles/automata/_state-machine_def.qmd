@@ -1,0 +1,16 @@
+::: {#def-state-machine}
+#### State machine
+
+A **state machine** $M = (S, \Sigma, \delta, s_0)$ consists of
+
+- a nonempty finite set $S$ (@def-set), whose elements are called *states*;
+- an alphabet $\Sigma$ (@def-alphabet), whose symbols are called *inputs*;
+- a function (@def-function) $\delta : S \times \Sigma \to S$ on the Cartesian product (@def-cartesian-product) $S \times \Sigma$,
+  called the *transition function*;
+- an *initial state* $s_0 \in S$.
+
+When $M$ is in state $s$ and reads the input $x$, it moves to the state $\delta(s, x)$.
+Names and tuples for these machines vary between sources:
+for example, the finite-state machines of [@wikipedia_finite_state_machine] also carry a set of final states in the tuple.
+
+:::

@@ -1,0 +1,12 @@
+::: {#def-dfa}
+#### Deterministic finite automaton (DFA)
+
+A **deterministic finite automaton**, or **DFA**, [@wikipedia_deterministic_finite_automaton]
+$M = (S, \Sigma, \delta, s_0, F)$ is a state machine $(S, \Sigma, \delta, s_0)$ (@def-state-machine)
+together with a subset (@def-subset) $F \subseteq S$, whose elements are called *accepting states*.
+Its state diagram is the state diagram (@def-state-diagram) of the state machine,
+with each accepting state drawn as a double circle.
+
+It is *deterministic* because each state and input give exactly one next state, $\delta(s, x)$.
+
+:::

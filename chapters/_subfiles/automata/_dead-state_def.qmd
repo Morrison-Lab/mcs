@@ -1,0 +1,7 @@
+::: {#def-dead-state}
+#### Dead state
+
+A **dead state** of a DFA $M = (S, \Sigma, \delta, s_0, F)$ (@def-dfa)
+is a state $d \notin F$ with $\delta(d, x) = d$ for every input $x \in \Sigma$.
+
+:::

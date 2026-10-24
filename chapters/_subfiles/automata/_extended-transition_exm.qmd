@@ -1,0 +1,29 @@
+::: {#exm-extended-transition}
+#### Unfolding the extended transition function
+
+For the door (@exm-door-machine), the recursive rule of @def-extended-transition peels off the last input three times:
+
+$$
+\ba
+\delta^*(\text{closed}, \mathtt{lou})
+&= \delta\paren{\delta^*(\text{closed}, \mathtt{lo}), \mathtt{u}}
+\\&= \delta\paren{\delta\paren{\delta^*(\text{closed}, \mathtt{l}), \mathtt{o}}, \mathtt{u}}
+\\&= \delta\paren{\delta\paren{\delta\paren{\delta^*(\text{closed}, \lambda), \mathtt{l}}, \mathtt{o}}, \mathtt{u}}.
+\ea
+$$
+
+The base case gives $\delta^*(\text{closed}, \lambda) = \text{closed}$,
+and then evaluating from the inside out,
+
+$$
+\ba
+\delta\paren{\delta\paren{\delta(\text{closed}, \mathtt{l}), \mathtt{o}}, \mathtt{u}}
+&= \delta\paren{\delta(\text{locked}, \mathtt{o}), \mathtt{u}}
+\\&= \delta(\text{locked}, \mathtt{u})
+\\&= \text{closed}.
+\ea
+$$
+
+So $\delta^*(\text{closed}, \mathtt{lou}) = \text{closed}$.
+
+:::

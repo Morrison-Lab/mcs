@@ -1,0 +1,9 @@
+::: {#def-accept}
+#### Accepting a string
+
+A DFA (@def-dfa) $M = (S, \Sigma, \delta, s_0, F)$ **accepts** a string $w \in \Sigma^*$ (@def-string) [@wikipedia_deterministic_finite_automaton]
+if $\delta^*(s_0, w) \in F$, where $\delta^*$ is the extended transition function (@def-extended-transition).
+Otherwise $M$ *rejects* $w$.
+By @thm-run-last, $M$ accepts $w$ exactly when the run (@def-run) of $M$ on $w$ ends at an accepting state.
+
+:::

@@ -1,0 +1,17 @@
+::: {#exr-table-trace}
+#### Reading a DFA from a table
+
+A DFA has states $p_0$, $p_1$, $p_2$ and $p_3$, inputs $\mathtt{0}$ and $\mathtt{1}$, initial state $p_0$ and one accepting state, $p_3$.
+Its transitions are given by this table, in which the entry in the row of a state and the column of an input
+is the state that the input leads to:
+
+| state | $\mathtt{0}$ | $\mathtt{1}$ |
+|:---:|:---:|:---:|
+| $p_0$ | $p_0$ | $p_1$ |
+| $p_1$ | $p_0$ | $p_2$ |
+| $p_2$ | $p_3$ | $p_2$ |
+| $p_3$ | $p_3$ | $p_3$ |
+
+Does this DFA accept the string $\mathtt{0101100}$?
+
+:::

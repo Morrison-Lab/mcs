@@ -1,0 +1,13 @@
+::: {#sol-pairs}
+
+The strings $\mathtt{abab}$ and $\mathtt{bbab}$ pass: each of their $\mathtt{a}$s has a $\mathtt{b}$ right after it.
+The empty string $\lambda$ passes too, since it has no $\mathtt{a}$ that could fail.
+The string $\mathtt{aab}$ fails, because its first $\mathtt{a}$ is followed by an $\mathtt{a}$,
+and $\mathtt{ba}$ fails, because its $\mathtt{a}$ is followed by nothing.
+
+To check a string from left to right, the program only has to remember one of three things about what it has read so far:
+that every $\mathtt{a}$ so far has its $\mathtt{b}$,
+that the last symbol was an $\mathtt{a}$ still waiting for its $\mathtt{b}$,
+or that the check has already failed.
+
+:::

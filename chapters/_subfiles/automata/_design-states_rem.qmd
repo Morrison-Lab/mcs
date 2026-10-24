@@ -1,0 +1,14 @@
+::: {#rem-design-states}
+#### Designing a DFA
+
+@sol-decimal-numeral follows a method that works for many languages (@def-formal-language):
+
+1. Read a string from left to right, and ask what has to be remembered about the part read so far to decide the rest.
+2. Make one state for each different thing to remember, and add a dead state (@def-dead-state) if a string can go wrong in a way that no later input repairs.
+3. Make a state accepting when the part read so far, on its own, is in the language.
+4. For each state and each input, decide which state the input leads to.
+5. Check the DFA on short strings that should be accepted and on short strings that should be rejected.
+
+A DFA has finitely many states, so this works only when finitely many things need to be remembered.
+
+:::

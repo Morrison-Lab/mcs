@@ -1,0 +1,20 @@
+::: {#exr-racket-step}
+#### One step in Racket
+
+In Racket, the table of the DFA $A$ (@exm-pairs-table) can be stored as a list with one list for each state,
+which starts with the state and goes on with a list `(x t)` for each input `x`, where `t` is the state that `x` leads to:
+
+```racket
+(define pairs-table
+  '((q0 (#\a q1) (#\b q0))
+    (q1 (#\a q2) (#\b q0))
+    (q2 (#\a q2) (#\b q2))))
+
+(define (step table s x)
+  (second (assoc x (rest (assoc s table)))))
+```
+
+Here `#\a` is the character a, and `assoc` is as in @exr-racket-assoc.
+What does `(step pairs-table 'q1 #\b)` return?
+
+:::

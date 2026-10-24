@@ -1,0 +1,34 @@
+::: {#exm-pairs-dfa}
+#### A DFA for every a needing a b
+
+@fig-pairs is the state diagram of the DFA (@def-dfa) $A = (S, \Sigma, \delta, q_0, F)$ with
+$S = \set{q_0, q_1, q_2}$, $\Sigma = \set{\mathtt{a}, \mathtt{b}}$, $F = \set{q_0}$ and
+
+$$
+\ba
+\delta(q_0, \mathtt{a}) &= q_1, & \delta(q_0, \mathtt{b}) &= q_0,
+\\
+\delta(q_1, \mathtt{a}) &= q_2, & \delta(q_1, \mathtt{b}) &= q_0,
+\\
+\delta(q_2, \mathtt{a}) &= q_2, & \delta(q_2, \mathtt{b}) &= q_2.
+\ea
+$$
+
+Its states are the three things to remember in @sol-pairs:
+$q_0$ for "every $\mathtt{a}$ so far has its $\mathtt{b}$",
+$q_1$ for "the last symbol was an $\mathtt{a}$ still waiting",
+and $q_2$ for "the check has failed".
+
+::: {#fig-pairs}
+
+![](../images/automata-pairs.png){fig-alt="Three circles in a row labeled q0, q1 and q2.
+An arrow from the left, starting at no circle, points to q0, which is drawn as a double circle.
+q0 has a loop labeled b.
+An arrow labeled a goes from q0 to q1, and an arrow labeled b goes back from q1 to q0.
+An arrow labeled a goes from q1 to q2, and q2 has a loop labeled a,b." width="70%"}
+
+The DFA $A$, which checks that every $\mathtt{a}$ is followed by a $\mathtt{b}$.
+
+:::
+
+:::

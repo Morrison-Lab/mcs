@@ -1,0 +1,33 @@
+::: {#exm-zeros-mod-3}
+#### Counting 0s modulo 3
+
+Consider the strings over $\set{\mathtt{0}, \mathtt{1}}$
+whose number of $\mathtt{0}$s leaves remainder 2 when it is divided by 3:
+2, 5, 8, and so on.
+To design a DFA (@def-dfa) whose language is this set of strings,
+it is enough to remember the remainder of the number of $\mathtt{0}$s read so far when it is divided by 3.
+So the DFA $T$ of @fig-zeros-mod-3 has three states, $t_0$, $t_1$ and $t_2$,
+with $t_k$ standing for "the remainder is $k$".
+A $\mathtt{1}$ does not change the count, so it keeps each state where it is.
+A $\mathtt{0}$ adds one to the count, so it moves $t_0$ to $t_1$, $t_1$ to $t_2$, and $t_2$ back to $t_0$.
+The initial state is $t_0$, since no $\mathtt{0}$s have been read, and $t_2$ is the one accepting state.
+
+The run (@def-run) of $T$ on $\mathtt{1001}$ is $t_0, t_0, t_1, t_2, t_2$, so $T$ accepts that string, which has two $\mathtt{0}$s.
+The run on $\mathtt{0100}$ is $t_0, t_1, t_1, t_2, t_0$, so $T$ rejects it, since it has three $\mathtt{0}$s.
+$T$ rejects $\lambda$, which has no $\mathtt{0}$s, and accepts $\mathtt{00000}$, which has five.
+No state of $T$ is a dead state (@def-dead-state),
+since $\delta(t_k, \mathtt{0})$ is a different state from $t_k$ for each $k$.
+
+::: {#fig-zeros-mod-3}
+
+![](../images/automata-zeros-mod-3.png){fig-alt="Three circles at the corners of a triangle: t0 at the bottom left, t1 at the top and t2 at the bottom right.
+An arrow from the left, starting at no circle, points to t0.
+t2 is a double circle.
+Each circle has a loop labeled 1.
+Arrows labeled 0 go from t0 to t1, from t1 to t2, and from t2 to t0." width="55%"}
+
+The DFA $T$, which accepts the strings whose number of $\mathtt{0}$s leaves remainder 2 when divided by 3.
+
+:::
+
+:::

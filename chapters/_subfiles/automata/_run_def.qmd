@@ -1,0 +1,16 @@
+::: {#def-run}
+#### Run
+
+Let $M = (S, \Sigma, \delta, s_0)$ be a state machine (@def-state-machine),
+let $s \in S$,
+and let $w = x_1 x_2 \cdots x_n$ be a string (@def-string) of $n \ge 0$ inputs $x_i \in \Sigma$.
+The **run** of $M$ on $w$ from $s$ [@wikipedia_deterministic_finite_automaton] is the sequence of states
+
+$$
+r_0, r_1, \ldots, r_n
+$$
+
+with $r_0 = s$ and $r_i = \delta(r_{i - 1}, x_i)$ for $i = 1, \ldots, n$.
+The run of $M$ on $w$, with no state named, is the run from the initial state $s_0$.
+
+:::

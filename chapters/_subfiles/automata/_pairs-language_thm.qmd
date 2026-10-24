@@ -1,0 +1,68 @@
+::: {#thm-pairs-language}
+#### The language of the a-and-b checker
+
+The language (@def-automaton-language) of the DFA $A$ of @exm-pairs-dfa is
+
+$$
+L(A) = \set{w \in \set{\mathtt{a}, \mathtt{b}}^* : \text{every } \mathtt{a} \text{ in } w \text{ is immediately followed by a } \mathtt{b}}.
+$$
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Sort the strings over $\set{\mathtt{a}, \mathtt{b}}$ into three classes:
+
+- class 0: no two $\mathtt{a}$s in a row, and not ending in $\mathtt{a}$;
+- class 1: no two $\mathtt{a}$s in a row, and ending in $\mathtt{a}$;
+- class 2: two $\mathtt{a}$s in a row somewhere.
+
+Every string is in exactly one class.
+A string has every $\mathtt{a}$ immediately followed by a $\mathtt{b}$ exactly when it is in class 0,
+since an $\mathtt{a}$ that is not followed by a $\mathtt{b}$ is followed either by an $\mathtt{a}$ (class 2) or by nothing (class 1).
+Let $P(w)$ be the statement
+
+$$
+\text{if } w \text{ is in class } k, \text{ then } \delta^*(q_0, w) = q_k.
+$$
+
+We prove $P(w)$ for every $w$ by structural induction (@def-structural-induction) on the recursive definition of strings (@def-string).
+
+**Base case.**
+The empty string $\lambda$ is in class 0,
+and $\delta^*(q_0, \lambda) = q_0$ (@def-extended-transition), so $P(\lambda)$ holds.
+
+**Inductive step.**
+Suppose $P(w)$, and let $x \in \set{\mathtt{a}, \mathtt{b}}$.
+By @def-extended-transition, $\delta^*(q_0, w x) = \delta\paren{\delta^*(q_0, w), x}$.
+We split into cases on the class of $w$.
+
+- **$w$ in class 0.**
+  By $P(w)$, $\delta^*(q_0, w) = q_0$.
+  Since $w$ does not end in $\mathtt{a}$, adding $x$ makes no two $\mathtt{a}$s in a row,
+  so $w x$ has none, as $w$ has none.
+  If $x = \mathtt{a}$, then $w x$ is in class 1, and $\delta(q_0, \mathtt{a}) = q_1$.
+  If $x = \mathtt{b}$, then $w x$ is in class 0, and $\delta(q_0, \mathtt{b}) = q_0$.
+- **$w$ in class 1.**
+  By $P(w)$, $\delta^*(q_0, w) = q_1$.
+  If $x = \mathtt{a}$, then $w x$ ends in two $\mathtt{a}$s, so it is in class 2, and $\delta(q_1, \mathtt{a}) = q_2$.
+  If $x = \mathtt{b}$, then $w x$ still has no two $\mathtt{a}$s in a row and ends in $\mathtt{b}$,
+  so it is in class 0, and $\delta(q_1, \mathtt{b}) = q_0$.
+- **$w$ in class 2.**
+  By $P(w)$, $\delta^*(q_0, w) = q_2$.
+  Then $w x$ has two $\mathtt{a}$s in a row too, so it is in class 2, and $\delta(q_2, x) = q_2$.
+
+In every case $\delta^*(q_0, w x) = q_k$ for the class $k$ of $w x$, so $P(w x)$ holds.
+By structural induction, $P(w)$ holds for every string $w$.
+
+Now let $w$ be any string, in class $k$.
+By $P(w)$, $\delta^*(q_0, w) = q_k$, and $A$ accepts $w$ (@def-accept) exactly when $q_k \in F = \set{q_0}$, that is, when $k = 0$.
+So $A$ accepts exactly the strings of class 0, which are the strings with every $\mathtt{a}$ immediately followed by a $\mathtt{b}$.
+
+:::
+
+:::

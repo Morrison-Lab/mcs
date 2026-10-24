@@ -1,0 +1,48 @@
+::: {#thm-run-last}
+#### A run ends where the extended transition function says
+
+Let $M = (S, \Sigma, \delta, s_0)$ be a state machine (@def-state-machine), let $s \in S$,
+and let $r_0, \ldots, r_n$ be the run (@def-run) of $M$ on a string $w = x_1 \cdots x_n$ from $s$.
+Then
+
+$$
+r_n = \delta^*(s, w),
+$$
+
+where $\delta^*$ is the extended transition function (@def-extended-transition).
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+We show, by induction (@def-proof-by-induction) on $k = 0, 1, \ldots, n$,
+that $r_k = \delta^*(s, x_1 \cdots x_k)$, where $x_1 \cdots x_0$ is the empty string $\lambda$.
+
+**Base case.**
+For $k = 0$, $r_0 = s = \delta^*(s, \lambda)$, by @def-run and the base case of @def-extended-transition.
+
+**Inductive step.**
+Suppose $r_{k - 1} = \delta^*(s, x_1 \cdots x_{k - 1})$ for some $k$ with $1 \le k \le n$.
+Then
+
+$$
+\ba
+r_k
+&= \delta(r_{k - 1}, x_k)
+&& \text{(definition of the run)}
+\\&= \delta\paren{\delta^*(s, x_1 \cdots x_{k - 1}), x_k}
+&& \text{(induction hypothesis)}
+\\&= \delta^*(s, x_1 \cdots x_{k - 1} x_k).
+&& \text{(recursive rule for } \delta^* \text{)}
+\ea
+$$
+
+By induction, the equation holds for every $k \le n$, and $k = n$ gives $r_n = \delta^*(s, w)$.
+
+:::
+
+:::

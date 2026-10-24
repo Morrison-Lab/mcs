@@ -1,0 +1,36 @@
+::: {#thm-run-walk}
+#### A run is the only walk that spells its string
+
+Let $M = (S, \Sigma, \delta, s_0)$ be a state machine (@def-state-machine), let $s \in S$,
+and let $w = x_1 \cdots x_n$ be a string over $\Sigma$.
+In the state diagram (@def-state-diagram) of $M$,
+there is exactly one walk (@def-walk) $v_0, e_1, v_1, \ldots, e_n, v_n$ from $s$ in which each edge $e_i$ is labeled $x_i$,
+and its vertices $v_0, v_1, \ldots, v_n$ are the run (@def-run) of $M$ on $w$ from $s$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Let $r_0, \ldots, r_n$ be the run of $M$ on $w$ from $s$.
+
+**There is such a walk.**
+For each $i = 1, \ldots, n$, the state diagram has an edge $e_i$ from $r_{i - 1}$ to $\delta(r_{i - 1}, x_i) = r_i$, labeled $x_i$.
+So $r_0, e_1, r_1, \ldots, e_n, r_n$ is a walk from $r_0 = s$ whose edges are labeled $x_1, \ldots, x_n$.
+
+**There is only one.**
+Let $v_0, e_1, v_1, \ldots, e_n, v_n$ be any walk from $s$ with each $e_i$ labeled $x_i$.
+We show, by induction (@def-proof-by-induction) on $k$, that $v_k = r_k$ for $k = 0, \ldots, n$.
+For $k = 0$, $v_0 = s = r_0$.
+Suppose $v_{k - 1} = r_{k - 1}$ for some $k$ with $1 \le k \le n$.
+The edge $e_k$ starts at $v_{k - 1} = r_{k - 1}$ and is labeled $x_k$,
+and the only such edge in the state diagram goes to $\delta(r_{k - 1}, x_k) = r_k$.
+So $v_k = r_k$.
+The edge $e_k$ is that one edge, so the edges of the two walks are the same too.
+
+:::
+
+:::
