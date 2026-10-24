@@ -6,7 +6,7 @@ What follows from what, and how to write it down
 
 Published
 
-Last modified: 2026-10-23 16:48:23 (PDT)
+Last modified: 2026-10-23 16:56:06 (PDT)
 
 > **NOTE:**
 >

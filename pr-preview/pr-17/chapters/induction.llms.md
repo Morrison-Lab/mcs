@@ -6,7 +6,7 @@ Ordinary and strong induction
 
 Published
 
-Last modified: 2026-10-23 16:48:23 (PDT)
+Last modified: 2026-10-23 16:56:06 (PDT)
 
 > **NOTE:**
 >
@@ -38,7 +38,7 @@ Last modified: 2026-10-23 16:48:23 (PDT)
 >
 > 2.  Suppose \\\frac{1}{1 \cdot 2} + \cdots + \frac{1}{k(k + 1)} = \frac{k}{k + 1}\\. Then
 >
->     \\ \begin{aligned} \frac{1}{1 \cdot 2} + \cdots + \frac{1}{k(k + 1)} + \frac{1}{(k + 1)(k + 2)} &= \frac{k}{k + 1} + \frac{1}{(k + 1)(k + 2)} && \text{(the supposition)} \\&= \frac{k(k + 2) + 1}{(k + 1)(k + 2)} && \text{(common denominator)} \\&= \frac{k^2 + 2k + 1}{(k + 1)(k + 2)} \\&= \frac{(k + 1)^2}{(k + 1)(k + 2)} && \text{(} k^2 + 2k + 1 = (k + 1)^2 \text{)} \\&= \frac{k + 1}{k + 2}, && \text{(cancel } k + 1 \text{)} \end{aligned} \\
+>     \\ \begin{aligned} & \frac{1}{1 \cdot 2} + \cdots + \frac{1}{k(k + 1)} + \frac{1}{(k + 1)(k + 2)} \\&= \frac{k}{k + 1} + \frac{1}{(k + 1)(k + 2)} && \text{(the supposition)} \\&= \frac{k(k + 2) + 1}{(k + 1)(k + 2)} && \text{(common denominator)} \\&= \frac{k^2 + 2k + 1}{(k + 1)(k + 2)} \\&= \frac{(k + 1)^2}{(k + 1)(k + 2)} && \text{(} k^2 + 2k + 1 = (k + 1)^2 \text{)} \\&= \frac{k + 1}{k + 2}, && \text{(cancel } k + 1 \text{)} \end{aligned} \\
 >
 >     which is the claim for \\k + 1\\.
 >
@@ -93,7 +93,7 @@ Last modified: 2026-10-23 16:48:23 (PDT)
 >
 > Starting from its left side,
 >
-> \\ \begin{aligned} 1 \cdot 2 + \cdots + k(k + 1) + (k + 1)(k + 2) &= \frac{k(k + 1)(k + 2)}{3} + (k + 1)(k + 2) && \text{(induction hypothesis)} \\&= \frac{k(k + 1)(k + 2) + 3(k + 1)(k + 2)}{3} && \text{(common denominator)} \\&= \frac{(k + 1)(k + 2)(k + 3)}{3}. && \text{(factor out } (k + 1)(k + 2) \text{)} \end{aligned} \\
+> \\ \begin{aligned} & 1 \cdot 2 + \cdots + k(k + 1) + (k + 1)(k + 2) \\&= \frac{k(k + 1)(k + 2)}{3} + (k + 1)(k + 2) && \text{(induction hypothesis)} \\&= \frac{k(k + 1)(k + 2) + 3(k + 1)(k + 2)}{3} && \text{(common denominator)} \\&= \frac{(k + 1)(k + 2)(k + 3)}{3}. && \text{(factor out } (k + 1)(k + 2) \text{)} \end{aligned} \\
 >
 > So \\P(k + 1)\\ holds, and by induction \\P(n)\\ holds for every natural number \\n\\.
 
