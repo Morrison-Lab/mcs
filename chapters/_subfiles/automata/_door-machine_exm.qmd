@@ -12,17 +12,20 @@ $$
 \ba
 \delta(\text{closed}, \mathtt{o}) &= \text{open},
 & \delta(\text{closed}, \mathtt{c}) &= \text{closed},
-& \delta(\text{closed}, \mathtt{l}) &= \text{locked},
+\\
+\delta(\text{closed}, \mathtt{l}) &= \text{locked},
 & \delta(\text{closed}, \mathtt{u}) &= \text{closed},
 \\
 \delta(\text{open}, \mathtt{o}) &= \text{open},
 & \delta(\text{open}, \mathtt{c}) &= \text{closed},
-& \delta(\text{open}, \mathtt{l}) &= \text{open},
+\\
+\delta(\text{open}, \mathtt{l}) &= \text{open},
 & \delta(\text{open}, \mathtt{u}) &= \text{open},
 \\
 \delta(\text{locked}, \mathtt{o}) &= \text{locked},
 & \delta(\text{locked}, \mathtt{c}) &= \text{locked},
-& \delta(\text{locked}, \mathtt{l}) &= \text{locked},
+\\
+\delta(\text{locked}, \mathtt{l}) &= \text{locked},
 & \delta(\text{locked}, \mathtt{u}) &= \text{closed}.
 \ea
 $$
