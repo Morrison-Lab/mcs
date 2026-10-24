@@ -33,6 +33,7 @@ RevealJS
 Rosen
 SERG
 Subgraph
+Subtree
 Surjective
 Syllabi
 TAs
@@ -86,5 +87,7 @@ rulesets
 subgraph
 subgraphs
 submodule
+subtree
+subtrees
 surjective
 tollens
