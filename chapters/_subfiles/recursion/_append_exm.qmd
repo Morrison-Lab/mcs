@@ -1,0 +1,25 @@
+::: {#exm-append}
+#### Appending `'(1 2)` and `'(3)`
+
+In Racket, the definition of append (@def-append) is
+
+```racket
+(define (app L M)
+  (if (empty? L)
+      M
+      (cons (first L) (app (rest L) M))))
+```
+
+The recursion takes `L` apart and leaves `M` alone:
+
+```text
+(app '(1 2) '(3))
+= (cons 1 (app '(2) '(3)))
+= (cons 1 (cons 2 (app '() '(3))))
+= (cons 1 (cons 2 '(3)))
+= '(1 2 3)
+```
+
+Racket's built-in `append` gives the same values.
+
+:::

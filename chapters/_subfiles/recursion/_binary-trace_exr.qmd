@@ -1,0 +1,26 @@
+::: {#exr-binary-trace}
+#### Tracing a recursive Racket function
+
+The Racket function `binary` takes a non-negative integer (@def-nonnegative-integers) `n`
+and returns a string:
+
+```racket
+(define (binary n)
+  (if (< n 2)
+      (number->string n)
+      (string-append (binary (quotient n 2))
+                     (number->string (remainder n 2)))))
+```
+
+Here
+
+- `(if test a b)` returns `a` when `test` is true and `b` when it is false;
+- `(quotient n 2)` is $\floor{n / 2}$, the floor (@def-floor) of $n / 2$;
+- `(remainder n 2)` is the remainder, 0 or 1, left after dividing `n` by 2;
+- `number->string` turns a number into the string of its digits;
+- `string-append` joins two strings into one.
+
+Run `(binary 6)` by hand:
+write down each call of `binary` that it makes, and the string that each call returns.
+
+:::

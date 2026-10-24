@@ -1,0 +1,8 @@
+::: {#exr-doubling-terms}
+#### Double and subtract one
+
+A sequence (@def-sequence) starts with $a_0 = 2$,
+and each later term is twice the term before it, minus 1.
+Find $a_1$, $a_2$, $a_3$, $a_4$ and $a_5$.
+
+:::

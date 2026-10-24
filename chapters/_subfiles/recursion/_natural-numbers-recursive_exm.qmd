@@ -1,0 +1,10 @@
+::: {#exm-natural-numbers-recursive}
+#### The natural numbers, defined recursively
+
+The natural numbers (@def-natural-numbers) are a recursively defined set (@def-recursive-set).
+The base case is $1 \in \Nat$,
+and the recursive rule is that if $n \in \Nat$, then $n + 1 \in \Nat$.
+The base case gives 1, one application of the rule gives $1 + 1 = 2$, a second gives $2 + 1 = 3$, and so on.
+The non-negative integers (@def-nonnegative-integers) have the same recursive rule, with the base case $0 \in \Nat_0$.
+
+:::

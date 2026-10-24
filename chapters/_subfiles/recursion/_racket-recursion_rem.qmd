@@ -1,0 +1,20 @@
+::: {#rem-racket-recursion}
+#### Three questions for writing a recursive function
+
+A Racket function that calls itself, such as `binary` in @exr-binary-trace,
+answers three questions:
+
+- **Base case.**
+  Which inputs does it answer directly?
+  For `binary`, the inputs 0 and 1, whose base-2 form is the single digit `"0"` or `"1"`.
+- **Recursive call.**
+  Which smaller input does it call itself on?
+  For `binary`, the input $\floor{n / 2}$, which is less than $n$ when $n \ge 2$.
+- **Combination.**
+  How does it turn the result of the recursive call into its own answer?
+  For `binary`, it puts the last base-2 digit of $n$, the remainder of $n$ divided by 2, after the result.
+
+The base case is the branch of the `if` that does not call the function,
+and the recursive call and the combination make up the other branch.
+
+:::

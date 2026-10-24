@@ -1,0 +1,14 @@
+::: {#exm-first-rest}
+#### Taking a list apart
+
+Let `L` be the list `'(7 2 9)` (@def-list), which @sol-cons-list builds as `(cons 7 (cons 2 (cons 9 empty)))`.
+Then
+
+- `(first L)` is `7`, and `(rest L)` is `'(2 9)`;
+- `(first (rest L))` is `2`;
+- `(rest (rest (rest L)))` is `empty`.
+
+`(first empty)` raises an error,
+since the empty list is not built by `cons` and has no first element.
+
+:::

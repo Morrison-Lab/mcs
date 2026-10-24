@@ -1,0 +1,76 @@
+::: {#thm-digit-count}
+#### The function $d$ counts digits
+
+Let $d$ be the function of @exm-digit-count.
+For every natural number $n$,
+
+$$
+10^{d(n) - 1} \le n < 10^{d(n)},
+$$
+
+so $n$ has exactly $d(n)$ decimal digits.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+A natural number $n$ has $m$ digits exactly when $10^{m - 1} \le n < 10^m$,
+since $10^{m - 1}$, which is 1 followed by $m - 1$ zeros, is the smallest natural number with $m$ digits,
+and $10^m$, which is 1 followed by $m$ zeros, is the smallest with $m + 1$.
+So the inequalities say that $n$ has $d(n)$ digits.
+
+The recursive rule uses $d\paren{\floor{n / 10}}$, not $d(n - 1)$,
+so we use strong induction (@def-strong-induction).
+Let $n$ be a natural number,
+and suppose the inequalities hold for every natural number less than $n$.
+
+If $n \le 9$, then $d(n) = 1$, and $10^0 = 1 \le n < 10 = 10^1$.
+
+If $n \ge 10$, let $q = \floor{n / 10}$.
+Then $q \le n / 10 < q + 1$, so $10q \le n < 10q + 10$.
+Also $q \ge 1$, since $n / 10 \ge 1$, and $q < n$,
+so $q$ is a natural number less than $n$, and by the strong induction hypothesis
+
+$$
+10^{d(q) - 1} \le q < 10^{d(q)}.
+$$
+
+The recursive rule gives $d(n) = 1 + d(q)$.
+For the lower bound,
+
+$$
+\ba
+n
+&\ge 10 q
+\\&\ge 10 \cdot 10^{d(q) - 1}
+&& \text{(strong induction hypothesis)}
+\\&= 10^{d(q)}
+\\&= 10^{d(n) - 1}.
+&& \text{(} d(n) = 1 + d(q) \text{)}
+\ea
+$$
+
+For the upper bound, $q$ and $10^{d(q)}$ are integers with $q < 10^{d(q)}$, so $q + 1 \le 10^{d(q)}$, and
+
+$$
+\ba
+n
+&< 10 (q + 1)
+\\&\le 10 \cdot 10^{d(q)}
+&& \text{(} q + 1 \le 10^{d(q)} \text{)}
+\\&= 10^{d(q) + 1}
+\\&= 10^{d(n)}.
+&& \text{(} d(n) = 1 + d(q) \text{)}
+\ea
+$$
+
+So the inequalities hold for $n$,
+and by strong induction they hold for every natural number $n$.
+
+:::
+
+:::

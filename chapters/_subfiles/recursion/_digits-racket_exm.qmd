@@ -1,0 +1,22 @@
+::: {#exm-digits-racket}
+#### Counting digits in Racket
+
+The recursive definition of $d$ in @exm-digit-count becomes a Racket function line by line:
+
+```racket
+(define (digits n)
+  (if (< n 10)
+      1
+      (+ 1 (digits (quotient n 10)))))
+```
+
+Following @rem-racket-recursion:
+
+- the base case answers 1 for every input less than 10;
+- the recursive call is `(digits (quotient n 10))`, on $\floor{n / 10}$, which is less than $n$;
+- the combination adds 1 to the result of the recursive call.
+
+`(digits 2026)` calls `(digits 202)`, `(digits 20)` and `(digits 2)` in turn, as in @exm-digit-count,
+and returns 4.
+
+:::

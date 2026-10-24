@@ -1,0 +1,8 @@
+::: {#def-floor}
+#### Floor
+
+The **floor** $\floor{x}$ of a real number (@def-real-numbers) $x$
+[@wikipedia_floor_ceiling]
+is the largest integer (@def-integers) that is at most $x$.
+
+:::

@@ -1,0 +1,31 @@
+::: {#exm-odd-set-odd}
+#### Every element of $S$ is odd
+
+Let $S$ be the set of @exr-odd-set.
+It is a recursively defined set (@def-recursive-set),
+with base case $1 \in S$
+and recursive rule that if $x \in S$, then $x + 2 \in S$ and $3x \in S$.
+We use structural induction (@def-structural-induction) to show that every element of $S$ is a positive odd (@def-even-odd) integer.
+
+**Base case.**
+The base case names 1, and $1 = 2 \cdot 0 + 1$ is positive and odd.
+
+**Inductive step.**
+Let $x \in S$ be a positive odd integer, so $x = 2j + 1$ for some integer $j \ge 0$.
+The recursive rule builds $x + 2$ and $3x$ from $x$, and
+
+$$
+\ba
+x + 2 &= 2(j + 1) + 1,
+\\ 3x &= 6j + 3 = 2(3j + 1) + 1,
+\ea
+$$
+
+which are positive and odd, since $j + 1$ and $3j + 1$ are non-negative integers.
+
+So every element of $S$ is a positive odd integer.
+Every positive odd integer $2j + 1$ is in $S$ too,
+since it comes from 1 by adding 2 a total of $j$ times.
+So $S$ is the set of positive odd integers, as @sol-odd-set found for the elements less than 12.
+
+:::

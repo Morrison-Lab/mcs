@@ -1,0 +1,33 @@
+::: {#exm-digit-count}
+#### Counting digits
+
+Define a function $d$ on the natural numbers (@def-natural-numbers) by
+
+$$
+d(n) =
+\begin{cases}
+1 & \text{if } n \le 9,
+\\ 1 + d\paren{\floor{n / 10}} & \text{if } n \ge 10,
+\end{cases}
+$$
+
+where $\floor{n / 10}$ is the floor (@def-floor) of $n / 10$, which is $n$ with its last decimal digit removed.
+The first line is the base case and the second is the recursive rule (@def-recursive-definition).
+For $n \ge 10$, the input $\floor{n / 10}$ is at least 1 and at most $n / 10$, which is less than $n$,
+so the recursive rule uses a smaller input, but usually not $n - 1$.
+For example,
+
+$$
+\ba
+d(2026)
+&= 1 + d(202)
+\\&= 1 + 1 + d(20)
+\\&= 1 + 1 + 1 + d(2)
+\\&= 1 + 1 + 1 + 1
+\\&= 4,
+\ea
+$$
+
+and 2026 has 4 digits.
+
+:::

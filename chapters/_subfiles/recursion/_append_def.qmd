@@ -1,0 +1,15 @@
+::: {#def-append}
+#### Appending two lists
+
+The **append** $\operatorname{app}(L, M)$ of two lists $L$ and $M$ (@def-list),
+the list of the elements of $L$ followed by the elements of $M$,
+is defined recursively on $L$:
+
+$$
+\ba
+\operatorname{app}(\mathtt{empty}, M) &= M,
+\\ \operatorname{app}\paren{\operatorname{cons}(x, L), M} &= \operatorname{cons}\paren{x, \operatorname{app}(L, M)}.
+\ea
+$$
+
+:::

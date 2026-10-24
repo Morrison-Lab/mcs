@@ -1,0 +1,14 @@
+::: {#exm-string}
+#### Building a string of DNA bases
+
+Let $\Sigma = \cb{\mathtt{A}, \mathtt{C}, \mathtt{G}, \mathtt{T}}$.
+The string $\mathtt{GAT}$ is in $\Sigma^*$ (@def-string), by three applications of the recursive rule:
+
+- $\lambda \in \Sigma^*$ and $\mathtt{G} \in \Sigma$, so $\lambda \mathtt{G} = \mathtt{G}$ is in $\Sigma^*$;
+- $\mathtt{G} \in \Sigma^*$ and $\mathtt{A} \in \Sigma$, so $\mathtt{GA} \in \Sigma^*$;
+- $\mathtt{GA} \in \Sigma^*$ and $\mathtt{T} \in \Sigma$, so $\mathtt{GAT} \in \Sigma^*$.
+
+The string $\mathtt{GAU}$ is not in $\Sigma^*$,
+since the rule adds only symbols of $\Sigma$, and $\mathtt{U} \notin \Sigma$.
+
+:::

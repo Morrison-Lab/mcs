@@ -1,0 +1,10 @@
+::: {#exm-palindrome}
+#### Some palindromes
+
+Over the alphabet of lowercase letters,
+$\mathtt{noon}$ and $\mathtt{racecar}$ are palindromes (@def-palindrome),
+and so is $\mathtt{abba}$, from @exr-palindrome.
+The string $\mathtt{recur}$ is not a palindrome: backward it reads $\mathtt{rucer}$.
+The empty string and every string of one symbol are palindromes.
+
+:::

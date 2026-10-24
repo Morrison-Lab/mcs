@@ -1,0 +1,21 @@
+::: {#exm-doubling-sequence}
+#### The double-minus-one sequence, defined recursively
+
+The sequence of @exr-doubling-terms has a recursive definition (@def-recursive-definition) with $n_0 = 0$.
+Its base case is
+
+$$
+a_0 = 2,
+$$
+
+and its recursive rule is
+
+$$
+a_n = 2 a_{n-1} - 1
+\quad\text{for every integer } n \ge 1.
+$$
+
+The recursive rule gives $a_n$ from the single value $a_{n-1}$ just before it,
+so this is a recursively defined sequence (@def-recursive-sequence) with $m = 1$.
+
+:::

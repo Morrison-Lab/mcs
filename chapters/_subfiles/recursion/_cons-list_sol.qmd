@@ -1,0 +1,11 @@
+::: {#sol-cons-list}
+
+Build the list from its last element forward:
+
+- `(cons 9 empty)` is `'(9)`;
+- `(cons 2 (cons 9 empty))` is `'(2 9)`;
+- `(cons 7 (cons 2 (cons 9 empty)))` is `'(7 2 9)`.
+
+So `'(7 2 9)` is `(cons 7 (cons 2 (cons 9 empty)))`.
+
+:::

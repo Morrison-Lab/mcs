@@ -1,0 +1,9 @@
+::: {#def-recursive-algorithm}
+#### Recursive algorithm
+
+An algorithm (@def-algorithm) is **recursive** [@wikipedia_recursion_computer_science] if it solves a problem
+by calling itself on smaller inputs of the same problem and using what those calls return.
+The inputs that it answers without calling itself are its base cases,
+as in @def-recursive-definition.
+
+:::

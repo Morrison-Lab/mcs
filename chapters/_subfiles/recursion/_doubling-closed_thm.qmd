@@ -1,0 +1,43 @@
+::: {#thm-doubling-closed}
+#### A formula for the double-minus-one sequence
+
+Let $a_0, a_1, \ldots$ be the sequence with $a_0 = 2$ and $a_n = 2 a_{n-1} - 1$ for every integer $n \ge 1$
+(@exm-doubling-sequence).
+Then $a_n = 2^n + 1$ for every non-negative integer $n$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+We use induction (@def-proof-by-induction), following @rem-induction-template with $n_0 = 0$.
+Let $P(n)$ be the equation $a_n = 2^n + 1$.
+
+**Base case.**
+$a_0 = 2 = 2^0 + 1$.
+
+**Inductive step.**
+Let $k \ge 0$ be an integer, and suppose $P(k)$: $a_k = 2^k + 1$.
+The goal $P(k + 1)$ is $a_{k + 1} = 2^{k + 1} + 1$.
+Since $k + 1 \ge 1$, the recursive rule gives $a_{k + 1}$, and
+
+$$
+\ba
+a_{k + 1}
+&= 2 a_k - 1
+&& \text{(recursive rule)}
+\\&= 2 \paren{2^k + 1} - 1
+&& \text{(induction hypothesis)}
+\\&= 2^{k + 1} + 2 - 1
+\\&= 2^{k + 1} + 1.
+\ea
+$$
+
+So $P(k + 1)$ holds, and by induction $a_n = 2^n + 1$ for every non-negative integer $n$.
+
+:::
+
+:::

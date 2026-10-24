@@ -1,0 +1,15 @@
+::: {#rem-structural-induction}
+#### Why structural induction works
+
+Every element of a recursively defined set (@def-recursive-set) comes from the base case
+by applying the recursive rule some number $k \ge 0$ of times.
+Let $Q(k)$ be the claim that every element built with $k$ applications of the rule has the property $P$.
+Strong induction (@def-strong-induction) on $k$ proves $Q(k)$ for every $k \ge 0$:
+
+- an element built with 0 applications is named by the base case, so it has $P$ by the base case of @def-structural-induction;
+- an element built with $k \ge 1$ applications comes, by its last application, from elements built with fewer applications,
+  which have $P$ by the strong induction hypothesis, so it has $P$ by the inductive step.
+
+So every element of the set has $P$.
+
+:::

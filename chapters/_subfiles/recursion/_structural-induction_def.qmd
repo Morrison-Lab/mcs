@@ -1,0 +1,13 @@
+::: {#def-structural-induction}
+#### Structural induction
+
+**Structural induction** [@wikipedia_structural_induction] is a way to prove that every element of a recursively defined set (@def-recursive-set)
+has a property $P$, in two steps:
+
+1. **Base case.**
+   Show that every element that the set's base case names has $P$.
+2. **Inductive step.**
+   Show that whenever the recursive rule builds a new element from elements that have $P$,
+   the new element has $P$ too.
+
+:::

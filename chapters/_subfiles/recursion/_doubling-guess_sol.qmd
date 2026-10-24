@@ -1,0 +1,11 @@
+::: {#sol-doubling-guess}
+
+| $n$ | 0 | 1 | 2 | 3 | 4 | 5 |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| $a_n$ | 2 | 3 | 5 | 9 | 17 | 33 |
+| $2^n$ | 1 | 2 | 4 | 8 | 16 | 32 |
+
+Each term is one more than the power below it, so a good guess is $a_n = 2^n + 1$.
+Six terms do not prove the guess for every $n$.
+
+:::

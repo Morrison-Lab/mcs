@@ -1,0 +1,8 @@
+::: {#def-palindrome}
+#### Palindrome
+
+A **palindrome** [@wikipedia_palindrome]
+is a string (@def-string) that reads the same backward as forward:
+its $i$th symbol equals its $i$th symbol from the end, for every $i$.
+
+:::
