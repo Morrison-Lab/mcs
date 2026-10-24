@@ -1,0 +1,21 @@
+::: {#exm-for-as-while}
+#### The guard of a `for` loop
+
+The guard (@def-loop-guard) of `root` (@exr-root-trace) is $(r + 1)^2 \le n$.
+
+A `for` loop is a `while` loop written more briefly.
+The loop on the left does the same thing as the loop on the right,
+provided the body changes neither `i` nor `b`:
+
+```text
+for i := a to b              i := a
+    body                     while i <= b
+                                 body
+                                 i := i + 1
+```
+
+So the guard of `for i := a to b` is $i \le b$,
+and the loop stops at the first test where $i = b + 1$,
+or at once if $a > b$.
+
+:::

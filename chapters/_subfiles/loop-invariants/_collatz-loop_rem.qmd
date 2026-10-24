@@ -1,0 +1,22 @@
+::: {#rem-collatz-loop}
+#### A loop nobody knows how to stop
+
+The process of @exm-collatz is the loop
+
+```text
+while n != 1
+    if n is even
+        n := n / 2
+    else
+        n := 3 * n + 1
+```
+
+on a positive integer $n$.
+Nobody knows whether it stops for every positive integer $n$:
+that is the Collatz conjecture [@wikipedia_collatz_conjecture].
+So nobody has found a loop variant (@def-loop-variant) for it,
+since @thm-variant-terminates would then prove that it always stops.
+Termination is a separate claim from what an invariant gives,
+and it can be the hard part.
+
+:::

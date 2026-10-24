@@ -1,0 +1,8 @@
+::: {#def-postcondition}
+#### Postcondition
+
+A **postcondition** of an algorithm is a condition on its input and its output
+that is required to be true when the algorithm stops,
+provided that its precondition (@def-precondition) was true when it started.
+
+:::

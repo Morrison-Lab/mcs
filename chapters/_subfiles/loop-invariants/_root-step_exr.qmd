@@ -1,0 +1,8 @@
+::: {#exr-root-step}
+#### One pass through the body of `root`
+
+In `root` (@exr-root-trace), suppose that at some test of the condition after `while`,
+`r` is an integer with $r^2 \le n$, and the condition $(r + 1)^2 \le n$ is true.
+Show that $r^2 \le n$ is true again at the next test.
+
+:::

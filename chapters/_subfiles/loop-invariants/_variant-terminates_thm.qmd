@@ -1,0 +1,39 @@
+::: {#thm-variant-terminates}
+#### A loop with a variant stops
+
+If a loop has a loop variant (@def-loop-variant) whose value at the first test of the guard is $v_0$,
+then the body runs at most $v_0$ times, and so the loop stops.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Write $v$ for the loop variant.
+For each non-negative integer $k$, let $P(k)$ be the claim
+
+> if the body runs at least $k$ times, then $v \le v_0 - k$ at the test that follows the first $k$ passes.
+
+We prove $P(k)$ for every $k \ge 0$ by induction (@def-proof-by-induction).
+
+**Base case.**
+The test that follows the first $0$ passes is the first test, where $v = v_0$.
+
+**Inductive step.**
+Let $k \ge 1$, suppose $P(k - 1)$ holds, and suppose the body runs at least $k$ times.
+By $P(k - 1)$, $v \le v_0 - (k - 1)$ at the test that follows the first $k - 1$ passes.
+The $k$th pass makes the integer $v$ smaller, so it lowers $v$ by at least 1,
+and $v \le v_0 - k$ at the next test.
+So $P(k)$ holds.
+
+Now suppose the body runs at least $k$ times.
+By $P(k)$, $v \le v_0 - k$ at the test that follows the first $k$ passes,
+and $v \ge 0$ at every test, so $0 \le v_0 - k$, that is, $k \le v_0$.
+So the body cannot run $v_0 + 1$ times.
+
+:::
+
+:::

@@ -1,0 +1,22 @@
+::: {#rem-invariant-parts}
+#### The three parts of a loop invariant proof
+
+A proof that an algorithm with one loop is correct (@def-correct-algorithm) usually names a statement $I$ and shows three things.
+
+**Initialization.**
+Assuming the precondition, $I$ is true at the first test of the guard.
+
+**Maintenance.**
+If $I$ and the guard are both true at a test, then $I$ is true at the next test.
+
+**Termination.**
+The loop stops, and when it stops, $I$ together with the guard being false implies the postcondition.
+
+Initialization and maintenance are the two hypotheses of @thm-loop-invariant,
+and they play the roles of the base case and the inductive step of a proof by induction (@def-proof-by-induction).
+The theorem then says that $I$ is a loop invariant,
+so the proof does not have to repeat the induction each time.
+Termination is the part an induction proof does not have:
+the theorem says what is true *if* the loop stops, not that it does.
+
+:::

@@ -1,0 +1,20 @@
+::: {#exr-halving-stops}
+#### A loop that halves
+
+The algorithm `halvings` takes a natural number (@def-natural-numbers) $n$
+and counts how many times $n$ can be halved, rounding down, before it reaches 1:
+
+```text
+procedure halvings(n)    // n is a natural number
+    k := n
+    c := 0
+    while k >= 2
+        k := floor(k / 2)
+        c := c + 1
+    return c
+```
+
+Here `floor(x)` is the largest integer that is at most `x`.
+Explain why the loop stops for every natural number $n$.
+
+:::

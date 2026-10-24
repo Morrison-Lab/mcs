@@ -1,0 +1,7 @@
+::: {#def-precondition}
+#### Precondition
+
+A **precondition** of an algorithm (@def-algorithm) is a condition on its input
+that the algorithm assumes is true when it starts.
+
+:::

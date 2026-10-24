@@ -1,0 +1,16 @@
+::: {#sol-root-trace}
+
+| Test | `r` | $(r + 1)^2$ | $(r + 1)^2 \le 20$? |
+|:----:|:---:|:-----------:|:-------------------:|
+| 1    | 0   | 1           | true                |
+| 2    | 1   | 4           | true                |
+| 3    | 2   | 9           | true                |
+| 4    | 3   | 16          | true                |
+| 5    | 4   | 25          | false               |
+
+The condition is false at the fifth test, so the loop stops there,
+and `root(20)` returns 4.
+The answer satisfies $4^2 = 16 \le 20 < 25 = 5^2$:
+4 is the largest integer whose square is at most 20.
+
+:::

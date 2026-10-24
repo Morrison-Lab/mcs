@@ -1,0 +1,14 @@
+::: {#rem-inner-first}
+#### Proving a nested loop correct
+
+A loop inside another loop gets its own loop invariant (@def-loop-invariant).
+The proof usually goes from the inside out:
+
+1. prove the inner loop's invariant, using the outer loop's invariant at the test where the inner loop starts;
+2. read off what the inner loop has done when it stops;
+3. use that in the maintenance step of the outer loop's invariant.
+
+Each `for` loop is a `while` loop (@exm-for-as-while),
+so each invariant is a statement about the tests of that loop's guard.
+
+:::

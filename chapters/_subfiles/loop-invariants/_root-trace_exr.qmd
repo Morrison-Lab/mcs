@@ -1,0 +1,19 @@
+::: {#exr-root-trace}
+#### Tracing a square-root loop
+
+The algorithm `root` takes a non-negative integer (@def-nonnegative-integers) $n$:
+
+```text
+procedure root(n)        // n is a non-negative integer
+    r := 0
+    while (r + 1) * (r + 1) <= n
+        r := r + 1
+    return r
+```
+
+Run `root(20)` by hand.
+Each time the condition after `while` is tested,
+write down the value of `r` and whether the condition is true,
+and say which number `root(20)` returns.
+
+:::

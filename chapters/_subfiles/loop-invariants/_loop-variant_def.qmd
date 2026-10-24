@@ -1,0 +1,9 @@
+::: {#def-loop-variant}
+#### Loop variant
+
+A **loop variant** of a loop is an integer-valued expression in the loop's variables
+that is at least 0 at every test of the loop's guard (@def-loop-guard),
+and that is smaller after each pass through the body than it was before that pass,
+for every input that satisfies the algorithm's precondition (@def-precondition).
+
+:::

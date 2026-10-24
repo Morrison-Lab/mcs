@@ -1,0 +1,24 @@
+::: {#sol-reverse-sum}
+
+We check the two hypotheses of @thm-loop-invariant.
+
+**Initialization.**
+At the first test, $i = 1$ and $j = n$, so $i + j = n + 1$.
+
+**Maintenance.**
+Suppose $i + j = n + 1$ and the guard $i < j$ are true at a test.
+The swap does not change `i` or `j`,
+and the body then replaces `i` with $i + 1$ and `j` with $j - 1$.
+At the next test,
+
+$$
+\ba
+(i + 1) + (j - 1)
+&= i + j
+\\&= n + 1.
+\ea
+$$
+
+So, by @thm-loop-invariant, $i + j = n + 1$ is a loop invariant.
+
+:::

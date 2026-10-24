@@ -50,6 +50,8 @@ navbar
 nonempty
 ormap
 ponens
+postcondition
+postconditions
 pseudocode
 qwt
 rulesets

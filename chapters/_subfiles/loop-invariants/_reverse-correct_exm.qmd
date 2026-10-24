@@ -1,0 +1,59 @@
+::: {#exm-reverse-correct}
+#### `reverse` is correct
+
+Let `B[1..n]` be the array `A` as it was before the loop of @exr-reverse-sum.
+At a test partway through, the loop has swapped the entries outside positions $i$ to $j$,
+and has not touched the entries from $i$ to $j$.
+So let $I$ be the statement made of these three parts:
+
+- **(a)** $i + j = n + 1$ and $i \le j + 1$;
+- **(b)** $A[k] = B[n + 1 - k]$ for every $k$ with $1 \le k < i$ or $j < k \le n$;
+- **(c)** $A[k] = B[k]$ for every $k$ with $i \le k \le j$.
+
+**Initialization.**
+At the first test, $i = 1$ and $j = n$.
+Part (a) holds because $1 + n = n + 1$ and $1 \le n + 1$, since $n \ge 0$.
+No $k$ between 1 and $n$ has $k < 1$ or $k > n$, so (b) says nothing.
+Nothing has changed yet, so $A[k] = B[k]$ for every $k$, and (c) holds.
+
+**Maintenance.**
+Suppose $I$ and the guard $i < j$ are true at a test.
+By (c), $A[i] = B[i]$ and $A[j] = B[j]$ before the swap.
+By (a), $j = n + 1 - i$ and $i = n + 1 - j$.
+So after the swap,
+
+$$
+A[i] = B[j] = B[n + 1 - i]
+\quad\text{and}\quad
+A[j] = B[i] = B[n + 1 - j],
+$$
+
+and no other entry changes.
+The body then replaces `i` with $i' = i + 1$ and `j` with $j' = j - 1$.
+
+- Part (a): $i' + j' = i + j = n + 1$, as in @sol-reverse-sum.
+  Since $i$ and $j$ are integers and $i < j$, we have $i + 1 \le j$, so $i' \le j = j' + 1$.
+- Part (b): a $k$ with $k < i'$ has $k < i$, where the swap did not change $A[k]$ and (b) already held, or $k = i$, just shown.
+  A $k$ with $k > j'$ has $k > j$ or $k = j$, in the same way.
+- Part (c): a $k$ with $i' \le k \le j'$ has $i < k < j$,
+  so the swap did not change $A[k]$, and $A[k] = B[k]$ by (c).
+
+So $I$ is true at the next test.
+
+**Termination.**
+By @thm-loop-invariant, $I$ is true at every test.
+By (a), $i \le j + 1$, so $j - i + 1 \ge 0$ at every test,
+and each pass lowers $j - i + 1$ by 2.
+So $j - i + 1$ is a loop variant (@def-loop-variant), and by @thm-variant-terminates the loop stops.
+When it stops, the guard is false, so $i \ge j$, and with (a), $i = j$ or $i = j + 1$.
+Now let $1 \le k \le n$.
+
+- If $k < i$ or $k > j$, then $A[k] = B[n + 1 - k]$ by (b).
+- Otherwise $i \le k \le j$, which can only happen when $i = j = k$.
+  Then (a) gives $2k = n + 1$, so $k = n + 1 - k$,
+  and (c) gives $A[k] = B[k] = B[n + 1 - k]$.
+
+So $A[k] = B[n + 1 - k]$ for every $k$, which is the postcondition of @rem-weak-invariant.
+The middle entry of an array of odd length is the one that never moves.
+
+:::

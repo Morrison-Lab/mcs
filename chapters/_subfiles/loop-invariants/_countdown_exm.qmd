@@ -1,0 +1,51 @@
+::: {#exm-countdown}
+#### A countdown timer
+
+The algorithm `countdown` counts down a timer that starts at $x$ minutes and 0 seconds, one second per pass:
+
+```text
+procedure countdown(x)   // x is a non-negative integer
+    y := 0               // x is the minutes, y the seconds
+    while x > 0 or y > 0
+        if y > 0
+            y := y - 1
+        else
+            x := x - 1
+            y := 59
+```
+
+Neither `x` nor `y` is a loop variant (@def-loop-variant):
+`x` stays the same while `y` counts down, and `y` jumps from 0 to 59 when `x` goes down.
+The total number of seconds left, $60x + y$, is one.
+
+To see this, first let $I$ be the statement "`x` and `y` are integers with $x \ge 0$ and $0 \le y \le 59$".
+At the first test, $x \ge 0$ and $y = 0$, so $I$ is true.
+Suppose $I$ and the guard are true at a test.
+If $y > 0$, the body replaces `y` with $y - 1$, which is between 0 and 58, and leaves `x` alone.
+Otherwise $y = 0$, so the guard says $x > 0$,
+and the body replaces `x` with $x - 1 \ge 0$ and `y` with 59.
+Either way $I$ is true at the next test, so by @thm-loop-invariant, $I$ is a loop invariant.
+
+So $60x + y \ge 0$ at every test.
+Each pass through the body lowers $60x + y$ by exactly 1:
+if $y > 0$, the new value is $60x + (y - 1)$,
+and if $y = 0$, the new value is
+
+$$
+\ba
+60(x - 1) + 59
+&= 60x - 1
+\\&= (60x + y) - 1.
+&& \text{(since } y = 0 \text{)}
+\ea
+$$
+
+So $60x + y$ is a loop variant.
+Write $x_0$ for the input value of `x`.
+The variant starts at $60 x_0$, so by @thm-variant-terminates the body runs at most $60 x_0$ times, and the loop stops.
+When it stops, the guard is false, so $x \le 0$ and $y \le 0$,
+and $I$ gives $x \ge 0$ and $y \ge 0$, so $x = 0$ and $y = 0$, where $60x + y = 0$.
+The variant went down by exactly 1 each time,
+so the body ran exactly $60 x_0$ times, once for each second.
+
+:::

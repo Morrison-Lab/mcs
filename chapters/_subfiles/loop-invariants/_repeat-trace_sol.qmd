@@ -1,0 +1,16 @@
+::: {#sol-repeat-trace}
+
+| $(i, j)$ | $A[i]$ | $A[j]$ | `found` after the comparison |
+|:--------:|:------:|:------:|:----------------------------:|
+| $(1, 2)$ | 3      | 1      | false                        |
+| $(1, 3)$ | 3      | 4      | false                        |
+| $(1, 4)$ | 3      | 1      | false                        |
+| $(2, 3)$ | 1      | 4      | false                        |
+| $(2, 4)$ | 1      | 1      | true                         |
+| $(3, 4)$ | 4      | 1      | true                         |
+
+The inner loop compares the six pairs in the table, in that order.
+`found` first becomes true at $(2, 4)$, since $A[2] = A[4] = 1$,
+and it stays true, so `has_repeat` returns true.
+
+:::

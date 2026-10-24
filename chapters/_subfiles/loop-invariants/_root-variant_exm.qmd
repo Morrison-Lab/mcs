@@ -1,0 +1,14 @@
+::: {#exm-root-variant}
+#### Loop variants of `halvings` and `root`
+
+@sol-halving-stops shows that `k` is a loop variant (@def-loop-variant) of `halvings`:
+it is an integer that is at least 1, and so at least 0, at every test,
+and each pass through the body makes it smaller.
+A loop can have more than one loop variant:
+`k - 1` is another one, since it is at least 0 at every test and decreases by the same amount as `k`.
+
+The termination part of @exm-root-correct is an argument about the loop variant $n - r$ of `root`.
+It is an integer, it is at least 0 at every test because $r \le n$ there,
+and each pass through the body increases `r` by 1, so it decreases $n - r$ by 1.
+
+:::

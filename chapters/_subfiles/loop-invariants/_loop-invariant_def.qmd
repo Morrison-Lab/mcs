@@ -1,0 +1,9 @@
+::: {#def-loop-invariant}
+#### Loop invariant
+
+A **loop invariant** of a loop is a statement about the loop's variables
+that is true every time the loop's guard (@def-loop-guard) is tested,
+before the first pass through the body and after each pass,
+for every input that satisfies the algorithm's precondition (@def-precondition).
+
+:::

@@ -1,0 +1,16 @@
+::: {#exm-root-spec}
+#### What `root` promises
+
+For `root` from @exr-root-trace, the precondition (@def-precondition) is
+
+> $n$ is a non-negative integer,
+
+and the postcondition (@def-postcondition) is
+
+> the returned value $r$ is a non-negative integer with $r^2 \le n < (r + 1)^2$.
+
+For a non-negative integer $r$, the two inequalities $r^2 \le n < (r + 1)^2$ say that $r \le \sqrt{n} < r + 1$,
+so the postcondition says that $r = \floor{\sqrt{n}}$, the largest integer whose square is at most $n$.
+@sol-root-trace checks it for $n = 20$, where $r = 4$.
+
+:::

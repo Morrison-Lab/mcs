@@ -1,0 +1,19 @@
+::: {#exr-reverse-sum}
+#### The two ends of a reversal
+
+The algorithm `reverse` reverses an array `A[1..n]`, where $n \ge 0$,
+by swapping its outermost entries and moving inward:
+
+```text
+procedure reverse(A, n)  // A[1..n] is an array, n >= 0
+    i := 1
+    j := n
+    while i < j
+        swap A[i] and A[j]
+        i := i + 1
+        j := j - 1
+```
+
+Show that $i + j = n + 1$ is a loop invariant (@def-loop-invariant) of its loop.
+
+:::
