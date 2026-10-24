@@ -1,0 +1,8 @@
+::: {#exr-linear-quadratic}
+#### Which running time is better?
+
+One algorithm takes $100 n$ steps on an input of size $n$, and another takes $n^2$ steps.
+Compare $100 n$ with $n^2$ for $n = 10, 50, 100, 200, 1000$.
+Which algorithm takes fewer steps on small inputs, and which on large ones?
+
+:::

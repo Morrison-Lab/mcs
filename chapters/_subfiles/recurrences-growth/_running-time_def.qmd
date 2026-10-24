@@ -1,0 +1,8 @@
+::: {#def-running-time}
+#### Running time
+
+Fix, for an algorithm (@def-algorithm), the size of an input and what one step is (@rem-size-step).
+The **running time** [@wikipedia_time_complexity] of the algorithm is the function $T$ (@def-function)
+whose value $T(n)$ is the largest number of steps that the algorithm takes on any input of size $n$.
+
+:::

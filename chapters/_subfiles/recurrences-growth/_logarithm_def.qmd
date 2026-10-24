@@ -1,0 +1,8 @@
+::: {#def-logarithm}
+#### Logarithm
+
+Let $b > 1$ be a real number (@def-real-numbers).
+For every real number $x > 0$, the **logarithm** of $x$ to the base $b$ [@wikipedia_logarithm], written $\log_b x$,
+is the real number $y$ with $b^y = x$ (@def-real-power).
+
+:::

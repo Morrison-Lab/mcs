@@ -1,0 +1,10 @@
+::: {#def-recurrence-relation}
+#### Recurrence relation
+
+A **recurrence relation** [@wikipedia_recurrence_relation]
+is the recurrence of a recursively defined sequence (@def-recursive-sequence),
+that is, its recursive rule (@def-recursive-definition) written as an equation,
+which gives the term $a_n$ in terms of the $m$ terms $a_{n-1}, \ldots, a_{n-m}$ just before it,
+for every integer $n \ge n_0 + m$.
+
+:::

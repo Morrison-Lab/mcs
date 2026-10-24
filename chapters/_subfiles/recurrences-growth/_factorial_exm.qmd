@@ -1,0 +1,11 @@
+::: {#exm-factorial}
+#### Some factorials
+
+By @def-factorial,
+$1! = 1$,
+$3! = 1 \cdot 2 \cdot 3 = 6$
+and $5! = 1 \cdot 2 \cdot 3 \cdot 4 \cdot 5 = 120$.
+The number of orders in which 5 different books can stand on a shelf is $5! = 120$:
+5 choices for the first, then 4 for the second, and so on.
+
+:::

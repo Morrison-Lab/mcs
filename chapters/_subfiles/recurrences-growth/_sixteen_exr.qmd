@@ -1,0 +1,18 @@
+::: {#exr-sixteen}
+#### Seven functions at $n = 16$
+
+Here $\log_2 n$ is the power to which 2 must be raised to give $n$, so $\log_2 16 = 4$ since $2^4 = 16$,
+and $n!$ is the product $1 \cdot 2 \cdots n$.
+Find the values at $n = 16$ of
+
+- $1$,
+- $\log_2 n$,
+- $n$,
+- $n \log_2 n$,
+- $n^2$,
+- $2^n$,
+- $n!$,
+
+and put the values in increasing order.
+
+:::

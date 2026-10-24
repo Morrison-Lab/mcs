@@ -1,0 +1,7 @@
+::: {#exr-not-big-o}
+#### Is $n \cdot 2^n$ big-O of $2^n$?
+
+By @thm-double-plus-power-closed, the sequence of @exm-double-plus-power-sequence has $b_n = n \cdot 2^n$.
+Show that $n \cdot 2^n = O(2^n)$ (@def-big-o) is false.
+
+:::

@@ -1,0 +1,11 @@
+::: {#def-iteration}
+#### Iteration (unrolling)
+
+Solving a recurrence relation (@def-recurrence-relation) by **iteration**, also called **unrolling**,
+finds a closed form (@def-closed-form) for its sequence in three steps:
+
+1. use the recurrence relation again and again to write $a_n$ in terms of $a_{n-1}$, then $a_{n-2}$, then $a_{n-3}$, and so on;
+2. guess, from the pattern, a formula for $a_n$ in terms of $a_{n-k}$ for every number $k$ of steps;
+3. choose $k$ so that $a_{n-k}$ is an initial term, and put in its value.
+
+:::

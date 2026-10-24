@@ -1,0 +1,8 @@
+::: {#sol-table-loops}
+
+For each value of $i$, the inner loop runs `print i * j` once for each of $j = 1, 2, \ldots, n$, that is, $n$ times.
+The outer loop makes $n$ passes, one for each of $i = 1, 2, \ldots, n$,
+so the line runs $n + n + \cdots + n = n \cdot n = n^2$ times, once for each entry of an $n$ by $n$ table.
+For example, when $n = 4$ it runs $4 \cdot 4 = 16$ times.
+
+:::

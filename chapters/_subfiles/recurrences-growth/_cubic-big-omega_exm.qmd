@@ -1,0 +1,19 @@
+::: {#exm-cubic-big-omega}
+#### $2 n^3 + 40 = \Omega(n^3)$
+
+For every natural number $n \ge 1$,
+
+$$
+\ba
+\abs{2 n^3 + 40}
+&= 2 n^3 + 40
+&& \text{(} 2 n^3 + 40 > 0 \text{)}
+\\&\ge 2 n^3
+&& \text{(} 40 \ge 0 \text{)}
+\\&= 2 \abs{n^3},
+\ea
+$$
+
+so $c = 2$ and $N = 1$ are witnesses (@def-witness) for $2 n^3 + 40 = \Omega(n^3)$ (@def-big-omega).
+
+:::

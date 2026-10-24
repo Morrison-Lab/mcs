@@ -1,0 +1,8 @@
+::: {#sol-pal-calls}
+
+`pal(abbaabba)` calls `pal(bbaabb)`, which calls `pal(baab)`, which calls `pal(aa)`,
+which calls `pal` on the empty string, which returns true.
+That is 5 calls, on strings of 8, 6, 4, 2 and 0 symbols:
+each call removes the first and last symbols.
+
+:::

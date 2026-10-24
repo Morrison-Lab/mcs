@@ -1,0 +1,67 @@
+::: {#thm-growth-chain}
+#### A chain of growth rates
+
+For every natural number (@def-natural-numbers) $n \ge 4$,
+
+$$
+1 \le \log_2 n < n \le n \log_2 n < n^2 \le 2^n \le n!,
+$$
+
+where $\log_2$ is the logarithm to the base 2 (@def-logarithm) and $n!$ is the factorial (@def-factorial).
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+We use that $2^y < 2^z$ for real numbers $y < z$.
+Let $n \ge 4$ be a natural number, and let $y = \log_2 n$, so that $2^y = n$.
+
+**$1 \le \log_2 n$.**
+If $y < 1$, then $n = 2^y < 2^1 = 2$, which is false.
+
+**$\log_2 n < n$.**
+First, $m < 2^m$ for every natural number $m$, by induction (@def-proof-by-induction).
+
+**Base case.**
+$1 < 2 = 2^1$.
+
+**Inductive step.**
+If $k < 2^k$ for an integer $k \ge 1$, then $k + 1 \le 2^k < 2^k + 2^k = 2^{k + 1}$.
+
+So $n < 2^n$.
+If $y \ge n$, then $n = 2^y \ge 2^n$, which is false.
+
+**$n \le n \log_2 n$ and $n \log_2 n < n^2$.**
+Multiply $1 \le \log_2 n < n$ by $n > 0$.
+
+**$n^2 \le 2^n$.**
+This is @exm-squares-powers, since $n \ge 4$.
+
+**$2^n \le n!$.**
+By induction, following @rem-induction-template with $n_0 = 4$.
+
+**Base case.**
+$2^4 = 16 \le 24 = 4!$.
+
+**Inductive step.**
+If $2^k \le k!$ for an integer $k \ge 4$, then
+
+$$
+\ba
+2^{k + 1}
+&= 2 \cdot 2^k
+\\&\le 2 \cdot k!
+&& \text{(induction hypothesis)}
+\\&< (k + 1) \cdot k!
+&& \text{(} 2 < k + 1 \text{)}
+\\&= (k + 1)!.
+\ea
+$$
+
+:::
+
+:::

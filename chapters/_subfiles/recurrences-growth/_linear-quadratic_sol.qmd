@@ -1,0 +1,14 @@
+::: {#sol-linear-quadratic}
+
+| $n$ | 10 | 50 | 100 | 200 | 1000 |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| $100 n$ | 1000 | 5000 | 10000 | 20000 | 100000 |
+| $n^2$ | 100 | 2500 | 10000 | 40000 | 1000000 |
+
+The second algorithm takes fewer steps when $n < 100$, and the two take the same number at $n = 100$.
+For every $n > 100$, $n^2 = n \cdot n > 100 n$, so the first algorithm takes fewer steps,
+and the ratio $n^2 / (100 n) = n / 100$ grows without bound.
+The factor 100 decides which is better on small inputs;
+the powers $n$ and $n^2$ decide which is better on large ones.
+
+:::

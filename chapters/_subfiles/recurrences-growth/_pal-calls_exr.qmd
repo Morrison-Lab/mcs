@@ -1,0 +1,7 @@
+::: {#exr-pal-calls}
+#### How many calls does `pal` make?
+
+Let `pal` be the algorithm of @exr-palindrome-trace.
+How many calls of `pal`, including the first, does `pal(abbaabba)` make?
+
+:::

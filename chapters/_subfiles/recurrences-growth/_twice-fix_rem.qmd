@@ -1,0 +1,17 @@
+::: {#rem-twice-fix}
+#### One call instead of two
+
+The function `dm` of @exr-twice-calls finds the same value $a_{n-1}$ twice.
+Writing the recursive rule of @exm-doubling-sequence directly, with one recursive call,
+
+```racket
+(define (dm1 n)
+  (if (= n 0)
+      2
+      (- (* 2 (dm1 (- n 1))) 1)))
+```
+
+returns the same values, but each call of `dm1` makes only one recursive call, so its calls form a single chain instead of a tree that doubles at every level.
+By @thm-twice-base-calls, `(dm 30)` makes more than a billion calls, since $2^{30} = 1073741824$.
+
+:::

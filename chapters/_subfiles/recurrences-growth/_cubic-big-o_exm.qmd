@@ -1,0 +1,25 @@
+::: {#exm-cubic-big-o}
+#### Finding witnesses for $2 n^3 + 40 = O(n^3)$
+
+To prove $2 n^3 + 40 = O(n^3)$ (@def-big-o), we look for witnesses (@def-witness) $c$ and $N$.
+Since $2 n^3 + 40 > 2 n^3$, the term $2 n^3$ needs $c > 2$.
+With $c = 3$, the inequality $2 n^3 + 40 \le 3 n^3$ is the same as $40 \le n^3$,
+which holds when $n \ge 4$, since $4^3 = 64$, but not when $n = 3$, since $3^3 = 27$.
+So for every natural number $n \ge 4$,
+
+$$
+\ba
+\abs{2 n^3 + 40}
+&= 2 n^3 + 40
+&& \text{(} 2 n^3 + 40 > 0 \text{)}
+\\&\le 2 n^3 + n^3
+&& \text{(} 40 \le 64 \le n^3 \text{, since } n \ge 4 \text{)}
+\\&= 3 \abs{n^3},
+\ea
+$$
+
+and $c = 3$, $N = 4$ are witnesses.
+A larger $c$ allows a smaller $N$:
+since $40 \le 40 n^3$ for every $n \ge 1$, the pair $c = 42$, $N = 1$ also works.
+
+:::

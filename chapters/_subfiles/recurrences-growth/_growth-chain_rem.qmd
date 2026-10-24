@@ -1,0 +1,30 @@
+::: {#rem-growth-chain}
+#### The common growth rates
+
+By @thm-growth-chain, each function in the chain
+
+$$
+1, \quad \log_2 n, \quad n, \quad n \log_2 n, \quad n^2, \quad 2^n, \quad n!
+$$
+
+is big-O (@def-big-o) of the next, with witnesses (@def-witness) $c = 1$ and $N = 4$.
+In the other direction, none is big-O of the one before it.
+@sol-not-big-o shows how to prove such a statement for $n \cdot 2^n$ and $2^n$,
+and the same argument, dividing by $n$ instead of $2^n$, shows that $n^2 = O(n)$ is false.
+A running time that is $\Theta$ (@def-big-theta) of one of these functions is called, in order,
+
+- *constant*, for $1$;
+- *logarithmic*, for $\log_2 n$;
+- *linear*, for $n$;
+- *$n \log n$*, for $n \log_2 n$;
+- *quadratic*, for $n^2$;
+- *exponential*, for $2^n$;
+- *factorial*, for $n!$.
+
+Other powers of $n$ fit between $n$ and $2^n$.
+For natural numbers $a \le b$, $n^a \le n^b$ for every natural number $n$, so $n^a = O(n^b)$.
+Every power $n^a$ is also $O(2^n)$, though the witness $N$ grows with $a$:
+for example, $n^4 \le 2^n$ holds for every $n \ge 16$, where $16^4 = 65536 = 2^{16}$, but not for $n = 15$, since $15^4 = 50625 > 32768 = 2^{15}$.
+We do not prove the general statement here.
+
+:::

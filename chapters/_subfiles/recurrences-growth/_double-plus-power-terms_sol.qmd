@@ -1,0 +1,15 @@
+::: {#sol-double-plus-power-terms}
+
+Each term comes from the one before it:
+
+$$
+\ba
+b_1 &= 2 \cdot 0 + 2^1 = 2,
+\\ b_2 &= 2 \cdot 2 + 2^2 = 8,
+\\ b_3 &= 2 \cdot 8 + 2^3 = 24,
+\\ b_4 &= 2 \cdot 24 + 2^4 = 64,
+\\ b_5 &= 2 \cdot 64 + 2^5 = 160.
+\ea
+$$
+
+:::

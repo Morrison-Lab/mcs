@@ -1,0 +1,8 @@
+::: {#exr-double-plus-power-terms}
+#### Double and add a power of 2
+
+A sequence (@def-sequence) starts with $b_0 = 0$,
+and for every integer (@def-integers) $n \ge 1$ the term $b_n$ is twice the term before it, plus $2^n$.
+Find $b_1$, $b_2$, $b_3$, $b_4$ and $b_5$.
+
+:::

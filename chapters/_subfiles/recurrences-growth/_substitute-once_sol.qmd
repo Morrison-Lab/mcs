@@ -1,0 +1,25 @@
+::: {#sol-substitute-once}
+
+Replacing $b_{n-1}$ gives $b_n$ in terms of $b_{n-2}$:
+
+$$
+\ba
+b_n
+&= 2 \paren{2 b_{n-2} + 2^{n-1}} + 2^n
+\\&= 4 b_{n-2} + 2^n + 2^n
+\\&= 4 b_{n-2} + 2 \cdot 2^n.
+\ea
+$$
+
+Replacing $b_{n-2}$ then gives $b_n$ in terms of $b_{n-3}$:
+
+$$
+\ba
+b_n
+&= 4 \paren{2 b_{n-3} + 2^{n-2}} + 2 \cdot 2^n
+\\&= 8 b_{n-3} + 2^n + 2 \cdot 2^n
+\\&= 8 b_{n-3} + 3 \cdot 2^n.
+\ea
+$$
+
+:::

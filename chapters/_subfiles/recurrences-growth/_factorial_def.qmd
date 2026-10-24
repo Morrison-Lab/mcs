@@ -1,0 +1,7 @@
+::: {#def-factorial}
+#### Factorial
+
+For a natural number (@def-natural-numbers) $n$, the **factorial** of $n$ [@wikipedia_factorial], written $n!$,
+is the product $1 \cdot 2 \cdots n$ of the natural numbers from 1 to $n$.
+
+:::

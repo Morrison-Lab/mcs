@@ -1,0 +1,12 @@
+::: {#rem-disprove-big-o}
+#### How to disprove a big-O bound
+
+The statement $f(n) = O(g(n))$ (@def-big-o) says that there exist $c > 0$ and $N$ such that every $n \ge N$ has $\abs{f(n)} \le c \abs{g(n)}$.
+Its negation says that for every $c > 0$ and every $N$,
+some natural number $n \ge N$ has $\abs{f(n)} > c \abs{g(n)}$,
+by the rules for negating the existential (@def-existential-quantifier) and universal (@def-universal-quantifier) quantifiers.
+So a disproof cannot pick $c$ and $N$:
+like @sol-not-big-o, it takes any $c$ and $N$ and finds such an $n$, which depends on $c$ and $N$.
+Checking that the inequality fails for a few chosen $c$ and $N$ is not a disproof.
+
+:::
