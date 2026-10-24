@@ -6,7 +6,7 @@ Relations between sets, their properties, equivalence relations, partitions and 
 
 Published
 
-Last modified: 2026-10-24 10:59:47 (PDT)
+Last modified: 2026-10-24 11:09:13 (PDT)
 
 > **NOTE:**
 >
@@ -356,7 +356,7 @@ Last modified: 2026-10-24 10:59:47 (PDT)
 >
 > - In \\P \circ P^{-1}\\, a person \\a\\ is related to \\c\\ when some \\b\\ has \\a \mathrel{P^{-1}} b\\ and \\b \mathrel{P} c\\, that is, when \\b\\ is a parent of \\a\\ and of \\c\\ ([Example 14](#exm-inverse-relation)). So \\P \circ P^{-1}\\ is the relation “has a parent in common with”:
 >
->   \\ P \circ P^{-1} = {\mathopen{}\left\\(\text{Ben}, \text{Ben}), (\text{Ben}, \text{Cora}), (\text{Cora}, \text{Ben}), (\text{Cora}, \text{Cora}), (\text{Dev}, \text{Dev}), (\text{Eva}, \text{Eva})\right\\\mathclose{}}. \\
+>   \\ \begin{aligned} P \circ P^{-1} = \\&(\text{Ben}, \text{Ben}), (\text{Ben}, \text{Cora}), (\text{Cora}, \text{Ben}), (\text{Cora}, \text{Cora}), \\ &(\text{Dev}, \text{Dev}), (\text{Eva}, \text{Eva})\\. \end{aligned} \\
 >
 >   Ada is in no pair, since her parents are not in \\F\\.
 
