@@ -12,7 +12,9 @@ With `apply-op` from @exm-racket-evaluate,
          (postfix-loop (rest symbols) (cons (first symbols) stack))]
         [else
          (postfix-loop (rest symbols)
-                       (cons (apply-op (first symbols) (second stack) (first stack))
+                       (cons (apply-op (first symbols)
+                                       (second stack)
+                                       (first stack))
                              (rest (rest stack))))]))
 
 (define (evaluate-postfix symbols)
