@@ -1,0 +1,17 @@
+::: {#def-list}
+#### List
+
+Let $A$ be a set (@def-set).
+The set of **lists** of elements of $A$ [@wikipedia_list_abstract_data_type]
+is the recursively defined set (@def-recursive-set) with
+
+- base case: the empty list, written $\mathtt{empty}$, is a list;
+- recursive rule: if $x \in A$ and $L$ is a list, then $\operatorname{cons}(x, L)$ is a list,
+  whose *first* element is $x$ and whose *rest* is $L$.
+
+Racket writes the empty list as `empty` or `'()`, and $\operatorname{cons}(x, L)$ as `(cons x L)`,
+and `(first L)` and `(rest L)` return the two parts of a list that is not empty.
+Racket also has the older names `car` for `first` and `cdr` for `rest`.
+Python writes the empty list `[]`.
+
+:::

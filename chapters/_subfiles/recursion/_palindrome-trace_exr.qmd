@@ -1,0 +1,22 @@
+::: {#exr-palindrome-trace}
+#### Is it a palindrome?
+
+The algorithm `pal`, in the pseudocode of @rem-pseudocode,
+tests whether a string is a palindrome (@def-palindrome):
+
+```text
+procedure pal(s)        // s is a string s[1] s[2] ... s[n] of n symbols
+    if n <= 1
+        return true
+    if s[1] != s[n]
+        return false
+    return pal(s[2..n-1])   // s without its first and last symbols
+```
+
+Here `!=` means $\ne$,
+and `s[2..n-1]` is the string of the symbols `s[2]` through `s[n-1]`,
+which is the empty string when $n = 2$, since the range `2..1` is empty.
+Run `pal(level)` by hand:
+write down each call of `pal` that it makes, and what each call returns.
+
+:::

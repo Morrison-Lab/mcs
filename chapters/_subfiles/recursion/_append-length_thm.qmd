@@ -1,0 +1,63 @@
+::: {#thm-append-length}
+#### Appending adds lengths
+
+For all lists $L$ and $M$ (@def-list),
+
+$$
+\operatorname{len}\paren{\operatorname{app}(L, M)} = \operatorname{len}(L) + \operatorname{len}(M),
+$$
+
+where $\operatorname{len}$ is the length (@def-list-length) and $\operatorname{app}$ is the append (@def-append).
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Let $M$ be a list.
+We use structural induction (@def-structural-induction) on $L$,
+with $P(L)$ the equation $\operatorname{len}\paren{\operatorname{app}(L, M)} = \operatorname{len}(L) + \operatorname{len}(M)$.
+
+**Base case.**
+The base case of @def-list names only the empty list, and
+
+$$
+\ba
+\operatorname{len}\paren{\operatorname{app}(\mathtt{empty}, M)}
+&= \operatorname{len}(M)
+&& \text{(definition of } \operatorname{app} \text{)}
+\\&= 0 + \operatorname{len}(M)
+\\&= \operatorname{len}(\mathtt{empty}) + \operatorname{len}(M).
+&& \text{(definition of } \operatorname{len} \text{)}
+\ea
+$$
+
+**Inductive step.**
+The recursive rule builds $\operatorname{cons}(x, L)$ from an element $x$ and a list $L$.
+Suppose $P(L)$.
+Then
+
+$$
+\ba
+& \operatorname{len}\paren{\operatorname{app}\paren{\operatorname{cons}(x, L), M}}
+\\&= \operatorname{len}\paren{\operatorname{cons}\paren{x, \operatorname{app}(L, M)}}
+&& \text{(definition of } \operatorname{app} \text{)}
+\\&= 1 + \operatorname{len}\paren{\operatorname{app}(L, M)}
+&& \text{(definition of } \operatorname{len} \text{)}
+\\&= 1 + \operatorname{len}(L) + \operatorname{len}(M)
+&& \text{(induction hypothesis } P(L) \text{)}
+\\&= \operatorname{len}\paren{\operatorname{cons}(x, L)} + \operatorname{len}(M),
+&& \text{(definition of } \operatorname{len} \text{)}
+\ea
+$$
+
+which is $P\paren{\operatorname{cons}(x, L)}$.
+By structural induction, $P(L)$ holds for every list $L$.
+Since $M$ was any list, the equation holds for all lists $L$ and $M$.
+
+:::
+
+:::

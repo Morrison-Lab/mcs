@@ -1,0 +1,9 @@
+::: {#sol-odd-set}
+
+Starting from 1 and adding 2 again and again gives $1, 3, 5, 7, 9, 11$, so all six are in $S$.
+Tripling gives nothing new below 12: $3 \cdot 1 = 3$ and $3 \cdot 3 = 9$ are already in the list,
+and tripling 5 or more gives at least 15.
+Both rules turn an odd number into an odd number, so no even number is in $S$.
+So the elements of $S$ less than 12 are $1, 3, 5, 7, 9$ and $11$.
+
+:::

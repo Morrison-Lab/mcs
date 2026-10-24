@@ -1,0 +1,14 @@
+::: {#def-list-length}
+#### Length of a list
+
+The **length** $\operatorname{len}(L)$ of a list $L$ (@def-list) is defined recursively,
+following the two parts of the definition of a list:
+
+$$
+\ba
+\operatorname{len}(\mathtt{empty}) &= 0,
+\\ \operatorname{len}\paren{\operatorname{cons}(x, L)} &= 1 + \operatorname{len}(L).
+\ea
+$$
+
+:::

@@ -1,0 +1,14 @@
+::: {#def-recursive-set}
+#### Recursively defined set
+
+A **recursively defined set** [@wikipedia_recursive_definition]
+is a set (@def-set) given by two parts,
+named as in @def-recursive-definition:
+
+1. a base case, which names some elements of the set directly;
+2. a recursive rule, which says how to build new elements of the set from elements already in it.
+
+The set has no other elements:
+each of its elements comes from the base case by applying the recursive rule a finite number of times.
+
+:::

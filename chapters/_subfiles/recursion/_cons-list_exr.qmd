@@ -1,0 +1,9 @@
+::: {#exr-cons-list}
+#### Building a list with `cons`
+
+In Racket, `empty` is the list with no elements,
+and `(cons x xs)` is the list whose first element is `x`, followed by the elements of the list `xs`.
+For example, `(cons 5 empty)` is the one-element list `'(5)`.
+Write the list `'(7 2 9)` using only `cons`, `empty` and numbers.
+
+:::

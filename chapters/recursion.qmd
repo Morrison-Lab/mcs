@@ -1,0 +1,198 @@
+---
+title: "Recursion"
+subtitle: "Recursive definitions, recursive programs and proofs about them"
+format:
+  html: default
+  revealjs:
+    output-file: recursion-slides.html
+  pdf:
+    output-file: recursion-handout.pdf
+  docx:
+    output-file: recursion.docx
+---
+
+{{< include ../latex-macros/macros.qmd >}}
+
+::: {.callout-note appearance='simple' collapse=true}
+## Source
+
+The topics of this chapter follow Kameron Decker Harris's Fall 2026 lecture notes on recursion and recursive functions.
+These come from those notes:
+
+- the two parts of a recursive definition, a base case and a recursive rule;
+- the recursive definitions of the natural numbers and of the strings over an alphabet;
+- the three questions to ask when writing a recursive function: the base case, the recursive call and the combination;
+- the definition of a recursive algorithm.
+
+Everything else is new:
+the exercises, the other examples, the Racket functions, the algorithm, the theorems and their proofs.
+:::
+
+# Recursive definitions {#sec-recursive-definitions}
+
+{{< include _subfiles/recursion/_doubling-terms_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_doubling-terms_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_recursive-definition_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_doubling-sequence_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_floor_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_floor_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_digit-count_exm.qmd >}}
+
+# Recursively defined sets {#sec-recursive-sets}
+
+{{< include _subfiles/recursion/_odd-set_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_odd-set_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_recursive-set_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_natural-numbers-recursive_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_alphabet_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_alphabet_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_string_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_string_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_palindrome_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_palindrome_exm.qmd >}}
+
+# Recursion in Racket {#sec-racket-recursion}
+
+{{< include _subfiles/recursion/_binary-trace_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_binary-trace_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_racket-recursion_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_digits-racket_exm.qmd >}}
+
+# Lists {#sec-lists}
+
+{{< include _subfiles/recursion/_cons-list_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_cons-list_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_list_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_first-rest_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_list-length_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_list-length_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_append_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_append_exm.qmd >}}
+
+# Recursive algorithms {#sec-recursive-algorithms}
+
+{{< include _subfiles/recursion/_palindrome-trace_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_palindrome-trace_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_recursive-algorithm_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_palindrome-recursive_exm.qmd >}}
+
+# Proofs about recursive definitions {#sec-recursive-proofs}
+
+{{< include _subfiles/recursion/_doubling-guess_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_doubling-guess_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_doubling-closed_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_structural-induction_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_odd-set-odd_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_structural-induction_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_append-length_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/recursion/_digit-count_thm.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

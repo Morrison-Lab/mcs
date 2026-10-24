@@ -1,0 +1,7 @@
+::: {#exr-doubling-guess}
+#### Guessing a formula
+
+Compare each term $a_0, a_1, \ldots, a_5$ of the sequence in @sol-doubling-terms with the power $2^n$,
+and guess a formula for $a_n$ that does not use the earlier terms.
+
+:::

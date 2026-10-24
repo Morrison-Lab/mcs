@@ -1,0 +1,14 @@
+::: {#def-string}
+#### String
+
+Let $\Sigma$ be an alphabet (@def-alphabet).
+The set $\Sigma^*$ of **strings** over $\Sigma$ [@wikipedia_string_computer_science]
+is the recursively defined set (@def-recursive-set) with
+
+- base case: the *empty string* $\lambda$, which has no symbols, is in $\Sigma^*$;
+- recursive rule: if $w \in \Sigma^*$ and $x \in \Sigma$, then $w x \in \Sigma^*$,
+  where $w x$ is the string $w$ followed by the symbol $x$.
+
+Racket and Python write the empty string `""`.
+
+:::

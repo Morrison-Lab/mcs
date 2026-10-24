@@ -1,0 +1,15 @@
+::: {#def-recursive-definition}
+#### Recursive definition
+
+Let $n_0$ be an integer (@def-integers).
+A **recursive definition** [@wikipedia_recursive_definition]
+of a function (@def-function) $f$ on the integers $n \ge n_0$ has two parts:
+
+1. *Base case:*
+   the value of $f$ is given directly at $n_0$,
+   and possibly at a few more of the smallest inputs.
+2. *Recursive rule:*
+   $f(n)$ at every other input $n$ is given
+   in terms of the values of $f$ at inputs that are smaller than $n$ and at least $n_0$.
+
+:::

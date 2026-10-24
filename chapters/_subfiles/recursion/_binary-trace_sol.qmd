@@ -1,0 +1,20 @@
+::: {#sol-binary-trace}
+
+Since $6 \ge 2$, `(binary 6)` calls `(binary 3)`, because $\floor{6 / 2} = 3$, and puts `"0"`, the remainder of 6 divided by 2, after its result.
+Since $3 \ge 2$, `(binary 3)` calls `(binary 1)` and puts `"1"` after its result.
+Since $1 < 2$, `(binary 1)` returns `"1"` without calling `binary` again.
+Replacing each call with what it returns:
+
+```text
+(binary 6)
+= (string-append (binary 3) "0")
+= (string-append (string-append (binary 1) "1") "0")
+= (string-append (string-append "1" "1") "0")
+= (string-append "11" "0")
+= "110"
+```
+
+So `(binary 1)` returns `"1"`, `(binary 3)` returns `"11"`, and `(binary 6)` returns `"110"`.
+That is 6 written in base 2, since $1 \cdot 4 + 1 \cdot 2 + 0 \cdot 1 = 6$.
+
+:::

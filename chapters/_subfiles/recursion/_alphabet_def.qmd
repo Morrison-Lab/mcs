@@ -1,0 +1,7 @@
+::: {#def-alphabet}
+#### Alphabet
+
+An **alphabet** [@wikipedia_alphabet_formal_languages] is a finite, non-empty set (@def-set), whose elements are called its symbols.
+An alphabet is often written $\Sigma$, the capital Greek letter sigma.
+
+:::

@@ -1,0 +1,16 @@
+::: {#exm-palindrome-recursive}
+#### `pal` is recursive
+
+The algorithm `pal` of @exr-palindrome-trace is recursive (@def-recursive-algorithm).
+On a string of $n \ge 2$ symbols whose first and last symbols match,
+it calls itself on the string without those two symbols, which has $n - 2$ symbols,
+and returns what that call returns.
+
+It answers directly in two cases:
+when $n \le 1$, since the empty string and a single symbol read the same backward,
+and when the first and last symbols differ.
+For example, `pal(recur)` finds that the first and last symbols are both `r`, and calls `pal(ecu)`.
+That call finds `e` and `u`, which differ, and returns false,
+so `pal(recur)` returns false.
+
+:::

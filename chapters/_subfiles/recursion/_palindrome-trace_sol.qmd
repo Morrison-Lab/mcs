@@ -1,0 +1,12 @@
+::: {#sol-palindrome-trace}
+
+| Call | $n$ | First and last symbols | What the call does |
+|:----:|:---:|:----------------------:|:------------------:|
+| `pal(level)` | 5 | `l`, `l` | calls `pal(eve)` |
+| `pal(eve)` | 3 | `e`, `e` | calls `pal(v)` |
+| `pal(v)` | 1 | | returns true |
+
+`pal(v)` returns true, so `pal(eve)` returns true, and so `pal(level)` returns true:
+$\mathtt{level}$ is a palindrome.
+
+:::

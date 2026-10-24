@@ -1,0 +1,12 @@
+::: {#exr-odd-set}
+#### Building a set of integers
+
+A set (@def-set) $S$ of integers is built by two rules:
+
+- $1 \in S$;
+- if $x \in S$, then $x + 2 \in S$ and $3x \in S$.
+
+Every element of $S$ comes from these two rules.
+Find every element of $S$ that is less than 12.
+
+:::

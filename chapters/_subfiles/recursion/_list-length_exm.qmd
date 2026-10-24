@@ -1,0 +1,27 @@
+::: {#exm-list-length}
+#### The length of `'(7 2 9)`
+
+In Racket, the definition of length (@def-list-length) is
+
+```racket
+(define (len L)
+  (if (empty? L)
+      0
+      (+ 1 (len (rest L)))))
+```
+
+where `(empty? L)` tests whether `L` is the empty list.
+Replacing each call with the recursive rule:
+
+```text
+(len '(7 2 9))
+= (+ 1 (len '(2 9)))
+= (+ 1 (+ 1 (len '(9))))
+= (+ 1 (+ 1 (+ 1 (len '()))))
+= (+ 1 (+ 1 (+ 1 0)))
+= 3
+```
+
+Racket's built-in `length` gives the same values.
+
+:::

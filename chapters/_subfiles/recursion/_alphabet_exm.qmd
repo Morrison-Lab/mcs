@@ -1,0 +1,12 @@
+::: {#exm-alphabet}
+#### Three alphabets
+
+Each of these sets is an alphabet (@def-alphabet):
+
+- $\cb{0, 1}$, the two binary digits;
+- $\cb{\mathtt{A}, \mathtt{C}, \mathtt{G}, \mathtt{T}}$, the four bases of DNA;
+- $\cb{\mathtt{a}, \mathtt{b}, \ldots, \mathtt{z}}$, the 26 lowercase letters of English.
+
+The set of all integers is not an alphabet, because it is not finite.
+
+:::
