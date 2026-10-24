@@ -1,0 +1,10 @@
+::: {#def-tree-parent}
+#### Parent
+
+Let $T$ be a rooted tree (@def-rooted-tree) with root $r$, and let $v \ne r$ be a vertex of $T$.
+By @thm-tree-paths, there is exactly one path (@def-graph-path) $r = v_0, v_1, \ldots, v_k = v$ from $r$ to $v$,
+and $k \ge 1$ since $v \ne r$.
+The **parent** of $v$ [@wikipedia_tree_graph_theory] is the vertex $v_{k - 1}$ just before $v$ on this path.
+The root has no parent.
+
+:::

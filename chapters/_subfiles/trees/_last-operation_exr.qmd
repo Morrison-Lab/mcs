@@ -1,0 +1,6 @@
+::: {#exr-last-operation}
+#### The last operation
+
+To compute $(7 - 2) \times (3 + 4 \times 2)$ by hand, which operation do you carry out last?
+
+:::

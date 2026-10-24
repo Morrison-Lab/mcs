@@ -1,0 +1,12 @@
+::: {#sol-fewest-roads}
+
+Six.
+The six roads $\set{a, b}$, $\set{b, c}$, $\set{c, g}$, $\set{g, e}$, $\set{e, d}$ and $\set{e, f}$ are enough:
+they join $a$, $b$, $c$, $g$ and $e$ in a row, and $d$ and $f$ to $e$.
+Five roads are not enough.
+Before any road is built, the seven towns form seven groups of towns that can reach each other.
+Each road that is built either joins two towns of the same group, or joins two groups into one,
+so after $k$ roads there are at least $7 - k$ groups.
+To have only one group, the county needs $7 - k \le 1$, that is, $k \ge 6$.
+
+:::

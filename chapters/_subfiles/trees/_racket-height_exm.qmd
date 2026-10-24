@@ -1,0 +1,23 @@
+::: {#exm-racket-height}
+#### Size and height in Racket
+
+The recursive formulas of @rem-size-height become
+
+```racket
+(define (size T)
+  (if (empty? T)
+      0
+      (+ 1 (size (second T)) (size (third T)))))
+
+(define (height T)
+  (if (empty? T)
+      -1
+      (+ 1 (max (height (second T)) (height (third T))))))
+```
+
+Here `(max a b)` returns the larger of the numbers `a` and `b`.
+
+With `B` as in @exr-racket-tree, `(size B)` returns 9 and `(height B)` returns 3,
+and `(height '())` returns -1.
+
+:::

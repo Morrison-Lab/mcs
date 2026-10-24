@@ -1,0 +1,17 @@
+::: {#exm-forest}
+#### A forest of four trees
+
+The graph $F$ of @fig-trees-or-not is a forest (@def-forest):
+taking out $d$, $f$, $g$ and $h$, which have degree 1, leaves no edges, so $F$ has no cycles, by @lem-degree-one.
+Its connected components (@def-connected-component) are
+
+- the vertex $a$, with no edges;
+- the vertex $b$, with no edges;
+- the vertices $c$ and $d$, with the edge $\set{c, d}$;
+- the vertices $e$, $f$, $g$ and $h$, with the edges $\set{e, f}$, $\set{e, g}$ and $\set{e, h}$.
+
+Each of them is a tree (@def-tree).
+The tree $T$ of @fig-trees-or-not is a forest too,
+and the graph $H$ is not a forest.
+
+:::

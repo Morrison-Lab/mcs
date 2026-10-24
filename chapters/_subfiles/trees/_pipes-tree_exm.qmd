@@ -1,0 +1,17 @@
+::: {#exm-pipes-tree}
+#### The pipes form a tree
+
+The houses and pipes of @exr-pipes form a graph (@def-graph-vertices-edges) $P$,
+with vertex set $\set{p, q, r, s, t, u, w}$ and the six edges listed there.
+$P$ is a tree (@def-tree).
+
+- It is connected (@def-connected).
+  The walks $q, p$ and $q, r$ and $q, s$ and $q, s, t$ and $q, s, t, u$ and $q, s, t, w$ go from $q$ to every other vertex,
+  and reading one of them backward and then following another gives a walk between any two vertices.
+- It has no cycles, by @lem-degree-one.
+  Take out $p$, $r$, $u$ and $w$, which have degree 1.
+  Then $q$ and $t$ have degree 1; take out $q$.
+  Then $t$ has degree 1; take it out.
+  What is left is the vertex $s$ with no edges.
+
+:::

@@ -1,0 +1,46 @@
+::: {#thm-bfs-tree}
+#### Breadth-first search builds a spanning tree
+
+Let $G$ and $s$ be as in @def-bfs-tree.
+Then the breadth-first search tree of $G$ from $s$ is a spanning tree (@def-spanning-tree) of $G$,
+and, with $s$ as its root, the level (@def-tree-level) of each vertex $u$ is its distance $\operatorname{dist}(s, u)$ (@def-graph-distance) from $s$ in $G$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Let $S$ be the breadth-first search tree, let $n$ be the number of vertices of $G$,
+and for each vertex $u \ne s$ let $v(u)$ be the vertex whose removal marks $u$,
+so that $\set{v(u), u}$ is the edge of $S$ for $u$.
+Since $v(u)$ was marked before $u$, $v(u) \ne u$.
+
+**$S$ has $n - 1$ edges.**
+There is one edge for each of the $n - 1$ vertices $u \ne s$.
+Suppose, for contradiction (@def-proof-by-contradiction), that two vertices $u \ne w$ give the same edge.
+Then $w = v(u)$ and $u = v(w)$,
+so $w$ was marked before $u$ and $u$ was marked before $w$, which is impossible.
+So these $n - 1$ edges are all different.
+
+**$S$ is connected, and each level is the distance.**
+We show, by strong induction (@def-strong-induction) on the order in which the vertices are marked,
+that for each vertex $u$ there is a path (@def-graph-path) in $S$ from $s$ to $u$ of length $\texttt{dist}[u]$,
+whose vertices were marked in the order of the path.
+For $s$, the path $s$ has length $0 = \texttt{dist}[s]$.
+For $u \ne s$, the vertex $v(u)$ was marked earlier,
+so there is such a path from $s$ to $v(u)$ of length $\texttt{dist}[v(u)]$.
+All its vertices were marked no later than $v(u)$, so before $u$,
+and following it with the edge $\set{v(u), u}$ gives a path from $s$ to $u$,
+of length $\texttt{dist}[v(u)] + 1 = \texttt{dist}[u]$ (@def-bfs).
+
+So $S$ has a walk from $s$ to every vertex, and two of these walks, one read backward, join any two vertices.
+$S$ is connected with $n$ vertices and $n - 1$ edges, so it is a tree by @cor-connected-edges.
+With root $s$, the path just built is the only path from $s$ to $u$ (@thm-tree-paths),
+so $\operatorname{level}(u) = \texttt{dist}[u] = \operatorname{dist}(s, u)$, by @thm-bfs-distance.
+
+:::
+
+:::

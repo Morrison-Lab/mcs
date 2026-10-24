@@ -1,0 +1,9 @@
+::: {#exr-all-calls}
+#### Counting the calls
+
+A club with 40 members passes news by phone.
+One member hears it first,
+and every other member hears it in exactly one call, from a member who already knows it.
+How many calls are made in all?
+
+:::

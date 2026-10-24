@@ -1,0 +1,6 @@
+::: {#sol-level-by-level}
+
+$m, f, t, c, h, r, w, j, p$.
+Level 0 holds $m$; level 1 holds $f$ and $t$; level 2 holds $c$, $h$, $r$ and $w$; and level 3 holds $j$ and $p$.
+
+:::

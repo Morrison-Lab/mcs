@@ -1,0 +1,28 @@
+::: {#exm-preorder}
+#### Preorder, step by step
+
+For the subtree $\operatorname{node}\paren{h, \mathtt{nil}, \operatorname{single}(j)}$ of $B$ (@exm-binary-tree),
+the definition of preorder (@def-preorder) gives first
+
+$$
+\ba
+\operatorname{preorder}\paren{\operatorname{single}(j)}
+&= \operatorname{cons}\paren{j, \operatorname{app}(\mathtt{empty}, \mathtt{empty})}
+\\&= \operatorname{cons}(j, \mathtt{empty}),
+\ea
+$$
+
+and then
+
+$$
+\ba
+& \operatorname{preorder}\paren{\operatorname{node}\paren{h, \mathtt{nil}, \operatorname{single}(j)}}
+\\&= \operatorname{cons}\paren{h, \operatorname{app}\paren{\mathtt{empty}, \operatorname{cons}(j, \mathtt{empty})}}
+\\&= \operatorname{cons}\paren{h, \operatorname{cons}(j, \mathtt{empty})},
+\ea
+$$
+
+the list $h, j$.
+In the same way, $\operatorname{preorder}(B)$ is the list $m, f, c, h, j, t, r, p, w$ of @sol-root-first.
+
+:::

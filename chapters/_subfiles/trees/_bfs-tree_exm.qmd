@@ -1,0 +1,51 @@
+::: {#exm-bfs-tree}
+#### A breadth-first search tree of the town graph
+
+Give the town graph (@exm-spanning-tree) the adjacency list in which each list is in alphabetical order:
+
+$$
+\ba
+a &: b, f, g
+& b &: a, c
+& c &: b, d, g
+& d &: c, e
+\\ e &: d, f, g
+& f &: a, e
+& g &: a, c, e
+\ea
+$$
+
+Then `bfs` (@def-bfs) from $a$ runs as follows:
+
+| Removed $v$ | Newly marked $u$, with `dist[u]` | $Q$ after the pass |
+|:-----------:|:-----------------------:|:------------------:|
+| $a$ | $b$ (1), $f$ (1), $g$ (1) | $b, f, g$ |
+| $b$ | $c$ (2) | $f, g, c$ |
+| $f$ | $e$ (2) | $g, c, e$ |
+| $g$ | none | $c, e$ |
+| $c$ | $d$ (3) | $e, d$ |
+| $e$ | none | $d$ |
+| $d$ | none | empty |
+
+The breadth-first search tree (@def-bfs-tree) from $a$ has the six edges
+
+$$
+\set{a, b}, \set{a, f}, \set{a, g}, \set{b, c}, \set{f, e}, \set{c, d},
+$$
+
+drawn thick in @fig-hub-bfs.
+With root $a$, its levels are the distances from $a$, as @thm-bfs-tree says:
+$b$, $f$ and $g$ are at level 1, $c$ and $e$ at level 2, and $d$ at level 3.
+It is a different spanning tree from the one of @exm-spanning-tree.
+
+::: {#fig-hub-bfs}
+
+![](../images/trees-hub-bfs.png){fig-alt="Seven points, a to f at the corners of a hexagon and g in the middle, joined by the nine roads of the town graph.
+Six edges are drawn thick: a to b, a to f, a to g, b to c, c to d, and f to e.
+The other three edges, d to e, g to c, and g to e, are drawn dashed." width="40%"}
+
+The breadth-first search tree of the town graph from $a$, in thick lines.
+
+:::
+
+:::

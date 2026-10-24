@@ -1,0 +1,10 @@
+::: {#exm-ordered-phone}
+#### The order of the calls
+
+In the phone tree (@exm-phone-tree), list the children of each member in the order of their calls:
+$a$ calls $b$, then $c$, then $d$, and $b$ calls $e$, then $f$.
+This makes the phone tree an ordered rooted tree (@def-ordered-rooted-tree), drawn in @fig-phone.
+If $a$ called $d$ first, the ordered rooted tree would be different,
+although the rooted tree would be the same.
+
+:::

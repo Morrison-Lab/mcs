@@ -1,0 +1,26 @@
+::: {#exm-postfix-stack}
+#### Computing a postfix form with a stack
+
+To compute the value of a postfix form (@def-postfix-form), read it from left to right with a stack (@def-stack) that starts empty:
+
+- push each number;
+- for each operation, pop a number $b$, then pop a number $a$, and push the result of $a$ and $b$ under that operation.
+
+At the end the stack holds only the value.
+For $7 \; 2 \; - \; 3 \; 4 \; 2 \; \times \; + \; \times$ (@exm-postfix-form), with the front of the stack written first:
+
+| Read | Stack after it |
+|:----:|:--------------|
+| $7$ | $7$ |
+| $2$ | $2, 7$ |
+| $-$ | $5$, since $7 - 2 = 5$ |
+| $3$ | $3, 5$ |
+| $4$ | $4, 3, 5$ |
+| $2$ | $2, 4, 3, 5$ |
+| $\times$ | $8, 3, 5$, since $4 \times 2 = 8$ |
+| $+$ | $11, 5$, since $3 + 8 = 11$ |
+| $\times$ | $55$, since $5 \times 11 = 55$ |
+
+The value is 55, as in @sol-last-operation.
+
+:::

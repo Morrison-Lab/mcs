@@ -70,6 +70,8 @@ website:
         href: chapters/graphs.qmd
       - text: "Automata"
         href: chapters/automata.qmd
+      - text: "Trees"
+        href: chapters/trees.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mcs
@@ -105,6 +107,7 @@ website:
       - chapters/relations.qmd
       - chapters/graphs.qmd
       - chapters/automata.qmd
+      - chapters/trees.qmd
 
 callouty-theorem:
   thm:

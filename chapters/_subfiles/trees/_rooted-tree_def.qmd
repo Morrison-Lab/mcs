@@ -1,0 +1,7 @@
+::: {#def-rooted-tree}
+#### Rooted tree
+
+A **rooted tree** [@wikipedia_tree_graph_theory] is a tree (@def-tree) $T$ together with one of its vertices $r$,
+called the *root* of $T$.
+
+:::

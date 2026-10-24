@@ -1,0 +1,14 @@
+::: {#exm-tree-level}
+#### Levels in the phone tree
+
+In the phone tree (@exm-phone-tree), as @fig-phone marks,
+
+- the root $a$ is at level (@def-tree-level) 0;
+- $b$, $c$ and $d$ are at level 1;
+- $e$, $f$ and $g$ are at level 2;
+- $h$ is at level 3.
+
+The level of a member is the number of calls the news passes through to reach that member,
+which @sol-phone-calls found for $h$.
+
+:::

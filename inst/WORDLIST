@@ -19,12 +19,15 @@ Euclid
 Fleck
 Harris
 Injective
+Inorder
 Kam
 Kam's
 Kameron
 Königsberg
 Leonhard
 Outtakes
+Postorder
+Preorder
 Racket
 RevealJS
 Rosen
@@ -45,6 +48,7 @@ abab
 abba
 andmap
 antisymmetry
+ary
 automata
 baa
 bbab
@@ -60,6 +64,7 @@ dropdown
 glitchy
 iff
 injective
+inorder
 lintr
 mcs
 mds
@@ -71,6 +76,10 @@ ormap
 ponens
 postcondition
 postconditions
+postorder
+postorders
+preorder
+preorders
 pseudocode
 qwt
 rulesets

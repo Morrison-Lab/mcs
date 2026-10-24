@@ -1,0 +1,6 @@
+::: {#def-tree}
+#### Tree
+
+A **tree** [@wikipedia_tree_graph_theory] is a connected (@def-connected) graph (@def-graph-vertices-edges) with no cycles (@def-graph-cycle).
+
+:::

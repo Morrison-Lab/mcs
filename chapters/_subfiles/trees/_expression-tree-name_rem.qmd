@@ -1,0 +1,11 @@
+::: {#rem-expression-tree-name}
+#### Expression trees
+
+A parse tree (@def-parse-tree) in which every operation has two operands is a binary tree (@def-binary-tree)
+whose leaves (@def-tree-leaf) are the constants and variables
+and whose internal vertices (@def-internal-vertex) are the operations, each with two children.
+The *internal nodes* of @def-parse-tree are these internal vertices: the two names mean the same.
+It is also called an *expression tree*.
+The traversals of @sec-traversals turn it back into a string of symbols, in three different ways.
+
+:::

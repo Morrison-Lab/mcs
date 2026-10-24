@@ -1,0 +1,19 @@
+::: {#exr-racket-tree}
+#### A binary tree in Racket
+
+In Racket, store the empty tree (@def-binary-tree) as `'()`,
+and $\operatorname{node}(x, L, R)$ as the list `(list x L R)` of its label and its two subtrees.
+The binary tree $B$ of @exm-binary-tree is then
+
+```racket
+(define B
+  '(m (f (c () ())
+         (h () (j () ())))
+      (t (r (p () ()) ())
+         (w () ()))))
+```
+
+`(second L)` and `(third L)` return the second and the third element of a list `L`.
+What does `(first (second (third B)))` return?
+
+:::

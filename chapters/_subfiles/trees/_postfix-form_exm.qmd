@@ -1,0 +1,11 @@
+::: {#exm-postfix-form}
+#### A postfix form
+
+The postfix form (@def-postfix-form) of $(7 - 2) \times (3 + 4 \times 2)$,
+the postorder of the tree of @fig-expression, is
+
+$$
+7 \; 2 \; - \; 3 \; 4 \; 2 \; \times \; + \; \times.
+$$
+
+:::

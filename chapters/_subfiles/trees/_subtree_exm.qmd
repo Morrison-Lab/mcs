@@ -1,0 +1,10 @@
+::: {#exm-subtree}
+#### A subtree of the phone tree
+
+In the phone tree (@exm-phone-tree), the subtree (@def-subtree) rooted at $d$ has the vertices $d$, $g$ and $h$
+and the edges $\set{d, g}$ and $\set{g, h}$.
+It is the part of @fig-phone below $d$, together with $d$.
+The subtree rooted at a leaf, such as $c$, has one vertex and no edges,
+and the subtree rooted at $a$ is the whole phone tree.
+
+:::

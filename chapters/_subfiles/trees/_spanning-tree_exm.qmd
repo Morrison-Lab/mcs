@@ -1,0 +1,21 @@
+::: {#exm-spanning-tree}
+#### A spanning tree of the town graph
+
+Let $W$ be the graph of @fig-hub, the *town graph*.
+The six roads of @sol-fewest-roads, with all seven towns, form a spanning tree (@def-spanning-tree) $S$ of $W$, drawn thick in @fig-hub-spanning.
+$S$ is connected, by @sol-fewest-roads.
+It has no cycles, by @lem-degree-one:
+in $S$, take out $a$, $d$ and $f$, which have degree 1,
+then $b$, then $c$, then $g$, and $e$ is left with no edges.
+
+::: {#fig-hub-spanning}
+
+![](../images/trees-hub-spanning.png){fig-alt="Seven points, a to f at the corners of a hexagon and g in the middle, joined by the nine roads of the town graph.
+Six edges are drawn thick: a to b, b to c, c to g, g to e, e to d, and e to f.
+The other three edges, c to d, f to a, and g to a, are drawn dashed." width="40%"}
+
+A spanning tree $S$ of the town graph, in thick lines.
+
+:::
+
+:::

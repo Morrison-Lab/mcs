@@ -1,0 +1,25 @@
+::: {#sol-three-vertices}
+
+Five, drawn in @fig-three-vertices.
+The root is one of the three vertices,
+so the left and right binary trees have two vertices between them:
+2 and 0, 1 and 1, or 0 and 2.
+There is one binary tree with no vertices, the empty one,
+and one with one vertex, a root with two empty binary trees.
+There are two with two vertices: a root with one vertex in its left binary tree, or in its right one.
+So there are $2 \cdot 1 + 1 \cdot 1 + 1 \cdot 2 = 5$ binary trees with three vertices.
+
+::: {#fig-three-vertices}
+
+![](../images/trees-three-vertices.png){fig-alt="Five small trees of three unlabeled points each.
+The first goes down to the left twice.
+The second goes down to the left and then to the right.
+The third has a root with one point below it to the left and one below it to the right.
+The fourth goes down to the right and then to the left.
+The fifth goes down to the right twice." width="75%"}
+
+The five binary trees with three vertices.
+
+:::
+
+:::

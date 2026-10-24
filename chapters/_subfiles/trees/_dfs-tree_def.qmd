@@ -1,0 +1,12 @@
+::: {#def-dfs-tree}
+#### Depth-first search tree
+
+Let $G$ be a connected (@def-connected) graph with no parallel edges (@def-parallel-edges),
+given by an adjacency list (@def-adjacency-list), and let $s$ be a vertex of $G$.
+By @lem-dfs-one-call, `dfs(G, s)` (@def-dfs) makes exactly one call `dfs(G, u)` on each vertex $u$,
+and for $u \ne s$ that call is made by a call `dfs(G, v)` for some vertex $v$.
+The **depth-first search tree** of $G$ from $s$ [@wikipedia_depth_first_search]
+is the subgraph (@def-subgraph) of $G$ with every vertex of $G$
+and, for each vertex $u \ne s$, the edge $\set{v, u}$.
+
+:::

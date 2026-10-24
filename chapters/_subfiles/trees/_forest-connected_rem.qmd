@@ -1,0 +1,11 @@
+::: {#rem-forest-connected}
+#### Trees and forests
+
+By their definitions, a tree (@def-tree) is a forest (@def-forest) that is connected (@def-connected).
+Each connected component (@def-connected-component) of a forest is connected,
+and has no cycles, since a cycle in a subgraph is a cycle in the whole graph.
+So each connected component of a forest is a tree, which is where the name comes from.
+Some authors also require a forest to be not connected, so that a tree is not a forest;
+here a tree is a forest with one connected component.
+
+:::

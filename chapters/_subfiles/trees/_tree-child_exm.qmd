@@ -1,0 +1,13 @@
+::: {#exm-tree-child}
+#### Children in the phone tree
+
+In the phone tree (@exm-phone-tree),
+
+- the children (@def-tree-child) of $a$ are $b$, $c$ and $d$;
+- the children of $b$ are $e$ and $f$;
+- the only child of $d$ is $g$, and the only child of $g$ is $h$;
+- $c$, $e$, $f$ and $h$ have no children.
+
+These are the members each member calls.
+
+:::

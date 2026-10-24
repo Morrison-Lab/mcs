@@ -1,0 +1,40 @@
+::: {#exm-dfs-tree}
+#### A depth-first search tree of the town graph
+
+With the adjacency list of @exm-bfs-tree, `dfs` (@def-dfs) from $a$ makes these calls,
+each indented under the call that made it:
+
+```text
+dfs(W, a)             marks a; its list is b, f, g
+  dfs(W, b)           marks b; its list is a, c
+    dfs(W, c)         marks c; its list is b, d, g
+      dfs(W, d)       marks d; its list is c, e
+        dfs(W, e)     marks e; its list is d, f, g
+          dfs(W, f)   marks f; a and e are marked, so it returns
+          dfs(W, g)   marks g; a, c and e are marked, so it returns
+```
+
+After that every vertex is marked, and each call returns in turn.
+The depth-first search tree (@def-dfs-tree) from $a$ has the six edges
+
+$$
+\set{a, b}, \set{b, c}, \set{c, d}, \set{d, e}, \set{e, f}, \set{e, g},
+$$
+
+drawn thick in @fig-hub-dfs.
+With root $a$, it has height 5, with $f$ and $g$ at level 5,
+while the breadth-first search tree of @exm-bfs-tree has height 3.
+The level of $g$ is 5, but $\operatorname{dist}(a, g) = 1$:
+unlike the breadth-first search tree, the depth-first search tree does not give distances.
+
+::: {#fig-hub-dfs}
+
+![](../images/trees-hub-dfs.png){fig-alt="Seven points, a to f at the corners of a hexagon and g in the middle, joined by the nine roads of the town graph.
+Six edges are drawn thick: a to b, b to c, c to d, d to e, e to f, and e to g.
+The other three edges, f to a, g to a, and g to c, are drawn dashed." width="40%"}
+
+The depth-first search tree of the town graph from $a$, in thick lines.
+
+:::
+
+:::

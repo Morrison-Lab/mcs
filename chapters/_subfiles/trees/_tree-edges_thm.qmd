@@ -1,0 +1,40 @@
+::: {#thm-tree-edges}
+#### A tree with $n$ vertices has $n - 1$ edges
+
+Every tree $T = (V, E)$ (@def-tree) with $n$ vertices has $n - 1$ edges.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Choose any vertex $r$ of $T$ as a root (@def-rooted-tree).
+For each vertex $v \ne r$, let $e(v)$ be the edge joining $v$ to its parent (@def-tree-parent) $u$,
+which is an edge since $u$ and $v$ are consecutive vertices of a path.
+
+**Every edge is $e(v)$ for some $v$.**
+By @lem-parent-edge, one endpoint of each edge is the parent of the other endpoint $v$,
+and then the edge is $e(v)$.
+
+**Different vertices give different edges.**
+Suppose, for contradiction (@def-proof-by-contradiction), that $e(v) = e(w)$ for two vertices $v \ne w$.
+The endpoints of this edge are $v$ and its parent, and also $w$ and its parent,
+so $w$ is the parent of $v$ and $v$ is the parent of $w$.
+By @lem-level-parent,
+
+$$
+\operatorname{level}(v) = \operatorname{level}(w) + 1 = \operatorname{level}(v) + 2,
+$$
+
+which is false.
+
+So, listing the $n - 1$ vertices other than $r$ as $v_1, \ldots, v_{n - 1}$,
+the list $e(v_1), \ldots, e(v_{n - 1})$ has each edge of $T$ exactly once,
+and $\card{E} = n - 1$ (@def-cardinality).
+
+:::
+
+:::

@@ -1,0 +1,7 @@
+::: {#def-spanning-tree}
+#### Spanning tree
+
+A **spanning tree** of a graph $G$ (@def-graph-vertices-edges) [@wikipedia_spanning_tree] is a subgraph (@def-subgraph) of $G$
+that is a tree (@def-tree) and has every vertex of $G$.
+
+:::

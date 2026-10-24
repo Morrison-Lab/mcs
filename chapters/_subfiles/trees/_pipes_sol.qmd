@@ -1,0 +1,12 @@
+::: {#sol-pipes}
+
+One: the route $r, q, s, t, w$.
+A route from $r$ starts along the only pipe at $r$, to $q$.
+From $q$, the pipes lead to $p$, $r$ and $s$.
+The route cannot go back to $r$,
+and if it goes to $p$ it cannot go on, since the only pipe at $p$ leads back to $q$.
+So it goes to $s$, and from $s$ along its only other pipe to $t$.
+From $t$, the pipe to $u$ leads to a house with no other pipe,
+so the route takes the pipe to $w$.
+
+:::

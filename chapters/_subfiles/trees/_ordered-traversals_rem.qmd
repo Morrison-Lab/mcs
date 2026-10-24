@@ -1,0 +1,16 @@
+::: {#rem-ordered-traversals}
+#### Preorder and postorder of ordered rooted trees
+
+Preorder (@def-preorder) and postorder (@def-postorder) make sense for any ordered rooted tree (@def-ordered-rooted-tree).
+If the root $x$ has the children $c_1, \ldots, c_k$, in order,
+the preorder is $x$ followed by the preorders of the subtrees (@def-subtree) rooted at $c_1, \ldots, c_k$, in turn,
+and the postorder is the postorders of those subtrees, in turn, followed by $x$.
+For the ordered phone tree of @exm-ordered-phone,
+
+- the preorder is $a, b, e, f, c, d, g, h$;
+- the postorder is $e, f, b, c, h, g, d, a$.
+
+Inorder has no standard meaning when a vertex has more than two children,
+since there is no single place for the root among them.
+
+:::

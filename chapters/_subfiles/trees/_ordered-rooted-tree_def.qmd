@@ -1,0 +1,8 @@
+::: {#def-ordered-rooted-tree}
+#### Ordered rooted tree
+
+An **ordered rooted tree** [@wikipedia_tree_graph_theory] is a rooted tree (@def-rooted-tree)
+in which the children (@def-tree-child) of each vertex are listed in an order: a first child, a second child, and so on.
+We draw the children of each vertex from left to right in their order.
+
+:::

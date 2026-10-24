@@ -1,0 +1,36 @@
+::: {#thm-dfs-tree}
+#### Depth-first search builds a spanning tree
+
+Let $G$ and $s$ be as in @def-dfs-tree.
+Then the depth-first search tree of $G$ from $s$ is a spanning tree (@def-spanning-tree) of $G$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Let $S$ be the depth-first search tree, let $n$ be the number of vertices of $G$,
+and for each vertex $u \ne s$ let $v(u)$ be the vertex whose call makes the call `dfs(G, u)`.
+The call on $v(u)$ starts before the call on $u$, so $v(u) \ne u$.
+
+**$S$ has $n - 1$ edges.**
+There is one edge $\set{v(u), u}$ for each of the $n - 1$ vertices $u \ne s$.
+If two vertices $u \ne w$ gave the same edge, then $w = v(u)$ and $u = v(w)$,
+so the call on $w$ started before the call on $u$, and the call on $u$ started before the call on $w$, which is impossible.
+
+**$S$ is connected.**
+By strong induction (@def-strong-induction) on the order in which the calls start,
+there is a walk in $S$ from $s$ to each vertex $u$:
+for $u = s$ the walk $s$, and for $u \ne s$ a walk from $s$ to $v(u)$, whose call started earlier,
+followed by the edge $\set{v(u), u}$.
+Two of these walks, one read backward, join any two vertices.
+
+$S$ is connected with $n$ vertices and $n - 1$ edges, so it is a tree by @cor-connected-edges,
+and it has every vertex of $G$.
+
+:::
+
+:::

@@ -1,0 +1,8 @@
+::: {#def-postfix-form}
+#### Postfix form (reverse Polish notation)
+
+The **postfix form**, or **reverse Polish notation** [@wikipedia_reverse_polish_notation], of an expression whose operations each have two operands
+is the postorder (@def-postorder) of its parse tree (@def-parse-tree).
+Each operation comes after its two operands.
+
+:::

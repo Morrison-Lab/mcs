@@ -1,0 +1,25 @@
+::: {#exm-racket-postfix}
+#### A postfix calculator in Racket
+
+The method of @exm-postfix-stack uses a list as the stack (@def-stack):
+`cons` pushes, and `first` and `rest` pop.
+With `apply-op` from @exm-racket-evaluate,
+
+```racket
+(define (postfix-loop symbols stack)
+  (cond [(empty? symbols) (first stack)]
+        [(number? (first symbols))
+         (postfix-loop (rest symbols) (cons (first symbols) stack))]
+        [else
+         (postfix-loop (rest symbols)
+                       (cons (apply-op (first symbols) (second stack) (first stack))
+                             (rest (rest stack))))]))
+
+(define (evaluate-postfix symbols)
+  (postfix-loop symbols empty))
+```
+
+In the last clause, `(first stack)` is the number $b$ popped first and `(second stack)` is the number $a$ under it.
+`(evaluate-postfix '(7 2 - 3 4 2 * + *))` returns 55.
+
+:::

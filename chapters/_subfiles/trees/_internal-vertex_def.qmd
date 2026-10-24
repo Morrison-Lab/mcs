@@ -1,0 +1,6 @@
+::: {#def-internal-vertex}
+#### Internal vertex
+
+An **internal vertex** of a rooted tree (@def-rooted-tree) [@wikipedia_tree_graph_theory] is a vertex with at least one child (@def-tree-child).
+
+:::

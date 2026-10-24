@@ -1,0 +1,32 @@
+::: {#lem-parent-edge}
+#### Every edge joins a vertex to its parent
+
+Let $T$ be a rooted tree (@def-rooted-tree).
+For every edge $\set{u, w}$ of $T$, one of $u$ and $w$ is the parent (@def-tree-parent) of the other.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Let $r$ be the root, and let $r = p_0, p_1, \ldots, p_m = u$ be the path from $r$ to $u$ (@thm-tree-paths).
+Also $w \ne u$, since a tree has no loops (@rem-tree-simple).
+
+- If $w$ is not on this path, then $p_0, \ldots, p_m, w$ is a path from $r$ to $w$,
+  since its vertices are all different and $\set{u, w}$ is an edge.
+  By @thm-tree-paths it is the path from $r$ to $w$, so $u$ is the parent of $w$.
+- If $w$ is on this path, then $w = p_i$ for some $i < m$.
+  If $i = m - 1$, then $w$ is the parent of $u$.
+  Suppose, for contradiction (@def-proof-by-contradiction), that $i \le m - 2$.
+  Then $p_i, p_{i + 1}, \ldots, p_m, p_i$, whose last step uses the edge $\set{u, w}$,
+  is a closed walk of length $m - i + 1 \ge 3$
+  whose vertices before the last one are all different.
+  As in the proof of @thm-tree-paths, its edges are all different,
+  so it is a cycle (@def-graph-cycle), which a tree does not have.
+
+:::
+
+:::

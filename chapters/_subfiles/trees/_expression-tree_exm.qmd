@@ -1,0 +1,26 @@
+::: {#exm-expression-tree}
+#### The parse tree of $(7 - 2) \times (3 + 4 \times 2)$
+
+The parse tree (@def-parse-tree) of $(7 - 2) \times (3 + 4 \times 2)$ is the binary tree (@def-binary-tree)
+
+$$
+\operatorname{node}\paren{\times, \operatorname{node}\paren{-, \operatorname{single}(7), \operatorname{single}(2)}, \operatorname{node}\paren{+, \operatorname{single}(3), \operatorname{node}\paren{\times, \operatorname{single}(4), \operatorname{single}(2)}}},
+$$
+
+with $\operatorname{single}$ as in @rem-single, drawn in @fig-expression.
+Its root is the last operation, found in @sol-last-operation,
+its leaves (@def-tree-leaf) are the numbers,
+and each internal vertex (@def-internal-vertex) is an operation with its two operands as its subtrees.
+Two vertices have the label 2, and two have the label $\times$.
+
+::: {#fig-expression}
+
+![](../images/trees-expression.png){fig-alt="A binary tree with root labeled times.
+Below the root to the left is minus, whose left and right children are 7 and 2.
+Below the root to the right is plus, whose left child is 3 and whose right child is times, whose children are 4 and 2." width="55%"}
+
+The parse tree of $(7 - 2) \times (3 + 4 \times 2)$.
+
+:::
+
+:::

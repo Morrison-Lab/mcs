@@ -1,0 +1,14 @@
+::: {#exm-postorder}
+#### Postorder of $B$
+
+The postorder (@def-postorder) of the binary tree $B$ of @exm-binary-tree is the list
+
+$$
+c, j, h, f, p, r, w, t, m.
+$$
+
+Each vertex comes after all of its descendants (@def-descendant).
+So postorder is the order to use when the work at a vertex needs the results from its subtrees,
+such as finding the size of each subtree, or deleting the files in a folder before the folder.
+
+:::

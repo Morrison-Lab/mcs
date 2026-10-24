@@ -1,0 +1,20 @@
+::: {#def-binary-tree}
+#### Binary tree
+
+Let $A$ be a set (@def-set) of labels.
+The set of **binary trees** with labels in $A$ [@wikipedia_binary_tree] is the recursively defined set (@def-recursive-set) with
+
+- base case: the *empty tree*, written $\mathtt{nil}$, is a binary tree;
+- recursive rule: if $x \in A$ and $L$ and $R$ are binary trees, then $\operatorname{node}(x, L, R)$ is a binary tree,
+  whose *root* has the label $x$, and whose *left subtree* is $L$ and *right subtree* is $R$.
+
+The vertices of $\operatorname{node}(x, L, R)$ are its root and the vertices of $L$ and of $R$;
+the empty tree has no vertices.
+The root, the vertices of $L$ and the vertices of $R$ are taken as different vertices,
+even when $L$ and $R$ are the same binary tree:
+a vertex is a position in the tree, such as "the root of the left subtree",
+and its label is the element of $A$ at that position.
+So $\operatorname{node}(x, L, R)$ has one more vertex than $L$ and $R$ together,
+and two vertices may have the same label.
+
+:::

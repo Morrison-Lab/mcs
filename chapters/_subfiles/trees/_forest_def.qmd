@@ -1,0 +1,6 @@
+::: {#def-forest}
+#### Forest
+
+A **forest** [@wikipedia_tree_graph_theory] is a graph (@def-graph-vertices-edges) with no cycles (@def-graph-cycle).
+
+:::

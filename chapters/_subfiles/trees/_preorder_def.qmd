@@ -1,0 +1,18 @@
+::: {#def-preorder}
+#### Preorder
+
+The **preorder** $\operatorname{preorder}(T)$ of a binary tree $T$ (@def-binary-tree) [@wikipedia_tree_traversal]
+is the list (@def-list) of the labels of its vertices defined recursively,
+following the recursive definition of binary trees:
+
+$$
+\ba
+\operatorname{preorder}(\mathtt{nil}) &= \mathtt{empty},
+\\ \operatorname{preorder}\paren{\operatorname{node}(x, L, R)} &= \operatorname{cons}\paren{x, \operatorname{app}\paren{\operatorname{preorder}(L), \operatorname{preorder}(R)}},
+\ea
+$$
+
+where $\operatorname{app}$ is the append (@def-append).
+The root comes before its subtrees.
+
+:::
