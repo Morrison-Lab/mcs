@@ -1,0 +1,9 @@
+::: {#def-injective}
+#### Injective function (one-to-one function)
+
+A function $f : A \to B$ (@def-function) is **injective** [@wikipedia_injective_function]
+(also called **one-to-one**)
+if, for all $a, a' \in A$,
+$f(a) = f(a')$ implies $a = a'$.
+
+:::

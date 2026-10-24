@@ -1,0 +1,20 @@
+::: {#exm-word-letters}
+#### Words and their letters
+
+The pairs found in @sol-word-letters form a relation (@def-binary-relation) from $W$ to $L$,
+
+$$
+H = \set{(\text{cat}, \text{c}), (\text{cat}, \text{t}), (\text{dog}, \text{d}), (\text{dog}, \text{o}), (\text{owl}, \text{o})},
+$$
+
+where $w \mathrel{H} x$ means that the word $w$ has the letter $x$.
+So $\text{cat} \mathrel{H} \text{t}$,
+but $(\text{owl}, \text{t}) \notin H$.
+The word cat is related to two letters,
+and the letter o has two words related to it.
+
+The empty set and $W \times L$ itself are relations from $W$ to $L$ too:
+the first relates no word to any letter,
+and the second relates every word to every letter.
+
+:::

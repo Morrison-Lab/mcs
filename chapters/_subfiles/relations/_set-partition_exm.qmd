@@ -1,0 +1,12 @@
+::: {#exm-set-partition}
+#### Partitions and collections that are not partitions
+
+- The four groups of @sol-first-letter are a partition (@def-set-partition) of $K$.
+- The collection $\set{\set{\text{if}, \text{let}}, \set{\text{let}, \text{list}, \text{cond}, \text{cons}, \text{define}}}$ is not a partition of $K$,
+  since let is in both of its sets.
+- The collection $\set{\set{\text{if}}, \set{\text{let}, \text{list}}, \set{\text{cond}, \text{cons}}}$ is not a partition of $K$,
+  since define is in none of its sets.
+- The set of even integers and the set of odd integers (@def-even-odd) form a partition of $\bbZ$,
+  since every integer is even or odd, and none is both.
+
+:::

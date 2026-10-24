@@ -1,0 +1,36 @@
+::: {#thm-function-relation}
+#### Functions are relations with one output per input
+
+Let $A$ and $B$ be sets, and let $R$ be a relation from $A$ to $B$ (@def-binary-relation).
+Then $R$ is the graph (@def-graph) of a function $f : A \to B$ (@def-function)
+if and only if each $a \in A$ is related by $R$ to exactly one $b \in B$.
+That function is then the only one whose graph is $R$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+($\Rightarrow$)
+Suppose $R = \set{(a, f(a)) : a \in A}$ for a function $f : A \to B$, and let $a \in A$.
+Then $a \mathrel{R} f(a)$.
+If also $a \mathrel{R} b$, then $(a, b) = (a', f(a'))$ for some $a' \in A$,
+so $a' = a$ and $b = f(a)$ (@def-ordered-pair).
+So $f(a)$ is the only element of $B$ related to $a$.
+
+($\Leftarrow$)
+Suppose each $a \in A$ is related to exactly one element of $B$,
+and let $f(a)$ be that element.
+Then $f$ assigns exactly one element of $B$ to each $a \in A$, so it is a function $f : A \to B$.
+Its graph is $R$, since $(a, b) \in R$ exactly when $b$ is the element related to $a$, which is $f(a)$.
+
+Two functions $f, g : A \to B$ with the same graph $R$ have $f(a) = g(a)$ for every $a \in A$,
+since each is the one element related to $a$ by $R$.
+So they are the same function.
+
+:::
+
+:::

@@ -1,0 +1,7 @@
+::: {#def-function-domain}
+#### Domain of a function
+
+The **domain** of a function $f : A \to B$ (@def-function) [@wikipedia_domain_of_a_function]
+is the set $A$ of elements that $f$ assigns values to.
+
+:::

@@ -1,0 +1,10 @@
+::: {#exm-first-letter}
+#### Starting with the same letter
+
+By @thm-partition-equivalence, the partition of $K$ in @sol-first-letter gives the equivalence relation "starts with the same letter as",
+whose equivalence classes are the four groups.
+For example, $[\text{let}] = \set{\text{let}, \text{list}}$.
+By @thm-classes-partition, the relation "has the same length as" of @exm-same-length gives the partition of $K$ into its four classes from @exm-equivalence-classes,
+which is a different partition of the same set.
+
+:::

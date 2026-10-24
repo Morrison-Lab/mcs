@@ -1,0 +1,23 @@
+::: {#exm-racket-function}
+#### Checking for one output per input in Racket
+
+`(for/sum ([x L]) body)` evaluates `body` once for each element `x` of the list `L`,
+and returns the sum of the values.
+With a finite relation stored as a list of pairs, as in @exr-racket-member,
+`count-outputs` uses it to count the pairs whose first entry is `a`,
+and `function?` uses `for/and` (@exm-racket-properties) to check the condition of @thm-function-relation for each element of the list `A`:
+
+```racket
+(define (count-outputs R a)
+  (for/sum ([p R])
+    (if (equal? (first p) a) 1 0)))
+
+(define (function? A R)
+  (for/and ([a A])
+    (= (count-outputs R a) 1)))
+```
+
+`(function? (list 'rock 'paper 'scissors) beats)` returns `#t`, as @exm-function-or-not found,
+since `(count-outputs beats a)` is 1 for each of the three elements.
+
+:::

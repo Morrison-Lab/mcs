@@ -1,0 +1,7 @@
+::: {#def-identity-function}
+#### Identity function
+
+The **identity function** on a set $A$ [@wikipedia_identity_function]
+is the function $\operatorname{id}_A : A \to A$ (@def-function) with $\operatorname{id}_A(a) = a$ for every $a \in A$.
+
+:::

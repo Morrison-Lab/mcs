@@ -1,0 +1,8 @@
+::: {#def-surjective}
+#### Surjective function (onto function)
+
+A function $f : A \to B$ (@def-function) is **surjective** [@wikipedia_surjective_function]
+(also called **onto**)
+if, for every $b \in B$, there is some $a \in A$ with $f(a) = b$.
+
+:::

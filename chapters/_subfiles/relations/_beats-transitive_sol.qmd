@@ -1,0 +1,10 @@
+::: {#sol-beats-transitive}
+
+No.
+The pair $(\text{rock}, \text{paper})$ is not in $B$;
+paper beats rock, not the other way around.
+So for $B$, "$a$ beats $b$ and $b$ beats $c$" does not guarantee "$a$ beats $c$".
+The properties in this section are rules of this kind,
+which a relation may or may not follow.
+
+:::

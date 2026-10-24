@@ -1,0 +1,10 @@
+::: {#exm-identity-function}
+#### Identity functions
+
+- Flipping twice is the identity function (@def-identity-function) on $\set{0, 1}^*$:
+  $\operatorname{flip}(\operatorname{flip}(s)) = s$ for every $s \in \set{0, 1}^*$,
+  as @sol-flip-twice found for $s = 0110$.
+- The graph (@def-graph) of $\operatorname{id}_G$ is the relation $B^3$ of @exm-relation-power,
+  which relates each element of $G$ to itself.
+
+:::

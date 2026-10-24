@@ -1,0 +1,11 @@
+::: {#exr-beats}
+#### Rock, paper, scissors
+
+In the game rock, paper, scissors,
+rock beats scissors,
+scissors beats paper,
+and paper beats rock.
+Write the relation "beats" on the set $G = \set{\text{rock}, \text{paper}, \text{scissors}}$
+as a set of ordered pairs (@rem-relation-on-set).
+
+:::

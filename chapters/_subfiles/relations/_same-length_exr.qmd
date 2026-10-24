@@ -1,0 +1,8 @@
+::: {#exr-same-length}
+#### Words of the same length
+
+Let $K = \set{\text{if}, \text{let}, \text{cond}, \text{list}, \text{cons}, \text{define}}$, six words used in Racket,
+and on $K$ let $a \sim b$ when the words $a$ and $b$ have the same number of letters.
+Which words $a \in K$ have $a \sim \text{cond}$?
+
+:::

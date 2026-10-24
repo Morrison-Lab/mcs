@@ -1,0 +1,30 @@
+::: {#thm-same-value}
+#### Having the same value is an equivalence relation
+
+Let $f : A \to B$ be a function (@def-function),
+and on $A$ let $a \sim a'$ when $f(a) = f(a')$.
+Then $\sim$ is an equivalence relation (@def-equivalence-relation).
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+The steps of @exm-same-length work for any function in place of $\operatorname{len}$.
+
+**Reflexive.**
+For each $a \in A$, $f(a) = f(a)$, so $a \sim a$.
+
+**Symmetric.**
+If $a \sim a'$, then $f(a) = f(a')$, so $f(a') = f(a)$, and $a' \sim a$.
+
+**Transitive.**
+If $a \sim a'$ and $a' \sim a''$, then $f(a) = f(a')$ and $f(a') = f(a'')$,
+so $f(a) = f(a'')$ (@thm-equal-trans), and $a \sim a''$.
+
+:::
+
+:::

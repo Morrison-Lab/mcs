@@ -1,0 +1,21 @@
+::: {#sol-word-letters}
+
+Go through the words one at a time:
+
+- cat has the letters c and t from $L$;
+- dog has the letters d and o;
+- owl has only o, since w and l are not in $L$.
+
+So the pairs are
+
+$$
+(\text{cat}, \text{c}),
+\quad (\text{cat}, \text{t}),
+\quad (\text{dog}, \text{d}),
+\quad (\text{dog}, \text{o}),
+\quad (\text{owl}, \text{o}).
+$$
+
+The other pairs of $W \times L$, such as $(\text{owl}, \text{t})$, are left out.
+
+:::

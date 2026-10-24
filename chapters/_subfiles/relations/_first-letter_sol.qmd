@@ -1,0 +1,11 @@
+::: {#sol-first-letter}
+
+The first letters are i, l, c and d, which give four groups:
+
+$$
+\set{\text{if}}, \quad \set{\text{let}, \text{list}}, \quad \set{\text{cond}, \text{cons}}, \quad \set{\text{define}}.
+$$
+
+Every word of $K$ is in one of them, and no word is in two.
+
+:::

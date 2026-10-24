@@ -1,0 +1,18 @@
+::: {#exm-relation-digraph}
+#### The directed graph of "beats"
+
+@fig-beats is the directed graph (@def-relation-digraph) of the relation $B$ of @exm-beats.
+Each element of $G$ appears once,
+where an arrow diagram (@def-arrow-diagram) of $B$ would draw $G$ twice, once in each column.
+Starting from any element and following the arrows leads around the triangle,
+and back to the start after three arrows.
+
+::: {#fig-beats}
+
+![](../images/relations-beats.png){fig-alt="A directed graph with points rock, paper and scissors at the corners of a triangle, and arrows from rock to scissors, from scissors to paper, and from paper to rock." width="40%"}
+
+The directed graph of the relation "beats" on $G$.
+
+:::
+
+:::

@@ -1,0 +1,42 @@
+::: {#thm-partition-equivalence}
+#### A partition gives an equivalence relation
+
+Let $\mathcal{C}$ be a partition of a set $S$ (@def-set-partition),
+and on $S$ let $a \sim b$ when $a$ and $b$ are in the same set in $\mathcal{C}$.
+Then $\sim$ is an equivalence relation (@def-equivalence-relation),
+and its equivalence classes (@def-equivalence-class) are exactly the sets in $\mathcal{C}$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+**Reflexive.**
+Each $a \in S$ is in some set in $\mathcal{C}$, so $a$ and $a$ are in the same set, and $a \sim a$.
+
+**Symmetric.**
+If $a$ and $b$ are in the same set in $\mathcal{C}$, then so are $b$ and $a$.
+
+**Transitive.**
+Suppose $a \sim b$ and $b \sim c$:
+$a$ and $b$ are in a set $X \in \mathcal{C}$, and $b$ and $c$ are in a set $Y \in \mathcal{C}$.
+Then $b \in X \cap Y$.
+Different sets in $\mathcal{C}$ are disjoint, so $X = Y$,
+and $a$ and $c$ are both in $X$, so $a \sim c$.
+
+**Each class is a set in $\mathcal{C}$.**
+Let $a \in S$, and let $X$ be the set in $\mathcal{C}$ that holds $a$.
+An element $b$ has $b \sim a$ exactly when $b$ is in the set that holds $a$, which is $X$.
+So $[a] = X$.
+
+**Each set in $\mathcal{C}$ is a class.**
+Let $X \in \mathcal{C}$.
+Since $X$ is nonempty, it holds some element $a$,
+and then $X = [a]$, by the previous step.
+
+:::
+
+:::

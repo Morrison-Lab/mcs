@@ -1,0 +1,405 @@
+---
+title: "Relations"
+subtitle: "Relations between sets, their properties, equivalence relations, partitions and functions"
+format:
+  html: default
+  revealjs:
+    output-file: relations-slides.html
+  pdf:
+    output-file: relations-handout.pdf
+  docx:
+    output-file: relations.docx
+---
+
+{{< include ../latex-macros/macros.qmd >}}
+
+::: {.callout-note appearance='simple' collapse=true}
+## Source
+
+The topics of this chapter, and their order, follow the course calendar and Kameron Decker Harris's Fall 2026 lecture notes on relations.
+These come from those notes:
+
+- a relation from a set $A$ to a set $B$ as a subset of $A \times B$, and a relation on a set $A$ as a subset of $A \times A$;
+- the notation $a \mathrel{R} b$ for $(a, b) \in R$;
+- arrow diagrams, directed graphs and zero-one matrices as ways to draw a relation;
+- reading reflexivity and symmetry from a matrix or a directed graph;
+- the inverse of a relation, and the powers of a relation;
+- the powers of a relation whose arrows go around a cycle, adapted here from a cycle of four elements to rock, paper, scissors;
+- equivalence relations and equivalence classes;
+- a function from $A$ to $B$ as a relation that relates each element of $A$ to exactly one element of $B$;
+- the domain, codomain and range of a function;
+- injective, surjective and bijective functions, the identity function, and the fact that a function has an inverse function exactly when it is bijective.
+
+The definitions included from mds come from that site,
+and the definitions of an antisymmetric relation, the composition of relations and a partition follow the standard ones cited with them.
+The exercises, the other examples, the Racket functions and all the proofs are new.
+:::
+
+# Relations {#sec-relations}
+
+{{< include _subfiles/relations/_word-letters_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_word-letters_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_binary-relation_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_word-letters_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/functions/_def-relation.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_relation-on-set_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_parent_exm.qmd >}}
+
+# Drawing relations {#sec-drawing-relations}
+
+{{< include _subfiles/relations/_beats_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_beats_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_beats_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_arrow-diagram_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_arrow-diagram_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_relation-digraph_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_relation-digraph_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_relation-matrix_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_relation-matrix_exm.qmd >}}
+
+# Properties of relations {#sec-relation-properties}
+
+{{< include _subfiles/relations/_beats-transitive_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_beats-transitive_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_shares-letter_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/relations/_def-reflexive.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_reflexive_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/relations/_def-symmetric-relation.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_symmetric_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_antisymmetric_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_antisymmetric_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/algebra/_def-transitive.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_transitive_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_symmetric-antisymmetric_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_properties-pictures_rem.qmd >}}
+
+# Relations in Racket {#sec-racket-relations}
+
+{{< include _subfiles/relations/_racket-member_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_racket-member_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_racket-properties_exm.qmd >}}
+
+# Inverses and composition {#sec-inverse-composition}
+
+{{< include _subfiles/relations/_grandparent_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_grandparent_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_inverse-relation_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_inverse-relation_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_symmetric-inverse_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_relation-composition_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_relation-composition_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_relation-power_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_relation-power_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_transitive-composition_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_transitive-composition_exm.qmd >}}
+
+# Equivalence relations {#sec-equivalence-relations}
+
+{{< include _subfiles/relations/_same-length_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_same-length_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/relations/_def-equivalence-relation.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_same-length_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_same-value_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_integer-difference_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/relations/_def-equivalence-class.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_equivalence-class_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_related-classes_thm.qmd >}}
+
+# Partitions {#sec-partitions}
+
+{{< include _subfiles/relations/_first-letter_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_first-letter_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_set-partition_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_set-partition_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_classes-partition_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_partition-equivalence_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_first-letter_exm.qmd >}}
+
+# Functions as relations {#sec-functions-relations}
+
+{{< include _subfiles/relations/_beats-one_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_beats-one_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_function-domain_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/functions/_def-codomain.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/functions/_def-graph.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_graph-length_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_graph-words_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_function-relation_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/functions/_rem-function-as-set-of-pairs.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_function-or-not_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_racket-function_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/functions/_def-image.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_domain-image_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/functions/_def-range.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_dup-odd_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_dup-odd_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_injective_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_injective_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_surjective_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_surjective_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_bijective_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_bijective_exm.qmd >}}
+
+# Inverse functions and composition {#sec-inverse-functions}
+
+{{< include _subfiles/relations/_flip-twice_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_flip-twice_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_identity-function_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_identity-function_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/functions/_def-inverse-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_inverse-function_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_inverse-bijective_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/functions/_def-composition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_composition-graph_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_function-composition_exm.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

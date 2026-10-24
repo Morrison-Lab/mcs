@@ -1,0 +1,9 @@
+::: {#def-binary-relation}
+#### Relation from one set to another
+
+Let $A$ and $B$ be sets (@def-set).
+A **relation from $A$ to $B$** [@wikipedia_binary_relation]
+is a subset (@def-subset) $R$ of the Cartesian product $A \times B$ (@def-cartesian-product).
+When $(a, b) \in R$, we write $a \mathrel{R} b$ and say that $a$ is related to $b$.
+
+:::

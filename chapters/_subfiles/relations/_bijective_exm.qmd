@@ -1,0 +1,17 @@
+::: {#exm-bijective-or-not}
+#### Bijective or not
+
+- Let $\operatorname{flip} : \set{0, 1}^* \to \set{0, 1}^*$ change every 0 of a string to 1 and every 1 to 0,
+  so that $\operatorname{flip}(0010) = 1101$.
+  Flipping twice changes each symbol back,
+  so $\operatorname{flip}(\operatorname{flip}(s)) = s$ for every $s \in \set{0, 1}^*$.
+  It follows that $\operatorname{flip}$ is bijective (@def-bijective).
+  It is injective, since $\operatorname{flip}(s) = \operatorname{flip}(t)$ gives
+  $s = \operatorname{flip}(\operatorname{flip}(s)) = \operatorname{flip}(\operatorname{flip}(t)) = t$.
+  It is surjective, since each $s \in \set{0, 1}^*$ is $\operatorname{flip}(t)$ for $t = \operatorname{flip}(s)$.
+- The function $b : G \to G$ of @exm-function-or-not is bijective:
+  its three values are the three different elements of $G$.
+- The functions $\operatorname{dup}$, $\operatorname{len}$ and $\operatorname{len}_K$ of @exm-injective-or-not are not bijective,
+  since each fails to be injective or fails to be surjective.
+
+:::

@@ -1,0 +1,22 @@
+::: {#rem-symmetric-antisymmetric}
+#### Antisymmetric is not the opposite of symmetric
+
+A relation can be symmetric (@def-symmetric-relation) and antisymmetric (@def-antisymmetric),
+only one of the two,
+or neither:
+
+- the relation $\set{(\text{cow}, \text{cow}), (\text{dog}, \text{dog})}$ on $V$ is both,
+  since it relates no word to a different word, so no pair can break either property;
+- the relation $T$ of @exm-shares-letter is symmetric but not antisymmetric;
+- the relation $B$ of @exm-beats is antisymmetric but not symmetric;
+- the relation $\set{(\text{cat}, \text{cow}), (\text{cow}, \text{cat}), (\text{dog}, \text{pig})}$ on $V$ is neither:
+  it relates cat and cow both ways, so it is not antisymmetric,
+  and it has $(\text{dog}, \text{pig})$ but not $(\text{pig}, \text{dog})$, so it is not symmetric.
+
+A relation with both properties never relates two different elements:
+if $a \mathrel{R} b$, then $b \mathrel{R} a$ by symmetry, and then $a = b$ by antisymmetry.
+So "not symmetric" and "antisymmetric" say different things.
+A relation is not symmetric when one pair $(a, b)$ in it has its reverse $(b, a)$ missing,
+while it is antisymmetric when no two different elements are related both ways.
+
+:::

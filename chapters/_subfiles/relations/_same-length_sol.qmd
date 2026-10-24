@@ -1,0 +1,8 @@
+::: {#sol-same-length}
+
+The word cond has 4 letters.
+The words of $K$ with 4 letters are cond, list and cons,
+so these three are the words related to cond.
+The list includes cond itself, since cond has as many letters as cond.
+
+:::

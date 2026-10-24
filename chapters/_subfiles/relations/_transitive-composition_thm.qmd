@@ -1,0 +1,31 @@
+::: {#thm-transitive-composition}
+#### Transitive relations contain their squares
+
+Let $R$ be a relation on a set $S$ (@rem-relation-on-set).
+Then $R$ is transitive (@def-transitive) if and only if $R^2 \subseteq R$ (@def-relation-power).
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+($\Rightarrow$)
+Suppose $R$ is transitive, and let $(a, c) \in R^2 = R \circ R$.
+By the definition of composition (@def-relation-composition),
+$a \mathrel{R} b$ and $b \mathrel{R} c$ for some $b \in S$.
+Since $R$ is transitive, $a \mathrel{R} c$.
+So $R^2 \subseteq R$ (@def-subset).
+
+($\Leftarrow$)
+Suppose $R^2 \subseteq R$,
+and let $a \mathrel{R} b$ and $b \mathrel{R} c$.
+Then $(a, c) \in R \circ R = R^2$, by the definition of composition,
+so $(a, c) \in R$.
+So $R$ is transitive.
+
+:::
+
+:::

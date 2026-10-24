@@ -1,0 +1,16 @@
+::: {#exr-racket-member}
+#### Looking up a pair
+
+In Racket, the relation $B$ of @exm-beats can be stored as a list of two-element lists:
+
+```racket
+(define beats
+  (list (list 'rock 'scissors)
+        (list 'scissors 'paper)
+        (list 'paper 'rock)))
+```
+
+`(member x L)` returns `#f` when `x` is not an element of the list `L`.
+Does `(member (list 'rock 'paper) beats)` return `#f`?
+
+:::

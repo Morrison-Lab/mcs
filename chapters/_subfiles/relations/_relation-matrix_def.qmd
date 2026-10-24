@@ -1,0 +1,20 @@
+::: {#def-relation-matrix}
+#### Matrix of a relation
+
+Let $R$ be a relation from a finite set $A$ to a finite set $B$ (@def-finite-set),
+and list their elements in a chosen order as $A = \set{a_1, \ldots, a_m}$ and $B = \set{b_1, \ldots, b_n}$.
+The **matrix** of $R$ [@wikipedia_logical_matrix] is the $m \times n$ matrix (@def-matrix) $M_R$
+whose entry in row $i$ and column $j$ is
+
+$$
+m_{ij} \eqdef
+\begin{cases}
+1 & \text{if } (a_i, b_j) \in R,
+\\
+0 & \text{if } (a_i, b_j) \notin R.
+\end{cases}
+$$
+
+For a relation on a set $A$, the rows and the columns list $A$ in the same order.
+
+:::

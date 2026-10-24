@@ -1,0 +1,11 @@
+::: {#sol-beats}
+
+Each statement "$a$ beats $b$" gives the pair $(a, b)$, with the winner first:
+
+$$
+B = \set{(\text{rock}, \text{scissors}), (\text{scissors}, \text{paper}), (\text{paper}, \text{rock})}.
+$$
+
+No element of $G$ beats itself, so no pair of $B$ has the same entry twice.
+
+:::

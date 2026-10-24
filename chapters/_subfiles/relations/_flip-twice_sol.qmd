@@ -1,0 +1,7 @@
+::: {#sol-flip-twice}
+
+First $\operatorname{flip}(0110) = 1001$,
+and then $\operatorname{flip}(1001) = 0110$.
+So flipping twice gives back the string we started with, $0110$.
+
+:::

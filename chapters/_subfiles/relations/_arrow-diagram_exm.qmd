@@ -1,0 +1,16 @@
+::: {#exm-arrow-diagram}
+#### An arrow diagram of words and letters
+
+@fig-word-letters is the arrow diagram (@def-arrow-diagram) of the relation $H$ of @exm-word-letters.
+Each of the five pairs of $H$ is one arrow.
+Two arrows leave cat, and two arrive at o.
+
+::: {#fig-word-letters}
+
+![](../images/relations-word-letters.png){fig-alt="An arrow diagram with the words cat, dog and owl in a column on the left and the letters c, d, o and t in a column on the right, and arrows from cat to c, cat to t, dog to d, dog to o, and owl to o." width="50%"}
+
+The arrow diagram of the relation $H$ from the words $W$ to the letters $L$ they contain.
+
+:::
+
+:::

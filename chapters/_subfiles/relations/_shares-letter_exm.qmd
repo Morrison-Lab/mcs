@@ -1,0 +1,21 @@
+::: {#exm-shares-letter}
+#### Words that share a letter
+
+Let $V = \set{\text{cat}, \text{cow}, \text{dog}, \text{pig}}$,
+and on $V$ let $a \mathrel{T} b$ when the words $a$ and $b$ have at least one letter in common (@rem-relation-on-set).
+For example, $\text{cat} \mathrel{T} \text{cow}$, since both have a c,
+and $\text{cow} \mathrel{T} \text{dog}$, since both have an o,
+but $(\text{cat}, \text{dog}) \notin T$.
+@fig-shares-letter is the directed graph (@def-relation-digraph) of $T$.
+Each word has a letter in common with itself,
+so each point has an arrow that comes back to it.
+
+::: {#fig-shares-letter}
+
+![](../images/relations-shares-letter.png){fig-alt="A directed graph with points cat, cow, dog and pig in a row, where each point has an arrow back to itself and arrows go both ways between cat and cow, between cow and dog, and between dog and pig." width="70%"}
+
+The directed graph of the relation "shares a letter with" on $V$.
+
+:::
+
+:::

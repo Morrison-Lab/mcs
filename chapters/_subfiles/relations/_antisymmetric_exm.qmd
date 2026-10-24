@@ -1,0 +1,18 @@
+::: {#exm-antisymmetric-or-not}
+#### Antisymmetric or not
+
+By its contrapositive (@def-contrapositive),
+a relation $R$ is antisymmetric (@def-antisymmetric) exactly when,
+for any two different elements $a \ne b$,
+at most one of $a \mathrel{R} b$ and $b \mathrel{R} a$ holds.
+
+- The relation $B$ of @exm-beats is antisymmetric:
+  no two different elements of $G$ beat each other.
+- The relation $P$ of @exm-parent is antisymmetric:
+  no two people of $F$ are each other's parent.
+- The relation $T$ of @exm-shares-letter is not antisymmetric:
+  $\text{cat} \mathrel{T} \text{cow}$ and $\text{cow} \mathrel{T} \text{cat}$, but cat and cow are different words.
+- For a set $U$, the relation $\subseteq$ (@def-subset) on the power set $\mathcal{P}(U)$ (@def-power-set) is antisymmetric:
+  if $X \subseteq Y$ and $Y \subseteq X$, then $X = Y$, by @thm-double-inclusion.
+
+:::

@@ -1,0 +1,35 @@
+::: {#thm-classes-partition}
+#### Equivalence classes form a partition
+
+Let $\sim$ be an equivalence relation on a set $S$ (@def-equivalence-relation).
+Then the collection of the different equivalence classes $[a]$, for $a \in S$ (@def-equivalence-class),
+is a partition of $S$ (@def-set-partition).
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Each class $[a]$ is a subset of $S$, by @def-equivalence-class.
+We check the three conditions of @def-set-partition.
+
+**Nonempty.**
+Since $\sim$ is reflexive, $a \sim a$, so $a \in [a]$.
+
+**Different classes are disjoint.**
+Let $[a]$ and $[b]$ be two classes that share an element $x$.
+Then $x \sim a$ and $x \sim b$.
+Since $\sim$ is symmetric, $a \sim x$,
+and since $\sim$ is transitive, $a \sim b$.
+So $[a] = [b]$, by @thm-related-classes.
+So two different classes share no element.
+
+**Every element is in a class.**
+Each $a \in S$ is in its own class $[a]$, as in the first step.
+
+:::
+
+:::

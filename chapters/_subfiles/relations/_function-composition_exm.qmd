@@ -1,0 +1,25 @@
+::: {#exm-function-composition}
+#### Composing functions of strings and games
+
+- Let $\operatorname{pad} : \set{0, 1}^* \to \set{0, 1}^*$ put a 0 at the end of a string,
+  so $\operatorname{pad}(s) = s 0$, the string $s$ followed by $0$.
+  The order of a composition (@def-composition) matters:
+
+  $$
+  \ba
+  (\operatorname{flip} \circ \operatorname{pad})(1) &= \operatorname{flip}(10) = 01,
+  \\
+  (\operatorname{pad} \circ \operatorname{flip})(1) &= \operatorname{pad}(0) = 00.
+  \ea
+  $$
+
+- $\operatorname{len}(\operatorname{dup}(s)) = 2 \operatorname{len}(s)$ for every $s \in \set{0, 1}^*$,
+  so $\operatorname{len} \circ \operatorname{dup}$ doubles the length of a string.
+- The graph of $b$ is $B$, so by @thm-composition-graph the graph of $b \circ b$ is $B \circ B = B^2$,
+  which is $B^{-1}$ by @exm-relation-power.
+  By @thm-inverse-bijective, $B^{-1}$ is also the graph of $b^{-1}$,
+  and by @thm-function-relation only one function has that graph,
+  so $b \circ b = b^{-1}$, the inverse function of @exm-inverse-strings:
+  the element that $a$'s victim beats is the element that beats $a$.
+
+:::

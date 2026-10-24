@@ -1,0 +1,43 @@
+::: {#thm-inverse-bijective}
+#### A function has an inverse exactly when it is a bijection
+
+A function $f : A \to B$ (@def-function) has an inverse function (@def-inverse-function)
+if and only if $f$ is bijective (@def-bijective).
+The graph (@def-graph) of the inverse function is then the inverse relation (@def-inverse-relation) of the graph of $f$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+($\Rightarrow$)
+Suppose $g : B \to A$ is an inverse function of $f$.
+
+**Injective.**
+If $f(a) = f(a')$, then $a = g(f(a)) = g(f(a')) = a'$.
+
+**Surjective.**
+Each $b \in B$ has $b = f(g(b))$, so $b$ is the value of $f$ at $g(b) \in A$.
+
+($\Leftarrow$)
+Suppose $f$ is bijective, and let $b \in B$.
+Since $f$ is surjective, some $a \in A$ has $f(a) = b$,
+and since $f$ is injective, only one $a$ does.
+Let $g(b)$ be that $a$.
+Then $g : B \to A$ is a function with $f(g(b)) = b$ for every $b \in B$.
+For $a \in A$, $g(f(a))$ is the one element $a'$ with $f(a') = f(a)$, which is $a$ itself.
+So $g$ is an inverse function of $f$.
+
+**The graph of the inverse.**
+In both cases, $f(g(b)) = b$ for every $b \in B$ and $g(f(a)) = a$ for every $a \in A$.
+Let $a \in A$ and $b \in B$.
+If $g(b) = a$, then $f(a) = f(g(b)) = b$.
+If $f(a) = b$, then $g(b) = g(f(a)) = a$.
+So $(b, a)$ is in the graph of $g$ exactly when $(a, b)$ is in the graph of $f$.
+
+:::
+
+:::

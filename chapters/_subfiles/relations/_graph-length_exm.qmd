@@ -1,0 +1,17 @@
+::: {#exm-graph-length}
+#### The graph of a length function
+
+Let $\operatorname{len}_K : K \to \Nat$ (@def-function, @def-natural-numbers) give the length of each word of the set $K$ of @exr-same-length,
+so $\operatorname{len}_K(a) = \operatorname{len}(a)$, as in @exm-same-length.
+Its domain (@def-function-domain) is $K$ and its codomain (@def-codomain) is $\Nat$.
+Its graph (@def-graph) is the set of six pairs
+
+$$
+\set{(\text{if}, 2), (\text{let}, 3), (\text{cond}, 4), (\text{list}, 4), (\text{cons}, 4), (\text{define}, 6)},
+$$
+
+a subset of $K \times \Nat$,
+and so a relation from $K$ to $\Nat$ (@def-binary-relation).
+Each word appears as the first entry of exactly one pair.
+
+:::
