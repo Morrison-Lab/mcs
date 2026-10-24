@@ -2,94 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://morrison-lab.github.io/mcs/index.html</loc>
-    <lastmod>2026-10-24T00:09:34.122Z</lastmod>
+    <lastmod>2026-10-24T15:32:57.208Z</lastmod>
   </url>
   <url>
     <loc>https://morrison-lab.github.io/mcs/index-slides.html</loc>
-    <lastmod>2026-10-24T00:09:34.122Z</lastmod>
+    <lastmod>2026-10-24T15:32:57.208Z</lastmod>
   </url>
   <url>
     <loc>https://morrison-lab.github.io/mcs/chapters/sets.html</loc>
-    <lastmod>2026-10-24T00:09:34.121Z</lastmod>
+    <lastmod>2026-10-24T15:32:57.207Z</lastmod>
   </url>
   <url>
     <loc>https://morrison-lab.github.io/mcs/chapters/sets-slides.html</loc>
-    <lastmod>2026-10-24T00:09:34.121Z</lastmod>
+    <lastmod>2026-10-24T15:32:57.207Z</lastmod>
   </url>
   <url>
     <loc>https://morrison-lab.github.io/mcs/chapters/propositional-logic.html</loc>
-    <lastmod>2026-10-24T00:09:34.121Z</lastmod>
+    <lastmod>2026-10-24T15:32:57.207Z</lastmod>
   </url>
   <url>
     <loc>https://morrison-lab.github.io/mcs/chapters/propositional-logic-slides.html</loc>
-    <lastmod>2026-10-24T00:09:34.121Z</lastmod>
+    <lastmod>2026-10-24T15:32:57.207Z</lastmod>
   </url>
   <url>
-    <loc>https://morrison-lab.github.io/mcs/chapters/induction.html</loc>
-    <lastmod>2026-10-24T00:09:34.121Z</lastmod>
+    <loc>https://morrison-lab.github.io/mcs/chapters/loop-invariants.html</loc>
+    <lastmod>2026-10-24T15:32:57.207Z</lastmod>
   </url>
   <url>
-    <loc>https://morrison-lab.github.io/mcs/chapters/induction-slides.html</loc>
-    <lastmod>2026-10-24T00:09:34.121Z</lastmod>
-  </url>
-  <url>
-    <loc>https://morrison-lab.github.io/mcs/chapters/equivalence-negation.html</loc>
-    <lastmod>2026-10-24T00:09:34.121Z</lastmod>
-  </url>
-  <url>
-    <loc>https://morrison-lab.github.io/mcs/chapters/equivalence-negation-slides.html</loc>
-    <lastmod>2026-10-24T00:09:34.121Z</lastmod>
-  </url>
-  <url>
-    <loc>https://morrison-lab.github.io/mcs/chapters/contrapositive-contradiction.html</loc>
-    <lastmod>2026-10-24T00:09:34.121Z</lastmod>
-  </url>
-  <url>
-    <loc>https://morrison-lab.github.io/mcs/chapters/contrapositive-contradiction-slides.html</loc>
-    <lastmod>2026-10-24T00:09:34.121Z</lastmod>
-  </url>
-  <url>
-    <loc>https://morrison-lab.github.io/mcs/chapters/calendar.html</loc>
-    <lastmod>2026-10-24T00:09:34.121Z</lastmod>
-  </url>
-  <url>
-    <loc>https://morrison-lab.github.io/mcs/chapters/direct-proof-slides.html</loc>
-    <lastmod>2026-10-24T00:09:34.121Z</lastmod>
-  </url>
-  <url>
-    <loc>https://morrison-lab.github.io/mcs/chapters/direct-proof.html</loc>
-    <lastmod>2026-10-24T00:09:34.121Z</lastmod>
-  </url>
-  <url>
-    <loc>https://morrison-lab.github.io/mcs/chapters/iff-existence-disproof-slides.html</loc>
-    <lastmod>2026-10-24T00:09:34.121Z</lastmod>
+    <loc>https://morrison-lab.github.io/mcs/chapters/loop-invariants-slides.html</loc>
+    <lastmod>2026-10-24T15:32:57.207Z</lastmod>
   </url>
   <url>
     <loc>https://morrison-lab.github.io/mcs/chapters/iff-existence-disproof.html</loc>
-    <lastmod>2026-10-24T00:09:34.121Z</lastmod>
+    <lastmod>2026-10-24T15:32:57.207Z</lastmod>
+  </url>
+  <url>
+    <loc>https://morrison-lab.github.io/mcs/chapters/iff-existence-disproof-slides.html</loc>
+    <lastmod>2026-10-24T15:32:57.207Z</lastmod>
+  </url>
+  <url>
+    <loc>https://morrison-lab.github.io/mcs/chapters/direct-proof.html</loc>
+    <lastmod>2026-10-24T15:32:57.207Z</lastmod>
+  </url>
+  <url>
+    <loc>https://morrison-lab.github.io/mcs/chapters/direct-proof-slides.html</loc>
+    <lastmod>2026-10-24T15:32:57.207Z</lastmod>
+  </url>
+  <url>
+    <loc>https://morrison-lab.github.io/mcs/chapters/calendar.html</loc>
+    <lastmod>2026-10-24T15:32:57.207Z</lastmod>
+  </url>
+  <url>
+    <loc>https://morrison-lab.github.io/mcs/chapters/contrapositive-contradiction-slides.html</loc>
+    <lastmod>2026-10-24T15:32:57.207Z</lastmod>
+  </url>
+  <url>
+    <loc>https://morrison-lab.github.io/mcs/chapters/contrapositive-contradiction.html</loc>
+    <lastmod>2026-10-24T15:32:57.207Z</lastmod>
+  </url>
+  <url>
+    <loc>https://morrison-lab.github.io/mcs/chapters/equivalence-negation-slides.html</loc>
+    <lastmod>2026-10-24T15:32:57.207Z</lastmod>
+  </url>
+  <url>
+    <loc>https://morrison-lab.github.io/mcs/chapters/equivalence-negation.html</loc>
+    <lastmod>2026-10-24T15:32:57.207Z</lastmod>
+  </url>
+  <url>
+    <loc>https://morrison-lab.github.io/mcs/chapters/induction-slides.html</loc>
+    <lastmod>2026-10-24T15:32:57.207Z</lastmod>
+  </url>
+  <url>
+    <loc>https://morrison-lab.github.io/mcs/chapters/induction.html</loc>
+    <lastmod>2026-10-24T15:32:57.207Z</lastmod>
   </url>
   <url>
     <loc>https://morrison-lab.github.io/mcs/chapters/predicates-quantifiers-slides.html</loc>
-    <lastmod>2026-10-24T00:09:34.121Z</lastmod>
+    <lastmod>2026-10-24T15:32:57.207Z</lastmod>
   </url>
   <url>
     <loc>https://morrison-lab.github.io/mcs/chapters/predicates-quantifiers.html</loc>
-    <lastmod>2026-10-24T00:09:34.121Z</lastmod>
+    <lastmod>2026-10-24T15:32:57.207Z</lastmod>
   </url>
   <url>
     <loc>https://morrison-lab.github.io/mcs/chapters/set-proofs-slides.html</loc>
-    <lastmod>2026-10-24T00:09:34.121Z</lastmod>
+    <lastmod>2026-10-24T15:32:57.207Z</lastmod>
   </url>
   <url>
     <loc>https://morrison-lab.github.io/mcs/chapters/set-proofs.html</loc>
-    <lastmod>2026-10-24T00:09:34.121Z</lastmod>
+    <lastmod>2026-10-24T15:32:57.207Z</lastmod>
   </url>
   <url>
     <loc>https://morrison-lab.github.io/mcs/chapters/syllabus-slides.html</loc>
-    <lastmod>2026-10-24T00:09:34.121Z</lastmod>
+    <lastmod>2026-10-24T15:32:57.207Z</lastmod>
   </url>
   <url>
     <loc>https://morrison-lab.github.io/mcs/chapters/syllabus.html</loc>
-    <lastmod>2026-10-24T00:09:34.121Z</lastmod>
+    <lastmod>2026-10-24T15:32:57.207Z</lastmod>
   </url>
 </urlset>
