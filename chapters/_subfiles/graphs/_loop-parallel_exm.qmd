@@ -14,7 +14,9 @@ We name them instead, say $e_1$ and $e_2$, and say that each has endpoints $q$ a
 
 ::: {#fig-loop-parallel}
 
-![](../images/graphs-loop-parallel.png){fig-alt="Four points p, q, r and s in a row. A small loop leaves p and comes back to p. One line joins p and q, two curved lines join q and r, and one line joins r and s." width="60%"}
+![](../images/graphs-loop-parallel.png){fig-alt="Four points p, q, r and s in a row.
+A small loop leaves p and comes back to p.
+One line joins p and q, two curved lines join q and r, and one line joins r and s." width="60%"}
 
 A graph with a loop at $p$ and two parallel edges between $q$ and $r$.
 

@@ -19,7 +19,8 @@ one starts at home and the other starts at blog.
 
 ::: {#fig-web}
 
-![](../images/graphs-web.png){fig-alt="Four circles labeled home, about, blog and contact at the corners of a rectangle, with home at the top left, about at the top right, blog at the bottom left and contact at the bottom right. Arrows go from home to about, from home to blog, from blog to home, from blog back to itself, from blog to contact, from about to contact, and from contact to home." width="50%"}
+![](../images/graphs-web.png){fig-alt="Four circles labeled home, about, blog and contact at the corners of a rectangle, with home at the top left, about at the top right, blog at the bottom left and contact at the bottom right.
+Arrows go from home to about, from home to blog, from blog to home, from blog back to itself, from blog to contact, from about to contact, and from contact to home." width="50%"}
 
 The links between the four pages of a website.
 

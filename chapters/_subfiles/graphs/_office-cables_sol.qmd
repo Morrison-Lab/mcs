@@ -6,7 +6,8 @@ so there are three of them.
 
 ::: {#fig-office}
 
-![](../images/graphs-office.png){fig-alt="Six points labeled a to f, joined by eight lines: a to b, a to c, b to c, b to d, c to e, d to e, d to f, and e to f. The outer lines form a hexagon a, b, d, f, e, c, and the lines b to c and d to e run inside the hexagon without crossing any other line." width="60%"}
+![](../images/graphs-office.png){fig-alt="Six points labeled a to f, joined by eight lines: a to b, a to c, b to c, b to d, c to e, d to e, d to f, and e to f.
+The outer lines form a hexagon a, b, d, f, e, c, and the lines b to c and d to e run inside the hexagon without crossing any other line." width="60%"}
 
 The computers and cables of @exr-office-cables.
 
