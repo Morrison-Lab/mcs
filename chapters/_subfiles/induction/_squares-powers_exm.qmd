@@ -1,0 +1,36 @@
+::: {#exm-squares-powers}
+#### An induction that starts at 4
+
+Claim: $n^2 \le 2^n$ for every integer (@def-integers) $n \ge 4$.
+
+Let $P(n)$ be the inequality $n^2 \le 2^n$ (@def-inequality),
+and follow @rem-induction-template with $n_0 = 4$.
+@sol-squares-powers shows that $n_0 = 1$ would not work, since $P(3)$ is false.
+
+**Base case.**
+$4^2 = 16 \le 16 = 2^4$.
+
+**Inductive step.**
+Let $k \ge 4$, and suppose $k^2 \le 2^k$.
+The goal is $(k + 1)^2 \le 2^{k + 1}$.
+Since $k \ge 4$, we have $k^2 \ge 4k = 2k + 2k \ge 2k + 8 > 2k + 1$.
+So
+
+$$
+\ba
+(k + 1)^2
+&= k^2 + 2k + 1
+\\&< k^2 + k^2
+&& \text{(} 2k + 1 < k^2 \text{)}
+\\&= 2k^2
+\\&\le 2 \cdot 2^k
+&& \text{(induction hypothesis)}
+\\&= 2^{k + 1}.
+\ea
+$$
+
+So $P(k + 1)$ holds, and by induction $n^2 \le 2^n$ for every integer $n \ge 4$.
+The inductive step works for every $k \ge 3$, since $2k + 1 < k^2$ already holds at $k = 3$.
+The induction starts at 4 because of the base case: $P(3)$ is false.
+
+:::

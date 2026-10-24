@@ -1,0 +1,9 @@
+::: {#rem-chocolate-strong}
+#### Why the proof needs strong induction
+
+The proof of @thm-chocolate uses $P(a)$ and $P(b)$,
+where $a$ and $b$ can be any sizes smaller than $n$, not only $n - 1$.
+Ordinary induction gives only $P(n - 1)$ in the step.
+Strong induction gives $P(k)$ for every $k < n$, which is what the proof needs.
+
+:::

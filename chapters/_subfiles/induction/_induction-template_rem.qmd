@@ -1,0 +1,19 @@
+::: {#rem-induction-template}
+#### The shape of a proof by induction
+
+A proof by induction that $P(n)$ holds for every integer $n \ge n_0$ has two parts:
+
+> | **Base case.**
+>   Show $P(n_0)$.
+> |
+> | **Inductive step.**
+>   Let $k \ge n_0$ be an integer, and suppose $P(k)$.
+> | $\vdots$
+> | Therefore $P(k + 1)$.
+> |
+> | So $P(n)$ holds for every integer $n \ge n_0$, by induction.
+
+Write out the induction hypothesis $P(k)$ and the goal $P(k + 1)$ before starting the step,
+and mark the line where the step uses the hypothesis.
+
+:::

@@ -56,6 +56,8 @@ website:
         href: chapters/sets.qmd
       - text: "Proofs with Sets"
         href: chapters/set-proofs.qmd
+      - text: "Induction"
+        href: chapters/induction.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mcs
@@ -84,6 +86,7 @@ website:
       - chapters/iff-existence-disproof.qmd
       - chapters/sets.qmd
       - chapters/set-proofs.qmd
+      - chapters/induction.qmd
 
 callouty-theorem:
   thm:

@@ -1,0 +1,15 @@
+::: {#rem-step-forms}
+#### Stepping from $k$ to $k + 1$
+
+@def-proof-by-induction states the inductive step as
+"if $P(n - 1)$, then $P(n)$, for every $n > n_0$".
+Many sources, and part 2 of @sol-unit-fractions, state it as
+"if $P(k)$, then $P(k + 1)$, for every $k \ge n_0$".
+The two say the same thing, with $k = n - 1$,
+and the rest of this chapter uses the second form.
+
+Writing the goal $P(k + 1)$ correctly is a common place to go wrong:
+replace *every* $n$ in $P(n)$ with $k + 1$, including in the last term of a sum
+and on the other side of the equation.
+
+:::
