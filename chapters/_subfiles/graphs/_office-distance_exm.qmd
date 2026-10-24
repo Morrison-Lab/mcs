@@ -1,0 +1,26 @@
+::: {#exm-office-distance}
+#### Distances in the office graph
+
+In the office graph, the distances (@def-graph-distance) from $a$ are
+
+$$
+\operatorname{dist}(a, a) = 0, \quad
+\operatorname{dist}(a, b) = \operatorname{dist}(a, c) = 1, \quad
+\operatorname{dist}(a, d) = \operatorname{dist}(a, e) = 2, \quad
+\operatorname{dist}(a, f) = 3,
+$$
+
+where the last is @sol-office-distance.
+@fig-office-levels draws the graph with the vertices in columns by their distance from $a$.
+Every edge joins two vertices in the same column or in columns next to each other.
+By @thm-walk-path, a shortest walk is a path, such as $a, b, d, f$.
+
+::: {#fig-office-levels}
+
+![](../images/graphs-office-levels.png){fig-alt="The office graph drawn in four columns labeled distance 0 to distance 3: a in the first column, b and c in the second, d and e in the third, and f in the fourth. Its edges are a to b, a to c, b to c, b to d, c to e, d to e, d to f and e to f." width="65%"}
+
+The office graph, with its vertices in columns by their distance from $a$.
+
+:::
+
+:::

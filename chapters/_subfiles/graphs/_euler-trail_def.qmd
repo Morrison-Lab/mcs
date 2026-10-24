@@ -1,0 +1,7 @@
+::: {#def-euler-trail}
+#### Euler trail
+
+An **Euler trail** of a graph (@def-graph-vertices-edges) [@wikipedia_eulerian_path] is a trail (@def-trail)
+from a vertex $u$ to a different vertex $v$ that contains every edge of the graph.
+
+:::

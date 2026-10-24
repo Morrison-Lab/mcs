@@ -1,0 +1,9 @@
+::: {#exm-adjacent}
+#### Neighbors in the office graph
+
+In the office graph (@exm-office-graph),
+the neighbors (@def-adjacent) of $b$ are $a$, $c$ and $d$.
+The vertices $a$ and $f$ are not adjacent, since no edge has endpoints $a$ and $f$.
+In the graph of @exm-loop-parallel, the loop at $p$ makes $p$ adjacent to itself.
+
+:::

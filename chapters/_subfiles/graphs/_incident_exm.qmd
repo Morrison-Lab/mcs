@@ -1,0 +1,8 @@
+::: {#exm-incident}
+#### Edges at a vertex of the office graph
+
+In the office graph (@exm-office-graph),
+the edges incident (@def-incident) with $e$ are $\set{c, e}$, $\set{d, e}$ and $\set{e, f}$.
+The edge $\set{c, e}$ is incident with $c$ and with $e$, and with no other vertex.
+
+:::

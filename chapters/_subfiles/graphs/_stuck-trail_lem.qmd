@@ -1,0 +1,27 @@
+::: {#lem-stuck-trail}
+#### A trail that cannot go on
+
+Let $G$ be a graph (@def-graph-vertices-edges) in which every vertex has even degree (@def-degree).
+Let $v_0, e_1, v_1, \ldots, e_n, v_n$ be a trail (@def-trail) in $G$ with $n \ge 1$
+that cannot be extended:
+every edge with endpoint $v_n$ is one of $e_1, \ldots, e_n$.
+Then $v_n = v_0$, so the trail is a circuit (@def-circuit).
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Suppose, for contradiction (@def-proof-by-contradiction), that $v_n \ne v_0$.
+By @lem-trail-ends, the edges of the trail have an odd number of ends at $v_n$.
+The degree $\deg(v_n)$ is the number of ends at $v_n$ of all the edges of $G$, and it is even.
+So some end at $v_n$ belongs to an edge that is not in the trail.
+That edge has endpoint $v_n$ and is not one of $e_1, \ldots, e_n$,
+which contradicts the assumption that the trail cannot be extended.
+
+:::
+
+:::

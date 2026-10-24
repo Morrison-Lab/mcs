@@ -1,0 +1,15 @@
+::: {#exm-degree}
+#### Degrees with a loop
+
+In the graph of @exm-loop-parallel (@fig-loop-parallel),
+$\deg(p) = 2 + 1 = 3$ (@def-degree), since the loop at $p$ counts twice and one more edge joins $p$ to $q$.
+Both parallel edges (@def-parallel-edges) count at $q$ and at $r$, so
+
+$$
+\deg(q) = 3, \quad \deg(r) = 3, \quad \deg(s) = 1.
+$$
+
+Each edge has two ends, and a loop has both of its ends at the same vertex.
+Counting a loop twice makes $\deg(v)$ the number of ends of edges at $v$.
+
+:::

@@ -1,0 +1,16 @@
+::: {#exm-konigsberg-euler}
+#### No walk over each bridge once
+
+The people of K&ouml;nigsberg asked whether they could walk through the city, cross each bridge exactly once, and come back to where they started.
+In 1736, Leonhard Euler showed that they could not [@wikipedia_seven_bridges_of_konigsberg].
+In the graph of @exm-konigsberg, such a walk is an Euler circuit (@def-euler-circuit).
+The graph is connected (@def-connected), since $D$ is adjacent (@def-adjacent) to $A$, $B$ and $C$.
+The degrees are
+
+$$
+\deg(A) = 5, \quad \deg(B) = 3, \quad \deg(C) = 3, \quad \deg(D) = 3,
+$$
+
+all odd, so the graph has no Euler circuit, by @thm-euler-circuit.
+
+:::

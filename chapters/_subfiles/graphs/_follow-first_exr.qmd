@@ -1,0 +1,11 @@
+::: {#exr-follow-first}
+#### Exploring as far as you can
+
+Explore the office graph (@fig-office) from $a$ by these rules:
+
+- from the vertex you are at, go to the first vertex in its list (@exm-adjacency-list) that you have not visited yet;
+- when every vertex in its list has been visited, go back to the vertex you came from, and go on from there.
+
+In what order do you visit the six vertices?
+
+:::

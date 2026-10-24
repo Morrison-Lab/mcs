@@ -1,0 +1,12 @@
+::: {#exm-simple-graph}
+#### Simple or not
+
+- The office graph of @exm-office-graph is simple (@def-simple-graph):
+  each of its edges has two endpoints, and no two of its edges have the same endpoints.
+- The graph of @exm-loop-parallel is not simple, since it has a loop and two parallel edges.
+- The bridge graph of @exm-konigsberg is not simple, since it has parallel edges.
+
+In a simple graph, each edge is the only edge with its two endpoints,
+so writing each edge as the set of its endpoints, as in @exm-office-graph, names every edge exactly once.
+
+:::

@@ -1,0 +1,11 @@
+::: {#exr-list-or-table}
+#### Storing the office graph
+
+A program can store the office graph (@exm-office-graph) in either of two ways:
+
+- for each vertex, a list of its neighbors (@def-adjacent);
+- a table with a row and a column for each vertex, and a 1 or a 0 in each of its cells, for "adjacent" or "not adjacent".
+
+Which way stores fewer entries?
+
+:::

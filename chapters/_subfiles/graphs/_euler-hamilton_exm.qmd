@@ -1,0 +1,15 @@
+::: {#exm-euler-hamilton}
+#### Euler without Hamilton, and Hamilton without Euler
+
+- The office graph has a Hamiltonian cycle (@def-hamiltonian-cycle), by @sol-office-tour,
+  and no Euler circuit (@def-euler-circuit), by @exm-euler-trail.
+- The graph $T$ of @fig-triangles has an Euler circuit, by @exm-euler-examples,
+  and no Hamiltonian cycle.
+  Suppose, for contradiction, that $T$ had a Hamiltonian cycle.
+  Start it at 3, which a cycle visits only once before it comes back.
+  Leaving out 3 at both ends leaves a walk through the other six vertices that never visits 3.
+  Somewhere along that walk, a vertex of $\set{1, 2}$ and a vertex of $\set{4, 5, 6, 7}$ come next to each other,
+  so an edge joins them.
+  But every edge with an endpoint in $\set{1, 2}$ has its other endpoint in $\set{1, 2, 3}$.
+
+:::

@@ -1,0 +1,14 @@
+::: {#def-adjacency-matrix}
+#### Adjacency matrix
+
+Let $G$ be a graph (@def-graph-vertices-edges) or a directed graph (@def-directed-graph),
+and list its vertices in a chosen order as $v_1, \ldots, v_n$.
+The **adjacency matrix** of $G$ [@wikipedia_adjacency_matrix] is the $n \times n$ matrix (@def-matrix) $A_G$
+whose entry $a_{ij}$ in row $i$ and column $j$ is
+
+- if $G$ is a graph, the number of edges with endpoints $v_i$ and $v_j$;
+- if $G$ is a directed graph, the number of edges from $v_i$ to $v_j$.
+
+So a loop at $v_i$ adds 1 to the diagonal entry $a_{ii}$.
+
+:::

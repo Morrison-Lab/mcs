@@ -1,0 +1,7 @@
+::: {#def-in-degree}
+#### In-degree
+
+The **in-degree** $\deg^-(v)$ of a vertex $v$ of a directed graph (@def-directed-graph) [@wikipedia_directed_graph]
+is the number of edges that end at $v$.
+
+:::

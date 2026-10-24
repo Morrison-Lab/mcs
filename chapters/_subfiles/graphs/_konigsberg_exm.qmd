@@ -1,0 +1,22 @@
+::: {#exm-konigsberg}
+#### The bridges of K&ouml;nigsberg
+
+The city of K&ouml;nigsberg was built on four pieces of land, divided by a river,
+with seven bridges between them [@wikipedia_seven_bridges_of_konigsberg].
+Name the pieces of land $A$, $B$, $C$ and $D$, where $A$ is an island.
+Two bridges joined $A$ and $B$,
+two joined $A$ and $C$,
+and one bridge joined each of the pairs $\set{A, D}$, $\set{B, D}$ and $\set{C, D}$.
+
+@fig-konigsberg draws the graph (@def-graph-vertices-edges) with a vertex for each piece of land and an edge for each bridge.
+It has two pairs of parallel edges (@def-parallel-edges), and no loops (@def-graph-loop).
+
+::: {#fig-konigsberg}
+
+![](../images/graphs-konigsberg.png){fig-alt="Four points A, B, C and D. A is in the middle of a column, with B above and C below. Two curved lines join A and B, two curved lines join A and C, and single lines join A to D, B to D and C to D, where D is to the right." width="35%"}
+
+The bridges of K&ouml;nigsberg as a graph: a vertex for each piece of land, and an edge for each bridge.
+
+:::
+
+:::

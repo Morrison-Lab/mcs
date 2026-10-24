@@ -1,0 +1,7 @@
+::: {#def-neighborhood}
+#### Neighborhood
+
+The **neighborhood** $N(v)$ of a vertex $v$ of a graph (@def-graph-vertices-edges)
+is the set of neighbors (@def-adjacent) of $v$.
+
+:::

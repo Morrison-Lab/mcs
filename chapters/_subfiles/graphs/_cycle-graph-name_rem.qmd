@@ -1,0 +1,7 @@
+::: {#rem-cycle-graph-name}
+#### Why cycle graphs are called that
+
+In a cycle graph $C_n$ (@def-cycle-graph), the walk $v_1, v_2, \ldots, v_n, v_1$ is a cycle (@def-graph-cycle) that contains every vertex,
+which gives the graph its name.
+
+:::

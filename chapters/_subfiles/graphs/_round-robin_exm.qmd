@@ -1,0 +1,6 @@
+::: {#exm-round-robin}
+#### The tournament graph
+
+The graph of @sol-round-robin, with a vertex for each member and an edge for each game, is a complete graph on 8 vertices, $K_8$ (@def-complete-graph).
+
+:::

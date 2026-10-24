@@ -1,0 +1,14 @@
+::: {#exm-subgraph}
+#### Leaving out a computer
+
+Take the computer $b$ out of the office (@exm-office-graph), with its cables $\set{a, b}$, $\set{b, c}$ and $\set{b, d}$.
+What is left is a subgraph (@def-subgraph) of the office graph, with vertex set $\set{a, c, d, e, f}$ and the five edges
+
+$$
+\set{a, c}, \set{c, e}, \set{d, e}, \set{d, f}, \set{e, f}.
+$$
+
+Taking out $b$ but keeping the edge $\set{b, d}$ would not give a subgraph,
+since one endpoint of that edge would not be a vertex.
+
+:::

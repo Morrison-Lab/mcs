@@ -1,0 +1,7 @@
+::: {#exr-degree-sum}
+#### Adding up the cables
+
+For each computer of @exr-office-cables, count the cables that have that computer at one end.
+What is the sum of these six counts?
+
+:::

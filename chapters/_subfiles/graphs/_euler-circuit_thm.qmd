@@ -1,0 +1,57 @@
+::: {#thm-euler-circuit}
+#### Euler circuits and even degrees
+
+Let $G$ be a connected graph (@def-connected) with at least one edge.
+Then $G$ has an Euler circuit (@def-euler-circuit) if and only if every vertex of $G$ has even degree (@def-degree).
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+**Only if.**
+Let $C$ be an Euler circuit, and let $w$ be a vertex.
+Every edge of $G$ is an edge of $C$,
+so the ends at $w$ of the edges of $C$ are all the ends at $w$, and there are $\deg(w)$ of them.
+By @lem-trail-ends, that number is even.
+
+**If.**
+Suppose every vertex has even degree.
+A trail has at most $\card{E}$ edges, since its edges are all different.
+So, given an edge and one of its endpoints, there is a trail of greatest length among the trails that start at that endpoint with that edge.
+That trail cannot be extended, so it is a circuit, by @lem-stuck-trail.
+So $G$ has at least one circuit.
+Let $C$ be a circuit $v_0, e_1, v_1, \ldots, e_n, v_n$ of greatest length in $G$.
+Suppose, for contradiction (@def-proof-by-contradiction), that some edge $h$ is not in $C$.
+
+*Some edge that is not in $C$ has an endpoint on $C$.*
+Let $y$ be an endpoint of $h$.
+If $y$ is a vertex of $C$, take $g = h$.
+Otherwise, since $G$ is connected, there is a path (@def-graph-path) $y = w_0, w_1, \ldots, w_m = v_0$, by @thm-walk-path.
+Let $j$ be the smallest index with $w_j$ a vertex of $C$, so that $j \ge 1$.
+Let $g$ be the edge of the path between $w_{j - 1}$ and $w_j$.
+It is not in $C$, since its endpoint $w_{j - 1}$ is not a vertex of $C$, and its endpoint $w_j$ is a vertex of $C$.
+
+*A circuit outside $C$.*
+Let $H$ be the graph with the vertices of $G$ and the edges of $G$ that are not in $C$.
+By @lem-trail-ends, the edges of $C$ have an even number of ends at each vertex,
+so every vertex has even degree in $H$ too.
+The edge $g$ is in $H$ and has an endpoint $v_k$ on $C$.
+As in the first paragraph, a trail of greatest length in $H$ that starts at $v_k$ with the edge $g$ is a circuit $D$ in $H$,
+from $v_k$ to $v_k$, by @lem-stuck-trail.
+
+*A longer circuit.*
+Follow $C$ from $v_0$ to $v_k$, then go around $D$ back to $v_k$, then follow the rest of $C$ to $v_n$.
+This is a walk from $v_0$ to $v_0$.
+No edge repeats in it, since $C$ and $D$ are trails with no common edge,
+so it is a circuit.
+Its length is the length of $C$ plus the length of $D$, which is greater than the length of $C$.
+That contradicts the choice of $C$.
+So $C$ contains every edge, and it is an Euler circuit.
+
+:::
+
+:::

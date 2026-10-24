@@ -1,0 +1,11 @@
+::: {#def-adjacency-list}
+#### Adjacency list
+
+Let $G$ be a graph (@def-graph-vertices-edges) or a directed graph (@def-directed-graph) with no parallel edges (@def-parallel-edges).
+An **adjacency list** of $G$ [@wikipedia_adjacency_list] lists,
+for each vertex $v$,
+
+- if $G$ is a graph, the neighbors of $v$ (@def-adjacent);
+- if $G$ is a directed graph, the vertices $u$ with an edge $(v, u)$ from $v$ to $u$.
+
+:::

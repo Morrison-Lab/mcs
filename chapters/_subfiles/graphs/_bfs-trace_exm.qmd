@@ -1,0 +1,23 @@
+::: {#exm-bfs-trace}
+#### Breadth-first search in the office graph
+
+Run `bfs` (@def-bfs) on the office graph from $a$,
+with the adjacency list of @exm-adjacency-list.
+Each row of the table is one pass through the `while` loop:
+
+| Removed $v$ | Newly marked $u$, with `dist[u]` | $Q$ after the pass |
+|:-----------:|:-----------------------:|:------------------:|
+| $a$ | $b$ (1), $c$ (1) | $b, c$ |
+| $b$ | $d$ (2) | $c, d$ |
+| $c$ | $e$ (2) | $d, e$ |
+| $d$ | $f$ (3) | $e, f$ |
+| $e$ | none | $f$ |
+| $f$ | none | empty |
+
+When $b$ is removed, its list is $a, c, d$,
+but $a$ and $c$ are already marked, so only $d$ is new.
+The vertices leave $Q$ in the order $a, b, c, d, e, f$,
+which is one column of @fig-office-levels after another,
+and the labels `dist` are the distances from $a$ of @exm-office-distance.
+
+:::

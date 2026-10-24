@@ -1,0 +1,6 @@
+::: {#def-circuit}
+#### Circuit
+
+A **circuit** [@wikipedia_cycle_graph_theory] is a trail (@def-trail) of length at least 1 that starts and ends at the same vertex.
+
+:::

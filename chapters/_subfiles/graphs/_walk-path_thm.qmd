@@ -1,0 +1,39 @@
+::: {#thm-walk-path}
+#### A shortest walk is a path
+
+Let $u$ and $v$ be vertices of a graph (@def-graph-vertices-edges) or a directed graph (@def-directed-graph).
+If there is a walk (@def-walk) from $u$ to $v$, then every walk from $u$ to $v$ of the smallest possible length is a path (@def-graph-path).
+In particular, there is then a path from $u$ to $v$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+The lengths of the walks from $u$ to $v$, each plus 1, form a nonempty set of positive integers,
+so that set has a smallest element (@rem-well-ordering),
+and subtracting 1 from it gives the smallest length of a walk from $u$ to $v$.
+Let $v_0, e_1, v_1, \ldots, e_n, v_n$ be a walk from $u$ to $v$ of that smallest length $n$.
+
+Suppose, for contradiction (@def-proof-by-contradiction), that it is not a path.
+Then $v_i = v_j$ for some $i < j$.
+Leaving out the part between them gives the sequence
+
+$$
+v_0, e_1, \ldots, e_i, v_i, e_{j + 1}, v_{j + 1}, \ldots, e_n, v_n,
+$$
+
+which is still a walk from $u$ to $v$,
+since the edge $e_{j + 1}$ joins $v_j = v_i$ to $v_{j + 1}$
+(in a directed graph, it goes from $v_i$ to $v_{j + 1}$).
+When $j = n$, the sequence ends at $v_i = v_n = v$.
+Its length is $n - (j - i) < n$,
+which contradicts the choice of $n$.
+So the walk is a path.
+
+:::
+
+:::

@@ -1,0 +1,19 @@
+::: {#rem-matrix-reading}
+#### What the adjacency matrix shows
+
+Let $A_G = (a_{ij})$ be the adjacency matrix (@def-adjacency-matrix) of $G$.
+
+- If $G$ is a graph, then $a_{ij} = a_{ji}$ for all $i$ and $j$,
+  since an edge with endpoints $v_i$ and $v_j$ has endpoints $v_j$ and $v_i$.
+- If $G$ is a graph with no loops (@def-graph-loop), then row $i$ adds up to $\deg(v_i)$ (@def-degree).
+  Some books put 2 on the diagonal for each loop [@wikipedia_adjacency_matrix],
+  which makes the rows add up to the degrees even with loops.
+- If $G$ is a directed graph, then row $i$ adds up to the out-degree $\deg^+(v_i)$ (@def-out-degree),
+  and column $i$ adds up to the in-degree $\deg^-(v_i)$ (@def-in-degree).
+
+An adjacency list (@def-adjacency-list) of a graph with no loops has $2 \card{E}$ entries, by @thm-handshake,
+and an adjacency matrix has $n^2$ entries.
+When there are few edges, as in @exr-list-or-table, the list is shorter.
+When most pairs of vertices are adjacent, the matrix is about as long, and it answers "are $v_i$ and $v_j$ adjacent?" with a single entry.
+
+:::

@@ -1,0 +1,28 @@
+::: {#exm-web-links}
+#### Links between web pages
+
+A small website has four pages: home, about, blog and contact.
+@fig-web draws the directed graph (@def-directed-graph) with a vertex for each page and an edge from page $u$ to page $v$ when $u$ links to $v$.
+Its edges are
+
+$$
+\ba
+& (\text{home}, \text{about}), (\text{home}, \text{blog}), (\text{about}, \text{contact}),
+\\
+& (\text{blog}, \text{home}), (\text{blog}, \text{blog}), (\text{blog}, \text{contact}), (\text{contact}, \text{home}).
+\ea
+$$
+
+The blog links to itself, so the edge $(\text{blog}, \text{blog})$ is a loop.
+The edges $(\text{home}, \text{blog})$ and $(\text{blog}, \text{home})$ are different edges:
+one starts at home and the other starts at blog.
+
+::: {#fig-web}
+
+![](../images/graphs-web.png){fig-alt="Four circles labeled home, about, blog and contact at the corners of a rectangle, with home at the top left, about at the top right, blog at the bottom left and contact at the bottom right. Arrows go from home to about, from home to blog, from blog to home, from blog back to itself, from blog to contact, from about to contact, and from contact to home." width="50%"}
+
+The links between the four pages of a website.
+
+:::
+
+:::

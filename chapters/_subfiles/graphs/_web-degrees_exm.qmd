@@ -1,0 +1,14 @@
+::: {#exm-web-degrees}
+#### Degrees of the web pages
+
+In the directed graph of @exm-web-links:
+
+| Page | home | about | blog | contact | Sum |
+|:----:|:----:|:-----:|:----:|:-------:|:---:|
+| Out-degree $\deg^+$ | 2 | 1 | 3 | 1 | 7 |
+| In-degree $\deg^-$  | 2 | 1 | 2 | 2 | 7 |
+
+Both rows add up to 7, the number of edges, as @thm-directed-degrees says.
+The loop at blog counts once in its out-degree (@def-out-degree) and once in its in-degree (@def-in-degree).
+
+:::

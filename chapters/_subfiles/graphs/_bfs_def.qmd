@@ -1,0 +1,24 @@
+::: {#def-bfs}
+#### Breadth-first search
+
+Let $G$ be a graph (@def-graph-vertices-edges) or a directed graph (@def-directed-graph) with no parallel edges (@def-parallel-edges),
+given by an adjacency list (@def-adjacency-list), and let $s$ be a vertex of $G$.
+**Breadth-first search** [@wikipedia_breadth_first_search] from $s$ is the algorithm (@def-algorithm) `bfs`,
+written in the pseudocode of @rem-pseudocode:
+
+```text
+procedure bfs(G, s)
+    mark s, and set dist[s] := 0
+    Q := a queue containing only s
+    while Q is not empty
+        v := remove the front of Q
+        for each vertex u in the list of v, in order
+            if u is not marked
+                mark u, and set dist[u] := dist[v] + 1
+                add u to the back of Q
+```
+
+Here $Q$ is a queue (@def-queue),
+and `dist[u]` is a label that the algorithm gives to $u$ when it marks $u$.
+
+:::

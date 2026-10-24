@@ -1,0 +1,9 @@
+::: {#def-subgraph}
+#### Subgraph
+
+A **subgraph** of a graph $G = (V, E)$ (@def-graph-vertices-edges) is a graph $H = (W, F)$
+with $W \subseteq V$ and $F \subseteq E$ (@def-subset),
+where each edge of $F$ has the same endpoints in $H$ as in $G$.
+Since $H$ is a graph, the endpoints of each edge of $F$ are in $W$.
+
+:::

@@ -1,0 +1,25 @@
+::: {#exm-dfs-trace}
+#### Depth-first search in three triangles
+
+Run `dfs` (@def-dfs) on the graph $T$ of @fig-triangles from 3,
+with each list of neighbors in increasing order.
+Each call is indented under the call that made it:
+
+```text
+dfs(T, 3)         marks 3; its list is 1, 2, 4, 5
+  dfs(T, 1)       marks 1; its list is 2, 3
+    dfs(T, 2)     marks 2; 1 and 3 are marked, so it returns
+                  back in dfs(T, 1): 3 is marked, so it returns
+                  back in dfs(T, 3): 2 is marked, so it goes on to 4
+  dfs(T, 4)       marks 4; its list is 3, 5
+    dfs(T, 5)     marks 5; its list is 3, 4, 6, 7
+      dfs(T, 6)   marks 6; its list is 5, 7
+        dfs(T, 7) marks 7; 5 and 6 are marked, so it returns
+```
+
+After `dfs(T, 7)` returns, every remaining vertex in every list is marked, so each call returns in turn.
+The vertices are marked in the order $3, 1, 2, 4, 5, 6, 7$.
+After it marks 2, the search goes back up to 3 before it goes on to 4,
+unlike the exploration of the office graph in @sol-follow-first.
+
+:::

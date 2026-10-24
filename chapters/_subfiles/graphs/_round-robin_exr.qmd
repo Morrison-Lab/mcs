@@ -1,0 +1,7 @@
+::: {#exr-round-robin}
+#### A chess tournament
+
+A chess club has 8 members, and every two members play each other exactly once.
+How many games are played?
+
+:::

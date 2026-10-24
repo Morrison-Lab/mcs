@@ -1,0 +1,8 @@
+::: {#exm-handshake}
+#### Checking the handshake theorem
+
+In the office graph (@exm-office-graph), the degrees add up to 16 (@sol-degree-sum), and $2 \card{E} = 2 \cdot 8 = 16$.
+In the graph of @exm-loop-parallel, the degrees of @exm-degree add up to $3 + 3 + 3 + 1 = 10$,
+and $2 \card{E} = 2 \cdot 5 = 10$, as @thm-handshake says.
+
+:::

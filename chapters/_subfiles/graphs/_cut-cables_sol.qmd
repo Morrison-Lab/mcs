@@ -1,0 +1,9 @@
+::: {#sol-cut-cables}
+
+No.
+Every edge of $H$ that has an endpoint in $\set{a, b, c}$ has both endpoints in $\set{a, b, c}$.
+So a walk that starts at $a$ stays in $\set{a, b, c}$:
+by induction on $i$ (@def-proof-by-induction), each vertex $v_i$ of the walk is in $\set{a, b, c}$.
+Since $f$ is not in that set, no walk from $a$ ends at $f$.
+
+:::

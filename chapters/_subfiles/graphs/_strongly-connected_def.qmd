@@ -1,0 +1,8 @@
+::: {#def-strongly-connected}
+#### Strongly connected directed graph
+
+A directed graph (@def-directed-graph) is **strongly connected** [@wikipedia_strongly_connected_component]
+if there is a walk (@def-walk) from $u$ to $v$ for every two vertices $u$ and $v$,
+where each edge of a walk is followed from its start to its end.
+
+:::

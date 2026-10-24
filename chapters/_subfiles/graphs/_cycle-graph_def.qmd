@@ -1,0 +1,15 @@
+::: {#def-cycle-graph}
+#### Cycle graph
+
+For an integer $n \ge 3$, a **cycle graph** $C_n$ [@wikipedia_cycle_graph] is a simple graph (@def-simple-graph) with vertices $v_1, \ldots, v_n$
+and the $n$ edges
+
+$$
+\set{v_1, v_2}, \set{v_2, v_3}, \ldots, \set{v_{n - 1}, v_n}, \set{v_n, v_1}.
+$$
+
+Going along these edges in order from $v_1$ visits every vertex and returns to $v_1$.
+Two cycle graphs with $n$ vertices differ only in the names of their vertices,
+so we write $C_n$ for any of them.
+
+:::

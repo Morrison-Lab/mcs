@@ -1,0 +1,8 @@
+::: {#exm-round-table}
+#### A round table
+
+Nine people sit around a round table.
+The graph with a vertex for each person, and an edge between each two people who sit next to each other, is a cycle graph on 9 vertices, $C_9$ (@def-cycle-graph):
+going around the table visits each person once, and each person sits next to exactly two others.
+
+:::

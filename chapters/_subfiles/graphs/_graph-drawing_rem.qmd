@@ -1,0 +1,15 @@
+::: {#rem-graph-drawing}
+#### A drawing is not the graph
+
+A graph (@def-graph-vertices-edges) says only which vertices are the endpoints of which edges.
+A drawing of it adds things that are not part of the graph:
+where the points are,
+how long and how curved the lines are,
+and whether two lines cross.
+Two drawings that put the points in different places draw the same graph,
+as long as they join the same pairs of points.
+
+Graphs here are different objects from graphs of functions (@def-graph),
+just as directed graphs of relations were (@rem-graph-words).
+
+:::

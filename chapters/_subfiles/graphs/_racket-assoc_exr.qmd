@@ -1,0 +1,21 @@
+::: {#exr-racket-assoc}
+#### Looking up a vertex
+
+In Racket, the adjacency list of the office graph (@exm-adjacency-list) can be stored as a list with one list for each vertex,
+which starts with the vertex and goes on with its neighbors:
+
+```racket
+(define office
+  '((a b c)
+    (b a c d)
+    (c a b e)
+    (d b e f)
+    (e c d f)
+    (f d e)))
+```
+
+The quote `'` makes Racket read what follows as data, so `'(a b c)` is the same list as `(list 'a 'b 'c)`.
+`(assoc x L)` returns the first element of the list `L` whose first element is `x`, and `#f` if there is none.
+What does `(assoc 'd office)` return?
+
+:::

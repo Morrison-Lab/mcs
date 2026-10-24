@@ -1,0 +1,17 @@
+::: {#exm-walk}
+#### A walk in the office graph
+
+In a simple graph (@def-simple-graph), the vertices of a walk (@def-walk) name its edges,
+so we write the walk as its list of vertices.
+In the office graph (@fig-office),
+
+$$
+a, b, c, a, b, d
+$$
+
+is a walk of length 5 from $a$ to $d$,
+along the edges $\set{a, b}$, $\set{b, c}$, $\set{c, a}$, $\set{a, b}$ and $\set{b, d}$.
+It uses the edge $\set{a, b}$ twice.
+A single vertex, such as $a$, is a walk of length 0 from $a$ to $a$.
+
+:::

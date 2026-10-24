@@ -1,0 +1,26 @@
+::: {#exm-adjacency-matrix}
+#### The adjacency matrix of the office graph
+
+With its vertices in the order $a, b, c, d, e, f$,
+the office graph (@exm-office-graph) has the adjacency matrix (@def-adjacency-matrix)
+
+$$
+A_G =
+\begin{bmatrix}
+0 & 1 & 1 & 0 & 0 & 0
+\\
+1 & 0 & 1 & 1 & 0 & 0
+\\
+1 & 1 & 0 & 0 & 1 & 0
+\\
+0 & 1 & 0 & 0 & 1 & 1
+\\
+0 & 0 & 1 & 1 & 0 & 1
+\\
+0 & 0 & 0 & 1 & 1 & 0
+\end{bmatrix}.
+$$
+
+Row 2 has a 1 in columns 1, 3 and 4, since the neighbors of $b$ are $a$, $c$ and $d$.
+
+:::

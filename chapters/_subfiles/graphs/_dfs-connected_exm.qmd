@@ -1,0 +1,11 @@
+::: {#exm-dfs-connected}
+#### Is the office still connected?
+
+`dfs` (@def-dfs) from $a$ marks all six vertices of the office graph (@sol-follow-first),
+so the office graph is connected, by @cor-dfs-connected.
+In the graph $H$ of @exr-cut-cables, `dfs` from $a$ marks only $a$, $b$ and $c$,
+so $H$ is not connected, as @sol-cut-cables found by hand.
+@thm-bfs-distance shows that `bfs` (@def-bfs) marks the same vertices as `dfs`,
+so `bfs` can test connectedness too.
+
+:::

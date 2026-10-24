@@ -1,0 +1,46 @@
+::: {#exm-racket-bfs}
+#### Breadth-first search in Racket
+
+This Racket version of `bfs` (@def-bfs) keeps the labels in a list of pairs `(list u d)`,
+one for each marked vertex $u$ with label $d$,
+so a vertex is marked when `assoc` (@exr-racket-assoc) finds it in that list.
+It uses `neighbors` from @exm-racket-neighbors.
+
+```racket
+(define (unmarked vs dist)
+  (if (empty? vs)
+      empty
+      (if (assoc (first vs) dist)
+          (unmarked (rest vs) dist)
+          (cons (first vs) (unmarked (rest vs) dist)))))
+
+(define (label vs d)
+  (if (empty? vs)
+      empty
+      (cons (list (first vs) d) (label (rest vs) d))))
+
+(define (bfs-loop G queue dist)
+  (if (empty? queue)
+      dist
+      (let* ([v (first queue)]
+             [new (unmarked (neighbors G v) dist)]
+             [d (+ 1 (second (assoc v dist)))])
+        (bfs-loop G
+                  (append (rest queue) new)
+                  (append dist (label new d))))))
+
+(define (bfs G s)
+  (bfs-loop G (list s) (list (list s 0))))
+```
+
+- `(unmarked vs dist)` keeps the vertices of the list `vs` that have no label yet.
+- `(label vs d)` pairs each vertex of `vs` with the label `d`.
+- `(let* ([x e] ...) body)` evaluates `e`, calls its value `x` inside the rest of the `let*`, and then evaluates `body`.
+- `(append L M)` is the list of the elements of `L` followed by those of `M`,
+  so `(append (rest queue) new)` removes the front of the queue and adds the new vertices at the back.
+
+Each call of `bfs-loop` is one pass through the loop of @def-bfs.
+`(bfs office 'a)` returns `'((a 0) (b 1) (c 1) (d 2) (e 2) (f 3))`,
+the marks and labels of @exm-bfs-trace.
+
+:::

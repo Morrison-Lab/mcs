@@ -1,0 +1,10 @@
+::: {#rem-relation-digraph-graph}
+#### Relations and directed graphs
+
+Let $R$ be a relation on a set $A$.
+The drawing of @def-relation-digraph draws the directed graph (@def-directed-graph) with vertex set $A$ and edge set $R$.
+That directed graph has no parallel edges, since $R$ is a set and has each pair at most once.
+Going the other way, the edges of a directed graph with no parallel edges form a relation on its vertex set.
+The links of @exm-web-links form the relation "links to" on the set of four pages.
+
+:::

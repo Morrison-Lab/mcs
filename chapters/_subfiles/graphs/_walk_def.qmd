@@ -1,0 +1,16 @@
+::: {#def-walk}
+#### Walk
+
+Let $G$ be a graph (@def-graph-vertices-edges) and let $n \ge 0$ be an integer.
+A **walk** of length $n$ from a vertex $u$ to a vertex $v$ [@wikipedia_path_graph_theory] is a sequence
+
+$$
+v_0, e_1, v_1, e_2, v_2, \ldots, e_n, v_n
+$$
+
+of vertices $v_i$ and edges $e_i$, with $v_0 = u$ and $v_n = v$,
+such that the endpoints of each edge $e_i$ are $v_{i - 1}$ and $v_i$.
+The *length* $n$ is the number of edges in the sequence, counted with repeats.
+In a directed graph (@def-directed-graph), each edge $e_i$ must go from $v_{i - 1}$ to $v_i$.
+
+:::

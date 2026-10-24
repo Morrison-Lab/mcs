@@ -1,0 +1,9 @@
+::: {#def-graph-distance}
+#### Distance
+
+Let $u$ and $v$ be vertices of a graph (@def-graph-vertices-edges) or a directed graph (@def-directed-graph),
+with a walk (@def-walk) from $u$ to $v$.
+The **distance** $\operatorname{dist}(u, v)$ from $u$ to $v$ [@wikipedia_distance_graph_theory]
+is the smallest length of a walk from $u$ to $v$.
+
+:::

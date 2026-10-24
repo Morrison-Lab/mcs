@@ -1,0 +1,8 @@
+::: {#sol-list-or-table}
+
+The lists of neighbors.
+The list of $v$ has $\deg(v)$ entries (@def-degree), since the office graph is simple (@exm-simple-graph),
+so the lists have $16$ entries in all, by @sol-degree-sum.
+The table has $6 \cdot 6 = 36$ cells.
+
+:::

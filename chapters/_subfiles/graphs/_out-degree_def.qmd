@@ -1,0 +1,7 @@
+::: {#def-out-degree}
+#### Out-degree
+
+The **out-degree** $\deg^+(v)$ of a vertex $v$ of a directed graph (@def-directed-graph) [@wikipedia_directed_graph]
+is the number of edges that start at $v$.
+
+:::

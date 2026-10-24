@@ -1,0 +1,38 @@
+::: {#exm-adjacency-list}
+#### Two adjacency lists
+
+The adjacency list (@def-adjacency-list) of the office graph (@exm-office-graph), on the left,
+and of the web pages (@exm-web-links), on the right, are
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+| Vertex | Neighbors |
+|:------:|:---------:|
+| $a$ | $b, c$ |
+| $b$ | $a, c, d$ |
+| $c$ | $a, b, e$ |
+| $d$ | $b, e, f$ |
+| $e$ | $c, d, f$ |
+| $f$ | $d, e$ |
+
+:::
+
+::: {.column width="50%"}
+
+| Page | Links to |
+|:----:|:--------:|
+| home | about, blog |
+| about | contact |
+| blog | home, blog, contact |
+| contact | home |
+
+:::
+
+::::
+
+In the office graph, each edge $\set{u, v}$ appears twice: $v$ is in the list of $u$, and $u$ is in the list of $v$.
+In the web graph, each edge appears once, in the list of the page where it starts.
+
+:::

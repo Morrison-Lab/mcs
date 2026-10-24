@@ -1,0 +1,30 @@
+::: {#exm-count-walks}
+#### Walks in the office graph
+
+With the adjacency matrix $A_G$ of @exm-adjacency-matrix, in the order $a, b, c, d, e, f$,
+
+$$
+A_G^2 =
+\begin{bmatrix}
+2 & 1 & 1 & 1 & 1 & 0
+\\
+1 & 3 & 1 & 0 & 2 & 1
+\\
+1 & 1 & 3 & 2 & 0 & 1
+\\
+1 & 0 & 2 & 3 & 1 & 1
+\\
+1 & 2 & 0 & 1 & 3 & 1
+\\
+0 & 1 & 1 & 1 & 1 & 2
+\end{bmatrix}.
+$$
+
+By @thm-count-walks, there are 2 walks of length 2 from $b$ to $e$ (row 2, column 5): $b, c, e$ and $b, d, e$.
+In a simple graph (@def-simple-graph) such as this one, the diagonal entries are the degrees (@def-degree),
+since a walk of length 2 from $v$ back to $v$ goes out to a neighbor and comes back along the same edge.
+
+The entry of $A_G^3$ in row 1 and column 6 is 2:
+the walks of length 3 from $a$ to $f$ are $a, b, d, f$ and $a, c, e, f$.
+
+:::

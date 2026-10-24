@@ -1,0 +1,9 @@
+::: {#def-queue}
+#### Queue
+
+A **queue** [@wikipedia_queue_abstract_data_type] is a list that a program changes in only two ways:
+it adds an element to the back of the list,
+and it removes the element at the front.
+So the elements leave in the order in which they arrived, as people do from a line at a counter.
+
+:::

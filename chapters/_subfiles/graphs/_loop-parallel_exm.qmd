@@ -1,0 +1,23 @@
+::: {#exm-loop-parallel}
+#### A loop and two parallel edges
+
+The graph in @fig-loop-parallel has vertices $p$, $q$, $r$ and $s$, and five edges:
+
+- a loop (@def-graph-loop) at $p$;
+- an edge joining $p$ and $q$;
+- two parallel edges (@def-parallel-edges) joining $q$ and $r$;
+- an edge joining $r$ and $s$.
+
+The two edges joining $q$ and $r$ have the same set of endpoints, $\set{q, r}$,
+so writing an edge as the set of its endpoints does not tell them apart.
+We name them instead, say $e_1$ and $e_2$, and say that each has endpoints $q$ and $r$.
+
+::: {#fig-loop-parallel}
+
+![](../images/graphs-loop-parallel.png){fig-alt="Four points p, q, r and s in a row. A small loop leaves p and comes back to p. One line joins p and q, two curved lines join q and r, and one line joins r and s." width="60%"}
+
+A graph with a loop at $p$ and two parallel edges between $q$ and $r$.
+
+:::
+
+:::

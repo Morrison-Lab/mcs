@@ -1,0 +1,46 @@
+::: {#thm-count-walks}
+#### Counting walks with powers of the adjacency matrix
+
+Let $G$ be a graph (@def-graph-vertices-edges) or a directed graph (@def-directed-graph) with vertices $v_1, \ldots, v_n$
+and adjacency matrix $A_G$ (@def-adjacency-matrix).
+For every integer $r \ge 1$, the entry in row $i$ and column $j$ of the power $A_G^r$ (@def-matrix-power)
+is the number of walks (@def-walk) of length $r$ from $v_i$ to $v_j$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Write $(M)_{ij}$ for the entry in row $i$ and column $j$ of a matrix $M$, and $a_{ij} = (A_G)_{ij}$.
+We use induction (@def-proof-by-induction) on $r$.
+
+**Base case.**
+A walk of length 1 from $v_i$ to $v_j$ is a sequence $v_i, g, v_j$,
+where $g$ is an edge with endpoints $v_i$ and $v_j$ (from $v_i$ to $v_j$, in a directed graph).
+There is one such walk for each such edge, so there are $a_{ij}$ of them,
+by @def-adjacency-matrix.
+A loop $g$ at $v_i$ gives one walk $v_i, g, v_i$, and adds 1 to $a_{ii}$.
+
+**Inductive step.**
+Suppose that $(A_G^r)_{ik}$ is the number of walks of length $r$ from $v_i$ to $v_k$, for all $i$ and $k$.
+Every walk of length $r + 1$ from $v_i$ to $v_j$ is a walk of length $r$ from $v_i$ to some vertex $v_k$,
+followed by an edge from $v_k$ to $v_j$ and the vertex $v_j$.
+Sort these walks by the vertex $v_k$ just before the last edge.
+For each $k$, a walk is made by choosing one of the $(A_G^r)_{ik}$ walks to $v_k$ and one of the $a_{kj}$ edges,
+and different choices give different walks,
+so there are $(A_G^r)_{ik} \, a_{kj}$ walks with that $v_k$.
+Adding over $k$, and using the definition of the matrix product (@def-matrix-mult),
+the number of walks of length $r + 1$ from $v_i$ to $v_j$ is
+
+$$
+\sum_{k = 1}^{n} (A_G^r)_{ik} \, a_{kj} = (A_G^r A_G)_{ij} = (A_G^{r + 1})_{ij}.
+$$
+
+By induction, the statement holds for every $r \ge 1$.
+
+:::
+
+:::

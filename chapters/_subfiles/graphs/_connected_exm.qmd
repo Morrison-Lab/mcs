@@ -1,0 +1,19 @@
+::: {#exm-connected}
+#### Connected or not
+
+The office graph (@exm-office-graph) is connected (@def-connected).
+The walks
+
+$$
+a, b \qquad a, c \qquad a, b, d \qquad a, c, e \qquad a, b, d, f
+$$
+
+go from $a$ to each other vertex.
+For two vertices $u$ and $v$, reading the walk from $a$ to $u$ backward and then following the walk from $a$ to $v$
+gives a walk from $u$ to $v$.
+
+The graph $H$ of @exr-cut-cables is not connected, since it has no walk from $a$ to $f$.
+
+By @thm-walk-path, a graph is connected exactly when there is a path (@def-graph-path) between every two vertices.
+
+:::
