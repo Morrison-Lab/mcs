@@ -10,7 +10,7 @@ $$
 \ba
 \operatorname{size}(\mathtt{nil}) &= 0,
 \\ \operatorname{size}\paren{\operatorname{node}(x, L, R)} &= 1 + \operatorname{size}(L) + \operatorname{size}(R),
-\\ \operatorname{height}\paren{\operatorname{node}(x, L, R)} &= 1 + \max\paren{\operatorname{height}(L), \operatorname{height}(R)}.
+\\ \operatorname{height}\paren{\operatorname{node}(x, L, R)} &= 1 + \maxf{\operatorname{height}(L), \operatorname{height}(R)}.
 \ea
 $$
 

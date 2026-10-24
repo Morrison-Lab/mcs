@@ -6,7 +6,8 @@ Then $C$ with root $c$ is a different rooted tree (@def-rooted-tree), drawn in @
 
 - The parent (@def-tree-parent) of $a$ is now $c$, and $a$ has two children, $b$ and $d$.
 - The path from $c$ to $h$ is $c, a, d, g, h$, so $h$ is at level (@def-tree-level) 4, and the height (@def-tree-height) is 4.
-- The leaves (@def-tree-leaf) are $e$, $f$ and $h$; $c$ is now an internal vertex.
+- The leaves (@def-tree-leaf) are $e$, $f$ and $h$,
+  and $c$ is now an internal vertex.
 
 ::: {#fig-phone-c}
 
