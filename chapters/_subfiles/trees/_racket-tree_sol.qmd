@@ -1,0 +1,8 @@
+::: {#sol-racket-tree}
+
+It returns `'r`.
+`(third B)` is the right subtree of $B$, `'(t (r (p () ()) ()) (w () ()))`.
+Its second element is its left subtree, `'(r (p () ()) ())`,
+and the first element of that is its label, `'r`.
+
+:::

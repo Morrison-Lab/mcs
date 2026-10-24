@@ -1,0 +1,6 @@
+::: {#def-tree-leaf}
+#### Leaf
+
+A **leaf** of a rooted tree (@def-rooted-tree) [@wikipedia_tree_graph_theory] is a vertex with no children (@def-tree-child).
+
+:::

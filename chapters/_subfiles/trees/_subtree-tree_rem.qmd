@@ -1,0 +1,13 @@
+::: {#rem-subtree-tree}
+#### A subtree is a tree
+
+The subtree (@def-subtree) of a rooted tree $T$ rooted at $v$ is a tree (@def-tree), so it is a rooted tree.
+It has no cycles, since a cycle in it would be a cycle in $T$.
+It is connected:
+let $d$ be a descendant (@def-descendant) of $v$, and let $r = x_0, x_1, \ldots, x_k = d$ be the path from the root $r$ of $T$ to $d$,
+which goes through $v = x_i$.
+For each $j > i$, the path $x_0, \ldots, x_j$ goes from $r$ to $x_j$ and passes through $v$,
+so it is the path from $r$ to $x_j$ (@thm-tree-paths), and $x_j$ is a descendant of $v$.
+So $x_i, \ldots, x_k$ is a walk from $v$ to $d$ in the subtree.
+
+:::

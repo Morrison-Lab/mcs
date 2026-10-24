@@ -1,0 +1,36 @@
+::: {#rem-binary-drawing}
+#### A binary tree as a rooted tree
+
+We draw $\operatorname{node}(x, L, R)$ (@def-binary-tree) with its root at the top,
+the drawing of $L$ below it to the left, and the drawing of $R$ below it to the right,
+with an edge from the root to the root of each of $L$ and $R$ that is not empty.
+The drawing of a binary tree that is not empty is a tree (@def-tree),
+and with the root of the binary tree as its root it is a rooted tree (@def-rooted-tree),
+in which each vertex has at most two children (@def-tree-child): the roots of its subtrees that are not empty.
+Levels (@def-tree-level), height (@def-tree-height), leaves (@def-tree-leaf) and the other words for rooted trees
+apply to a binary tree through its drawing.
+The empty tree has no drawing, since a graph has at least one vertex.
+
+In a binary tree $T$ that is not empty, each vertex $v$ is the root of exactly one of the binary trees $\operatorname{node}(y, L_v, R_v)$
+from which the recursive rule builds $T$,
+and $L_v$ and $R_v$ are the *left subtree* and *right subtree* of $v$.
+For the root of $T$, they are the left and right subtrees of $T$.
+When $L_v$ is not empty, its root is a child of $v$,
+and the drawing of $L_v$ is the subtree (@def-subtree) of the drawing of $T$ rooted at that child,
+since the descendants (@def-descendant) of that child are the vertices of $L_v$.
+The same holds for $R_v$.
+
+The drawing is a tree, by structural induction (@def-structural-induction).
+It is connected, since the root is joined to the roots of the subtrees that are not empty,
+whose drawings are connected.
+Every edge of the drawing of $\operatorname{node}(x, L, R)$ lies in the drawing of $L$, lies in the drawing of $R$,
+or joins the root to the root of $L$ or of $R$.
+A cycle cannot lie in the drawing of $L$ or of $R$, which have no cycles,
+so it uses an edge at the root, say the edge to the root of $L$.
+Then the cycle has a vertex in the drawing of $L$ and a vertex, the root, outside it.
+Going once around the cycle, it crosses between the drawing of $L$ and the rest at least twice,
+each time along an edge with one endpoint in the drawing of $L$ and the other outside it.
+But there is only one such edge, and a cycle uses each edge once.
+So the drawing has no cycles.
+
+:::

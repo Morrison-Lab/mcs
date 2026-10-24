@@ -1,0 +1,20 @@
+::: {#exr-fewest-roads}
+#### The fewest roads
+
+Seven towns, $a$ to $g$, lie in a valley, with $g$ in the middle.
+@fig-hub draws the nine roads that could be built between them.
+The county wants to build as few of these roads as it can,
+so that people can drive between every two towns.
+How many roads must it build?
+
+::: {#fig-hub}
+
+![](../images/trees-hub.png){fig-alt="Seven labeled points.
+Six of them, a, b, c, d, e and f, sit at the corners of a hexagon in that order, each joined to the next, and f joined back to a.
+The seventh, g, sits in the middle and is joined to a, c and e." width="40%"}
+
+The towns and the roads that could be built.
+
+:::
+
+:::

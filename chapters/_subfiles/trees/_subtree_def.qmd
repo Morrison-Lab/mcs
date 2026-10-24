@@ -1,0 +1,10 @@
+::: {#def-subtree}
+#### Subtree
+
+Let $T$ be a rooted tree (@def-rooted-tree), and let $v$ be a vertex of $T$.
+The **subtree** of $T$ rooted at $v$ [@wikipedia_tree_graph_theory] is the subgraph (@def-subgraph) of $T$
+whose vertices are $v$ and its descendants (@def-descendant),
+and whose edges are the edges of $T$ with both endpoints among those vertices,
+with $v$ as its root.
+
+:::

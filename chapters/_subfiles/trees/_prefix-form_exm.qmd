@@ -1,0 +1,15 @@
+::: {#exm-prefix-form}
+#### A prefix form
+
+The prefix form (@def-prefix-form) of $(7 - 2) \times (3 + 4 \times 2)$,
+the preorder of the tree of @fig-expression, is
+
+$$
+\times \; - \; 7 \; 2 \; + \; 3 \; \times \; 4 \; 2.
+$$
+
+The first $\times$ applies to the two operands that follow it,
+$- \; 7 \; 2$ and $+ \; 3 \; \times \; 4 \; 2$,
+and the $+$ applies to $3$ and $\times \; 4 \; 2$.
+
+:::

@@ -1,0 +1,8 @@
+::: {#sol-all-calls}
+
+There are 39 calls.
+Each call goes to exactly one member who did not know the news,
+and each of the 39 members other than the first gets exactly one call.
+So there is one call for each of those 39 members.
+
+:::

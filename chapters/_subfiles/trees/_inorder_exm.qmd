@@ -1,0 +1,15 @@
+::: {#exm-inorder}
+#### Inorder of $B$
+
+The inorder (@def-inorder) of the binary tree $B$ of @exm-binary-tree is the list
+
+$$
+c, f, h, j, m, p, r, t, w.
+$$
+
+It is the inorder of $B_1$, which is $c, f, h, j$, then the root $m$, then the inorder of $B_2$, which is $p, r, t, w$.
+The labels come out in alphabetical order,
+because $B$ was built so that every label in a left subtree comes before the label of its root in the alphabet,
+and every label in a right subtree comes after it.
+
+:::

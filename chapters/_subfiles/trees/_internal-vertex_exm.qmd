@@ -1,0 +1,7 @@
+::: {#exm-internal-vertex}
+#### Internal vertices of the phone tree
+
+The internal vertices (@def-internal-vertex) of the phone tree (@exm-phone-tree) are $a$, $b$, $d$ and $g$, the members who call someone.
+Each vertex of a rooted tree is either a leaf (@def-tree-leaf) or an internal vertex, and not both.
+
+:::

@@ -1,0 +1,25 @@
+::: {#exr-pipes}
+#### Pipes between houses
+
+Seven houses, named $p$, $q$, $r$, $s$, $t$, $u$ and $w$, share a water system.
+A pipe joins the two houses in each of these six pairs:
+
+$$
+\set{p, q}, \set{q, r}, \set{q, s}, \set{s, t}, \set{t, u}, \set{t, w}.
+$$
+
+@fig-pipes draws them.
+How many routes are there from house $r$ to house $w$ that go along pipes and visit no house twice?
+
+::: {#fig-pipes}
+
+![](../images/trees-pipes.png){fig-alt="Seven points joined by six lines.
+On the left, p and r are each joined to q.
+In the middle, q is joined to s, and s is joined to t.
+On the right, t is joined to u and to w." width="60%"}
+
+The houses and pipes of @exr-pipes.
+
+:::
+
+:::

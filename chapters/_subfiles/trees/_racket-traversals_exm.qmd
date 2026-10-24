@@ -1,0 +1,34 @@
+::: {#exm-racket-traversals}
+#### The three traversals in Racket
+
+These functions follow the definitions of preorder (@def-preorder), inorder (@def-inorder) and postorder (@def-postorder),
+with `B` as in @exr-racket-tree:
+
+```racket
+(define (preorder T)
+  (if (empty? T)
+      empty
+      (cons (first T)
+            (append (preorder (second T)) (preorder (third T))))))
+
+(define (inorder T)
+  (if (empty? T)
+      empty
+      (append (inorder (second T))
+              (cons (first T) (inorder (third T))))))
+
+(define (postorder T)
+  (if (empty? T)
+      empty
+      (append (postorder (second T))
+              (postorder (third T))
+              (list (first T)))))
+```
+
+`(append L M N)` is the list of the elements of `L`, then `M`, then `N`.
+
+- `(preorder B)` returns `'(m f c h j t r p w)`.
+- `(inorder B)` returns `'(c f h j m p r t w)`.
+- `(postorder B)` returns `'(c j h f p r w t m)`.
+
+:::

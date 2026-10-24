@@ -1,0 +1,25 @@
+::: {#exm-trees-or-not}
+#### Trees and graphs that are not trees
+
+In @fig-trees-or-not:
+
+- $T$ is a tree (@def-tree).
+  It is connected, since $b$ is adjacent (@def-adjacent) to $a$, $c$ and $d$, and $d$ to $e$.
+  Taking out $a$, $c$ and $e$, then $b$, leaves $d$ with no edges, so $T$ has no cycles, by @lem-degree-one.
+- $H$ is not a tree, since $b, c, d, b$ is a cycle (@def-graph-cycle).
+- $F$ is not a tree, since it is not connected:
+  no edge has $a$ as an endpoint, so there is no walk from $a$ to $b$.
+
+::: {#fig-trees-or-not}
+
+![](../images/trees-or-not.png){fig-alt="Three graphs side by side, each with labeled points.
+T: b is joined to a, c and d, and d is joined to e.
+H: b is joined to a, c and d, c is joined to d, and d is joined to e, so b, c and d form a triangle.
+F: eight points.
+In F, a and b are joined to nothing, c is joined to d, and e is joined to f, g and h." width="90%"}
+
+A tree $T$ and two graphs, $H$ and $F$, that are not trees.
+
+:::
+
+:::

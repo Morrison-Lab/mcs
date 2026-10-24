@@ -1,0 +1,23 @@
+::: {#cor-connected-edges}
+#### A connected graph has at least $n - 1$ edges
+
+Let $G = (V, E)$ be a connected (@def-connected) graph with $n$ vertices.
+Then $\card{E} \ge n - 1$, and $\card{E} = n - 1$ only if $G$ is a tree (@def-tree).
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+By @thm-spanning-tree, $G$ has a spanning tree $S = (V, E_S)$,
+which has $n - 1$ edges by @thm-tree-edges.
+Since $E_S \subseteq E$, $\card{E} \ge \card{E_S} = n - 1$.
+If $\card{E} = n - 1$, then $E_S$ is a subset of $E$ with as many elements as $E$, so $E_S = E$,
+and $G = S$ is a tree.
+
+:::
+
+:::

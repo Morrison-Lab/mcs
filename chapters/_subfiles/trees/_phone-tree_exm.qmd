@@ -1,0 +1,20 @@
+::: {#exm-phone-tree}
+#### The phone tree
+
+The calls of @exr-phone-calls form a graph (@def-graph-vertices-edges) $C$,
+with the eight members as vertices and an edge for each call:
+
+$$
+\set{a, b}, \set{a, c}, \set{a, d}, \set{b, e}, \set{b, f}, \set{d, g}, \set{g, h}.
+$$
+
+$C$ is a tree (@def-tree).
+It is connected (@def-connected), since the news goes from $a$ to every member along calls,
+and two of those walks, one read backward, join any two members.
+It has no cycles, by @lem-degree-one:
+take out $c$, $e$, $f$ and $h$, which have degree 1,
+then $b$ and $g$, then $a$, and $d$ is left with no edges.
+With $a$ as its root, $C$ is a rooted tree (@def-rooted-tree), the *phone tree*.
+@fig-phone draws it with the root at the top.
+
+:::

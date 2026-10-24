@@ -1,0 +1,33 @@
+::: {#exm-racket-level-order}
+#### Level order in Racket
+
+The level order (@def-level-order) needs a queue (@def-queue).
+Here the queue holds subtrees rather than vertices:
+removing a subtree that is not empty lists its root and adds its two subtrees at the back,
+and removing an empty tree adds nothing.
+
+```racket
+(define (level-loop queue)
+  (if (empty? queue)
+      empty
+      (let ([T (first queue)])
+        (if (empty? T)
+            (level-loop (rest queue))
+            (cons (first T)
+                  (level-loop (append (rest queue)
+                                      (list (second T) (third T)))))))))
+
+(define (level-order T)
+  (level-loop (list T)))
+```
+
+- `(let ([name value]) body)` gives `name` the value `value`, and then returns the value of `body`.
+  Here it names the front of the queue `T`.
+- `(append xs ys)` is the list of the elements of `xs` followed by those of `ys`,
+  so the two subtrees go to the back of the queue.
+
+With `B` as in @exr-racket-tree, `(level-order B)` returns `'(m f t c h r w j p)`, the level order of @exm-level-order.
+Each subtree that is not empty enters the queue when its parent's subtree is removed,
+just as `bfs` marks a child when it removes the parent.
+
+:::

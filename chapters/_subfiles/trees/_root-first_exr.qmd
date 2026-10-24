@@ -1,0 +1,8 @@
+::: {#exr-root-first}
+#### Root first
+
+List the labels of the binary tree $B$ of @fig-binary by this rule:
+list the root, then list the left subtree by the same rule, then list the right subtree by the same rule.
+What list do you get?
+
+:::

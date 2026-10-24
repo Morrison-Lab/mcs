@@ -1,0 +1,16 @@
+::: {#def-inorder}
+#### Inorder
+
+The **inorder** $\operatorname{inorder}(T)$ of a binary tree $T$ (@def-binary-tree) [@wikipedia_tree_traversal]
+is the list (@def-list) of the labels of its vertices defined recursively by
+
+$$
+\ba
+\operatorname{inorder}(\mathtt{nil}) &= \mathtt{empty},
+\\ \operatorname{inorder}\paren{\operatorname{node}(x, L, R)} &= \operatorname{app}\paren{\operatorname{inorder}(L), \operatorname{cons}\paren{x, \operatorname{inorder}(R)}}.
+\ea
+$$
+
+The root comes between its left subtree and its right subtree.
+
+:::

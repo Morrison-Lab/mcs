@@ -1,0 +1,6 @@
+::: {#def-tree-height}
+#### Height
+
+The **height** of a rooted tree (@def-rooted-tree) [@wikipedia_tree_graph_theory] is the largest level (@def-tree-level) of its vertices.
+
+:::

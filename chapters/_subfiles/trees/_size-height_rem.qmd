@@ -1,0 +1,25 @@
+::: {#rem-size-height}
+#### Size and height, recursively
+
+For a binary tree $T$ (@def-binary-tree), write $\operatorname{size}(T)$ for its number of vertices,
+and $\operatorname{height}(T)$ for the height (@def-tree-height) of its drawing (@rem-binary-drawing),
+with $\operatorname{height}(\mathtt{nil}) = -1$ for the empty tree.
+These follow the recursive definition of binary trees:
+
+$$
+\ba
+\operatorname{size}(\mathtt{nil}) &= 0,
+\\ \operatorname{size}\paren{\operatorname{node}(x, L, R)} &= 1 + \operatorname{size}(L) + \operatorname{size}(R),
+\\ \operatorname{height}\paren{\operatorname{node}(x, L, R)} &= 1 + \maxf{\operatorname{height}(L), \operatorname{height}(R)}.
+\ea
+$$
+
+For the height:
+in the drawing of $\operatorname{node}(x, L, R)$, the path from the root to a vertex $v$ of $L$
+is the root followed by the path from the root of $L$ to $v$ in the drawing of $L$ (@thm-tree-paths),
+so the level of $v$ is one more than its level in $L$, and the same holds for $R$.
+So the largest level is 0 when $L$ and $R$ are both empty,
+and otherwise 1 plus the largest height of the subtrees that are not empty.
+With $\operatorname{height}(\mathtt{nil}) = -1$, both cases give the formula above.
+
+:::

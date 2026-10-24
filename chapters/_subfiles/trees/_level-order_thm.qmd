@@ -1,0 +1,27 @@
+::: {#thm-level-order}
+#### Level order goes level by level
+
+In the level order (@def-level-order) of a binary tree that is not empty,
+every vertex at level $k$ (@def-tree-level) comes before every vertex at level $k + 1$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Let $T$ and $r$ be as in @def-level-order.
+For each vertex $v$, a walk (@def-walk) from $r$ to $v$ of the smallest length is a path (@thm-walk-path),
+and the only path from $r$ to $v$ (@thm-tree-paths) has length $\operatorname{level}(v)$,
+so $\operatorname{dist}(r, v) = \operatorname{level}(v)$ (@def-graph-distance).
+Since $T$ is connected, @thm-bfs-distance says that `bfs(T, r)` marks every vertex $v$,
+with $\texttt{dist}[v] = \operatorname{dist}(r, v) = \operatorname{level}(v)$.
+By @lem-bfs-order, the vertices leave the queue with their labels $\texttt{dist}$ in nondecreasing order.
+So the levels of the vertices in the level order never decrease,
+and every vertex at level $k$ comes before every vertex at level $k + 1$.
+
+:::
+
+:::

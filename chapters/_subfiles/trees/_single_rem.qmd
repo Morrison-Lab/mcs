@@ -1,0 +1,7 @@
+::: {#rem-single}
+#### Writing a binary tree with one vertex
+
+For a label $x$, we write $\operatorname{single}(x)$ for $\operatorname{node}(x, \mathtt{nil}, \mathtt{nil})$,
+the binary tree (@def-binary-tree) whose only vertex is its root, labeled $x$.
+
+:::

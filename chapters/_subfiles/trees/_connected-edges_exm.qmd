@@ -1,0 +1,10 @@
+::: {#exm-connected-edges}
+#### Counting edges instead of looking for cycles
+
+- The town graph (@exm-spanning-tree) has 7 vertices,
+  so a connected subgraph with all seven towns has at least 6 edges, by @cor-connected-edges,
+  as @sol-fewest-roads found.
+- The pipes graph $P$ of @exm-pipes-tree is connected and has 7 vertices and 6 edges.
+  By @cor-connected-edges it is a tree, without taking out any vertices.
+
+:::

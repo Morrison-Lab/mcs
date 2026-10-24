@@ -1,0 +1,7 @@
+::: {#def-tree-child}
+#### Child
+
+A vertex $v$ of a rooted tree (@def-rooted-tree) is a **child** of a vertex $u$ [@wikipedia_tree_graph_theory]
+if $u$ is the parent (@def-tree-parent) of $v$.
+
+:::

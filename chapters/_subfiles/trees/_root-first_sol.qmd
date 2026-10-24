@@ -1,0 +1,8 @@
+::: {#sol-root-first}
+
+$m, f, c, h, j, t, r, p, w$.
+The root $m$ comes first.
+Next comes the left subtree, rooted at $f$: first $f$, then its left subtree, $c$, then its right subtree, $h$ followed by $j$.
+Last comes the right subtree, rooted at $t$: first $t$, then $r$ followed by $p$, then $w$.
+
+:::

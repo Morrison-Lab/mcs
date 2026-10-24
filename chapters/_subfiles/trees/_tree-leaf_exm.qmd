@@ -1,0 +1,7 @@
+::: {#exm-tree-leaf}
+#### Leaves of the phone tree
+
+The leaves (@def-tree-leaf) of the phone tree (@exm-phone-tree) are $c$, $e$, $f$ and $h$, the members who call no one.
+In a rooted tree with only one vertex, the root is a leaf.
+
+:::

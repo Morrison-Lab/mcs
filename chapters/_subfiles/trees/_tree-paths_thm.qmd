@@ -1,0 +1,83 @@
+::: {#thm-tree-paths}
+#### A tree has exactly one path between two vertices
+
+Let $G$ be a graph (@def-graph-vertices-edges) with no loops (@def-graph-loop).
+Then $G$ is a tree (@def-tree) if and only if,
+for every two vertices $u$ and $v$ of $G$, there is exactly one path (@def-graph-path) from $u$ to $v$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+**A tree has exactly one path between two vertices.**
+Let $G$ be a tree, and let $u$ and $v$ be vertices of $G$.
+Since $G$ is connected (@def-connected), there is a walk from $u$ to $v$,
+so there is a path from $u$ to $v$, by @thm-walk-path.
+
+Suppose, for contradiction (@def-proof-by-contradiction), that there are two different paths from $u$ to $v$,
+written by their vertices (@rem-tree-simple) as
+
+$$
+\ba
+u &= p_0, p_1, \ldots, p_m = v,
+\\ u &= q_0, q_1, \ldots, q_k = v.
+\ea
+$$
+
+If $p_j = q_j$ for every $j \le \min(m, k)$, the paths are the same:
+if $m < k$, then $q_m = p_m = v = q_k$ would repeat a vertex of the second path,
+and $k < m$ is ruled out in the same way.
+So there is a smallest $j \ge 1$ with $p_j \ne q_j$.
+Let $i = j - 1$, so that $p_i = q_i$ and $p_{i + 1} \ne q_{i + 1}$.
+
+The vertex $p_m = v = q_k$ of the first path is one of $q_{i + 1}, \ldots, q_k$.
+Let $a > i$ be the smallest index for which $p_a$ is one of $q_{i + 1}, \ldots, q_k$, say $p_a = q_b$ with $b > i$.
+Then
+
+$$
+p_i, p_{i + 1}, \ldots, p_a = q_b, q_{b - 1}, \ldots, q_{i + 1}, q_i = p_i
+$$
+
+is a closed walk from $p_i$ to itself.
+Its vertices before the last one are all different:
+$p_i, \ldots, p_a$ are vertices of a path, and so are $q_{b - 1}, \ldots, q_{i + 1}, q_i$;
+by the choice of $a$, none of $p_{i + 1}, \ldots, p_{a - 1}$ is one of $q_{i + 1}, \ldots, q_{b - 1}$;
+$p_a = q_b$ is not one of $q_{i + 1}, \ldots, q_{b - 1}$;
+and $p_i = q_i$ is not one of $q_{i + 1}, \ldots, q_{b - 1}$.
+Its length is $(a - i) + (b - i) \ge 3$,
+since both terms are at least 1, and $a = b = i + 1$ would give $p_{i + 1} = q_{i + 1}$.
+Each edge of the closed walk joins two consecutive vertices,
+and since there are at least three vertices before the last one, all different,
+no two of these pairs of consecutive vertices are the same set.
+So the edges are all different, and the closed walk is a cycle (@def-graph-cycle),
+which contradicts that $G$ is a tree.
+So there is exactly one path from $u$ to $v$.
+
+**A graph with exactly one path between every two vertices is a tree.**
+Suppose that $G$ has no loops and exactly one path between every two vertices.
+A path is a walk, so $G$ is connected.
+Suppose, for contradiction, that $G$ has a cycle $v_0, e_1, v_1, \ldots, e_n, v_n$, with $v_n = v_0$.
+Then $n \ge 2$, since a cycle of length 1 is a loop.
+Both
+
+$$
+\ba
+& v_0, e_1, v_1,
+\\ & v_0, e_n, v_{n - 1}, e_{n - 1}, \ldots, e_2, v_1
+\ea
+$$
+
+are paths from $v_0$ to $v_1$, since the vertices $v_0, \ldots, v_{n - 1}$ of the cycle are all different.
+They are different paths:
+if $n \ge 3$, the first has length 1 and the second has length $n - 1 \ge 2$,
+and if $n = 2$, they use the edges $e_1$ and $e_2$, which are different since a cycle is a trail (@def-trail).
+This contradicts that there is exactly one path from $v_0$ to $v_1$.
+So $G$ has no cycles, and $G$ is a tree.
+
+:::
+
+:::

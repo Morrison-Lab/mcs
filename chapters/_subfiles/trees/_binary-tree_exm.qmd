@@ -1,0 +1,30 @@
+::: {#exm-binary-tree}
+#### A binary tree with nine vertices
+
+With $\operatorname{single}$ as in @rem-single, the recursive rule of binary trees (@def-binary-tree) builds
+
+$$
+\ba
+B_1 &= \operatorname{node}\paren{f, \operatorname{single}(c), \operatorname{node}\paren{h, \mathtt{nil}, \operatorname{single}(j)}},
+\\ B_2 &= \operatorname{node}\paren{t, \operatorname{node}\paren{r, \operatorname{single}(p), \mathtt{nil}}, \operatorname{single}(w)},
+\\ B &= \operatorname{node}(m, B_1, B_2).
+\ea
+$$
+
+The binary tree $B$ has the nine vertices labeled $m$, $f$, $c$, $h$, $j$, $t$, $r$, $p$ and $w$.
+Its root is labeled $m$, its left subtree is $B_1$ and its right subtree is $B_2$.
+@fig-binary draws it.
+
+::: {#fig-binary}
+
+![](../images/trees-binary.png){fig-alt="Nine labeled points in four rows.
+Row 1 holds m.
+Row 2 holds f, below m to the left, and t, below m to the right.
+Row 3 holds c, below f to the left, h, below f to the right, r, below t to the left, and w, below t to the right.
+Row 4 holds j, below h to the right, and p, below r to the left." width="55%"}
+
+The binary tree $B$.
+
+:::
+
+:::

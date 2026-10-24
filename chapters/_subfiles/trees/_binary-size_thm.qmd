@@ -1,0 +1,44 @@
+::: {#thm-binary-size}
+#### A short binary tree has few vertices
+
+For every binary tree $T$ (@def-binary-tree), with size and height as in @rem-size-height,
+
+$$
+\operatorname{size}(T) \le 2^{\operatorname{height}(T) + 1} - 1.
+$$
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+We use structural induction (@def-structural-induction) on $T$.
+
+**Base case.**
+$\operatorname{size}(\mathtt{nil}) = 0 = 2^{-1 + 1} - 1$.
+
+**Inductive step.**
+Let $T = \operatorname{node}(x, L, R)$, where $L$ and $R$ satisfy the inequality, and let $h = \operatorname{height}(T)$.
+By @rem-size-height, $\operatorname{height}(L) \le h - 1$ and $\operatorname{height}(R) \le h - 1$.
+Then, using the formula for size in @rem-size-height first,
+
+$$
+\ba
+\operatorname{size}(T)
+&= 1 + \operatorname{size}(L) + \operatorname{size}(R)
+&& \text{(formula for size)}
+\\&\le 1 + \paren{2^{\operatorname{height}(L) + 1} - 1} + \paren{2^{\operatorname{height}(R) + 1} - 1}
+&& \text{(induction hypothesis)}
+\\&\le 1 + \paren{2^{h} - 1} + \paren{2^{h} - 1}
+\\&= 2^{h + 1} - 1.
+\ea
+$$
+
+By structural induction, the inequality holds for every binary tree.
+
+:::
+
+:::
