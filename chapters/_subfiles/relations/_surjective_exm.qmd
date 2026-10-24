@@ -1,0 +1,13 @@
+::: {#exm-surjective-or-not}
+#### Surjective or not
+
+A function is surjective (@def-surjective) exactly when its image (@def-image) is its whole codomain (@def-codomain).
+
+- The function $\operatorname{len} : \set{0, 1}^* \to \Nat \cup \set{0}$ of @exm-injective-or-not is surjective:
+  for each $n \ge 0$, the string of $n$ zeros has length $n$.
+- The function $\operatorname{dup}$ of @exr-dup-odd is not surjective,
+  since $010$ is not in its image (@sol-dup-odd).
+- The function $\operatorname{len}_K$ of @exm-graph-length is not surjective,
+  since no word of $K$ has length 5.
+
+:::

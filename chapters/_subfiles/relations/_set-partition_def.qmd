@@ -1,0 +1,15 @@
+::: {#def-set-partition}
+#### Partition of a set
+
+Let $S$ be a set.
+A **partition** of $S$ [@wikipedia_partition_of_a_set]
+is a collection $\mathcal{C}$ (@def-collection) of subsets of $S$
+such that
+
+- every set in $\mathcal{C}$ is nonempty;
+- any two different sets in $\mathcal{C}$ are disjoint: their intersection (@def-intersection) is empty;
+- every element of $S$ is in some set in $\mathcal{C}$.
+
+So each element of $S$ is in exactly one set in $\mathcal{C}$.
+
+:::

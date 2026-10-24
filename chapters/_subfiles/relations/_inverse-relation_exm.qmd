@@ -1,0 +1,28 @@
+::: {#exm-inverse-relation}
+#### Reversing pairs
+
+- The inverse (@def-inverse-relation) of the relation $P$ of @exm-parent is the relation "is a child of",
+
+  $$
+  P^{-1} = \set{(\text{Ben}, \text{Ada}), (\text{Cora}, \text{Ada}), (\text{Dev}, \text{Ben}), (\text{Eva}, \text{Cora})}.
+  $$
+
+- The inverse of the relation $H$ of @exm-word-letters is the relation from $L$ to $W$ in which $x \mathrel{H^{-1}} w$ when the letter $x$ appears in the word $w$;
+  for example, $\text{o} \mathrel{H^{-1}} \text{dog}$ and $\text{o} \mathrel{H^{-1}} \text{owl}$.
+
+- The inverse of the relation $B$ of @exm-beats is "is beaten by".
+  Its directed graph (@def-relation-digraph) is @fig-beats with every arrow reversed,
+  and its matrix (@def-relation-matrix) is the transpose (@def-transpose) of $M_B$ from @exm-relation-matrix:
+
+  $$
+  M_{B^{-1}} =
+  \begin{bmatrix}
+  0 & 1 & 0
+  \\
+  0 & 0 & 1
+  \\
+  1 & 0 & 0
+  \end{bmatrix}.
+  $$
+
+:::

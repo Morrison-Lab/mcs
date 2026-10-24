@@ -1,0 +1,10 @@
+::: {#sol-beats-one}
+
+Exactly one each:
+rock beats only scissors,
+paper beats only rock,
+and scissors beats only paper.
+So "the element that $a$ beats" names one element of $G$ for each $a \in G$,
+which is what a function (@def-function) from $G$ to $G$ does.
+
+:::

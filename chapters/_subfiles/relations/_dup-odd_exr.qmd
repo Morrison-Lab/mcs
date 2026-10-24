@@ -1,0 +1,10 @@
+::: {#exr-dup-odd}
+#### Writing a string twice
+
+Let $\set{0, 1}^*$ be the set of strings over the alphabet $\set{0, 1}$ (@def-string, @def-alphabet),
+and let $\operatorname{dup} : \set{0, 1}^* \to \set{0, 1}^*$ write a string twice:
+$\operatorname{dup}(s) = s s$, the string $s$ followed by $s$.
+For example, $\operatorname{dup}(01) = 0101$.
+Is there a string $s \in \set{0, 1}^*$ with $\operatorname{dup}(s) = 010$?
+
+:::

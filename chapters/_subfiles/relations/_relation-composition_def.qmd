@@ -1,0 +1,15 @@
+::: {#def-relation-composition}
+#### Composition of relations
+
+Let $R$ be a relation from a set $A$ to a set $B$,
+and $Q$ a relation from $B$ to a set $E$ (@def-binary-relation).
+The **composition** of $R$ and $Q$ [@wikipedia_composition_of_relations]
+is the relation from $A$ to $E$
+
+$$
+Q \circ R \eqdef \set{(a, e) \in A \times E : a \mathrel{R} b \text{ and } b \mathrel{Q} e \text{ for some } b \in B}.
+$$
+
+The relation used first, $R$, is written on the right.
+
+:::

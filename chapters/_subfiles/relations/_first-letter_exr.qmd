@@ -1,0 +1,9 @@
+::: {#exr-first-letter}
+#### Grouping words by their first letter
+
+Split the words of the set $K$ of @exr-same-length into groups,
+so that each word is in exactly one group,
+and two words are in the same group exactly when they start with the same letter.
+List the groups.
+
+:::

@@ -1,0 +1,10 @@
+::: {#def-relation-digraph}
+#### Directed graph of a relation
+
+Let $R$ be a relation on a set $A$ (@rem-relation-on-set).
+The **directed graph** of $R$ [@wikipedia_directed_graph]
+draws each element of $A$ once, as a labeled point,
+with an arrow from $a$ to $b$ for each pair $(a, b) \in R$.
+A pair $(a, a)$ is drawn as an arrow that leaves $a$ and comes back to $a$.
+
+:::

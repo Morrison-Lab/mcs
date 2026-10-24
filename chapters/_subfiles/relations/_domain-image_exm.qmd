@@ -1,0 +1,10 @@
+::: {#exm-domain-image}
+#### The images of two functions
+
+- The function $\operatorname{len}_K : K \to \Nat$ of @exm-graph-length has the image (@def-image)
+  $\operatorname{len}_K(K) = \set{2, 3, 4, 6}$, the lengths that occur.
+  Most natural numbers, such as 1 and 5, are in its codomain (@def-codomain) $\Nat$ but not in its image.
+- The function $b : G \to G$ of @exm-function-or-not has domain (@def-function-domain) and codomain $G$,
+  and its image is all of $G$, since each element of $G$ is beaten by some element.
+
+:::

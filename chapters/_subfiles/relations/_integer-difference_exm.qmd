@@ -1,0 +1,35 @@
+::: {#exm-integer-difference}
+#### Real numbers that differ by an integer
+
+On the real numbers $\reals$,
+let $x \sim y$ when $x - y$ is an integer (@def-integers).
+For example, $3.25 \sim 0.25$, since $3.25 - 0.25 = 3$,
+but $0.75 \not\sim 0.25$, since $0.75 - 0.25 = 0.5$.
+The relation $\sim$ is an equivalence relation (@def-equivalence-relation).
+
+**Reflexive.**
+For every real number $x$, $x - x = 0$, which is an integer, so $x \sim x$.
+
+**Symmetric.**
+Suppose $x \sim y$, so $x - y = n$ for some integer $n$.
+Then $y - x = -(x - y) = -n$, which is an integer, so $y \sim x$.
+
+**Transitive.**
+Suppose $x \sim y$ and $y \sim z$,
+so $x - y = m$ and $y - z = n$ for some integers $m$ and $n$.
+Then
+
+$$
+\ba
+x - z
+&= (x - y) + (y - z)
+&& \text{(the } y \text{ terms cancel)}
+\\
+&= m + n,
+&& \text{(} x - y = m \text{ and } y - z = n \text{)}
+\ea
+$$
+
+which is an integer, so $x \sim z$.
+
+:::

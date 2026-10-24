@@ -1,0 +1,8 @@
+::: {#exr-grandparent}
+#### Grandparents
+
+In the family of @exm-parent,
+a person $a$ is a grandparent of a person $c$ when $a$ is a parent of some person $b$ who is a parent of $c$.
+List the pairs $(a, c)$ of people in $F$ for which $a$ is a grandparent of $c$.
+
+:::

@@ -1,0 +1,17 @@
+::: {#exm-parent}
+#### Parents in a family
+
+Let $F = \set{\text{Ada}, \text{Ben}, \text{Cora}, \text{Dev}, \text{Eva}}$ be five people in a family,
+where Ada is the parent of Ben and of Cora,
+Ben is the parent of Dev,
+and Cora is the parent of Eva.
+The relation "is a parent of" on $F$ (@rem-relation-on-set) is the set of four pairs
+
+$$
+P = \set{(\text{Ada}, \text{Ben}), (\text{Ada}, \text{Cora}), (\text{Ben}, \text{Dev}), (\text{Cora}, \text{Eva})}.
+$$
+
+So $\text{Ben} \mathrel{P} \text{Dev}$,
+but $(\text{Dev}, \text{Ben}) \notin P$, since Dev is Ben's child, not Ben's parent.
+
+:::

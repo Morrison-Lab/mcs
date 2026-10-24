@@ -1,0 +1,13 @@
+::: {#exm-transitive-or-not}
+#### Transitive or not
+
+- The relation $B$ of @exm-beats is not transitive (@def-transitive), as @sol-beats-transitive found.
+- The relation $T$ of @exm-shares-letter is not transitive:
+  $\text{cat} \mathrel{T} \text{cow}$ and $\text{cow} \mathrel{T} \text{dog}$,
+  but $(\text{cat}, \text{dog}) \notin T$.
+- The relation $P$ of @exm-parent is not transitive:
+  Ada is a parent of Ben and Ben is a parent of Dev,
+  but Ada is not a parent of Dev.
+- For a set $U$, the relation $\subseteq$ on $\mathcal{P}(U)$ is transitive, by @thm-subset-transitive.
+
+:::

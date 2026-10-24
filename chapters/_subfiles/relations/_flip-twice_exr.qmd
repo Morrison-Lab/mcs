@@ -1,0 +1,7 @@
+::: {#exr-flip-twice}
+#### Flipping twice
+
+With $\operatorname{flip}$ as in @exm-bijective-or-not,
+what is $\operatorname{flip}(\operatorname{flip}(0110))$?
+
+:::

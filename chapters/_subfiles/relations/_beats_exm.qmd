@@ -1,0 +1,14 @@
+::: {#exm-beats}
+#### The relation "beats"
+
+By @sol-beats, the relation "beats" on $G = \set{\text{rock}, \text{paper}, \text{scissors}}$ (@rem-relation-on-set) is
+
+$$
+B = \set{(\text{rock}, \text{scissors}), (\text{scissors}, \text{paper}), (\text{paper}, \text{rock})}.
+$$
+
+So $\text{rock} \mathrel{B} \text{scissors}$,
+but $(\text{scissors}, \text{rock}) \notin B$,
+since the first entry of each pair is the winner.
+
+:::

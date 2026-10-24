@@ -1,0 +1,14 @@
+::: {#exm-function-or-not}
+#### Relations that are functions and relations that are not
+
+- The relation $B$ of @exm-beats relates each element of $G$ to exactly one element, as @sol-beats-one found.
+  By @thm-function-relation, it is the graph of a function $b : G \to G$, with
+  $b(\text{rock}) = \text{scissors}$, $b(\text{scissors}) = \text{paper}$ and $b(\text{paper}) = \text{rock}$.
+- The relation $H$ of @exm-word-letters is not the graph of a function from $W$ to $L$,
+  since cat is related to two letters, c and t.
+- The relation $P$ of @exm-parent is not the graph of a function from $F$ to $F$,
+  for two reasons:
+  Ada is related to two people,
+  and Dev is related to none.
+
+:::

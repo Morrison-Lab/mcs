@@ -1,0 +1,13 @@
+::: {#def-inverse-relation}
+#### Inverse relation (converse relation)
+
+Let $R$ be a relation from a set $A$ to a set $B$ (@def-binary-relation).
+The **inverse** of $R$ [@wikipedia_converse_relation]
+(also called the **converse** of $R$)
+is the relation from $B$ to $A$ that reverses each pair of $R$:
+
+$$
+R^{-1} \eqdef \set{(b, a) : (a, b) \in R}.
+$$
+
+:::

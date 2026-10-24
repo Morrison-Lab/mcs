@@ -1,0 +1,9 @@
+::: {#sol-dup-odd}
+
+No.
+If $s$ has $n$ symbols, then $\operatorname{dup}(s) = s s$ has $2n$ symbols, an even number.
+The string $010$ has 3 symbols, an odd number,
+so it is not $\operatorname{dup}(s)$ for any $s$.
+So $010$ is in the codomain $\set{0, 1}^*$ of $\operatorname{dup}$ but not in its image (@def-image).
+
+:::

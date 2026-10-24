@@ -1,0 +1,40 @@
+::: {#exm-relation-matrix}
+#### Matrices of two relations
+
+List the words of $W$ in the order cat, dog, owl,
+and the letters of $L$ in the order c, d, o, t.
+The relation $H$ of @exm-word-letters has the matrix (@def-relation-matrix)
+
+$$
+M_H =
+\begin{bmatrix}
+1 & 0 & 0 & 1
+\\
+0 & 1 & 1 & 0
+\\
+0 & 0 & 1 & 0
+\end{bmatrix}.
+$$
+
+Row 1, for cat, has a 1 in the columns for c and t,
+the two arrows that leave cat in @fig-word-letters.
+
+List $G$ in the order rock, paper, scissors.
+The relation $B$ of @exm-beats has the matrix
+
+$$
+M_B =
+\begin{bmatrix}
+0 & 0 & 1
+\\
+1 & 0 & 0
+\\
+0 & 1 & 0
+\end{bmatrix}.
+$$
+
+Its entries on the diagonal, $m_{11}$, $m_{22}$ and $m_{33}$, are 0, since nothing beats itself.
+Listing the elements in another order would move the rows and columns around,
+but the new matrix would hold the same pairs.
+
+:::

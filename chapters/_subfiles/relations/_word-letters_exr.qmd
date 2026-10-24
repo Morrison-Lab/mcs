@@ -1,0 +1,9 @@
+::: {#exr-word-letters}
+#### Letters in words
+
+Let $W = \set{\text{cat}, \text{dog}, \text{owl}}$ be a set of words
+and $L = \set{\text{c}, \text{d}, \text{o}, \text{t}}$ a set of letters.
+List the ordered pairs $(w, x)$ in the Cartesian product $W \times L$ (@def-cartesian-product)
+for which the letter $x$ appears in the word $w$.
+
+:::

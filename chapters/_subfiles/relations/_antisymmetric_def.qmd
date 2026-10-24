@@ -1,0 +1,9 @@
+::: {#def-antisymmetric}
+#### Antisymmetric relation
+
+Let $R$ be a relation on a set $S$ (@rem-relation-on-set).
+The relation $R$ is **antisymmetric** [@wikipedia_antisymmetric_relation]
+if, for all $a, b \in S$,
+$a \mathrel{R} b$ and $b \mathrel{R} a$ together imply $a = b$.
+
+:::

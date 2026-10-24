@@ -1,0 +1,11 @@
+::: {#exm-symmetric-or-not}
+#### Symmetric or not
+
+- The relation $T$ of @exm-shares-letter is symmetric (@def-symmetric-relation):
+  if $a$ has a letter in common with $b$, then $b$ has the same letter in common with $a$.
+- The relation $B$ of @exm-beats is not symmetric:
+  rock beats scissors, but scissors does not beat rock.
+- The relation $P$ of @exm-parent is not symmetric:
+  Ada is a parent of Ben, but Ben is not a parent of Ada.
+
+:::

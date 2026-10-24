@@ -1,0 +1,25 @@
+::: {#exm-relation-power}
+#### Powers of "beats"
+
+For the relation $B$ of @exm-beats,
+$B^2 = B \circ B$ (@def-relation-power) relates $a$ to $c$ when $a$ beats something that beats $c$:
+
+$$
+B^2 = \set{(\text{rock}, \text{paper}), (\text{scissors}, \text{rock}), (\text{paper}, \text{scissors})},
+$$
+
+which is the inverse $B^{-1}$ of @exm-inverse-relation.
+Then $B^3 = B^2 \circ B$ relates each element to itself:
+
+$$
+B^3 = \set{(\text{rock}, \text{rock}), (\text{paper}, \text{paper}), (\text{scissors}, \text{scissors})},
+$$
+
+as following three arrows of @fig-beats leads back to the start.
+So $B^4 = B^3 \circ B = B$, and the powers of $B$ repeat after every three steps.
+
+For the relation $P$ of @exm-parent,
+$P^2$ is the grandparent relation of @exm-relation-composition,
+and $P^3 = \emptyset$, since no one in $F$ has a great-grandchild in $F$.
+
+:::

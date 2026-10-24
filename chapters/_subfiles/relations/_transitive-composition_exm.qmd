@@ -1,0 +1,12 @@
+::: {#exm-transitive-composition}
+#### Checking transitivity with a square
+
+- For the relation $B$ of @exm-beats, $B^2 = B^{-1}$ by @exm-relation-power,
+  and $B^2$ has no pair in common with $B$.
+  So $B^2 \not\subseteq B$, and $B$ is not transitive, by @thm-transitive-composition,
+  as @sol-beats-transitive found.
+- For the relation $T$ of @exm-shares-letter, $T^2$ holds $(\text{cat}, \text{dog})$,
+  since $\text{cat} \mathrel{T} \text{cow}$ and $\text{cow} \mathrel{T} \text{dog}$.
+  That pair is not in $T$, so $T$ is not transitive.
+
+:::

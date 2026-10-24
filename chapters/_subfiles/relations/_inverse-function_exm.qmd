@@ -1,0 +1,12 @@
+::: {#exm-inverse-strings}
+#### Inverse functions of strings and games
+
+- $\operatorname{flip}$ is its own inverse function (@def-inverse-function), $\operatorname{flip}^{-1} = \operatorname{flip}$,
+  since $\operatorname{flip}(\operatorname{flip}(s)) = s$ for every $s \in \set{0, 1}^*$ (@exm-identity-function).
+- The function $b : G \to G$ of @exm-function-or-not has the inverse function "the element that beats $a$",
+  with $b^{-1}(\text{scissors}) = \text{rock}$, $b^{-1}(\text{paper}) = \text{scissors}$ and $b^{-1}(\text{rock}) = \text{paper}$.
+  Its graph is the inverse relation $B^{-1}$ of @exm-inverse-relation.
+- The function $\operatorname{len}_K$ of @exm-graph-length has no inverse function,
+  since an inverse $g$ would need $g(4)$ to be cond, list and cons at once.
+
+:::

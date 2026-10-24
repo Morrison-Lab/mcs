@@ -1,0 +1,17 @@
+::: {#exm-injective-or-not}
+#### Injective or not
+
+By its contrapositive (@def-contrapositive), a function is injective (@def-injective) exactly when different inputs always give different outputs.
+
+- The function $\operatorname{dup}$ of @exr-dup-odd is injective.
+  Suppose $\operatorname{dup}(s) = \operatorname{dup}(t)$, so $s s = t t$.
+  The two sides have the same length, so $s$ and $t$ have the same length $n$,
+  and the first $n$ symbols of each side are $s$ on the left and $t$ on the right.
+  So $s = t$.
+- The function $\operatorname{len}_K$ of @exm-graph-length is not injective,
+  since $\operatorname{len}_K(\text{cond}) = \operatorname{len}_K(\text{list}) = 4$ but $\text{cond} \ne \text{list}$.
+- The function $\operatorname{len} : \set{0, 1}^* \to \Nat \cup \set{0}$ that gives the length of a string,
+  its number of symbols, as for the length of a list (@def-list-length),
+  is not injective, since $\operatorname{len}(01) = \operatorname{len}(10) = 2$.
+
+:::

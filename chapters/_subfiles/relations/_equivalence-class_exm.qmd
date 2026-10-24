@@ -1,0 +1,22 @@
+::: {#exm-equivalence-classes}
+#### Equivalence classes of two relations
+
+- For the relation $\sim$ of @exm-same-length, the equivalence class (@def-equivalence-class) of cond is the set found in @sol-same-length,
+
+  $$
+  [\text{cond}] = \set{\text{cond}, \text{list}, \text{cons}},
+  $$
+
+  and $[\text{list}]$ and $[\text{cons}]$ are the same set.
+  The other classes are $[\text{if}] = \set{\text{if}}$, $[\text{let}] = \set{\text{let}}$ and $[\text{define}] = \set{\text{define}}$,
+  so the relation has four different equivalence classes.
+- For the relation $\sim$ of @exm-integer-difference,
+  the class of $0.25$ holds the real numbers $y$ with $y - 0.25$ an integer:
+
+  $$
+  [0.25] = \set{0.25 + n : n \in \bbZ} = \set{\ldots, -1.75, -0.75, 0.25, 1.25, 2.25, \ldots}.
+  $$
+
+  The class $[3.25]$ is the same set, and the class $[0]$ is the set of integers.
+
+:::

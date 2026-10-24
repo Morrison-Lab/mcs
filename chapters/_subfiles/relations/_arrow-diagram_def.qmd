@@ -1,0 +1,8 @@
+::: {#def-arrow-diagram}
+#### Arrow diagram
+
+Let $R$ be a relation from a set $A$ to a set $B$ (@def-binary-relation).
+The **arrow diagram** of $R$ draws the elements of $A$ in one column and the elements of $B$ in another,
+with an arrow from $a$ to $b$ for each pair $(a, b) \in R$.
+
+:::

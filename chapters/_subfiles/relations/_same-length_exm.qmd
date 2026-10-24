@@ -1,0 +1,24 @@
+::: {#exm-same-length}
+#### Having the same length is an equivalence relation
+
+The relation $\sim$ of @exr-same-length is an equivalence relation (@def-equivalence-relation).
+Write $\operatorname{len}(a)$ for the length of the word $a$, its number of letters,
+as for the length of a list (@def-list-length),
+so that $a \sim b$ means $\operatorname{len}(a) = \operatorname{len}(b)$.
+
+**Reflexive.**
+For each word $a$, $\operatorname{len}(a) = \operatorname{len}(a)$, so $a \sim a$ (@def-reflexive).
+
+**Symmetric.**
+If $\operatorname{len}(a) = \operatorname{len}(b)$, then $\operatorname{len}(b) = \operatorname{len}(a)$,
+so $a \sim b$ implies $b \sim a$ (@def-symmetric-relation).
+
+**Transitive.**
+If $\operatorname{len}(a) = \operatorname{len}(b)$ and $\operatorname{len}(b) = \operatorname{len}(c)$,
+then $\operatorname{len}(a) = \operatorname{len}(c)$ (@thm-equal-trans),
+so $a \sim b$ and $b \sim c$ imply $a \sim c$ (@def-transitive).
+
+The relation $T$ of @exm-shares-letter is not an equivalence relation,
+since it is not transitive (@exm-transitive-or-not).
+
+:::

@@ -1,0 +1,7 @@
+::: {#exr-beats-one}
+#### How many does each one beat?
+
+In the relation $B$ of @exm-beats,
+how many elements of $G$ does each element of $G$ beat?
+
+:::

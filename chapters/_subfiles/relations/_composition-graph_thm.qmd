@@ -1,0 +1,30 @@
+::: {#thm-composition-graph}
+#### The graph of a composition is a composition of graphs
+
+Let $g : A \to B$ and $f : B \to C$ be functions (@def-function),
+and write $\Gamma_f$ for the graph (@def-graph) of $f$.
+Then the graph of the composition $f \circ g$ (@def-composition) is the composition of relations (@def-relation-composition)
+
+$$
+\Gamma_{f \circ g} = \Gamma_f \circ \Gamma_g.
+$$
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Let $a \in A$ and $c \in C$.
+By the definition of composition of relations,
+$(a, c) \in \Gamma_f \circ \Gamma_g$ exactly when some $b \in B$ has $(a, b) \in \Gamma_g$ and $(b, c) \in \Gamma_f$,
+that is, $b = g(a)$ and $c = f(b)$.
+Only $b = g(a)$ can work,
+so this holds exactly when $c = f(g(a)) = (f \circ g)(a)$,
+which is when $(a, c) \in \Gamma_{f \circ g}$.
+
+:::
+
+:::

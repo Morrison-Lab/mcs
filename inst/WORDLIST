@@ -1,4 +1,5 @@
 ABCD
+Bijective
 CASAS
 CLI
 CRN
@@ -8,12 +9,14 @@ Collatz
 Cy
 DOCX
 Decker
+Dev
 DrRacket
 Epp
 Epp's
 Euclid
 Fleck
 Harris
+Injective
 Kam
 Kam's
 Kameron
@@ -22,6 +25,7 @@ Racket
 RevealJS
 Rosen
 SERG
+Surjective
 Syllabi
 TAs
 TBD
@@ -34,14 +38,19 @@ aab
 aabbaa
 abba
 andmap
+antisymmetry
 baa
+bijective
 chatbot
+codomain
+cond
 consequent
 contrapositive
 contrapositives
 dropdown
 glitchy
 iff
+injective
 lintr
 mcs
 mds
@@ -56,4 +65,5 @@ pseudocode
 qwt
 rulesets
 submodule
+surjective
 tollens

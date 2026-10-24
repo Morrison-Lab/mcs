@@ -1,0 +1,9 @@
+::: {#exm-reflexive-or-not}
+#### Reflexive or not
+
+- The relation $T$ of @exm-shares-letter is reflexive (@def-reflexive),
+  since every word of $V$ has a letter in common with itself.
+- The relation $B$ of @exm-beats is not reflexive, since rock does not beat rock.
+- The relation $P$ of @exm-parent is not reflexive, since Ada is not her own parent.
+
+:::

@@ -1,0 +1,8 @@
+::: {#def-bijective}
+#### Bijective function (bijection)
+
+A function $f : A \to B$ (@def-function) is **bijective** [@wikipedia_bijection]
+(also called a **bijection**)
+if it is injective (@def-injective) and surjective (@def-surjective).
+
+:::

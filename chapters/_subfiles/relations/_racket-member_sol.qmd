@@ -1,0 +1,10 @@
+::: {#sol-racket-member}
+
+Yes.
+The list `(list 'rock 'paper)` is not an element of `beats`,
+since rock does not beat paper (@sol-beats-transitive),
+so `member` returns `#f`.
+When `x` is an element of `L`, `member` returns the part of `L` that starts at `x`, which is not `#f`:
+`(member (list 'paper 'rock) beats)` returns `'((paper rock))`.
+
+:::

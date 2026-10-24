@@ -1,0 +1,12 @@
+::: {#def-relation-power}
+#### Power of a relation
+
+Let $R$ be a relation on a set $S$ (@rem-relation-on-set).
+The **powers** of $R$ are the relations $R^n$ on $S$,
+for integers $n \ge 1$,
+given by the recursive definition (@def-recursive-definition)
+
+- base case: $R^1 = R$;
+- recursive rule: $R^{n + 1} = R^n \circ R$ for $n \ge 1$ (@def-relation-composition).
+
+:::

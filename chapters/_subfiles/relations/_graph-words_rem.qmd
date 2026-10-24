@@ -1,0 +1,10 @@
+::: {#rem-graph-words}
+#### Two uses of the word "graph"
+
+The graph of a function (@def-graph) is a set of ordered pairs:
+the relation that the function gives.
+The directed graph of a relation (@def-relation-digraph) is a drawing of a relation on a set, with points and arrows.
+The two share a word but are different things.
+For a function from a set to itself, the directed graph of its graph draws one arrow from each point.
+
+:::

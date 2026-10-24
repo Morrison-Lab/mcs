@@ -1,0 +1,43 @@
+::: {#exm-racket-properties}
+#### Checking properties in Racket
+
+The predicate `related?` turns the answer of `member` into `#t` or `#f`:
+
+```racket
+(define (related? R a b)
+  (if (member (list a b) R) #t #f))
+```
+
+`(for/and ([x L]) body)` evaluates `body` once for each element `x` of the list `L`,
+and returns `#f` as soon as `body` returns `#f`, and `#t` if it never does.
+`for*/and`, which @rem-racket-equivalence uses to go through the rows of a truth table,
+does the same for every combination of values of its variables,
+here every two pairs of a relation:
+
+```racket
+(define (reflexive? S R)
+  (for/and ([a S])
+    (related? R a a)))
+
+(define (symmetric? R)
+  (for/and ([p R])
+    (related? R (second p) (first p))))
+
+(define (transitive? R)
+  (for*/and ([p R]
+             [q R])
+    (or (not (equal? (second p) (first q)))
+        (related? R (first p) (second q)))))
+```
+
+- `reflexive?` checks $a \mathrel{R} a$ for each element $a$ of the set `S` (@def-reflexive).
+  It needs `S`, because the list `R` says nothing about an element that is in no pair.
+- `symmetric?` checks, for each pair $(a, b)$ in `R`, that $(b, a)$ is in `R` too (@def-symmetric-relation).
+- `transitive?` checks, for every two pairs $(a, b)$ and $(b', c)$ of `R`, the conditional
+  "if $b = b'$, then $a \mathrel{R} c$" (@def-transitive),
+  written as an `or` by @cor-conditional-as-or.
+
+All three of `(reflexive? (list 'rock 'paper 'scissors) beats)`, `(symmetric? beats)` and `(transitive? beats)` return `#f`,
+as @exm-reflexive-or-not, @exm-symmetric-or-not and @exm-transitive-or-not found.
+
+:::

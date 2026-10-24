@@ -1,0 +1,34 @@
+::: {#thm-related-classes}
+#### Related elements have the same class
+
+Let $\sim$ be an equivalence relation on a set $S$ (@def-equivalence-relation), and let $a, b \in S$.
+Then $a \sim b$ if and only if $[a] = [b]$ (@def-equivalence-class).
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+($\Leftarrow$)
+Suppose $[a] = [b]$.
+Since $\sim$ is reflexive, $a \sim a$, so $a \in [a]$.
+So $a \in [b]$, which means $a \sim b$.
+
+($\Rightarrow$)
+Suppose $a \sim b$.
+We show $[a] = [b]$ by double inclusion (@thm-double-inclusion).
+
+- Let $x \in [a]$, so $x \sim a$.
+  Since $a \sim b$ and $\sim$ is transitive, $x \sim b$, so $x \in [b]$.
+  So $[a] \subseteq [b]$.
+- Let $x \in [b]$, so $x \sim b$.
+  Since $\sim$ is symmetric, $a \sim b$ gives $b \sim a$,
+  and then transitivity gives $x \sim a$, so $x \in [a]$.
+  So $[b] \subseteq [a]$.
+
+:::
+
+:::

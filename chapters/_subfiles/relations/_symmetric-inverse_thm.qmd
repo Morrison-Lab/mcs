@@ -1,0 +1,36 @@
+::: {#thm-symmetric-inverse}
+#### Symmetric relations are their own inverses
+
+Let $R$ be a relation on a set $S$ (@rem-relation-on-set).
+Then $R$ is symmetric (@def-symmetric-relation) if and only if $R^{-1} = R$ (@def-inverse-relation).
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+($\Rightarrow$)
+Suppose $R$ is symmetric.
+We show $R^{-1} = R$ by double inclusion (@thm-double-inclusion).
+
+- Let $(a, b) \in R^{-1}$.
+  Then $(b, a) \in R$, by the definition of $R^{-1}$.
+  Since $R$ is symmetric, $(a, b) \in R$.
+  So $R^{-1} \subseteq R$.
+- Let $(a, b) \in R$.
+  Since $R$ is symmetric, $(b, a) \in R$,
+  so $(a, b) \in R^{-1}$, by the definition of $R^{-1}$.
+  So $R \subseteq R^{-1}$.
+
+($\Leftarrow$)
+Suppose $R^{-1} = R$, and let $a \mathrel{R} b$.
+Then $(b, a) \in R^{-1}$, by the definition of $R^{-1}$,
+and $R^{-1} = R$, so $b \mathrel{R} a$.
+So $R$ is symmetric.
+
+:::
+
+:::

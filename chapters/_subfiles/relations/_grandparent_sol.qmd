@@ -1,0 +1,11 @@
+::: {#sol-grandparent}
+
+Follow two pairs of $P$ in a row, where the second entry of the first pair is the first entry of the second:
+
+- $(\text{Ada}, \text{Ben})$ and then $(\text{Ben}, \text{Dev})$ give $(\text{Ada}, \text{Dev})$;
+- $(\text{Ada}, \text{Cora})$ and then $(\text{Cora}, \text{Eva})$ give $(\text{Ada}, \text{Eva})$.
+
+No other two pairs chain together, since Dev and Eva are nobody's parent in $F$.
+So the pairs are $(\text{Ada}, \text{Dev})$ and $(\text{Ada}, \text{Eva})$.
+
+:::

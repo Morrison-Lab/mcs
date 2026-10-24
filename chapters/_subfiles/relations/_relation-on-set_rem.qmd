@@ -1,0 +1,16 @@
+::: {#rem-relation-on-set}
+#### A relation on a set is a set of pairs
+
+A relation $\sim$ on a set $S$ (@def-relation) decides,
+for each ordered pair $(a, b)$ of elements of $S$, whether $a \sim b$.
+The pairs for which it holds form the set $\set{(a, b) \in S \times S : a \sim b}$,
+which is a relation from $S$ to $S$ (@def-binary-relation).
+In the other direction, a subset $R \subseteq S \times S$ decides, for each pair, whether $a \mathrel{R} b$.
+So a relation on $S$ is the same as a relation from $S$ to $S$,
+and from here on we treat it as a subset of $S \times S$,
+named with a letter such as $R$ or with a symbol such as $\sim$.
+
+For example, the relation $<$ on $\reals$ of @exm-relation is the set of points $(x, y)$ of the plane with $x < y$,
+which are the points above the line $y = x$.
+
+:::

@@ -1,0 +1,17 @@
+::: {#rem-properties-pictures}
+#### Three properties in a matrix and a directed graph
+
+Let $R$ be a relation on a finite set,
+with matrix $M_R = (m_{ij})$ (@def-relation-matrix) and a directed graph (@def-relation-digraph).
+
+- $R$ is reflexive (@def-reflexive) exactly when every diagonal entry $m_{ii}$ is 1,
+  and exactly when every point of the directed graph has an arrow that comes back to it.
+- $R$ is symmetric (@def-symmetric-relation) exactly when $m_{ij} = m_{ji}$ for all $i$ and $j$,
+  and exactly when every arrow from $a$ to $b$ comes with an arrow from $b$ to $a$.
+- $R$ is antisymmetric (@def-antisymmetric) exactly when $m_{ij}$ and $m_{ji}$ are never both 1 for $i \ne j$,
+  and exactly when no two different points have arrows both ways between them.
+
+For example, @fig-shares-letter has an arrow back to every point, and every arrow there comes with its reverse,
+so it shows again that $T$ is reflexive and symmetric.
+
+:::

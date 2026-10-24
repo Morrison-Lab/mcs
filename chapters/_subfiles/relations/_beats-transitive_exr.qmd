@@ -1,0 +1,8 @@
+::: {#exr-beats-transitive}
+#### Does rock beat paper?
+
+In the relation $B$ of @exm-beats,
+rock beats scissors and scissors beats paper.
+Does rock beat paper?
+
+:::
