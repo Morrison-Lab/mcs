@@ -60,43 +60,47 @@ sets the slot for classes that meet on neither Tuesday nor Thursday:
 | **Week 2**               | [Logical equivalence and     | [Inference and direct        | [Contrapositive and          | Lab 2                        |
 |                          | negation][eqv]               | proof][dp]                   | contradiction][cc]           |                              |
 | Jan 10 -- Jan 16         |                              |                              |                              |                              |
-|                          | **Lab 1 due**                |                              | **Homework 1 due**           |                              |
+|                          | **Lab 1 due**                |                              | [Proving non-conditional     |                              |
+|                          |                              |                              | statements][ncs]             |                              |
+|                          |                              |                              |                              |                              |
+|                          |                              |                              | **Homework 1 due**           |                              |
 +--------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
-| **Week 3**               | **No class: Martin Luther    | Sets                         | Sets: subsets, power sets,   | Lab 3                        |
-|                          | King Jr. Day**               |                              | Cartesian products; proofs   |                              |
-| Jan 17 -- Jan 23         |                              | **Lab 2 due**                | with sets                    |                              |
+| **Week 3**               | **No class: Martin Luther    | [Sets][sets]                 | [Sets][sets]: subsets, power | Lab 3                        |
+|                          | King Jr. Day**               |                              | sets, Cartesian products;    |                              |
+| Jan 17 -- Jan 23         |                              | **Lab 2 due**                | [proofs with sets][setp]     |                              |
 |                          |                              |                              |                              |                              |
 |                          |                              |                              | **Homework 2 due**           |                              |
 +--------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
-| **Week 4**               | Mathematical induction       | **Midterm 1**                | Loop invariants              | No lab assignment            |
-|                          |                              |                              |                              |                              |
-| Jan 24 -- Jan 30         | **Lab 3 due**                |                              |                              |                              |
+| **Week 4**               | [Mathematical                | **Midterm 1**                | [Loop invariants][li]        | No lab assignment            |
+|                          | induction][ind]              |                              |                              |                              |
+| Jan 24 -- Jan 30         |                              |                              |                              |                              |
+|                          | **Lab 3 due**                |                              |                              |                              |
 +--------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
-| **Week 5**               | Mathematical induction,      | Recursive functions          | Recurrence relations         | Lab 4                        |
-|                          | continued                    |                              |                              |                              |
+| **Week 5**               | [Mathematical                | [Recursive functions][rec]   | [Recurrence relations][rg]   | Lab 4                        |
+|                          | induction][ind], continued   |                              |                              |                              |
 | Jan 31 -- Feb 6          |                              |                              | **Homework 3 due**           |                              |
 +--------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
-| **Week 6**               | Recurrence relations,        | Growth rates of functions:   | Asymptotic notation          | Lab 5                        |
-|                          | continued                    | big-O                        |                              |                              |
+| **Week 6**               | [Recurrence relations][rg],  | [Growth rates of             | [Asymptotic notation][rg]    | Lab 5                        |
+|                          | continued                    | functions][rg]: big-O        |                              |                              |
 | Feb 7 -- Feb 13          |                              |                              | **Homework 4 due**           |                              |
 |                          | **Lab 4 due**                |                              |                              |                              |
 +--------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
-| **Week 7**               | **No class: Presidents'      | **Midterm 2**                | Relations                    | No lab assignment            |
+| **Week 7**               | **No class: Presidents'      | **Midterm 2**                | [Relations][rel]             | No lab assignment            |
 |                          | Day**                        |                              |                              |                              |
 | Feb 14 -- Feb 20         |                              | **Lab 5 due**                |                              |                              |
 +--------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
-| **Week 8**               | Equivalence relations;       | Graphs: paths, cycles,       | Graphs: breadth-first and    | Lab 6                        |
-|                          | functions                    | connectivity                 | depth-first traversal        |                              |
+| **Week 8**               | [Equivalence relations;      | [Graphs][gr]: paths, cycles, | [Graphs][gr]: breadth-first  | Lab 6                        |
+|                          | functions][rel]              | connectivity                 | and depth-first traversal    |                              |
 | Feb 21 -- Feb 27         |                              |                              |                              |                              |
 |                          |                              |                              | **Homework 5 due**           |                              |
 +--------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
-| **Week 9**               | Graph traversal, continued   | State machines               | Finite automata              | Lab 7                        |
-|                          |                              |                              |                              |                              |
-| Feb 28 -- Mar 6          | **Lab 6 due**                |                              | **Homework 6 due** (no       |                              |
-|                          |                              |                              | extension)                   |                              |
+| **Week 9**               | [Graph traversal][gr],       | [State machines][aut]        | [Finite automata][aut]       | Lab 7                        |
+|                          | continued                    |                              |                              |                              |
+| Feb 28 -- Mar 6          |                              |                              | **Homework 6 due** (no       |                              |
+|                          | **Lab 6 due**                |                              | extension)                   |                              |
 +--------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
-| **Week 10**              | Trees                        | Tree traversal               | Tree traversal, continued    | Lab 8                        |
-|                          |                              |                              |                              |                              |
+| **Week 10**              | [Trees][tr]                  | [Tree traversal][tr]         | [Tree traversal][tr],        | Lab 8                        |
+|                          |                              |                              | continued                    |                              |
 | Mar 7 -- Mar 13          | **Lab 7 due**                |                              |                              |                              |
 +--------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
 | **Finals week**          | **Final exam**, 10:30am -- 12:30pm, in your lecture classroom, per the [WWU finals                                        |
@@ -115,3 +119,14 @@ sets the slot for classes that meet on neither Tuesday nor Thursday:
 [eqv]: equivalence-negation.qmd
 [dp]: direct-proof.qmd
 [cc]: contrapositive-contradiction.qmd
+[ncs]: iff-existence-disproof.qmd
+[sets]: sets.qmd
+[setp]: set-proofs.qmd
+[ind]: induction.qmd
+[li]: loop-invariants.qmd
+[rec]: recursion.qmd
+[rg]: recurrences-growth.qmd
+[rel]: relations.qmd
+[gr]: graphs.qmd
+[aut]: automata.qmd
+[tr]: trees.qmd
