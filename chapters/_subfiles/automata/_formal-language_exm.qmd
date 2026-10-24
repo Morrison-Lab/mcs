@@ -1,0 +1,15 @@
+::: {#exm-formal-language}
+#### Languages over a and b
+
+Let $\Sigma = \set{\mathtt{a}, \mathtt{b}}$.
+Each of these sets is a language (@def-formal-language) over $\Sigma$:
+
+- the empty set $\emptyset$ (@def-empty-set), which has no strings;
+- $\set{\lambda}$, which has one string, the empty string;
+- $\set{\mathtt{b}, \mathtt{ba}, \mathtt{baa}}$, which has three strings;
+- the set of strings with an even number of symbols, which is infinite;
+- $\Sigma^*$ itself.
+
+The first two are different languages: $\emptyset$ has no elements, and $\set{\lambda}$ has one.
+
+:::

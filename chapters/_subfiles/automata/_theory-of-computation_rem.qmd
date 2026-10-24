@@ -1,0 +1,22 @@
+::: {#rem-theory-of-computation}
+#### Where state machines come from
+
+The theory of computation [@wikipedia_theory_of_computation] asks what computers can do.
+It has three parts:
+
+- *computability theory* asks which problems a computer can solve at all.
+  For example, no program can decide, for every program $P$ and input $I$, whether $P$ stops when it runs on $I$;
+  this is the halting problem [@wikipedia_halting_problem].
+- *complexity theory* asks how much time the problems that can be solved need.
+  Whether every problem whose answers can be checked quickly can also be solved quickly
+  is the P versus NP problem [@wikipedia_p_versus_np_problem], which no one had solved as of 2026.
+- *automata theory* makes "computer" and "problem" precise, so that the other two parts can prove things about them.
+  A computer becomes an abstract machine, called an *automaton* (plural *automata*),
+  and a problem becomes the question of which strings (@def-string) the machine answers yes for.
+
+The halting problem and the P versus NP problem are about machines that can do anything a general program can,
+called Turing machines [@wikipedia_turing_machine].
+This chapter studies the simplest automata, which remember only one of finitely many situations.
+They are far less powerful than Turing machines, and cannot model a general program.
+
+:::

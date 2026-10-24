@@ -1,0 +1,29 @@
+::: {#sol-door-run}
+
+The sequence starts with closed,
+and each later condition is $\delta$ of the condition before it and the action:
+
+$$
+\ba
+\delta(\text{closed}, \mathtt{l}) &= \text{locked},
+\\
+\delta(\text{locked}, \mathtt{o}) &= \text{locked},
+\\
+\delta(\text{locked}, \mathtt{u}) &= \text{closed},
+\\
+\delta(\text{closed}, \mathtt{o}) &= \text{open},
+\\
+\delta(\text{open}, \mathtt{l}) &= \text{open}.
+\ea
+$$
+
+So the sequence is
+
+$$
+\text{closed}, \text{locked}, \text{locked}, \text{closed}, \text{open}, \text{open}:
+$$
+
+six conditions for five actions.
+In @fig-door, they are the states met by following, from closed, the arrows labeled $\mathtt{l}$, $\mathtt{o}$, $\mathtt{u}$, $\mathtt{o}$ and $\mathtt{l}$ in turn.
+
+:::

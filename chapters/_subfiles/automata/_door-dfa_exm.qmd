@@ -1,0 +1,21 @@
+::: {#exm-door-dfa}
+#### The door as a DFA
+
+Choosing the accepting states $F = \set{\text{open}}$ makes the door (@exm-door-machine) a DFA (@def-dfa), $D$,
+drawn in @fig-door-dfa.
+It accepts (@def-accept) the strings after which the door is open.
+For example, it accepts $\mathtt{o}$, $\mathtt{luo}$ and $\mathtt{ol}$,
+whose runs end at open,
+and rejects $\lambda$, $\mathtt{oc}$ and $\mathtt{lo}$,
+whose runs end at closed, closed and locked.
+
+::: {#fig-door-dfa}
+
+![](../images/automata-door-dfa.png){fig-alt="The state diagram of the door again: three circles labeled locked, closed and open, with the same arrows and loops as before, and an arrow from below pointing to closed.
+Now the circle labeled open is a double circle." width="80%"}
+
+The door as a DFA whose one accepting state is open.
+
+:::
+
+:::

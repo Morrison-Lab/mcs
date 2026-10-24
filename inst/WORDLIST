@@ -1,4 +1,5 @@
 ABCD
+Automata
 Bijective
 CASAS
 CLI
@@ -7,6 +8,7 @@ CRNs
 CSCI
 Collatz
 Cy
+DFA
 DOCX
 Decker
 Dev
@@ -39,10 +41,13 @@ WWU
 Wehrwein
 aab
 aabbaa
+abab
 abba
 andmap
 antisymmetry
+automata
 baa
+bbab
 bijective
 chatbot
 codomain
@@ -50,6 +55,7 @@ cond
 consequent
 contrapositive
 contrapositives
+ddd
 dropdown
 glitchy
 iff

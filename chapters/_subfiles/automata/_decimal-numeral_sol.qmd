@@ -1,0 +1,32 @@
+::: {#sol-decimal-numeral}
+
+Read from left to right, a numeral goes through four stages, and a string that is not a numeral can go wrong at any point.
+Give the DFA one state for each thing it has to remember:
+
+- $n_0$: nothing has been read yet;
+- $n_1$: one or more $\mathtt{d}$s and nothing else, which is a numeral, so $n_1$ is accepting;
+- $n_2$: one or more $\mathtt{d}$s and then a point, which is not a numeral yet;
+- $n_3$: one or more $\mathtt{d}$s, a point and one or more $\mathtt{d}$s, which is a numeral, so $n_3$ is accepting;
+- $n_4$: the string has already gone wrong, which is a dead state (@def-dead-state).
+
+A $\mathtt{d}$ moves $n_0$ to $n_1$ and $n_2$ to $n_3$, and keeps $n_1$ at $n_1$ and $n_3$ at $n_3$.
+A point moves $n_1$ to $n_2$.
+A point anywhere else goes wrong: at the start, right after another point, or after the digits that follow a point.
+@fig-numeral draws this DFA.
+For example, its run (@def-run) on $\mathtt{dd.d}$ is $n_0, n_1, n_1, n_2, n_3$, which ends at an accepting state,
+and its run on $\mathtt{d.}$ is $n_0, n_1, n_2$, which does not.
+
+::: {#fig-numeral}
+
+![](../images/automata-numeral.png){fig-alt="Five circles.
+Four of them are in a row labeled n0, n1, n2 and n3, and n4 is below the middle of the row.
+An arrow from the left, starting at no circle, points to n0.
+Arrows go from n0 to n1 labeled d, from n1 to n2 labeled with a point, and from n2 to n3 labeled d.
+n1 and n3 are double circles, and each has a loop labeled d.
+Arrows labeled with a point go from n0, n2 and n3 down to n4, and n4 has a loop labeled d and point." width="75%"}
+
+A DFA whose language is the set of numerals.
+
+:::
+
+:::

@@ -1,0 +1,13 @@
+::: {#rem-table-adjacency}
+#### A table is like a labeled adjacency list
+
+The row of a state $s$ in a state-transition table (@def-transition-table) lists the ends of the edges that start at $s$ in the state diagram (@def-state-diagram),
+one for each input, like the list of $s$ in an adjacency list (@def-adjacency-list) of a directed graph.
+The table also says which edge has which label, which an adjacency list does not.
+Every row has exactly $\card{\Sigma}$ entries, as @rem-out-degree-inputs says.
+
+The likeness stops when two inputs lead from $s$ to the same state.
+Then the state diagram has parallel edges (@def-parallel-edges), for which @def-adjacency-list does not define an adjacency list,
+and the row of $s$ names that state more than once, as the row of $q_2$ in @exm-pairs-table does.
+
+:::

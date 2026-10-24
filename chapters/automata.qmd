@@ -1,0 +1,230 @@
+---
+title: "State Machines and Finite Automata"
+subtitle: "State machines and their state diagrams, runs, deterministic finite automata and their languages, designing automata, and state-transition tables"
+format:
+  html: default
+  revealjs:
+    output-file: automata-slides.html
+  pdf:
+    output-file: automata-handout.pdf
+  docx:
+    output-file: automata.docx
+---
+
+{{< include ../latex-macros/macros.qmd >}}
+
+::: {.callout-note appearance='simple' collapse=true}
+## Source
+
+The topics of this chapter follow the course calendar,
+and their order follows Kameron Decker Harris's Fall 2026 lecture notes introducing the theory of computation.
+These come from those notes:
+
+- the three parts of the theory of computation, computability, complexity and automata theory,
+  with the halting problem and the P versus NP problem as examples of the first two;
+- automata as the precise form of "computer", and the question of whether a machine accepts a string as the precise form of "problem";
+- a state machine drawn as a directed graph, with an arrow into the initial state and a double circle for an accepting state.
+
+These follow the course's handout on graph extensions:
+
+- a finite automaton seen as a directed graph whose vertices are states and whose labeled edges are transitions, with a start state and accepting states;
+- reading a string one symbol at a time, following the edge labeled with each symbol,
+  and accepting the string when the machine ends in an accepting state.
+
+The transition function, runs, the extended transition function, languages, dead states, complements and state-transition tables are added here.
+The notes do not cover nondeterministic automata or regular expressions, so this chapter does not either.
+The examples, the exercises, the Racket functions and the proofs are new.
+:::
+
+# State machines {#sec-state-machines}
+
+{{< include _subfiles/automata/_door-presses_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_door-presses_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_theory-of-computation_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_state-machine_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_door-machine_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_state-diagram_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_door-diagram_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_out-degree-inputs_rem.qmd >}}
+
+# Runs {#sec-runs}
+
+{{< include _subfiles/automata/_door-run_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_door-run_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_run_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_door-run_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_extended-transition_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_extended-transition_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_run-last_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_run-walk_thm.qmd >}}
+
+# Deterministic finite automata {#sec-dfa}
+
+{{< include _subfiles/automata/_pairs_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_pairs_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_dfa_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_pairs-dfa_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_accept_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_pairs-accept_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_door-dfa_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_formal-language_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_formal-language_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_automaton-language_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_door-language_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_pairs-language_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_dead-state_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_dead-state_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_complement-dfa_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_pairs-complement_exm.qmd >}}
+
+# Designing a DFA {#sec-dfa-design}
+
+{{< include _subfiles/automata/_decimal-numeral_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_decimal-numeral_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_design-states_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_zeros-mod-3_exm.qmd >}}
+
+# State-transition tables {#sec-transition-tables}
+
+{{< include _subfiles/automata/_table-trace_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_table-trace_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_transition-table_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_pairs-table_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_door-table_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_table-language_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_table-adjacency_rem.qmd >}}
+
+# Automata in Racket {#sec-racket-automata}
+
+{{< include _subfiles/automata/_racket-step_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_racket-step_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_racket-run_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/automata/_racket-numeral_exm.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

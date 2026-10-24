@@ -1,0 +1,50 @@
+::: {#exm-racket-numeral}
+#### Checking numerals in Racket
+
+In the form of @exr-racket-step, the DFA of @sol-decimal-numeral is the table below,
+with the symbol `'digit` for the input $\mathtt{d}$ and the symbol `'point` for the input $\mathtt{.}$:
+
+```racket
+(define numeral-table
+  '((n0 (digit n1) (point n4))
+    (n1 (digit n1) (point n2))
+    (n2 (digit n3) (point n4))
+    (n3 (digit n3) (point n4))
+    (n4 (digit n4) (point n4))))
+```
+
+To check real text, `classify` turns each character into an input,
+and `numeral?` runs the DFA with `accepts?` from @exm-racket-run:
+
+```racket
+(define (classify c)
+  (cond [(char<=? #\0 c #\9) 'digit]
+        [(char=? c #\.) 'point]
+        [else 'other]))
+
+(define (numeral? text)
+  (let ([xs (map classify (string->list text))])
+    (and (not (member 'other xs))
+         (accepts? numeral-table 'n0 '(n1 n3) xs))))
+```
+
+- `(char<=? #\0 c #\9)` is true when the character `c` is one of the ten digits 0 to 9.
+- `(cond [test1 a] [test2 b] [else c])` returns `a` if `test1` is true, otherwise `b` if `test2` is true, and otherwise `c`.
+- `(map f L)` applies `f` to each element of the list `L`.
+- `(and p q)` is `#f` if `p` is `#f`, and is `q` otherwise.
+
+A character that is neither a digit nor a point is classified `'other`, which is not an input of the DFA,
+so `numeral?` returns `#f` for any text that contains one, without running the DFA.
+Then
+
+```racket
+(map numeral? '("3.14" "2026" "7." ".5" "1.2.3" "d.d" "-3" "\u00BD"))
+```
+
+returns `'(#t #t #f #f #f #f #f #f)`:
+`"3.14"` and `"2026"` are numerals, and the others are not.
+The letter d in `"d.d"` is classified `'other`, not `'digit`,
+and so is the one character of `"\u00BD"`, the fraction one half,
+even though Racket's `char-numeric?` counts it as numeric.
+
+:::

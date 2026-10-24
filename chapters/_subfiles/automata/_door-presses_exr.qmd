@@ -1,0 +1,20 @@
+::: {#exr-door-presses}
+#### A door with a lock
+
+A door is always in one of three conditions: closed, open or locked.
+Four actions can be done to it:
+
+- `o`: push it open, which opens a closed door and does nothing to a locked or an open one;
+- `c`: shut it, which closes an open door and does nothing otherwise;
+- `l`: turn the key to lock, which locks a closed door and does nothing otherwise;
+- `u`: turn the key to unlock, which unlocks a locked door, leaving it closed, and does nothing otherwise.
+
+The door starts closed, and these actions are done in this order:
+
+$$
+\mathtt{o}, \mathtt{l}, \mathtt{c}, \mathtt{l}, \mathtt{o}, \mathtt{u}, \mathtt{o}.
+$$
+
+In which condition is the door at the end?
+
+:::

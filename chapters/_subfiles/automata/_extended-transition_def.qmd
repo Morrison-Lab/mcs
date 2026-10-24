@@ -1,0 +1,12 @@
+::: {#def-extended-transition}
+#### Extended transition function
+
+Let $M = (S, \Sigma, \delta, s_0)$ be a state machine (@def-state-machine).
+Its **extended transition function** $\delta^* : S \times \Sigma^* \to S$ [@wikipedia_deterministic_finite_automaton]
+gives the state that $M$ reaches from a state $s$ by reading a string $w \in \Sigma^*$ (@def-string).
+It is defined recursively (@def-recursive-definition), following the recursive definition of $\Sigma^*$:
+
+- base case: $\delta^*(s, \lambda) = s$;
+- recursive rule: if $w \in \Sigma^*$ and $x \in \Sigma$, then $\delta^*(s, w x) = \delta\paren{\delta^*(s, w), x}$.
+
+:::

@@ -1,0 +1,20 @@
+::: {#exm-door-diagram}
+#### The state diagram of the door
+
+@fig-door is the state diagram (@def-state-diagram) of the door (@exm-door-machine).
+The loop at closed is labeled $\mathtt{c}, \mathtt{u}$:
+it stands for two parallel loops, one labeled $\mathtt{c}$ and one labeled $\mathtt{u}$,
+since $\delta(\text{closed}, \mathtt{c}) = \delta(\text{closed}, \mathtt{u}) = \text{closed}$.
+
+::: {#fig-door}
+
+![](../images/automata-door.png){fig-alt="Three circles in a row labeled locked, closed and open, with closed in the middle.
+An arrow from below, starting at no circle, points to closed.
+Arrows labeled o go from closed to open, c from open to closed, l from closed to locked, and u from locked to closed.
+Closed has a loop labeled c,u, open has a loop labeled o,l,u, and locked has a loop labeled o,c,l." width="80%"}
+
+The state diagram of the door.
+
+:::
+
+:::

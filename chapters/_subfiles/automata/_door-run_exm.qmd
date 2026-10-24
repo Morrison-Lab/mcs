@@ -1,0 +1,15 @@
+::: {#exm-door-run}
+#### A run of the door
+
+The run (@def-run) of the door (@exm-door-machine) on the string $\mathtt{oclu}$ is
+
+$$
+\text{closed}, \text{open}, \text{closed}, \text{locked}, \text{closed},
+$$
+
+since $\delta(\text{closed}, \mathtt{o}) = \text{open}$, $\delta(\text{open}, \mathtt{c}) = \text{closed}$,
+$\delta(\text{closed}, \mathtt{l}) = \text{locked}$ and $\delta(\text{locked}, \mathtt{u}) = \text{closed}$.
+The string has 4 inputs, and the run has 5 states.
+The run on the empty string $\lambda$ is the one state closed.
+
+:::

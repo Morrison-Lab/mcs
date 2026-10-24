@@ -1,0 +1,21 @@
+::: {#exm-pairs-complement}
+#### The strings that fail the check
+
+Swapping the accepting states of the DFA $A$ of @exm-pairs-dfa gives the DFA $A'$ of @fig-pairs-complement,
+whose accepting states are $q_1$ and $q_2$.
+By @thm-complement-dfa and @thm-pairs-language,
+$A'$ accepts exactly the strings in which some $\mathtt{a}$ is not immediately followed by a $\mathtt{b}$:
+those with two $\mathtt{a}$s in a row, and those that end in $\mathtt{a}$.
+It accepts $\mathtt{aab}$ and $\mathtt{ba}$ and rejects $\mathtt{abab}$ and $\lambda$.
+In $A'$, the state $q_2$ is no longer a dead state (@def-dead-state), since it is accepting.
+
+::: {#fig-pairs-complement}
+
+![](../images/automata-pairs-complement.png){fig-alt="The same three circles and arrows as the checker A: an arrow from the left points to q0, q0 has a loop labeled b, arrows labeled a and b go from q0 to q1 and back, an arrow labeled a goes from q1 to q2, and q2 has a loop labeled a,b.
+Now q0 is a single circle, and q1 and q2 are double circles." width="70%"}
+
+The DFA $A'$, which accepts the strings that $A$ rejects.
+
+:::
+
+:::

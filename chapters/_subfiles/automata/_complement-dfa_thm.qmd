@@ -1,0 +1,53 @@
+::: {#thm-complement-dfa}
+#### Swapping the accepting states
+
+Let $M = (S, \Sigma, \delta, s_0, F)$ be a DFA (@def-dfa), and let
+
+$$
+M' = (S, \Sigma, \delta, s_0, S \setminus F)
+$$
+
+be the DFA with the same states, inputs, transitions and initial state, whose accepting states are the states that are not accepting in $M$.
+Then $L(M')$ (@def-automaton-language) is the complement (@def-complement) $\Sigma^* \setminus L(M)$ of $L(M)$ in $\Sigma^*$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+The extended transition function $\delta^*$ (@def-extended-transition) is built from $S$, $\Sigma$ and $\delta$ alone,
+so $M$ and $M'$ have the same $\delta^*$.
+Let $w \in \Sigma^*$.
+By the language of a DFA (@def-automaton-language) and the definition of accepting (@def-accept),
+
+$$
+\ba
+w \in L(M')
+&\iff M' \text{ accepts } w
+&& \text{(language of a DFA)}
+\\&\iff \delta^*(s_0, w) \in S \setminus F
+&& \text{(definition of accepting)}
+\\&\iff \delta^*(s_0, w) \notin F
+&& \text{(since } \delta^*(s_0, w) \in S \text{)}
+\\&\iff M \text{ does not accept } w
+&& \text{(definition of accepting)}
+\\&\iff w \notin L(M).
+&& \text{(language of a DFA)}
+\ea
+$$
+
+So $L(M')$ is the set of strings in $\Sigma^*$ that are not in $L(M)$.
+
+The step from $\delta^*(s_0, w) \in S \setminus F$ to $\delta^*(s_0, w) \notin F$ uses that $\delta$ is a function on all of $S \times \Sigma$,
+so that $\delta^*(s_0, w)$ is a state of $S$ for every string $w$.
+Some drawings of automata leave out a dead state (@def-dead-state) and the arrows into it, so that some states have no arrow for some input.
+Swapping the accepting states of such a drawing does not give the complement:
+a string whose run would enter the missing dead state is rejected before and after the swap.
+Put the dead state back before swapping.
+
+:::
+
+:::

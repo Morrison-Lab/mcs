@@ -1,0 +1,11 @@
+::: {#rem-out-degree-inputs}
+#### Every state has one edge for each input
+
+In the state diagram (@def-state-diagram) of a state machine with inputs $\Sigma$,
+each state $s$ is the start of exactly one edge labeled $x$ for each input $x$,
+because $\delta(s, x)$ is one state.
+So every state has out-degree (@def-out-degree) $\card{\Sigma}$, counting each label of a drawn arrow as its own edge.
+In @fig-door every state has out-degree 4.
+The in-degrees (@def-in-degree) add up to the same total, $3 \cdot 4 = 12$, as @thm-directed-degrees says.
+
+:::

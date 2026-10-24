@@ -1,0 +1,16 @@
+::: {#def-state-diagram}
+#### State diagram
+
+The **state diagram** [@wikipedia_state_diagram] of a state machine $M = (S, \Sigma, \delta, s_0)$ (@def-state-machine)
+is the directed graph (@def-directed-graph) with
+
+- vertex set $S$;
+- for each state $s$ and each input $x$, one edge from $s$ to $\delta(s, x)$, labeled $x$.
+
+The labels are extra data attached to the edges:
+the directed graph itself is only its vertices and edges.
+It is drawn with an extra arrow, which starts at no state, pointing to the initial state $s_0$.
+Two inputs $x \ne y$ with $\delta(s, x) = \delta(s, y)$ give parallel edges (@def-parallel-edges) of the directed graph,
+which are drawn as one arrow labeled with all of their inputs.
+
+:::

@@ -1,0 +1,10 @@
+::: {#exm-dead-state}
+#### The dead state of the checker
+
+In the DFA $A$ of @exm-pairs-dfa, $q_2$ is a dead state (@def-dead-state):
+it is not accepting, and both of its arrows lead back to it.
+Once a run (@def-run) reaches $q_2$, every later state of the run is $q_2$,
+so the run ends at $q_2$ and $A$ rejects the string.
+For example, $A$ rejects every string that starts with $\mathtt{aa}$, whatever comes after it.
+
+:::

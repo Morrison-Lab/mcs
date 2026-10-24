@@ -1,0 +1,13 @@
+::: {#exr-door-run}
+#### Following the door
+
+The door (@exm-door-machine) starts closed, and these actions are done in this order:
+
+$$
+\mathtt{l}, \mathtt{o}, \mathtt{u}, \mathtt{o}, \mathtt{l}.
+$$
+
+Write down the whole sequence of conditions the door passes through,
+starting with the condition it is in before the first action.
+
+:::

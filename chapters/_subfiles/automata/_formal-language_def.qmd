@@ -1,0 +1,7 @@
+::: {#def-formal-language}
+#### Language
+
+A **language** over an alphabet $\Sigma$ (@def-alphabet) [@wikipedia_formal_language]
+is a subset (@def-subset) of $\Sigma^*$, the set of all strings over $\Sigma$ (@def-string).
+
+:::

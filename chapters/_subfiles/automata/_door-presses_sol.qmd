@@ -1,0 +1,13 @@
+::: {#sol-door-presses}
+
+Follow the door one action at a time:
+
+| action | | `o` | `l` | `c` | `l` | `o` | `u` | `o` |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| condition | closed | open | open | closed | locked | locked | closed | open |
+
+The first `l` does nothing, because the door is open,
+and the second `o` does nothing, because the door is locked.
+At the end the door is open.
+
+:::

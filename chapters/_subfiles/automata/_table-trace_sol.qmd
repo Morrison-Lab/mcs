@@ -1,0 +1,11 @@
+::: {#sol-table-trace}
+
+Start at $p_0$ and look up one entry for each input:
+
+| input | | $\mathtt{0}$ | $\mathtt{1}$ | $\mathtt{0}$ | $\mathtt{1}$ | $\mathtt{1}$ | $\mathtt{0}$ | $\mathtt{0}$ |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| state | $p_0$ | $p_0$ | $p_1$ | $p_0$ | $p_1$ | $p_2$ | $p_3$ | $p_3$ |
+
+The run (@def-run) ends at $p_3$, which is accepting, so the DFA accepts $\mathtt{0101100}$ (@def-accept).
+
+:::

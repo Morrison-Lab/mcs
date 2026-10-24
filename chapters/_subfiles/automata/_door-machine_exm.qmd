@@ -1,0 +1,33 @@
+::: {#exm-door-machine}
+#### The door as a state machine
+
+The door of @exr-door-presses is a state machine (@def-state-machine) with
+
+- states $S = \set{\text{closed}, \text{open}, \text{locked}}$;
+- inputs $\Sigma = \set{\mathtt{o}, \mathtt{c}, \mathtt{l}, \mathtt{u}}$;
+- initial state $s_0 = \text{closed}$;
+- the transition function $\delta$ with
+
+$$
+\ba
+\delta(\text{closed}, \mathtt{o}) &= \text{open},
+& \delta(\text{closed}, \mathtt{c}) &= \text{closed},
+& \delta(\text{closed}, \mathtt{l}) &= \text{locked},
+& \delta(\text{closed}, \mathtt{u}) &= \text{closed},
+\\
+\delta(\text{open}, \mathtt{o}) &= \text{open},
+& \delta(\text{open}, \mathtt{c}) &= \text{closed},
+& \delta(\text{open}, \mathtt{l}) &= \text{open},
+& \delta(\text{open}, \mathtt{u}) &= \text{open},
+\\
+\delta(\text{locked}, \mathtt{o}) &= \text{locked},
+& \delta(\text{locked}, \mathtt{c}) &= \text{locked},
+& \delta(\text{locked}, \mathtt{l}) &= \text{locked},
+& \delta(\text{locked}, \mathtt{u}) &= \text{closed}.
+\ea
+$$
+
+The set $S \times \Sigma$ has $3 \cdot 4 = 12$ pairs, and $\delta$ gives one state for each of them,
+including the pairs where the action does nothing, such as $\delta(\text{locked}, \mathtt{o}) = \text{locked}$.
+
+:::

@@ -1,0 +1,32 @@
+::: {#exm-racket-run}
+#### Running a DFA in Racket
+
+With `step` as in @exr-racket-step,
+`run` returns the run (@def-run) from a state `s` on a list `xs` of inputs,
+and `accepts?` says whether a DFA accepts (@def-accept) the string whose inputs are the list `xs`:
+
+```racket
+(define (run table s xs)
+  (if (empty? xs)
+      (list s)
+      (cons s (run table (step table s (first xs)) (rest xs)))))
+
+(define (accepts? table start accepting xs)
+  (if (member (last (run table start xs)) accepting)
+      #t
+      #f))
+```
+
+- `(last L)` is the last element of the list `L`.
+- `(member x L)` is `#f` if `x` is not in the list `L`, and a list that is not `#f` if it is.
+- `(string->list w)` is the list of the characters of the string `w`.
+
+`(run pairs-table 'q0 (string->list "abab"))` returns `'(q0 q1 q0 q1 q0)`,
+and `(run pairs-table 'q0 (string->list "aab"))` returns `'(q0 q1 q2 q2)`, the runs of @exm-pairs-accept.
+`(accepts? pairs-table 'q0 '(q0) (string->list "abab"))` returns `#t`,
+`(accepts? pairs-table 'q0 '(q0) (string->list "ba"))` returns `#f`,
+and `(accepts? pairs-table 'q0 '(q0) (string->list ""))` returns `#t`, since $A$ accepts $\lambda$.
+Let $w$ be the string whose symbols are the elements of `xs`, in order.
+`run` reads the first symbol of $w$ first, as @def-run does, so by @thm-run-last the last state of `(run table s xs)` is $\delta^*(s, w)$.
+
+:::

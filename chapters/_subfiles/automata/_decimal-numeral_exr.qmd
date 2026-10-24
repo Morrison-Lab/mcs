@@ -1,0 +1,14 @@
+::: {#exr-decimal-numeral}
+#### Recognizing decimal numerals
+
+A program reads numbers written with digits and at most one decimal point.
+To keep the alphabet small, write $\mathtt{d}$ for any one of the ten digits,
+so the alphabet (@def-alphabet) is $\Sigma = \set{\mathtt{d}, \mathtt{.}}$.
+A *numeral* is one or more $\mathtt{d}$s,
+optionally followed by a point $\mathtt{.}$ and one or more $\mathtt{d}$s.
+So $\mathtt{d}$, $\mathtt{ddd}$ and $\mathtt{dd.d}$ are numerals,
+and $\lambda$, $\mathtt{.d}$, $\mathtt{d.}$ and $\mathtt{d.d.d}$ are not.
+
+Draw the state diagram of a DFA (@def-dfa) whose language (@def-automaton-language) is the set of numerals.
+
+:::

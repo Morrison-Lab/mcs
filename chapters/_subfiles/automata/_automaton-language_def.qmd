@@ -1,0 +1,13 @@
+::: {#def-automaton-language}
+#### Language of an automaton
+
+The **language** of a DFA $M = (S, \Sigma, \delta, s_0, F)$ (@def-dfa) [@wikipedia_deterministic_finite_automaton]
+is the language (@def-formal-language)
+
+$$
+L(M) = \set{w \in \Sigma^* : M \text{ accepts } w}
+$$
+
+of the strings that $M$ accepts (@def-accept).
+
+:::

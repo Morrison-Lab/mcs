@@ -1,0 +1,16 @@
+::: {#exm-pairs-accept}
+#### Tracing three strings
+
+These are the runs (@def-run) of the DFA $A$ of @exm-pairs-dfa on three strings of @exr-pairs:
+
+| string | run | last state | verdict |
+|:---|:---|:---:|:---|
+| $\mathtt{abab}$ | $q_0, q_1, q_0, q_1, q_0$ | $q_0$ | accepts |
+| $\mathtt{aab}$ | $q_0, q_1, q_2, q_2$ | $q_2$ | rejects |
+| $\mathtt{ba}$ | $q_0, q_0, q_1$ | $q_1$ | rejects |
+
+So $A$ accepts (@def-accept) $\mathtt{abab}$, which passes the check of @exr-pairs,
+and rejects $\mathtt{aab}$ and $\mathtt{ba}$, which fail it.
+Its run on $\lambda$ is $q_0$ alone, so it accepts $\lambda$.
+
+:::

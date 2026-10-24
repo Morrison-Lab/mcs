@@ -1,0 +1,9 @@
+::: {#def-transition-table}
+#### State-transition table
+
+The **state-transition table** [@wikipedia_state_transition_table] of a DFA $M = (S, \Sigma, \delta, s_0, F)$ (@def-dfa)
+has one row for each state and one column for each input,
+and the entry in the row of $s$ and the column of $x$ is $\delta(s, x)$.
+The initial state is marked with $\to$ and each accepting state with $*$.
+
+:::

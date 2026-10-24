@@ -1,0 +1,11 @@
+::: {#exm-door-language}
+#### The language of the door
+
+The language (@def-automaton-language) $L(D)$ of the door DFA (@exm-door-dfa) is the set of strings over
+$\set{\mathtt{o}, \mathtt{c}, \mathtt{l}, \mathtt{u}}$ after which the door is open.
+So $\mathtt{o}, \mathtt{luo}, \mathtt{ol} \in L(D)$ and $\lambda, \mathtt{oc}, \mathtt{lo} \notin L(D)$.
+Every string in $L(D)$ contains an $\mathtt{o}$,
+since a run starts at closed, and the only arrow into open from another state is labeled $\mathtt{o}$.
+The converse fails: $\mathtt{oc}$ contains an $\mathtt{o}$ but is not in $L(D)$.
+
+:::

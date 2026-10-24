@@ -1,0 +1,15 @@
+::: {#exm-door-table}
+#### The table of the door
+
+The state-transition table (@def-transition-table) of the door DFA $D$ of @exm-door-dfa has four columns, one for each input:
+
+| state | $\mathtt{o}$ | $\mathtt{c}$ | $\mathtt{l}$ | $\mathtt{u}$ |
+|:---|:---:|:---:|:---:|:---:|
+| $\to$ closed | open | closed | locked | closed |
+| $*$ open | open | closed | open | open |
+| locked | locked | locked | locked | closed |
+
+It has $3 \cdot 4 = 12$ entries, one for each pair in $S \times \Sigma$,
+the same 12 values of $\delta$ as in @exm-door-machine.
+
+:::
