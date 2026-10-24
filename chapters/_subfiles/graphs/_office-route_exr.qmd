@@ -1,0 +1,7 @@
+::: {#exr-office-route}
+#### A route through every computer
+
+In the office of @exr-office-cables, a message passes from computer to computer along cables.
+Give a route for a message that starts at $a$, ends at $f$, and passes through every computer exactly once.
+
+:::

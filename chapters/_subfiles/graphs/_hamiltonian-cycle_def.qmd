@@ -1,0 +1,7 @@
+::: {#def-hamiltonian-cycle}
+#### Hamiltonian cycle
+
+A **Hamiltonian cycle** of a graph (@def-graph-vertices-edges) [@wikipedia_hamiltonian_path] is a cycle (@def-graph-cycle)
+that contains every vertex of the graph.
+
+:::

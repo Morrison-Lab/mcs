@@ -1,0 +1,19 @@
+::: {#def-dfs}
+#### Depth-first search
+
+Let $G$ be a graph (@def-graph-vertices-edges) or a directed graph (@def-directed-graph) with no parallel edges (@def-parallel-edges),
+given by an adjacency list (@def-adjacency-list), and let $s$ be a vertex of $G$.
+**Depth-first search** [@wikipedia_depth_first_search] from $s$ is the recursive algorithm (@def-recursive-algorithm) `dfs`,
+called as `dfs(G, s)` with no vertex marked:
+
+```text
+procedure dfs(G, v)
+    mark v
+    for each vertex u in the list of v, in order
+        if u is not marked
+            dfs(G, u)
+```
+
+All the calls share the same marks.
+
+:::

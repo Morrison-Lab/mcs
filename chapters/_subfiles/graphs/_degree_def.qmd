@@ -1,0 +1,8 @@
+::: {#def-degree}
+#### Degree
+
+The **degree** $\deg(v)$ of a vertex $v$ of a graph (@def-graph-vertices-edges) [@wikipedia_degree_graph_theory]
+is the number of edges that have $v$ as an endpoint,
+where each loop (@def-graph-loop) at $v$ counts twice.
+
+:::

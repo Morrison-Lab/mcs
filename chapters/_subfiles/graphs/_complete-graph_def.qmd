@@ -1,0 +1,9 @@
+::: {#def-complete-graph}
+#### Complete graph
+
+For a positive integer $n$, a **complete graph** $K_n$ [@wikipedia_complete_graph] is a simple graph (@def-simple-graph) with $n$ vertices
+in which every two different vertices are adjacent (@def-adjacent).
+Two complete graphs with $n$ vertices differ only in the names of their vertices,
+so we write $K_n$ for any of them.
+
+:::

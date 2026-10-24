@@ -1,0 +1,15 @@
+::: {#def-directed-graph}
+#### Directed graph (digraph)
+
+A **directed graph**, or **digraph**, $G = (V, E)$ [@wikipedia_directed_graph] consists of
+
+- a nonempty finite set $V$ of vertices;
+- a finite set $E$ of edges;
+- for each edge, a vertex where it *starts* and a vertex where it *ends*.
+
+An edge that starts at $u$ and ends at $v$ goes *from* $u$ *to* $v$.
+Two different edges of a directed graph are parallel edges (@def-parallel-edges) if they start at the same vertex and end at the same vertex.
+When $G$ has no parallel edges, we write each edge from $u$ to $v$ as the ordered pair $(u, v)$ (@def-ordered-pair).
+An edge that starts and ends at the same vertex is a loop, as in @def-graph-loop.
+
+:::

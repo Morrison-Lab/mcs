@@ -1,0 +1,7 @@
+::: {#sol-round-robin}
+
+Draw a vertex for each member and an edge for each game.
+Each member plays the 7 others, so each vertex has degree 7 (@def-degree).
+By @thm-handshake, $2 \card{E} = 8 \cdot 7 = 56$, so there are $\card{E} = 28$ games.
+
+:::

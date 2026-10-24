@@ -1,0 +1,7 @@
+::: {#sol-office-tour}
+
+Yes.
+She can walk $a, b, d, f, e, c, a$, around the outside of @fig-office.
+This is a cycle (@def-graph-cycle) that contains every vertex of the office graph.
+
+:::

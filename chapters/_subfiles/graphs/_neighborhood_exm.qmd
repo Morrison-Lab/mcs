@@ -1,0 +1,13 @@
+::: {#exm-neighborhood}
+#### Neighborhoods with a loop and parallel edges
+
+In the graph of @exm-loop-parallel,
+
+$$
+N(p) = \set{p, q}, \qquad N(q) = \set{p, r}, \qquad N(r) = \set{q, s}, \qquad N(s) = \set{r}.
+$$
+
+The loop at $p$ puts $p$ in its own neighborhood (@def-neighborhood).
+The two parallel edges joining $q$ and $r$ put $r$ in $N(q)$ only once, since $N(q)$ is a set.
+
+:::

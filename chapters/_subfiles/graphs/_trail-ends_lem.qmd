@@ -1,0 +1,36 @@
+::: {#lem-trail-ends}
+#### Ends of the edges of a trail
+
+Let $v_0, e_1, v_1, \ldots, e_n, v_n$ be a trail (@def-trail) in a graph (@def-graph-vertices-edges), and let $w$ be a vertex.
+Count the ends at $w$ of the edges $e_1, \ldots, e_n$, as in the proof of @thm-handshake.
+
+- If the trail starts and ends at the same vertex, $v_0 = v_n$, then the count is even.
+- If $v_0 \ne v_n$, then the count is odd for $w = v_0$ and for $w = v_n$, and even for every other $w$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+The edge $e_i$ has one end at $v_{i - 1}$ and its other end at $v_i$,
+both at the same vertex when $e_i$ is a loop.
+The edges $e_1, \ldots, e_n$ are all different, so no end is counted twice.
+Let $k$ be the number of indices $i$ with $1 \le i \le n - 1$ and $v_i = w$,
+and write $[P]$ for 1 if $P$ is true and 0 if $P$ is false.
+The ends at $v_{i - 1}$, for $i = 1, \ldots, n$, give $k + [v_0 = w]$ ends at $w$,
+and the ends at $v_i$, for $i = 1, \ldots, n$, give $k + [v_n = w]$ ends at $w$.
+So the count is
+
+$$
+2k + [v_0 = w] + [v_n = w].
+$$
+
+If $v_0 = v_n$, the last two terms are equal, so the count is even.
+If $v_0 \ne v_n$, the last two terms add up to 1 when $w$ is $v_0$ or $v_n$, and to 0 otherwise.
+
+:::
+
+:::

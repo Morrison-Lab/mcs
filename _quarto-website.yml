@@ -66,6 +66,8 @@ website:
         href: chapters/recurrences-growth.qmd
       - text: "Relations"
         href: chapters/relations.qmd
+      - text: "Graphs"
+        href: chapters/graphs.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mcs
@@ -99,6 +101,7 @@ website:
       - chapters/recursion.qmd
       - chapters/recurrences-growth.qmd
       - chapters/relations.qmd
+      - chapters/graphs.qmd
 
 callouty-theorem:
   thm:

@@ -1,0 +1,17 @@
+::: {#exr-cut-cables}
+#### Two cut cables
+
+The cables $\set{b, d}$ and $\set{c, e}$ of the office (@exr-office-cables) are cut.
+@fig-office-cut draws the graph $H$ of the cables that are left.
+Is there still a walk (@def-walk) from $a$ to $f$ in $H$?
+
+::: {#fig-office-cut}
+
+![](../images/graphs-office-cut.png){fig-alt="The six points a to f of the office graph with only six lines left: a to b, a to c and b to c form a triangle on the left, and d to e, d to f and e to f form a triangle on the right.
+No line joins the two triangles." width="60%"}
+
+The graph $H$: the office graph without the edges $\set{b, d}$ and $\set{c, e}$.
+
+:::
+
+:::

@@ -1,0 +1,7 @@
+::: {#def-connected}
+#### Connected graph
+
+A graph (@def-graph-vertices-edges) is **connected** [@wikipedia_connectivity_graph_theory]
+if there is a walk (@def-walk) from $u$ to $v$ for every two vertices $u$ and $v$.
+
+:::

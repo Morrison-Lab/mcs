@@ -1,0 +1,18 @@
+::: {#exm-weakly-connected}
+#### The steps of a software project
+
+A project moves between four steps: plan, code, test and ship.
+The directed graph with these steps as vertices has the four edges
+
+$$
+(\text{plan}, \text{code}), \quad (\text{code}, \text{test}), \quad (\text{test}, \text{code}), \quad (\text{test}, \text{ship}),
+$$
+
+since after testing, the team either fixes the code or ships.
+It is weakly connected (@def-weakly-connected):
+ignoring the directions, the walk plan, code, test, ship visits every vertex,
+and the part of it between any two vertices, read in one direction or the other, is a walk between them.
+It is not strongly connected (@def-strongly-connected),
+since no edge starts at ship, so there is no walk from ship to any other step.
+
+:::

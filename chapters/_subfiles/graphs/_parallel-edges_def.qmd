@@ -1,0 +1,7 @@
+::: {#def-parallel-edges}
+#### Parallel edges
+
+Two different edges of a graph (@def-graph-vertices-edges) are **parallel edges** [@wikipedia_multiple_edges]
+if they have the same set of endpoints.
+
+:::

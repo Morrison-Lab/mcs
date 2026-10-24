@@ -1,0 +1,7 @@
+::: {#exr-office-tour}
+#### A tour of the office
+
+A technician walks along the cables of the office (@fig-office), visits every computer once, and comes back to where she started.
+Is that possible?
+
+:::

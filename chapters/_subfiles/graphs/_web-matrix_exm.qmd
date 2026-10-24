@@ -1,0 +1,25 @@
+::: {#exm-web-matrix}
+#### The adjacency matrix of a directed graph
+
+With its vertices in the order home, about, blog, contact,
+the directed graph of @exm-web-links has the adjacency matrix (@def-adjacency-matrix)
+
+$$
+\begin{bmatrix}
+0 & 1 & 1 & 0
+\\
+0 & 0 & 0 & 1
+\\
+1 & 0 & 1 & 1
+\\
+1 & 0 & 0 & 0
+\end{bmatrix}.
+$$
+
+The entry in row 1 and column 3 is 1, since home links to blog,
+and so is the entry in row 3 and column 1, since blog links to home.
+The entry in row 2 and column 1 is 0, since about does not link to home, although home links to about.
+The 1 in row 3 and column 3 is the loop at blog.
+This is the matrix of the relation "links to" (@def-relation-matrix, @rem-relation-digraph-graph).
+
+:::

@@ -1,0 +1,8 @@
+::: {#sol-office-route}
+
+One route is $a, c, b, d, e, f$.
+Each two computers next to each other in it are joined by a cable:
+$\set{a, c}$, $\set{c, b}$, $\set{b, d}$, $\set{d, e}$ and $\set{e, f}$ are all edges in @fig-office.
+Another is $a, b, c, e, d, f$.
+
+:::

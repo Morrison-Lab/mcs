@@ -1,0 +1,13 @@
+::: {#def-graph-vertices-edges}
+#### Graph
+
+A **graph** $G = (V, E)$ [@wikipedia_graph_discrete_mathematics] consists of
+
+- a nonempty finite set $V$ (@def-finite-set), whose elements are called the *vertices* of $G$;
+- a finite set $E$, whose elements are called the *edges* of $G$;
+- for each edge, a set of one or two vertices, called the *endpoints* of the edge.
+
+An edge *joins* its endpoints.
+To stress that its edges have no direction, $G$ is also called an *undirected* graph.
+
+:::

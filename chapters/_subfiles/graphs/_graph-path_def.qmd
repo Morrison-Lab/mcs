@@ -1,0 +1,6 @@
+::: {#def-graph-path}
+#### Path
+
+A **path** [@wikipedia_path_graph_theory] is a walk (@def-walk) whose vertices $v_0, \ldots, v_n$ are all different.
+
+:::

@@ -1,0 +1,26 @@
+::: {#exm-racket-neighbors}
+#### Neighbors and degrees in Racket
+
+With `office` as in @exr-racket-assoc,
+these functions return the neighbors (@def-adjacent) and the degree (@def-degree) of a vertex of a graph with no loops or parallel edges:
+
+```racket
+(define (neighbors G v)
+  (rest (assoc v G)))
+
+(define (degree G v)
+  (length (neighbors G v)))
+```
+
+`(neighbors office 'b)` returns `'(a c d)`, and `(degree office 'b)` returns 3.
+`(for/sum ([x L]) body)` adds up the values of `body` for each element `x` of the list `L`,
+so
+
+```racket
+(for/sum ([row office])
+  (degree office (first row)))
+```
+
+adds up the degrees of the six vertices and returns 16, which is $2 \card{E}$, as @thm-handshake says.
+
+:::

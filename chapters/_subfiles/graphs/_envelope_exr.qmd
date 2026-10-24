@@ -1,0 +1,15 @@
+::: {#exr-envelope}
+#### Drawing an envelope
+
+Can you draw @fig-envelope without lifting your pencil from the paper and without drawing any line twice?
+
+::: {#fig-envelope}
+
+![](../images/graphs-envelope.png){fig-alt="Five points: v at the bottom left, w at the bottom right, x at the top left, y at the top right, and z above them in the middle.
+Lines join v to w, v to x, w to y and x to y, forming a square, plus the two diagonals v to y and w to x, and the roof lines x to z and y to z." width="30%"}
+
+An envelope: a square with both diagonals and a roof.
+
+:::
+
+:::

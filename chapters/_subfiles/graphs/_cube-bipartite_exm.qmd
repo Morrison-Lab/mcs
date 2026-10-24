@@ -1,0 +1,29 @@
+::: {#exm-cube-bipartite}
+#### The cube graph is bipartite
+
+Let $Q_3$ be the graph whose vertices are the eight bit strings of length 3,
+with an edge between two strings when they differ in exactly one position [@wikipedia_hypercube_graph].
+For example, $000$ and $010$ are adjacent (@def-adjacent), but $000$ and $011$ are not.
+@fig-cube draws $Q_3$ as the corners and edges of a cube.
+
+Let $V_1$ be the strings with an even number of ones, and $V_2$ the strings with an odd number of ones:
+
+$$
+V_1 = \set{000, 011, 101, 110}, \qquad V_2 = \set{001, 010, 100, 111}.
+$$
+
+Changing one position of a string changes its number of ones by exactly one,
+from even to odd or from odd to even.
+So every edge has one endpoint in $V_1$ and the other in $V_2$, and $Q_3$ is bipartite (@def-bipartite).
+
+::: {#fig-cube}
+
+![](../images/graphs-cube.png){fig-alt="Eight circles labeled with the bit strings of length 3, drawn as an outer square 000, 100, 110, 010 and an inner square 001, 101, 111, 011, with each outer corner joined to the inner corner whose label differs in the last position.
+Lines join exactly the strings that differ in one position.
+The strings 000, 011, 101 and 110 are shaded gray, and every line joins a shaded circle to an unshaded one." width="45%"}
+
+The cube graph $Q_3$, with the strings in $V_1$ shaded.
+
+:::
+
+:::

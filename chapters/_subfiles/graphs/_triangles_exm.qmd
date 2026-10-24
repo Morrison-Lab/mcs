@@ -1,0 +1,22 @@
+::: {#exm-triangles}
+#### Circuits and cycles in three triangles
+
+@fig-triangles draws a simple graph (@def-simple-graph) $T$ made of three triangles in a row.
+In $T$:
+
+- $1, 2, 3, 1$ is a cycle (@def-graph-cycle) of length 3;
+- $3, 4, 5, 6, 7, 5, 3$ is a circuit (@def-circuit) of length 6, since its six edges are all different.
+  It is not a cycle, since it visits $5$ twice before it comes back to $3$.
+
+In the office graph (@fig-office), $b, d, f, e, c, b$ is a cycle of length 5.
+
+::: {#fig-triangles}
+
+![](../images/graphs-triangles.png){fig-alt="Seven points numbered 1 to 7 forming three triangles in a row: triangle 1, 2, 3 on the left, triangle 3, 4, 5 in the middle and triangle 5, 6, 7 on the right.
+The middle triangle shares the point 3 with the left triangle and the point 5 with the right triangle." width="60%"}
+
+The graph $T$: three triangles in a row.
+
+:::
+
+:::

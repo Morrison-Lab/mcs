@@ -1,0 +1,21 @@
+::: {#exm-konigsberg-matrix}
+#### Counting parallel edges
+
+With its vertices in the order $A, B, C, D$,
+the bridge graph of @exm-konigsberg has the adjacency matrix (@def-adjacency-matrix)
+
+$$
+\begin{bmatrix}
+0 & 2 & 2 & 1
+\\
+2 & 0 & 0 & 1
+\\
+2 & 0 & 0 & 1
+\\
+1 & 1 & 1 & 0
+\end{bmatrix}.
+$$
+
+The entries 2 count the two parallel edges (@def-parallel-edges) between $A$ and $B$ and the two between $A$ and $C$.
+
+:::

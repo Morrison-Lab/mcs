@@ -1,0 +1,14 @@
+::: {#sol-envelope}
+
+Yes.
+Start at $v$ and follow
+
+$$
+v, w, x, v, y, x, z, y, w.
+$$
+
+This draws each of the eight lines once:
+$\set{v, w}$, $\set{w, x}$, $\set{x, v}$, $\set{v, y}$, $\set{y, x}$, $\set{x, z}$, $\set{z, y}$ and $\set{y, w}$.
+It is a trail (@def-trail) that uses every edge of the graph.
+
+:::

@@ -1,0 +1,10 @@
+::: {#sol-follow-first}
+
+In the order $a, b, c, e, d, f$.
+From $a$, the first unvisited vertex in the list is $b$.
+From $b$, it is $c$, since $a$ has been visited.
+From $c$, it is $e$, since $a$ and $b$ have been visited.
+From $e$, it is $d$, and from $d$, it is $f$.
+In this graph you never have to go back before every vertex is visited.
+
+:::

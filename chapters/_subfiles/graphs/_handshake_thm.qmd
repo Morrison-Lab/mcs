@@ -1,0 +1,38 @@
+::: {#thm-handshake}
+#### The handshake theorem
+
+For every graph $G = (V, E)$ (@def-graph-vertices-edges),
+
+$$
+\sum_{v \in V} \deg(v) = 2 \card{E},
+$$
+
+where $\deg(v)$ is the degree (@def-degree) of $v$ and $\card{E}$ is the number of edges (@def-cardinality).
+It is called the handshake theorem [@wikipedia_handshaking_lemma]
+because, when the vertices are the people at a party and the edges are the handshakes between them,
+it says that the numbers of hands that the people shook add up to twice the number of handshakes.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Each edge has two ends.
+An edge with two endpoints has one end at each endpoint, and a loop has both ends at its one endpoint.
+We count the set of all ends of all edges in two ways.
+
+Counted edge by edge, each edge gives two ends, so there are $2 \card{E}$ ends.
+
+Counted vertex by vertex, the ends at $v$ are one end of each non-loop edge with endpoint $v$
+and two ends of each loop at $v$.
+That is $\deg(v)$ ends, by @def-degree,
+and each end is at exactly one vertex, so there are $\sum_{v \in V} \deg(v)$ ends.
+
+The two counts count the same set, so they are equal.
+
+:::
+
+:::

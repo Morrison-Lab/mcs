@@ -1,0 +1,11 @@
+::: {#rem-walk-names}
+#### Other names for walks
+
+Books do not agree on these names.
+Some, including Kameron Decker Harris's notes for this course, call a walk (@def-walk) a "path",
+call a trail (@def-trail) a "simple path",
+and call a closed walk of positive length a circuit.
+Others call a cycle (@def-graph-cycle) a "simple circuit".
+When you read about graphs elsewhere, check which definitions the author uses.
+
+:::

@@ -1,0 +1,7 @@
+::: {#def-adjacent}
+#### Adjacent vertices (neighbors)
+
+Two vertices $u$ and $v$ of a graph (@def-graph-vertices-edges) are **adjacent**, or **neighbors**,
+if some edge has endpoints $u$ and $v$.
+
+:::

@@ -1,0 +1,491 @@
+---
+title: "Graphs"
+subtitle: "Vertices and edges, degrees, walks and connectedness, Euler circuits, Hamiltonian cycles, and graph search"
+format:
+  html: default
+  revealjs:
+    output-file: graphs-slides.html
+  pdf:
+    output-file: graphs-handout.pdf
+  docx:
+    output-file: graphs.docx
+---
+
+{{< include ../latex-macros/macros.qmd >}}
+
+::: {.callout-note appearance='simple' collapse=true}
+## Source
+
+The topics of this chapter, and their order, follow the course calendar and Kameron Decker Harris's Fall 2026 lecture notes on graphs.
+These come from those notes:
+
+- a graph as a set of vertices and a set of edges, each edge with one or two endpoints;
+- loops, parallel (multiple) edges, simple graphs and directed graphs;
+- adjacent vertices, the degree of a vertex, with a loop counted twice, and the in-degree and out-degree in a directed graph;
+- the handshake theorem, the fact that a graph has an even number of vertices of odd degree, and the sums of the in-degrees and out-degrees;
+- complete graphs $K_n$, cycle graphs $C_n$, bipartite graphs and subgraphs;
+- adjacency lists and adjacency matrices, with parallel edges counted in the matrix, and when a list takes less space than a matrix;
+- walks (which the notes call paths), circuits and cycles, connected graphs and connected components, and strongly connected directed graphs;
+- counting walks with the powers of the adjacency matrix, proved by induction on the length.
+
+The pseudocode for breadth-first and depth-first search, and the use of a queue and of recursion in them,
+follow the course's handout on graph extensions.
+Euler circuits and trails and Hamiltonian cycles follow the course calendar,
+with the definitions cited with them.
+Incident edges, neighborhoods and weakly connected directed graphs are added here.
+The proofs of the handshake theorem, of the even number of vertices of odd degree and of counting walks follow the lecture notes.
+The examples, the exercises, the Racket functions and the other proofs are new.
+:::
+
+# Graphs {#sec-graphs}
+
+{{< include _subfiles/graphs/_office-cables_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_office-cables_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_graph-vertices-edges_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_office-graph_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_graph-drawing_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_graph-loop_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_parallel-edges_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_loop-parallel_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_konigsberg_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_simple-graph_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_simple-graph_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_directed-graph_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_web-links_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_relation-digraph-graph_rem.qmd >}}
+
+# Degree {#sec-degree}
+
+{{< include _subfiles/graphs/_degree-sum_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_degree-sum_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_adjacent_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_adjacent_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_incident_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_incident_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_neighborhood_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_neighborhood_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_degree_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_degree_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_handshake_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_handshake_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_odd-degree_cor.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_degree-list_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_out-degree_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_in-degree_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_directed-degrees_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_web-degrees_exm.qmd >}}
+
+# Special graphs and subgraphs {#sec-special-graphs}
+
+{{< include _subfiles/graphs/_round-robin_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_round-robin_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_complete-graph_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_round-robin_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_cycle-graph_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_round-table_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_bipartite_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_cube-bipartite_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_subgraph_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_subgraph_exm.qmd >}}
+
+# Representing graphs {#sec-graph-representations}
+
+{{< include _subfiles/graphs/_list-or-table_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_list-or-table_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_adjacency-list_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_adjacency-list_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_adjacency-matrix_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_adjacency-matrix_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_konigsberg-matrix_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_web-matrix_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_matrix-reading_rem.qmd >}}
+
+# Graphs in Racket {#sec-racket-graphs}
+
+{{< include _subfiles/graphs/_racket-assoc_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_racket-assoc_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_racket-neighbors_exm.qmd >}}
+
+# Walks, trails and paths {#sec-walks}
+
+{{< include _subfiles/graphs/_office-route_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_office-route_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_walk_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_walk_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_trail_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_graph-path_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_trail-path_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_circuit_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_graph-cycle_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_cycle-graph-name_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_triangles_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_walk-names_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_walk-path_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_count-walks_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_count-walks_exm.qmd >}}
+
+# Connected graphs {#sec-connected}
+
+{{< include _subfiles/graphs/_cut-cables_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_cut-cables_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_connected_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_connected_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_connected-component_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_connected-component_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_strongly-connected_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_strongly-connected_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_weakly-connected_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_weakly-connected_exm.qmd >}}
+
+# Euler circuits and trails {#sec-euler}
+
+{{< include _subfiles/graphs/_envelope_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_envelope_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_euler-circuit_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_euler-trail_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_euler-examples_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_trail-ends_lem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_stuck-trail_lem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_euler-circuit_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_konigsberg-euler_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_euler-trail_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_euler-trail_exm.qmd >}}
+
+# Hamiltonian cycles {#sec-hamiltonian}
+
+{{< include _subfiles/graphs/_office-tour_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_office-tour_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_hamiltonian-cycle_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_euler-hamilton_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_hamiltonian-hard_rem.qmd >}}
+
+# Breadth-first search {#sec-bfs}
+
+{{< include _subfiles/graphs/_office-distance_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_office-distance_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_graph-distance_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_office-distance_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_queue_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_bfs_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_bfs-trace_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_bfs-distance_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_racket-bfs_exm.qmd >}}
+
+# Depth-first search {#sec-dfs}
+
+{{< include _subfiles/graphs/_follow-first_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_follow-first_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_dfs_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_dfs-trace_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_dfs-reachable_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_dfs-connected_cor.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_dfs-connected_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/graphs/_racket-dfs_exm.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

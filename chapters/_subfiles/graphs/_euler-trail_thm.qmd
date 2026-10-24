@@ -1,0 +1,40 @@
+::: {#thm-euler-trail}
+#### Euler trails and odd degrees
+
+Let $G$ be a connected graph (@def-connected), and let $u$ and $v$ be different vertices of $G$.
+Then $G$ has an Euler trail (@def-euler-trail) from $u$ to $v$ if and only if
+$u$ and $v$ have odd degree (@def-degree) and every other vertex has even degree.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Let $G'$ be the graph $G$ with one new edge $h$ with endpoints $u$ and $v$.
+It may be parallel (@def-parallel-edges) to an edge of $G$.
+$G'$ is connected, and has at least one edge.
+The edge $h$ adds 1 to the degrees of $u$ and $v$, and changes no other degree.
+So the condition on the degrees in $G$ says exactly that every vertex has even degree in $G'$.
+
+**Only if.**
+Let $u = v_0, e_1, \ldots, e_n, v_n = v$ be an Euler trail of $G$.
+Adding $h$ at the end gives the circuit $v_0, e_1, \ldots, e_n, v, h, u$ in $G'$,
+which contains every edge of $G'$.
+So every vertex has even degree in $G'$, by @thm-euler-circuit.
+
+**If.**
+Every vertex has even degree in $G'$,
+so $G'$ has an Euler circuit, by @thm-euler-circuit, and $h$ is one of its edges.
+A circuit can start at any of its vertices:
+moving the part before a vertex to the end gives a circuit with the same edges.
+Reading a circuit backward gives a circuit with the same edges,
+so we may assume that the Euler circuit crosses $h$ from $v$ to $u$.
+So $G'$ has an Euler circuit that starts at $v$ with the edge $h$, as $v, h, u, \ldots, v$.
+Leaving out $v$ and $h$ at the start gives a trail from $u$ to $v$ that contains every edge of $G$.
+
+:::
+
+:::

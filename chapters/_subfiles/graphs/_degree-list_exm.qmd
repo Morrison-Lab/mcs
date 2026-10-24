@@ -1,0 +1,9 @@
+::: {#exm-degree-list}
+#### Degrees that no graph has
+
+No graph has five vertices with degrees 4, 3, 3, 2 and 1.
+Such a graph would have three vertices of odd degree, the two of degree 3 and the one of degree 1,
+and @cor-odd-degree says that the number of vertices of odd degree is even.
+Equivalently, by @thm-handshake, the degrees would add up to $4 + 3 + 3 + 2 + 1 = 13$, which is not twice a number of edges.
+
+:::

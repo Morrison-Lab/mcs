@@ -1,0 +1,13 @@
+::: {#exm-strongly-connected}
+#### Following the links
+
+The directed graph of @exm-web-links is strongly connected (@def-strongly-connected).
+The walk home, about, contact, home goes from home to about and to contact and back,
+and the edges $(\text{home}, \text{blog})$ and $(\text{blog}, \text{home})$ join home and blog both ways.
+So there is a walk from every page to home, and from home to every page,
+and following one walk after the other goes from any page to any other.
+
+If the contact page lost its link to home, the graph would not be strongly connected:
+no edge would start at contact, so there would be no walk from contact to any other page.
+
+:::

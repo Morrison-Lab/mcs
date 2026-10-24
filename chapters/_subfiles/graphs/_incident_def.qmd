@@ -1,0 +1,6 @@
+::: {#def-incident}
+#### Incident
+
+An edge of a graph (@def-graph-vertices-edges) is **incident** with each of its endpoints.
+
+:::

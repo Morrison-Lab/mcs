@@ -1,0 +1,33 @@
+::: {#cor-odd-degree}
+#### An even number of odd degrees
+
+Every graph (@def-graph-vertices-edges) has an even number of vertices of odd degree (@def-degree).
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Let $G = (V, E)$ be a graph,
+let $O$ be the set of vertices of odd degree,
+and let $N$ be the set of vertices of even degree.
+By @thm-handshake,
+
+$$
+\sum_{v \in O} \deg(v) = 2 \card{E} - \sum_{v \in N} \deg(v).
+$$
+
+The right side is an even number minus a sum of even numbers, so it is even (@def-even-odd).
+The left side is a sum of $\card{O}$ odd numbers.
+Pair the odd numbers off two at a time.
+The sum of each pair is even.
+If $\card{O}$ were odd, one odd number would be left over,
+and the left side would be an even number plus an odd number, which is odd.
+So $\card{O}$ cannot be odd, and it is even.
+
+:::
+
+:::

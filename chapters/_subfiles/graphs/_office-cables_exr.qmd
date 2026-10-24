@@ -1,0 +1,14 @@
+::: {#exr-office-cables}
+#### Computers and cables
+
+An office has six computers, named $a$, $b$, $c$, $d$, $e$ and $f$.
+A cable joins the two computers in each of these eight pairs:
+
+$$
+\set{a, b}, \set{a, c}, \set{b, c}, \set{b, d}, \set{c, e}, \set{d, e}, \set{d, f}, \set{e, f}.
+$$
+
+Draw a point for each computer and a line for each cable.
+How many cables have computer $d$ at one end?
+
+:::

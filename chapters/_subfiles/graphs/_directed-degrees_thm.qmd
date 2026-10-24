@@ -1,0 +1,28 @@
+::: {#thm-directed-degrees}
+#### Degrees in a directed graph
+
+For every directed graph $G = (V, E)$ (@def-directed-graph),
+
+$$
+\sum_{v \in V} \deg^+(v) = \card{E} = \sum_{v \in V} \deg^-(v),
+$$
+
+where $\deg^+$ is the out-degree (@def-out-degree) and $\deg^-$ is the in-degree (@def-in-degree).
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Each edge starts at exactly one vertex,
+so sorting the edges by the vertex where they start puts each edge in exactly one group.
+The group of $v$ has $\deg^+(v)$ edges,
+so the sizes of the groups add up to $\sum_{v \in V} \deg^+(v) = \card{E}$.
+Sorting the edges by the vertex where they end gives $\sum_{v \in V} \deg^-(v) = \card{E}$ in the same way.
+
+:::
+
+:::

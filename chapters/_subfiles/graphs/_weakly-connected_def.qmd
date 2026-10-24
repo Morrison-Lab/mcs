@@ -1,0 +1,9 @@
+::: {#def-weakly-connected}
+#### Weakly connected directed graph
+
+A directed graph (@def-directed-graph) is **weakly connected**
+if the graph (@def-graph-vertices-edges) with the same vertices and edges,
+in which each edge has the same two endpoints but no direction,
+is connected (@def-connected).
+
+:::

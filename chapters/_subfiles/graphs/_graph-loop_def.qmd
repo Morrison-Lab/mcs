@@ -1,0 +1,7 @@
+::: {#def-graph-loop}
+#### Loop
+
+A **loop** [@wikipedia_loop_graph_theory] is an edge of a graph (@def-graph-vertices-edges) that has only one endpoint.
+It joins that vertex to itself.
+
+:::

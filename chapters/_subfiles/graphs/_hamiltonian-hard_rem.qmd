@@ -1,0 +1,10 @@
+::: {#rem-hamiltonian-hard}
+#### No simple test for Hamiltonian cycles
+
+@thm-euler-circuit decides whether a connected graph has an Euler circuit by looking at its degrees,
+which takes one pass through an adjacency list.
+No test like that is known for Hamiltonian cycles (@def-hamiltonian-cycle).
+Deciding whether a graph has one is an NP-complete problem [@wikipedia_hamiltonian_path_problem]:
+no algorithm is known that decides it in a number of steps bounded by a polynomial in the number of vertices.
+
+:::

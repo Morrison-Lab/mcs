@@ -1,0 +1,7 @@
+::: {#def-simple-graph}
+#### Simple graph
+
+A graph (@def-graph-vertices-edges) is **simple** [@wikipedia_graph_discrete_mathematics]
+if it has no loops (@def-graph-loop) and no parallel edges (@def-parallel-edges).
+
+:::

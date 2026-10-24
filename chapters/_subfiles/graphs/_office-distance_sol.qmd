@@ -1,0 +1,9 @@
+::: {#sol-office-distance}
+
+Three.
+The route $a, b, d, f$ crosses three cables.
+No route crosses fewer:
+$f$ is not a neighbor (@def-adjacent) of $a$, so one cable is not enough,
+and the neighbors of $a$ are $b$ and $c$, neither of which is a neighbor of $f$, so two cables are not enough.
+
+:::

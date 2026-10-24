@@ -1,0 +1,8 @@
+::: {#def-graph-cycle}
+#### Cycle
+
+A **cycle** [@wikipedia_cycle_graph_theory] is a circuit (@def-circuit) $v_0, e_1, v_1, \ldots, e_n, v_n$
+whose vertices $v_0, v_1, \ldots, v_{n - 1}$ are all different.
+Its only repeated vertex is $v_n = v_0$.
+
+:::

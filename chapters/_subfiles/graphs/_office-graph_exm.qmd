@@ -1,0 +1,20 @@
+::: {#exm-office-graph}
+#### The office graph
+
+The computers and cables of @exr-office-cables form a graph (@def-graph-vertices-edges) $G = (V, E)$,
+with one vertex for each computer and one edge for each cable:
+
+$$
+\ba
+V &= \set{a, b, c, d, e, f},
+\\
+E &= \set{\set{a, b}, \set{a, c}, \set{b, c}, \set{b, d}, \set{c, e}, \set{d, e}, \set{d, f}, \set{e, f}}.
+\ea
+$$
+
+Here each edge is written as the set of its endpoints:
+the edge $\set{b, d}$ joins the vertices $b$ and $d$.
+@fig-office draws $G$.
+We call $G$ the *office graph*.
+
+:::

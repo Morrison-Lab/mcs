@@ -1,0 +1,27 @@
+::: {#cor-dfs-connected}
+#### Testing whether a graph is connected
+
+Let $G$ be a graph (@def-graph-vertices-edges) with no parallel edges, and let $s$ be any vertex of $G$.
+Then $G$ is connected (@def-connected) if and only if `dfs(G, s)` (@def-dfs) marks every vertex of $G$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+**Only if.**
+If $G$ is connected, every vertex has a walk from $s$, so every vertex is marked, by @thm-dfs-reachable.
+
+**If.**
+Suppose every vertex is marked, and let $u$ and $v$ be vertices.
+By @thm-dfs-reachable, there are walks from $s$ to $u$ and from $s$ to $v$.
+The edges of $G$ have no direction, so the walk from $s$ to $u$, read backward, is a walk from $u$ to $s$.
+Following it with the walk from $s$ to $v$ gives a walk from $u$ to $v$.
+So $G$ is connected.
+
+:::
+
+:::

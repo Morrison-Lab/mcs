@@ -1,0 +1,37 @@
+::: {#thm-dfs-reachable}
+#### Depth-first search finds what can be reached
+
+Let $G$ and $s$ be as in @def-dfs.
+Then `dfs(G, s)` stops, and it marks exactly the vertices $v$ for which there is a walk (@def-walk) from $s$ to $v$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+**It stops.**
+Each call `dfs(G, u)` is made only when $u$ is not marked, and it marks $u$ first,
+so there is at most one call for each vertex.
+Each call goes once through a finite list.
+
+**Only vertices with a walk from $s$ are marked.**
+The call `dfs(G, u)` is either the first call, with $u = s$,
+or is made by a call `dfs(G, v)` with $u$ in the list of $v$, so that there is an edge from $v$ to $u$.
+By induction (@def-proof-by-induction) on the order of the calls,
+each marked vertex has a walk from $s$:
+a walk from $s$ to $v$ followed by the edge from $v$ to $u$ is a walk from $s$ to $u$.
+
+**Every vertex with a walk from $s$ is marked.**
+Suppose, for contradiction (@def-proof-by-contradiction), that some vertex $v$ with a walk $s = w_0, w_1, \ldots, w_k = v$ is not marked.
+Let $i$ be the smallest index with $w_i$ not marked.
+Then $i \ge 1$, since $s$ is marked, and $w_{i - 1}$ is marked, so the call to `dfs` on $w_{i - 1}$ was made.
+That call looks at $w_i$, which is in the list of $w_{i - 1}$.
+Either $w_i$ is marked already, or the call to `dfs` on $w_i$ marks it.
+Either way $w_i$ is marked, which contradicts the choice of $i$.
+
+:::
+
+:::

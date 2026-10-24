@@ -1,0 +1,13 @@
+::: {#sol-degree-sum}
+
+From @fig-office, the counts are
+
+| Computer | $a$ | $b$ | $c$ | $d$ | $e$ | $f$ |
+|:--------:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Cables   | 2   | 3   | 3   | 3   | 3   | 2   |
+
+and their sum is $2 + 3 + 3 + 3 + 3 + 2 = 16$.
+That is twice the number of cables, 8,
+since each cable has two ends and is counted once at each.
+
+:::

@@ -1,0 +1,7 @@
+::: {#def-connected-component}
+#### Connected component
+
+A **connected component** of a graph $G$ (@def-graph-vertices-edges) [@wikipedia_component_graph_theory] is a connected (@def-connected) subgraph (@def-subgraph) of $G$
+that is not a subgraph of any other connected subgraph of $G$.
+
+:::

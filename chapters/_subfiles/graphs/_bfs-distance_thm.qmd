@@ -1,0 +1,72 @@
+::: {#thm-bfs-distance}
+#### Breadth-first search finds distances
+
+Let $G$ and $s$ be as in @def-bfs.
+Then `bfs(G, s)` stops.
+When it stops, a vertex $v$ is marked if and only if there is a walk (@def-walk) from $s$ to $v$,
+and then $\texttt{dist}[v] = \operatorname{dist}(s, v)$ (@def-graph-distance).
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Write $V$ for the vertex set of $G$.
+
+**It stops.**
+A vertex is added to $Q$ only when it is marked, and a marked vertex is never marked again,
+so at most $\card{V}$ vertices are ever added to $Q$.
+Each pass through the loop removes one of them,
+so there are at most $\card{V}$ passes.
+
+**Each label is the length of a walk.**
+We show, by induction (@def-proof-by-induction) on the order in which the vertices are marked,
+that for each marked $u$ there is a walk from $s$ to $u$ of length $\texttt{dist}[u]$.
+For $s$, the walk $s$ has length $0 = \texttt{dist}[s]$.
+Any other $u$ is marked in the pass that removes some $v$ from $Q$, where $v$ was marked earlier and $u$ is in the list of $v$.
+A walk from $s$ to $v$ of length $\texttt{dist}[v]$, followed by the edge from $v$ to $u$,
+is a walk from $s$ to $u$ of length $\texttt{dist}[v] + 1 = \texttt{dist}[u]$.
+So every marked vertex has a walk from $s$, and $\texttt{dist}[u] \ge \operatorname{dist}(s, u)$.
+
+**The labels leave $Q$ in order.**
+Let $I$ be the statement that,
+if $x_1, \ldots, x_k$ are the vertices in $Q$ from front to back, then
+
+$$
+\texttt{dist}[x_1] \le \texttt{dist}[x_2] \le \cdots \le \texttt{dist}[x_k] \le \texttt{dist}[x_1] + 1.
+$$
+
+$I$ is true at the first test of the loop, when $Q$ holds only $s$.
+Suppose $I$ is true at a test, and the pass removes $v = x_1$.
+The vertices $x_2, \ldots, x_k$ that remain have labels from $\texttt{dist}[v]$ to $\texttt{dist}[v] + 1$, in order,
+and every vertex added in the pass gets the label $\texttt{dist}[v] + 1$.
+So the labels are still in order, and the last is at most $\texttt{dist}[v] + 1$, which is at most the new first label plus 1.
+So $I$ is a loop invariant, by @thm-loop-invariant.
+Every label in $Q$ after the pass is at least $\texttt{dist}[v]$,
+so the next vertex removed has a label at least $\texttt{dist}[v]$.
+So the vertices leave $Q$ with labels in nondecreasing order.
+
+**Each label is the distance.**
+We show, by strong induction (@def-strong-induction) on $k \ge 0$,
+that every vertex $v$ with a walk from $s$ and $\operatorname{dist}(s, v) = k$ is marked with $\texttt{dist}[v] \le k$.
+If $k = 0$, then $v = s$, which is marked with label 0.
+Let $k \ge 1$, and let $s = w_0, w_1, \ldots, w_k = v$ be a walk of length $k$ from $s$ to $v$.
+Then $w = w_{k - 1}$ has a walk of length $k - 1$ from $s$, so $\operatorname{dist}(s, w) \le k - 1$.
+By the induction hypothesis, $w$ is marked with $\texttt{dist}[w] \le k - 1$.
+Then $w$ was added to $Q$, so some pass removed it, since the loop runs until $Q$ is empty.
+That pass looks at $v$, which is in the list of $w$.
+
+- If $v$ is not marked yet, the pass marks it with $\texttt{dist}[v] = \texttt{dist}[w] + 1 \le k$.
+- If $v$ is already marked, then, since $v \ne s$, it was marked in an earlier pass that removed some $x$,
+  with $\texttt{dist}[v] = \texttt{dist}[x] + 1$.
+  Since $x$ left $Q$ before $w$, $\texttt{dist}[x] \le \texttt{dist}[w] \le k - 1$, so $\texttt{dist}[v] \le k$.
+
+So every vertex with a walk from $s$ is marked,
+and $\texttt{dist}[v] \le \operatorname{dist}(s, v) \le \texttt{dist}[v]$, by the second step.
+
+:::
+
+:::

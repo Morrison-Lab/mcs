@@ -1,0 +1,13 @@
+::: {#exm-euler-trail}
+#### Where an Euler trail can start
+
+- The envelope graph (@fig-envelope) is connected (@def-connected), since $x$ is adjacent (@def-adjacent) to $v$, $w$, $y$ and $z$.
+  In it, $\deg(v) = \deg(w) = 3$, $\deg(x) = \deg(y) = 4$ and $\deg(z) = 2$.
+  By @thm-euler-trail, every Euler trail goes from $v$ to $w$ or from $w$ to $v$.
+  A drawing of the envelope that starts at $x$ without lifting the pencil cannot draw every line once.
+- The office graph (@fig-office) is connected (@exm-connected) and has four vertices of odd degree, $b$, $c$, $d$ and $e$ (@sol-degree-sum),
+  so it has neither an Euler trail nor an Euler circuit.
+- The bridge graph (@exm-konigsberg) is connected (@exm-konigsberg-euler) and has four vertices of odd degree,
+  so there is no walk that crosses each bridge once, even one that ends away from where it started.
+
+:::

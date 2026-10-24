@@ -1,0 +1,14 @@
+::: {#exm-trail-path}
+#### Walks, trails and paths
+
+In the office graph (@fig-office):
+
+- $a, b, c, a, b, d$ (@exm-walk) is not a trail (@def-trail), since it uses the edge $\set{a, b}$ twice.
+- $b, c, a, b, d$ is a trail, since its four edges $\set{b, c}$, $\set{c, a}$, $\set{a, b}$, $\set{b, d}$ are all different.
+  It is not a path (@def-graph-path), since it visits $b$ twice.
+- $a, c, e, f$ is a path of length 3 from $a$ to $f$.
+
+A path is always a trail:
+if two of its edges were the same edge, they would have the same endpoints, and a vertex would repeat.
+
+:::

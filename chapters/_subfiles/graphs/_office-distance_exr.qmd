@@ -1,0 +1,7 @@
+::: {#exr-office-distance}
+#### The fewest cables
+
+A message goes from computer $a$ to computer $f$ in the office (@fig-office).
+What is the smallest number of cables it can cross?
+
+:::

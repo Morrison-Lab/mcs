@@ -1,0 +1,14 @@
+::: {#exm-connected-component}
+#### The components of the cut office
+
+The graph $H$ of @exr-cut-cables has two connected components (@def-connected-component):
+the subgraph with vertices $a, b, c$ and the three edges among them,
+and the subgraph with vertices $d, e, f$ and the three edges among them.
+Each of them is connected, and each already has every edge of $H$ between its vertices.
+A connected subgraph of $H$ that contained $a$ and one of $d$, $e$, $f$ would have a walk from $a$ to that vertex,
+and @sol-cut-cables showed that a walk from $a$ in $H$ stays in $\set{a, b, c}$.
+The same argument from $d$ shows that no connected subgraph contains $d$ and one of $a$, $b$, $c$.
+
+A connected graph, such as the office graph, has one connected component: the whole graph.
+
+:::

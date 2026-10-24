@@ -1,0 +1,8 @@
+::: {#def-euler-circuit}
+#### Euler circuit
+
+An **Euler circuit** of a graph (@def-graph-vertices-edges) [@wikipedia_eulerian_path] is a circuit (@def-circuit)
+that contains every edge of the graph.
+Since a circuit is a trail, it contains each edge exactly once.
+
+:::
