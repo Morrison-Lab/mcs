@@ -1,0 +1,18 @@
+::: {#sol-root-step}
+
+Since the condition is true, the body runs once and replaces `r` with $r' = r + 1$,
+and then the condition is tested again.
+At that next test,
+
+$$
+\ba
+(r')^2
+&= (r + 1)^2
+\\&\le n,
+&& \text{(the condition was true)}
+\ea
+$$
+
+so $r^2 \le n$ is true again, for the new value of `r`.
+
+:::

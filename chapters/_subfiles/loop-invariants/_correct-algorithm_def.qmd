@@ -1,0 +1,8 @@
+::: {#def-correct-algorithm}
+#### Correct algorithm
+
+An algorithm is **correct** for a given precondition (@def-precondition) and postcondition (@def-postcondition)
+if, for every input that satisfies the precondition,
+the algorithm stops, and the postcondition is true when it stops.
+
+:::

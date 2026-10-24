@@ -1,0 +1,37 @@
+::: {#exm-root-correct}
+#### `root` is correct
+
+We show that `root` (@exr-root-trace) is correct (@def-correct-algorithm) for the precondition and postcondition of @exm-root-spec.
+Let $n$ be a non-negative integer, and let $I$ be the statement
+
+> `r` is a non-negative integer and $r^2 \le n$.
+
+**Initialization.**
+At the first test, $r = 0$, which is a non-negative integer, and $r^2 = 0 \le n$, since $n \ge 0$.
+
+**Maintenance.**
+Suppose $I$ and the guard $(r + 1)^2 \le n$ are true at a test.
+The body replaces `r` with $r + 1$, which is again a non-negative integer,
+and @sol-root-step shows that $(r + 1)^2 \le n$.
+So $I$ is true at the next test.
+
+**Termination.**
+By @thm-loop-invariant, $I$ is true at every test.
+A non-negative integer $r$ satisfies $r \le r^2$
+(if $r = 0$, both sides are $0$, and if $r \ge 1$, then $r^2 = r \cdot r \ge r \cdot 1$),
+so $r \le r^2 \le n$ at every test.
+Each pass through the body increases `r` by 1, starting from 0,
+so if the body runs at least $k$ times, then $r = k$ at the test after the first $k$ passes, and so $k \le n$.
+So the body runs at most $n$ times, and the loop stops.
+When it stops, $I$ is true and the guard is false, so
+
+$$
+r^2 \le n
+\quad\text{and}\quad
+n < (r + 1)^2,
+$$
+
+and `root` returns this $r$, a non-negative integer.
+That is the postcondition.
+
+:::

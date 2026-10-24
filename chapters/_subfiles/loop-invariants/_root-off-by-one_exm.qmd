@@ -1,0 +1,14 @@
+::: {#exm-root-off-by-one}
+#### A version of `root` that is not correct
+
+Change `r := 0` in `root` to `r := 1`, and keep the rest.
+On the input $n = 0$, which satisfies the precondition of @exm-root-spec,
+the condition $(1 + 1)^2 \le 0$ is false at the first test,
+so the loop body never runs and the algorithm returns $r = 1$.
+But $1^2 = 1 > 0$, so the postcondition $r^2 \le n$ is false.
+One input is enough to show that this version is not correct (@def-correct-algorithm),
+even though it returns the right value for every $n \ge 1$.
+
+To show that an algorithm *is* correct, we need an argument that covers every input at once.
+
+:::

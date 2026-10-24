@@ -58,6 +58,8 @@ website:
         href: chapters/set-proofs.qmd
       - text: "Induction"
         href: chapters/induction.qmd
+      - text: "Loop Invariants"
+        href: chapters/loop-invariants.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mcs
@@ -87,6 +89,7 @@ website:
       - chapters/sets.qmd
       - chapters/set-proofs.qmd
       - chapters/induction.qmd
+      - chapters/loop-invariants.qmd
 
 callouty-theorem:
   thm:

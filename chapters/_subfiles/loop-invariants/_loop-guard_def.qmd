@@ -1,0 +1,9 @@
+::: {#def-loop-guard}
+#### Guard of a loop
+
+The **guard** of a `while` loop is the condition written after `while`:
+the loop tests it before each pass through the body,
+runs the body when it is true,
+and stops when it is false.
+
+:::

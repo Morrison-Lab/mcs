@@ -1,0 +1,21 @@
+::: {#exr-repeat-trace}
+#### Looking for a repeated entry
+
+The algorithm `has_repeat` decides whether some value appears twice in an array `A[1..n]`, where $n \ge 1$,
+by comparing every pair of positions:
+
+```text
+procedure has_repeat(A, n)   // A[1..n] is an array, n >= 1
+    found := false
+    for i := 1 to n - 1
+        for j := i + 1 to n
+            if A[i] = A[j]
+                found := true
+    return found
+```
+
+Run `has_repeat` on the array $A = (3, 1, 4, 1)$, with $n = 4$.
+List the pairs $(i, j)$ that the inner loop compares, in order,
+and give the first pair at which `found` becomes true.
+
+:::

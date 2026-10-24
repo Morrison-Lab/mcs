@@ -1,0 +1,10 @@
+::: {#exm-root-invariant}
+#### A statement that holds at every test of `root`
+
+In the run of `root(20)` in @sol-root-trace, `r` takes the values 0, 1, 2, 3 and 4 at the five tests of the guard.
+The statement "$r^2 \le n$" is true at all five tests, as a loop invariant (@def-loop-invariant) must be,
+and @sol-root-step shows, for every $n$, that a pass through the body never turns it from true to false.
+The statement "$r < 4$", by contrast, is true at the first four tests but false at the fifth,
+so it is not a loop invariant of `root`.
+
+:::

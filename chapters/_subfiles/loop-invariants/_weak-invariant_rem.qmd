@@ -1,0 +1,18 @@
+::: {#rem-weak-invariant}
+#### A true invariant can be too weak
+
+The postcondition (@def-postcondition) of `reverse` is about the entries of `A`:
+writing `B[1..n]` for the array as it was before the loop,
+it says that $A[k] = B[n + 1 - k]$ for every $k$ with $1 \le k \le n$.
+The loop invariant $i + j = n + 1$ of @sol-reverse-sum is true,
+but it says nothing about `A`,
+so no amount of reasoning from it, and from the guard being false, can reach this postcondition.
+
+The invariant, together with the guard being false, has to imply the postcondition.
+Here the guard mentions only `i` and `j`,
+so the invariant itself has to say something about the entries of `A`.
+A good way to find one is to ask what the loop has finished so far,
+and what it has not touched yet,
+at a test partway through the loop.
+
+:::

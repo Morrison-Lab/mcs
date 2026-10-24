@@ -1,0 +1,18 @@
+::: {#sol-halving-stops}
+
+First, `k` is a natural number at every test of the guard.
+At the first test $k = n$, a natural number.
+If $k$ is a natural number and the guard $k \ge 2$ is true,
+then $k / 2 \ge 1$, so the new value $\floor{k / 2}$ is an integer that is at least 1.
+So, by @thm-loop-invariant, "`k` is a natural number" is a loop invariant.
+
+Second, each pass through the body makes `k` smaller:
+the new value is $\floor{k / 2} \le k / 2 < k$, since $k > 0$.
+Both values are integers, so `k` decreases by at least 1.
+
+So, if the body runs at least $j$ times, then at the test after the first $j$ passes,
+$1 \le k \le n - j$,
+and so $j \le n - 1$.
+The body runs at most $n - 1$ times, and the loop stops.
+
+:::

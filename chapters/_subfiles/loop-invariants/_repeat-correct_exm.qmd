@@ -1,0 +1,61 @@
+::: {#exm-repeat-correct}
+#### `has_repeat` is correct
+
+In `has_repeat` (@exr-repeat-trace), call a pair of positions $(p, q)$ a *match*
+if $1 \le p < q \le n$ and $A[p] = A[q]$.
+The postcondition is that `has_repeat` returns true if `A` has a match, and false if it has none.
+The algorithm never changes `A`.
+We follow @rem-inner-first.
+
+**The inner loop.**
+Fix a pass of the outer loop with index $i$, where $1 \le i \le n - 1$,
+and suppose that, when the inner loop starts,
+
+> `found` is true exactly when there is a match $(p, q)$ with $p < i$,
+
+which is the outer loop's invariant $K$, proved in the next part.
+Let $J$ be the statement
+
+> $i + 1 \le j \le n + 1$, and `found` is true exactly when there is a match $(p, q)$ with $p < i$, or with $p = i$ and $q < j$.
+
+- Initialization:
+  at the first test, $j = i + 1 \le n$.
+  No $q$ has $i < q < i + 1$, so $J$ says the same as the supposition above.
+- Maintenance:
+  suppose $J$ and the guard $j \le n$ are true at a test.
+  A match with $p < i$, or with $p = i$ and $q < j + 1$,
+  is either one of the matches that $J$ describes or the pair $(i, j)$.
+  If $A[i] = A[j]$, the body sets `found` to true, and $(i, j)$ is such a match.
+  If not, `found` does not change, and $(i, j)$ is not a match.
+  Either way, after `j` becomes $j + 1 \le n + 1$, $J$ is true at the next test.
+- Termination:
+  by @thm-loop-invariant, $J$ is a loop invariant, so $n + 1 - j \ge 0$ at every test,
+  and each pass lowers $n + 1 - j$ by 1.
+  So $n + 1 - j$ is a loop variant (@def-loop-variant), and the inner loop stops (@thm-variant-terminates).
+  It stops when $j \le n$ is false, so, with $j \le n + 1$, $j = n + 1$.
+  Every match has $q \le n < n + 1$, so, when the inner loop stops,
+
+  > `found` is true exactly when there is a match $(p, q)$ with $p < i$ or $p = i$, that is, with $p < i + 1$.
+
+**The outer loop.**
+Let $K$ be the statement
+
+> $1 \le i \le n$, and `found` is true exactly when there is a match $(p, q)$ with $p < i$.
+
+- Initialization:
+  at the first test, $i = 1 \le n$, since $n \ge 1$,
+  `found` is false, and no match has $p < 1$.
+- Maintenance:
+  suppose $K$ and the guard $i \le n - 1$ are true at a test.
+  Then the inner loop runs, and when it stops, `found` is true exactly when there is a match with $p < i + 1$.
+  After `i` becomes $i + 1 \le n$, $K$ is true at the next test.
+- Termination:
+  by @thm-loop-invariant, $K$ is a loop invariant, so $n - i \ge 0$ at every test,
+  and each pass lowers $n - i$ by 1.
+  So $n - i$ is a loop variant, and the outer loop stops.
+  It stops when $i \le n - 1$ is false, so, with $i \le n$, $i = n$.
+  Every match has $p < q \le n$, so $p < n$.
+  So, when the outer loop stops, `found` is true exactly when `A` has a match,
+  and the algorithm returns `found`.
+
+:::

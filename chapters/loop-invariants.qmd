@@ -1,0 +1,162 @@
+---
+title: "Loop Invariants"
+subtitle: "Proving that an algorithm with a loop is correct"
+format:
+  html: default
+  revealjs:
+    output-file: loop-invariants-slides.html
+  pdf:
+    output-file: loop-invariants-handout.pdf
+  docx:
+    output-file: loop-invariants.docx
+---
+
+{{< include ../latex-macros/macros.qmd >}}
+
+::: {.callout-note appearance='simple' collapse=true}
+## Source
+
+The topics of this chapter follow Kameron Decker Harris's Fall 2026 worksheet on loop invariants:
+
+- what a loop invariant is;
+- the three parts of a loop invariant proof: initialization, maintenance and termination;
+- proving that a loop stops;
+- choosing an invariant strong enough to give the result;
+- invariants for a loop inside another loop.
+
+Everything else is new:
+the algorithms, the exercises, the examples, the theorems and their proofs.
+:::
+
+# Preconditions and postconditions {#sec-pre-post}
+
+{{< include _subfiles/loop-invariants/_root-trace_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_root-trace_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_pseudocode_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_precondition_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_postcondition_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_root-spec_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_correct-algorithm_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_root-off-by-one_exm.qmd >}}
+
+# Loop invariants {#sec-loop-invariants}
+
+{{< include _subfiles/loop-invariants/_root-step_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_root-step_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_loop-guard_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_for-as-while_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_loop-invariant_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_root-invariant_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_loop-invariant_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_invariant-parts_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_root-correct_exm.qmd >}}
+
+# Termination {#sec-termination}
+
+{{< include _subfiles/loop-invariants/_halving-stops_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_halving-stops_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_loop-variant_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_root-variant_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_variant-terminates_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_countdown_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_collatz-loop_rem.qmd >}}
+
+# Choosing a strong enough invariant {#sec-strong-invariants}
+
+{{< include _subfiles/loop-invariants/_reverse-sum_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_reverse-sum_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_weak-invariant_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_reverse-correct_exm.qmd >}}
+
+# Nested loops {#sec-nested-loops}
+
+{{< include _subfiles/loop-invariants/_repeat-trace_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_repeat-trace_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_inner-first_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_repeat-correct_exm.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

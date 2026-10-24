@@ -1,0 +1,17 @@
+::: {#rem-pseudocode}
+#### How to read the pseudocode in this chapter
+
+The algorithms (@def-algorithm) in this chapter are written in pseudocode, not in a particular programming language:
+
+- `x := e` sets the variable `x` to the value of the expression `e`;
+- the indented lines under `while` are the *body* of the loop, and a `while` loop tests its condition before every pass through the body,
+  running the body when the condition is true and stopping when it is false;
+- `for i := a to b` runs its body once for each of $i = a, a + 1, \ldots, b$,
+  and not at all if $a > b$;
+- `A[1..n]` is an array of $n$ entries `A[1]`, ..., `A[n]`;
+- text after `//` is a comment, which the algorithm ignores.
+
+In @sol-root-trace, the body of `root` runs four times, and its condition is tested five times:
+once before each pass through the body, and once more when the loop stops.
+
+:::

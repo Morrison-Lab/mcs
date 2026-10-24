@@ -1,0 +1,47 @@
+::: {#thm-loop-invariant}
+#### The loop invariant theorem
+
+Let $I$ be a statement about the variables of a `while` loop whose guard (@def-loop-guard) is $G$.
+Suppose that
+
+1. $I$ is true at the first test of the guard, and
+2. whenever $I$ and $G$ are both true at a test of the guard, $I$ is true at the next test.
+
+Then $I$ is a loop invariant (@def-loop-invariant) of the loop.
+In particular, if the loop stops, then $I$ is true and $G$ is false when it stops.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+We use induction (@def-proof-by-induction) on the number of passes through the body.
+For each non-negative integer $k$, let $P(k)$ be the claim
+
+> if the body runs at least $k$ times, then $I$ is true at the test of the guard that follows the first $k$ passes.
+
+The test that follows the first $0$ passes is the first test.
+
+**Base case.**
+$P(0)$ is hypothesis 1.
+
+**Inductive step.**
+Let $k \ge 1$, suppose $P(k - 1)$ holds, and suppose the body runs at least $k$ times.
+Then it runs at least $k - 1$ times, so by $P(k - 1)$, $I$ is true at the test that follows the first $k - 1$ passes.
+The $k$th pass comes right after that test, and the body runs only when the guard is true,
+so $G$ is also true at that test.
+By hypothesis 2, $I$ is true at the next test, which is the test that follows the first $k$ passes.
+So $P(k)$ holds.
+
+By induction, $P(k)$ holds for every $k \ge 0$.
+Every test of the guard follows the first $k$ passes for some $k \ge 0$,
+so $I$ is true at every test, and $I$ is a loop invariant.
+The loop stops only at a test where $G$ is false,
+and $I$ is true at that test too.
+
+:::
+
+:::
