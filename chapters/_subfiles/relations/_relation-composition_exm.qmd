@@ -12,8 +12,11 @@
   So $P \circ P^{-1}$ is the relation "has a parent in common with":
 
   $$
+  \begin{aligned}
   P \circ P^{-1}
-  = \set{(\text{Ben}, \text{Ben}), (\text{Ben}, \text{Cora}), (\text{Cora}, \text{Ben}), (\text{Cora}, \text{Cora}), (\text{Dev}, \text{Dev}), (\text{Eva}, \text{Eva})}.
+  = \{&(\text{Ben}, \text{Ben}), (\text{Ben}, \text{Cora}), (\text{Cora}, \text{Ben}), (\text{Cora}, \text{Cora}), \\
+  &(\text{Dev}, \text{Dev}), (\text{Eva}, \text{Eva})\}.
+  \end{aligned}
   $$
 
   Ada is in no pair, since her parents are not in $F$.
