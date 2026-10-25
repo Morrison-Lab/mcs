@@ -80,6 +80,9 @@ Key points:
 - **Link check**: tuned in `lychee.toml`; prefer fixing broken links over adding exceptions.
 - **Other CI checks**: workflows also verify bibliography DOIs (`check-bibliography-dois.yml`) and flag non-standard characters (`check-non-standard-chars.yaml`).
   Fix the flagged source rather than relaxing the check.
+- **Cross-references**: `check-unresolvable-refs.yml` flags an `@id` inside math, which prints literally,
+  and an `@sec-` reference, which the PDF handout prints as "Section" with no number because it does not number sections.
+  Cite outside the math, and link a section as `[text](#sec-id)`.
 - **Dependencies**: Dependabot auto-updates the `latex-macros` submodule and GitHub Actions (see `.github/dependabot.yml`);
   don't bump those by hand unless a PR needs it.
 
