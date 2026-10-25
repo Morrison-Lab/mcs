@@ -14,7 +14,7 @@ procedure halvings(n)    // n is a natural number
     return c
 ```
 
-Here `floor(x)` is the largest integer that is at most `x`.
+Here `floor(x)` is the floor $\floor{x}$ (@def-floor) of $x$.
 Explain why the loop stops for every natural number $n$.
 
 :::
