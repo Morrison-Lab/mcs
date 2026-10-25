@@ -15,6 +15,7 @@ CASES = [
     ("Text $x$ (@def-floor) is fine.\n", False, 0),
     ("$$\na && \\text{(by @rem-size)}\n$$\n", False, 1),
     ("Inline $y = @def-bad$ here.\n", False, 1),
+    ("Inline $y = @sec-bad$ is reported once.\n", False, 1),
     ("See @sec-traversals.\n", False, 1),
     ("See @sec-traversals.\n", True, 0),
     ("See [traversals](#sec-traversals).\n", False, 0),

@@ -22,6 +22,11 @@ description: "Use when editing Quarto pages, chapters, slides, handouts, or narr
 - Do not hard-code computed values in narrative text.
   Compute them in a chunk
   and reference them with inline R.
+- Never put an `@id` cross-reference inside math, where it prints literally;
+  cite it in the prose.
+  Link a section as `[text](#sec-id)`, not `@sec-id`:
+  the PDF handout does not number sections, so `@sec-id` prints as "Section" with no number.
+  `check-unresolvable-refs.yml` flags both.
 - Treat files under `_extensions/` as vendored third-party code: read them for
   context if needed, but do not reformat or edit them as part of a content
   change.

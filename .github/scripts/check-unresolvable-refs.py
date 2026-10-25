@@ -99,8 +99,10 @@ def check(path, site_numbered):
         for r in REF.finditer(m.group(1)):
             problems.append((line_of(m.start(1) + r.start()),
                              f"{r.group()} is inside inline math, where Quarto does not resolve it; cite it in the prose"))
+    # A reference inside inline math is reported above already.
+    prose = INLINE.sub(lambda m: " " * len(m.group()), masked)
     if not page_numbers_sections(text, site_numbered):
-        for r in SEC_REF.finditer(masked):
+        for r in SEC_REF.finditer(prose):
             problems.append((line_of(r.start()),
                              f"{r.group()} renders as 'Section' with no number in a format that does not number sections (the PDF handout); "
                              f"link it as [text](#{r.group()[1:]})"))
