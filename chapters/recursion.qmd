@@ -46,11 +46,7 @@ the exercises, the other examples, the Racket functions, the algorithm, the theo
 
 {{< slidebreak >}}
 
-{{< include _subfiles/recursion/_floor_def.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include _subfiles/recursion/_floor_exm.qmd >}}
+{{< include _subfiles/recursion/_floor-digit_exm.qmd >}}
 
 {{< slidebreak >}}
 
