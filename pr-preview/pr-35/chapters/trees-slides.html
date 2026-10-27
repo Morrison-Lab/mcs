@@ -1,0 +1,2238 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.19">
+
+  <title>Math for Computer Science – Trees</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-3a7eae3b872f08785a56513611f0329a.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <!--
+    Colour-theme dropdown for the qwt revealjs format: Light, Off-white,
+    Parchment, Dark. Pulled into every slide deck via the `include-in-header`
+    entry in the `revealjs:` block of `_quarto-website.yml`. Pairs with
+    `styles-reveal.scss`, which defines the palette CSS variables; the select
+    reads those vars so it stays legible in every palette. Light is the
+    default variable set, Off-white and Parchment are a data-palette attribute
+    on <html>, and Dark is the body.qwt-dark class. The choice is saved under
+    "mln-theme", the key the website's theme dropdown (theme-picker.html) uses,
+    so it carries across the site and the decks. First-time visitors get
+    Dark if their system prefers it, and Off-white otherwise.
+  -->
+  <style>
+    #qwt-theme-select {
+      position: fixed;
+      bottom: 8px;
+      left: 8px;
+      /* Matches reveal.js's `.slide-number` and the `#revealjs-html-link` chip
+         from `revealjs-html-links.lua`; the three elements occupy different
+         corners so they don't overlap. Keep them aligned if you bump this. */
+      z-index: 31;
+      padding: 2px 4px;
+      border: 1px solid var(--qwt-border, rgba(0, 0, 0, 0.2));
+      border-radius: 4px;
+      background: var(--qwt-chip-bg, rgba(255, 255, 255, 0.8));
+      color: var(--qwt-fg, #000);
+      cursor: pointer;
+      font: 12px sans-serif;
+      opacity: 0.7;
+    }
+    #qwt-theme-select:hover,
+    #qwt-theme-select:focus-visible {
+      opacity: 1;
+      border-color: var(--qwt-fg, rgba(0, 0, 0, 0.4));
+    }
+    #qwt-theme-select:focus-visible {
+      outline: 2px solid var(--qwt-link, #2a76dd);
+      outline-offset: 2px;
+    }
+    @media print { #qwt-theme-select { display: none; } }
+  </style>
+  <script>
+  (function () {
+    "use strict";
+    var KEY = "mln-theme";
+    var DARK_CLASS = "qwt-dark";
+    var OPTIONS = [["light", "Light"], ["offwhite", "Off-white"], ["parchment", "Parchment"], ["dark", "Dark"]];
+    var root = document.documentElement;
+
+    function valid(choice) {
+      return OPTIONS.some(function (o) { return o[0] === choice; });
+    }
+
+    function stored() {
+      try { return localStorage.getItem(KEY); } catch (e) { return null; }
+    }
+
+    function initialTheme() {
+      var saved = stored();
+      if (valid(saved)) return saved;
+      if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        return "dark";
+      }
+      return "offwhite";
+    }
+
+    function applyTheme(choice) {
+      if (choice === "offwhite" || choice === "parchment") {
+        root.setAttribute("data-palette", choice);
+      } else {
+        root.removeAttribute("data-palette");
+      }
+      // The body can be missing when this runs from <head>; init() re-applies it.
+      if (document.body) document.body.classList.toggle(DARK_CLASS, choice === "dark");
+    }
+
+    var start = initialTheme();
+    applyTheme(start); // set the palette before first paint
+
+    function init() {
+      if (document.getElementById("qwt-theme-select")) return;
+      applyTheme(start);
+      var sel = document.createElement("select");
+      sel.id = "qwt-theme-select";
+      sel.setAttribute("aria-label", "Colour theme");
+      OPTIONS.forEach(function (o) {
+        var opt = document.createElement("option");
+        opt.value = o[0];
+        opt.textContent = o[1];
+        sel.appendChild(opt);
+      });
+      sel.value = start;
+      sel.addEventListener("change", function () {
+        applyTheme(sel.value);
+        try { localStorage.setItem(KEY, sel.value); } catch (e) { /* private mode */ }
+      });
+      document.body.appendChild(sel);
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init);
+    } else {
+      init();
+    }
+  })();
+  </script>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Trees</h1>
+  <p class="subtitle">Trees and forests, rooted trees, binary trees, preorder, inorder, postorder and level order, expression trees, and spanning trees</p>
+
+<div class="quarto-title-authors">
+</div>
+
+  <p class="date">Last modified: 2026-10-27 13:12:35 (PDT)</p>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-note callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Source</strong></p>
+</div>
+<div class="callout-content">
+<p>The topics of this chapter follow the course calendar, and their order follows Kameron Decker Harris’s Fall 2026 lecture notes on trees. These come from those notes:</p>
+<ul>
+<li>a tree as a connected graph with no cycles (the notes say no simple circuits), and a forest, whose connected components are trees;</li>
+<li>the theorem that a graph is a tree if and only if there is exactly one path between every two of its vertices;</li>
+<li>rooted trees, with the root, parents, children, ancestors, descendants, leaves, internal vertices and subtrees, and the fact that choosing a different root gives a different rooted tree;</li>
+<li>the level of a vertex and the height of a rooted tree;</li>
+<li>ordered rooted trees, and binary trees, with their left and right subtrees;</li>
+<li>the theorem that a tree with <span class="math inline">\(n\)</span> vertices has <span class="math inline">\(n - 1\)</span> edges;</li>
+<li>preorder, inorder and postorder traversal;</li>
+<li>expression trees, and the infix, prefix (Polish) and postfix (reverse Polish) forms of an expression, with parentheses needed only in the infix form;</li>
+<li>spanning trees, the theorem that a graph is connected if and only if it has a spanning tree, and the spanning trees that depth-first and breadth-first search build.</li>
+</ul>
+<p>The notes define the traversals for ordered rooted trees, by pseudocode; here they are defined recursively for binary trees, as lists, and a remark extends preorder and postorder to ordered rooted trees. In the notes a forest is not connected; here a forest is any graph with no cycles, so a tree is a forest too. The notes’ <span class="math inline">\(m\)</span>-ary trees, full <span class="math inline">\(m\)</span>-ary trees, balanced trees, and the counting theorems for them, siblings, back edges, and spanning forests of directed graphs are left out. A bound on the number of vertices of a binary tree of a given height is in their place. The definition of a parse tree is included from the <a href="https://morrison-lab.github.io/mds/">mathematics prerequisites</a> notes, so it reads the same in both places. Level order, as breadth-first search from the root, follows the course calendar’s “tree traversal”. The proof that a tree with <span class="math inline">\(n\)</span> vertices has <span class="math inline">\(n - 1\)</span> edges, the other proofs, the examples, the exercises and the Racket functions are new.</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<section id="sec-trees" class="title-slide slide level1 center" data-number="1">
+<h1><span class="header-section-number">1</span> Trees</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-pipes" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1 (Pipes between houses)</strong></span> Seven houses, named <span class="math inline">\(p\)</span>, <span class="math inline">\(q\)</span>, <span class="math inline">\(r\)</span>, <span class="math inline">\(s\)</span>, <span class="math inline">\(t\)</span>, <span class="math inline">\(u\)</span> and <span class="math inline">\(w\)</span>, share a water system. A pipe joins the two houses in each of these six pairs:</p>
+<p><span class="math display">\[
+{\mathopen{}\left\{p, q\right\}\mathclose{}}, {\mathopen{}\left\{q, r\right\}\mathclose{}}, {\mathopen{}\left\{q, s\right\}\mathclose{}}, {\mathopen{}\left\{s, t\right\}\mathclose{}}, {\mathopen{}\left\{t, u\right\}\mathclose{}}, {\mathopen{}\left\{t, w\right\}\mathclose{}}.
+\]</span></p>
+<p><a href="#/fig-pipes" class="quarto-xref">Figure&nbsp;1</a> draws them. How many routes are there from house <span class="math inline">\(r\)</span> to house <span class="math inline">\(w\)</span> that go along pipes and visit no house twice?</p>
+<div id="fig-pipes" class="quarto-float quarto-figure quarto-figure-center" alt="Seven points joined by six lines. On the left, p and r are each joined to q. In the middle, q is joined to s, and s is joined to t. On the right, t is joined to u and to w.">
+<figure class="quarto-float quarto-float-fig">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-pipes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The houses and pipes of <a href="#/exr-pipes" class="quarto-xref">Exercise&nbsp;1</a>.
+</figcaption>
+<div aria-describedby="fig-pipes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/trees-pipes.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: The houses and pipes of Exercise&nbsp;1."><img data-src="../images/trees-pipes.png" style="width:60.0%" alt="Seven points joined by six lines. On the left, p and r are each joined to q. In the middle, q is joined to s, and s is joined to t. On the right, t is joined to u and to w."></a>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-pipes" class="proof solution">
+<p><span class="proof-title"><em>Solution 1</em>. </span>One: the route <span class="math inline">\(r, q, s, t, w\)</span>. A route from <span class="math inline">\(r\)</span> starts along the only pipe at <span class="math inline">\(r\)</span>, to <span class="math inline">\(q\)</span>. From <span class="math inline">\(q\)</span>, the pipes lead to <span class="math inline">\(p\)</span>, <span class="math inline">\(r\)</span> and <span class="math inline">\(s\)</span>. The route cannot go back to <span class="math inline">\(r\)</span>, and if it goes to <span class="math inline">\(p\)</span> it cannot go on, since the only pipe at <span class="math inline">\(p\)</span> leads back to <span class="math inline">\(q\)</span>. So it goes to <span class="math inline">\(s\)</span>, and from <span class="math inline">\(s\)</span> along its only other pipe to <span class="math inline">\(t\)</span>. From <span class="math inline">\(t\)</span>, the pipe to <span class="math inline">\(u\)</span> leads to a house with no other pipe, so the route takes the pipe to <span class="math inline">\(w\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="lem-degree-one" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1 (A vertex of degree 1 is on no cycle)</strong></span> Let <span class="math inline">\(v\)</span> be a vertex of degree 1 (<a href="../chapters/graphs.html#def-degree">Definition: Degree</a>) of a graph <span class="math inline">\(G\)</span> (<a href="../chapters/graphs.html#def-graph-vertices-edges">Definition: Graph</a>), and let <span class="math inline">\(H\)</span> be the subgraph (<a href="../chapters/graphs.html#def-subgraph">Definition: Subgraph</a>) of <span class="math inline">\(G\)</span> left when <span class="math inline">\(v\)</span> and its one edge are taken out. Then every cycle (<a href="../chapters/graphs.html#def-graph-cycle">Definition: Cycle</a>) of <span class="math inline">\(G\)</span> is a cycle of <span class="math inline">\(H\)</span>.</p>
+<p>So if taking out vertices of degree 1, one at a time, each of degree 1 in the graph left at that point, ends with a graph that has no edges, then <span class="math inline">\(G\)</span> has no cycles.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-tree" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 (Tree)</strong></span> A <strong>tree</strong> <span class="citation" data-cites="wikipedia_tree_graph_theory">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026i</a>)</span> is a connected (<a href="../chapters/graphs.html#def-connected">Definition: Connected graph</a>) graph (<a href="../chapters/graphs.html#def-graph-vertices-edges">Definition: Graph</a>) with no cycles (<a href="../chapters/graphs.html#def-graph-cycle">Definition: Cycle</a>).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-pipes-tree" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1 (The pipes form a tree)</strong></span> The houses and pipes of <a href="#/exr-pipes" class="quarto-xref">Exercise&nbsp;1</a> form a graph (<a href="../chapters/graphs.html#def-graph-vertices-edges">Definition: Graph</a>) <span class="math inline">\(P\)</span>, with vertex set <span class="math inline">\({\mathopen{}\left\{p, q, r, s, t, u, w\right\}\mathclose{}}\)</span> and the six edges listed there. <span class="math inline">\(P\)</span> is a tree (<a href="#/def-tree" class="quarto-xref">Definition&nbsp;1</a>).</p>
+<ul>
+<li>It is connected (<a href="../chapters/graphs.html#def-connected">Definition: Connected graph</a>). The walks <span class="math inline">\(q, p\)</span> and <span class="math inline">\(q, r\)</span> and <span class="math inline">\(q, s\)</span> and <span class="math inline">\(q, s, t\)</span> and <span class="math inline">\(q, s, t, u\)</span> and <span class="math inline">\(q, s, t, w\)</span> go from <span class="math inline">\(q\)</span> to every other vertex, and reading one of them backward and then following another gives a walk between any two vertices.</li>
+<li>It has no cycles, by <a href="#/lem-degree-one" class="quarto-xref">Lemma&nbsp;1</a>. Take out <span class="math inline">\(p\)</span>, <span class="math inline">\(r\)</span>, <span class="math inline">\(u\)</span> and <span class="math inline">\(w\)</span>, which have degree 1. Then <span class="math inline">\(q\)</span> and <span class="math inline">\(t\)</span> have degree 1; take out <span class="math inline">\(q\)</span>. Then <span class="math inline">\(t\)</span> has degree 1; take it out. What is left is the vertex <span class="math inline">\(s\)</span> with no edges.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-trees-or-not" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2 (Trees and graphs that are not trees)</strong></span> In <a href="#/fig-trees-or-not" class="quarto-xref">Figure&nbsp;2</a>:</p>
+<ul>
+<li><span class="math inline">\(T\)</span> is a tree (<a href="#/def-tree" class="quarto-xref">Definition&nbsp;1</a>). It is connected, since <span class="math inline">\(b\)</span> is adjacent (<a href="../chapters/graphs.html#def-adjacent">Definition: Adjacent vertices (neighbors)</a>) to <span class="math inline">\(a\)</span>, <span class="math inline">\(c\)</span> and <span class="math inline">\(d\)</span>, and <span class="math inline">\(d\)</span> to <span class="math inline">\(e\)</span>. Taking out <span class="math inline">\(a\)</span>, <span class="math inline">\(c\)</span> and <span class="math inline">\(e\)</span>, then <span class="math inline">\(b\)</span>, leaves <span class="math inline">\(d\)</span> with no edges, so <span class="math inline">\(T\)</span> has no cycles, by <a href="#/lem-degree-one" class="quarto-xref">Lemma&nbsp;1</a>.</li>
+<li><span class="math inline">\(H\)</span> is not a tree, since <span class="math inline">\(b, c, d, b\)</span> is a cycle (<a href="../chapters/graphs.html#def-graph-cycle">Definition: Cycle</a>).</li>
+<li><span class="math inline">\(F\)</span> is not a tree, since it is not connected: no edge has <span class="math inline">\(a\)</span> as an endpoint, so there is no walk from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span>.</li>
+</ul>
+<div id="fig-trees-or-not" class="quarto-float quarto-figure quarto-figure-center" alt="Three graphs side by side, each with labeled points. T: b is joined to a, c and d, and d is joined to e. H: b is joined to a, c and d, c is joined to d, and d is joined to e, so b, c and d form a triangle. F: eight points. In F, a and b are joined to nothing, c is joined to d, and e is joined to f, g and h.">
+<figure class="quarto-float quarto-float-fig">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-trees-or-not-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: A tree <span class="math inline">\(T\)</span> and two graphs, <span class="math inline">\(H\)</span> and <span class="math inline">\(F\)</span>, that are not trees.
+</figcaption>
+<div aria-describedby="fig-trees-or-not-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/trees-or-not.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: A tree T and two graphs, H and F, that are not trees."><img data-src="../images/trees-or-not.png" style="width:90.0%" alt="Three graphs side by side, each with labeled points. T: b is joined to a, c and d, and d is joined to e. H: b is joined to a, c and d, c is joined to d, and d is joined to e, so b, c and d form a triangle. F: eight points. In F, a and b are joined to nothing, c is joined to d, and e is joined to f, g and h."></a>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-tree-simple" class="proof remark">
+<p><span class="proof-title"><em>Remark 1</em> (A tree is a simple graph). </span>A loop (<a href="../chapters/graphs.html#def-graph-loop">Definition: Loop</a>) <span class="math inline">\(e\)</span> at a vertex <span class="math inline">\(v\)</span> gives the circuit (<a href="../chapters/graphs.html#def-circuit">Definition: Circuit</a>) <span class="math inline">\(v, e, v\)</span> of length 1, which is a cycle (<a href="../chapters/graphs.html#def-graph-cycle">Definition: Cycle</a>). Two parallel edges (<a href="../chapters/graphs.html#def-parallel-edges">Definition: Parallel edges</a>) <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span> that join <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span> give the circuit <span class="math inline">\(u, e_1, v, e_2, u\)</span> of length 2, which is a cycle, since <span class="math inline">\(u \ne v\)</span>. So a graph with no cycles, and a tree (<a href="#/def-tree" class="quarto-xref">Definition&nbsp;1</a>) in particular, is simple (<a href="../chapters/graphs.html#def-simple-graph">Definition: Simple graph</a>). Each edge of a tree is the only edge with its two endpoints, so, as in <a href="../chapters/graphs.html#exm-simple-graph">Example: Simple or not</a>, we write it as the set of its endpoints, and we write a walk (<a href="../chapters/graphs.html#def-walk">Definition: Walk</a>) in a tree by its vertices alone, as in <a href="#/sol-pipes" class="quarto-xref">Solution&nbsp;1</a>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-tree-paths" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 (A tree has exactly one path between two vertices)</strong></span> Let <span class="math inline">\(G\)</span> be a graph (<a href="../chapters/graphs.html#def-graph-vertices-edges">Definition: Graph</a>) with no loops (<a href="../chapters/graphs.html#def-graph-loop">Definition: Loop</a>). Then <span class="math inline">\(G\)</span> is a tree (<a href="#/def-tree" class="quarto-xref">Definition&nbsp;1</a>) if and only if, for every two vertices <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span> of <span class="math inline">\(G\)</span>, there is exactly one path (<a href="../chapters/graphs.html#def-graph-path">Definition: Path</a>) from <span class="math inline">\(u\)</span> to <span class="math inline">\(v\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-tree-paths-loops" class="proof remark">
+<p><span class="proof-title"><em>Remark 2</em> (Why <a href="#/thm-tree-paths" class="quarto-xref">Theorem&nbsp;1</a> needs no loops). </span>The graph with one vertex and one loop (<a href="../chapters/graphs.html#def-graph-loop">Definition: Loop</a>) shows that the condition of no loops in <a href="#/thm-tree-paths" class="quarto-xref">Theorem&nbsp;1</a> is needed: its only path (<a href="../chapters/graphs.html#def-graph-path">Definition: Path</a>) from its vertex to itself is the path of length 0, but the loop is a cycle (<a href="#/rem-tree-simple" class="quarto-xref">Remark&nbsp;1</a>), so the graph is not a tree (<a href="#/def-tree" class="quarto-xref">Definition&nbsp;1</a>).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-forest" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2 (Forest)</strong></span> A <strong>forest</strong> <span class="citation" data-cites="wikipedia_tree_graph_theory">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026i</a>)</span> is a graph (<a href="../chapters/graphs.html#def-graph-vertices-edges">Definition: Graph</a>) with no cycles (<a href="../chapters/graphs.html#def-graph-cycle">Definition: Cycle</a>).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-forest" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3 (A forest of four trees)</strong></span> The graph <span class="math inline">\(F\)</span> of <a href="#/fig-trees-or-not" class="quarto-xref">Figure&nbsp;2</a> is a forest (<a href="#/def-forest" class="quarto-xref">Definition&nbsp;2</a>): taking out <span class="math inline">\(d\)</span>, <span class="math inline">\(f\)</span>, <span class="math inline">\(g\)</span> and <span class="math inline">\(h\)</span>, which have degree 1, leaves no edges, so <span class="math inline">\(F\)</span> has no cycles, by <a href="#/lem-degree-one" class="quarto-xref">Lemma&nbsp;1</a>. Its connected components (<a href="../chapters/graphs.html#def-connected-component">Definition: Connected component</a>) are</p>
+<ul>
+<li>the vertex <span class="math inline">\(a\)</span>, with no edges;</li>
+<li>the vertex <span class="math inline">\(b\)</span>, with no edges;</li>
+<li>the vertices <span class="math inline">\(c\)</span> and <span class="math inline">\(d\)</span>, with the edge <span class="math inline">\({\mathopen{}\left\{c, d\right\}\mathclose{}}\)</span>;</li>
+<li>the vertices <span class="math inline">\(e\)</span>, <span class="math inline">\(f\)</span>, <span class="math inline">\(g\)</span> and <span class="math inline">\(h\)</span>, with the edges <span class="math inline">\({\mathopen{}\left\{e, f\right\}\mathclose{}}\)</span>, <span class="math inline">\({\mathopen{}\left\{e, g\right\}\mathclose{}}\)</span> and <span class="math inline">\({\mathopen{}\left\{e, h\right\}\mathclose{}}\)</span>.</li>
+</ul>
+<p>Each of them is a tree (<a href="#/def-tree" class="quarto-xref">Definition&nbsp;1</a>). The tree <span class="math inline">\(T\)</span> of <a href="#/fig-trees-or-not" class="quarto-xref">Figure&nbsp;2</a> is a forest too, and the graph <span class="math inline">\(H\)</span> is not a forest.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-forest-connected" class="proof remark">
+<p><span class="proof-title"><em>Remark 3</em> (Trees and forests). </span>By their definitions, a tree (<a href="#/def-tree" class="quarto-xref">Definition&nbsp;1</a>) is a forest (<a href="#/def-forest" class="quarto-xref">Definition&nbsp;2</a>) that is connected (<a href="../chapters/graphs.html#def-connected">Definition: Connected graph</a>). Each connected component (<a href="../chapters/graphs.html#def-connected-component">Definition: Connected component</a>) of a forest is connected, and has no cycles, since a cycle in a subgraph is a cycle in the whole graph. So each connected component of a forest is a tree, which is where the name comes from. Some authors also require a forest to be not connected, so that a tree is not a forest; here a tree is a forest with one connected component.</p>
+</div>
+</section></section>
+<section>
+<section id="sec-rooted-trees" class="title-slide slide level1 center" data-number="2">
+<h1><span class="header-section-number">2</span> Rooted trees</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-phone-calls" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2 (Passing the news)</strong></span> Eight members of a club, <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, <span class="math inline">\(c\)</span>, <span class="math inline">\(d\)</span>, <span class="math inline">\(e\)</span>, <span class="math inline">\(f\)</span>, <span class="math inline">\(g\)</span> and <span class="math inline">\(h\)</span>, pass news by phone. Member <span class="math inline">\(a\)</span> hears it first and calls <span class="math inline">\(b\)</span>, <span class="math inline">\(c\)</span> and <span class="math inline">\(d\)</span>. Then <span class="math inline">\(b\)</span> calls <span class="math inline">\(e\)</span> and <span class="math inline">\(f\)</span>, <span class="math inline">\(d\)</span> calls <span class="math inline">\(g\)</span>, and <span class="math inline">\(g\)</span> calls <span class="math inline">\(h\)</span>. <a href="#/fig-phone" class="quarto-xref">Figure&nbsp;3</a> draws the calls, with each caller above the members it calls. How many calls does the news pass through on its way from <span class="math inline">\(a\)</span> to <span class="math inline">\(h\)</span>, counting the call to <span class="math inline">\(h\)</span>?</p>
+<div id="fig-phone" class="quarto-float quarto-figure quarto-figure-center" alt="Eight labeled points in four rows, marked level 0 to level 3 on the right. Level 0 holds a. Level 1 holds b, c and d, each joined to a. Level 2 holds e and f, each joined to b, and g, joined to d. Level 3 holds h, joined to g.">
+<figure class="quarto-float quarto-float-fig">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-phone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: The calls of <a href="#/exr-phone-calls" class="quarto-xref">Exercise&nbsp;2</a>.
+</figcaption>
+<div aria-describedby="fig-phone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/trees-phone.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: The calls of Exercise&nbsp;2."><img data-src="../images/trees-phone.png" style="width:55.0%" alt="Eight labeled points in four rows, marked level 0 to level 3 on the right. Level 0 holds a. Level 1 holds b, c and d, each joined to a. Level 2 holds e and f, each joined to b, and g, joined to d. Level 3 holds h, joined to g."></a>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-phone-calls" class="proof solution">
+<p><span class="proof-title"><em>Solution 2</em>. </span>Three. Member <span class="math inline">\(h\)</span> hears the news only from <span class="math inline">\(g\)</span>, <span class="math inline">\(g\)</span> only from <span class="math inline">\(d\)</span>, and <span class="math inline">\(d\)</span> only from <span class="math inline">\(a\)</span>, so the news goes <span class="math inline">\(a, d, g, h\)</span>, through the three calls from <span class="math inline">\(a\)</span> to <span class="math inline">\(d\)</span>, from <span class="math inline">\(d\)</span> to <span class="math inline">\(g\)</span> and from <span class="math inline">\(g\)</span> to <span class="math inline">\(h\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-rooted-tree" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3 (Rooted tree)</strong></span> A <strong>rooted tree</strong> <span class="citation" data-cites="wikipedia_tree_graph_theory">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026i</a>)</span> is a tree (<a href="#/def-tree" class="quarto-xref">Definition&nbsp;1</a>) <span class="math inline">\(T\)</span> together with one of its vertices <span class="math inline">\(r\)</span>, called the <em>root</em> of <span class="math inline">\(T\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-phone-tree" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4 (The phone tree)</strong></span> The calls of <a href="#/exr-phone-calls" class="quarto-xref">Exercise&nbsp;2</a> form a graph (<a href="../chapters/graphs.html#def-graph-vertices-edges">Definition: Graph</a>) <span class="math inline">\(C\)</span>, with the eight members as vertices and an edge for each call:</p>
+<p><span class="math display">\[
+{\mathopen{}\left\{a, b\right\}\mathclose{}}, {\mathopen{}\left\{a, c\right\}\mathclose{}}, {\mathopen{}\left\{a, d\right\}\mathclose{}}, {\mathopen{}\left\{b, e\right\}\mathclose{}}, {\mathopen{}\left\{b, f\right\}\mathclose{}}, {\mathopen{}\left\{d, g\right\}\mathclose{}}, {\mathopen{}\left\{g, h\right\}\mathclose{}}.
+\]</span></p>
+<p><span class="math inline">\(C\)</span> is a tree (<a href="#/def-tree" class="quarto-xref">Definition&nbsp;1</a>). It is connected (<a href="../chapters/graphs.html#def-connected">Definition: Connected graph</a>), since the news goes from <span class="math inline">\(a\)</span> to every member along calls, and two of those walks, one read backward, join any two members. It has no cycles, by <a href="#/lem-degree-one" class="quarto-xref">Lemma&nbsp;1</a>: take out <span class="math inline">\(c\)</span>, <span class="math inline">\(e\)</span>, <span class="math inline">\(f\)</span> and <span class="math inline">\(h\)</span>, which have degree 1, then <span class="math inline">\(b\)</span> and <span class="math inline">\(g\)</span>, then <span class="math inline">\(a\)</span>, and <span class="math inline">\(d\)</span> is left with no edges. With <span class="math inline">\(a\)</span> as its root, <span class="math inline">\(C\)</span> is a rooted tree (<a href="#/def-rooted-tree" class="quarto-xref">Definition&nbsp;3</a>), the <em>phone tree</em>. <a href="#/fig-phone" class="quarto-xref">Figure&nbsp;3</a> draws it with the root at the top.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-tree-parent" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 4 (Parent)</strong></span> Let <span class="math inline">\(T\)</span> be a rooted tree (<a href="#/def-rooted-tree" class="quarto-xref">Definition&nbsp;3</a>) with root <span class="math inline">\(r\)</span>, and let <span class="math inline">\(v \ne r\)</span> be a vertex of <span class="math inline">\(T\)</span>. By <a href="#/thm-tree-paths" class="quarto-xref">Theorem&nbsp;1</a>, there is exactly one path (<a href="../chapters/graphs.html#def-graph-path">Definition: Path</a>) <span class="math inline">\(r = v_0, v_1, \ldots, v_k = v\)</span> from <span class="math inline">\(r\)</span> to <span class="math inline">\(v\)</span>, and <span class="math inline">\(k \ge 1\)</span> since <span class="math inline">\(v \ne r\)</span>. The <strong>parent</strong> of <span class="math inline">\(v\)</span> <span class="citation" data-cites="wikipedia_tree_graph_theory">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026i</a>)</span> is the vertex <span class="math inline">\(v_{k - 1}\)</span> just before <span class="math inline">\(v\)</span> on this path. The root has no parent.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-tree-parent" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5 (Parents in the phone tree)</strong></span> In the phone tree (<a href="#/exm-phone-tree" class="quarto-xref">Example&nbsp;4</a>), the path from <span class="math inline">\(a\)</span> to <span class="math inline">\(h\)</span> is <span class="math inline">\(a, d, g, h\)</span>, so the parent (<a href="#/def-tree-parent" class="quarto-xref">Definition&nbsp;4</a>) of <span class="math inline">\(h\)</span> is <span class="math inline">\(g\)</span>. The path from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span> is <span class="math inline">\(a, b\)</span>, so the parent of <span class="math inline">\(b\)</span> is <span class="math inline">\(a\)</span>. The parent of each member other than <span class="math inline">\(a\)</span> is the member who called them.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-tree-child" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5 (Child)</strong></span> A vertex <span class="math inline">\(v\)</span> of a rooted tree (<a href="#/def-rooted-tree" class="quarto-xref">Definition&nbsp;3</a>) is a <strong>child</strong> of a vertex <span class="math inline">\(u\)</span> <span class="citation" data-cites="wikipedia_tree_graph_theory">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026i</a>)</span> if <span class="math inline">\(u\)</span> is the parent (<a href="#/def-tree-parent" class="quarto-xref">Definition&nbsp;4</a>) of <span class="math inline">\(v\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-tree-child" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6 (Children in the phone tree)</strong></span> In the phone tree (<a href="#/exm-phone-tree" class="quarto-xref">Example&nbsp;4</a>),</p>
+<ul>
+<li>the children (<a href="#/def-tree-child" class="quarto-xref">Definition&nbsp;5</a>) of <span class="math inline">\(a\)</span> are <span class="math inline">\(b\)</span>, <span class="math inline">\(c\)</span> and <span class="math inline">\(d\)</span>;</li>
+<li>the children of <span class="math inline">\(b\)</span> are <span class="math inline">\(e\)</span> and <span class="math inline">\(f\)</span>;</li>
+<li>the only child of <span class="math inline">\(d\)</span> is <span class="math inline">\(g\)</span>, and the only child of <span class="math inline">\(g\)</span> is <span class="math inline">\(h\)</span>;</li>
+<li><span class="math inline">\(c\)</span>, <span class="math inline">\(e\)</span>, <span class="math inline">\(f\)</span> and <span class="math inline">\(h\)</span> have no children.</li>
+</ul>
+<p>These are the members each member calls.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="lem-parent-edge" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 2 (Every edge joins a vertex to its parent)</strong></span> Let <span class="math inline">\(T\)</span> be a rooted tree (<a href="#/def-rooted-tree" class="quarto-xref">Definition&nbsp;3</a>). For every edge <span class="math inline">\({\mathopen{}\left\{u, w\right\}\mathclose{}}\)</span> of <span class="math inline">\(T\)</span>, one of <span class="math inline">\(u\)</span> and <span class="math inline">\(w\)</span> is the parent (<a href="#/def-tree-parent" class="quarto-xref">Definition&nbsp;4</a>) of the other.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-ancestor" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 6 (Ancestor)</strong></span> Let <span class="math inline">\(T\)</span> be a rooted tree (<a href="#/def-rooted-tree" class="quarto-xref">Definition&nbsp;3</a>) with root <span class="math inline">\(r\)</span>, and let <span class="math inline">\(v\)</span> be a vertex of <span class="math inline">\(T\)</span>. A vertex <span class="math inline">\(u \ne v\)</span> is an <strong>ancestor</strong> of <span class="math inline">\(v\)</span> <span class="citation" data-cites="wikipedia_tree_graph_theory">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026i</a>)</span> if <span class="math inline">\(u\)</span> is on the path (<a href="../chapters/graphs.html#def-graph-path">Definition: Path</a>) from <span class="math inline">\(r\)</span> to <span class="math inline">\(v\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-ancestor" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7 (Ancestors in the phone tree)</strong></span> In the phone tree (<a href="#/exm-phone-tree" class="quarto-xref">Example&nbsp;4</a>), the path from <span class="math inline">\(a\)</span> to <span class="math inline">\(h\)</span> is <span class="math inline">\(a, d, g, h\)</span>, so the ancestors (<a href="#/def-ancestor" class="quarto-xref">Definition&nbsp;6</a>) of <span class="math inline">\(h\)</span> are <span class="math inline">\(a\)</span>, <span class="math inline">\(d\)</span> and <span class="math inline">\(g\)</span>. The root <span class="math inline">\(a\)</span> is an ancestor of every other vertex, and has no ancestors itself. The parent of a vertex is always one of its ancestors.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-descendant" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 7 (Descendant)</strong></span> A vertex <span class="math inline">\(v\)</span> of a rooted tree (<a href="#/def-rooted-tree" class="quarto-xref">Definition&nbsp;3</a>) is a <strong>descendant</strong> of a vertex <span class="math inline">\(u\)</span> <span class="citation" data-cites="wikipedia_tree_graph_theory">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026i</a>)</span> if <span class="math inline">\(u\)</span> is an ancestor (<a href="#/def-ancestor" class="quarto-xref">Definition&nbsp;6</a>) of <span class="math inline">\(v\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-descendant" class="theorem example">
+<p><span class="theorem-title"><strong>Example 8 (Descendants in the phone tree)</strong></span> In the phone tree (<a href="#/exm-phone-tree" class="quarto-xref">Example&nbsp;4</a>),</p>
+<ul>
+<li>the descendants (<a href="#/def-descendant" class="quarto-xref">Definition&nbsp;7</a>) of <span class="math inline">\(d\)</span> are <span class="math inline">\(g\)</span> and <span class="math inline">\(h\)</span>, the members who hear the news through <span class="math inline">\(d\)</span>;</li>
+<li>the descendants of <span class="math inline">\(a\)</span> are the seven other members;</li>
+<li><span class="math inline">\(c\)</span> has no descendants.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-tree-leaf" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 8 (Leaf)</strong></span> A <strong>leaf</strong> of a rooted tree (<a href="#/def-rooted-tree" class="quarto-xref">Definition&nbsp;3</a>) <span class="citation" data-cites="wikipedia_tree_graph_theory">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026i</a>)</span> is a vertex with no children (<a href="#/def-tree-child" class="quarto-xref">Definition&nbsp;5</a>).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-tree-leaf" class="theorem example">
+<p><span class="theorem-title"><strong>Example 9 (Leaves of the phone tree)</strong></span> The leaves (<a href="#/def-tree-leaf" class="quarto-xref">Definition&nbsp;8</a>) of the phone tree (<a href="#/exm-phone-tree" class="quarto-xref">Example&nbsp;4</a>) are <span class="math inline">\(c\)</span>, <span class="math inline">\(e\)</span>, <span class="math inline">\(f\)</span> and <span class="math inline">\(h\)</span>, the members who call no one. In a rooted tree with only one vertex, the root is a leaf.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-internal-vertex" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 9 (Internal vertex)</strong></span> An <strong>internal vertex</strong> of a rooted tree (<a href="#/def-rooted-tree" class="quarto-xref">Definition&nbsp;3</a>) <span class="citation" data-cites="wikipedia_tree_graph_theory">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026i</a>)</span> is a vertex with at least one child (<a href="#/def-tree-child" class="quarto-xref">Definition&nbsp;5</a>).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-internal-vertex" class="theorem example">
+<p><span class="theorem-title"><strong>Example 10 (Internal vertices of the phone tree)</strong></span> The internal vertices (<a href="#/def-internal-vertex" class="quarto-xref">Definition&nbsp;9</a>) of the phone tree (<a href="#/exm-phone-tree" class="quarto-xref">Example&nbsp;4</a>) are <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, <span class="math inline">\(d\)</span> and <span class="math inline">\(g\)</span>, the members who call someone. Each vertex of a rooted tree is either a leaf (<a href="#/def-tree-leaf" class="quarto-xref">Definition&nbsp;8</a>) or an internal vertex, and not both.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-subtree" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 10 (Subtree)</strong></span> Let <span class="math inline">\(T\)</span> be a rooted tree (<a href="#/def-rooted-tree" class="quarto-xref">Definition&nbsp;3</a>), and let <span class="math inline">\(v\)</span> be a vertex of <span class="math inline">\(T\)</span>. The <strong>subtree</strong> of <span class="math inline">\(T\)</span> rooted at <span class="math inline">\(v\)</span> <span class="citation" data-cites="wikipedia_tree_graph_theory">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026i</a>)</span> is the subgraph (<a href="../chapters/graphs.html#def-subgraph">Definition: Subgraph</a>) of <span class="math inline">\(T\)</span> whose vertices are <span class="math inline">\(v\)</span> and its descendants (<a href="#/def-descendant" class="quarto-xref">Definition&nbsp;7</a>), and whose edges are the edges of <span class="math inline">\(T\)</span> with both endpoints among those vertices, with <span class="math inline">\(v\)</span> as its root.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-subtree" class="theorem example">
+<p><span class="theorem-title"><strong>Example 11 (A subtree of the phone tree)</strong></span> In the phone tree (<a href="#/exm-phone-tree" class="quarto-xref">Example&nbsp;4</a>), the subtree (<a href="#/def-subtree" class="quarto-xref">Definition&nbsp;10</a>) rooted at <span class="math inline">\(d\)</span> has the vertices <span class="math inline">\(d\)</span>, <span class="math inline">\(g\)</span> and <span class="math inline">\(h\)</span> and the edges <span class="math inline">\({\mathopen{}\left\{d, g\right\}\mathclose{}}\)</span> and <span class="math inline">\({\mathopen{}\left\{g, h\right\}\mathclose{}}\)</span>. It is the part of <a href="#/fig-phone" class="quarto-xref">Figure&nbsp;3</a> below <span class="math inline">\(d\)</span>, together with <span class="math inline">\(d\)</span>. The subtree rooted at a leaf, such as <span class="math inline">\(c\)</span>, has one vertex and no edges, and the subtree rooted at <span class="math inline">\(a\)</span> is the whole phone tree.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-subtree-tree" class="proof remark">
+<p><span class="proof-title"><em>Remark 4</em> (A subtree is a tree). </span>The subtree (<a href="#/def-subtree" class="quarto-xref">Definition&nbsp;10</a>) of a rooted tree <span class="math inline">\(T\)</span> rooted at <span class="math inline">\(v\)</span> is a tree (<a href="#/def-tree" class="quarto-xref">Definition&nbsp;1</a>), so it is a rooted tree. It has no cycles, since a cycle in it would be a cycle in <span class="math inline">\(T\)</span>. It is connected: let <span class="math inline">\(d\)</span> be a descendant (<a href="#/def-descendant" class="quarto-xref">Definition&nbsp;7</a>) of <span class="math inline">\(v\)</span>, and let <span class="math inline">\(r = x_0, x_1, \ldots, x_k = d\)</span> be the path from the root <span class="math inline">\(r\)</span> of <span class="math inline">\(T\)</span> to <span class="math inline">\(d\)</span>, which goes through <span class="math inline">\(v = x_i\)</span>. For each <span class="math inline">\(j &gt; i\)</span>, the path <span class="math inline">\(x_0, \ldots, x_j\)</span> goes from <span class="math inline">\(r\)</span> to <span class="math inline">\(x_j\)</span> and passes through <span class="math inline">\(v\)</span>, so it is the path from <span class="math inline">\(r\)</span> to <span class="math inline">\(x_j\)</span> (<a href="#/thm-tree-paths" class="quarto-xref">Theorem&nbsp;1</a>), and <span class="math inline">\(x_j\)</span> is a descendant of <span class="math inline">\(v\)</span>. So <span class="math inline">\(x_i, \ldots, x_k\)</span> is a walk from <span class="math inline">\(v\)</span> to <span class="math inline">\(d\)</span> in the subtree.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-tree-level" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 11 (Level)</strong></span> The <strong>level</strong> <span class="math inline">\(\operatorname{level}(v)\)</span> of a vertex <span class="math inline">\(v\)</span> of a rooted tree (<a href="#/def-rooted-tree" class="quarto-xref">Definition&nbsp;3</a>) with root <span class="math inline">\(r\)</span> <span class="citation" data-cites="wikipedia_tree_graph_theory">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026i</a>)</span> is the length of the path (<a href="../chapters/graphs.html#def-graph-path">Definition: Path</a>) from <span class="math inline">\(r\)</span> to <span class="math inline">\(v\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-tree-level" class="theorem example">
+<p><span class="theorem-title"><strong>Example 12 (Levels in the phone tree)</strong></span> In the phone tree (<a href="#/exm-phone-tree" class="quarto-xref">Example&nbsp;4</a>), as <a href="#/fig-phone" class="quarto-xref">Figure&nbsp;3</a> marks,</p>
+<ul>
+<li>the root <span class="math inline">\(a\)</span> is at level (<a href="#/def-tree-level" class="quarto-xref">Definition&nbsp;11</a>) 0;</li>
+<li><span class="math inline">\(b\)</span>, <span class="math inline">\(c\)</span> and <span class="math inline">\(d\)</span> are at level 1;</li>
+<li><span class="math inline">\(e\)</span>, <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are at level 2;</li>
+<li><span class="math inline">\(h\)</span> is at level 3.</li>
+</ul>
+<p>The level of a member is the number of calls the news passes through to reach that member, which <a href="#/sol-phone-calls" class="quarto-xref">Solution&nbsp;2</a> found for <span class="math inline">\(h\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="lem-level-parent" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 3 (A child is one level below its parent)</strong></span> Let <span class="math inline">\(v\)</span> be a vertex of a rooted tree (<a href="#/def-rooted-tree" class="quarto-xref">Definition&nbsp;3</a>) other than the root <span class="math inline">\(r\)</span>, and let <span class="math inline">\(u\)</span> be its parent (<a href="#/def-tree-parent" class="quarto-xref">Definition&nbsp;4</a>). Then the path from <span class="math inline">\(r\)</span> to <span class="math inline">\(v\)</span> is the path from <span class="math inline">\(r\)</span> to <span class="math inline">\(u\)</span> followed by <span class="math inline">\(v\)</span>, and</p>
+<p><span class="math display">\[
+\operatorname{level}(v) = \operatorname{level}(u) + 1.
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-tree-height" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 12 (Height)</strong></span> The <strong>height</strong> of a rooted tree (<a href="#/def-rooted-tree" class="quarto-xref">Definition&nbsp;3</a>) <span class="citation" data-cites="wikipedia_tree_graph_theory">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026i</a>)</span> is the largest level (<a href="#/def-tree-level" class="quarto-xref">Definition&nbsp;11</a>) of its vertices.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-tree-height" class="theorem example">
+<p><span class="theorem-title"><strong>Example 13 (The height of the phone tree)</strong></span> The phone tree (<a href="#/exm-phone-tree" class="quarto-xref">Example&nbsp;4</a>) has height (<a href="#/def-tree-height" class="quarto-xref">Definition&nbsp;12</a>) 3, since its deepest vertex, <span class="math inline">\(h\)</span>, is at level 3 (<a href="#/exm-tree-level" class="quarto-xref">Example&nbsp;12</a>). The news reaches every member within three calls.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-rerooted" class="theorem example">
+<p><span class="theorem-title"><strong>Example 14 (Another root)</strong></span> Suppose that <span class="math inline">\(c\)</span> hears the news first, and it travels along the same seven edges of the tree <span class="math inline">\(C\)</span> of <a href="#/exm-phone-tree" class="quarto-xref">Example&nbsp;4</a>. Then <span class="math inline">\(C\)</span> with root <span class="math inline">\(c\)</span> is a different rooted tree (<a href="#/def-rooted-tree" class="quarto-xref">Definition&nbsp;3</a>), drawn in <a href="#/fig-phone-c" class="quarto-xref">Figure&nbsp;4</a>.</p>
+<ul>
+<li>The parent (<a href="#/def-tree-parent" class="quarto-xref">Definition&nbsp;4</a>) of <span class="math inline">\(a\)</span> is now <span class="math inline">\(c\)</span>, and <span class="math inline">\(a\)</span> has two children, <span class="math inline">\(b\)</span> and <span class="math inline">\(d\)</span>.</li>
+<li>The path from <span class="math inline">\(c\)</span> to <span class="math inline">\(h\)</span> is <span class="math inline">\(c, a, d, g, h\)</span>, so <span class="math inline">\(h\)</span> is at level (<a href="#/def-tree-level" class="quarto-xref">Definition&nbsp;11</a>) 4, and the height (<a href="#/def-tree-height" class="quarto-xref">Definition&nbsp;12</a>) is 4.</li>
+<li>The leaves (<a href="#/def-tree-leaf" class="quarto-xref">Definition&nbsp;8</a>) are <span class="math inline">\(e\)</span>, <span class="math inline">\(f\)</span> and <span class="math inline">\(h\)</span>, and <span class="math inline">\(c\)</span> is now an internal vertex.</li>
+</ul>
+<div id="fig-phone-c" class="quarto-float quarto-figure quarto-figure-center" alt="The same eight points and seven edges as the phone tree, drawn with c at the top, marked level 0 to level 4 on the right. Level 0 holds c. Level 1 holds a, joined to c. Level 2 holds b and d, each joined to a. Level 3 holds e and f, each joined to b, and g, joined to d. Level 4 holds h, joined to g.">
+<figure class="quarto-float quarto-float-fig">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-phone-c-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: The tree <span class="math inline">\(C\)</span> with root <span class="math inline">\(c\)</span>.
+</figcaption>
+<div aria-describedby="fig-phone-c-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/trees-phone-c.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;4: The tree C with root c."><img data-src="../images/trees-phone-c.png" style="width:55.0%" alt="The same eight points and seven edges as the phone tree, drawn with c at the top, marked level 0 to level 4 on the right. Level 0 holds c. Level 1 holds a, joined to c. Level 2 holds b and d, each joined to a. Level 3 holds e and f, each joined to b, and g, joined to d. Level 4 holds h, joined to g."></a>
+</div>
+</figure>
+</div>
+</div>
+</section></section>
+<section>
+<section id="sec-tree-edges" class="title-slide slide level1 center" data-number="3">
+<h1><span class="header-section-number">3</span> Counting edges</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-all-calls" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3 (Counting the calls)</strong></span> A club with 40 members passes news by phone. One member hears it first, and every other member hears it in exactly one call, from a member who already knows it. How many calls are made in all?</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-all-calls" class="proof solution">
+<p><span class="proof-title"><em>Solution 3</em>. </span>There are 39 calls. Each call goes to exactly one member who did not know the news, and each of the 39 members other than the first gets exactly one call. So there is one call for each of those 39 members.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-tree-edges" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2 (A tree with <span class="math inline">\(n\)</span> vertices has <span class="math inline">\(n - 1\)</span> edges)</strong></span> Every tree <span class="math inline">\(T = (V, E)\)</span> (<a href="#/def-tree" class="quarto-xref">Definition&nbsp;1</a>) with <span class="math inline">\(n\)</span> vertices has <span class="math inline">\(n - 1\)</span> edges.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-tree-edges" class="theorem example">
+<p><span class="theorem-title"><strong>Example 15 (Counting edges)</strong></span> &nbsp;</p>
+<ul>
+<li>The pipes tree of <a href="#/exm-pipes-tree" class="quarto-xref">Example&nbsp;1</a> has 7 vertices and 6 edges, and the phone tree of <a href="#/exm-phone-tree" class="quarto-xref">Example&nbsp;4</a> has 8 vertices and 7 edges, as <a href="#/thm-tree-edges" class="quarto-xref">Theorem&nbsp;2</a> says.</li>
+<li>Each connected component of the forest <span class="math inline">\(F\)</span> of <a href="#/exm-forest" class="quarto-xref">Example&nbsp;3</a> is a tree, with 1, 1, 2 and 4 vertices, so it has 0, 0, 1 and 3 edges. <span class="math inline">\(F\)</span> has 8 vertices and <span class="math inline">\(0 + 0 + 1 + 3 = 4\)</span> edges.</li>
+<li>The graph <span class="math inline">\(H\)</span> of <a href="#/fig-trees-or-not" class="quarto-xref">Figure&nbsp;2</a> is connected and has 5 vertices and 5 edges, so it is not a tree, by <a href="#/thm-tree-edges" class="quarto-xref">Theorem&nbsp;2</a>, without finding its cycle.</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="sec-binary-trees" class="title-slide slide level1 center" data-number="4">
+<h1><span class="header-section-number">4</span> Binary trees</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-three-vertices" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 4 (Shapes with three vertices)</strong></span> A binary tree is either empty, or a root together with two binary trees, a left one and a right one, drawn below the root to its left and to its right. Ignoring the names of the vertices, how many binary trees have exactly three vertices?</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-three-vertices" class="proof solution">
+<p><span class="proof-title"><em>Solution 4</em>. </span>Five, drawn in <a href="#/fig-three-vertices" class="quarto-xref">Figure&nbsp;5</a>. The root is one of the three vertices, so the left and right binary trees have two vertices between them: 2 and 0, 1 and 1, or 0 and 2. There is one binary tree with no vertices, the empty one, and one with one vertex, a root with two empty binary trees. There are two with two vertices: a root with one vertex in its left binary tree, or in its right one. So there are <span class="math inline">\(2 \cdot 1 + 1 \cdot 1 + 1 \cdot 2 = 5\)</span> binary trees with three vertices.</p>
+<div id="fig-three-vertices" class="quarto-float quarto-figure quarto-figure-center" alt="Five small trees of three unlabeled points each. The first goes down to the left twice. The second goes down to the left and then to the right. The third has a root with one point below it to the left and one below it to the right. The fourth goes down to the right and then to the left. The fifth goes down to the right twice.">
+<figure class="quarto-float quarto-float-fig">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-three-vertices-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: The five binary trees with three vertices.
+</figcaption>
+<div aria-describedby="fig-three-vertices-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/trees-three-vertices.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: The five binary trees with three vertices."><img data-src="../images/trees-three-vertices.png" style="width:75.0%" alt="Five small trees of three unlabeled points each. The first goes down to the left twice. The second goes down to the left and then to the right. The third has a root with one point below it to the left and one below it to the right. The fourth goes down to the right and then to the left. The fifth goes down to the right twice."></a>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-ordered-rooted-tree" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 13 (Ordered rooted tree)</strong></span> An <strong>ordered rooted tree</strong> <span class="citation" data-cites="wikipedia_tree_graph_theory">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026i</a>)</span> is a rooted tree (<a href="#/def-rooted-tree" class="quarto-xref">Definition&nbsp;3</a>) in which the children (<a href="#/def-tree-child" class="quarto-xref">Definition&nbsp;5</a>) of each vertex are listed in an order: a first child, a second child, and so on. We draw the children of each vertex from left to right in their order.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-ordered-phone" class="theorem example">
+<p><span class="theorem-title"><strong>Example 16 (The order of the calls)</strong></span> In the phone tree (<a href="#/exm-phone-tree" class="quarto-xref">Example&nbsp;4</a>), list the children of each member in the order of their calls: <span class="math inline">\(a\)</span> calls <span class="math inline">\(b\)</span>, then <span class="math inline">\(c\)</span>, then <span class="math inline">\(d\)</span>, and <span class="math inline">\(b\)</span> calls <span class="math inline">\(e\)</span>, then <span class="math inline">\(f\)</span>. This makes the phone tree an ordered rooted tree (<a href="#/def-ordered-rooted-tree" class="quarto-xref">Definition&nbsp;13</a>), drawn in <a href="#/fig-phone" class="quarto-xref">Figure&nbsp;3</a>. If <span class="math inline">\(a\)</span> called <span class="math inline">\(d\)</span> first, the ordered rooted tree would be different, although the rooted tree would be the same.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-binary-tree" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 14 (Binary tree)</strong></span> Let <span class="math inline">\(A\)</span> be a set (<a href="../chapters/sets.html#def-set">Definition: Set</a>) of labels. The set of <strong>binary trees</strong> with labels in <span class="math inline">\(A\)</span> <span class="citation" data-cites="wikipedia_binary_tree">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026a</a>)</span> is the recursively defined set (<a href="../chapters/recursion.html#def-recursive-set">Definition: Recursively defined set</a>) with</p>
+<ul>
+<li>base case: the <em>empty tree</em>, written <span class="math inline">\(\mathtt{nil}\)</span>, is a binary tree;</li>
+<li>recursive rule: if <span class="math inline">\(x \in A\)</span> and <span class="math inline">\(L\)</span> and <span class="math inline">\(R\)</span> are binary trees, then <span class="math inline">\(\operatorname{node}(x, L, R)\)</span> is a binary tree, whose <em>root</em> has the label <span class="math inline">\(x\)</span>, and whose <em>left subtree</em> is <span class="math inline">\(L\)</span> and <em>right subtree</em> is <span class="math inline">\(R\)</span>.</li>
+</ul>
+<p>The vertices of <span class="math inline">\(\operatorname{node}(x, L, R)\)</span> are its root and the vertices of <span class="math inline">\(L\)</span> and of <span class="math inline">\(R\)</span>; the empty tree has no vertices. The root, the vertices of <span class="math inline">\(L\)</span> and the vertices of <span class="math inline">\(R\)</span> are taken as different vertices, even when <span class="math inline">\(L\)</span> and <span class="math inline">\(R\)</span> are the same binary tree: a vertex is a position in the tree, such as “the root of the left subtree”, and its label is the element of <span class="math inline">\(A\)</span> at that position. So <span class="math inline">\(\operatorname{node}(x, L, R)\)</span> has one more vertex than <span class="math inline">\(L\)</span> and <span class="math inline">\(R\)</span> together, and two vertices may have the same label.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-single" class="proof remark">
+<p><span class="proof-title"><em>Remark 5</em> (Writing a binary tree with one vertex). </span>For a label <span class="math inline">\(x\)</span>, we write <span class="math inline">\(\operatorname{single}(x)\)</span> for <span class="math inline">\(\operatorname{node}(x, \mathtt{nil}, \mathtt{nil})\)</span>, the binary tree (<a href="#/def-binary-tree" class="quarto-xref">Definition&nbsp;14</a>) whose only vertex is its root, labeled <span class="math inline">\(x\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-binary-tree" class="theorem example">
+<p><span class="theorem-title"><strong>Example 17 (A binary tree with nine vertices)</strong></span> With <span class="math inline">\(\operatorname{single}\)</span> as in <a href="#/rem-single" class="quarto-xref">Remark&nbsp;5</a>, the recursive rule of binary trees (<a href="#/def-binary-tree" class="quarto-xref">Definition&nbsp;14</a>) builds</p>
+<p><span class="math display">\[
+\begin{aligned}
+B_1 &amp;= \operatorname{node}\mathopen{}\left(f, \operatorname{single}(c), \operatorname{node}\mathopen{}\left(h, \mathtt{nil}, \operatorname{single}(j)\right)\mathclose{}\right)\mathclose{},
+\\ B_2 &amp;= \operatorname{node}\mathopen{}\left(t, \operatorname{node}\mathopen{}\left(r, \operatorname{single}(p), \mathtt{nil}\right)\mathclose{}, \operatorname{single}(w)\right)\mathclose{},
+\\ B &amp;= \operatorname{node}(m, B_1, B_2).
+\end{aligned}
+\]</span></p>
+<p>The binary tree <span class="math inline">\(B\)</span> has the nine vertices labeled <span class="math inline">\(m\)</span>, <span class="math inline">\(f\)</span>, <span class="math inline">\(c\)</span>, <span class="math inline">\(h\)</span>, <span class="math inline">\(j\)</span>, <span class="math inline">\(t\)</span>, <span class="math inline">\(r\)</span>, <span class="math inline">\(p\)</span> and <span class="math inline">\(w\)</span>. Its root is labeled <span class="math inline">\(m\)</span>, its left subtree is <span class="math inline">\(B_1\)</span> and its right subtree is <span class="math inline">\(B_2\)</span>. <a href="#/fig-binary" class="quarto-xref">Figure&nbsp;6</a> draws it.</p>
+<div id="fig-binary" class="quarto-float quarto-figure quarto-figure-center" alt="Nine labeled points in four rows. Row 1 holds m. Row 2 holds f, below m to the left, and t, below m to the right. Row 3 holds c, below f to the left, h, below f to the right, r, below t to the left, and w, below t to the right. Row 4 holds j, below h to the right, and p, below r to the left.">
+<figure class="quarto-float quarto-float-fig">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-binary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: The binary tree <span class="math inline">\(B\)</span>.
+</figcaption>
+<div aria-describedby="fig-binary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/trees-binary.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;6: The binary tree B."><img data-src="../images/trees-binary.png" style="width:55.0%" alt="Nine labeled points in four rows. Row 1 holds m. Row 2 holds f, below m to the left, and t, below m to the right. Row 3 holds c, below f to the left, h, below f to the right, r, below t to the left, and w, below t to the right. Row 4 holds j, below h to the right, and p, below r to the left."></a>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-binary-drawing" class="proof remark">
+<p><span class="proof-title"><em>Remark 6</em> (A binary tree as a rooted tree). </span>We draw <span class="math inline">\(\operatorname{node}(x, L, R)\)</span> (<a href="#/def-binary-tree" class="quarto-xref">Definition&nbsp;14</a>) with its root at the top, the drawing of <span class="math inline">\(L\)</span> below it to the left, and the drawing of <span class="math inline">\(R\)</span> below it to the right, with an edge from the root to the root of each of <span class="math inline">\(L\)</span> and <span class="math inline">\(R\)</span> that is not empty. The drawing of a binary tree that is not empty is a tree (<a href="#/def-tree" class="quarto-xref">Definition&nbsp;1</a>), and with the root of the binary tree as its root it is a rooted tree (<a href="#/def-rooted-tree" class="quarto-xref">Definition&nbsp;3</a>), in which each vertex has at most two children (<a href="#/def-tree-child" class="quarto-xref">Definition&nbsp;5</a>): the roots of its subtrees that are not empty. Levels (<a href="#/def-tree-level" class="quarto-xref">Definition&nbsp;11</a>), height (<a href="#/def-tree-height" class="quarto-xref">Definition&nbsp;12</a>), leaves (<a href="#/def-tree-leaf" class="quarto-xref">Definition&nbsp;8</a>) and the other words for rooted trees apply to a binary tree through its drawing. The empty tree has no drawing, since a graph has at least one vertex.</p>
+<p>In a binary tree <span class="math inline">\(T\)</span> that is not empty, each vertex <span class="math inline">\(v\)</span> is the root of exactly one of the binary trees <span class="math inline">\(\operatorname{node}(y, L_v, R_v)\)</span> from which the recursive rule builds <span class="math inline">\(T\)</span>, and <span class="math inline">\(L_v\)</span> and <span class="math inline">\(R_v\)</span> are the <em>left subtree</em> and <em>right subtree</em> of <span class="math inline">\(v\)</span>. For the root of <span class="math inline">\(T\)</span>, they are the left and right subtrees of <span class="math inline">\(T\)</span>. When <span class="math inline">\(L_v\)</span> is not empty, its root is a child of <span class="math inline">\(v\)</span>, and the drawing of <span class="math inline">\(L_v\)</span> is the subtree (<a href="#/def-subtree" class="quarto-xref">Definition&nbsp;10</a>) of the drawing of <span class="math inline">\(T\)</span> rooted at that child, since the descendants (<a href="#/def-descendant" class="quarto-xref">Definition&nbsp;7</a>) of that child are the vertices of <span class="math inline">\(L_v\)</span>. The same holds for <span class="math inline">\(R_v\)</span>.</p>
+<p>The drawing is a tree, by structural induction (<a href="../chapters/recursion.html#def-structural-induction">Definition: Structural induction</a>). It is connected, since the root is joined to the roots of the subtrees that are not empty, whose drawings are connected. Every edge of the drawing of <span class="math inline">\(\operatorname{node}(x, L, R)\)</span> lies in the drawing of <span class="math inline">\(L\)</span>, lies in the drawing of <span class="math inline">\(R\)</span>, or joins the root to the root of <span class="math inline">\(L\)</span> or of <span class="math inline">\(R\)</span>. A cycle cannot lie in the drawing of <span class="math inline">\(L\)</span> or of <span class="math inline">\(R\)</span>, which have no cycles, so it uses an edge at the root, say the edge to the root of <span class="math inline">\(L\)</span>. Then the cycle has a vertex in the drawing of <span class="math inline">\(L\)</span> and a vertex, the root, outside it. Going once around the cycle, it crosses between the drawing of <span class="math inline">\(L\)</span> and the rest at least twice, each time along an edge with one endpoint in the drawing of <span class="math inline">\(L\)</span> and the other outside it. But there is only one such edge, and a cycle uses each edge once. So the drawing has no cycles.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-left-right" class="theorem example">
+<p><span class="theorem-title"><strong>Example 18 (Left is not right)</strong></span> The binary trees (<a href="#/def-binary-tree" class="quarto-xref">Definition&nbsp;14</a>), with <span class="math inline">\(\operatorname{single}\)</span> as in <a href="#/rem-single" class="quarto-xref">Remark&nbsp;5</a>,</p>
+<p><span class="math display">\[
+\operatorname{node}\mathopen{}\left(x, \operatorname{single}(y), \mathtt{nil}\right)\mathclose{}
+\quad \text{and} \quad
+\operatorname{node}\mathopen{}\left(x, \mathtt{nil}, \operatorname{single}(y)\right)\mathclose{}
+\]</span></p>
+<p>are different: <span class="math inline">\(y\)</span> is the root of the left subtree of the first, and of the right subtree of the second. <a href="#/fig-left-right" class="quarto-xref">Figure&nbsp;7</a> draws them. As rooted trees (<a href="#/rem-binary-drawing" class="quarto-xref">Remark&nbsp;6</a>), they are the same: a root <span class="math inline">\(x\)</span> with one child <span class="math inline">\(y\)</span>. So a binary tree says more than its rooted tree: it says whether each child is on the left or on the right.</p>
+<div id="fig-left-right" class="quarto-float quarto-figure quarto-figure-center" alt="Two small trees. On the left, x with y below it to the left. On the right, x with y below it to the right.">
+<figure class="quarto-float quarto-float-fig">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-left-right-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Two different binary trees with the same rooted tree.
+</figcaption>
+<div aria-describedby="fig-left-right-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/trees-left-right.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;7: Two different binary trees with the same rooted tree."><img data-src="../images/trees-left-right.png" style="width:40.0%" alt="Two small trees. On the left, x with y below it to the left. On the right, x with y below it to the right."></a>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-size-height" class="proof remark">
+<p><span class="proof-title"><em>Remark 7</em> (Size and height, recursively). </span>For a binary tree <span class="math inline">\(T\)</span> (<a href="#/def-binary-tree" class="quarto-xref">Definition&nbsp;14</a>), write <span class="math inline">\(\operatorname{size}(T)\)</span> for its number of vertices, and <span class="math inline">\(\operatorname{height}(T)\)</span> for the height (<a href="#/def-tree-height" class="quarto-xref">Definition&nbsp;12</a>) of its drawing (<a href="#/rem-binary-drawing" class="quarto-xref">Remark&nbsp;6</a>), with <span class="math inline">\(\operatorname{height}(\mathtt{nil}) = -1\)</span> for the empty tree. These follow the recursive definition of binary trees:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\operatorname{size}(\mathtt{nil}) &amp;= 0,
+\\ \operatorname{size}\mathopen{}\left(\operatorname{node}(x, L, R)\right)\mathclose{} &amp;= 1 + \operatorname{size}(L) + \operatorname{size}(R),
+\\ \operatorname{height}\mathopen{}\left(\operatorname{node}(x, L, R)\right)\mathclose{} &amp;= 1 + {\max\mathopen{}\left(\operatorname{height}(L), \operatorname{height}(R)\right)\mathclose{}}.
+\end{aligned}
+\]</span></p>
+<p>For the height: in the drawing of <span class="math inline">\(\operatorname{node}(x, L, R)\)</span>, the path from the root to a vertex <span class="math inline">\(v\)</span> of <span class="math inline">\(L\)</span> is the root followed by the path from the root of <span class="math inline">\(L\)</span> to <span class="math inline">\(v\)</span> in the drawing of <span class="math inline">\(L\)</span> (<a href="#/thm-tree-paths" class="quarto-xref">Theorem&nbsp;1</a>), so the level of <span class="math inline">\(v\)</span> is one more than its level in <span class="math inline">\(L\)</span>, and the same holds for <span class="math inline">\(R\)</span>. So the largest level is 0 when <span class="math inline">\(L\)</span> and <span class="math inline">\(R\)</span> are both empty, and otherwise 1 plus the largest height of the subtrees that are not empty. With <span class="math inline">\(\operatorname{height}(\mathtt{nil}) = -1\)</span>, both cases give the formula above.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-binary-size" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 3 (A short binary tree has few vertices)</strong></span> For every binary tree <span class="math inline">\(T\)</span> (<a href="#/def-binary-tree" class="quarto-xref">Definition&nbsp;14</a>), with size and height as in <a href="#/rem-size-height" class="quarto-xref">Remark&nbsp;7</a>,</p>
+<p><span class="math display">\[
+\operatorname{size}(T) \le 2^{\operatorname{height}(T) + 1} - 1.
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-binary-size" class="theorem example">
+<p><span class="theorem-title"><strong>Example 19 (Using the bound)</strong></span> &nbsp;</p>
+<ul>
+<li>The binary tree <span class="math inline">\(B\)</span> of <a href="#/exm-binary-tree" class="quarto-xref">Example&nbsp;17</a> has size 9 and height 3, and <span class="math inline">\(9 \le 2^{4} - 1 = 15\)</span>, as <a href="#/thm-binary-size" class="quarto-xref">Theorem&nbsp;3</a> says.</li>
+<li>The binary tree <span class="math inline">\(\operatorname{node}\mathopen{}\left(d, \operatorname{node}\mathopen{}\left(b, \operatorname{single}(a), \operatorname{single}(c)\right)\mathclose{}, \operatorname{node}\mathopen{}\left(f, \operatorname{single}(e), \operatorname{single}(g)\right)\mathclose{}\right)\mathclose{}\)</span> (with <span class="math inline">\(\operatorname{single}\)</span> as in <a href="#/rem-single" class="quarto-xref">Remark&nbsp;5</a>) has size 7 and height 2, and <span class="math inline">\(7 = 2^{3} - 1\)</span>, so the bound can be reached.</li>
+<li>A binary tree with 1000 vertices has height at least 9: a binary tree of height at most 8 has at most <span class="math inline">\(2^{9} - 1 = 511\)</span> vertices.</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="sec-traversals" class="title-slide slide level1 center" data-number="5">
+<h1><span class="header-section-number">5</span> Preorder, inorder and postorder</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-root-first" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5 (Root first)</strong></span> List the labels of the binary tree <span class="math inline">\(B\)</span> of <a href="#/fig-binary" class="quarto-xref">Figure&nbsp;6</a> by this rule: list the root, then list the left subtree by the same rule, then list the right subtree by the same rule. What list do you get?</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-root-first" class="proof solution">
+<p><span class="proof-title"><em>Solution 5</em>. </span><span class="math inline">\(m, f, c, h, j, t, r, p, w\)</span>. The root <span class="math inline">\(m\)</span> comes first. Next comes the left subtree, rooted at <span class="math inline">\(f\)</span>: first <span class="math inline">\(f\)</span>, then its left subtree, <span class="math inline">\(c\)</span>, then its right subtree, <span class="math inline">\(h\)</span> followed by <span class="math inline">\(j\)</span>. Last comes the right subtree, rooted at <span class="math inline">\(t\)</span>: first <span class="math inline">\(t\)</span>, then <span class="math inline">\(r\)</span> followed by <span class="math inline">\(p\)</span>, then <span class="math inline">\(w\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-preorder" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 15 (Preorder)</strong></span> The <strong>preorder</strong> <span class="math inline">\(\operatorname{preorder}(T)\)</span> of a binary tree <span class="math inline">\(T\)</span> (<a href="#/def-binary-tree" class="quarto-xref">Definition&nbsp;14</a>) <span class="citation" data-cites="wikipedia_tree_traversal">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026j</a>)</span> is the list (<a href="../chapters/recursion.html#def-list">Definition: List</a>) of the labels of its vertices defined recursively, following the recursive definition of binary trees:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\operatorname{preorder}(\mathtt{nil}) &amp;= \mathtt{empty},
+\\ \operatorname{preorder}\mathopen{}\left(\operatorname{node}(x, L, R)\right)\mathclose{} &amp;= \operatorname{cons}\mathopen{}\left(x, \operatorname{app}\mathopen{}\left(\operatorname{preorder}(L), \operatorname{preorder}(R)\right)\mathclose{}\right)\mathclose{},
+\end{aligned}
+\]</span></p>
+<p>where <span class="math inline">\(\operatorname{app}\)</span> is the append (<a href="../chapters/recursion.html#def-append">Definition: Appending two lists</a>). The root comes before its subtrees.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-preorder" class="theorem example">
+<p><span class="theorem-title"><strong>Example 20 (Preorder, step by step)</strong></span> For the subtree <span class="math inline">\(\operatorname{node}\mathopen{}\left(h, \mathtt{nil}, \operatorname{single}(j)\right)\mathclose{}\)</span> of <span class="math inline">\(B\)</span> (<a href="#/exm-binary-tree" class="quarto-xref">Example&nbsp;17</a>), the definition of preorder (<a href="#/def-preorder" class="quarto-xref">Definition&nbsp;15</a>) gives first</p>
+<p><span class="math display">\[
+\begin{aligned}
+\operatorname{preorder}\mathopen{}\left(\operatorname{single}(j)\right)\mathclose{}
+&amp;= \operatorname{cons}\mathopen{}\left(j, \operatorname{app}(\mathtt{empty}, \mathtt{empty})\right)\mathclose{}
+\\&amp;= \operatorname{cons}(j, \mathtt{empty}),
+\end{aligned}
+\]</span></p>
+<p>and then</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp; \operatorname{preorder}\mathopen{}\left(\operatorname{node}\mathopen{}\left(h, \mathtt{nil}, \operatorname{single}(j)\right)\mathclose{}\right)\mathclose{}
+\\&amp;= \operatorname{cons}\mathopen{}\left(h, \operatorname{app}\mathopen{}\left(\mathtt{empty}, \operatorname{cons}(j, \mathtt{empty})\right)\mathclose{}\right)\mathclose{}
+\\&amp;= \operatorname{cons}\mathopen{}\left(h, \operatorname{cons}(j, \mathtt{empty})\right)\mathclose{},
+\end{aligned}
+\]</span></p>
+<p>the list <span class="math inline">\(h, j\)</span>. In the same way, <span class="math inline">\(\operatorname{preorder}(B)\)</span> is the list <span class="math inline">\(m, f, c, h, j, t, r, p, w\)</span> of <a href="#/sol-root-first" class="quarto-xref">Solution&nbsp;5</a>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-inorder" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 16 (Inorder)</strong></span> The <strong>inorder</strong> <span class="math inline">\(\operatorname{inorder}(T)\)</span> of a binary tree <span class="math inline">\(T\)</span> (<a href="#/def-binary-tree" class="quarto-xref">Definition&nbsp;14</a>) <span class="citation" data-cites="wikipedia_tree_traversal">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026j</a>)</span> is the list (<a href="../chapters/recursion.html#def-list">Definition: List</a>) of the labels of its vertices defined recursively by</p>
+<p><span class="math display">\[
+\begin{aligned}
+\operatorname{inorder}(\mathtt{nil}) &amp;= \mathtt{empty},
+\\ \operatorname{inorder}\mathopen{}\left(\operatorname{node}(x, L, R)\right)\mathclose{} &amp;= \operatorname{app}\mathopen{}\left(\operatorname{inorder}(L), \operatorname{cons}\mathopen{}\left(x, \operatorname{inorder}(R)\right)\mathclose{}\right)\mathclose{}.
+\end{aligned}
+\]</span></p>
+<p>The root comes between its left subtree and its right subtree.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-inorder" class="theorem example">
+<p><span class="theorem-title"><strong>Example 21 (Inorder of <span class="math inline">\(B\)</span>)</strong></span> The inorder (<a href="#/def-inorder" class="quarto-xref">Definition&nbsp;16</a>) of the binary tree <span class="math inline">\(B\)</span> of <a href="#/exm-binary-tree" class="quarto-xref">Example&nbsp;17</a> is the list</p>
+<p><span class="math display">\[
+c, f, h, j, m, p, r, t, w.
+\]</span></p>
+<p>It is the inorder of <span class="math inline">\(B_1\)</span>, which is <span class="math inline">\(c, f, h, j\)</span>, then the root <span class="math inline">\(m\)</span>, then the inorder of <span class="math inline">\(B_2\)</span>, which is <span class="math inline">\(p, r, t, w\)</span>. The labels come out in alphabetical order, because <span class="math inline">\(B\)</span> was built so that every label in a left subtree comes before the label of its root in the alphabet, and every label in a right subtree comes after it.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-postorder" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 17 (Postorder)</strong></span> The <strong>postorder</strong> <span class="math inline">\(\operatorname{postorder}(T)\)</span> of a binary tree <span class="math inline">\(T\)</span> (<a href="#/def-binary-tree" class="quarto-xref">Definition&nbsp;14</a>) <span class="citation" data-cites="wikipedia_tree_traversal">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026j</a>)</span> is the list (<a href="../chapters/recursion.html#def-list">Definition: List</a>) of the labels of its vertices defined recursively by</p>
+<p><span class="math display">\[
+\begin{aligned}
+\operatorname{postorder}(\mathtt{nil}) &amp;= \mathtt{empty},
+\\ \operatorname{postorder}\mathopen{}\left(\operatorname{node}(x, L, R)\right)\mathclose{} &amp;= \operatorname{app}\mathopen{}\left(\operatorname{postorder}(L), \operatorname{app}\mathopen{}\left(\operatorname{postorder}(R), \operatorname{cons}(x, \mathtt{empty})\right)\mathclose{}\right)\mathclose{}.
+\end{aligned}
+\]</span></p>
+<p>The root comes after its subtrees.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-postorder" class="theorem example">
+<p><span class="theorem-title"><strong>Example 22 (Postorder of <span class="math inline">\(B\)</span>)</strong></span> The postorder (<a href="#/def-postorder" class="quarto-xref">Definition&nbsp;17</a>) of the binary tree <span class="math inline">\(B\)</span> of <a href="#/exm-binary-tree" class="quarto-xref">Example&nbsp;17</a> is the list</p>
+<p><span class="math display">\[
+c, j, h, f, p, r, w, t, m.
+\]</span></p>
+<p>Each vertex comes after all of its descendants (<a href="#/def-descendant" class="quarto-xref">Definition&nbsp;7</a>). So postorder is the order to use when the work at a vertex needs the results from its subtrees, such as finding the size of each subtree, or deleting the files in a folder before the folder.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-traversal-length" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 4 (A traversal has one entry for each vertex)</strong></span> For every binary tree <span class="math inline">\(T\)</span> (<a href="#/def-binary-tree" class="quarto-xref">Definition&nbsp;14</a>),</p>
+<p><span class="math display">\[
+\operatorname{len}\mathopen{}\left(\operatorname{preorder}(T)\right)\mathclose{} = \operatorname{len}\mathopen{}\left(\operatorname{inorder}(T)\right)\mathclose{} = \operatorname{len}\mathopen{}\left(\operatorname{postorder}(T)\right)\mathclose{} = \operatorname{size}(T),
+\]</span></p>
+<p>where <span class="math inline">\(\operatorname{len}\)</span> is the length of a list (<a href="../chapters/recursion.html#def-list-length">Definition: Length of a list</a>) and <span class="math inline">\(\operatorname{size}(T)\)</span> is the number of vertices (<a href="#/rem-size-height" class="quarto-xref">Remark&nbsp;7</a>).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-ordered-traversals" class="proof remark">
+<p><span class="proof-title"><em>Remark 8</em> (Preorder and postorder of ordered rooted trees). </span>Preorder (<a href="#/def-preorder" class="quarto-xref">Definition&nbsp;15</a>) and postorder (<a href="#/def-postorder" class="quarto-xref">Definition&nbsp;17</a>) make sense for any ordered rooted tree (<a href="#/def-ordered-rooted-tree" class="quarto-xref">Definition&nbsp;13</a>). If the root <span class="math inline">\(x\)</span> has the children <span class="math inline">\(c_1, \ldots, c_k\)</span>, in order, the preorder is <span class="math inline">\(x\)</span> followed by the preorders of the subtrees (<a href="#/def-subtree" class="quarto-xref">Definition&nbsp;10</a>) rooted at <span class="math inline">\(c_1, \ldots, c_k\)</span>, in turn, and the postorder is the postorders of those subtrees, in turn, followed by <span class="math inline">\(x\)</span>. For the ordered phone tree of <a href="#/exm-ordered-phone" class="quarto-xref">Example&nbsp;16</a>,</p>
+<ul>
+<li>the preorder is <span class="math inline">\(a, b, e, f, c, d, g, h\)</span>;</li>
+<li>the postorder is <span class="math inline">\(e, f, b, c, h, g, d, a\)</span>.</li>
+</ul>
+<p>Inorder has no standard meaning when a vertex has more than two children, since there is no single place for the root among them.</p>
+</div>
+</section></section>
+<section>
+<section id="sec-level-order" class="title-slide slide level1 center" data-number="6">
+<h1><span class="header-section-number">6</span> Level order</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-level-by-level" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6 (Level by level)</strong></span> List the labels of the binary tree <span class="math inline">\(B\)</span> of <a href="#/fig-binary" class="quarto-xref">Figure&nbsp;6</a> level by level (<a href="#/def-tree-level" class="quarto-xref">Definition&nbsp;11</a>): first the vertices at level 0, then those at level 1, and so on, each level from left to right as drawn. What list do you get?</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-level-by-level" class="proof solution">
+<p><span class="proof-title"><em>Solution 6</em>. </span><span class="math inline">\(m, f, t, c, h, r, w, j, p\)</span>. Level 0 holds <span class="math inline">\(m\)</span>; level 1 holds <span class="math inline">\(f\)</span> and <span class="math inline">\(t\)</span>; level 2 holds <span class="math inline">\(c\)</span>, <span class="math inline">\(h\)</span>, <span class="math inline">\(r\)</span> and <span class="math inline">\(w\)</span>; and level 3 holds <span class="math inline">\(j\)</span> and <span class="math inline">\(p\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-level-order" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 18 (Level order)</strong></span> Let <span class="math inline">\(B\)</span> be a binary tree (<a href="#/def-binary-tree" class="quarto-xref">Definition&nbsp;14</a>) that is not empty, and let <span class="math inline">\(T\)</span> be its drawing (<a href="#/rem-binary-drawing" class="quarto-xref">Remark&nbsp;6</a>), with root <span class="math inline">\(r\)</span>. Give <span class="math inline">\(T\)</span> the adjacency list (<a href="../chapters/graphs.html#def-adjacency-list">Definition: Adjacency list</a>) in which the list of each vertex <span class="math inline">\(v\)</span> is its parent (<a href="#/def-tree-parent" class="quarto-xref">Definition&nbsp;4</a>), if <span class="math inline">\(v\)</span> has one, then the root of its left subtree and the root of its right subtree, if these subtrees are not empty. The <strong>level order</strong> of <span class="math inline">\(B\)</span> <span class="citation" data-cites="wikipedia_tree_traversal">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026j</a>)</span> is the order in which <code>bfs(T, r)</code> (<a href="../chapters/graphs.html#def-bfs">Definition: Breadth-first search</a>) removes the vertices of <span class="math inline">\(T\)</span> from its queue (<a href="../chapters/graphs.html#def-queue">Definition: Queue</a>).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-level-order" class="theorem example">
+<p><span class="theorem-title"><strong>Example 23 (Level order of <span class="math inline">\(B\)</span>)</strong></span> Run <code>bfs</code> (<a href="../chapters/graphs.html#def-bfs">Definition: Breadth-first search</a>) on the drawing of the binary tree <span class="math inline">\(B\)</span> (<a href="#/fig-binary" class="quarto-xref">Figure&nbsp;6</a>) from its root <span class="math inline">\(m\)</span>, with the lists of <a href="#/def-level-order" class="quarto-xref">Definition&nbsp;18</a>. Each row of the table is one pass through the <code>while</code> loop:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Removed <span class="math inline">\(v\)</span></th>
+<th style="text-align: center;">Newly marked <span class="math inline">\(u\)</span>, with <code>dist[u]</code></th>
+<th style="text-align: center;"><span class="math inline">\(Q\)</span> after the pass</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(m\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(f\)</span> (1), <span class="math inline">\(t\)</span> (1)</td>
+<td style="text-align: center;"><span class="math inline">\(f, t\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(f\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(c\)</span> (2), <span class="math inline">\(h\)</span> (2)</td>
+<td style="text-align: center;"><span class="math inline">\(t, c, h\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(t\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(r\)</span> (2), <span class="math inline">\(w\)</span> (2)</td>
+<td style="text-align: center;"><span class="math inline">\(c, h, r, w\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(c\)</span></td>
+<td style="text-align: center;">none</td>
+<td style="text-align: center;"><span class="math inline">\(h, r, w\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(h\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(j\)</span> (3)</td>
+<td style="text-align: center;"><span class="math inline">\(r, w, j\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(r\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(p\)</span> (3)</td>
+<td style="text-align: center;"><span class="math inline">\(w, j, p\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(w\)</span></td>
+<td style="text-align: center;">none</td>
+<td style="text-align: center;"><span class="math inline">\(j, p\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(j\)</span></td>
+<td style="text-align: center;">none</td>
+<td style="text-align: center;"><span class="math inline">\(p\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(p\)</span></td>
+<td style="text-align: center;">none</td>
+<td style="text-align: center;">empty</td>
+</tr>
+</tbody>
+</table>
+<p>When <span class="math inline">\(f\)</span> is removed, its list is <span class="math inline">\(m, c, h\)</span>, and <span class="math inline">\(m\)</span> is already marked. The level order (<a href="#/def-level-order" class="quarto-xref">Definition&nbsp;18</a>) of <span class="math inline">\(B\)</span> is the order of the first column, <span class="math inline">\(m, f, t, c, h, r, w, j, p\)</span>, the list of <a href="#/sol-level-by-level" class="quarto-xref">Solution&nbsp;6</a>, and each label <code>dist[u]</code> is the level of <span class="math inline">\(u\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="lem-bfs-order" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 4 (Breadth-first search removes vertices in order of their labels)</strong></span> Let <span class="math inline">\(G\)</span> and <span class="math inline">\(s\)</span> be as in <a href="../chapters/graphs.html#def-bfs">Definition: Breadth-first search</a>. Then <code>bfs(G, s)</code> removes the vertices from its queue (<a href="../chapters/graphs.html#def-queue">Definition: Queue</a>) with their labels <span class="math inline">\(\texttt{dist}\)</span> in nondecreasing order.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-level-order" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 5 (Level order goes level by level)</strong></span> In the level order (<a href="#/def-level-order" class="quarto-xref">Definition&nbsp;18</a>) of a binary tree that is not empty, every vertex at level <span class="math inline">\(k\)</span> (<a href="#/def-tree-level" class="quarto-xref">Definition&nbsp;11</a>) comes before every vertex at level <span class="math inline">\(k + 1\)</span>.</p>
+</div>
+</section></section>
+<section>
+<section id="sec-racket-trees" class="title-slide slide level1 center" data-number="7">
+<h1><span class="header-section-number">7</span> Binary trees in Racket</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-racket-tree" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 7 (A binary tree in Racket)</strong></span> In Racket, store the empty tree (<a href="#/def-binary-tree" class="quarto-xref">Definition&nbsp;14</a>) as <code>'()</code>, and <span class="math inline">\(\operatorname{node}(x, L, R)\)</span> as the list <code>(list x L R)</code> of its label and its two subtrees. The binary tree <span class="math inline">\(B\)</span> of <a href="#/exm-binary-tree" class="quarto-xref">Example&nbsp;17</a> is then</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb1-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> B</span></span>
+<span id="cb1-2"><a aria-label="2"></a>  '<span class="op">(</span>m <span class="op">(</span>f <span class="op">(</span>c <span class="op">()</span> <span class="op">())</span></span>
+<span id="cb1-3"><a aria-label="3"></a>         <span class="op">(</span>h <span class="op">()</span> <span class="op">(</span>j <span class="op">()</span> <span class="op">())))</span></span>
+<span id="cb1-4"><a aria-label="4"></a>      <span class="op">(</span>t <span class="op">(</span>r <span class="op">(</span>p <span class="op">()</span> <span class="op">())</span> <span class="op">())</span></span>
+<span id="cb1-5"><a aria-label="5"></a>         <span class="op">(</span>w <span class="op">()</span> <span class="op">()))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>(second L)</code> and <code>(third L)</code> return the second and the third element of a list <code>L</code>. What does <code>(first (second (third B)))</code> return?</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-racket-tree" class="proof solution">
+<p><span class="proof-title"><em>Solution 7</em>. </span>It returns <code>'r</code>. <code>(third B)</code> is the right subtree of <span class="math inline">\(B\)</span>, <code>'(t (r (p () ()) ()) (w () ()))</code>. Its second element is its left subtree, <code>'(r (p () ()) ())</code>, and the first element of that is its label, <code>'r</code>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-racket-traversals" class="theorem example">
+<p><span class="theorem-title"><strong>Example 24 (The three traversals in Racket)</strong></span> These functions follow the definitions of preorder (<a href="#/def-preorder" class="quarto-xref">Definition&nbsp;15</a>), inorder (<a href="#/def-inorder" class="quarto-xref">Definition&nbsp;16</a>) and postorder (<a href="#/def-postorder" class="quarto-xref">Definition&nbsp;17</a>), with <code>B</code> as in <a href="#/exr-racket-tree" class="quarto-xref">Exercise&nbsp;7</a>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb2-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>preorder T<span class="op">)</span></span>
+<span id="cb2-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span>empty? T<span class="op">)</span></span>
+<span id="cb2-3"><a aria-label="3"></a>      empty</span>
+<span id="cb2-4"><a aria-label="4"></a>      <span class="op">(</span><span class="kw">cons</span> <span class="op">(</span>first T<span class="op">)</span></span>
+<span id="cb2-5"><a aria-label="5"></a>            <span class="op">(</span><span class="kw">append</span> <span class="op">(</span>preorder <span class="op">(</span>second T<span class="op">))</span> <span class="op">(</span>preorder <span class="op">(</span>third T<span class="op">))))))</span></span>
+<span id="cb2-6"><a aria-label="6"></a></span>
+<span id="cb2-7"><a aria-label="7"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>inorder T<span class="op">)</span></span>
+<span id="cb2-8"><a aria-label="8"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span>empty? T<span class="op">)</span></span>
+<span id="cb2-9"><a aria-label="9"></a>      empty</span>
+<span id="cb2-10"><a aria-label="10"></a>      <span class="op">(</span><span class="kw">append</span> <span class="op">(</span>inorder <span class="op">(</span>second T<span class="op">))</span></span>
+<span id="cb2-11"><a aria-label="11"></a>              <span class="op">(</span><span class="kw">cons</span> <span class="op">(</span>first T<span class="op">)</span> <span class="op">(</span>inorder <span class="op">(</span>third T<span class="op">))))))</span></span>
+<span id="cb2-12"><a aria-label="12"></a></span>
+<span id="cb2-13"><a aria-label="13"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>postorder T<span class="op">)</span></span>
+<span id="cb2-14"><a aria-label="14"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span>empty? T<span class="op">)</span></span>
+<span id="cb2-15"><a aria-label="15"></a>      empty</span>
+<span id="cb2-16"><a aria-label="16"></a>      <span class="op">(</span><span class="kw">append</span> <span class="op">(</span>postorder <span class="op">(</span>second T<span class="op">))</span></span>
+<span id="cb2-17"><a aria-label="17"></a>              <span class="op">(</span>postorder <span class="op">(</span>third T<span class="op">))</span></span>
+<span id="cb2-18"><a aria-label="18"></a>              <span class="op">(</span><span class="kw">list</span> <span class="op">(</span>first T<span class="op">)))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>(append L M N)</code> is the list of the elements of <code>L</code>, then <code>M</code>, then <code>N</code>.</p>
+<ul>
+<li><code>(preorder B)</code> returns <code>'(m f c h j t r p w)</code>.</li>
+<li><code>(inorder B)</code> returns <code>'(c f h j m p r t w)</code>.</li>
+<li><code>(postorder B)</code> returns <code>'(c j h f p r w t m)</code>.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-racket-height" class="theorem example">
+<p><span class="theorem-title"><strong>Example 25 (Size and height in Racket)</strong></span> The recursive formulas of <a href="#/rem-size-height" class="quarto-xref">Remark&nbsp;7</a> become</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb3-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>size T<span class="op">)</span></span>
+<span id="cb3-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span>empty? T<span class="op">)</span></span>
+<span id="cb3-3"><a aria-label="3"></a>      <span class="dv">0</span></span>
+<span id="cb3-4"><a aria-label="4"></a>      <span class="op">(+</span> <span class="dv">1</span> <span class="op">(</span>size <span class="op">(</span>second T<span class="op">))</span> <span class="op">(</span>size <span class="op">(</span>third T<span class="op">)))))</span></span>
+<span id="cb3-5"><a aria-label="5"></a></span>
+<span id="cb3-6"><a aria-label="6"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>height T<span class="op">)</span></span>
+<span id="cb3-7"><a aria-label="7"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span>empty? T<span class="op">)</span></span>
+<span id="cb3-8"><a aria-label="8"></a>      -<span class="dv">1</span></span>
+<span id="cb3-9"><a aria-label="9"></a>      <span class="op">(+</span> <span class="dv">1</span> <span class="op">(</span><span class="kw">max</span> <span class="op">(</span>height <span class="op">(</span>second T<span class="op">))</span> <span class="op">(</span>height <span class="op">(</span>third T<span class="op">))))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Here <code>(max a b)</code> returns the larger of the numbers <code>a</code> and <code>b</code>.</p>
+<p>With <code>B</code> as in <a href="#/exr-racket-tree" class="quarto-xref">Exercise&nbsp;7</a>, <code>(size B)</code> returns 9 and <code>(height B)</code> returns 3, and <code>(height '())</code> returns -1.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-racket-level-order" class="theorem example">
+<p><span class="theorem-title"><strong>Example 26 (Level order in Racket)</strong></span> The level order (<a href="#/def-level-order" class="quarto-xref">Definition&nbsp;18</a>) needs a queue (<a href="../chapters/graphs.html#def-queue">Definition: Queue</a>). Here the queue holds subtrees rather than vertices: removing a subtree that is not empty lists its root and adds its two subtrees at the back, and removing an empty tree adds nothing.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb4-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>level-loop queue<span class="op">)</span></span>
+<span id="cb4-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span>empty? queue<span class="op">)</span></span>
+<span id="cb4-3"><a aria-label="3"></a>      empty</span>
+<span id="cb4-4"><a aria-label="4"></a>      <span class="op">(</span><span class="kw">let</span> <span class="op">([</span>T <span class="op">(</span>first queue<span class="op">)])</span></span>
+<span id="cb4-5"><a aria-label="5"></a>        <span class="op">(</span><span class="kw">if</span> <span class="op">(</span>empty? T<span class="op">)</span></span>
+<span id="cb4-6"><a aria-label="6"></a>            <span class="op">(</span>level-loop <span class="op">(</span>rest queue<span class="op">))</span></span>
+<span id="cb4-7"><a aria-label="7"></a>            <span class="op">(</span><span class="kw">cons</span> <span class="op">(</span>first T<span class="op">)</span></span>
+<span id="cb4-8"><a aria-label="8"></a>                  <span class="op">(</span>level-loop <span class="op">(</span><span class="kw">append</span> <span class="op">(</span>rest queue<span class="op">)</span></span>
+<span id="cb4-9"><a aria-label="9"></a>                                      <span class="op">(</span><span class="kw">list</span> <span class="op">(</span>second T<span class="op">)</span> <span class="op">(</span>third T<span class="op">)))))))))</span></span>
+<span id="cb4-10"><a aria-label="10"></a></span>
+<span id="cb4-11"><a aria-label="11"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>level-order T<span class="op">)</span></span>
+<span id="cb4-12"><a aria-label="12"></a>  <span class="op">(</span>level-loop <span class="op">(</span><span class="kw">list</span> T<span class="op">)))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><code>(let ([name value]) body)</code> gives <code>name</code> the value <code>value</code>, and then returns the value of <code>body</code>. Here it names the front of the queue <code>T</code>.</li>
+<li><code>(append xs ys)</code> is the list of the elements of <code>xs</code> followed by those of <code>ys</code>, so the two subtrees go to the back of the queue.</li>
+</ul>
+<p>With <code>B</code> as in <a href="#/exr-racket-tree" class="quarto-xref">Exercise&nbsp;7</a>, <code>(level-order B)</code> returns <code>'(m f t c h r w j p)</code>, the level order of <a href="#/exm-level-order" class="quarto-xref">Example&nbsp;23</a>. Each subtree that is not empty enters the queue when its parent’s subtree is removed, just as <code>bfs</code> marks a child when it removes the parent.</p>
+</div>
+</section></section>
+<section>
+<section id="sec-expression-trees" class="title-slide slide level1 center" data-number="8">
+<h1><span class="header-section-number">8</span> Expression trees</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-last-operation" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 8 (The last operation)</strong></span> To compute <span class="math inline">\((7 - 2) \times (3 + 4 \times 2)\)</span> by hand, which operation do you carry out last?</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-last-operation" class="proof solution">
+<p><span class="proof-title"><em>Solution 8</em>. </span>The multiplication between the two parenthesized parts. Both parts have to be computed before it: <span class="math inline">\(7 - 2 = 5\)</span>, and, since multiplication comes before addition, <span class="math inline">\(3 + 4 \times 2 = 3 + 8 = 11\)</span>. Then <span class="math inline">\(5 \times 11 = 55\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-parse-tree" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 19 (Parse tree)</strong></span> The <strong>parse tree</strong> <span class="citation" data-cites="wikipedia_parse_tree">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span> of an <a href="https://morrison-lab.github.io/mds/expressions-algorithms.html#def-expression">expression</a> is the tree that shows how its symbols group into operations. Its leaves are the constants and variables of the expression, and each internal node is an operation applied to the nodes below it.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-expression-tree" class="theorem example">
+<p><span class="theorem-title"><strong>Example 27 (The parse tree of <span class="math inline">\((7 - 2) \times (3 + 4 \times 2)\)</span>)</strong></span> The parse tree (<a href="#/def-parse-tree" class="quarto-xref">Definition&nbsp;19</a>) of <span class="math inline">\((7 - 2) \times (3 + 4 \times 2)\)</span> is the binary tree (<a href="#/def-binary-tree" class="quarto-xref">Definition&nbsp;14</a>)</p>
+<p><span class="math display">\[
+\operatorname{node}\mathopen{}\left(\times, \operatorname{node}\mathopen{}\left(-, \operatorname{single}(7), \operatorname{single}(2)\right)\mathclose{}, \operatorname{node}\mathopen{}\left(+, \operatorname{single}(3), \operatorname{node}\mathopen{}\left(\times, \operatorname{single}(4), \operatorname{single}(2)\right)\mathclose{}\right)\mathclose{}\right)\mathclose{},
+\]</span></p>
+<p>with <span class="math inline">\(\operatorname{single}\)</span> as in <a href="#/rem-single" class="quarto-xref">Remark&nbsp;5</a>, drawn in <a href="#/fig-expression" class="quarto-xref">Figure&nbsp;8</a>. Its root is the last operation, found in <a href="#/sol-last-operation" class="quarto-xref">Solution&nbsp;8</a>, its leaves (<a href="#/def-tree-leaf" class="quarto-xref">Definition&nbsp;8</a>) are the numbers, and each internal vertex (<a href="#/def-internal-vertex" class="quarto-xref">Definition&nbsp;9</a>) is an operation with its two operands as its subtrees. Two vertices have the label 2, and two have the label <span class="math inline">\(\times\)</span>.</p>
+<div id="fig-expression" class="quarto-float quarto-figure quarto-figure-center" alt="A binary tree with root labeled times. Below the root to the left is minus, whose left and right children are 7 and 2. Below the root to the right is plus, whose left child is 3 and whose right child is times, whose children are 4 and 2.">
+<figure class="quarto-float quarto-float-fig">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-expression-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: The parse tree of <span class="math inline">\((7 - 2) \times (3 + 4 \times 2)\)</span>.
+</figcaption>
+<div aria-describedby="fig-expression-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/trees-expression.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;8: The parse tree of (7 - 2) \times (3 + 4 \times 2)."><img data-src="../images/trees-expression.png" style="width:55.0%" alt="A binary tree with root labeled times. Below the root to the left is minus, whose left and right children are 7 and 2. Below the root to the right is plus, whose left child is 3 and whose right child is times, whose children are 4 and 2."></a>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-expression-tree-name" class="proof remark">
+<p><span class="proof-title"><em>Remark 9</em> (Expression trees). </span>A parse tree (<a href="#/def-parse-tree" class="quarto-xref">Definition&nbsp;19</a>) in which every operation has two operands is a binary tree (<a href="#/def-binary-tree" class="quarto-xref">Definition&nbsp;14</a>) whose leaves (<a href="#/def-tree-leaf" class="quarto-xref">Definition&nbsp;8</a>) are the constants and variables and whose internal vertices (<a href="#/def-internal-vertex" class="quarto-xref">Definition&nbsp;9</a>) are the operations, each with two children. The <em>internal nodes</em> of <a href="#/def-parse-tree" class="quarto-xref">Definition&nbsp;19</a> are these internal vertices: the two names mean the same. It is also called an <em>expression tree</em>. The <a href="#/sec-traversals">traversals</a> turn it back into a string of symbols, in three different ways.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-prefix-form" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 20 (Prefix form (Polish notation))</strong></span> The <strong>prefix form</strong>, or <strong>Polish notation</strong> <span class="citation" data-cites="wikipedia_polish_notation">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026e</a>)</span>, of an expression whose operations each have two operands is the preorder (<a href="#/def-preorder" class="quarto-xref">Definition&nbsp;15</a>) of its parse tree (<a href="#/def-parse-tree" class="quarto-xref">Definition&nbsp;19</a>). Each operation comes before its two operands.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-prefix-form" class="theorem example">
+<p><span class="theorem-title"><strong>Example 28 (A prefix form)</strong></span> The prefix form (<a href="#/def-prefix-form" class="quarto-xref">Definition&nbsp;20</a>) of <span class="math inline">\((7 - 2) \times (3 + 4 \times 2)\)</span>, the preorder of the tree of <a href="#/fig-expression" class="quarto-xref">Figure&nbsp;8</a>, is</p>
+<p><span class="math display">\[
+\times \; - \; 7 \; 2 \; + \; 3 \; \times \; 4 \; 2.
+\]</span></p>
+<p>The first <span class="math inline">\(\times\)</span> applies to the two operands that follow it, <span class="math inline">\(- \; 7 \; 2\)</span> and <span class="math inline">\(+ \; 3 \; \times \; 4 \; 2\)</span>, and the <span class="math inline">\(+\)</span> applies to <span class="math inline">\(3\)</span> and <span class="math inline">\(\times \; 4 \; 2\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-postfix-form" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 21 (Postfix form (reverse Polish notation))</strong></span> The <strong>postfix form</strong>, or <strong>reverse Polish notation</strong> <span class="citation" data-cites="wikipedia_reverse_polish_notation">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026f</a>)</span>, of an expression whose operations each have two operands is the postorder (<a href="#/def-postorder" class="quarto-xref">Definition&nbsp;17</a>) of its parse tree (<a href="#/def-parse-tree" class="quarto-xref">Definition&nbsp;19</a>). Each operation comes after its two operands.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-postfix-form" class="theorem example">
+<p><span class="theorem-title"><strong>Example 29 (A postfix form)</strong></span> The postfix form (<a href="#/def-postfix-form" class="quarto-xref">Definition&nbsp;21</a>) of <span class="math inline">\((7 - 2) \times (3 + 4 \times 2)\)</span>, the postorder of the tree of <a href="#/fig-expression" class="quarto-xref">Figure&nbsp;8</a>, is</p>
+<p><span class="math display">\[
+7 \; 2 \; - \; 3 \; 4 \; 2 \; \times \; + \; \times.
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-infix-parentheses" class="proof remark">
+<p><span class="proof-title"><em>Remark 10</em> (Inorder needs parentheses). </span>The inorder (<a href="#/def-inorder" class="quarto-xref">Definition&nbsp;16</a>) of the tree of <a href="#/fig-expression" class="quarto-xref">Figure&nbsp;8</a> is</p>
+<p><span class="math display">\[
+7 - 2 \times 3 + 4 \times 2,
+\]</span></p>
+<p>the symbols of the expression in their order, without the parentheses. With the usual precedence (<a href="https://morrison-lab.github.io/mds/expressions-algorithms.html#rem-expression-parse-tree">Remark: Expressions, precedence and parse trees</a>), this string groups as <span class="math inline">\((7 - (2 \times 3)) + (4 \times 2)\)</span>, whose parse tree has <span class="math inline">\(+\)</span> at its root and whose value is 9, not 55. So the inorder needs parentheses to give back the expression, for example a pair around each operation: <span class="math inline">\(((7 - 2) \times (3 + (4 \times 2)))\)</span>. The prefix form (<a href="#/def-prefix-form" class="quarto-xref">Definition&nbsp;20</a>) and the postfix form (<a href="#/def-postfix-form" class="quarto-xref">Definition&nbsp;21</a>) need no parentheses, since each operation has exactly two operands.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-stack" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 22 (Stack)</strong></span> A <strong>stack</strong> <span class="citation" data-cites="wikipedia_stack_abstract_data_type">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026h</a>)</span> is a list that a program changes in only two ways: it adds an element at the front of the list, which is called <em>pushing</em> the element, and it removes the element at the front, which is called <em>popping</em> it. So the last element pushed is the first one popped, as with a stack of plates. A queue (<a href="../chapters/graphs.html#def-queue">Definition: Queue</a>), in contrast, adds at the back.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-postfix-stack" class="theorem example">
+<p><span class="theorem-title"><strong>Example 30 (Computing a postfix form with a stack)</strong></span> To compute the value of a postfix form (<a href="#/def-postfix-form" class="quarto-xref">Definition&nbsp;21</a>), read it from left to right with a stack (<a href="#/def-stack" class="quarto-xref">Definition&nbsp;22</a>) that starts empty:</p>
+<ul>
+<li>push each number;</li>
+<li>for each operation, pop a number <span class="math inline">\(b\)</span>, then pop a number <span class="math inline">\(a\)</span>, and push the result of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> under that operation.</li>
+</ul>
+<p>At the end the stack holds only the value. For <span class="math inline">\(7 \; 2 \; - \; 3 \; 4 \; 2 \; \times \; + \; \times\)</span> (<a href="#/exm-postfix-form" class="quarto-xref">Example&nbsp;29</a>), with the front of the stack written first:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Read</th>
+<th style="text-align: left;">Stack after it</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(7\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(7\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(2, 7\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(5\)</span>, since <span class="math inline">\(7 - 2 = 5\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(3\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(3, 5\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(4\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(4, 3, 5\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(2, 4, 3, 5\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\times\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(8, 3, 5\)</span>, since <span class="math inline">\(4 \times 2 = 8\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(11, 5\)</span>, since <span class="math inline">\(3 + 8 = 11\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\times\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(55\)</span>, since <span class="math inline">\(5 \times 11 = 55\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The value is 55, as in <a href="#/sol-last-operation" class="quarto-xref">Solution&nbsp;8</a>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-racket-evaluate" class="theorem example">
+<p><span class="theorem-title"><strong>Example 31 (Evaluating a parse tree in Racket)</strong></span> In Racket, store a parse tree (<a href="#/def-parse-tree" class="quarto-xref">Definition&nbsp;19</a>) as a number for a leaf, and as a list <code>(op a b)</code> for an operation <code>op</code> with operands <code>a</code> and <code>b</code>. The tree of <a href="#/fig-expression" class="quarto-xref">Figure&nbsp;8</a> is <code>'(* (- 7 2) (+ 3 (* 4 2)))</code>. These functions compute its value, working from the leaves up:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb5-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>apply-op op a b<span class="op">)</span></span>
+<span id="cb5-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">cond</span> <span class="op">[(</span><span class="kw">eq?</span> op '+<span class="op">)</span> <span class="op">(+</span> a b<span class="op">)]</span></span>
+<span id="cb5-3"><a aria-label="3"></a>        <span class="op">[(</span><span class="kw">eq?</span> op '-<span class="op">)</span> <span class="op">(-</span> a b<span class="op">)]</span></span>
+<span id="cb5-4"><a aria-label="4"></a>        <span class="op">[(</span><span class="kw">eq?</span> op '*<span class="op">)</span> <span class="op">(*</span> a b<span class="op">)]</span></span>
+<span id="cb5-5"><a aria-label="5"></a>        <span class="op">[(</span><span class="kw">eq?</span> op '/<span class="op">)</span> <span class="op">(/</span> a b<span class="op">)]))</span></span>
+<span id="cb5-6"><a aria-label="6"></a></span>
+<span id="cb5-7"><a aria-label="7"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>evaluate e<span class="op">)</span></span>
+<span id="cb5-8"><a aria-label="8"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span><span class="kw">number?</span> e<span class="op">)</span></span>
+<span id="cb5-9"><a aria-label="9"></a>      e</span>
+<span id="cb5-10"><a aria-label="10"></a>      <span class="op">(</span>apply-op <span class="op">(</span>first e<span class="op">)</span> <span class="op">(</span>evaluate <span class="op">(</span>second e<span class="op">))</span> <span class="op">(</span>evaluate <span class="op">(</span>third e<span class="op">)))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><code>(cond [test value] ...)</code> returns the <code>value</code> of the first clause whose <code>test</code> is true.</li>
+<li><code>(eq? x y)</code> is true when <code>x</code> and <code>y</code> are the same symbol.</li>
+<li><code>(number? e)</code> is true when <code>e</code> is a number.</li>
+</ul>
+<p><code>(evaluate '(* (- 7 2) (+ 3 (* 4 2))))</code> returns 55. Without the quote, <code>(* (- 7 2) (+ 3 (* 4 2)))</code> is itself Racket code, and it also returns 55: Racket writes each arithmetic operation in prefix form (<a href="#/def-prefix-form" class="quarto-xref">Definition&nbsp;20</a>), with a pair of parentheses around each operation.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-racket-postfix" class="theorem example">
+<p><span class="theorem-title"><strong>Example 32 (A postfix calculator in Racket)</strong></span> The method of <a href="#/exm-postfix-stack" class="quarto-xref">Example&nbsp;30</a> uses a list as the stack (<a href="#/def-stack" class="quarto-xref">Definition&nbsp;22</a>): <code>cons</code> pushes, and <code>first</code> and <code>rest</code> pop. With <code>apply-op</code> from <a href="#/exm-racket-evaluate" class="quarto-xref">Example&nbsp;31</a>,</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb6-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>postfix-loop symbols stack<span class="op">)</span></span>
+<span id="cb6-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">cond</span> <span class="op">[(</span>empty? symbols<span class="op">)</span> <span class="op">(</span>first stack<span class="op">)]</span></span>
+<span id="cb6-3"><a aria-label="3"></a>        <span class="op">[(</span><span class="kw">number?</span> <span class="op">(</span>first symbols<span class="op">))</span></span>
+<span id="cb6-4"><a aria-label="4"></a>         <span class="op">(</span>postfix-loop <span class="op">(</span>rest symbols<span class="op">)</span> <span class="op">(</span><span class="kw">cons</span> <span class="op">(</span>first symbols<span class="op">)</span> stack<span class="op">))]</span></span>
+<span id="cb6-5"><a aria-label="5"></a>        <span class="op">[</span><span class="kw">else</span></span>
+<span id="cb6-6"><a aria-label="6"></a>         <span class="op">(</span>postfix-loop <span class="op">(</span>rest symbols<span class="op">)</span></span>
+<span id="cb6-7"><a aria-label="7"></a>                       <span class="op">(</span><span class="kw">cons</span> <span class="op">(</span>apply-op <span class="op">(</span>first symbols<span class="op">)</span></span>
+<span id="cb6-8"><a aria-label="8"></a>                                       <span class="op">(</span>second stack<span class="op">)</span></span>
+<span id="cb6-9"><a aria-label="9"></a>                                       <span class="op">(</span>first stack<span class="op">))</span></span>
+<span id="cb6-10"><a aria-label="10"></a>                             <span class="op">(</span>rest <span class="op">(</span>rest stack<span class="op">))))]))</span></span>
+<span id="cb6-11"><a aria-label="11"></a></span>
+<span id="cb6-12"><a aria-label="12"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>evaluate-postfix symbols<span class="op">)</span></span>
+<span id="cb6-13"><a aria-label="13"></a>  <span class="op">(</span>postfix-loop symbols empty<span class="op">))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>In the last clause, <code>(first stack)</code> is the number <span class="math inline">\(b\)</span> popped first and <code>(second stack)</code> is the number <span class="math inline">\(a\)</span> under it. <code>(evaluate-postfix '(7 2 - 3 4 2 * + *))</code> returns 55.</p>
+</div>
+</section></section>
+<section>
+<section id="sec-spanning-trees" class="title-slide slide level1 center" data-number="9">
+<h1><span class="header-section-number">9</span> Spanning trees</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-fewest-roads" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 9 (The fewest roads)</strong></span> Seven towns, <span class="math inline">\(a\)</span> to <span class="math inline">\(g\)</span>, lie in a valley, with <span class="math inline">\(g\)</span> in the middle. <a href="#/fig-hub" class="quarto-xref">Figure&nbsp;9</a> draws the nine roads that could be built between them. The county wants to build as few of these roads as it can, so that people can drive between every two towns. How many roads must it build?</p>
+<div id="fig-hub" class="quarto-float quarto-figure quarto-figure-center" alt="Seven labeled points. Six of them, a, b, c, d, e and f, sit at the corners of a hexagon in that order, each joined to the next, and f joined back to a. The seventh, g, sits in the middle and is joined to a, c and e.">
+<figure class="quarto-float quarto-float-fig">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-hub-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: The towns and the roads that could be built.
+</figcaption>
+<div aria-describedby="fig-hub-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/trees-hub.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;9: The towns and the roads that could be built."><img data-src="../images/trees-hub.png" style="width:40.0%" alt="Seven labeled points. Six of them, a, b, c, d, e and f, sit at the corners of a hexagon in that order, each joined to the next, and f joined back to a. The seventh, g, sits in the middle and is joined to a, c and e."></a>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-fewest-roads" class="proof solution">
+<p><span class="proof-title"><em>Solution 9</em>. </span>Six. The six roads <span class="math inline">\({\mathopen{}\left\{a, b\right\}\mathclose{}}\)</span>, <span class="math inline">\({\mathopen{}\left\{b, c\right\}\mathclose{}}\)</span>, <span class="math inline">\({\mathopen{}\left\{c, g\right\}\mathclose{}}\)</span>, <span class="math inline">\({\mathopen{}\left\{g, e\right\}\mathclose{}}\)</span>, <span class="math inline">\({\mathopen{}\left\{e, d\right\}\mathclose{}}\)</span> and <span class="math inline">\({\mathopen{}\left\{e, f\right\}\mathclose{}}\)</span> are enough: they join <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, <span class="math inline">\(c\)</span>, <span class="math inline">\(g\)</span> and <span class="math inline">\(e\)</span> in a row, and <span class="math inline">\(d\)</span> and <span class="math inline">\(f\)</span> to <span class="math inline">\(e\)</span>. Five roads are not enough. Before any road is built, the seven towns form seven groups of towns that can reach each other. Each road that is built either joins two towns of the same group, or joins two groups into one, so after <span class="math inline">\(k\)</span> roads there are at least <span class="math inline">\(7 - k\)</span> groups. To have only one group, the county needs <span class="math inline">\(7 - k \le 1\)</span>, that is, <span class="math inline">\(k \ge 6\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-spanning-tree" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 23 (Spanning tree)</strong></span> A <strong>spanning tree</strong> of a graph <span class="math inline">\(G\)</span> (<a href="../chapters/graphs.html#def-graph-vertices-edges">Definition: Graph</a>) <span class="citation" data-cites="wikipedia_spanning_tree">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026g</a>)</span> is a subgraph (<a href="../chapters/graphs.html#def-subgraph">Definition: Subgraph</a>) of <span class="math inline">\(G\)</span> that is a tree (<a href="#/def-tree" class="quarto-xref">Definition&nbsp;1</a>) and has every vertex of <span class="math inline">\(G\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-spanning-tree" class="theorem example">
+<p><span class="theorem-title"><strong>Example 33 (A spanning tree of the town graph)</strong></span> Let <span class="math inline">\(W\)</span> be the graph of <a href="#/fig-hub" class="quarto-xref">Figure&nbsp;9</a>, the <em>town graph</em>. The six roads of <a href="#/sol-fewest-roads" class="quarto-xref">Solution&nbsp;9</a>, with all seven towns, form a spanning tree (<a href="#/def-spanning-tree" class="quarto-xref">Definition&nbsp;23</a>) <span class="math inline">\(S\)</span> of <span class="math inline">\(W\)</span>, drawn thick in <a href="#/fig-hub-spanning" class="quarto-xref">Figure&nbsp;10</a>. <span class="math inline">\(S\)</span> is connected, by <a href="#/sol-fewest-roads" class="quarto-xref">Solution&nbsp;9</a>. It has no cycles, by <a href="#/lem-degree-one" class="quarto-xref">Lemma&nbsp;1</a>: in <span class="math inline">\(S\)</span>, take out <span class="math inline">\(a\)</span>, <span class="math inline">\(d\)</span> and <span class="math inline">\(f\)</span>, which have degree 1, then <span class="math inline">\(b\)</span>, then <span class="math inline">\(c\)</span>, then <span class="math inline">\(g\)</span>, and <span class="math inline">\(e\)</span> is left with no edges.</p>
+<div id="fig-hub-spanning" class="quarto-float quarto-figure quarto-figure-center" alt="Seven points, a to f at the corners of a hexagon and g in the middle, joined by the nine roads of the town graph. Six edges are drawn thick: a to b, b to c, c to g, g to e, e to d, and e to f. The other three edges, c to d, f to a, and g to a, are drawn dashed.">
+<figure class="quarto-float quarto-float-fig">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-hub-spanning-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: A spanning tree <span class="math inline">\(S\)</span> of the town graph, in thick lines.
+</figcaption>
+<div aria-describedby="fig-hub-spanning-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/trees-hub-spanning.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;10: A spanning tree S of the town graph, in thick lines."><img data-src="../images/trees-hub-spanning.png" style="width:40.0%" alt="Seven points, a to f at the corners of a hexagon and g in the middle, joined by the nine roads of the town graph. Six edges are drawn thick: a to b, b to c, c to g, g to e, e to d, and e to f. The other three edges, c to d, f to a, and g to a, are drawn dashed."></a>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-spanning-tree" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 6 (A graph is connected exactly when it has a spanning tree)</strong></span> A graph <span class="math inline">\(G\)</span> (<a href="../chapters/graphs.html#def-graph-vertices-edges">Definition: Graph</a>) is connected (<a href="../chapters/graphs.html#def-connected">Definition: Connected graph</a>) if and only if it has a spanning tree (<a href="#/def-spanning-tree" class="quarto-xref">Definition&nbsp;23</a>).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="cor-connected-edges" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corollary 1 (A connected graph has at least <span class="math inline">\(n - 1\)</span> edges)</strong></span> Let <span class="math inline">\(G = (V, E)\)</span> be a connected (<a href="../chapters/graphs.html#def-connected">Definition: Connected graph</a>) graph with <span class="math inline">\(n\)</span> vertices. Then <span class="math inline">\({\mathopen{}\left|E\right|\mathclose{}} \ge n - 1\)</span>, and <span class="math inline">\({\mathopen{}\left|E\right|\mathclose{}} = n - 1\)</span> only if <span class="math inline">\(G\)</span> is a tree (<a href="#/def-tree" class="quarto-xref">Definition&nbsp;1</a>).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-connected-edges" class="theorem example">
+<p><span class="theorem-title"><strong>Example 34 (Counting edges instead of looking for cycles)</strong></span> &nbsp;</p>
+<ul>
+<li>The town graph (<a href="#/exm-spanning-tree" class="quarto-xref">Example&nbsp;33</a>) has 7 vertices, so a connected subgraph with all seven towns has at least 6 edges, by <a href="#/cor-connected-edges" class="quarto-xref">Corollary&nbsp;1</a>, as <a href="#/sol-fewest-roads" class="quarto-xref">Solution&nbsp;9</a> found.</li>
+<li>The pipes graph <span class="math inline">\(P\)</span> of <a href="#/exm-pipes-tree" class="quarto-xref">Example&nbsp;1</a> is connected and has 7 vertices and 6 edges. By <a href="#/cor-connected-edges" class="quarto-xref">Corollary&nbsp;1</a> it is a tree, without taking out any vertices.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-bfs-tree" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 24 (Breadth-first search tree)</strong></span> Let <span class="math inline">\(G\)</span> be a connected (<a href="../chapters/graphs.html#def-connected">Definition: Connected graph</a>) graph with no parallel edges (<a href="../chapters/graphs.html#def-parallel-edges">Definition: Parallel edges</a>), given by an adjacency list (<a href="../chapters/graphs.html#def-adjacency-list">Definition: Adjacency list</a>), and let <span class="math inline">\(s\)</span> be a vertex of <span class="math inline">\(G\)</span>. By <a href="../chapters/graphs.html#thm-bfs-distance">Theorem: Breadth-first search finds distances</a>, <code>bfs(G, s)</code> (<a href="../chapters/graphs.html#def-bfs">Definition: Breadth-first search</a>) marks every vertex, and it marks each vertex <span class="math inline">\(u \ne s\)</span> in the pass through its loop that removes some vertex <span class="math inline">\(v\)</span> from its queue. The <strong>breadth-first search tree</strong> of <span class="math inline">\(G\)</span> from <span class="math inline">\(s\)</span> <span class="citation" data-cites="wikipedia_breadth_first_search">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026b</a>)</span> is the subgraph (<a href="../chapters/graphs.html#def-subgraph">Definition: Subgraph</a>) of <span class="math inline">\(G\)</span> with every vertex of <span class="math inline">\(G\)</span> and, for each vertex <span class="math inline">\(u \ne s\)</span>, the edge <span class="math inline">\({\mathopen{}\left\{v, u\right\}\mathclose{}}\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-bfs-tree" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 7 (Breadth-first search builds a spanning tree)</strong></span> Let <span class="math inline">\(G\)</span> and <span class="math inline">\(s\)</span> be as in <a href="#/def-bfs-tree" class="quarto-xref">Definition&nbsp;24</a>. Then the breadth-first search tree of <span class="math inline">\(G\)</span> from <span class="math inline">\(s\)</span> is a spanning tree (<a href="#/def-spanning-tree" class="quarto-xref">Definition&nbsp;23</a>) of <span class="math inline">\(G\)</span>, and, with <span class="math inline">\(s\)</span> as its root, the level (<a href="#/def-tree-level" class="quarto-xref">Definition&nbsp;11</a>) of each vertex <span class="math inline">\(u\)</span> is its distance <span class="math inline">\(\operatorname{dist}(s, u)\)</span> (<a href="../chapters/graphs.html#def-graph-distance">Definition: Distance</a>) from <span class="math inline">\(s\)</span> in <span class="math inline">\(G\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-bfs-tree" class="theorem example">
+<p><span class="theorem-title"><strong>Example 35 (A breadth-first search tree of the town graph)</strong></span> Give the town graph (<a href="#/exm-spanning-tree" class="quarto-xref">Example&nbsp;33</a>) the adjacency list in which each list is in alphabetical order:</p>
+<p><span class="math display">\[
+\begin{aligned}
+a &amp;: b, f, g
+&amp; b &amp;: a, c
+&amp; c &amp;: b, d, g
+&amp; d &amp;: c, e
+\\ e &amp;: d, f, g
+&amp; f &amp;: a, e
+&amp; g &amp;: a, c, e
+\end{aligned}
+\]</span></p>
+<p>Then <code>bfs</code> (<a href="../chapters/graphs.html#def-bfs">Definition: Breadth-first search</a>) from <span class="math inline">\(a\)</span> runs as follows:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Removed <span class="math inline">\(v\)</span></th>
+<th style="text-align: center;">Newly marked <span class="math inline">\(u\)</span>, with <code>dist[u]</code></th>
+<th style="text-align: center;"><span class="math inline">\(Q\)</span> after the pass</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(a\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(b\)</span> (1), <span class="math inline">\(f\)</span> (1), <span class="math inline">\(g\)</span> (1)</td>
+<td style="text-align: center;"><span class="math inline">\(b, f, g\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(b\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(c\)</span> (2)</td>
+<td style="text-align: center;"><span class="math inline">\(f, g, c\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(f\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(e\)</span> (2)</td>
+<td style="text-align: center;"><span class="math inline">\(g, c, e\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(g\)</span></td>
+<td style="text-align: center;">none</td>
+<td style="text-align: center;"><span class="math inline">\(c, e\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(c\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(d\)</span> (3)</td>
+<td style="text-align: center;"><span class="math inline">\(e, d\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(e\)</span></td>
+<td style="text-align: center;">none</td>
+<td style="text-align: center;"><span class="math inline">\(d\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(d\)</span></td>
+<td style="text-align: center;">none</td>
+<td style="text-align: center;">empty</td>
+</tr>
+</tbody>
+</table>
+<p>The breadth-first search tree (<a href="#/def-bfs-tree" class="quarto-xref">Definition&nbsp;24</a>) from <span class="math inline">\(a\)</span> has the six edges</p>
+<p><span class="math display">\[
+{\mathopen{}\left\{a, b\right\}\mathclose{}}, {\mathopen{}\left\{a, f\right\}\mathclose{}}, {\mathopen{}\left\{a, g\right\}\mathclose{}}, {\mathopen{}\left\{b, c\right\}\mathclose{}}, {\mathopen{}\left\{f, e\right\}\mathclose{}}, {\mathopen{}\left\{c, d\right\}\mathclose{}},
+\]</span></p>
+<p>drawn thick in <a href="#/fig-hub-bfs" class="quarto-xref">Figure&nbsp;11</a>. With root <span class="math inline">\(a\)</span>, its levels are the distances from <span class="math inline">\(a\)</span>, as <a href="#/thm-bfs-tree" class="quarto-xref">Theorem&nbsp;7</a> says: <span class="math inline">\(b\)</span>, <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are at level 1, <span class="math inline">\(c\)</span> and <span class="math inline">\(e\)</span> at level 2, and <span class="math inline">\(d\)</span> at level 3. It is a different spanning tree from the one of <a href="#/exm-spanning-tree" class="quarto-xref">Example&nbsp;33</a>.</p>
+<div id="fig-hub-bfs" class="quarto-float quarto-figure quarto-figure-center" alt="Seven points, a to f at the corners of a hexagon and g in the middle, joined by the nine roads of the town graph. Six edges are drawn thick: a to b, a to f, a to g, b to c, c to d, and f to e. The other three edges, d to e, g to c, and g to e, are drawn dashed.">
+<figure class="quarto-float quarto-float-fig">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-hub-bfs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: The breadth-first search tree of the town graph from <span class="math inline">\(a\)</span>, in thick lines.
+</figcaption>
+<div aria-describedby="fig-hub-bfs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/trees-hub-bfs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;11: The breadth-first search tree of the town graph from a, in thick lines."><img data-src="../images/trees-hub-bfs.png" style="width:40.0%" alt="Seven points, a to f at the corners of a hexagon and g in the middle, joined by the nine roads of the town graph. Six edges are drawn thick: a to b, a to f, a to g, b to c, c to d, and f to e. The other three edges, d to e, g to c, and g to e, are drawn dashed."></a>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="lem-dfs-one-call" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 5 (Depth-first search calls itself once on each vertex)</strong></span> Let <span class="math inline">\(G\)</span> be a connected (<a href="../chapters/graphs.html#def-connected">Definition: Connected graph</a>) graph with no parallel edges (<a href="../chapters/graphs.html#def-parallel-edges">Definition: Parallel edges</a>), given by an adjacency list (<a href="../chapters/graphs.html#def-adjacency-list">Definition: Adjacency list</a>), and let <span class="math inline">\(s\)</span> be a vertex of <span class="math inline">\(G\)</span>. Then <code>dfs(G, s)</code> (<a href="../chapters/graphs.html#def-dfs">Definition: Depth-first search</a>) makes exactly one call <code>dfs(G, u)</code> on each vertex <span class="math inline">\(u\)</span> of <span class="math inline">\(G\)</span>, and for <span class="math inline">\(u \ne s\)</span> that call is made by a call <code>dfs(G, v)</code> with <span class="math inline">\(v\)</span> adjacent (<a href="../chapters/graphs.html#def-adjacent">Definition: Adjacent vertices (neighbors)</a>) to <span class="math inline">\(u\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-dfs-tree" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 25 (Depth-first search tree)</strong></span> Let <span class="math inline">\(G\)</span> be a connected (<a href="../chapters/graphs.html#def-connected">Definition: Connected graph</a>) graph with no parallel edges (<a href="../chapters/graphs.html#def-parallel-edges">Definition: Parallel edges</a>), given by an adjacency list (<a href="../chapters/graphs.html#def-adjacency-list">Definition: Adjacency list</a>), and let <span class="math inline">\(s\)</span> be a vertex of <span class="math inline">\(G\)</span>. By <a href="#/lem-dfs-one-call" class="quarto-xref">Lemma&nbsp;5</a>, <code>dfs(G, s)</code> (<a href="../chapters/graphs.html#def-dfs">Definition: Depth-first search</a>) makes exactly one call <code>dfs(G, u)</code> on each vertex <span class="math inline">\(u\)</span>, and for <span class="math inline">\(u \ne s\)</span> that call is made by a call <code>dfs(G, v)</code> for some vertex <span class="math inline">\(v\)</span>. The <strong>depth-first search tree</strong> of <span class="math inline">\(G\)</span> from <span class="math inline">\(s\)</span> <span class="citation" data-cites="wikipedia_depth_first_search">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026c</a>)</span> is the subgraph (<a href="../chapters/graphs.html#def-subgraph">Definition: Subgraph</a>) of <span class="math inline">\(G\)</span> with every vertex of <span class="math inline">\(G\)</span> and, for each vertex <span class="math inline">\(u \ne s\)</span>, the edge <span class="math inline">\({\mathopen{}\left\{v, u\right\}\mathclose{}}\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-dfs-tree" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 8 (Depth-first search builds a spanning tree)</strong></span> Let <span class="math inline">\(G\)</span> and <span class="math inline">\(s\)</span> be as in <a href="#/def-dfs-tree" class="quarto-xref">Definition&nbsp;25</a>. Then the depth-first search tree of <span class="math inline">\(G\)</span> from <span class="math inline">\(s\)</span> is a spanning tree (<a href="#/def-spanning-tree" class="quarto-xref">Definition&nbsp;23</a>) of <span class="math inline">\(G\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-dfs-tree" class="theorem example">
+<p><span class="theorem-title"><strong>Example 36 (A depth-first search tree of the town graph)</strong></span> With the adjacency list of <a href="#/exm-bfs-tree" class="quarto-xref">Example&nbsp;35</a>, <code>dfs</code> (<a href="../chapters/graphs.html#def-dfs">Definition: Depth-first search</a>) from <span class="math inline">\(a\)</span> makes these calls, each indented under the call that made it:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a aria-label="1"></a>dfs(W, a)             marks a; its list is b, f, g</span>
+<span id="cb7-2"><a aria-label="2"></a>  dfs(W, b)           marks b; its list is a, c</span>
+<span id="cb7-3"><a aria-label="3"></a>    dfs(W, c)         marks c; its list is b, d, g</span>
+<span id="cb7-4"><a aria-label="4"></a>      dfs(W, d)       marks d; its list is c, e</span>
+<span id="cb7-5"><a aria-label="5"></a>        dfs(W, e)     marks e; its list is d, f, g</span>
+<span id="cb7-6"><a aria-label="6"></a>          dfs(W, f)   marks f; a and e are marked, so it returns</span>
+<span id="cb7-7"><a aria-label="7"></a>          dfs(W, g)   marks g; a, c and e are marked, so it returns</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>After that every vertex is marked, and each call returns in turn. The depth-first search tree (<a href="#/def-dfs-tree" class="quarto-xref">Definition&nbsp;25</a>) from <span class="math inline">\(a\)</span> has the six edges</p>
+<p><span class="math display">\[
+{\mathopen{}\left\{a, b\right\}\mathclose{}}, {\mathopen{}\left\{b, c\right\}\mathclose{}}, {\mathopen{}\left\{c, d\right\}\mathclose{}}, {\mathopen{}\left\{d, e\right\}\mathclose{}}, {\mathopen{}\left\{e, f\right\}\mathclose{}}, {\mathopen{}\left\{e, g\right\}\mathclose{}},
+\]</span></p>
+<p>drawn thick in <a href="#/fig-hub-dfs" class="quarto-xref">Figure&nbsp;12</a>. With root <span class="math inline">\(a\)</span>, it has height 5, with <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> at level 5, while the breadth-first search tree of <a href="#/exm-bfs-tree" class="quarto-xref">Example&nbsp;35</a> has height 3. The level of <span class="math inline">\(g\)</span> is 5, but <span class="math inline">\(\operatorname{dist}(a, g) = 1\)</span>: unlike the breadth-first search tree, the depth-first search tree does not give distances.</p>
+<div id="fig-hub-dfs" class="quarto-float quarto-figure quarto-figure-center" alt="Seven points, a to f at the corners of a hexagon and g in the middle, joined by the nine roads of the town graph. Six edges are drawn thick: a to b, b to c, c to d, d to e, e to f, and e to g. The other three edges, f to a, g to a, and g to c, are drawn dashed.">
+<figure class="quarto-float quarto-float-fig">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-hub-dfs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12: The depth-first search tree of the town graph from <span class="math inline">\(a\)</span>, in thick lines.
+</figcaption>
+<div aria-describedby="fig-hub-dfs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/trees-hub-dfs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;12: The depth-first search tree of the town graph from a, in thick lines."><img data-src="../images/trees-hub-dfs.png" style="width:40.0%" alt="Seven points, a to f at the corners of a hexagon and g in the middle, joined by the nine roads of the town graph. Six edges are drawn thick: a to b, b to c, c to d, d to e, e to f, and e to g. The other three edges, f to a, g to a, and g to c, are drawn dashed."></a>
+</div>
+</figure>
+</div>
+</div>
+</section></section>
+<section>
+<section id="references" class="title-slide slide level1 unnumbered center">
+<h1>References</h1>
+
+</section>
+<section class="slide level2 smaller scrollable" id="references">
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-wikipedia_binary_tree" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026a. <em>Binary Tree — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Binary_tree">https://en.wikipedia.org/wiki/Binary_tree</a>.
+</div>
+<div id="ref-wikipedia_breadth_first_search" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026b. <em>Breadth-First Search — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Breadth-first_search">https://en.wikipedia.org/wiki/Breadth-first_search</a>.
+</div>
+<div id="ref-wikipedia_depth_first_search" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026c. <em>Depth-First Search — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Depth-first_search">https://en.wikipedia.org/wiki/Depth-first_search</a>.
+</div>
+<div id="ref-wikipedia_parse_tree" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026d. <em>Parse Tree — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Parse_tree">https://en.wikipedia.org/wiki/Parse_tree</a>.
+</div>
+<div id="ref-wikipedia_polish_notation" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026e. <em>Polish Notation — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Polish_notation">https://en.wikipedia.org/wiki/Polish_notation</a>.
+</div>
+<div id="ref-wikipedia_reverse_polish_notation" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026f. <em>Reverse <span>Polish</span> Notation — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Reverse_Polish_notation">https://en.wikipedia.org/wiki/Reverse_Polish_notation</a>.
+</div>
+<div id="ref-wikipedia_spanning_tree" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026g. <em>Spanning Tree — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Spanning_tree">https://en.wikipedia.org/wiki/Spanning_tree</a>.
+</div>
+<div id="ref-wikipedia_stack_abstract_data_type" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026h. <em>Stack (Abstract Data Type) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)">https://en.wikipedia.org/wiki/Stack_(abstract_data_type)</a>.
+</div>
+<div id="ref-wikipedia_tree_graph_theory" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026i. <em>Tree (Graph Theory) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Tree_(graph_theory)">https://en.wikipedia.org/wiki/Tree_(graph_theory)</a>.
+</div>
+<div id="ref-wikipedia_tree_traversal" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026j. <em>Tree Traversal — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Tree_traversal">https://en.wikipedia.org/wiki/Tree_traversal</a>.
+</div>
+</div>
+
+
+<script>
+const defaultAnchorIconFallback = "#";
+
+function getDefaultAnchorTemplate() {
+  const defaultAnchor = document.querySelector("a.anchorjs-link[data-anchorjs-icon]");
+  if (!defaultAnchor) {
+    return null;
+  }
+
+  return {
+    icon: defaultAnchor.getAttribute("data-anchorjs-icon"),
+    style: defaultAnchor.getAttribute("style")
+  };
+}
+
+function alignEquationAnchorWithDefault(anchor, template) {
+  if (!anchor) {
+    return;
+  }
+
+  anchor.classList.remove("external");
+
+  if (template && template.icon) {
+    anchor.setAttribute("data-anchorjs-icon", template.icon);
+    anchor.textContent = "";
+  } else if (!anchor.textContent) {
+    anchor.textContent = defaultAnchorIconFallback;
+  }
+
+  if (template && template.style) {
+    anchor.setAttribute("style", template.style);
+  } else {
+    anchor.removeAttribute("style");
+  }
+}
+
+function alignEquationAnchorsWithDefault() {
+  const template = getDefaultAnchorTemplate();
+  document.querySelectorAll("a.equation-anchor").forEach(function (anchor) {
+    alignEquationAnchorWithDefault(anchor, template);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const equations = document.querySelectorAll("span[id^='eq-']");
+  equations.forEach(function (equation) {
+    if (equation.querySelector(".equation-anchor")) {
+      return;
+    }
+
+    if (!equation.querySelector(".math.display")) {
+      return;
+    }
+
+    const id = equation.getAttribute("id");
+    if (!id) {
+      return;
+    }
+
+    equation.classList.add("equation-anchor-target");
+
+    const anchor = document.createElement("a");
+    anchor.className = "equation-anchor anchorjs-link";
+    anchor.href = "#" + id;
+    anchor.setAttribute("aria-label", "Permalink to this equation");
+    equation.appendChild(anchor);
+  });
+
+  alignEquationAnchorsWithDefault();
+});
+
+window.addEventListener("load", alignEquationAnchorsWithDefault);
+</script>
+
+<script>
+(function () {
+  var css = [
+    "#revealjs-html-link {",
+    "  position: fixed;",
+    "  top: 8px;",
+    "  right: 8px;",
+    "  z-index: 31;",
+    "  font-size: 0.55em;",
+    "  line-height: 1;",
+    "}",
+    "#revealjs-html-link a {",
+    "  color: var(--qwt-muted, rgba(0, 0, 0, 0.5));",
+    "  text-decoration: none;",
+    "  border: 1px solid var(--qwt-border, rgba(0, 0, 0, 0.2));",
+    "  padding: 4px 8px;",
+    "  border-radius: 4px;",
+    "  background: var(--qwt-chip-bg, rgba(255, 255, 255, 0.8));",
+    "  transition: color 0.15s, background 0.15s, border-color 0.15s;",
+    "}",
+    "#revealjs-html-link a:hover {",
+    "  color: var(--qwt-fg, rgba(0, 0, 0, 0.9));",
+    "  background: var(--qwt-chip-bg-hover, rgba(255, 255, 255, 0.98));",
+    "  border-color: var(--qwt-fg, rgba(0, 0, 0, 0.4));",
+    "}"
+  ].join("\n");
+
+  function getHtmlBase() {
+    var url = window.location.href.split("#")[0];
+    return url.replace(/-slides\.html$/, ".html");
+  }
+
+  function getCurrentSectionId() {
+    if (typeof Reveal === "undefined" || !Reveal.getCurrentSlide) {
+      return null;
+    }
+    var slide = Reveal.getCurrentSlide();
+    if (!slide) {
+      return null;
+    }
+    // If the current slide itself has an id, use it
+    if (slide.id) {
+      return slide.id;
+    }
+    // Walk backwards through sibling sections to find the nearest one with an id
+    var sibling = slide.previousElementSibling;
+    while (sibling) {
+      if (sibling.tagName === "SECTION" && sibling.id) {
+        return sibling.id;
+      }
+      sibling = sibling.previousElementSibling;
+    }
+    // Fall back to the first section[id] inside the parent container
+    var parent = slide.parentElement;
+    if (parent && parent.tagName === "SECTION") {
+      var firstNamed = parent.querySelector("section[id]");
+      if (firstNamed) {
+        return firstNamed.id;
+      }
+    }
+    return null;
+  }
+
+  function updateHtmlLink() {
+    var anchor = document.getElementById("revealjs-html-anchor");
+    if (!anchor) {
+      return;
+    }
+    var sectionId = getCurrentSectionId();
+    anchor.href = getHtmlBase() + (sectionId ? "#" + sectionId : "");
+  }
+
+  function initRevealJsHtmlLink() {
+    var htmlBase = getHtmlBase();
+
+    // Don't add the link if the URL doesn't follow the -slides.html convention
+    if (htmlBase === window.location.href.split("#")[0]) {
+      return;
+    }
+
+    // Inject styles
+    var styleElement = document.createElement("style");
+    styleElement.textContent = css;
+    document.head.appendChild(styleElement);
+
+    // Create the link element and append it directly to body so it stays
+    // visible across all slides regardless of Reveal.js section visibility
+    var div = document.createElement("div");
+    div.id = "revealjs-html-link";
+    var anchor = document.createElement("a");
+    anchor.id = "revealjs-html-anchor";
+    anchor.href = htmlBase;
+    anchor.target = "_blank";
+    anchor.title = "View this section in the HTML notes";
+    anchor.setAttribute("aria-label", "View this section in the HTML notes");
+    anchor.innerHTML = "&#128196;&nbsp;Webpage version";
+    div.appendChild(anchor);
+    document.body.appendChild(div);
+
+    // Register Reveal.js slide-change listener to keep the link updated
+    if (typeof Reveal !== "undefined") {
+      Reveal.on("ready", updateHtmlLink);
+      Reveal.on("slidechanged", updateHtmlLink);
+    }
+
+    updateHtmlLink();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initRevealJsHtmlLink);
+  } else {
+    initRevealJsHtmlLink();
+  }
+})();
+</script>
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/morrison-lab\.github\.io\/mcs\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
+    
+
+</body></html>
