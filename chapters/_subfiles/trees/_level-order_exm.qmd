@@ -1,0 +1,24 @@
+::: {#exm-level-order}
+#### Level order of $B$
+
+Run `bfs` (@def-bfs) on the drawing of the binary tree $B$ (@fig-binary) from its root $m$, with the lists of @def-level-order.
+Each row of the table is one pass through the `while` loop:
+
+| Removed $v$ | Newly marked $u$, with `dist[u]` | $Q$ after the pass |
+|:-----------:|:-----------------------:|:------------------:|
+| $m$ | $f$ (1), $t$ (1) | $f, t$ |
+| $f$ | $c$ (2), $h$ (2) | $t, c, h$ |
+| $t$ | $r$ (2), $w$ (2) | $c, h, r, w$ |
+| $c$ | none | $h, r, w$ |
+| $h$ | $j$ (3) | $r, w, j$ |
+| $r$ | $p$ (3) | $w, j, p$ |
+| $w$ | none | $j, p$ |
+| $j$ | none | $p$ |
+| $p$ | none | empty |
+
+When $f$ is removed, its list is $m, c, h$, and $m$ is already marked.
+The level order (@def-level-order) of $B$ is the order of the first column, $m, f, t, c, h, r, w, j, p$,
+the list of @sol-level-by-level,
+and each label `dist[u]` is the level of $u$.
+
+:::

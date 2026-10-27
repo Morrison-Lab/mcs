@@ -1,0 +1,9 @@
+::: {#exr-level-by-level}
+#### Level by level
+
+List the labels of the binary tree $B$ of @fig-binary level by level (@def-tree-level):
+first the vertices at level 0, then those at level 1, and so on,
+each level from left to right as drawn.
+What list do you get?
+
+:::

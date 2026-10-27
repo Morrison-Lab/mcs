@@ -1,0 +1,10 @@
+::: {#def-stack}
+#### Stack
+
+A **stack** [@wikipedia_stack_abstract_data_type] is a list that a program changes in only two ways:
+it adds an element at the front of the list, which is called *pushing* the element,
+and it removes the element at the front, which is called *popping* it.
+So the last element pushed is the first one popped, as with a stack of plates.
+A queue (@def-queue), in contrast, adds at the back.
+
+:::

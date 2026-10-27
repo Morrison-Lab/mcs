@@ -1,0 +1,467 @@
+---
+title: "Trees"
+subtitle: "Trees and forests, rooted trees, binary trees, preorder, inorder, postorder and level order, expression trees, and spanning trees"
+format:
+  html: default
+  revealjs:
+    output-file: trees-slides.html
+  pdf:
+    output-file: trees-handout.pdf
+  docx:
+    output-file: trees.docx
+---
+
+{{< include ../latex-macros/macros.qmd >}}
+
+::: {.callout-note appearance='simple' collapse=true}
+## Source
+
+The topics of this chapter follow the course calendar,
+and their order follows Kameron Decker Harris's Fall 2026 lecture notes on trees.
+These come from those notes:
+
+- a tree as a connected graph with no cycles (the notes say no simple circuits), and a forest, whose connected components are trees;
+- the theorem that a graph is a tree if and only if there is exactly one path between every two of its vertices;
+- rooted trees, with the root, parents, children, ancestors, descendants, leaves, internal vertices and subtrees,
+  and the fact that choosing a different root gives a different rooted tree;
+- the level of a vertex and the height of a rooted tree;
+- ordered rooted trees, and binary trees, with their left and right subtrees;
+- the theorem that a tree with $n$ vertices has $n - 1$ edges;
+- preorder, inorder and postorder traversal;
+- expression trees, and the infix, prefix (Polish) and postfix (reverse Polish) forms of an expression,
+  with parentheses needed only in the infix form;
+- spanning trees, the theorem that a graph is connected if and only if it has a spanning tree,
+  and the spanning trees that depth-first and breadth-first search build.
+
+The notes define the traversals for ordered rooted trees, by pseudocode;
+here they are defined recursively for binary trees, as lists,
+and a remark extends preorder and postorder to ordered rooted trees.
+In the notes a forest is not connected;
+here a forest is any graph with no cycles, so a tree is a forest too.
+The notes' $m$-ary trees, full $m$-ary trees, balanced trees, and the counting theorems for them,
+siblings, back edges, and spanning forests of directed graphs are left out.
+A bound on the number of vertices of a binary tree of a given height is in their place.
+The definition of a parse tree is included from the
+[mathematics prerequisites](https://morrison-lab.github.io/mds/) notes,
+so it reads the same in both places.
+Level order, as breadth-first search from the root, follows the course calendar's "tree traversal".
+The proof that a tree with $n$ vertices has $n - 1$ edges, the other proofs,
+the examples, the exercises and the Racket functions are new.
+:::
+
+# Trees {#sec-trees}
+
+{{< include _subfiles/trees/_pipes_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_pipes_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_degree-one_lem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_tree_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_pipes-tree_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_trees-or-not_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_tree-simple_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_tree-paths_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_tree-paths-loops_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_forest_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_forest_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_forest-connected_rem.qmd >}}
+
+# Rooted trees {#sec-rooted-trees}
+
+{{< include _subfiles/trees/_phone-calls_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_phone-calls_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_rooted-tree_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_phone-tree_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_tree-parent_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_tree-parent_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_tree-child_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_tree-child_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_parent-edge_lem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_ancestor_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_ancestor_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_descendant_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_descendant_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_tree-leaf_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_tree-leaf_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_internal-vertex_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_internal-vertex_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_subtree_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_subtree_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_subtree-tree_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_tree-level_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_tree-level_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_level-parent_lem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_tree-height_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_tree-height_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_rerooted_exm.qmd >}}
+
+# Counting edges {#sec-tree-edges}
+
+{{< include _subfiles/trees/_all-calls_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_all-calls_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_tree-edges_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_tree-edges_exm.qmd >}}
+
+# Binary trees {#sec-binary-trees}
+
+{{< include _subfiles/trees/_three-vertices_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_three-vertices_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_ordered-rooted-tree_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_ordered-phone_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_binary-tree_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_single_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_binary-tree_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_binary-drawing_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_left-right_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_size-height_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_binary-size_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_binary-size_exm.qmd >}}
+
+# Preorder, inorder and postorder {#sec-traversals}
+
+{{< include _subfiles/trees/_root-first_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_root-first_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_preorder_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_preorder_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_inorder_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_inorder_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_postorder_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_postorder_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_traversal-length_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_ordered-traversals_rem.qmd >}}
+
+# Level order {#sec-level-order}
+
+{{< include _subfiles/trees/_level-by-level_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_level-by-level_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_level-order_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_level-order_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_bfs-order_lem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_level-order_thm.qmd >}}
+
+# Binary trees in Racket {#sec-racket-trees}
+
+{{< include _subfiles/trees/_racket-tree_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_racket-tree_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_racket-traversals_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_racket-height_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_racket-level-order_exm.qmd >}}
+
+# Expression trees {#sec-expression-trees}
+
+{{< include _subfiles/trees/_last-operation_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_last-operation_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/expressions-algorithms/_def-parse-tree.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_expression-tree_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_expression-tree-name_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_prefix-form_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_prefix-form_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_postfix-form_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_postfix-form_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_infix-parentheses_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_stack_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_postfix-stack_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_racket-evaluate_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_racket-postfix_exm.qmd >}}
+
+# Spanning trees {#sec-spanning-trees}
+
+{{< include _subfiles/trees/_fewest-roads_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_fewest-roads_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_spanning-tree_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_spanning-tree_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_spanning-tree_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_connected-edges_cor.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_connected-edges_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_bfs-tree_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_bfs-tree_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_bfs-tree_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_dfs-one-call_lem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_dfs-tree_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_dfs-tree_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/trees/_dfs-tree_exm.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

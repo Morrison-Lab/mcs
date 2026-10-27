@@ -1,0 +1,25 @@
+::: {#exm-rerooted}
+#### Another root
+
+Suppose that $c$ hears the news first, and it travels along the same seven edges of the tree $C$ of @exm-phone-tree.
+Then $C$ with root $c$ is a different rooted tree (@def-rooted-tree), drawn in @fig-phone-c.
+
+- The parent (@def-tree-parent) of $a$ is now $c$, and $a$ has two children, $b$ and $d$.
+- The path from $c$ to $h$ is $c, a, d, g, h$, so $h$ is at level (@def-tree-level) 4, and the height (@def-tree-height) is 4.
+- The leaves (@def-tree-leaf) are $e$, $f$ and $h$,
+  and $c$ is now an internal vertex.
+
+::: {#fig-phone-c}
+
+![](../images/trees-phone-c.png){fig-alt="The same eight points and seven edges as the phone tree, drawn with c at the top, marked level 0 to level 4 on the right.
+Level 0 holds c.
+Level 1 holds a, joined to c.
+Level 2 holds b and d, each joined to a.
+Level 3 holds e and f, each joined to b, and g, joined to d.
+Level 4 holds h, joined to g." width="55%"}
+
+The tree $C$ with root $c$.
+
+:::
+
+:::

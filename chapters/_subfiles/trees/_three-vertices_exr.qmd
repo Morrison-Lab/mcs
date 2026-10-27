@@ -1,0 +1,9 @@
+::: {#exr-three-vertices}
+#### Shapes with three vertices
+
+A binary tree is either empty,
+or a root together with two binary trees, a left one and a right one,
+drawn below the root to its left and to its right.
+Ignoring the names of the vertices, how many binary trees have exactly three vertices?
+
+:::

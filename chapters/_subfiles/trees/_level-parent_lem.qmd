@@ -1,0 +1,27 @@
+::: {#lem-level-parent}
+#### A child is one level below its parent
+
+Let $v$ be a vertex of a rooted tree (@def-rooted-tree) other than the root $r$, and let $u$ be its parent (@def-tree-parent).
+Then the path from $r$ to $v$ is the path from $r$ to $u$ followed by $v$, and
+
+$$
+\operatorname{level}(v) = \operatorname{level}(u) + 1.
+$$
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Let $r = v_0, v_1, \ldots, v_k = v$ be the path from $r$ to $v$, so that $u = v_{k - 1}$.
+The vertices $v_0, \ldots, v_{k - 1}$ are all different,
+so $v_0, \ldots, v_{k - 1}$ is a path from $r$ to $u$,
+and by @thm-tree-paths it is the path from $r$ to $u$.
+Its length is $k - 1$, so $\operatorname{level}(u) = k - 1 = \operatorname{level}(v) - 1$ (@def-tree-level).
+
+:::
+
+:::

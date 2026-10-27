@@ -1,0 +1,28 @@
+::: {#exm-left-right}
+#### Left is not right
+
+The binary trees (@def-binary-tree), with $\operatorname{single}$ as in @rem-single,
+
+$$
+\operatorname{node}\paren{x, \operatorname{single}(y), \mathtt{nil}}
+\quad \text{and} \quad
+\operatorname{node}\paren{x, \mathtt{nil}, \operatorname{single}(y)}
+$$
+
+are different: $y$ is the root of the left subtree of the first, and of the right subtree of the second.
+@fig-left-right draws them.
+As rooted trees (@rem-binary-drawing), they are the same: a root $x$ with one child $y$.
+So a binary tree says more than its rooted tree:
+it says whether each child is on the left or on the right.
+
+::: {#fig-left-right}
+
+![](../images/trees-left-right.png){fig-alt="Two small trees.
+On the left, x with y below it to the left.
+On the right, x with y below it to the right." width="40%"}
+
+Two different binary trees with the same rooted tree.
+
+:::
+
+:::

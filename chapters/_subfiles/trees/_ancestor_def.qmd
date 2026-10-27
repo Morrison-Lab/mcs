@@ -1,0 +1,8 @@
+::: {#def-ancestor}
+#### Ancestor
+
+Let $T$ be a rooted tree (@def-rooted-tree) with root $r$, and let $v$ be a vertex of $T$.
+A vertex $u \ne v$ is an **ancestor** of $v$ [@wikipedia_tree_graph_theory]
+if $u$ is on the path (@def-graph-path) from $r$ to $v$.
+
+:::

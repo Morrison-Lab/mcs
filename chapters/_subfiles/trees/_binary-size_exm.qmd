@@ -1,0 +1,11 @@
+::: {#exm-binary-size}
+#### Using the bound
+
+- The binary tree $B$ of @exm-binary-tree has size 9 and height 3,
+  and $9 \le 2^{4} - 1 = 15$, as @thm-binary-size says.
+- The binary tree $\operatorname{node}\paren{d, \operatorname{node}\paren{b, \operatorname{single}(a), \operatorname{single}(c)}, \operatorname{node}\paren{f, \operatorname{single}(e), \operatorname{single}(g)}}$
+  (with $\operatorname{single}$ as in @rem-single) has size 7 and height 2, and $7 = 2^{3} - 1$, so the bound can be reached.
+- A binary tree with 1000 vertices has height at least 9:
+  a binary tree of height at most 8 has at most $2^{9} - 1 = 511$ vertices.
+
+:::

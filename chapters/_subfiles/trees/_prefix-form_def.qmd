@@ -1,0 +1,8 @@
+::: {#def-prefix-form}
+#### Prefix form (Polish notation)
+
+The **prefix form**, or **Polish notation** [@wikipedia_polish_notation], of an expression whose operations each have two operands
+is the preorder (@def-preorder) of its parse tree (@def-parse-tree).
+Each operation comes before its two operands.
+
+:::

@@ -1,0 +1,18 @@
+::: {#rem-infix-parentheses}
+#### Inorder needs parentheses
+
+The inorder (@def-inorder) of the tree of @fig-expression is
+
+$$
+7 - 2 \times 3 + 4 \times 2,
+$$
+
+the symbols of the expression in their order, without the parentheses.
+With the usual precedence (@rem-expression-parse-tree), this string groups as $(7 - (2 \times 3)) + (4 \times 2)$,
+whose parse tree has $+$ at its root and whose value is 9, not 55.
+So the inorder needs parentheses to give back the expression,
+for example a pair around each operation: $((7 - 2) \times (3 + (4 \times 2)))$.
+The prefix form (@def-prefix-form) and the postfix form (@def-postfix-form) need no parentheses,
+since each operation has exactly two operands.
+
+:::

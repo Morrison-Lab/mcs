@@ -1,0 +1,7 @@
+::: {#sol-phone-calls}
+
+Three.
+Member $h$ hears the news only from $g$, $g$ only from $d$, and $d$ only from $a$,
+so the news goes $a, d, g, h$, through the three calls from $a$ to $d$, from $d$ to $g$ and from $g$ to $h$.
+
+:::

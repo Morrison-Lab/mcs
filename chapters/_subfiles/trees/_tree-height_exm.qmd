@@ -1,0 +1,8 @@
+::: {#exm-tree-height}
+#### The height of the phone tree
+
+The phone tree (@exm-phone-tree) has height (@def-tree-height) 3,
+since its deepest vertex, $h$, is at level 3 (@exm-tree-level).
+The news reaches every member within three calls.
+
+:::

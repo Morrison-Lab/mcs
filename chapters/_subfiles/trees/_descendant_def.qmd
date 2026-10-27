@@ -1,0 +1,7 @@
+::: {#def-descendant}
+#### Descendant
+
+A vertex $v$ of a rooted tree (@def-rooted-tree) is a **descendant** of a vertex $u$ [@wikipedia_tree_graph_theory]
+if $u$ is an ancestor (@def-ancestor) of $v$.
+
+:::

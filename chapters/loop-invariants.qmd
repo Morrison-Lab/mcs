@@ -42,6 +42,14 @@ the algorithms, the exercises, the examples, the theorems and their proofs.
 
 {{< slidebreak >}}
 
+{{< include _subfiles/loop-invariants/_floor_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/loop-invariants/_floor_exm.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include _subfiles/loop-invariants/_precondition_def.qmd >}}
 
 {{< slidebreak >}}

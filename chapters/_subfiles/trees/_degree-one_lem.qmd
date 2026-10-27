@@ -1,0 +1,34 @@
+::: {#lem-degree-one}
+#### A vertex of degree 1 is on no cycle
+
+Let $v$ be a vertex of degree 1 (@def-degree) of a graph $G$ (@def-graph-vertices-edges),
+and let $H$ be the subgraph (@def-subgraph) of $G$ left when $v$ and its one edge are taken out.
+Then every cycle (@def-graph-cycle) of $G$ is a cycle of $H$.
+
+So if taking out vertices of degree 1, one at a time, each of degree 1 in the graph left at that point,
+ends with a graph that has no edges, then $G$ has no cycles.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Let $v_0, e_1, v_1, \ldots, e_n, v_n$ be a cycle of $G$, with $v_n = v_0$.
+Each of its vertices has degree at least 2.
+If $n = 1$, then $e_1$ is a loop (@def-graph-loop) at $v_0$, which counts twice in $\deg(v_0)$.
+If $n \ge 2$, then each $v_i$ is an endpoint of two edges of the cycle,
+the edge just before it and the edge just after it (for $v_0$, these are $e_n$ and $e_1$),
+and these two edges are different, since a cycle is a trail (@def-trail).
+So $v$ is not on the cycle.
+The edge of $v$ is not on the cycle either, since every edge of the cycle has its endpoints on the cycle.
+So the cycle is a cycle of $H$.
+
+For the second statement, each step keeps every cycle, so a cycle of $G$ would be a cycle of the last graph,
+which has no edges and so no cycles.
+
+:::
+
+:::

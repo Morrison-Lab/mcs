@@ -1,0 +1,8 @@
+::: {#sol-last-operation}
+
+The multiplication between the two parenthesized parts.
+Both parts have to be computed before it:
+$7 - 2 = 5$, and, since multiplication comes before addition, $3 + 4 \times 2 = 3 + 8 = 11$.
+Then $5 \times 11 = 55$.
+
+:::

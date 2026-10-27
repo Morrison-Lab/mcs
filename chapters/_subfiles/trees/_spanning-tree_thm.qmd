@@ -1,0 +1,46 @@
+::: {#thm-spanning-tree}
+#### A graph is connected exactly when it has a spanning tree
+
+A graph $G$ (@def-graph-vertices-edges) is connected (@def-connected) if and only if it has a spanning tree (@def-spanning-tree).
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+**A graph with a spanning tree is connected.**
+Let $S$ be a spanning tree of $G$, and let $u$ and $v$ be vertices of $G$.
+They are vertices of $S$, which is connected, so there is a walk from $u$ to $v$ in $S$,
+and it is also a walk in $G$.
+
+**A connected graph has a spanning tree.**
+We use strong induction (@def-strong-induction) on the number $m \ge 0$ of edges,
+proving that every connected graph with $m$ edges has a spanning tree.
+Let $G$ be a connected graph with $m$ edges,
+and suppose that every connected graph with fewer than $m$ edges has a spanning tree.
+
+If $G$ has no cycles (@def-graph-cycle), it is a tree, and it is a spanning tree of itself.
+
+Otherwise, let $v_0, e_1, v_1, \ldots, e_n, v_n$ be a cycle of $G$, with $v_n = v_0$,
+and let $H$ be the subgraph (@def-subgraph) of $G$ with all the vertices of $G$ and all its edges but $e_1$.
+$H$ is connected.
+Take a walk in $G$ between two vertices, and change each step along $e_1$:
+
+- if $n = 1$, then $e_1$ is a loop at $v_0$, and the step $v_0, e_1, v_0$ can be left out;
+- if $n \ge 2$, then $e_1$ joins $v_0$ and $v_1$, and the walk $v_1, e_2, v_2, \ldots, e_n, v_0$ goes from $v_1$ to $v_0$ without $e_1$,
+  since the edges of a cycle are all different;
+  a step along $e_1$ from $v_1$ to $v_0$ can be replaced by it,
+  and a step from $v_0$ to $v_1$ by it read backward.
+
+The result is a walk in $H$ between the same two vertices.
+$H$ has $m - 1$ edges, so by the induction hypothesis it has a spanning tree.
+That tree is a subgraph of $G$ with every vertex of $G$, so it is a spanning tree of $G$.
+
+By strong induction, every connected graph has a spanning tree.
+
+:::
+
+:::

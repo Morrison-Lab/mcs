@@ -1,0 +1,65 @@
+::: {#thm-traversal-length}
+#### A traversal has one entry for each vertex
+
+For every binary tree $T$ (@def-binary-tree),
+
+$$
+\operatorname{len}\paren{\operatorname{preorder}(T)} = \operatorname{len}\paren{\operatorname{inorder}(T)} = \operatorname{len}\paren{\operatorname{postorder}(T)} = \operatorname{size}(T),
+$$
+
+where $\operatorname{len}$ is the length of a list (@def-list-length) and $\operatorname{size}(T)$ is the number of vertices (@rem-size-height).
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+We use structural induction (@def-structural-induction) on $T$.
+
+**Base case.**
+All three traversals of $\mathtt{nil}$ are $\mathtt{empty}$, of length $0 = \operatorname{size}(\mathtt{nil})$.
+
+**Inductive step.**
+Let $T = \operatorname{node}(x, L, R)$, where the three lengths for $L$ are $\operatorname{size}(L)$ and those for $R$ are $\operatorname{size}(R)$.
+By @thm-append-length and the definition of $\operatorname{len}$, for the preorder (@def-preorder),
+
+$$
+\ba
+& \operatorname{len}\paren{\operatorname{preorder}(T)}
+\\&= 1 + \operatorname{len}\paren{\operatorname{app}\paren{\operatorname{preorder}(L), \operatorname{preorder}(R)}}
+\\&= 1 + \operatorname{len}\paren{\operatorname{preorder}(L)} + \operatorname{len}\paren{\operatorname{preorder}(R)}
+\\&= 1 + \operatorname{size}(L) + \operatorname{size}(R),
+\ea
+$$
+
+for the inorder (@def-inorder),
+
+$$
+\ba
+& \operatorname{len}\paren{\operatorname{inorder}(T)}
+\\&= \operatorname{len}\paren{\operatorname{inorder}(L)} + \operatorname{len}\paren{\operatorname{cons}\paren{x, \operatorname{inorder}(R)}}
+\\&= \operatorname{len}\paren{\operatorname{inorder}(L)} + 1 + \operatorname{len}\paren{\operatorname{inorder}(R)}
+\\&= \operatorname{size}(L) + 1 + \operatorname{size}(R),
+\ea
+$$
+
+and for the postorder (@def-postorder),
+
+$$
+\ba
+& \operatorname{len}\paren{\operatorname{postorder}(T)}
+\\&= \operatorname{len}\paren{\operatorname{postorder}(L)} + \operatorname{len}\paren{\operatorname{app}\paren{\operatorname{postorder}(R), \operatorname{cons}(x, \mathtt{empty})}}
+\\&= \operatorname{len}\paren{\operatorname{postorder}(L)} + \operatorname{len}\paren{\operatorname{postorder}(R)} + \operatorname{len}\paren{\operatorname{cons}(x, \mathtt{empty})}
+\\&= \operatorname{size}(L) + \operatorname{size}(R) + 1.
+\ea
+$$
+
+Each of these is $\operatorname{size}(T)$, by @rem-size-height.
+By structural induction, the equations hold for every binary tree.
+
+:::
+
+:::

@@ -1,0 +1,8 @@
+::: {#rem-tree-paths-loops}
+#### Why @thm-tree-paths needs no loops
+
+The graph with one vertex and one loop (@def-graph-loop) shows that the condition of no loops in @thm-tree-paths is needed:
+its only path (@def-graph-path) from its vertex to itself is the path of length 0,
+but the loop is a cycle (@rem-tree-simple), so the graph is not a tree (@def-tree).
+
+:::

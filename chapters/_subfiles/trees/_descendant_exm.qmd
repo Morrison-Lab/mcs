@@ -1,0 +1,10 @@
+::: {#exm-descendant}
+#### Descendants in the phone tree
+
+In the phone tree (@exm-phone-tree),
+
+- the descendants (@def-descendant) of $d$ are $g$ and $h$, the members who hear the news through $d$;
+- the descendants of $a$ are the seven other members;
+- $c$ has no descendants.
+
+:::

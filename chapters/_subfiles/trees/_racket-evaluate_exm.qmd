@@ -1,0 +1,30 @@
+::: {#exm-racket-evaluate}
+#### Evaluating a parse tree in Racket
+
+In Racket, store a parse tree (@def-parse-tree) as a number for a leaf,
+and as a list `(op a b)` for an operation `op` with operands `a` and `b`.
+The tree of @fig-expression is `'(* (- 7 2) (+ 3 (* 4 2)))`.
+These functions compute its value, working from the leaves up:
+
+```racket
+(define (apply-op op a b)
+  (cond [(eq? op '+) (+ a b)]
+        [(eq? op '-) (- a b)]
+        [(eq? op '*) (* a b)]
+        [(eq? op '/) (/ a b)]))
+
+(define (evaluate e)
+  (if (number? e)
+      e
+      (apply-op (first e) (evaluate (second e)) (evaluate (third e)))))
+```
+
+- `(cond [test value] ...)` returns the `value` of the first clause whose `test` is true.
+- `(eq? x y)` is true when `x` and `y` are the same symbol.
+- `(number? e)` is true when `e` is a number.
+
+`(evaluate '(* (- 7 2) (+ 3 (* 4 2))))` returns 55.
+Without the quote, `(* (- 7 2) (+ 3 (* 4 2)))` is itself Racket code, and it also returns 55:
+Racket writes each arithmetic operation in prefix form (@def-prefix-form), with a pair of parentheses around each operation.
+
+:::

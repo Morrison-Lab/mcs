@@ -1,0 +1,9 @@
+::: {#exm-ancestor}
+#### Ancestors in the phone tree
+
+In the phone tree (@exm-phone-tree), the path from $a$ to $h$ is $a, d, g, h$,
+so the ancestors (@def-ancestor) of $h$ are $a$, $d$ and $g$.
+The root $a$ is an ancestor of every other vertex, and has no ancestors itself.
+The parent of a vertex is always one of its ancestors.
+
+:::

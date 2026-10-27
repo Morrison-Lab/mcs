@@ -1,0 +1,13 @@
+::: {#rem-tree-simple}
+#### A tree is a simple graph
+
+A loop (@def-graph-loop) $e$ at a vertex $v$ gives the circuit (@def-circuit) $v, e, v$ of length 1,
+which is a cycle (@def-graph-cycle).
+Two parallel edges (@def-parallel-edges) $e_1$ and $e_2$ that join $u$ and $v$ give the circuit $u, e_1, v, e_2, u$ of length 2,
+which is a cycle, since $u \ne v$.
+So a graph with no cycles, and a tree (@def-tree) in particular, is simple (@def-simple-graph).
+Each edge of a tree is the only edge with its two endpoints,
+so, as in @exm-simple-graph, we write it as the set of its endpoints,
+and we write a walk (@def-walk) in a tree by its vertices alone, as in @sol-pipes.
+
+:::

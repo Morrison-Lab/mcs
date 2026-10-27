@@ -1,0 +1,34 @@
+::: {#lem-dfs-one-call}
+#### Depth-first search calls itself once on each vertex
+
+Let $G$ be a connected (@def-connected) graph with no parallel edges (@def-parallel-edges),
+given by an adjacency list (@def-adjacency-list), and let $s$ be a vertex of $G$.
+Then `dfs(G, s)` (@def-dfs) makes exactly one call `dfs(G, u)` on each vertex $u$ of $G$,
+and for $u \ne s$ that call is made by a call `dfs(G, v)` with $v$ adjacent (@def-adjacent) to $u$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+**At most one call.**
+Apart from the first call, a call `dfs(G, u)` is made only when $u$ is not marked,
+and every call `dfs(G, u)` marks $u$ before it makes any other call.
+Marks are never removed, so after the first call on $u$, $u$ stays marked, and no later call on $u$ is made.
+
+**At least one call.**
+Since $G$ is connected, there is a walk (@def-walk) from $s$ to every vertex,
+so @thm-dfs-reachable says that `dfs(G, s)` marks every vertex.
+A vertex is marked only by a call on it, so there is a call on every vertex.
+
+**Who makes the call.**
+For $u \ne s$, the call on $u$ is not the first call,
+so it is made by a call `dfs(G, v)` while it goes through the list of $v$,
+and $u$ is in that list, so $u$ is adjacent to $v$.
+
+:::
+
+:::

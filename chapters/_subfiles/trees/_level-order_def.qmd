@@ -1,0 +1,10 @@
+::: {#def-level-order}
+#### Level order
+
+Let $B$ be a binary tree (@def-binary-tree) that is not empty, and let $T$ be its drawing (@rem-binary-drawing), with root $r$.
+Give $T$ the adjacency list (@def-adjacency-list) in which the list of each vertex $v$ is
+its parent (@def-tree-parent), if $v$ has one,
+then the root of its left subtree and the root of its right subtree, if these subtrees are not empty.
+The **level order** of $B$ [@wikipedia_tree_traversal] is the order in which `bfs(T, r)` (@def-bfs) removes the vertices of $T$ from its queue (@def-queue).
+
+:::

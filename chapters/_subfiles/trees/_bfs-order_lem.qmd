@@ -1,0 +1,46 @@
+::: {#lem-bfs-order}
+#### Breadth-first search removes vertices in order of their labels
+
+Let $G$ and $s$ be as in @def-bfs.
+Then `bfs(G, s)` removes the vertices from its queue (@def-queue) with their labels $\texttt{dist}$ in nondecreasing order.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
+
+::: proof
+
+Let $I$ be the statement that,
+if $x_1, \ldots, x_k$ are the vertices in the queue $Q$ from front to back, then
+
+$$
+\texttt{dist}[x_1] \le \texttt{dist}[x_2] \le \cdots \le \texttt{dist}[x_k] \le \texttt{dist}[x_1] + 1.
+$$
+
+**$I$ holds at the first test of the loop.**
+Then $Q$ holds only $s$, and $\texttt{dist}[s] \le \texttt{dist}[s] + 1$.
+
+**$I$ is a loop invariant.**
+Suppose $I$ holds at a test, and the pass removes $v = x_1$.
+The vertices $x_2, \ldots, x_k$ that remain have labels in nondecreasing order,
+each from $\texttt{dist}[v]$ to $\texttt{dist}[v] + 1$.
+Every vertex the pass adds goes to the back, with the label $\texttt{dist}[v] + 1$,
+which is at least every label before it.
+So the labels in $Q$ are still in nondecreasing order.
+Each of them is at most $\texttt{dist}[v] + 1$,
+and the new first label is at least $\texttt{dist}[v]$,
+so the last label is at most the new first label plus 1.
+So $I$ holds at the next test, and $I$ is a loop invariant, by @thm-loop-invariant.
+
+**The labels never decrease.**
+Suppose a pass removes $v$, and the next pass removes $w$.
+At the test between them, $I$ holds, and $w$ is at the front of $Q$.
+Every label in $Q$ at that test is either the label of a vertex that was behind $v$, which is at least $\texttt{dist}[v]$ by $I$ before the pass,
+or $\texttt{dist}[v] + 1$.
+So $\texttt{dist}[w] \ge \texttt{dist}[v]$.
+
+:::
+
+:::

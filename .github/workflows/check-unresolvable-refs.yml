@@ -1,0 +1,39 @@
+# Flags cross-references that Quarto cannot resolve and renders without a
+# warning: an @id inside math, which prints literally, and an @sec- reference,
+# which prints as "Section" with no number in the PDF handout, whose sections
+# are unnumbered. Blocking.
+#
+# Why it exists: both reached the trees chapter's preview handout (mcs#26) and
+# were found only by reading every page (mcs#29).
+
+name: Check unresolvable cross-references
+
+on:
+  pull_request:
+    paths:
+      - '**.qmd'
+      - '_quarto*.yml'
+      - '.github/scripts/check-unresolvable-refs.py'
+      - '.github/workflows/check-unresolvable-refs.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install PyYAML
+        run: python3 -m pip install --quiet pyyaml
+      - name: Self-test
+        run: python3 .github/scripts/test-check-unresolvable-refs.py
+      - name: Check
+        run: python3 .github/scripts/check-unresolvable-refs.py

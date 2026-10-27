@@ -1,0 +1,9 @@
+::: {#exm-tree-parent}
+#### Parents in the phone tree
+
+In the phone tree (@exm-phone-tree), the path from $a$ to $h$ is $a, d, g, h$,
+so the parent (@def-tree-parent) of $h$ is $g$.
+The path from $a$ to $b$ is $a, b$, so the parent of $b$ is $a$.
+The parent of each member other than $a$ is the member who called them.
+
+:::

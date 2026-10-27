@@ -1,0 +1,7 @@
+::: {#def-tree-level}
+#### Level
+
+The **level** $\operatorname{level}(v)$ of a vertex $v$ of a rooted tree (@def-rooted-tree) with root $r$ [@wikipedia_tree_graph_theory]
+is the length of the path (@def-graph-path) from $r$ to $v$.
+
+:::

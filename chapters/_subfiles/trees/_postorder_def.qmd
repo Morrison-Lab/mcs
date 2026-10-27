@@ -1,0 +1,16 @@
+::: {#def-postorder}
+#### Postorder
+
+The **postorder** $\operatorname{postorder}(T)$ of a binary tree $T$ (@def-binary-tree) [@wikipedia_tree_traversal]
+is the list (@def-list) of the labels of its vertices defined recursively by
+
+$$
+\ba
+\operatorname{postorder}(\mathtt{nil}) &= \mathtt{empty},
+\\ \operatorname{postorder}\paren{\operatorname{node}(x, L, R)} &= \operatorname{app}\paren{\operatorname{postorder}(L), \operatorname{app}\paren{\operatorname{postorder}(R), \operatorname{cons}(x, \mathtt{empty})}}.
+\ea
+$$
+
+The root comes after its subtrees.
+
+:::

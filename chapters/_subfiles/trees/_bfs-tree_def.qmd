@@ -1,0 +1,12 @@
+::: {#def-bfs-tree}
+#### Breadth-first search tree
+
+Let $G$ be a connected (@def-connected) graph with no parallel edges (@def-parallel-edges),
+given by an adjacency list (@def-adjacency-list), and let $s$ be a vertex of $G$.
+By @thm-bfs-distance, `bfs(G, s)` (@def-bfs) marks every vertex,
+and it marks each vertex $u \ne s$ in the pass through its loop that removes some vertex $v$ from its queue.
+The **breadth-first search tree** of $G$ from $s$ [@wikipedia_breadth_first_search]
+is the subgraph (@def-subgraph) of $G$ with every vertex of $G$
+and, for each vertex $u \ne s$, the edge $\set{v, u}$.
+
+:::

@@ -1,0 +1,8 @@
+::: {#exm-floor-digit}
+#### Removing the last digit
+
+For a natural number (@def-natural-numbers) $n$,
+the floor (@def-floor) $\floor{n / 10}$ is $n$ with its last decimal digit removed,
+such as $\floor{2026 / 10} = \floor{202.6} = 202$.
+
+:::

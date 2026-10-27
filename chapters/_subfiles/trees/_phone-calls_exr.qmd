@@ -1,0 +1,22 @@
+::: {#exr-phone-calls}
+#### Passing the news
+
+Eight members of a club, $a$, $b$, $c$, $d$, $e$, $f$, $g$ and $h$, pass news by phone.
+Member $a$ hears it first and calls $b$, $c$ and $d$.
+Then $b$ calls $e$ and $f$, $d$ calls $g$, and $g$ calls $h$.
+@fig-phone draws the calls, with each caller above the members it calls.
+How many calls does the news pass through on its way from $a$ to $h$, counting the call to $h$?
+
+::: {#fig-phone}
+
+![](../images/trees-phone.png){fig-alt="Eight labeled points in four rows, marked level 0 to level 3 on the right.
+Level 0 holds a.
+Level 1 holds b, c and d, each joined to a.
+Level 2 holds e and f, each joined to b, and g, joined to d.
+Level 3 holds h, joined to g." width="55%"}
+
+The calls of @exr-phone-calls.
+
+:::
+
+:::
