@@ -1,0 +1,24 @@
+::: {#def-let}
+#### `let`
+
+The Racket expression
+
+```racket
+(let ([name1 e1]
+      ...
+      [namen en])
+  body)
+```
+
+evaluates `e1`, ..., `en`,
+gives each value its name,
+and returns the value of `body`, which can use those names.
+The names last only inside `body`.
+
+A `let` expression is shorthand for applying a `lambda` expression (@def-lambda):
+it has the same value as `((lambda (name1 ... namen) body) e1 ... en)`.
+So `(let ([s (+ 1 2)]) (* s s))` and `((lambda (s) (* s s)) (+ 1 2))` both return 9.
+
+:::
+
+*Video:* Cain uses `let` to save a result that would otherwise be computed twice, and shows how `let` becomes a `lambda`, in [CS 107 Lecture 22](https://www.youtube.com/watch?v=3LeCydausnk) [@cain2008cs107videos].

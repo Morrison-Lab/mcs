@@ -17,7 +17,11 @@ format:
 ## Source
 
 Kameron Decker Harris's Fall 2026 syllabus opens the course with an introduction to functional programming;
-this chapter, its examples and its exercises are new.
+this chapter, its examples and its exercises are new,
+except the exercises on `lambda` and `apply`,
+which are adapted from Jerry Cain's Stanford CS 107 handouts on Scheme [@cain2008cs107]
+under the [Creative Commons Attribution 3.0 United States License](https://creativecommons.org/licenses/by/3.0/us/),
+and say so in their own Source notes.
 
 The definitions of expression, function, argument and value are included from the
 [mathematics prerequisites](https://morrison-lab.github.io/mds/) notes,
@@ -27,6 +31,10 @@ so they read the same in both places.
 # Expressions {#sec-racket-expressions}
 
 {{< include _subfiles/functional-programming/_running-racket_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_scheme-racket_rem.qmd >}}
 
 {{< slidebreak >}}
 
@@ -135,6 +143,46 @@ so they read the same in both places.
 {{< slidebreak >}}
 
 {{< include _subfiles/functional-programming/_map-filter_exm.qmd >}}
+
+# Anonymous functions and local names {#sec-lambda-let}
+
+{{< include _subfiles/functional-programming/_shift-all_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_shift-all_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_lambda_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_lambda-calculus_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_adder_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_average_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_average_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_let_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_quadratic-roots_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_further-reading_rem.qmd >}}
 
 # References {.unnumbered}
 

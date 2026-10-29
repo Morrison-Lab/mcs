@@ -1,0 +1,13 @@
+::: {#exr-average}
+#### Applying a function to a list
+
+`(apply f L)` applies the function `f` to the elements of the list `L` as its arguments,
+so `(apply + (list 2 7 6))` is the same as `(+ 2 7 6)`, which returns 15.
+
+1. Guess what `(apply max (list 3 9 2))` returns.
+2. `(length L)` returns the number of elements of `L`.
+   Use `apply` and `length` to define `(average L)`,
+   which returns the mean of a nonempty list of numbers.
+3. Guess what `(average (list 1 2 3 4))` returns.
+
+:::
