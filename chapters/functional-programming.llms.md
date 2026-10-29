@@ -6,7 +6,7 @@ Expressions, functions and cases in Racket
 
 Published
 
-Last modified: 2026-10-29 13:50:37 (PDT)
+Last modified: 2026-10-29 14:19:01 (PDT)
 
 > **NOTE:**
 >
@@ -285,11 +285,36 @@ Last modified: 2026-10-29 13:50:37 (PDT)
 >
 > Neither one changes `L`; each returns a new list.
 
-# 6 Anonymous functions
+> **NOTE:**
+>
+> **Exercise 6 (Applying a function to a list)** `(apply f L)` applies the function `f` to the elements of the list `L` as its arguments, so `(apply + (list 2 7 6))` is the same as `(+ 2 7 6)`, which returns 15.
+>
+> 1.  Guess what `(apply max (list 3 9 2))` returns.
+> 2.  Use `apply`, `max` and `min` to define `(spread L)`, which returns the largest element of a nonempty list of numbers minus its smallest element.
+> 3.  Guess what `(spread (list 4 -1 7 2))` returns.
 
 > **NOTE:**
 >
-> **Exercise 6 (A function with no name)** The function `pair-with` takes a list `L` and a value `y`:
+> *Solution 6*.
+>
+> 1.  `(apply max (list 3 9 2))` is `(max 3 9 2)`, which returns 9.
+>
+> 2.  One answer:
+>
+>     ``` racket
+>     (define (spread L)
+>       (- (apply max L) (apply min L)))
+>     ```
+>
+> 3.  The largest element is 7 and the smallest is \\-1\\, so `(spread (list 4 -1 7 2))` returns \\7 - (-1) = 8\\.
+>
+> `spread` needs no recursion: `max` and `min` already take any number of arguments, and `apply` hands each of them the whole list.
+
+# 6 Anonymous functions and local names
+
+> **NOTE:**
+>
+> **Exercise 7 (A function with no name)** The function `pair-with` takes a list `L` and a value `y`:
 >
 > ``` racket
 > (define (pair-with L y)
@@ -304,7 +329,7 @@ Last modified: 2026-10-29 13:50:37 (PDT)
 
 > **NOTE:**
 >
-> *Solution 6*. `(lambda (x) (* x x))` is the function that squares its argument, written in place without a name.
+> *Solution 7*. `(lambda (x) (* x x))` is the function that squares its argument, written in place without a name.
 >
 > 1.  Applying it to 7 returns 49.
 > 2.  `map` ([Example 3](#exm-map-filter)) applies the doubling function to each element, and returns `'(2 4 6)`.
@@ -319,7 +344,7 @@ Last modified: 2026-10-29 13:50:37 (PDT)
 >   body)
 > ```
 >
-> is a **`lambda` expression**. Its value is the function with parameters `x1`, …, `xn` whose value at its arguments is the value of `body`, found as in [Definition 6](#def-racket-define). The function has no name. The body may use any name defined where the `lambda` expression appears, as the body of the `lambda` in `pair-with` ([Exercise 6](#exr-pair-with)) uses `y`.
+> is a **`lambda` expression**. Its value is the function with parameters `x1`, …, `xn` whose value at its arguments is the value of `body`, found as in [Definition 6](#def-racket-define). The function has no name. The body may use any name defined where the `lambda` expression appears, as the body of the `lambda` in `pair-with` ([Exercise 7](#exr-pair-with)) uses `y`.
 >
 > The definition `(define (f x) body)` is shorthand for `(define f (lambda (x) body))`: it gives the name `f` to the function the `lambda` expression makes.
 >
@@ -327,7 +352,7 @@ Last modified: 2026-10-29 13:50:37 (PDT)
 
 > **NOTE:**
 >
-> *Remark 4* (Where the name comes from). The word `lambda` comes from the lambda calculus, a model of computation in which a function is written \\\lambda x.\\ e\\, the function that takes \\x\\ to the value of the expression \\e\\. The lambda calculus has only three features: functions, applying a function to an argument, and variables. It has no numbers, strings or loops ([Crichton 2019](#ref-crichton2019cs242)). Applying \\\lambda x.\\ e\\ to an argument replaces each \\x\\ in \\e\\ by that argument, as in evaluation by substitution ([Example 1](#exm-substitution)). The function in [Exercise 6](#exr-pair-with) that squares its argument is \\\lambda x.\\ x \cdot x\\.
+> *Remark 4* (Where the name comes from). The word `lambda` comes from the lambda calculus, a model of computation in which a function is written \\\lambda x.\\ e\\, the function that takes \\x\\ to the value of the expression \\e\\. The lambda calculus has only three features: functions, applying a function to an argument, and variables. It has no numbers, strings or loops ([Crichton 2019](#ref-crichton2019cs242)). Applying \\\lambda x.\\ e\\ to an argument replaces each \\x\\ in \\e\\ by that argument, as in evaluation by substitution ([Example 1](#exm-substitution)). The function in [Exercise 7](#exr-pair-with) that squares its argument is \\\lambda x.\\ x \cdot x\\.
 >
 > *Media:* Will Crichton’s [notes on the lambda calculus](https://stanford-cs242.github.io/f19/lectures/02-1-lambda-calculus), from Stanford’s CS 242, *Programming Languages*, go further ([Crichton 2019](#ref-crichton2019cs242)).
 
@@ -346,9 +371,62 @@ Last modified: 2026-10-29 13:50:37 (PDT)
 > - `(twice (adder 3) 10)`, with `twice` from [Exercise 5](#exr-twice), returns 16.
 > - `(map (adder 1) (list 5 7 9))` returns `'(6 8 10)`.
 
+> **NOTE:**
+>
+> **Definition 14 (`let`)** The Racket expression
+>
+> ``` racket
+> (let ([name1 e1]
+>       ...
+>       [namen en])
+>   body)
+> ```
+>
+> evaluates `e1`, …, `en`, gives each value its name, and returns the value of `body`, which can use those names. The names last only inside `body`.
+>
+> A `let` expression is shorthand for applying a `lambda` expression ([Definition 13](#def-lambda)): it has the same value as `((lambda (name1 ... namen) body) e1 ... en)`. So `(let ([s (+ 1 2)]) (* s s))` and `((lambda (s) (* s s)) (+ 1 2))` both return 9.
+>
+> *Video:* Cain uses `let` to save a result that would otherwise be computed twice, and shows how `let` becomes a `lambda`, in [CS 107 Lecture 22](https://www.youtube.com/watch?v=3LeCydausnk) ([Cain 2008](#ref-cain2008cs107videos)).
+
+> **NOTE:**
+>
+> **Example 5 (Naming a value used twice)** The solutions of \\a x^2 + b x + c = 0\\ with \\a \ne 0\\ and \\b^2 - 4ac \ge 0\\ are \\ x = \frac{-b \pm s}{2a}, \qquad \text{where } s = \sqrt{b^2 - 4ac}. \\ Both solutions use \\s\\, so a `let` names it and computes it once:
+>
+> ``` racket
+> (define (roots a b c)
+>   (let ([s (sqrt (- (* b b) (* 4 a c)))])
+>     (list (/ (+ (- b) s) (* 2 a))
+>           (/ (- (- b) s) (* 2 a)))))
+> ```
+>
+> `(roots 1 -3 2)` returns `'(2 1)`, since \\x^2 - 3x + 2 = (x - 1)(x - 2)\\.
+>
+> `let` does not change a variable: inside the body, `s` stands for one value, as a name does in algebra. So `roots` is a pure function ([Definition 10](#def-pure-function)).
+
+> **NOTE:**
+>
+> *Remark 5* (Scheme and Racket). Stanford’s CS 107, *Programming Paradigms*, taught Scheme in its Spring 2008 offering, and its lectures are free to watch ([Cain 2008](#ref-cain2008cs107videos)). Racket grew out of Scheme, and most of the Scheme code in those lectures runs in Racket with few changes:
+>
+> - Scheme’s `car` and `cdr` return the first element of a list and the list of the other elements. Racket accepts them too, but this course uses their clearer names `first` and `rest`.
+> - A Scheme file needs no first line. A Racket file starts with `#lang racket`.
+> - Racket writes the cases of a `cond` in square brackets, `[test a]`, where Scheme uses parentheses. Racket accepts both.
+> - CS 107 typed its code into an interpreter called Kawa. This course uses DrRacket.
+>
+> *Video:* Jerry Cain introduces Scheme, its lists and its first recursive functions in [CS 107 Lecture 19](https://www.youtube.com/watch?v=_cV8NWQCxnE) ([Cain 2008](#ref-cain2008cs107videos)).
+
+> **NOTE:**
+>
+> *Remark 6* (Further reading).
+>
+> - Jerry Cain’s CS 107 handouts on Scheme, on the [course page](https://see.stanford.edu/Course/CS107), work many more examples, among them flattening nested lists and listing permutations; his lectures 19 to 23 ([Cain 2008](#ref-cain2008cs107videos)) cover the same ground.
+> - Will Crichton’s CS 242 notes on [functional basics](https://stanford-cs242.github.io/f19/lectures/03-1-functional-basics) and [algebraic data types](https://stanford-cs242.github.io/f19/lectures/03-2-algebraic-data-types) build functional programs on types, in the language OCaml ([Crichton 2019](#ref-crichton2019cs242)).
+> - Stanford’s [CS 99](https://web.stanford.edu/class/cs99/) teaches Lean 4, a functional programming language in which a computer checks proofs about the programs ([Aniva and Mohamed 2025](#ref-aniva2025cs99)).
+
 # References
 
-Cain, Jerry. 2008. *Programming Paradigms (Stanford CS107), Lecture 22*. YouTube. <https://www.youtube.com/watch?v=3LeCydausnk>.
+Aniva, Leni, and Abdalrhman Mohamed. 2025. *CS 99: Functional Programming and Theorem Proving in Lean 4*. Stanford University. <https://web.stanford.edu/class/cs99/>.
+
+Cain, Jerry. 2008. *Programming Paradigms (Stanford CS107), Lectures 19–23*. Stanford Engineering Everywhere. <https://see.stanford.edu/Course/CS107>.
 
 Crichton, Will. 2019. *CS 242: Programming Languages, Fall 2019*. Stanford University. <https://stanford-cs242.github.io/f19/>.
 
