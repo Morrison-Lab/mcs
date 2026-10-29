@@ -1,0 +1,23 @@
+::: {#def-lambda}
+#### `lambda`
+
+The Racket expression
+
+```racket
+(lambda (x1 ... xn)
+  body)
+```
+
+is a **`lambda` expression**.
+Its value is the function with parameters `x1`, ..., `xn` whose value at its arguments is the value of `body`,
+found as in @def-racket-define.
+The function has no name.
+The body may use any name defined where the `lambda` expression appears,
+as the body of the `lambda` in `pair-with` (@exr-pair-with) uses `y`.
+
+The definition `(define (f x) body)` is shorthand for `(define f (lambda (x) body))`:
+it gives the name `f` to the function the `lambda` expression makes.
+
+*Video:* Jerry Cain uses `lambda` with `map` in Scheme, the language Racket grew out of, in [Stanford CS 107 Lecture 22](https://www.youtube.com/watch?v=3LeCydausnk) [@cain2008cs107videos].
+
+:::

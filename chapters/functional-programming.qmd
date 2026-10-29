@@ -136,6 +136,26 @@ so they read the same in both places.
 
 {{< include _subfiles/functional-programming/_map-filter_exm.qmd >}}
 
+# Anonymous functions {#sec-lambda-let}
+
+{{< include _subfiles/functional-programming/_pair-with_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_pair-with_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_lambda_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_lambda-calculus_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_adder_exm.qmd >}}
+
 # References {.unnumbered}
 
 ::: {#refs}
