@@ -1,0 +1,11 @@
+::: {#sol-twice}
+
+Replace `f` and `x` in the body `(f (f x))` (@def-racket-define):
+
+1. `(twice add-three 10)` is `(add-three (add-three 10))`, which is `(add-three 13)`, which returns 16.
+2. `(twice h 4)` is `(h (h 4))`.
+   Since $h(4) = 16 - 8 = 8$ and $h(8) = 64 - 16 = 48$, it returns 48.
+3. The argument `(twice add-three 0)` returns 6,
+   so the whole expression is `(twice add-three 6)`, which returns 12.
+
+:::

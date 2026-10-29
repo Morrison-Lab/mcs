@@ -44,6 +44,8 @@ website:
         href: chapters/calendar.qmd
       - text: "Syllabus"
         href: chapters/syllabus.qmd
+      - text: "Functional Programming"
+        href: chapters/functional-programming.qmd
       - text: "Propositional Logic"
         href: chapters/propositional-logic.qmd
       - text: "Predicates and Quantifiers"
@@ -96,6 +98,7 @@ website:
         href: index.qmd
       - chapters/calendar.qmd
       - chapters/syllabus.qmd
+      - chapters/functional-programming.qmd
       - chapters/propositional-logic.qmd
       - chapters/predicates-quantifiers.qmd
       - chapters/equivalence-negation.qmd

@@ -1,0 +1,8 @@
+::: {#def-higher-order}
+#### Higher-order function
+
+A **higher-order function** [@wikipedia_higher_order_function]
+is a function that takes a function as an argument, or returns a function as its value.
+`twice` in @exr-twice is a higher-order function.
+
+:::

@@ -1,0 +1,17 @@
+::: {#def-racket-expression}
+#### Racket expression, prefix notation
+
+A **Racket expression** (@def-expression) is one of:
+
+- a constant, such as the number `7`;
+- a name, such as `x` or `+`;
+- an **application** `(f e1 ... en)`:
+  an expression `f` for an operation or function, followed by its operands `e1`, ..., `en`,
+  which are expressions too, all inside one pair of parentheses.
+
+Writing the operation before its operands is called **prefix notation**.
+Racket needs no precedence rules,
+because the nesting of the parentheses says which operation comes first:
+`(* (+ 2 3) 4)` adds first, and `(+ 2 (* 3 4))` multiplies first.
+
+:::

@@ -1,0 +1,21 @@
+::: {#def-if-cond}
+#### `if` and `cond`
+
+The expression `(if test a b)` evaluates `test`,
+and returns the value of `a` if `test` is true and the value of `b` if it is false.
+
+The expression
+
+```racket
+(cond [test1 a1]
+      [test2 a2]
+      ...
+      [else an])
+```
+
+evaluates the tests in order and returns the value of the expression beside the first true one,
+or the value of `an` if none is true.
+Like a function defined by cases in mathematics,
+each case of a `cond` applies only when every case before it fails.
+
+:::

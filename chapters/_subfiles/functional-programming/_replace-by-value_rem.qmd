@@ -1,0 +1,19 @@
+::: {#rem-replace-by-value}
+#### Why this course uses functional programming
+
+In a program built from pure functions (@def-pure-function),
+an expression can be replaced by its value anywhere it appears
+without changing what the program does.
+That is what makes evaluation by substitution (@exm-substitution) work,
+and it is also how algebra works:
+$h(3)$ can be replaced by 3 in any formula.
+So a pure function can be checked with the same reasoning as a formula,
+and this course proves facts about programs that way.
+
+`next_id` in @exr-next-id is not pure,
+so `next_id() + next_id()` cannot be simplified to `2 * next_id()`:
+the first returns 3 (from $1 + 2$) on a fresh start, and the second returns 2.
+Racket can change variables too, with `set!`,
+but this course does not use it.
+
+:::
