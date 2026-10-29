@@ -8,6 +8,6 @@
   and [algebraic data types](https://stanford-cs242.github.io/f19/lectures/03-2-algebraic-data-types)
   build functional programs on types, in the language OCaml [@crichton2019cs242].
 - Stanford's [CS 99](https://web.stanford.edu/class/cs99/) teaches Lean 4,
-  a functional programming language in which a computer checks proofs about the programs [@aniva2026cs99].
+  a functional programming language in which a computer checks proofs about the programs [@aniva2025cs99].
 
 :::
