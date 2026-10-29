@@ -136,7 +136,15 @@ so they read the same in both places.
 
 {{< include _subfiles/functional-programming/_map-filter_exm.qmd >}}
 
-# Anonymous functions {#sec-lambda-let}
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_spread_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_spread_sol.qmd >}}
+
+# Anonymous functions and local names {#sec-lambda-let}
 
 {{< include _subfiles/functional-programming/_pair-with_exr.qmd >}}
 
@@ -155,6 +163,22 @@ so they read the same in both places.
 {{< slidebreak >}}
 
 {{< include _subfiles/functional-programming/_adder_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_let_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_quadratic-roots_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_scheme-racket_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_further-reading_rem.qmd >}}
 
 # References {.unnumbered}
 
