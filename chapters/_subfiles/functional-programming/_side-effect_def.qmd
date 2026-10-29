@@ -1,0 +1,8 @@
+::: {#def-side-effect}
+#### Side effect
+
+A **side effect** of a piece of code is any change it makes besides returning a value,
+such as changing a variable, printing, or writing a file.
+`next_id` in @exr-next-id has a side effect: it changes `count`.
+
+:::

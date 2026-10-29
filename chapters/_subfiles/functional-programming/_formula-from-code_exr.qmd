@@ -1,7 +1,7 @@
 ::: {#exr-formula-from-code}
 #### Reading a definition
 
-This line of Racket defines a function named `h`:
+This Racket code defines a function named `h`:
 
 ```racket
 (define (h x)

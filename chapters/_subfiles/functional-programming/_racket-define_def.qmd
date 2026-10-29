@@ -1,7 +1,7 @@
 ::: {#def-racket-define}
 #### Defining a function in Racket
 
-The Racket expression
+The Racket definition
 
 ```racket
 (define (f x1 ... xn)
@@ -14,6 +14,6 @@ To evaluate an application `(f a1 ... an)`,
 Racket evaluates the arguments `a1`, ..., `an`,
 replaces each parameter in `body` by the value of its argument,
 and evaluates the result.
-Its value is the value (@def-value) of `f` at those arguments.
+The value of the application is the value (@def-value) of `f` at those arguments.
 
 :::

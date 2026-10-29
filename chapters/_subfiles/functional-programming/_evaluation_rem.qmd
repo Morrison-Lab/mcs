@@ -8,6 +8,7 @@ In part 1 of @exr-evaluate-nested:
 
 ```text
 (* (+ 1 2) (- 10 4))
+= (* 3 (- 10 4))
 = (* 3 6)
 = 18
 ```

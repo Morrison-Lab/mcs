@@ -1,13 +1,10 @@
 ::: {#def-pure-function}
-#### Pure function, side effect
-
-A **side effect** of a piece of code is any change it makes besides returning a value,
-such as changing a variable, printing, or writing a file.
+#### Pure function
 
 A function in a program is **pure** [@wikipedia_pure_function] if
 
 - it returns the same value whenever it is called with the same arguments, and
-- it has no side effects.
+- it has no side effects (@def-side-effect).
 
 A pure function computes a mathematical function (@def-function) of its arguments.
 

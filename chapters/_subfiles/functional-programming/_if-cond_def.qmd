@@ -18,4 +18,9 @@ or the value of `an` if none is true.
 Like a function defined by cases in mathematics,
 each case of a `cond` applies only when every case before it fails.
 
+`if` and `cond` look like applications (@def-racket-expression), but they are not:
+an application evaluates all of its operands (@rem-evaluation),
+while `if` and `cond` evaluate only the tests they need and the one branch they return.
+`and`, `or` and `define` are not applications either.
+
 :::
