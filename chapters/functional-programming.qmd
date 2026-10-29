@@ -34,10 +34,6 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/functional-programming/_scheme-racket_rem.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include _subfiles/functional-programming/_evaluate-nested_exr.qmd >}}
 
 {{< slidebreak >}}
@@ -179,6 +175,10 @@ so they read the same in both places.
 {{< slidebreak >}}
 
 {{< include _subfiles/functional-programming/_quadratic-roots_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_scheme-racket_rem.qmd >}}
 
 {{< slidebreak >}}
 

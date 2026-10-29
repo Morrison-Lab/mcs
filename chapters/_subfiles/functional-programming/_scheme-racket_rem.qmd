@@ -5,7 +5,7 @@ Stanford's CS 107, *Programming Paradigms*, taught Scheme in its Spring 2008 off
 and its lectures are free to watch [@cain2008cs107videos].
 Scheme code runs in Racket with a few changes:
 
-- Scheme's `car` and `cdr` are Racket's `first` and `rest`.
+- Scheme's `car` and `cdr`, which return the first element of a list and the list of the other elements, are Racket's `first` and `rest`.
 - A Scheme file needs no first line; a Racket file starts with `#lang racket`.
 - Racket writes the cases of a `cond` in square brackets, `[test a]`, where Scheme uses parentheses; Racket accepts both.
 - CS 107 typed its code into an interpreter called Kawa; this course uses DrRacket.
