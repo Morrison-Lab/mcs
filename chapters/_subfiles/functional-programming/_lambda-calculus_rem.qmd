@@ -11,6 +11,6 @@ Applying $\lambda x.\, e$ to an argument replaces each $x$ in $e$ by that argume
 as in evaluation by substitution (@exm-substitution).
 The function in @exr-pair-with that squares its argument is $\lambda x.\, x \cdot x$.
 
-:::
-
 *Media:* Will Crichton's [notes on the lambda calculus](https://stanford-cs242.github.io/f19/lectures/02-1-lambda-calculus), from Stanford's CS 242, *Programming Languages*, go further [@crichton2019cs242].
+
+:::
