@@ -14,6 +14,7 @@ written in place without a name.
 #### Source
 
 `shift-all` is adapted from Jerry Cain's `translate` in his CS 107 handout "Scheme: Functions As Data" [@cain2008cs107],
-used under the [Creative Commons Attribution 3.0 United States License](https://creativecommons.org/licenses/by/3.0/us/).
+used under the [Creative Commons Attribution 3.0 United States License](https://creativecommons.org/licenses/by/3.0/us/),
+the license Stanford Engineering Everywhere released the 2008 course under.
 It is renamed, translated from Scheme to Racket, and recast as an exercise with new inputs.
 :::
