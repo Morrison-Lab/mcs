@@ -4,11 +4,12 @@
 The word `lambda` comes from the lambda calculus,
 a model of computation in which a function is written $\lambda x.\, e$,
 the function that takes $x$ to the value of the expression $e$.
-The lambda calculus has only three features, functions, applying a function to an argument, and variables;
-it has no numbers, strings or loops [@crichton2019cs242].
+The lambda calculus has only three features:
+functions, applying a function to an argument, and variables.
+It has no numbers, strings or loops [@crichton2019cs242].
 Applying $\lambda x.\, e$ to an argument replaces each $x$ in $e$ by that argument,
 as in evaluation by substitution (@exm-substitution).
-The function in @exr-shift-all that squares its argument is $\lambda x.\, x \cdot x$.
+The function in @exr-pair-with that squares its argument is $\lambda x.\, x \cdot x$.
 
 :::
 

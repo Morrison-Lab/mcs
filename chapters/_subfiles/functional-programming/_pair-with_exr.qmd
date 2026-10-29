@@ -1,0 +1,17 @@
+::: {#exr-pair-with}
+#### A function with no name
+
+The function `pair-with` takes a list `L` and a value `y`:
+
+```racket
+(define (pair-with L y)
+  (map (lambda (x) (list x y)) L))
+```
+
+Guess what each expression returns:
+
+1. `((lambda (x) (* x x)) 7)`
+2. `(map (lambda (x) (* 2 x)) (list 1 2 3))`
+3. `(pair-with (list 1 2 3) "a")`
+
+:::

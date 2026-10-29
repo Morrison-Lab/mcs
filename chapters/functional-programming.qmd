@@ -17,11 +17,7 @@ format:
 ## Source
 
 Kameron Decker Harris's Fall 2026 syllabus opens the course with an introduction to functional programming;
-this chapter, its examples and its exercises are new,
-except the exercise on `lambda`,
-which is adapted from Jerry Cain's Stanford CS 107 handouts on Scheme [@cain2008cs107]
-under the [Creative Commons Attribution 3.0 United States License](https://creativecommons.org/licenses/by/3.0/us/),
-and says so in its own Source note.
+this chapter, its examples and its exercises are new.
 
 The definitions of expression, function, argument and value are included from the
 [mathematics prerequisites](https://morrison-lab.github.io/mds/) notes,
@@ -142,11 +138,11 @@ so they read the same in both places.
 
 # Anonymous functions {#sec-lambda-let}
 
-{{< include _subfiles/functional-programming/_shift-all_exr.qmd >}}
+{{< include _subfiles/functional-programming/_pair-with_exr.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/functional-programming/_shift-all_sol.qmd >}}
+{{< include _subfiles/functional-programming/_pair-with_sol.qmd >}}
 
 {{< slidebreak >}}
 
