@@ -6,7 +6,7 @@ Winter 2027
 
 Published
 
-Last modified: 2026-10-28 15:59:36 (PDT)
+Last modified: 2026-10-29 08:04:26 (PDT)
 
 > **NOTE:**
 >
@@ -106,7 +106,7 @@ The topics and dates of future lectures may change. The [course calendar](../cha
 
 | Week | Dates | Topics | Assigned work | Reading |
 |:---|:---|:---|:---|:---|
-| 1 | Jan 5–8 | Introduction to functional programming; [propositional logic](../chapters/propositional-logic.llms.md), [predicates and quantifiers](../chapters/predicates-quantifiers.llms.md), [logical equivalence and negation](../chapters/equivalence-negation.llms.md) | Quiz 0; Lab 1 | 1.1, 2.1–2.3, 3.1 |
+| 1 | Jan 5–8 | Introduction to [functional programming](../chapters/functional-programming.llms.md); [propositional logic](../chapters/propositional-logic.llms.md), [predicates and quantifiers](../chapters/predicates-quantifiers.llms.md), [logical equivalence and negation](../chapters/equivalence-negation.llms.md) | Quiz 0; Lab 1 | 1.1, 2.1–2.3, 3.1 |
 | 2 | Jan 11–15 | Proofs: [inference and direct proof](../chapters/direct-proof.llms.md), [contrapositive, and contradiction](../chapters/contrapositive-contradiction.llms.md) | Lab 2; Homework 1 | 4.1–4.2, 4.4 |
 | 3 | Jan 18–22 | Proofs, continued; sets and functions | Lab 3; Homework 2 | 1.2–1.3, 4.7–4.8 |
 | 4 | Jan 25–29 | Mathematical induction; loop invariants | **Midterm 1**, Wednesday, Jan 27 | 5.1–5.2 |
@@ -148,7 +148,7 @@ Class time is for working on problems, not only for listening. You will be asked
 
 ### ABCD Cards
 
-On the first day of class, I will give each student an ABCD card, which you will use to vote on answers to questions in class. They work like electronic clickers, but they are free and need no batteries. They let both you and me quickly see how well you understand the material, so that I can adjust what I emphasize in class and you can adjust what you study outside it. Please bring this card to class each day. If you lose your card, print a new, landscape-mode color copy (PDF: **TBD**).
+On the first day of class, I will give each student an ABCD card, which you will use to vote on answers to questions in class. They work like electronic clickers, but they are free and need no batteries. They let both you and me quickly see how well you understand the material, so that I can adjust what I emphasize in class and you can adjust what you study outside it. Please bring this card to class each day. If you lose your card, print a new, landscape-mode color copy of the [ABCD card](../images/abcd-card.pdf).
 
 ### Worksheets
 

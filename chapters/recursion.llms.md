@@ -6,7 +6,7 @@ Recursive definitions, recursive programs and proofs about them
 
 Published
 
-Last modified: 2026-10-28 15:59:36 (PDT)
+Last modified: 2026-10-29 08:04:26 (PDT)
 
 > **NOTE:**
 >
@@ -35,7 +35,7 @@ Last modified: 2026-10-28 15:59:36 (PDT)
 
 > **NOTE:**
 >
-> **Definition 1 (Recursive definition)** Let \\n_0\\ be an integer ([Definition: Integers](../chapters/direct-proof.llms.md#def-integers)). A **recursive definition** ([Wikipedia contributors 2026e](#ref-wikipedia_recursive_definition)) of a function ([Definition: Function (map, mapping, transformation)](https://morrison-lab.github.io/mds/functions.html#def-function)) \\f\\ on the integers \\n \ge n_0\\ has two parts:
+> **Definition 1 (Recursive definition)** Let \\n_0\\ be an integer ([Definition: Integers](../chapters/direct-proof.llms.md#def-integers)). A **recursive definition** ([Wikipedia contributors 2026e](#ref-wikipedia_recursive_definition)) of a function ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)) \\f\\ on the integers \\n \ge n_0\\ has two parts:
 >
 > 1.  *Base case:* the value of \\f\\ is given directly at \\n_0\\, and possibly at a few more of the smallest inputs.
 > 2.  *Recursive rule:* \\f(n)\\ at every other input \\n\\ is given in terms of the values of \\f\\ at inputs that are smaller than \\n\\ and at least \\n_0\\.

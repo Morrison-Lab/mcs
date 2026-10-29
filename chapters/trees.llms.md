@@ -6,7 +6,7 @@ Trees and forests, rooted trees, binary trees, preorder, inorder, postorder and 
 
 Published
 
-Last modified: 2026-10-28 15:59:36 (PDT)
+Last modified: 2026-10-29 08:04:26 (PDT)
 
 > **NOTE:**
 >
@@ -682,7 +682,7 @@ Last modified: 2026-10-28 15:59:36 (PDT)
 
 > **NOTE:**
 >
-> **Definition 19 (Parse tree)** The **parse tree** ([Wikipedia contributors 2026d](#ref-wikipedia_parse_tree)) of an [expression](https://morrison-lab.github.io/mds/expressions-algorithms.html#def-expression) is the tree that shows how its symbols group into operations. Its leaves are the constants and variables of the expression, and each internal node is an operation applied to the nodes below it.
+> **Definition 19 (Parse tree)** The **parse tree** ([Wikipedia contributors 2026d](#ref-wikipedia_parse_tree)) of an [expression](../chapters/functional-programming.llms.md#def-expression) is the tree that shows how its symbols group into operations. Its leaves are the constants and variables of the expression, and each internal node is an operation applied to the nodes below it.
 
 > **NOTE:**
 >

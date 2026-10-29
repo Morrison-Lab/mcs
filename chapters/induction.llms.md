@@ -6,7 +6,7 @@ Ordinary and strong induction
 
 Published
 
-Last modified: 2026-10-28 15:59:36 (PDT)
+Last modified: 2026-10-29 08:04:26 (PDT)
 
 > **NOTE:**
 >
@@ -170,7 +170,7 @@ Last modified: 2026-10-28 15:59:36 (PDT)
 >
 > **Definition 3 (Recursively defined sequence)** Let \\n_0\\ be an [integer](../chapters/direct-proof.llms.md#def-integers) and \\m\\ a positive integer. A [sequence](https://morrison-lab.github.io/mds/functions.html#def-sequence) \\a\_{n_0}, a\_{n_0 + 1}, \ldots\\ is **recursively defined** ([Wikipedia contributors 2026c](#ref-wikipedia_recurrence_relation)) by two things:
 >
-> 1.  **Initial [terms](https://morrison-lab.github.io/mds/functions.html#def-sequence-term):** specific [values](https://morrison-lab.github.io/mds/functions.html#def-value) for \\a\_{n_0}, \ldots, a\_{n_0 + m - 1}\\.
+> 1.  **Initial [terms](https://morrison-lab.github.io/mds/functions.html#def-sequence-term):** specific [values](../chapters/functional-programming.llms.md#def-value) for \\a\_{n_0}, \ldots, a\_{n_0 + m - 1}\\.
 > 2.  **Recurrence:** a rule that gives \\a_n\\ from the \\m\\ entries \\a\_{n-1}, \ldots, a\_{n-m}\\ just before it, for every integer \\n \ge n_0 + m\\.
 >
 > The initial terms and the recurrence together fix every [term](https://morrison-lab.github.io/mds/functions.html#def-sequence-term): the first \\m\\ entries are given, and each later entry follows from the \\m\\ entries before it.

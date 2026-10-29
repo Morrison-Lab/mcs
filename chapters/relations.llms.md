@@ -6,7 +6,7 @@ Relations between sets, their properties, equivalence relations, partitions and 
 
 Published
 
-Last modified: 2026-10-28 15:59:36 (PDT)
+Last modified: 2026-10-29 08:04:26 (PDT)
 
 > **NOTE:**
 >
@@ -426,7 +426,7 @@ Last modified: 2026-10-28 15:59:36 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 3 (Having the same value is an equivalence relation)** Let \\f : A \to B\\ be a function ([Definition: Function (map, mapping, transformation)](https://morrison-lab.github.io/mds/functions.html#def-function)), and on \\A\\ let \\a \sim a'\\ when \\f(a) = f(a')\\. Then \\\sim\\ is an equivalence relation ([Definition 13](#def-equivalence-relation)).
+> **Theorem 3 (Having the same value is an equivalence relation)** Let \\f : A \to B\\ be a function ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)), and on \\A\\ let \\a \sim a'\\ when \\f(a) = f(a')\\. Then \\\sim\\ is an equivalence relation ([Definition 13](#def-equivalence-relation)).
 
 > **NOTE:**
 >
@@ -562,25 +562,25 @@ Last modified: 2026-10-28 15:59:36 (PDT)
 
 > **NOTE:**
 >
-> *Solution 8*. Exactly one each: rock beats only scissors, paper beats only rock, and scissors beats only paper. So “the element that \\a\\ beats” names one element of \\G\\ for each \\a \in G\\, which is what a function ([Definition: Function (map, mapping, transformation)](https://morrison-lab.github.io/mds/functions.html#def-function)) from \\G\\ to \\G\\ does.
+> *Solution 8*. Exactly one each: rock beats only scissors, paper beats only rock, and scissors beats only paper. So “the element that \\a\\ beats” names one element of \\G\\ for each \\a \in G\\, which is what a function ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)) from \\G\\ to \\G\\ does.
 
 > **NOTE:**
 >
-> **Definition 16 (Domain of a function)** The **domain** of a function \\f : A \to B\\ ([Definition: Function (map, mapping, transformation)](https://morrison-lab.github.io/mds/functions.html#def-function)) ([Wikipedia contributors 2026h](#ref-wikipedia_domain_of_a_function)) is the set \\A\\ of elements that \\f\\ assigns values to.
+> **Definition 16 (Domain of a function)** The **domain** of a function \\f : A \to B\\ ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)) ([Wikipedia contributors 2026h](#ref-wikipedia_domain_of_a_function)) is the set \\A\\ of elements that \\f\\ assigns values to.
 
 > **NOTE:**
 >
-> **Definition 17 (Codomain)** The **codomain** ([Wikipedia contributors 2026d](#ref-wikipedia_codomain)) of a [function](https://morrison-lab.github.io/mds/functions.html#def-function) \\f : A \to B\\ is the set \\B\\ that its values are required to lie in.
+> **Definition 17 (Codomain)** The **codomain** ([Wikipedia contributors 2026d](#ref-wikipedia_codomain)) of a [function](../chapters/functional-programming.llms.md#def-function) \\f : A \to B\\ is the set \\B\\ that its values are required to lie in.
 
 > **NOTE:**
 >
-> **Definition 18 (Graph of a function)** The **graph** ([Wikipedia contributors 2026l](#ref-wikipedia_graph_of_a_function)) of a [function](https://morrison-lab.github.io/mds/functions.html#def-function) \\f : A \to B\\ is the set of [ordered pairs](../chapters/sets.llms.md#def-ordered-pair) \\(a, f(a))\\, one for each element \\a\\ of its domain:
+> **Definition 18 (Graph of a function)** The **graph** ([Wikipedia contributors 2026l](#ref-wikipedia_graph_of_a_function)) of a [function](../chapters/functional-programming.llms.md#def-function) \\f : A \to B\\ is the set of [ordered pairs](../chapters/sets.llms.md#def-ordered-pair) \\(a, f(a))\\, one for each element \\a\\ of its domain:
 >
 > \\{\mathopen{}\left\\(a, f(a)) : a \in A\right\\\mathclose{}}\\
 
 > **NOTE:**
 >
-> **Example 23 (The graph of a length function)** Let \\\operatorname{len}\_K : K \to \mathbb{N}\\ ([Definition: Function (map, mapping, transformation)](https://morrison-lab.github.io/mds/functions.html#def-function), [Definition: Natural numbers (our convention)](../chapters/sets.llms.md#def-natural-numbers)) give the length of each word of the set \\K\\ of [Exercise 6](#exr-same-length), so \\\operatorname{len}\_K(a) = \operatorname{len}(a)\\, as in [Example 18](#exm-same-length). Its domain ([Definition 16](#def-function-domain)) is \\K\\ and its codomain ([Definition 17](#def-codomain)) is \\\mathbb{N}\\. Its graph ([Definition 18](#def-graph)) is the set of six pairs
+> **Example 23 (The graph of a length function)** Let \\\operatorname{len}\_K : K \to \mathbb{N}\\ ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function), [Definition: Natural numbers (our convention)](../chapters/sets.llms.md#def-natural-numbers)) give the length of each word of the set \\K\\ of [Exercise 6](#exr-same-length), so \\\operatorname{len}\_K(a) = \operatorname{len}(a)\\, as in [Example 18](#exm-same-length). Its domain ([Definition 16](#def-function-domain)) is \\K\\ and its codomain ([Definition 17](#def-codomain)) is \\\mathbb{N}\\. Its graph ([Definition 18](#def-graph)) is the set of six pairs
 >
 > \\ {\mathopen{}\left\\(\text{if}, 2), (\text{let}, 3), (\text{cond}, 4), (\text{list}, 4), (\text{cons}, 4), (\text{define}, 6)\right\\\mathclose{}}, \\
 >
@@ -592,7 +592,7 @@ Last modified: 2026-10-28 15:59:36 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 7 (Functions are relations with one output per input)** Let \\A\\ and \\B\\ be sets, and let \\R\\ be a relation from \\A\\ to \\B\\ ([Definition 1](#def-binary-relation)). Then \\R\\ is the graph ([Definition 18](#def-graph)) of a function \\f : A \to B\\ ([Definition: Function (map, mapping, transformation)](https://morrison-lab.github.io/mds/functions.html#def-function)) if and only if each \\a \in A\\ is related by \\R\\ to exactly one \\b \in B\\. That function is then the only one whose graph is \\R\\.
+> **Theorem 7 (Functions are relations with one output per input)** Let \\A\\ and \\B\\ be sets, and let \\R\\ be a relation from \\A\\ to \\B\\ ([Definition 1](#def-binary-relation)). Then \\R\\ is the graph ([Definition 18](#def-graph)) of a function \\f : A \to B\\ ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)) if and only if each \\a \in A\\ is related by \\R\\ to exactly one \\b \in B\\. That function is then the only one whose graph is \\R\\.
 
 > **NOTE:**
 >
@@ -604,7 +604,7 @@ Last modified: 2026-10-28 15:59:36 (PDT)
 
 > **NOTE:**
 >
-> *Remark 5* (What a function is fundamentally). [Definition: Function (map, mapping, transformation)](https://morrison-lab.github.io/mds/functions.html#def-function) defines what a function *does*: it assigns an output to each input. In formal set theory, what a function *is* is described in terms of [ordered pairs](../chapters/sets.llms.md#def-ordered-pair) and its graph ([Definition 18](#def-graph)): the set of pairs \\G = {\mathopen{}\left\\(a, f(a)) : a \in A\right\\\mathclose{}} \subseteq A \times B\\. Authors define a function formally in one of two ways:
+> *Remark 5* (What a function is fundamentally). [Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function) defines what a function *does*: it assigns an output to each input. In formal set theory, what a function *is* is described in terms of [ordered pairs](../chapters/sets.llms.md#def-ordered-pair) and its graph ([Definition 18](#def-graph)): the set of pairs \\G = {\mathopen{}\left\\(a, f(a)) : a \in A\right\\\mathclose{}} \subseteq A \times B\\. Authors define a function formally in one of two ways:
 >
 > 1.  **As its graph** ([Halmos 1974, sec. 8](#ref-halmos1974naive), p. 30): a function is a subset of \\A \times B\\ containing exactly one pair \\(a, b)\\ for each \\a \in A\\, where \\b = f(a)\\, and the statement \\f(a) = b\\ is notation for \\(a, b) \in f\\. Under this convention, the codomain \\B\\ is specified alongside the graph in the declaration \\f : A \to B\\.
 > 2.  **As a triple \\(A, B, G)\\**: the function consists of the domain \\A\\, the codomain \\B\\, and the graph \\G \subseteq A \times B\\. This explicit packaging retains the codomain \\B\\ as part of the function itself, distinguishing functions that have the same graph but different codomains (such as a function mapping into \\\mathbb{R}\\ versus into integers).
@@ -645,7 +645,7 @@ Last modified: 2026-10-28 15:59:36 (PDT)
 
 > **NOTE:**
 >
-> **Definition 19 (Image)** The **image** ([Wikipedia contributors 2026n](#ref-wikipedia_image_mathematics)) of a [function](https://morrison-lab.github.io/mds/functions.html#def-function) \\f : A \to B\\ is the set of values that \\f\\ actually takes:
+> **Definition 19 (Image)** The **image** ([Wikipedia contributors 2026n](#ref-wikipedia_image_mathematics)) of a [function](../chapters/functional-programming.llms.md#def-function) \\f : A \to B\\ is the set of values that \\f\\ actually takes:
 >
 > \\f(A) \stackrel{\text{def}}{=}{\mathopen{}\left\\f(a) : a \in A\right\\\mathclose{}}\\
 >
@@ -660,7 +660,7 @@ Last modified: 2026-10-28 15:59:36 (PDT)
 
 > **NOTE:**
 >
-> **Definition 20 (Range)** The word **range** of a [function](https://morrison-lab.github.io/mds/functions.html#def-function) \\f : A \to B\\ has two conflicting meanings, and sources use one or the other:
+> **Definition 20 (Range)** The word **range** of a [function](../chapters/functional-programming.llms.md#def-function) \\f : A \to B\\ has two conflicting meanings, and sources use one or the other:
 >
 > - the [image](#def-image) of \\f\\, the set \\f(A)\\ of values that \\f\\ actually takes;
 > - the [codomain](#def-codomain) of \\f\\, the set \\B\\ that its values are required to lie in.
@@ -677,7 +677,7 @@ Last modified: 2026-10-28 15:59:36 (PDT)
 
 > **NOTE:**
 >
-> **Definition 21 (Injective function (one-to-one function))** A function \\f : A \to B\\ ([Definition: Function (map, mapping, transformation)](https://morrison-lab.github.io/mds/functions.html#def-function)) is **injective** ([Wikipedia contributors 2026o](#ref-wikipedia_injective_function)) (also called **one-to-one**) if, for all \\a, a' \in A\\, \\f(a) = f(a')\\ implies \\a = a'\\.
+> **Definition 21 (Injective function (one-to-one function))** A function \\f : A \to B\\ ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)) is **injective** ([Wikipedia contributors 2026o](#ref-wikipedia_injective_function)) (also called **one-to-one**) if, for all \\a, a' \in A\\, \\f(a) = f(a')\\ implies \\a = a'\\.
 
 > **NOTE:**
 >
@@ -689,7 +689,7 @@ Last modified: 2026-10-28 15:59:36 (PDT)
 
 > **NOTE:**
 >
-> **Definition 22 (Surjective function (onto function))** A function \\f : A \to B\\ ([Definition: Function (map, mapping, transformation)](https://morrison-lab.github.io/mds/functions.html#def-function)) is **surjective** ([Wikipedia contributors 2026u](#ref-wikipedia_surjective_function)) (also called **onto**) if, for every \\b \in B\\, there is some \\a \in A\\ with \\f(a) = b\\.
+> **Definition 22 (Surjective function (onto function))** A function \\f : A \to B\\ ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)) is **surjective** ([Wikipedia contributors 2026u](#ref-wikipedia_surjective_function)) (also called **onto**) if, for every \\b \in B\\, there is some \\a \in A\\ with \\f(a) = b\\.
 
 > **NOTE:**
 >
@@ -701,7 +701,7 @@ Last modified: 2026-10-28 15:59:36 (PDT)
 
 > **NOTE:**
 >
-> **Definition 23 (Bijective function (bijection))** A function \\f : A \to B\\ ([Definition: Function (map, mapping, transformation)](https://morrison-lab.github.io/mds/functions.html#def-function)) is **bijective** ([Wikipedia contributors 2026b](#ref-wikipedia_bijection)) (also called a **bijection**) if it is injective ([Definition 21](#def-injective)) and surjective ([Definition 22](#def-surjective)).
+> **Definition 23 (Bijective function (bijection))** A function \\f : A \to B\\ ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)) is **bijective** ([Wikipedia contributors 2026b](#ref-wikipedia_bijection)) (also called a **bijection**) if it is injective ([Definition 21](#def-injective)) and surjective ([Definition 22](#def-surjective)).
 
 > **NOTE:**
 >
@@ -723,7 +723,7 @@ Last modified: 2026-10-28 15:59:36 (PDT)
 
 > **NOTE:**
 >
-> **Definition 24 (Identity function)** The **identity function** on a set \\A\\ ([Wikipedia contributors 2026m](#ref-wikipedia_identity_function)) is the function \\\operatorname{id}\_A : A \to A\\ ([Definition: Function (map, mapping, transformation)](https://morrison-lab.github.io/mds/functions.html#def-function)) with \\\operatorname{id}\_A(a) = a\\ for every \\a \in A\\.
+> **Definition 24 (Identity function)** The **identity function** on a set \\A\\ ([Wikipedia contributors 2026m](#ref-wikipedia_identity_function)) is the function \\\operatorname{id}\_A : A \to A\\ ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)) with \\\operatorname{id}\_A(a) = a\\ for every \\a \in A\\.
 
 > **NOTE:**
 >
@@ -734,7 +734,7 @@ Last modified: 2026-10-28 15:59:36 (PDT)
 
 > **NOTE:**
 >
-> **Definition 25 (Inverse function)** Let \\f : A \to B\\ be a [function](https://morrison-lab.github.io/mds/functions.html#def-function). A function \\g : B \to A\\ is the **inverse function** ([Wikipedia contributors 2026p](#ref-wikipedia_inverse_function)) of \\f\\, written \\f^{-1}\\, if both
+> **Definition 25 (Inverse function)** Let \\f : A \to B\\ be a [function](../chapters/functional-programming.llms.md#def-function). A function \\g : B \to A\\ is the **inverse function** ([Wikipedia contributors 2026p](#ref-wikipedia_inverse_function)) of \\f\\, written \\f^{-1}\\, if both
 >
 > - \\g(f(a)) = a\\ for every \\a \in A\\, and
 > - \\f(g(b)) = b\\ for every \\b \in B\\.
@@ -755,7 +755,7 @@ Last modified: 2026-10-28 15:59:36 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 8 (A function has an inverse exactly when it is a bijection)** A function \\f : A \to B\\ ([Definition: Function (map, mapping, transformation)](https://morrison-lab.github.io/mds/functions.html#def-function)) has an inverse function ([Definition 25](#def-inverse-function)) if and only if \\f\\ is bijective ([Definition 23](#def-bijective)). The graph ([Definition 18](#def-graph)) of the inverse function is then the inverse relation ([Definition 10](#def-inverse-relation)) of the graph of \\f\\.
+> **Theorem 8 (A function has an inverse exactly when it is a bijection)** A function \\f : A \to B\\ ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)) has an inverse function ([Definition 25](#def-inverse-function)) if and only if \\f\\ is bijective ([Definition 23](#def-bijective)). The graph ([Definition 18](#def-graph)) of the inverse function is then the inverse relation ([Definition 10](#def-inverse-relation)) of the graph of \\f\\.
 
 > **NOTE:**
 >
@@ -771,7 +771,7 @@ Last modified: 2026-10-28 15:59:36 (PDT)
 
 > **NOTE:**
 >
-> **Definition 26 (Composition)** Let \\g : A \to B\\ and \\f : B \to C\\ be [functions](https://morrison-lab.github.io/mds/functions.html#def-function). The **composition** ([Wikipedia contributors 2026k](#ref-wikipedia_function_composition)) of \\f\\ and \\g\\ is the function \\f \circ g : A \to C\\ defined by
+> **Definition 26 (Composition)** Let \\g : A \to B\\ and \\f : B \to C\\ be [functions](../chapters/functional-programming.llms.md#def-function). The **composition** ([Wikipedia contributors 2026k](#ref-wikipedia_function_composition)) of \\f\\ and \\g\\ is the function \\f \circ g : A \to C\\ defined by
 >
 > \\(f \circ g)(a) \stackrel{\text{def}}{=}f(g(a)) \quad \text{for each } a \in A.\\
 
@@ -785,7 +785,7 @@ Last modified: 2026-10-28 15:59:36 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 9 (The graph of a composition is a composition of graphs)** Let \\g : A \to B\\ and \\f : B \to C\\ be functions ([Definition: Function (map, mapping, transformation)](https://morrison-lab.github.io/mds/functions.html#def-function)), and write \\\Gamma_f\\ for the graph ([Definition 18](#def-graph)) of \\f\\. Then the graph of the composition \\f \circ g\\ ([Definition 26](#def-composition)) is the composition of relations ([Definition 11](#def-relation-composition))
+> **Theorem 9 (The graph of a composition is a composition of graphs)** Let \\g : A \to B\\ and \\f : B \to C\\ be functions ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)), and write \\\Gamma_f\\ for the graph ([Definition 18](#def-graph)) of \\f\\. Then the graph of the composition \\f \circ g\\ ([Definition 26](#def-composition)) is the composition of relations ([Definition 11](#def-relation-composition))
 >
 > \\ \Gamma\_{f \circ g} = \Gamma_f \circ \Gamma_g. \\
 

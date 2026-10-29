@@ -6,7 +6,7 @@ State machines and their state diagrams, runs, deterministic finite automata and
 
 Published
 
-Last modified: 2026-10-28 15:59:36 (PDT)
+Last modified: 2026-10-29 08:04:26 (PDT)
 
 > **NOTE:**
 >
@@ -66,7 +66,7 @@ Last modified: 2026-10-28 15:59:36 (PDT)
 >
 > - a nonempty finite set \\S\\ ([Definition: Set](../chapters/sets.llms.md#def-set)), whose elements are called *states*;
 > - an alphabet \\\Sigma\\ ([Definition: Alphabet](../chapters/recursion.llms.md#def-alphabet)), whose symbols are called *inputs*;
-> - a function ([Definition: Function (map, mapping, transformation)](https://morrison-lab.github.io/mds/functions.html#def-function)) \\\delta : S \times \Sigma \to S\\ on the Cartesian product ([Definition: Cartesian product](../chapters/sets.llms.md#def-cartesian-product)) \\S \times \Sigma\\, called the *transition function*;
+> - a function ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)) \\\delta : S \times \Sigma \to S\\ on the Cartesian product ([Definition: Cartesian product](../chapters/sets.llms.md#def-cartesian-product)) \\S \times \Sigma\\, called the *transition function*;
 > - an *initial state* \\s_0 \in S\\.
 >
 > When \\M\\ is in state \\s\\ and reads the input \\x\\, it moves to the state \\\delta(s, x)\\. Names and tuples for these machines vary between sources: for example, the finite-state machines of ([Wikipedia contributors 2026b](#ref-wikipedia_finite_state_machine)) also carry a set of final states in the tuple.

@@ -6,7 +6,7 @@ Solving recurrence relations, running times, and big-O notation
 
 Published
 
-Last modified: 2026-10-28 15:59:36 (PDT)
+Last modified: 2026-10-29 08:04:26 (PDT)
 
 > **NOTE:**
 >
@@ -187,7 +187,7 @@ Last modified: 2026-10-28 15:59:36 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Running time)** Fix, for an algorithm ([Definition: Algorithm](https://morrison-lab.github.io/mds/expressions-algorithms.html#def-algorithm)), the size of an input and what one step is ([Remark 3](#rem-size-step)). The **running time** ([Wikipedia contributors 2026f](#ref-wikipedia_time_complexity)) of the algorithm is the function \\T\\ ([Definition: Function (map, mapping, transformation)](https://morrison-lab.github.io/mds/functions.html#def-function)) whose value \\T(n)\\ is the largest number of steps that the algorithm takes on any input of size \\n\\.
+> **Definition 4 (Running time)** Fix, for an algorithm ([Definition: Algorithm](https://morrison-lab.github.io/mds/expressions-algorithms.html#def-algorithm)), the size of an input and what one step is ([Remark 3](#rem-size-step)). The **running time** ([Wikipedia contributors 2026f](#ref-wikipedia_time_complexity)) of the algorithm is the function \\T\\ ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)) whose value \\T(n)\\ is the largest number of steps that the algorithm takes on any input of size \\n\\.
 
 > **NOTE:**
 >
@@ -306,7 +306,7 @@ Last modified: 2026-10-28 15:59:36 (PDT)
 
 > **NOTE:**
 >
-> **Definition 5 (Big-O)** Let \\f\\ and \\g\\ be [functions](https://morrison-lab.github.io/mds/functions.html#def-function) from the [natural numbers](../chapters/sets.llms.md#def-natural-numbers) to the [real numbers](../chapters/sets.llms.md#def-real-numbers). Then \\f(n)\\ is **big-O** of \\g(n)\\ ([Wikipedia contributors 2026a](#ref-wikipedia_big_o_notation)), written \\f(n) = O(g(n))\\, when there exist a [real number](../chapters/sets.llms.md#def-real-numbers) \\c \> 0\\ and a [natural number](../chapters/sets.llms.md#def-natural-numbers) \\N\\ such that, for every natural number \\n \ge N\\, \\ \|f(n)\| \le c \\ \|g(n)\|. \\ In words, from some point \\N\\ on, the [absolute value](https://morrison-lab.github.io/mds/algebra-basics.html#def-absolute-value) of \\f(n)\\ is at most a fixed multiple \\c\\ of the absolute value of \\g(n)\\. The “there exist” is an [existential quantifier](../chapters/predicates-quantifiers.llms.md#def-existential-quantifier), and the “for every” is a [universal quantifier](../chapters/predicates-quantifiers.llms.md#def-universal-quantifier).
+> **Definition 5 (Big-O)** Let \\f\\ and \\g\\ be [functions](../chapters/functional-programming.llms.md#def-function) from the [natural numbers](../chapters/sets.llms.md#def-natural-numbers) to the [real numbers](../chapters/sets.llms.md#def-real-numbers). Then \\f(n)\\ is **big-O** of \\g(n)\\ ([Wikipedia contributors 2026a](#ref-wikipedia_big_o_notation)), written \\f(n) = O(g(n))\\, when there exist a [real number](../chapters/sets.llms.md#def-real-numbers) \\c \> 0\\ and a [natural number](../chapters/sets.llms.md#def-natural-numbers) \\N\\ such that, for every natural number \\n \ge N\\, \\ \|f(n)\| \le c \\ \|g(n)\|. \\ In words, from some point \\N\\ on, the [absolute value](https://morrison-lab.github.io/mds/algebra-basics.html#def-absolute-value) of \\f(n)\\ is at most a fixed multiple \\c\\ of the absolute value of \\g(n)\\. The “there exist” is an [existential quantifier](../chapters/predicates-quantifiers.llms.md#def-existential-quantifier), and the “for every” is a [universal quantifier](../chapters/predicates-quantifiers.llms.md#def-universal-quantifier).
 
 > **NOTE:**
 >
@@ -330,7 +330,7 @@ Last modified: 2026-10-28 15:59:36 (PDT)
 
 > **NOTE:**
 >
-> **Definition 7 (Big-Omega)** Let \\f\\ and \\g\\ be [functions](https://morrison-lab.github.io/mds/functions.html#def-function) from the [natural numbers](../chapters/sets.llms.md#def-natural-numbers) to the [real numbers](../chapters/sets.llms.md#def-real-numbers). Then \\f(n)\\ is **big-Omega** of \\g(n)\\ ([Wikipedia contributors 2026a](#ref-wikipedia_big_o_notation)), written \\f(n) = \Omega(g(n))\\, when there exist a [real number](../chapters/sets.llms.md#def-real-numbers) \\c \> 0\\ and a [natural number](../chapters/sets.llms.md#def-natural-numbers) \\N\\ such that, for every natural number \\n \ge N\\, \\ \|f(n)\| \ge c \\ \|g(n)\|. \\ In words, from some point \\N\\ on, the [absolute value](https://morrison-lab.github.io/mds/algebra-basics.html#def-absolute-value) of \\f(n)\\ is at least a fixed positive multiple \\c\\ of the absolute value of \\g(n)\\. Dividing by \\c\\ shows that \\f(n) = \Omega(g(n))\\ exactly when \\g(n) = O(f(n))\\ in the sense of [Definition 5](#def-big-o).
+> **Definition 7 (Big-Omega)** Let \\f\\ and \\g\\ be [functions](../chapters/functional-programming.llms.md#def-function) from the [natural numbers](../chapters/sets.llms.md#def-natural-numbers) to the [real numbers](../chapters/sets.llms.md#def-real-numbers). Then \\f(n)\\ is **big-Omega** of \\g(n)\\ ([Wikipedia contributors 2026a](#ref-wikipedia_big_o_notation)), written \\f(n) = \Omega(g(n))\\, when there exist a [real number](../chapters/sets.llms.md#def-real-numbers) \\c \> 0\\ and a [natural number](../chapters/sets.llms.md#def-natural-numbers) \\N\\ such that, for every natural number \\n \ge N\\, \\ \|f(n)\| \ge c \\ \|g(n)\|. \\ In words, from some point \\N\\ on, the [absolute value](https://morrison-lab.github.io/mds/algebra-basics.html#def-absolute-value) of \\f(n)\\ is at least a fixed positive multiple \\c\\ of the absolute value of \\g(n)\\. Dividing by \\c\\ shows that \\f(n) = \Omega(g(n))\\ exactly when \\g(n) = O(f(n))\\ in the sense of [Definition 5](#def-big-o).
 
 > **NOTE:**
 >
@@ -342,7 +342,7 @@ Last modified: 2026-10-28 15:59:36 (PDT)
 
 > **NOTE:**
 >
-> **Definition 8 (Big-Theta)** Let \\f\\ and \\g\\ be [functions](https://morrison-lab.github.io/mds/functions.html#def-function) from the [natural numbers](../chapters/sets.llms.md#def-natural-numbers) to the [real numbers](../chapters/sets.llms.md#def-real-numbers). Then \\f(n)\\ is **big-Theta** of \\g(n)\\ ([Wikipedia contributors 2026a](#ref-wikipedia_big_o_notation)), written \\f(n) = \Theta(g(n))\\, when both \\f(n) = O(g(n))\\ ([big-O](#def-big-o)) and \\f(n) = \Omega(g(n))\\ ([big-Omega](#def-big-omega)). In words, \\f(n)\\ and \\g(n)\\ are within fixed multiples of each other, from some point on.
+> **Definition 8 (Big-Theta)** Let \\f\\ and \\g\\ be [functions](../chapters/functional-programming.llms.md#def-function) from the [natural numbers](../chapters/sets.llms.md#def-natural-numbers) to the [real numbers](../chapters/sets.llms.md#def-real-numbers). Then \\f(n)\\ is **big-Theta** of \\g(n)\\ ([Wikipedia contributors 2026a](#ref-wikipedia_big_o_notation)), written \\f(n) = \Theta(g(n))\\, when both \\f(n) = O(g(n))\\ ([big-O](#def-big-o)) and \\f(n) = \Omega(g(n))\\ ([big-Omega](#def-big-omega)). In words, \\f(n)\\ and \\g(n)\\ are within fixed multiples of each other, from some point on.
 
 > **NOTE:**
 >
@@ -350,7 +350,7 @@ Last modified: 2026-10-28 15:59:36 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 5 (Sums of big-O functions)** Let \\f\\, \\g\\ and \\h\\ be functions ([Definition: Function (map, mapping, transformation)](https://morrison-lab.github.io/mds/functions.html#def-function)) from the natural numbers ([Definition: Natural numbers (our convention)](../chapters/sets.llms.md#def-natural-numbers)) to the real numbers ([Definition: Real numbers](../chapters/sets.llms.md#def-real-numbers)). If \\f(n) = O(h(n))\\ and \\g(n) = O(h(n))\\ ([Definition 5](#def-big-o)), then \\f(n) + g(n) = O(h(n))\\.
+> **Theorem 5 (Sums of big-O functions)** Let \\f\\, \\g\\ and \\h\\ be functions ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)) from the natural numbers ([Definition: Natural numbers (our convention)](../chapters/sets.llms.md#def-natural-numbers)) to the real numbers ([Definition: Real numbers](../chapters/sets.llms.md#def-real-numbers)). If \\f(n) = O(h(n))\\ and \\g(n) = O(h(n))\\ ([Definition 5](#def-big-o)), then \\f(n) + g(n) = O(h(n))\\.
 
 > **NOTE:**
 >
