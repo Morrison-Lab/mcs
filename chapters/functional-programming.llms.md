@@ -6,7 +6,7 @@ Expressions, functions and cases in Racket
 
 Published
 
-Last modified: 2026-10-29 13:30:08 (PDT)
+Last modified: 2026-10-29 13:50:37 (PDT)
 
 > **NOTE:**
 >
@@ -285,7 +285,72 @@ Last modified: 2026-10-29 13:30:08 (PDT)
 >
 > Neither one changes `L`; each returns a new list.
 
+# 6 Anonymous functions
+
+> **NOTE:**
+>
+> **Exercise 6 (A function with no name)** The function `pair-with` takes a list `L` and a value `y`:
+>
+> ``` racket
+> (define (pair-with L y)
+>   (map (lambda (x) (list x y)) L))
+> ```
+>
+> Guess what each expression returns:
+>
+> 1.  `((lambda (x) (* x x)) 7)`
+> 2.  `(map (lambda (x) (* 2 x)) (list 1 2 3))`
+> 3.  `(pair-with (list 1 2 3) "a")`
+
+> **NOTE:**
+>
+> *Solution 6*. `(lambda (x) (* x x))` is the function that squares its argument, written in place without a name.
+>
+> 1.  Applying it to 7 returns 49.
+> 2.  `map` ([Example 3](#exm-map-filter)) applies the doubling function to each element, and returns `'(2 4 6)`.
+> 3.  In the body of `pair-with`, `y` is `"a"`, so `map` applies the function \\x \mapsto (x, \text{"a"})\\ to each element, and returns `'((1 "a") (2 "a") (3 "a"))`.
+
+> **NOTE:**
+>
+> **Definition 13 (`lambda`)** The Racket expression
+>
+> ``` racket
+> (lambda (x1 ... xn)
+>   body)
+> ```
+>
+> is a **`lambda` expression**. Its value is the function with parameters `x1`, …, `xn` whose value at its arguments is the value of `body`, found as in [Definition 6](#def-racket-define). The function has no name. The body may use any name defined where the `lambda` expression appears, as the body of the `lambda` in `pair-with` ([Exercise 6](#exr-pair-with)) uses `y`.
+>
+> The definition `(define (f x) body)` is shorthand for `(define f (lambda (x) body))`: it gives the name `f` to the function the `lambda` expression makes.
+>
+> *Video:* Jerry Cain uses `lambda` with `map` in Scheme, the language Racket grew out of, in [Stanford CS 107 Lecture 22](https://www.youtube.com/watch?v=3LeCydausnk) ([Cain 2008](#ref-cain2008cs107videos)).
+
+> **NOTE:**
+>
+> *Remark 4* (Where the name comes from). The word `lambda` comes from the lambda calculus, a model of computation in which a function is written \\\lambda x.\\ e\\, the function that takes \\x\\ to the value of the expression \\e\\. The lambda calculus has only three features: functions, applying a function to an argument, and variables. It has no numbers, strings or loops ([Crichton 2019](#ref-crichton2019cs242)). Applying \\\lambda x.\\ e\\ to an argument replaces each \\x\\ in \\e\\ by that argument, as in evaluation by substitution ([Example 1](#exm-substitution)). The function in [Exercise 6](#exr-pair-with) that squares its argument is \\\lambda x.\\ x \cdot x\\.
+>
+> *Media:* Will Crichton’s [notes on the lambda calculus](https://stanford-cs242.github.io/f19/lectures/02-1-lambda-calculus), from Stanford’s CS 242, *Programming Languages*, go further ([Crichton 2019](#ref-crichton2019cs242)).
+
+> **NOTE:**
+>
+> **Example 4 (A function that returns a function)** The function `adder` takes a number `d` and returns a function:
+>
+> ``` racket
+> (define (adder d)
+>   (lambda (x) (+ x d)))
+> ```
+>
+> `(adder 3)` returns the function \\x \mapsto x + 3\\, which still knows that `d` is 3 after `adder` has returned. So `adder` is a higher-order function ([Definition 12](#def-higher-order)), and its value can be used anywhere a function can:
+>
+> - `((adder 3) 4)` returns 7.
+> - `(twice (adder 3) 10)`, with `twice` from [Exercise 5](#exr-twice), returns 16.
+> - `(map (adder 1) (list 5 7 9))` returns `'(6 8 10)`.
+
 # References
+
+Cain, Jerry. 2008. *Programming Paradigms (Stanford CS107), Lecture 22*. YouTube. <https://www.youtube.com/watch?v=3LeCydausnk>.
+
+Crichton, Will. 2019. *CS 242: Programming Languages, Fall 2019*. Stanford University. <https://stanford-cs242.github.io/f19/>.
 
 Wikipedia contributors. 2026a. *Expression (Mathematics) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Expression_(mathematics)>.
 

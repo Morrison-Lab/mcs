@@ -331,7 +331,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-29 13:30:08 (PDT)</p>
+  <p class="date">Last modified: 2026-10-29 13:50:37 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -675,6 +675,68 @@ x &amp; \text{otherwise}
 </div>
 </section></section>
 <section>
+<section id="sec-lambda-let" class="title-slide slide level1 center" data-number="6">
+<h1><span class="header-section-number">6</span> Anonymous functions</h1>
+
+</section>
+<section class="slide level2 scrollable">
+
+<div id="exr-pair-with" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6 (A function with no name)</strong></span> The function <code>pair-with</code> takes a list <code>L</code> and a value <code>y</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb10-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>pair-with L y<span class="op">)</span></span>
+<span id="cb10-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">map</span> <span class="op">(</span><span class="kw">lambda</span> <span class="op">(</span>x<span class="op">)</span> <span class="op">(</span><span class="kw">list</span> x y<span class="op">))</span> L<span class="op">))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Guess what each expression returns:</p>
+<ol type="1">
+<li><code>((lambda (x) (* x x)) 7)</code></li>
+<li><code>(map (lambda (x) (* 2 x)) (list 1 2 3))</code></li>
+<li><code>(pair-with (list 1 2 3) "a")</code></li>
+</ol>
+</div>
+</section>
+<section class="slide level2 scrollable">
+
+<div id="sol-pair-with" class="proof solution">
+<p><span class="proof-title"><em>Solution 6</em>. </span><code>(lambda (x) (* x x))</code> is the function that squares its argument, written in place without a name.</p>
+<ol type="1">
+<li>Applying it to 7 returns 49.</li>
+<li><code>map</code> (<a href="#/exm-map-filter" class="quarto-xref">Example&nbsp;3</a>) applies the doubling function to each element, and returns <code>'(2 4 6)</code>.</li>
+<li>In the body of <code>pair-with</code>, <code>y</code> is <code>"a"</code>, so <code>map</code> applies the function <span class="math inline">\(x \mapsto (x, \text{"a"})\)</span> to each element, and returns <code>'((1 "a") (2 "a") (3 "a"))</code>.</li>
+</ol>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-lambda" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 13 (<code>lambda</code>)</strong></span> The Racket expression</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb11-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">lambda</span> <span class="op">(</span>x1 ... xn<span class="op">)</span></span>
+<span id="cb11-2"><a aria-label="2"></a>  body<span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>is a <strong><code>lambda</code> expression</strong>. Its value is the function with parameters <code>x1</code>, …, <code>xn</code> whose value at its arguments is the value of <code>body</code>, found as in <a href="#/def-racket-define" class="quarto-xref">Definition&nbsp;6</a>. The function has no name. The body may use any name defined where the <code>lambda</code> expression appears, as the body of the <code>lambda</code> in <code>pair-with</code> (<a href="#/exr-pair-with" class="quarto-xref">Exercise&nbsp;6</a>) uses <code>y</code>.</p>
+<p>The definition <code>(define (f x) body)</code> is shorthand for <code>(define f (lambda (x) body))</code>: it gives the name <code>f</code> to the function the <code>lambda</code> expression makes.</p>
+<p><em>Video:</em> Jerry Cain uses <code>lambda</code> with <code>map</code> in Scheme, the language Racket grew out of, in <a href="https://www.youtube.com/watch?v=3LeCydausnk">Stanford CS 107 Lecture 22</a> <span class="citation" data-cites="cain2008cs107videos">(<a href="#/references" role="doc-biblioref" onclick="">Cain 2008</a>)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-lambda-calculus" class="proof remark">
+<p><span class="proof-title"><em>Remark 4</em> (Where the name comes from). </span>The word <code>lambda</code> comes from the lambda calculus, a model of computation in which a function is written <span class="math inline">\(\lambda x.\, e\)</span>, the function that takes <span class="math inline">\(x\)</span> to the value of the expression <span class="math inline">\(e\)</span>. The lambda calculus has only three features: functions, applying a function to an argument, and variables. It has no numbers, strings or loops <span class="citation" data-cites="crichton2019cs242">(<a href="#/references" role="doc-biblioref" onclick="">Crichton 2019</a>)</span>. Applying <span class="math inline">\(\lambda x.\, e\)</span> to an argument replaces each <span class="math inline">\(x\)</span> in <span class="math inline">\(e\)</span> by that argument, as in evaluation by substitution (<a href="#/exm-substitution" class="quarto-xref">Example&nbsp;1</a>). The function in <a href="#/exr-pair-with" class="quarto-xref">Exercise&nbsp;6</a> that squares its argument is <span class="math inline">\(\lambda x.\, x \cdot x\)</span>.</p>
+<p><em>Media:</em> Will Crichton’s <a href="https://stanford-cs242.github.io/f19/lectures/02-1-lambda-calculus">notes on the lambda calculus</a>, from Stanford’s CS 242, <em>Programming Languages</em>, go further <span class="citation" data-cites="crichton2019cs242">(<a href="#/references" role="doc-biblioref" onclick="">Crichton 2019</a>)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-adder" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4 (A function that returns a function)</strong></span> The function <code>adder</code> takes a number <code>d</code> and returns a function:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb12-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>adder d<span class="op">)</span></span>
+<span id="cb12-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">lambda</span> <span class="op">(</span>x<span class="op">)</span> <span class="op">(+</span> x d<span class="op">)))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>(adder 3)</code> returns the function <span class="math inline">\(x \mapsto x + 3\)</span>, which still knows that <code>d</code> is 3 after <code>adder</code> has returned. So <code>adder</code> is a higher-order function (<a href="#/def-higher-order" class="quarto-xref">Definition&nbsp;12</a>), and its value can be used anywhere a function can:</p>
+<ul>
+<li><code>((adder 3) 4)</code> returns 7.</li>
+<li><code>(twice (adder 3) 10)</code>, with <code>twice</code> from <a href="#/exr-twice" class="quarto-xref">Exercise&nbsp;5</a>, returns 16.</li>
+<li><code>(map (adder 1) (list 5 7 9))</code> returns <code>'(6 8 10)</code>.</li>
+</ul>
+</div>
+</section></section>
+<section>
 <section id="references" class="title-slide slide level1 unnumbered center">
 <h1>References</h1>
 
@@ -682,6 +744,12 @@ x &amp; \text{otherwise}
 <section class="slide level2 smaller scrollable" id="references">
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-cain2008cs107videos" class="csl-entry" role="listitem">
+Cain, Jerry. 2008. <em>Programming Paradigms (<span>Stanford</span> <span>CS107</span>), Lecture 22</em>. YouTube. <a href="https://www.youtube.com/watch?v=3LeCydausnk">https://www.youtube.com/watch?v=3LeCydausnk</a>.
+</div>
+<div id="ref-crichton2019cs242" class="csl-entry" role="listitem">
+Crichton, Will. 2019. <em><span>CS</span> 242: Programming Languages, Fall 2019</em>. Stanford University. <a href="https://stanford-cs242.github.io/f19/">https://stanford-cs242.github.io/f19/</a>.
+</div>
 <div id="ref-wikipedia_expression_mathematics" class="csl-entry" role="listitem">
 Wikipedia contributors. 2026a. <em>Expression (Mathematics) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Expression_(mathematics)">https://en.wikipedia.org/wiki/Expression_(mathematics)</a>.
 </div>
