@@ -53,9 +53,9 @@ sets the slot for classes that meet on neither Tuesday nor Thursday:
 +:=========================+:=============================+:=============================+:=============================+:=============================+
 | **Week 1**               | *Classes begin Tuesday, Jan  | [Syllabus][syl]              | [Predicates and              | Lab 1                        |
 |                          | 5*                           |                              | quantifiers][pq]             |                              |
-| Jan 3 -- Jan 9           |                              | [Propositional logic][prop]  |                              |                              |
+| Jan 3 -- Jan 9           |                              | [Functional programming][fp] |                              |                              |
 |                          |                              |                              |                              |                              |
-| **Quiz 0** this week     |                              |                              |                              |                              |
+| **Quiz 0** this week     |                              | [Propositional logic][prop]  |                              |                              |
 +--------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
 | **Week 2**               | [Logical equivalence and     | [Inference and direct        | [Contrapositive and          | Lab 2                        |
 |                          | negation][eqv]               | proof][dp]                   | contradiction][cc]           |                              |
@@ -114,6 +114,7 @@ sets the slot for classes that meet on neither Tuesday nor Thursday:
 +--------------------------+---------------------------------------------------------------------------------------------------------------------------+
 
 [syl]: syllabus.qmd
+[fp]: functional-programming.qmd
 [prop]: propositional-logic.qmd
 [pq]: predicates-quantifiers.qmd
 [eqv]: equivalence-negation.qmd

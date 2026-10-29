@@ -1,0 +1,8 @@
+::: {#sol-formula-from-code}
+
+1. $h(x) = x^2 - 2x$, since `(* x x)` is $x^2$ and `(* 2 x)` is $2x$.
+2. $h(5) = 25 - 10 = 15$, so `(h 5)` returns 15.
+3. Racket first evaluates the argument `(h 3)`, which is $9 - 6 = 3$,
+   and then applies `h` to it, so `(h (h 3))` is `(h 3)` again and returns 3.
+
+:::

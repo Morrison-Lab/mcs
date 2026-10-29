@@ -1,0 +1,14 @@
+::: {#exm-map-filter}
+#### `map` and `filter`
+
+Racket's `(list 5 7 9)` makes the list of 5, 7 and 9, which Racket prints as `'(5 7 9)`.
+Two built-in higher-order functions (@def-higher-order) work on lists:
+
+- `(map f L)` applies `f` to each element of the list `L`, and returns the list of results.
+  With `add-three` from @exr-twice, `(map add-three (list 5 7 9))` returns `'(8 10 12)`.
+- `(filter p L)` returns the list of the elements `x` of `L` for which `(p x)` is true.
+  `(filter even? (list 5 6 7 8))` returns `'(6 8)`.
+
+Neither one changes `L`; each returns a new list.
+
+:::

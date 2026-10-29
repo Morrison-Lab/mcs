@@ -1,0 +1,142 @@
+---
+title: "Functional Programming"
+subtitle: "Expressions, functions and cases in Racket"
+format:
+  html: default
+  revealjs:
+    output-file: functional-programming-slides.html
+  pdf:
+    output-file: functional-programming-handout.pdf
+  docx:
+    output-file: functional-programming.docx
+---
+
+{{< include ../latex-macros/macros.qmd >}}
+
+::: {.callout-note appearance='simple' collapse=true}
+## Source
+
+Kameron Decker Harris's Fall 2026 syllabus opens the course with an introduction to functional programming;
+this chapter, its examples and its exercises are new.
+
+The definitions of expression, function, argument and value are included from the
+[mathematics prerequisites](https://morrison-lab.github.io/mds/) notes,
+so they read the same in both places.
+:::
+
+# Expressions {#sec-racket-expressions}
+
+{{< include _subfiles/functional-programming/_running-racket_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_evaluate-nested_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_evaluate-nested_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/functions/_def-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/expressions-algorithms/_def-expression.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_racket-expression_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_evaluation_rem.qmd >}}
+
+# Functions {#sec-racket-functions}
+
+{{< include _subfiles/functional-programming/_formula-from-code_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_formula-from-code_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/functions/_def-argument.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../mds/_subfiles/functions/_def-value.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_racket-define_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_substitution_exm.qmd >}}
+
+# Cases {#sec-racket-cases}
+
+{{< include _subfiles/functional-programming/_ticket-price_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_ticket-price_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_booleans_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_if-cond_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_absolute-value_exm.qmd >}}
+
+# Pure functions {#sec-pure-functions}
+
+{{< include _subfiles/functional-programming/_next-id_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_next-id_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_side-effect_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_pure-function_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_functional-programming_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_replace-by-value_rem.qmd >}}
+
+# Functions as values {#sec-functions-as-values}
+
+{{< include _subfiles/functional-programming/_twice_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_twice_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_higher-order_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_map-filter_exm.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
