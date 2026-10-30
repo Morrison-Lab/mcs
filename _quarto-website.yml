@@ -214,7 +214,7 @@ custom-callout:
 format:
   html:
     filters:
-      - sun123zxy/callouty-theorem
+      - Morrison-Lab/callouty-theorem
       - coatless-quarto/custom-callout
     theme:
       light: [cosmo, offwhite.scss]
@@ -245,6 +245,9 @@ format:
     number-sections: true
     number-depth: 3
     df-print: paged
+    # Each page ends with a linked list of its #def- divs (def-list.lua, bundled
+    # with callouty-theorem 1.5.0). HTML only: decks and handouts are unchanged.
+    def-list: true
   docx:
     number-sections: true
     number-depth: 3
