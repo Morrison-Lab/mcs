@@ -258,6 +258,7 @@ format:
     output-file: "{stem}-slides.html"
     theme: [simple, styles-reveal.scss]
     include-in-header: qwt-reveal-toggle.html
+    include-after-body: tabset-code-in-tabs.html
     slide-number: true
     chalkboard: false
     preview-links: auto
