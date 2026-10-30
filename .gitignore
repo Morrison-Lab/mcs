@@ -11,6 +11,7 @@
 # Source HTML partials we intentionally track (not build output).
 !qwt-reveal-toggle.html
 !theme-picker.html
+!tabset-code-in-tabs.html
 !page-navigation.html
 !anchor-landing.html
 *_files/
