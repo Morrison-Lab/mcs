@@ -6,7 +6,7 @@ Proving that an algorithm with a loop is correct
 
 Published
 
-Last modified: 2026-10-29 18:15:44 (PDT)
+Last modified: 2026-10-30 01:15:16 (PDT)
 
 > **NOTE:**
 >
@@ -424,6 +424,16 @@ Last modified: 2026-10-29 18:15:44 (PDT)
 > - Initialization: at the first test, \\i = 1 \le n\\, since \\n \ge 1\\, `found` is false, and no match has \\p \< 1\\.
 > - Maintenance: suppose \\K\\ and the guard \\i \le n - 1\\ are true at a test. Then the inner loop runs, and when it stops, `found` is true exactly when there is a match with \\p \< i + 1\\. After `i` becomes \\i + 1 \le n\\, \\K\\ is true at the next test.
 > - Termination: by [Theorem 1](#thm-loop-invariant), \\K\\ is a loop invariant, so \\n - i \ge 0\\ at every test, and each pass lowers \\n - i\\ by 1. So \\n - i\\ is a loop variant, and the outer loop stops. It stops when \\i \le n - 1\\ is false, so, with \\i \le n\\, \\i = n\\. Every match has \\p \< q \le n\\, so \\p \< n\\. So, when the outer loop stops, `found` is true exactly when `A` has a match, and the algorithm returns `found`.
+
+# Definitions on this page
+
+- [Definition 1 (Floor)](#def-floor)
+- [Definition 2 (Precondition)](#def-precondition)
+- [Definition 3 (Postcondition)](#def-postcondition)
+- [Definition 4 (Correct algorithm)](#def-correct-algorithm)
+- [Definition 5 (Guard of a loop)](#def-loop-guard)
+- [Definition 6 (Loop invariant)](#def-loop-invariant)
+- [Definition 7 (Loop variant)](#def-loop-variant)
 
 # References
 

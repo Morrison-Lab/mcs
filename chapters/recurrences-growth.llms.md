@@ -6,7 +6,7 @@ Solving recurrence relations, running times, and big-O notation
 
 Published
 
-Last modified: 2026-10-29 18:15:44 (PDT)
+Last modified: 2026-10-30 01:15:16 (PDT)
 
 > **NOTE:**
 >
@@ -553,6 +553,19 @@ Last modified: 2026-10-29 18:15:44 (PDT)
 > - \\f(n) \ge 1\\ since \\n \ge 1\\, and \\\sqrt{n} \< f(n) + 1 \le 2 f(n)\\ by the definition of the floor ([Definition: Floor](../chapters/loop-invariants.llms.md#def-floor)), so \\f(n) \> \frac{1}{2} \sqrt{n}\\, and \\f(n) = \Omega(\sqrt{n})\\ ([Definition 7](#def-big-omega)) with \\c = \frac{1}{2}\\, \\N = 1\\.
 >
 > So \\f(n) = \Theta(\sqrt{n})\\ ([Definition 8](#def-big-theta)). Since \\\sqrt{n} \le n\\ for \\n \ge 1\\, the body of `root` runs no more times than the body of a loop with \\n\\ passes: on \\n = 10^6\\, its body runs \\1000\\ times.
+
+# Definitions on this page
+
+- [Definition 1 (Recurrence relation)](#def-recurrence-relation)
+- [Definition 2 (Closed form)](#def-closed-form)
+- [Definition 3 (Iteration (unrolling))](#def-iteration)
+- [Definition 4 (Running time)](#def-running-time)
+- [Definition 5 (Big-O)](#def-big-o)
+- [Definition 6 (Witnesses)](#def-witness)
+- [Definition 7 (Big-Omega)](#def-big-omega)
+- [Definition 8 (Big-Theta)](#def-big-theta)
+- [Definition 9 (Logarithm)](#def-logarithm)
+- [Definition 10 (Factorial)](#def-factorial)
 
 # References
 

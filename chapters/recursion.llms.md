@@ -6,7 +6,7 @@ Recursive definitions, recursive programs and proofs about them
 
 Published
 
-Last modified: 2026-10-29 18:15:44 (PDT)
+Last modified: 2026-10-30 01:15:16 (PDT)
 
 > **NOTE:**
 >
@@ -452,6 +452,19 @@ Last modified: 2026-10-29 18:15:44 (PDT)
 > \\ \begin{aligned} n &\< 10 (q + 1) \\&\le 10 \cdot 10^{d(q)} && \text{(} q + 1 \le 10^{d(q)} \text{)} \\&= 10^{d(q) + 1} \\&= 10^{d(n)}. && \text{(} d(n) = 1 + d(q) \text{)} \end{aligned} \\
 >
 > So the inequalities hold for \\n\\, and by strong induction they hold for every natural number \\n\\.
+
+# Definitions on this page
+
+- [Definition 1 (Recursive definition)](#def-recursive-definition)
+- [Definition 2 (Recursively defined set)](#def-recursive-set)
+- [Definition 3 (Alphabet)](#def-alphabet)
+- [Definition 4 (String)](#def-string)
+- [Definition 5 (Palindrome)](#def-palindrome)
+- [Definition 6 (List)](#def-list)
+- [Definition 7 (Length of a list)](#def-list-length)
+- [Definition 8 (Appending two lists)](#def-append)
+- [Definition 9 (Recursive algorithm)](#def-recursive-algorithm)
+- [Definition 10 (Structural induction)](#def-structural-induction)
 
 # References
 

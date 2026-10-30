@@ -6,7 +6,7 @@ Trees and forests, rooted trees, binary trees, preorder, inorder, postorder and 
 
 Published
 
-Last modified: 2026-10-29 18:15:44 (PDT)
+Last modified: 2026-10-30 01:15:16 (PDT)
 
 > **NOTE:**
 >
@@ -963,6 +963,34 @@ Last modified: 2026-10-29 18:15:44 (PDT)
 > [![Seven points, a to f at the corners of a hexagon and g in the middle, joined by the nine roads of the town graph. Six edges are drawn thick: a to b, b to c, c to d, d to e, e to f, and e to g. The other three edges, f to a, g to a, and g to c, are drawn dashed.](../images/trees-hub-dfs.png)](../images/trees-hub-dfs.png "Figure 12: The depth-first search tree of the town graph from a, in thick lines.")
 >
 > Figure 12: The depth-first search tree of the town graph from \\a\\, in thick lines.
+
+# Definitions on this page
+
+- [Definition 1 (Tree)](#def-tree)
+- [Definition 2 (Forest)](#def-forest)
+- [Definition 3 (Rooted tree)](#def-rooted-tree)
+- [Definition 4 (Parent)](#def-tree-parent)
+- [Definition 5 (Child)](#def-tree-child)
+- [Definition 6 (Ancestor)](#def-ancestor)
+- [Definition 7 (Descendant)](#def-descendant)
+- [Definition 8 (Leaf)](#def-tree-leaf)
+- [Definition 9 (Internal vertex)](#def-internal-vertex)
+- [Definition 10 (Subtree)](#def-subtree)
+- [Definition 11 (Level)](#def-tree-level)
+- [Definition 12 (Height)](#def-tree-height)
+- [Definition 13 (Ordered rooted tree)](#def-ordered-rooted-tree)
+- [Definition 14 (Binary tree)](#def-binary-tree)
+- [Definition 15 (Preorder)](#def-preorder)
+- [Definition 16 (Inorder)](#def-inorder)
+- [Definition 17 (Postorder)](#def-postorder)
+- [Definition 18 (Level order)](#def-level-order)
+- [Definition 19 (Parse tree)](#def-parse-tree)
+- [Definition 20 (Prefix form (Polish notation))](#def-prefix-form)
+- [Definition 21 (Postfix form (reverse Polish notation))](#def-postfix-form)
+- [Definition 22 (Stack)](#def-stack)
+- [Definition 23 (Spanning tree)](#def-spanning-tree)
+- [Definition 24 (Breadth-first search tree)](#def-bfs-tree)
+- [Definition 25 (Depth-first search tree)](#def-dfs-tree)
 
 # References
 

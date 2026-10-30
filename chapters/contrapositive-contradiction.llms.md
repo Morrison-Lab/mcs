@@ -6,7 +6,7 @@ Proving a statement by way of its negation
 
 Published
 
-Last modified: 2026-10-29 18:15:44 (PDT)
+Last modified: 2026-10-30 01:15:16 (PDT)
 
 > **NOTE:**
 >
@@ -368,6 +368,16 @@ Last modified: 2026-10-29 18:15:44 (PDT)
 > - Try a direct proof ([Definition: Direct proof](../chapters/direct-proof.llms.md#def-direct-proof)) first.
 > - Try the contrapositive ([Definition 3](#def-proof-by-contrapositive)) when \\\neg Q\\ is the easier assumption ([Remark 2](#rem-contrapositive-template)).
 > - Try contradiction ([Definition 4](#def-proof-by-contradiction)) when the proposition says that something does not exist or is not true, as in “no integers satisfy”, “is irrational” or “infinitely many”: its negation hands you an object to work with.
+
+# Definitions on this page
+
+- [Definition 1 (Congruence modulo \\n\\)](#def-congruence)
+- [Definition 2 (Contrapositive)](#def-contrapositive)
+- [Definition 3 (Proof by contrapositive)](#def-proof-by-contrapositive)
+- [Definition 4 (Proof by contradiction)](#def-proof-by-contradiction)
+- [Definition 5 (Rational numbers)](#def-rational-numbers)
+- [Definition 6 (Irrational numbers)](#def-irrational-numbers)
+- [Definition 7 (Prime number)](#def-prime)
 
 # References
 

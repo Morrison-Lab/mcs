@@ -6,7 +6,7 @@ When two propositions say the same thing, and how to say the opposite
 
 Published
 
-Last modified: 2026-10-29 18:15:44 (PDT)
+Last modified: 2026-10-30 01:15:16 (PDT)
 
 > **NOTE:**
 >
@@ -338,6 +338,12 @@ Last modified: 2026-10-29 18:15:44 (PDT)
 > **NOTE:**
 >
 > *Solution 8*. The original is true, so its negation is false. For any word \\s\\, let \\t\\ be \\s\\ written backwards; then \\s t\\ reads the same backwards. For example, for \\s = \text{aab}\\, \\t = \text{baa}\\ and \\s t = \text{aabbaa}\\.
+
+# Definitions on this page
+
+- [Definition 1 (Logical equivalence)](#def-logical-equivalence)
+- [Definition 2 (Tautology)](#def-tautology)
+- [Definition 3 (Contradiction)](#def-contradiction)
 
 # References
 

@@ -6,7 +6,7 @@ Elements, subsets, products and operations
 
 Published
 
-Last modified: 2026-10-29 18:15:44 (PDT)
+Last modified: 2026-10-30 01:15:16 (PDT)
 
 > **NOTE:**
 >
@@ -402,6 +402,33 @@ Last modified: 2026-10-29 18:15:44 (PDT)
 > - The part of circle \\L\\ outside circle \\M\\ is \\L \setminus M = {\mathopen{}\left\\\text{L}, \text{O}\right\\\mathclose{}}\\.
 > - Everything inside either circle is \\L \cup M = {\mathopen{}\left\\\text{L}, \text{O}, \text{G}, \text{I}, \text{C}, \text{M}, \text{A}\right\\\mathclose{}}\\.
 > - Everything in the rectangle outside circle \\L\\ is \\L^c\\, the 21 letters not in LOGIC.
+
+# Definitions on this page
+
+- [Definition 1 (Set)](#def-set)
+- [Definition 2 (Roster notation)](#def-roster-notation)
+- [Definition 3 (Natural numbers (our convention))](#def-natural-numbers)
+- [Definition 4 (Real numbers)](#def-real-numbers)
+- [Definition 5 (Set-builder notation)](#def-set-builder)
+- [Definition 6 (Empty set)](#def-empty-set)
+- [Definition 7 (Set-builder notation with an expression)](#def-set-builder-expression)
+- [Definition 8 (Finite set)](#def-finite-set)
+- [Definition 9 (Cardinality)](#def-cardinality)
+- [Definition 10 (Infinite set)](#def-infinite-set)
+- [Definition 11 (Countable set)](#def-countable-set)
+- [Definition 12 (Countably infinite set)](#def-countably-infinite)
+- [Definition 13 (Subset)](#def-subset)
+- [Definition 14 (Strict subset (proper subset))](#def-strict-subset)
+- [Definition 15 (Power set)](#def-power-set)
+- [Definition 16 (Ordered pair)](#def-ordered-pair)
+- [Definition 17 (Tuple)](#def-tuple)
+- [Definition 18 (Cartesian product)](#def-cartesian-product)
+- [Definition 19 (Cartesian product of several sets)](#def-cartesian-product-many)
+- [Definition 20 (Union)](#def-union)
+- [Definition 21 (Intersection)](#def-intersection)
+- [Definition 22 (Set difference)](#def-set-difference)
+- [Definition 23 (Complement)](#def-complement)
+- [Definition 24 (Venn diagram)](#def-venn-diagram)
 
 # References
 

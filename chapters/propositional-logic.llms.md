@@ -6,7 +6,7 @@ Propositions, connectives, and conditionals
 
 Published
 
-Last modified: 2026-10-29 18:15:44 (PDT)
+Last modified: 2026-10-30 01:15:16 (PDT)
 
 > **NOTE:**
 >
@@ -321,6 +321,19 @@ Last modified: 2026-10-29 18:15:44 (PDT)
 > | \\5\\ |       F       |              F              |       T       |
 >
 > By [Definition 10](#def-iff), the biconditional is true exactly when its two sides have the same truth value. When \\n = 5\\, both sides are false, so the biconditional is true.
+
+# Definitions on this page
+
+- [Definition 1 (Proposition (statement))](#def-proposition)
+- [Definition 2 (Predicate)](#def-predicate)
+- [Definition 3 (Logical connective)](#def-logical-connective)
+- [Definition 4 (Not)](#def-not)
+- [Definition 5 (And)](#def-and)
+- [Definition 6 (Or)](#def-or)
+- [Definition 7 (Truth table)](#def-truth-table)
+- [Definition 8 (Implies)](#def-implies)
+- [Definition 9 (Converse)](#def-converse)
+- [Definition 10 (If and only if)](#def-iff)
 
 # References
 

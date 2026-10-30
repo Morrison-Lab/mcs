@@ -6,7 +6,7 @@ Expressions, functions and cases in Racket
 
 Published
 
-Last modified: 2026-10-29 18:15:44 (PDT)
+Last modified: 2026-10-30 01:15:16 (PDT)
 
 > **NOTE:**
 >
@@ -421,6 +421,23 @@ Last modified: 2026-10-29 18:15:44 (PDT)
 > - Jerry Cain’s CS 107 handouts on Scheme, on the [course page](https://see.stanford.edu/Course/CS107), work many more examples, among them flattening nested lists and listing permutations; his lectures 19 to 23 ([Cain 2008](#ref-cain2008cs107videos)) cover the same ground.
 > - Will Crichton’s CS 242 notes on [functional basics](https://stanford-cs242.github.io/f19/lectures/03-1-functional-basics) and [algebraic data types](https://stanford-cs242.github.io/f19/lectures/03-2-algebraic-data-types) build functional programs on types, in the language OCaml ([Crichton 2019](#ref-crichton2019cs242)).
 > - Stanford’s [CS 99](https://web.stanford.edu/class/cs99/) teaches Lean 4, a functional programming language in which a computer checks proofs about the programs ([Aniva and Mohamed 2025](#ref-aniva2025cs99)).
+
+# Definitions on this page
+
+- [Definition 1 (Function (map, mapping, transformation))](#def-function)
+- [Definition 2 (Expression)](#def-expression)
+- [Definition 3 (Racket expression, prefix notation)](#def-racket-expression)
+- [Definition 4 (Argument (input))](#def-argument)
+- [Definition 5 (Value (output))](#def-value)
+- [Definition 6 (Defining a function in Racket)](#def-racket-define)
+- [Definition 7 (True and false in Racket)](#def-booleans)
+- [Definition 8 (`if` and `cond`)](#def-if-cond)
+- [Definition 9 (Side effect)](#def-side-effect)
+- [Definition 10 (Pure function)](#def-pure-function)
+- [Definition 11 (Functional programming)](#def-functional-programming)
+- [Definition 12 (Higher-order function)](#def-higher-order)
+- [Definition 13 (`lambda`)](#def-lambda)
+- [Definition 14 (`let`)](#def-let)
 
 # References
 

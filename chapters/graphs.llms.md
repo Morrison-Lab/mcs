@@ -6,7 +6,7 @@ Vertices and edges, degrees, walks and connectedness, Euler circuits, Hamiltonia
 
 Published
 
-Last modified: 2026-10-29 18:15:44 (PDT)
+Last modified: 2026-10-30 01:15:16 (PDT)
 
 > **NOTE:**
 >
@@ -988,6 +988,42 @@ Last modified: 2026-10-29 18:15:44 (PDT)
 > ```
 >
 > `(dfs triangles 3)` returns `'(3 1 2 4 5 6 7)`, the order of [Example 37](#exm-dfs-trace), and `(dfs office 'a)` returns `'(a b c e d f)`, the order of [Solution 11](#sol-follow-first).
+
+# Definitions on this page
+
+- [Definition 1 (Graph)](#def-graph-vertices-edges)
+- [Definition 2 (Loop)](#def-graph-loop)
+- [Definition 3 (Parallel edges)](#def-parallel-edges)
+- [Definition 4 (Simple graph)](#def-simple-graph)
+- [Definition 5 (Directed graph (digraph))](#def-directed-graph)
+- [Definition 6 (Adjacent vertices (neighbors))](#def-adjacent)
+- [Definition 7 (Incident)](#def-incident)
+- [Definition 8 (Neighborhood)](#def-neighborhood)
+- [Definition 9 (Degree)](#def-degree)
+- [Definition 10 (Out-degree)](#def-out-degree)
+- [Definition 11 (In-degree)](#def-in-degree)
+- [Definition 12 (Complete graph)](#def-complete-graph)
+- [Definition 13 (Cycle graph)](#def-cycle-graph)
+- [Definition 14 (Bipartite graph)](#def-bipartite)
+- [Definition 15 (Subgraph)](#def-subgraph)
+- [Definition 16 (Adjacency list)](#def-adjacency-list)
+- [Definition 17 (Adjacency matrix)](#def-adjacency-matrix)
+- [Definition 18 (Walk)](#def-walk)
+- [Definition 19 (Trail)](#def-trail)
+- [Definition 20 (Path)](#def-graph-path)
+- [Definition 21 (Circuit)](#def-circuit)
+- [Definition 22 (Cycle)](#def-graph-cycle)
+- [Definition 23 (Connected graph)](#def-connected)
+- [Definition 24 (Connected component)](#def-connected-component)
+- [Definition 25 (Strongly connected directed graph)](#def-strongly-connected)
+- [Definition 26 (Weakly connected directed graph)](#def-weakly-connected)
+- [Definition 27 (Euler circuit)](#def-euler-circuit)
+- [Definition 28 (Euler trail)](#def-euler-trail)
+- [Definition 29 (Hamiltonian cycle)](#def-hamiltonian-cycle)
+- [Definition 30 (Distance)](#def-graph-distance)
+- [Definition 31 (Queue)](#def-queue)
+- [Definition 32 (Breadth-first search)](#def-bfs)
+- [Definition 33 (Depth-first search)](#def-dfs)
 
 # References
 

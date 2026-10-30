@@ -6,7 +6,7 @@ Ordinary and strong induction
 
 Published
 
-Last modified: 2026-10-29 18:15:44 (PDT)
+Last modified: 2026-10-30 01:15:16 (PDT)
 
 > **NOTE:**
 >
@@ -213,6 +213,13 @@ Last modified: 2026-10-29 18:15:44 (PDT)
 > - **Inductive step.** Suppose every group of \\k\\ horses is all one color, and take a group of \\k + 1\\ horses. Leaving out the first horse leaves \\k\\ horses, which are all one color, and leaving out the last horse leaves \\k\\ horses, which are all one color. The horses in the middle are in both groups, so the two colors are the same, and all \\k + 1\\ horses are one color.
 >
 > The inductive step fails for \\k = 1\\: a group of 2 horses splits into two groups of 1 horse with no horse in both, so nothing links the two colors. So \\P(1)\\ does not imply \\P(2)\\, and the chain of implications breaks at its first link. An inductive step has to work for *every* \\k \ge n_0\\, including the smallest.
+
+# Definitions on this page
+
+- [Definition 1 (Proof by induction)](#def-proof-by-induction)
+- [Definition 2 (Proof by strong induction)](#def-strong-induction)
+- [Definition 3 (Recursively defined sequence)](#def-recursive-sequence)
+- [Definition 4 (Fibonacci sequence)](#def-fibonacci-sequence)
 
 # References
 

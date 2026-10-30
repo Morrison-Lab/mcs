@@ -6,7 +6,7 @@ What follows from what, and how to write it down
 
 Published
 
-Last modified: 2026-10-29 18:15:44 (PDT)
+Last modified: 2026-10-30 01:15:16 (PDT)
 
 > **NOTE:**
 >
@@ -277,6 +277,21 @@ Last modified: 2026-10-29 18:15:44 (PDT)
 > **NOTE:**
 >
 > *Remark 7* (Without loss of generality). [Solution 6](#sol-max-min) is a proof by cases ([Definition 12](#def-proof-by-cases)) with two cases, \\x \le y\\ and \\y \le x\\. The proof of the second case is the proof of the first with the names \\x\\ and \\y\\ swapped, which changes neither side of the equation. “Without loss of generality, suppose \\x \le y\\” says this, and writes out only the first case. Use it only when the other cases really are the same proof with names changed.
+
+# Definitions on this page
+
+- [Definition 1 (Argument)](#def-argument)
+- [Definition 2 (Logical entailment (logical consequence, deductive consequence))](#def-logical-entailment)
+- [Definition 3 (Rule of inference)](#def-rule-of-inference)
+- [Definition 4 (Integers)](#def-integers)
+- [Definition 5 (Positive integers)](#def-positive-integer)
+- [Definition 6 (Negative integers)](#def-negative-integer)
+- [Definition 7 (Even integer)](#def-even-odd)
+- [Definition 8 (Odd integer)](#def-odd)
+- [Definition 9 (Divides)](#def-divides)
+- [Definition 10 (Proof)](#def-proof)
+- [Definition 11 (Direct proof)](#def-direct-proof)
+- [Definition 12 (Proof by cases)](#def-proof-by-cases)
 
 # References
 

@@ -6,7 +6,7 @@ Relations between sets, their properties, equivalence relations, partitions and 
 
 Published
 
-Last modified: 2026-10-29 18:15:44 (PDT)
+Last modified: 2026-10-30 01:15:16 (PDT)
 
 > **NOTE:**
 >
@@ -804,6 +804,37 @@ Last modified: 2026-10-29 18:15:44 (PDT)
 > - \\\operatorname{len}(\operatorname{dup}(s)) = 2 \operatorname{len}(s)\\ for every \\s \in {\mathopen{}\left\\0, 1\right\\\mathclose{}}^\*\\, so \\\operatorname{len} \circ \operatorname{dup}\\ doubles the length of a string.
 >
 > - The graph of \\b\\ is \\B\\, so by [Theorem 9](#thm-composition-graph) the graph of \\b \circ b\\ is \\B \circ B = B^2\\, which is \\B^{-1}\\ by [Example 16](#exm-relation-power). By [Theorem 8](#thm-inverse-bijective), \\B^{-1}\\ is also the graph of \\b^{-1}\\, and by [Theorem 7](#thm-function-relation) only one function has that graph, so \\b \circ b = b^{-1}\\, the inverse function of [Example 31](#exm-inverse-strings): the element that \\a\\’s victim beats is the element that beats \\a\\.
+
+# Definitions on this page
+
+- [Definition 1 (Relation from one set to another)](#def-binary-relation)
+- [Definition 2 (Relation)](#def-relation)
+- [Definition 3 (Arrow diagram)](#def-arrow-diagram)
+- [Definition 4 (Directed graph of a relation)](#def-relation-digraph)
+- [Definition 5 (Matrix of a relation)](#def-relation-matrix)
+- [Definition 6 (Reflexive relation)](#def-reflexive)
+- [Definition 7 (Symmetric relation)](#def-symmetric-relation)
+- [Definition 8 (Antisymmetric relation)](#def-antisymmetric)
+- [Definition 9 (Transitive relation)](#def-transitive)
+- [Definition 10 (Inverse relation (converse relation))](#def-inverse-relation)
+- [Definition 11 (Composition of relations)](#def-relation-composition)
+- [Definition 12 (Power of a relation)](#def-relation-power)
+- [Definition 13 (Equivalence relation)](#def-equivalence-relation)
+- [Definition 14 (Equivalence class)](#def-equivalence-class)
+- [Definition 15 (Partition of a set)](#def-set-partition)
+- [Definition 16 (Domain of a function)](#def-function-domain)
+- [Definition 17 (Codomain)](#def-codomain)
+- [Definition 18 (Graph of a function)](#def-graph)
+- [Definition 19 (Image)](#def-image)
+- [Definition 20 (Range)](#def-range)
+- [Definition 21 (Injective function (one-to-one function))](#def-injective)
+- [Definition 22 (Surjective function (onto function))](#def-surjective)
+- [Definition 23 (Bijective function (bijection))](#def-bijective)
+- [Definition 24 (Identity function)](#def-identity-function)
+- [Definition 25 (Inverse function)](#def-inverse-function)
+- [Definition 26 (Composition)](#def-composition)
+- [Definition 27 (Inner function)](#def-inner-function)
+- [Definition 28 (Outer function)](#def-outer-function)
 
 # References
 

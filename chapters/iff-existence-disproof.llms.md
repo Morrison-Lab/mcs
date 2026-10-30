@@ -6,7 +6,7 @@ If and only if, existence, and disproof
 
 Published
 
-Last modified: 2026-10-29 18:15:44 (PDT)
+Last modified: 2026-10-30 01:15:16 (PDT)
 
 > **NOTE:**
 >
@@ -189,6 +189,12 @@ Last modified: 2026-10-29 18:15:44 (PDT)
 > **NOTE:**
 >
 > *Solution 5*. The proposition is false. Applying [Theorem: Negating a quantifier](../chapters/equivalence-negation.llms.md#thm-negate-quantifiers) to each of its two quantifiers in turn, its negation is “for all integers \\m\\ and \\n\\, \\6m + 4n \ne 3\\”, and we prove that. Let \\m\\ and \\n\\ be integers. Then \\6m + 4n = 2(3m + 2n)\\, and \\3m + 2n\\ is an integer ([Remark: Facts about integers used without proof](../chapters/direct-proof.llms.md#rem-integer-closure)), so \\6m + 4n\\ is even ([Definition: Even integer](../chapters/direct-proof.llms.md#def-even-odd)). But \\3 = 2 \cdot 1 + 1\\ is odd ([Definition: Odd integer](../chapters/direct-proof.llms.md#def-odd)), and no integer is both even and odd ([Remark: Facts about integers used without proof](../chapters/direct-proof.llms.md#rem-integer-closure)), so \\6m + 4n \ne 3\\.
+
+# Definitions on this page
+
+- [Definition 1 (Constructive proof)](#def-constructive-proof)
+- [Definition 2 (Non-constructive proof)](#def-nonconstructive-proof)
+- [Definition 3 (Disproof)](#def-disproof)
 
 # References
 

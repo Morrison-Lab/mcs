@@ -6,7 +6,7 @@ For all, there exists, and the order they come in
 
 Published
 
-Last modified: 2026-10-29 18:15:44 (PDT)
+Last modified: 2026-10-30 01:15:16 (PDT)
 
 > **NOTE:**
 >
@@ -229,6 +229,15 @@ Last modified: 2026-10-29 18:15:44 (PDT)
 > 1.  \\\exists n \in \mathbb{Z}, n^2 = 2n + 3\\. True: \\3^2 = 9 = 2 \cdot 3 + 3\\.
 > 2.  \\\forall n \in \mathbb{Z}, \neg (n \> 0 \land n \< 0)\\. True: an integer greater than \\0\\ is not less than \\0\\.
 > 3.  Let \\\mathcal{L}\\ be the set of lists of integers. The sentence says that each list \\\ell\\ has an element \\m\\ that is at least as large as every element \\x\\ of \\\ell\\: \\ \forall \ell \in \mathcal{L},\\ \exists m \in \ell,\\ \forall x \in \ell,\\ x \le m. \\ Here “\\m \in \ell\\” means “\\m\\ is an element of the list \\\ell\\”. False: the empty list has no elements, so it has no largest element. The sentence is true for every nonempty list.
+
+# Definitions on this page
+
+- [Definition 1 (Domain (domain of discourse, universe of discourse))](#def-domain)
+- [Definition 2 (Quantifier)](#def-quantifier)
+- [Definition 3 (Universal quantifier)](#def-universal-quantifier)
+- [Definition 4 (Existential quantifier)](#def-existential-quantifier)
+- [Definition 5 (Vacuous truth)](#def-vacuous-truth)
+- [Definition 6 (Counterexample)](#def-counterexample)
 
 # References
 

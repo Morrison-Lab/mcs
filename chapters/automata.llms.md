@@ -6,7 +6,7 @@ State machines and their state diagrams, runs, deterministic finite automata and
 
 Published
 
-Last modified: 2026-10-29 18:15:44 (PDT)
+Last modified: 2026-10-30 01:15:16 (PDT)
 
 > **NOTE:**
 >
@@ -547,6 +547,19 @@ Last modified: 2026-10-29 18:15:44 (PDT)
 > ```
 >
 > returns `'(#t #t #f #f #f #f #f #f)`: `"3.14"` and `"2026"` are numerals, and the others are not. The letter d in `"d.d"` is classified `'other`, not `'digit`, and so is the one character of `"\u00BD"`, the fraction one half, even though Racket’s `char-numeric?` counts it as numeric.
+
+# Definitions on this page
+
+- [Definition 1 (State machine)](#def-state-machine)
+- [Definition 2 (State diagram)](#def-state-diagram)
+- [Definition 3 (Run)](#def-run)
+- [Definition 4 (Extended transition function)](#def-extended-transition)
+- [Definition 5 (Deterministic finite automaton (DFA))](#def-dfa)
+- [Definition 6 (Accepting a string)](#def-accept)
+- [Definition 7 (Language)](#def-formal-language)
+- [Definition 8 (Language of an automaton)](#def-automaton-language)
+- [Definition 9 (Dead state)](#def-dead-state)
+- [Definition 10 (State-transition table)](#def-transition-table)
 
 # References
 
