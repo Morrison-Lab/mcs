@@ -225,6 +225,7 @@ format:
     # highlighting for the current page (needed because Home is in the
     # sidebar).
     include-after-body:
+      - tabset-code-in-tabs.html
       - page-navigation.html
       - anchor-landing.html
     css: styles.css
@@ -235,7 +236,7 @@ format:
     code-fold: true
     code-tools: true
     code-link: true
-    code-summary: "Show R code"
+    code-summary: "Show code"
     highlight-style: arrow
     lightbox: true
     link-external-icon: true
@@ -257,6 +258,7 @@ format:
     output-file: "{stem}-slides.html"
     theme: [simple, styles-reveal.scss]
     include-in-header: qwt-reveal-toggle.html
+    include-after-body: tabset-code-in-tabs.html
     slide-number: true
     chalkboard: false
     preview-links: auto
@@ -278,7 +280,7 @@ format:
     margin: 0.0
     code-fold: true
     code-link: true
-    code-summary: "[R code]"
+    code-summary: "[Code]"
     auto-stretch: true
     fig-height: 5
     fig-width: 7
