@@ -1,0 +1,2027 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.19">
+
+  <title>Math for Computer Science – Relations</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-3a7eae3b872f08785a56513611f0329a.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <!--
+    Colour-theme dropdown for the qwt revealjs format: Light, Off-white,
+    Parchment, Dark. Pulled into every slide deck via the `include-in-header`
+    entry in the `revealjs:` block of `_quarto-website.yml`. Pairs with
+    `styles-reveal.scss`, which defines the palette CSS variables; the select
+    reads those vars so it stays legible in every palette. Light is the
+    default variable set, Off-white and Parchment are a data-palette attribute
+    on <html>, and Dark is the body.qwt-dark class. The choice is saved under
+    "mln-theme", the key the website's theme dropdown (theme-picker.html) uses,
+    so it carries across the site and the decks. First-time visitors get
+    Dark if their system prefers it, and Off-white otherwise.
+  -->
+  <style>
+    #qwt-theme-select {
+      position: fixed;
+      bottom: 8px;
+      left: 8px;
+      /* Matches reveal.js's `.slide-number` and the `#revealjs-html-link` chip
+         from `revealjs-html-links.lua`; the three elements occupy different
+         corners so they don't overlap. Keep them aligned if you bump this. */
+      z-index: 31;
+      padding: 2px 4px;
+      border: 1px solid var(--qwt-border, rgba(0, 0, 0, 0.2));
+      border-radius: 4px;
+      background: var(--qwt-chip-bg, rgba(255, 255, 255, 0.8));
+      color: var(--qwt-fg, #000);
+      cursor: pointer;
+      font: 12px sans-serif;
+      opacity: 0.7;
+    }
+    #qwt-theme-select:hover,
+    #qwt-theme-select:focus-visible {
+      opacity: 1;
+      border-color: var(--qwt-fg, rgba(0, 0, 0, 0.4));
+    }
+    #qwt-theme-select:focus-visible {
+      outline: 2px solid var(--qwt-link, #2a76dd);
+      outline-offset: 2px;
+    }
+    @media print { #qwt-theme-select { display: none; } }
+  </style>
+  <script>
+  (function () {
+    "use strict";
+    var KEY = "mln-theme";
+    var DARK_CLASS = "qwt-dark";
+    var OPTIONS = [["light", "Light"], ["offwhite", "Off-white"], ["parchment", "Parchment"], ["dark", "Dark"]];
+    var root = document.documentElement;
+
+    function valid(choice) {
+      return OPTIONS.some(function (o) { return o[0] === choice; });
+    }
+
+    function stored() {
+      try { return localStorage.getItem(KEY); } catch (e) { return null; }
+    }
+
+    function initialTheme() {
+      var saved = stored();
+      if (valid(saved)) return saved;
+      if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        return "dark";
+      }
+      return "offwhite";
+    }
+
+    function applyTheme(choice) {
+      if (choice === "offwhite" || choice === "parchment") {
+        root.setAttribute("data-palette", choice);
+      } else {
+        root.removeAttribute("data-palette");
+      }
+      // The body can be missing when this runs from <head>; init() re-applies it.
+      if (document.body) document.body.classList.toggle(DARK_CLASS, choice === "dark");
+    }
+
+    var start = initialTheme();
+    applyTheme(start); // set the palette before first paint
+
+    function init() {
+      if (document.getElementById("qwt-theme-select")) return;
+      applyTheme(start);
+      var sel = document.createElement("select");
+      sel.id = "qwt-theme-select";
+      sel.setAttribute("aria-label", "Colour theme");
+      OPTIONS.forEach(function (o) {
+        var opt = document.createElement("option");
+        opt.value = o[0];
+        opt.textContent = o[1];
+        sel.appendChild(opt);
+      });
+      sel.value = start;
+      sel.addEventListener("change", function () {
+        applyTheme(sel.value);
+        try { localStorage.setItem(KEY, sel.value); } catch (e) { /* private mode */ }
+      });
+      document.body.appendChild(sel);
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init);
+    } else {
+      init();
+    }
+  })();
+  </script>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Relations</h1>
+  <p class="subtitle">Relations between sets, their properties, equivalence relations, partitions and functions</p>
+
+<div class="quarto-title-authors">
+</div>
+
+  <p class="date">Last modified: 2026-10-29 00:25:39 (PDT)</p>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-note callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Source</strong></p>
+</div>
+<div class="callout-content">
+<p>The topics of this chapter, and their order, follow the course calendar and Kameron Decker Harris’s Fall 2026 lecture notes on relations. These come from those notes:</p>
+<ul>
+<li>a relation from a set <span class="math inline">\(A\)</span> to a set <span class="math inline">\(B\)</span> as a subset of <span class="math inline">\(A \times B\)</span>, and a relation on a set <span class="math inline">\(A\)</span> as a subset of <span class="math inline">\(A \times A\)</span>;</li>
+<li>the notation <span class="math inline">\(a \mathrel{R} b\)</span> for <span class="math inline">\((a, b) \in R\)</span>;</li>
+<li>arrow diagrams, directed graphs and zero-one matrices as ways to draw a relation;</li>
+<li>reading reflexivity and symmetry from a matrix or a directed graph;</li>
+<li>the inverse of a relation, and the powers of a relation;</li>
+<li>the powers of a relation whose arrows go around a cycle, adapted here from a cycle of four elements to rock, paper, scissors;</li>
+<li>equivalence relations and equivalence classes;</li>
+<li>a function from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> as a relation that relates each element of <span class="math inline">\(A\)</span> to exactly one element of <span class="math inline">\(B\)</span>;</li>
+<li>the domain, codomain and range of a function;</li>
+<li>injective, surjective and bijective functions, the identity function, and the fact that a function has an inverse function exactly when it is bijective.</li>
+</ul>
+<p>The definitions included from mds come from that site, and the definitions of an antisymmetric relation, the composition of relations and a partition follow the standard ones cited with them. The exercises, the other examples, the Racket functions and all the proofs are new.</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<section id="sec-relations" class="title-slide slide level1 center" data-number="1">
+<h1><span class="header-section-number">1</span> Relations</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-word-letters" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1 (Letters in words)</strong></span> Let <span class="math inline">\(W = {\mathopen{}\left\{\text{cat}, \text{dog}, \text{owl}\right\}\mathclose{}}\)</span> be a set of words and <span class="math inline">\(L = {\mathopen{}\left\{\text{c}, \text{d}, \text{o}, \text{t}\right\}\mathclose{}}\)</span> a set of letters. List the ordered pairs <span class="math inline">\((w, x)\)</span> in the Cartesian product <span class="math inline">\(W \times L\)</span> (<a href="../chapters/sets.html#def-cartesian-product">Definition: Cartesian product</a>) for which the letter <span class="math inline">\(x\)</span> appears in the word <span class="math inline">\(w\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-word-letters" class="proof solution">
+<p><span class="proof-title"><em>Solution 1</em>. </span>Go through the words one at a time:</p>
+<ul>
+<li>cat has the letters c and t from <span class="math inline">\(L\)</span>;</li>
+<li>dog has the letters d and o;</li>
+<li>owl has only o, since w and l are not in <span class="math inline">\(L\)</span>.</li>
+</ul>
+<p>So the pairs are</p>
+<p><span class="math display">\[
+(\text{cat}, \text{c}),
+\quad (\text{cat}, \text{t}),
+\quad (\text{dog}, \text{d}),
+\quad (\text{dog}, \text{o}),
+\quad (\text{owl}, \text{o}).
+\]</span></p>
+<p>The other pairs of <span class="math inline">\(W \times L\)</span>, such as <span class="math inline">\((\text{owl}, \text{t})\)</span>, are left out.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-binary-relation" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 (Relation from one set to another)</strong></span> Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be sets (<a href="../chapters/sets.html#def-set">Definition: Set</a>). A <strong>relation from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span></strong> <span class="citation" data-cites="wikipedia_binary_relation">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026c</a>)</span> is a subset (<a href="../chapters/sets.html#def-subset">Definition: Subset</a>) <span class="math inline">\(R\)</span> of the Cartesian product <span class="math inline">\(A \times B\)</span> (<a href="../chapters/sets.html#def-cartesian-product">Definition: Cartesian product</a>). When <span class="math inline">\((a, b) \in R\)</span>, we write <span class="math inline">\(a \mathrel{R} b\)</span> and say that <span class="math inline">\(a\)</span> is related to <span class="math inline">\(b\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-word-letters" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1 (Words and their letters)</strong></span> The pairs found in <a href="#/sol-word-letters" class="quarto-xref">Solution&nbsp;1</a> form a relation (<a href="#/def-binary-relation" class="quarto-xref">Definition&nbsp;1</a>) from <span class="math inline">\(W\)</span> to <span class="math inline">\(L\)</span>,</p>
+<p><span class="math display">\[
+H = {\mathopen{}\left\{(\text{cat}, \text{c}), (\text{cat}, \text{t}), (\text{dog}, \text{d}), (\text{dog}, \text{o}), (\text{owl}, \text{o})\right\}\mathclose{}},
+\]</span></p>
+<p>where <span class="math inline">\(w \mathrel{H} x\)</span> means that the word <span class="math inline">\(w\)</span> has the letter <span class="math inline">\(x\)</span>. So <span class="math inline">\(\text{cat} \mathrel{H} \text{t}\)</span>, but <span class="math inline">\((\text{owl}, \text{t}) \notin H\)</span>. The word cat is related to two letters, and the letter o has two words related to it.</p>
+<p>The empty set and <span class="math inline">\(W \times L\)</span> itself are relations from <span class="math inline">\(W\)</span> to <span class="math inline">\(L\)</span> too: the first relates no word to any letter, and the second relates every word to every letter.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-relation" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2 (Relation)</strong></span> A <strong>relation</strong> <span class="math inline">\(\sim\)</span> on a set <span class="math inline">\(S\)</span> <span class="citation" data-cites="wikipedia_binary_relation">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026c</a>)</span> is a rule that, for each <a href="../chapters/sets.html#def-ordered-pair">ordered pair</a> of elements <span class="math inline">\(a, b \in S\)</span>, says whether <span class="math inline">\(a \sim b\)</span> holds (“<span class="math inline">\(a\)</span> is related to <span class="math inline">\(b\)</span>”).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-relation" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2 (Relations on the real numbers)</strong></span> <span class="math inline">\(=\)</span>, <span class="math inline">\(&lt;\)</span> and <span class="math inline">\(\le\)</span> are relations on <span class="math inline">\(\mathbb{R}\)</span>. For <span class="math inline">\(&lt;\)</span>, the pair <span class="math inline">\((2, 5)\)</span> is related, since <span class="math inline">\(2 &lt; 5\)</span>, but the pair <span class="math inline">\((5, 2)\)</span> is not, since <span class="math inline">\(5 &lt; 2\)</span> is false: the order of the pair matters.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-relation-on-set" class="proof remark">
+<p><span class="proof-title"><em>Remark 1</em> (A relation on a set is a set of pairs). </span>A relation <span class="math inline">\(\sim\)</span> on a set <span class="math inline">\(S\)</span> (<a href="#/def-relation" class="quarto-xref">Definition&nbsp;2</a>) decides, for each ordered pair <span class="math inline">\((a, b)\)</span> of elements of <span class="math inline">\(S\)</span>, whether <span class="math inline">\(a \sim b\)</span>. The pairs for which it holds form the set <span class="math inline">\({\mathopen{}\left\{(a, b) \in S \times S : a \sim b\right\}\mathclose{}}\)</span>, which is a relation from <span class="math inline">\(S\)</span> to <span class="math inline">\(S\)</span> (<a href="#/def-binary-relation" class="quarto-xref">Definition&nbsp;1</a>). In the other direction, a subset <span class="math inline">\(R \subseteq S \times S\)</span> decides, for each pair, whether <span class="math inline">\(a \mathrel{R} b\)</span>. So a relation on <span class="math inline">\(S\)</span> is the same as a relation from <span class="math inline">\(S\)</span> to <span class="math inline">\(S\)</span>, and from here on we treat it as a subset of <span class="math inline">\(S \times S\)</span>, named with a letter such as <span class="math inline">\(R\)</span> or with a symbol such as <span class="math inline">\(\sim\)</span>.</p>
+<p>For example, the relation <span class="math inline">\(&lt;\)</span> on <span class="math inline">\(\mathbb{R}\)</span> of <a href="#/exm-relation" class="quarto-xref">Example&nbsp;2</a> is the set of points <span class="math inline">\((x, y)\)</span> of the plane with <span class="math inline">\(x &lt; y\)</span>, which are the points above the line <span class="math inline">\(y = x\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-parent" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3 (Parents in a family)</strong></span> Let <span class="math inline">\(F = {\mathopen{}\left\{\text{Ada}, \text{Ben}, \text{Cora}, \text{Dev}, \text{Eva}\right\}\mathclose{}}\)</span> be five people in a family, where Ada is the parent of Ben and of Cora, Ben is the parent of Dev, and Cora is the parent of Eva. The relation “is a parent of” on <span class="math inline">\(F\)</span> (<a href="#/rem-relation-on-set" class="quarto-xref">Remark&nbsp;1</a>) is the set of four pairs</p>
+<p><span class="math display">\[
+P = {\mathopen{}\left\{(\text{Ada}, \text{Ben}), (\text{Ada}, \text{Cora}), (\text{Ben}, \text{Dev}), (\text{Cora}, \text{Eva})\right\}\mathclose{}}.
+\]</span></p>
+<p>So <span class="math inline">\(\text{Ben} \mathrel{P} \text{Dev}\)</span>, but <span class="math inline">\((\text{Dev}, \text{Ben}) \notin P\)</span>, since Dev is Ben’s child, not Ben’s parent.</p>
+</div>
+</section></section>
+<section>
+<section id="sec-drawing-relations" class="title-slide slide level1 center" data-number="2">
+<h1><span class="header-section-number">2</span> Drawing relations</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-beats" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2 (Rock, paper, scissors)</strong></span> In the game rock, paper, scissors, rock beats scissors, scissors beats paper, and paper beats rock. Write the relation “beats” on the set <span class="math inline">\(G = {\mathopen{}\left\{\text{rock}, \text{paper}, \text{scissors}\right\}\mathclose{}}\)</span> as a set of ordered pairs (<a href="#/rem-relation-on-set" class="quarto-xref">Remark&nbsp;1</a>).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-beats" class="proof solution">
+<p><span class="proof-title"><em>Solution 2</em>. </span>Each statement “<span class="math inline">\(a\)</span> beats <span class="math inline">\(b\)</span>” gives the pair <span class="math inline">\((a, b)\)</span>, with the winner first:</p>
+<p><span class="math display">\[
+B = {\mathopen{}\left\{(\text{rock}, \text{scissors}), (\text{scissors}, \text{paper}), (\text{paper}, \text{rock})\right\}\mathclose{}}.
+\]</span></p>
+<p>No element of <span class="math inline">\(G\)</span> beats itself, so no pair of <span class="math inline">\(B\)</span> has the same entry twice.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-beats" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4 (The relation “beats”)</strong></span> By <a href="#/sol-beats" class="quarto-xref">Solution&nbsp;2</a>, the relation “beats” on <span class="math inline">\(G = {\mathopen{}\left\{\text{rock}, \text{paper}, \text{scissors}\right\}\mathclose{}}\)</span> (<a href="#/rem-relation-on-set" class="quarto-xref">Remark&nbsp;1</a>) is</p>
+<p><span class="math display">\[
+B = {\mathopen{}\left\{(\text{rock}, \text{scissors}), (\text{scissors}, \text{paper}), (\text{paper}, \text{rock})\right\}\mathclose{}}.
+\]</span></p>
+<p>So <span class="math inline">\(\text{rock} \mathrel{B} \text{scissors}\)</span>, but <span class="math inline">\((\text{scissors}, \text{rock}) \notin B\)</span>, since the first entry of each pair is the winner.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-arrow-diagram" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3 (Arrow diagram)</strong></span> Let <span class="math inline">\(R\)</span> be a relation from a set <span class="math inline">\(A\)</span> to a set <span class="math inline">\(B\)</span> (<a href="#/def-binary-relation" class="quarto-xref">Definition&nbsp;1</a>). The <strong>arrow diagram</strong> of <span class="math inline">\(R\)</span> draws the elements of <span class="math inline">\(A\)</span> in one column and the elements of <span class="math inline">\(B\)</span> in another, with an arrow from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span> for each pair <span class="math inline">\((a, b) \in R\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-arrow-diagram" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5 (An arrow diagram of words and letters)</strong></span> <a href="#/fig-word-letters" class="quarto-xref">Figure&nbsp;1</a> is the arrow diagram (<a href="#/def-arrow-diagram" class="quarto-xref">Definition&nbsp;3</a>) of the relation <span class="math inline">\(H\)</span> of <a href="#/exm-word-letters" class="quarto-xref">Example&nbsp;1</a>. Each of the five pairs of <span class="math inline">\(H\)</span> is one arrow. Two arrows leave cat, and two arrive at o.</p>
+<div id="fig-word-letters" class="quarto-float quarto-figure quarto-figure-center" alt="An arrow diagram with the words cat, dog and owl in a column on the left and the letters c, d, o and t in a column on the right, and arrows from cat to c, cat to t, dog to d, dog to o, and owl to o.">
+<figure class="quarto-float quarto-float-fig">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-word-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The arrow diagram of the relation <span class="math inline">\(H\)</span> from the words <span class="math inline">\(W\)</span> to the letters <span class="math inline">\(L\)</span> they contain.
+</figcaption>
+<div aria-describedby="fig-word-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/relations-word-letters.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: The arrow diagram of the relation H from the words W to the letters L they contain."><img data-src="../images/relations-word-letters.png" style="width:50.0%" alt="An arrow diagram with the words cat, dog and owl in a column on the left and the letters c, d, o and t in a column on the right, and arrows from cat to c, cat to t, dog to d, dog to o, and owl to o."></a>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-relation-digraph" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 4 (Directed graph of a relation)</strong></span> Let <span class="math inline">\(R\)</span> be a relation on a set <span class="math inline">\(A\)</span> (<a href="#/rem-relation-on-set" class="quarto-xref">Remark&nbsp;1</a>). The <strong>directed graph</strong> of <span class="math inline">\(R\)</span> <span class="citation" data-cites="wikipedia_directed_graph">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026g</a>)</span> draws each element of <span class="math inline">\(A\)</span> once, as a labeled point, with an arrow from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span> for each pair <span class="math inline">\((a, b) \in R\)</span>. A pair <span class="math inline">\((a, a)\)</span> is drawn as an arrow that leaves <span class="math inline">\(a\)</span> and comes back to <span class="math inline">\(a\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-relation-digraph" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6 (The directed graph of “beats”)</strong></span> <a href="#/fig-beats" class="quarto-xref">Figure&nbsp;2</a> is the directed graph (<a href="#/def-relation-digraph" class="quarto-xref">Definition&nbsp;4</a>) of the relation <span class="math inline">\(B\)</span> of <a href="#/exm-beats" class="quarto-xref">Example&nbsp;4</a>. Each element of <span class="math inline">\(G\)</span> appears once, where an arrow diagram (<a href="#/def-arrow-diagram" class="quarto-xref">Definition&nbsp;3</a>) of <span class="math inline">\(B\)</span> would draw <span class="math inline">\(G\)</span> twice, once in each column. Starting from any element and following the arrows leads around the triangle, and back to the start after three arrows.</p>
+<div id="fig-beats" class="quarto-float quarto-figure quarto-figure-center" alt="A directed graph with points rock, paper and scissors at the corners of a triangle, and arrows from rock to scissors, from scissors to paper, and from paper to rock.">
+<figure class="quarto-float quarto-float-fig">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-beats-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The directed graph of the relation “beats” on <span class="math inline">\(G\)</span>.
+</figcaption>
+<div aria-describedby="fig-beats-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/relations-beats.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: The directed graph of the relation “beats” on G."><img data-src="../images/relations-beats.png" style="width:40.0%" alt="A directed graph with points rock, paper and scissors at the corners of a triangle, and arrows from rock to scissors, from scissors to paper, and from paper to rock."></a>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-relation-matrix" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5 (Matrix of a relation)</strong></span> Let <span class="math inline">\(R\)</span> be a relation from a finite set <span class="math inline">\(A\)</span> to a finite set <span class="math inline">\(B\)</span> (<a href="../chapters/sets.html#def-finite-set">Definition: Finite set</a>), and list their elements in a chosen order as <span class="math inline">\(A = {\mathopen{}\left\{a_1, \ldots, a_m\right\}\mathclose{}}\)</span> and <span class="math inline">\(B = {\mathopen{}\left\{b_1, \ldots, b_n\right\}\mathclose{}}\)</span>. The <strong>matrix</strong> of <span class="math inline">\(R\)</span> <span class="citation" data-cites="wikipedia_logical_matrix">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026q</a>)</span> is the <span class="math inline">\(m \times n\)</span> matrix (<a href="https://morrison-lab.github.io/mds/linear-algebra-matrices.html#def-matrix">Definition: Matrix</a>) <span class="math inline">\(M_R\)</span> whose entry in row <span class="math inline">\(i\)</span> and column <span class="math inline">\(j\)</span> is</p>
+<p><span class="math display">\[
+m_{ij} \stackrel{\text{def}}{=}
+\begin{cases}
+1 &amp; \text{if } (a_i, b_j) \in R,
+\\
+0 &amp; \text{if } (a_i, b_j) \notin R.
+\end{cases}
+\]</span></p>
+<p>For a relation on a set <span class="math inline">\(A\)</span>, the rows and the columns list <span class="math inline">\(A\)</span> in the same order.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-relation-matrix" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7 (Matrices of two relations)</strong></span> List the words of <span class="math inline">\(W\)</span> in the order cat, dog, owl, and the letters of <span class="math inline">\(L\)</span> in the order c, d, o, t. The relation <span class="math inline">\(H\)</span> of <a href="#/exm-word-letters" class="quarto-xref">Example&nbsp;1</a> has the matrix (<a href="#/def-relation-matrix" class="quarto-xref">Definition&nbsp;5</a>)</p>
+<p><span class="math display">\[
+M_H =
+\begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; 1
+\\
+0 &amp; 1 &amp; 1 &amp; 0
+\\
+0 &amp; 0 &amp; 1 &amp; 0
+\end{bmatrix}.
+\]</span></p>
+<p>Row 1, for cat, has a 1 in the columns for c and t, the two arrows that leave cat in <a href="#/fig-word-letters" class="quarto-xref">Figure&nbsp;1</a>.</p>
+<p>List <span class="math inline">\(G\)</span> in the order rock, paper, scissors. The relation <span class="math inline">\(B\)</span> of <a href="#/exm-beats" class="quarto-xref">Example&nbsp;4</a> has the matrix</p>
+<p><span class="math display">\[
+M_B =
+\begin{bmatrix}
+0 &amp; 0 &amp; 1
+\\
+1 &amp; 0 &amp; 0
+\\
+0 &amp; 1 &amp; 0
+\end{bmatrix}.
+\]</span></p>
+<p>Its entries on the diagonal, <span class="math inline">\(m_{11}\)</span>, <span class="math inline">\(m_{22}\)</span> and <span class="math inline">\(m_{33}\)</span>, are 0, since nothing beats itself. Listing the elements in another order would move the rows and columns around, but the new matrix would hold the same pairs.</p>
+</div>
+</section></section>
+<section>
+<section id="sec-relation-properties" class="title-slide slide level1 center" data-number="3">
+<h1><span class="header-section-number">3</span> Properties of relations</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-beats-transitive" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3 (Does rock beat paper?)</strong></span> In the relation <span class="math inline">\(B\)</span> of <a href="#/exm-beats" class="quarto-xref">Example&nbsp;4</a>, rock beats scissors and scissors beats paper. Does rock beat paper?</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-beats-transitive" class="proof solution">
+<p><span class="proof-title"><em>Solution 3</em>. </span>No. The pair <span class="math inline">\((\text{rock}, \text{paper})\)</span> is not in <span class="math inline">\(B\)</span>; paper beats rock, not the other way around. So for <span class="math inline">\(B\)</span>, “<span class="math inline">\(a\)</span> beats <span class="math inline">\(b\)</span> and <span class="math inline">\(b\)</span> beats <span class="math inline">\(c\)</span>” does not guarantee “<span class="math inline">\(a\)</span> beats <span class="math inline">\(c\)</span>”. The properties in this section are rules of this kind, which a relation may or may not follow.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-shares-letter" class="theorem example">
+<p><span class="theorem-title"><strong>Example 8 (Words that share a letter)</strong></span> Let <span class="math inline">\(V = {\mathopen{}\left\{\text{cat}, \text{cow}, \text{dog}, \text{pig}\right\}\mathclose{}}\)</span>, and on <span class="math inline">\(V\)</span> let <span class="math inline">\(a \mathrel{T} b\)</span> when the words <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> have at least one letter in common (<a href="#/rem-relation-on-set" class="quarto-xref">Remark&nbsp;1</a>). For example, <span class="math inline">\(\text{cat} \mathrel{T} \text{cow}\)</span>, since both have a c, and <span class="math inline">\(\text{cow} \mathrel{T} \text{dog}\)</span>, since both have an o, but <span class="math inline">\((\text{cat}, \text{dog}) \notin T\)</span>. <a href="#/fig-shares-letter" class="quarto-xref">Figure&nbsp;3</a> is the directed graph (<a href="#/def-relation-digraph" class="quarto-xref">Definition&nbsp;4</a>) of <span class="math inline">\(T\)</span>. Each word has a letter in common with itself, so each point has an arrow that comes back to it.</p>
+<div id="fig-shares-letter" class="quarto-float quarto-figure quarto-figure-center" alt="A directed graph with points cat, cow, dog and pig in a row, where each point has an arrow back to itself and arrows go both ways between cat and cow, between cow and dog, and between dog and pig.">
+<figure class="quarto-float quarto-float-fig">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-shares-letter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: The directed graph of the relation “shares a letter with” on <span class="math inline">\(V\)</span>.
+</figcaption>
+<div aria-describedby="fig-shares-letter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/relations-shares-letter.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: The directed graph of the relation “shares a letter with” on V."><img data-src="../images/relations-shares-letter.png" style="width:70.0%" alt="A directed graph with points cat, cow, dog and pig in a row, where each point has an arrow back to itself and arrows go both ways between cat and cow, between cow and dog, and between dog and pig."></a>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-reflexive" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 6 (Reflexive relation)</strong></span> Let <span class="math inline">\(\sim\)</span> be a <a href="../chapters/relations.html#def-relation">relation</a> on a <a href="../chapters/sets.html#def-set">set</a> <span class="math inline">\(S\)</span>. The relation <span class="math inline">\(\sim\)</span> is <strong>reflexive</strong> <span class="citation" data-cites="wikipedia_reflexive_relation">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026t</a>)</span> if <span class="math inline">\(a \sim a\)</span> for every <span class="math inline">\(a \in S\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-reflexive-or-not" class="theorem example">
+<p><span class="theorem-title"><strong>Example 9 (Reflexive or not)</strong></span> &nbsp;</p>
+<ul>
+<li>The relation <span class="math inline">\(T\)</span> of <a href="#/exm-shares-letter" class="quarto-xref">Example&nbsp;8</a> is reflexive (<a href="#/def-reflexive" class="quarto-xref">Definition&nbsp;6</a>), since every word of <span class="math inline">\(V\)</span> has a letter in common with itself.</li>
+<li>The relation <span class="math inline">\(B\)</span> of <a href="#/exm-beats" class="quarto-xref">Example&nbsp;4</a> is not reflexive, since rock does not beat rock.</li>
+<li>The relation <span class="math inline">\(P\)</span> of <a href="#/exm-parent" class="quarto-xref">Example&nbsp;3</a> is not reflexive, since Ada is not her own parent.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-symmetric-relation" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 7 (Symmetric relation)</strong></span> Let <span class="math inline">\(\sim\)</span> be a <a href="../chapters/relations.html#def-relation">relation</a> on a <a href="../chapters/sets.html#def-set">set</a> <span class="math inline">\(S\)</span>. The relation <span class="math inline">\(\sim\)</span> is <strong>symmetric</strong> <span class="citation" data-cites="wikipedia_symmetric_relation">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026v</a>)</span> if, <a href="../chapters/predicates-quantifiers.html#def-universal-quantifier">for all</a> <span class="math inline">\(a, b \in S\)</span>, <span class="math inline">\(a \sim b\)</span> <a href="../chapters/propositional-logic.html#def-implies">implies</a> <span class="math inline">\(b \sim a\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-symmetric-or-not" class="theorem example">
+<p><span class="theorem-title"><strong>Example 10 (Symmetric or not)</strong></span> &nbsp;</p>
+<ul>
+<li>The relation <span class="math inline">\(T\)</span> of <a href="#/exm-shares-letter" class="quarto-xref">Example&nbsp;8</a> is symmetric (<a href="#/def-symmetric-relation" class="quarto-xref">Definition&nbsp;7</a>): if <span class="math inline">\(a\)</span> has a letter in common with <span class="math inline">\(b\)</span>, then <span class="math inline">\(b\)</span> has the same letter in common with <span class="math inline">\(a\)</span>.</li>
+<li>The relation <span class="math inline">\(B\)</span> of <a href="#/exm-beats" class="quarto-xref">Example&nbsp;4</a> is not symmetric: rock beats scissors, but scissors does not beat rock.</li>
+<li>The relation <span class="math inline">\(P\)</span> of <a href="#/exm-parent" class="quarto-xref">Example&nbsp;3</a> is not symmetric: Ada is a parent of Ben, but Ben is not a parent of Ada.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-antisymmetric" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 8 (Antisymmetric relation)</strong></span> Let <span class="math inline">\(R\)</span> be a relation on a set <span class="math inline">\(S\)</span> (<a href="#/rem-relation-on-set" class="quarto-xref">Remark&nbsp;1</a>). The relation <span class="math inline">\(R\)</span> is <strong>antisymmetric</strong> <span class="citation" data-cites="wikipedia_antisymmetric_relation">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026a</a>)</span> if, for all <span class="math inline">\(a, b \in S\)</span>, <span class="math inline">\(a \mathrel{R} b\)</span> and <span class="math inline">\(b \mathrel{R} a\)</span> together imply <span class="math inline">\(a = b\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-antisymmetric-or-not" class="theorem example">
+<p><span class="theorem-title"><strong>Example 11 (Antisymmetric or not)</strong></span> By its contrapositive (<a href="../chapters/contrapositive-contradiction.html#def-contrapositive">Definition: Contrapositive</a>), a relation <span class="math inline">\(R\)</span> is antisymmetric (<a href="#/def-antisymmetric" class="quarto-xref">Definition&nbsp;8</a>) exactly when, for any two different elements <span class="math inline">\(a \ne b\)</span>, at most one of <span class="math inline">\(a \mathrel{R} b\)</span> and <span class="math inline">\(b \mathrel{R} a\)</span> holds.</p>
+<ul>
+<li>The relation <span class="math inline">\(B\)</span> of <a href="#/exm-beats" class="quarto-xref">Example&nbsp;4</a> is antisymmetric: no two different elements of <span class="math inline">\(G\)</span> beat each other.</li>
+<li>The relation <span class="math inline">\(P\)</span> of <a href="#/exm-parent" class="quarto-xref">Example&nbsp;3</a> is antisymmetric: no two people of <span class="math inline">\(F\)</span> are each other’s parent.</li>
+<li>The relation <span class="math inline">\(T\)</span> of <a href="#/exm-shares-letter" class="quarto-xref">Example&nbsp;8</a> is not antisymmetric: <span class="math inline">\(\text{cat} \mathrel{T} \text{cow}\)</span> and <span class="math inline">\(\text{cow} \mathrel{T} \text{cat}\)</span>, but cat and cow are different words.</li>
+<li>For a set <span class="math inline">\(U\)</span>, the relation <span class="math inline">\(\subseteq\)</span> (<a href="../chapters/sets.html#def-subset">Definition: Subset</a>) on the power set <span class="math inline">\(\mathcal{P}(U)\)</span> (<a href="../chapters/sets.html#def-power-set">Definition: Power set</a>) is antisymmetric: if <span class="math inline">\(X \subseteq Y\)</span> and <span class="math inline">\(Y \subseteq X\)</span>, then <span class="math inline">\(X = Y\)</span>, by <a href="../chapters/set-proofs.html#thm-double-inclusion">Theorem: Equal sets are subsets of each other</a>.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-transitive" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 9 (Transitive relation)</strong></span> Let <span class="math inline">\(\sim\)</span> be a <a href="../chapters/relations.html#def-relation">relation</a> on a set <span class="math inline">\(S\)</span>. The relation <span class="math inline">\(\sim\)</span> is <strong>transitive</strong> <span class="citation" data-cites="wikipedia_transitive_relation">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026w</a>)</span> if, for all <span class="math inline">\(a, b, c \in S\)</span>, <span class="math inline">\(a \sim b\)</span> and <span class="math inline">\(b \sim c\)</span> together imply <span class="math inline">\(a \sim c\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-transitive-or-not" class="theorem example">
+<p><span class="theorem-title"><strong>Example 12 (Transitive or not)</strong></span> &nbsp;</p>
+<ul>
+<li>The relation <span class="math inline">\(B\)</span> of <a href="#/exm-beats" class="quarto-xref">Example&nbsp;4</a> is not transitive (<a href="#/def-transitive" class="quarto-xref">Definition&nbsp;9</a>), as <a href="#/sol-beats-transitive" class="quarto-xref">Solution&nbsp;3</a> found.</li>
+<li>The relation <span class="math inline">\(T\)</span> of <a href="#/exm-shares-letter" class="quarto-xref">Example&nbsp;8</a> is not transitive: <span class="math inline">\(\text{cat} \mathrel{T} \text{cow}\)</span> and <span class="math inline">\(\text{cow} \mathrel{T} \text{dog}\)</span>, but <span class="math inline">\((\text{cat}, \text{dog}) \notin T\)</span>.</li>
+<li>The relation <span class="math inline">\(P\)</span> of <a href="#/exm-parent" class="quarto-xref">Example&nbsp;3</a> is not transitive: Ada is a parent of Ben and Ben is a parent of Dev, but Ada is not a parent of Dev.</li>
+<li>For a set <span class="math inline">\(U\)</span>, the relation <span class="math inline">\(\subseteq\)</span> on <span class="math inline">\(\mathcal{P}(U)\)</span> is transitive, by <a href="../chapters/set-proofs.html#thm-subset-transitive">Theorem: Subsets of subsets</a>.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-symmetric-antisymmetric" class="proof remark">
+<p><span class="proof-title"><em>Remark 2</em> (Antisymmetric is not the opposite of symmetric). </span>A relation can be symmetric (<a href="#/def-symmetric-relation" class="quarto-xref">Definition&nbsp;7</a>) and antisymmetric (<a href="#/def-antisymmetric" class="quarto-xref">Definition&nbsp;8</a>), only one of the two, or neither:</p>
+<ul>
+<li>the relation <span class="math inline">\({\mathopen{}\left\{(\text{cow}, \text{cow}), (\text{dog}, \text{dog})\right\}\mathclose{}}\)</span> on <span class="math inline">\(V\)</span> is both, since it relates no word to a different word, so no pair can break either property;</li>
+<li>the relation <span class="math inline">\(T\)</span> of <a href="#/exm-shares-letter" class="quarto-xref">Example&nbsp;8</a> is symmetric but not antisymmetric;</li>
+<li>the relation <span class="math inline">\(B\)</span> of <a href="#/exm-beats" class="quarto-xref">Example&nbsp;4</a> is antisymmetric but not symmetric;</li>
+<li>the relation <span class="math inline">\({\mathopen{}\left\{(\text{cat}, \text{cow}), (\text{cow}, \text{cat}), (\text{dog}, \text{pig})\right\}\mathclose{}}\)</span> on <span class="math inline">\(V\)</span> is neither: it relates cat and cow both ways, so it is not antisymmetric, and it has <span class="math inline">\((\text{dog}, \text{pig})\)</span> but not <span class="math inline">\((\text{pig}, \text{dog})\)</span>, so it is not symmetric.</li>
+</ul>
+<p>A relation with both properties never relates two different elements: if <span class="math inline">\(a \mathrel{R} b\)</span>, then <span class="math inline">\(b \mathrel{R} a\)</span> by symmetry, and then <span class="math inline">\(a = b\)</span> by antisymmetry. So “not symmetric” and “antisymmetric” say different things. A relation is not symmetric when one pair <span class="math inline">\((a, b)\)</span> in it has its reverse <span class="math inline">\((b, a)\)</span> missing, while it is antisymmetric when no two different elements are related both ways.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-properties-pictures" class="proof remark">
+<p><span class="proof-title"><em>Remark 3</em> (Three properties in a matrix and a directed graph). </span>Let <span class="math inline">\(R\)</span> be a relation on a finite set, with matrix <span class="math inline">\(M_R = (m_{ij})\)</span> (<a href="#/def-relation-matrix" class="quarto-xref">Definition&nbsp;5</a>) and a directed graph (<a href="#/def-relation-digraph" class="quarto-xref">Definition&nbsp;4</a>).</p>
+<ul>
+<li><span class="math inline">\(R\)</span> is reflexive (<a href="#/def-reflexive" class="quarto-xref">Definition&nbsp;6</a>) exactly when every diagonal entry <span class="math inline">\(m_{ii}\)</span> is 1, and exactly when every point of the directed graph has an arrow that comes back to it.</li>
+<li><span class="math inline">\(R\)</span> is symmetric (<a href="#/def-symmetric-relation" class="quarto-xref">Definition&nbsp;7</a>) exactly when <span class="math inline">\(m_{ij} = m_{ji}\)</span> for all <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>, and exactly when every arrow from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span> comes with an arrow from <span class="math inline">\(b\)</span> to <span class="math inline">\(a\)</span>.</li>
+<li><span class="math inline">\(R\)</span> is antisymmetric (<a href="#/def-antisymmetric" class="quarto-xref">Definition&nbsp;8</a>) exactly when <span class="math inline">\(m_{ij}\)</span> and <span class="math inline">\(m_{ji}\)</span> are never both 1 for <span class="math inline">\(i \ne j\)</span>, and exactly when no two different points have arrows both ways between them.</li>
+</ul>
+<p>For example, <a href="#/fig-shares-letter" class="quarto-xref">Figure&nbsp;3</a> has an arrow back to every point, and every arrow there comes with its reverse, so it shows again that <span class="math inline">\(T\)</span> is reflexive and symmetric.</p>
+</div>
+</section></section>
+<section>
+<section id="sec-racket-relations" class="title-slide slide level1 center" data-number="4">
+<h1><span class="header-section-number">4</span> Relations in Racket</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-racket-member" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 4 (Looking up a pair)</strong></span> In Racket, the relation <span class="math inline">\(B\)</span> of <a href="#/exm-beats" class="quarto-xref">Example&nbsp;4</a> can be stored as a list of two-element lists:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb1-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> beats</span></span>
+<span id="cb1-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">list</span> <span class="op">(</span><span class="kw">list</span> 'rock 'scissors<span class="op">)</span></span>
+<span id="cb1-3"><a aria-label="3"></a>        <span class="op">(</span><span class="kw">list</span> 'scissors 'paper<span class="op">)</span></span>
+<span id="cb1-4"><a aria-label="4"></a>        <span class="op">(</span><span class="kw">list</span> 'paper 'rock<span class="op">)))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>(member x L)</code> returns <code>#f</code> when <code>x</code> is not an element of the list <code>L</code>. Does <code>(member (list 'rock 'paper) beats)</code> return <code>#f</code>?</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-racket-member" class="proof solution">
+<p><span class="proof-title"><em>Solution 4</em>. </span>Yes. The list <code>(list 'rock 'paper)</code> is not an element of <code>beats</code>, since rock does not beat paper (<a href="#/sol-beats-transitive" class="quarto-xref">Solution&nbsp;3</a>), so <code>member</code> returns <code>#f</code>. When <code>x</code> is an element of <code>L</code>, <code>member</code> returns the part of <code>L</code> that starts at <code>x</code>, which is not <code>#f</code>: <code>(member (list 'paper 'rock) beats)</code> returns <code>'((paper rock))</code>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-racket-properties" class="theorem example">
+<p><span class="theorem-title"><strong>Example 13 (Checking properties in Racket)</strong></span> The predicate <code>related?</code> turns the answer of <code>member</code> into <code>#t</code> or <code>#f</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb2-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>related? R a b<span class="op">)</span></span>
+<span id="cb2-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span><span class="kw">member</span> <span class="op">(</span><span class="kw">list</span> a b<span class="op">)</span> R<span class="op">)</span> <span class="dv">#t</span> <span class="dv">#f</span><span class="op">))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>(for/and ([x L]) body)</code> evaluates <code>body</code> once for each element <code>x</code> of the list <code>L</code>, and returns <code>#f</code> as soon as <code>body</code> returns <code>#f</code>, and <code>#t</code> if it never does. <code>for*/and</code>, which <a href="../chapters/equivalence-negation.html#rem-racket-equivalence">Remark: Checking an equivalence in Racket</a> uses to go through the rows of a truth table, does the same for every combination of values of its variables, here every two pairs of a relation:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb3-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>reflexive? S R<span class="op">)</span></span>
+<span id="cb3-2"><a aria-label="2"></a>  <span class="op">(</span>for/and <span class="op">([</span>a S<span class="op">])</span></span>
+<span id="cb3-3"><a aria-label="3"></a>    <span class="op">(</span>related? R a a<span class="op">)))</span></span>
+<span id="cb3-4"><a aria-label="4"></a></span>
+<span id="cb3-5"><a aria-label="5"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>symmetric? R<span class="op">)</span></span>
+<span id="cb3-6"><a aria-label="6"></a>  <span class="op">(</span>for/and <span class="op">([</span>p R<span class="op">])</span></span>
+<span id="cb3-7"><a aria-label="7"></a>    <span class="op">(</span>related? R <span class="op">(</span>second p<span class="op">)</span> <span class="op">(</span>first p<span class="op">))))</span></span>
+<span id="cb3-8"><a aria-label="8"></a></span>
+<span id="cb3-9"><a aria-label="9"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>transitive? R<span class="op">)</span></span>
+<span id="cb3-10"><a aria-label="10"></a>  <span class="op">(</span>for*/and <span class="op">([</span>p R<span class="op">]</span></span>
+<span id="cb3-11"><a aria-label="11"></a>             <span class="op">[</span>q R<span class="op">])</span></span>
+<span id="cb3-12"><a aria-label="12"></a>    <span class="op">(</span><span class="kw">or</span> <span class="op">(</span><span class="kw">not</span> <span class="op">(</span><span class="kw">equal?</span> <span class="op">(</span>second p<span class="op">)</span> <span class="op">(</span>first q<span class="op">)))</span></span>
+<span id="cb3-13"><a aria-label="13"></a>        <span class="op">(</span>related? R <span class="op">(</span>first p<span class="op">)</span> <span class="op">(</span>second q<span class="op">)))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><code>reflexive?</code> checks <span class="math inline">\(a \mathrel{R} a\)</span> for each element <span class="math inline">\(a\)</span> of the set <code>S</code> (<a href="#/def-reflexive" class="quarto-xref">Definition&nbsp;6</a>). It needs <code>S</code>, because the list <code>R</code> says nothing about an element that is in no pair.</li>
+<li><code>symmetric?</code> checks, for each pair <span class="math inline">\((a, b)\)</span> in <code>R</code>, that <span class="math inline">\((b, a)\)</span> is in <code>R</code> too (<a href="#/def-symmetric-relation" class="quarto-xref">Definition&nbsp;7</a>).</li>
+<li><code>transitive?</code> checks, for every two pairs <span class="math inline">\((a, b)\)</span> and <span class="math inline">\((b', c)\)</span> of <code>R</code>, the conditional “if <span class="math inline">\(b = b'\)</span>, then <span class="math inline">\(a \mathrel{R} c\)</span>” (<a href="#/def-transitive" class="quarto-xref">Definition&nbsp;9</a>), written as an <code>or</code> by <a href="../chapters/equivalence-negation.html#cor-conditional-as-or">Corollary: A conditional without the arrow</a>.</li>
+</ul>
+<p>All three of <code>(reflexive? (list 'rock 'paper 'scissors) beats)</code>, <code>(symmetric? beats)</code> and <code>(transitive? beats)</code> return <code>#f</code>, as <a href="#/exm-reflexive-or-not" class="quarto-xref">Example&nbsp;9</a>, <a href="#/exm-symmetric-or-not" class="quarto-xref">Example&nbsp;10</a> and <a href="#/exm-transitive-or-not" class="quarto-xref">Example&nbsp;12</a> found.</p>
+</div>
+</section></section>
+<section>
+<section id="sec-inverse-composition" class="title-slide slide level1 center" data-number="5">
+<h1><span class="header-section-number">5</span> Inverses and composition</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-grandparent" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5 (Grandparents)</strong></span> In the family of <a href="#/exm-parent" class="quarto-xref">Example&nbsp;3</a>, a person <span class="math inline">\(a\)</span> is a grandparent of a person <span class="math inline">\(c\)</span> when <span class="math inline">\(a\)</span> is a parent of some person <span class="math inline">\(b\)</span> who is a parent of <span class="math inline">\(c\)</span>. List the pairs <span class="math inline">\((a, c)\)</span> of people in <span class="math inline">\(F\)</span> for which <span class="math inline">\(a\)</span> is a grandparent of <span class="math inline">\(c\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-grandparent" class="proof solution">
+<p><span class="proof-title"><em>Solution 5</em>. </span>Follow two pairs of <span class="math inline">\(P\)</span> in a row, where the second entry of the first pair is the first entry of the second:</p>
+<ul>
+<li><span class="math inline">\((\text{Ada}, \text{Ben})\)</span> and then <span class="math inline">\((\text{Ben}, \text{Dev})\)</span> give <span class="math inline">\((\text{Ada}, \text{Dev})\)</span>;</li>
+<li><span class="math inline">\((\text{Ada}, \text{Cora})\)</span> and then <span class="math inline">\((\text{Cora}, \text{Eva})\)</span> give <span class="math inline">\((\text{Ada}, \text{Eva})\)</span>.</li>
+</ul>
+<p>No other two pairs chain together, since Dev and Eva are nobody’s parent in <span class="math inline">\(F\)</span>. So the pairs are <span class="math inline">\((\text{Ada}, \text{Dev})\)</span> and <span class="math inline">\((\text{Ada}, \text{Eva})\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-inverse-relation" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 10 (Inverse relation (converse relation))</strong></span> Let <span class="math inline">\(R\)</span> be a relation from a set <span class="math inline">\(A\)</span> to a set <span class="math inline">\(B\)</span> (<a href="#/def-binary-relation" class="quarto-xref">Definition&nbsp;1</a>). The <strong>inverse</strong> of <span class="math inline">\(R\)</span> <span class="citation" data-cites="wikipedia_converse_relation">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026f</a>)</span> (also called the <strong>converse</strong> of <span class="math inline">\(R\)</span>) is the relation from <span class="math inline">\(B\)</span> to <span class="math inline">\(A\)</span> that reverses each pair of <span class="math inline">\(R\)</span>:</p>
+<p><span class="math display">\[
+R^{-1} \stackrel{\text{def}}{=}{\mathopen{}\left\{(b, a) : (a, b) \in R\right\}\mathclose{}}.
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-inverse-relation" class="theorem example">
+<p><span class="theorem-title"><strong>Example 14 (Reversing pairs)</strong></span> &nbsp;</p>
+<ul>
+<li><p>The inverse (<a href="#/def-inverse-relation" class="quarto-xref">Definition&nbsp;10</a>) of the relation <span class="math inline">\(P\)</span> of <a href="#/exm-parent" class="quarto-xref">Example&nbsp;3</a> is the relation “is a child of”,</p>
+<p><span class="math display">\[
+P^{-1} = {\mathopen{}\left\{(\text{Ben}, \text{Ada}), (\text{Cora}, \text{Ada}), (\text{Dev}, \text{Ben}), (\text{Eva}, \text{Cora})\right\}\mathclose{}}.
+\]</span></p></li>
+<li><p>The inverse of the relation <span class="math inline">\(H\)</span> of <a href="#/exm-word-letters" class="quarto-xref">Example&nbsp;1</a> is the relation from <span class="math inline">\(L\)</span> to <span class="math inline">\(W\)</span> in which <span class="math inline">\(x \mathrel{H^{-1}} w\)</span> when the letter <span class="math inline">\(x\)</span> appears in the word <span class="math inline">\(w\)</span>; for example, <span class="math inline">\(\text{o} \mathrel{H^{-1}} \text{dog}\)</span> and <span class="math inline">\(\text{o} \mathrel{H^{-1}} \text{owl}\)</span>.</p></li>
+<li><p>The inverse of the relation <span class="math inline">\(B\)</span> of <a href="#/exm-beats" class="quarto-xref">Example&nbsp;4</a> is “is beaten by”. Its directed graph (<a href="#/def-relation-digraph" class="quarto-xref">Definition&nbsp;4</a>) is <a href="#/fig-beats" class="quarto-xref">Figure&nbsp;2</a> with every arrow reversed, and its matrix (<a href="#/def-relation-matrix" class="quarto-xref">Definition&nbsp;5</a>) is the transpose (<a href="https://morrison-lab.github.io/mds/linear-algebra-vectors.html#def-transpose">Definition: Transpose</a>) of <span class="math inline">\(M_B\)</span> from <a href="#/exm-relation-matrix" class="quarto-xref">Example&nbsp;7</a>:</p>
+<p><span class="math display">\[
+M_{B^{-1}} =
+\begin{bmatrix}
+0 &amp; 1 &amp; 0
+\\
+0 &amp; 0 &amp; 1
+\\
+1 &amp; 0 &amp; 0
+\end{bmatrix}.
+\]</span></p></li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-symmetric-inverse" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 (Symmetric relations are their own inverses)</strong></span> Let <span class="math inline">\(R\)</span> be a relation on a set <span class="math inline">\(S\)</span> (<a href="#/rem-relation-on-set" class="quarto-xref">Remark&nbsp;1</a>). Then <span class="math inline">\(R\)</span> is symmetric (<a href="#/def-symmetric-relation" class="quarto-xref">Definition&nbsp;7</a>) if and only if <span class="math inline">\(R^{-1} = R\)</span> (<a href="#/def-inverse-relation" class="quarto-xref">Definition&nbsp;10</a>).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-relation-composition" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 11 (Composition of relations)</strong></span> Let <span class="math inline">\(R\)</span> be a relation from a set <span class="math inline">\(A\)</span> to a set <span class="math inline">\(B\)</span>, and <span class="math inline">\(Q\)</span> a relation from <span class="math inline">\(B\)</span> to a set <span class="math inline">\(E\)</span> (<a href="#/def-binary-relation" class="quarto-xref">Definition&nbsp;1</a>). The <strong>composition</strong> of <span class="math inline">\(R\)</span> and <span class="math inline">\(Q\)</span> <span class="citation" data-cites="wikipedia_composition_of_relations">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026e</a>)</span> is the relation from <span class="math inline">\(A\)</span> to <span class="math inline">\(E\)</span></p>
+<p><span class="math display">\[
+Q \circ R \stackrel{\text{def}}{=}{\mathopen{}\left\{(a, e) \in A \times E : a \mathrel{R} b \text{ and } b \mathrel{Q} e \text{ for some } b \in B\right\}\mathclose{}}.
+\]</span></p>
+<p>The relation used first, <span class="math inline">\(R\)</span>, is written on the right.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-relation-composition" class="theorem example">
+<p><span class="theorem-title"><strong>Example 15 (Grandparents and siblings)</strong></span> &nbsp;</p>
+<ul>
+<li><p>The grandparent relation of <a href="#/exr-grandparent" class="quarto-xref">Exercise&nbsp;5</a> is the composition (<a href="#/def-relation-composition" class="quarto-xref">Definition&nbsp;11</a>) of the relation <span class="math inline">\(P\)</span> of <a href="#/exm-parent" class="quarto-xref">Example&nbsp;3</a> with itself:</p>
+<p><span class="math display">\[
+P \circ P = {\mathopen{}\left\{(\text{Ada}, \text{Dev}), (\text{Ada}, \text{Eva})\right\}\mathclose{}}.
+\]</span></p></li>
+<li><p>In <span class="math inline">\(P \circ P^{-1}\)</span>, a person <span class="math inline">\(a\)</span> is related to <span class="math inline">\(c\)</span> when some <span class="math inline">\(b\)</span> has <span class="math inline">\(a \mathrel{P^{-1}} b\)</span> and <span class="math inline">\(b \mathrel{P} c\)</span>, that is, when <span class="math inline">\(b\)</span> is a parent of <span class="math inline">\(a\)</span> and of <span class="math inline">\(c\)</span> (<a href="#/exm-inverse-relation" class="quarto-xref">Example&nbsp;14</a>). So <span class="math inline">\(P \circ P^{-1}\)</span> is the relation “has a parent in common with”:</p>
+<p><span class="math display">\[
+\begin{aligned}
+P \circ P^{-1}
+= \{&amp;(\text{Ben}, \text{Ben}), (\text{Ben}, \text{Cora}), (\text{Cora}, \text{Ben}), (\text{Cora}, \text{Cora}), \\
+&amp;(\text{Dev}, \text{Dev}), (\text{Eva}, \text{Eva})\}.
+\end{aligned}
+\]</span></p>
+<p>Ada is in no pair, since her parents are not in <span class="math inline">\(F\)</span>.</p></li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-relation-power" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 12 (Power of a relation)</strong></span> Let <span class="math inline">\(R\)</span> be a relation on a set <span class="math inline">\(S\)</span> (<a href="#/rem-relation-on-set" class="quarto-xref">Remark&nbsp;1</a>). The <strong>powers</strong> of <span class="math inline">\(R\)</span> are the relations <span class="math inline">\(R^n\)</span> on <span class="math inline">\(S\)</span>, for integers <span class="math inline">\(n \ge 1\)</span>, given by the recursive definition (<a href="../chapters/recursion.html#def-recursive-definition">Definition: Recursive definition</a>)</p>
+<ul>
+<li>base case: <span class="math inline">\(R^1 = R\)</span>;</li>
+<li>recursive rule: <span class="math inline">\(R^{n + 1} = R^n \circ R\)</span> for <span class="math inline">\(n \ge 1\)</span> (<a href="#/def-relation-composition" class="quarto-xref">Definition&nbsp;11</a>).</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-relation-power" class="theorem example">
+<p><span class="theorem-title"><strong>Example 16 (Powers of “beats”)</strong></span> For the relation <span class="math inline">\(B\)</span> of <a href="#/exm-beats" class="quarto-xref">Example&nbsp;4</a>, <span class="math inline">\(B^2 = B \circ B\)</span> (<a href="#/def-relation-power" class="quarto-xref">Definition&nbsp;12</a>) relates <span class="math inline">\(a\)</span> to <span class="math inline">\(c\)</span> when <span class="math inline">\(a\)</span> beats something that beats <span class="math inline">\(c\)</span>:</p>
+<p><span class="math display">\[
+B^2 = {\mathopen{}\left\{(\text{rock}, \text{paper}), (\text{scissors}, \text{rock}), (\text{paper}, \text{scissors})\right\}\mathclose{}},
+\]</span></p>
+<p>which is the inverse <span class="math inline">\(B^{-1}\)</span> of <a href="#/exm-inverse-relation" class="quarto-xref">Example&nbsp;14</a>. Then <span class="math inline">\(B^3 = B^2 \circ B\)</span> relates each element to itself:</p>
+<p><span class="math display">\[
+B^3 = {\mathopen{}\left\{(\text{rock}, \text{rock}), (\text{paper}, \text{paper}), (\text{scissors}, \text{scissors})\right\}\mathclose{}},
+\]</span></p>
+<p>as following three arrows of <a href="#/fig-beats" class="quarto-xref">Figure&nbsp;2</a> leads back to the start. So <span class="math inline">\(B^4 = B^3 \circ B = B\)</span>, and the powers of <span class="math inline">\(B\)</span> repeat after every three steps.</p>
+<p>For the relation <span class="math inline">\(P\)</span> of <a href="#/exm-parent" class="quarto-xref">Example&nbsp;3</a>, <span class="math inline">\(P^2\)</span> is the grandparent relation of <a href="#/exm-relation-composition" class="quarto-xref">Example&nbsp;15</a>, and <span class="math inline">\(P^3 = \emptyset\)</span>, since no one in <span class="math inline">\(F\)</span> has a great-grandchild in <span class="math inline">\(F\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-transitive-composition" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2 (Transitive relations contain their squares)</strong></span> Let <span class="math inline">\(R\)</span> be a relation on a set <span class="math inline">\(S\)</span> (<a href="#/rem-relation-on-set" class="quarto-xref">Remark&nbsp;1</a>). Then <span class="math inline">\(R\)</span> is transitive (<a href="#/def-transitive" class="quarto-xref">Definition&nbsp;9</a>) if and only if <span class="math inline">\(R^2 \subseteq R\)</span> (<a href="#/def-relation-power" class="quarto-xref">Definition&nbsp;12</a>).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-transitive-composition" class="theorem example">
+<p><span class="theorem-title"><strong>Example 17 (Checking transitivity with a square)</strong></span> &nbsp;</p>
+<ul>
+<li>For the relation <span class="math inline">\(B\)</span> of <a href="#/exm-beats" class="quarto-xref">Example&nbsp;4</a>, <span class="math inline">\(B^2 = B^{-1}\)</span> by <a href="#/exm-relation-power" class="quarto-xref">Example&nbsp;16</a>, and <span class="math inline">\(B^2\)</span> has no pair in common with <span class="math inline">\(B\)</span>. So <span class="math inline">\(B^2 \not\subseteq B\)</span>, and <span class="math inline">\(B\)</span> is not transitive, by <a href="#/thm-transitive-composition" class="quarto-xref">Theorem&nbsp;2</a>, as <a href="#/sol-beats-transitive" class="quarto-xref">Solution&nbsp;3</a> found.</li>
+<li>For the relation <span class="math inline">\(T\)</span> of <a href="#/exm-shares-letter" class="quarto-xref">Example&nbsp;8</a>, <span class="math inline">\(T^2\)</span> holds <span class="math inline">\((\text{cat}, \text{dog})\)</span>, since <span class="math inline">\(\text{cat} \mathrel{T} \text{cow}\)</span> and <span class="math inline">\(\text{cow} \mathrel{T} \text{dog}\)</span>. That pair is not in <span class="math inline">\(T\)</span>, so <span class="math inline">\(T\)</span> is not transitive.</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="sec-equivalence-relations" class="title-slide slide level1 center" data-number="6">
+<h1><span class="header-section-number">6</span> Equivalence relations</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-same-length" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6 (Words of the same length)</strong></span> Let <span class="math inline">\(K = {\mathopen{}\left\{\text{if}, \text{let}, \text{cond}, \text{list}, \text{cons}, \text{define}\right\}\mathclose{}}\)</span>, six words used in Racket, and on <span class="math inline">\(K\)</span> let <span class="math inline">\(a \sim b\)</span> when the words <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> have the same number of letters. Which words <span class="math inline">\(a \in K\)</span> have <span class="math inline">\(a \sim \text{cond}\)</span>?</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-same-length" class="proof solution">
+<p><span class="proof-title"><em>Solution 6</em>. </span>The word cond has 4 letters. The words of <span class="math inline">\(K\)</span> with 4 letters are cond, list and cons, so these three are the words related to cond. The list includes cond itself, since cond has as many letters as cond.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-equivalence-relation" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 13 (Equivalence relation)</strong></span> Let <span class="math inline">\(\sim\)</span> be a <a href="../chapters/relations.html#def-relation">relation</a> on a <a href="../chapters/sets.html#def-set">set</a> <span class="math inline">\(S\)</span>. The relation <span class="math inline">\(\sim\)</span> is an <strong>equivalence relation</strong> <span class="citation" data-cites="wikipedia_equivalence_relation">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026j</a>)</span> if it is <a href="#/def-reflexive">reflexive</a>, <a href="#/def-symmetric-relation">symmetric</a>, and <a href="../chapters/relations.html#def-transitive">transitive</a>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-same-length" class="theorem example">
+<p><span class="theorem-title"><strong>Example 18 (Having the same length is an equivalence relation)</strong></span> The relation <span class="math inline">\(\sim\)</span> of <a href="#/exr-same-length" class="quarto-xref">Exercise&nbsp;6</a> is an equivalence relation (<a href="#/def-equivalence-relation" class="quarto-xref">Definition&nbsp;13</a>). Write <span class="math inline">\(\operatorname{len}(a)\)</span> for the length of the word <span class="math inline">\(a\)</span>, its number of letters, as for the length of a list (<a href="../chapters/recursion.html#def-list-length">Definition: Length of a list</a>), so that <span class="math inline">\(a \sim b\)</span> means <span class="math inline">\(\operatorname{len}(a) = \operatorname{len}(b)\)</span>.</p>
+<p><strong>Reflexive.</strong> For each word <span class="math inline">\(a\)</span>, <span class="math inline">\(\operatorname{len}(a) = \operatorname{len}(a)\)</span>, so <span class="math inline">\(a \sim a\)</span> (<a href="#/def-reflexive" class="quarto-xref">Definition&nbsp;6</a>).</p>
+<p><strong>Symmetric.</strong> If <span class="math inline">\(\operatorname{len}(a) = \operatorname{len}(b)\)</span>, then <span class="math inline">\(\operatorname{len}(b) = \operatorname{len}(a)\)</span>, so <span class="math inline">\(a \sim b\)</span> implies <span class="math inline">\(b \sim a\)</span> (<a href="#/def-symmetric-relation" class="quarto-xref">Definition&nbsp;7</a>).</p>
+<p><strong>Transitive.</strong> If <span class="math inline">\(\operatorname{len}(a) = \operatorname{len}(b)\)</span> and <span class="math inline">\(\operatorname{len}(b) = \operatorname{len}(c)\)</span>, then <span class="math inline">\(\operatorname{len}(a) = \operatorname{len}(c)\)</span> (<a href="https://morrison-lab.github.io/mds/algebra-basics.html#thm-equal-trans">Theorem: Equalities are transitive</a>), so <span class="math inline">\(a \sim b\)</span> and <span class="math inline">\(b \sim c\)</span> imply <span class="math inline">\(a \sim c\)</span> (<a href="#/def-transitive" class="quarto-xref">Definition&nbsp;9</a>).</p>
+<p>The relation <span class="math inline">\(T\)</span> of <a href="#/exm-shares-letter" class="quarto-xref">Example&nbsp;8</a> is not an equivalence relation, since it is not transitive (<a href="#/exm-transitive-or-not" class="quarto-xref">Example&nbsp;12</a>).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-same-value" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 3 (Having the same value is an equivalence relation)</strong></span> Let <span class="math inline">\(f : A \to B\)</span> be a function (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function, map, mapping, transformation</a>), and on <span class="math inline">\(A\)</span> let <span class="math inline">\(a \sim a'\)</span> when <span class="math inline">\(f(a) = f(a')\)</span>. Then <span class="math inline">\(\sim\)</span> is an equivalence relation (<a href="#/def-equivalence-relation" class="quarto-xref">Definition&nbsp;13</a>).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-integer-difference" class="theorem example">
+<p><span class="theorem-title"><strong>Example 19 (Real numbers that differ by an integer)</strong></span> On the real numbers <span class="math inline">\(\mathbb{R}\)</span>, let <span class="math inline">\(x \sim y\)</span> when <span class="math inline">\(x - y\)</span> is an integer (<a href="../chapters/direct-proof.html#def-integers">Definition: Integers</a>). For example, <span class="math inline">\(3.25 \sim 0.25\)</span>, since <span class="math inline">\(3.25 - 0.25 = 3\)</span>, but <span class="math inline">\(0.75 \not\sim 0.25\)</span>, since <span class="math inline">\(0.75 - 0.25 = 0.5\)</span>. The relation <span class="math inline">\(\sim\)</span> is an equivalence relation (<a href="#/def-equivalence-relation" class="quarto-xref">Definition&nbsp;13</a>).</p>
+<p><strong>Reflexive.</strong> For every real number <span class="math inline">\(x\)</span>, <span class="math inline">\(x - x = 0\)</span>, which is an integer, so <span class="math inline">\(x \sim x\)</span>.</p>
+<p><strong>Symmetric.</strong> Suppose <span class="math inline">\(x \sim y\)</span>, so <span class="math inline">\(x - y = n\)</span> for some integer <span class="math inline">\(n\)</span>. Then <span class="math inline">\(y - x = -(x - y) = -n\)</span>, which is an integer, so <span class="math inline">\(y \sim x\)</span>.</p>
+<p><strong>Transitive.</strong> Suppose <span class="math inline">\(x \sim y\)</span> and <span class="math inline">\(y \sim z\)</span>, so <span class="math inline">\(x - y = m\)</span> and <span class="math inline">\(y - z = n\)</span> for some integers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span>. Then</p>
+<p><span class="math display">\[
+\begin{aligned}
+x - z
+&amp;= (x - y) + (y - z)
+&amp;&amp; \text{(the } y \text{ terms cancel)}
+\\
+&amp;= m + n,
+&amp;&amp; \text{(} x - y = m \text{ and } y - z = n \text{)}
+\end{aligned}
+\]</span></p>
+<p>which is an integer, so <span class="math inline">\(x \sim z\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-equivalence-class" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 14 (Equivalence class)</strong></span> Let <span class="math inline">\(\sim\)</span> be an <a href="#/def-equivalence-relation">equivalence relation</a> on a <a href="../chapters/sets.html#def-set">set</a> <span class="math inline">\(S\)</span>, and let <span class="math inline">\(a \in S\)</span>. The <strong>equivalence class</strong> <span class="citation" data-cites="wikipedia_equivalence_class">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026i</a>)</span> of <span class="math inline">\(a\)</span> is the set of elements of <span class="math inline">\(S\)</span> related to <span class="math inline">\(a\)</span>:</p>
+<p><span class="math display">\[
+[a] \stackrel{\text{def}}{=}{\mathopen{}\left\{b \in S : b \sim a\right\}\mathclose{}}.
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-equivalence-classes" class="theorem example">
+<p><span class="theorem-title"><strong>Example 20 (Equivalence classes of two relations)</strong></span> &nbsp;</p>
+<ul>
+<li><p>For the relation <span class="math inline">\(\sim\)</span> of <a href="#/exm-same-length" class="quarto-xref">Example&nbsp;18</a>, the equivalence class (<a href="#/def-equivalence-class" class="quarto-xref">Definition&nbsp;14</a>) of cond is the set found in <a href="#/sol-same-length" class="quarto-xref">Solution&nbsp;6</a>,</p>
+<p><span class="math display">\[
+[\text{cond}] = {\mathopen{}\left\{\text{cond}, \text{list}, \text{cons}\right\}\mathclose{}},
+\]</span></p>
+<p>and <span class="math inline">\([\text{list}]\)</span> and <span class="math inline">\([\text{cons}]\)</span> are the same set. The other classes are <span class="math inline">\([\text{if}] = {\mathopen{}\left\{\text{if}\right\}\mathclose{}}\)</span>, <span class="math inline">\([\text{let}] = {\mathopen{}\left\{\text{let}\right\}\mathclose{}}\)</span> and <span class="math inline">\([\text{define}] = {\mathopen{}\left\{\text{define}\right\}\mathclose{}}\)</span>, so the relation has four different equivalence classes.</p></li>
+<li><p>For the relation <span class="math inline">\(\sim\)</span> of <a href="#/exm-integer-difference" class="quarto-xref">Example&nbsp;19</a>, the class of <span class="math inline">\(0.25\)</span> holds the real numbers <span class="math inline">\(y\)</span> with <span class="math inline">\(y - 0.25\)</span> an integer:</p>
+<p><span class="math display">\[
+[0.25] = {\mathopen{}\left\{0.25 + n : n \in \mathbb{Z}\right\}\mathclose{}} = {\mathopen{}\left\{\ldots, -1.75, -0.75, 0.25, 1.25, 2.25, \ldots\right\}\mathclose{}}.
+\]</span></p>
+<p>The class <span class="math inline">\([3.25]\)</span> is the same set, and the class <span class="math inline">\([0]\)</span> is the set of integers.</p></li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-related-classes" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 4 (Related elements have the same class)</strong></span> Let <span class="math inline">\(\sim\)</span> be an equivalence relation on a set <span class="math inline">\(S\)</span> (<a href="#/def-equivalence-relation" class="quarto-xref">Definition&nbsp;13</a>), and let <span class="math inline">\(a, b \in S\)</span>. Then <span class="math inline">\(a \sim b\)</span> if and only if <span class="math inline">\([a] = [b]\)</span> (<a href="#/def-equivalence-class" class="quarto-xref">Definition&nbsp;14</a>).</p>
+</div>
+</section></section>
+<section>
+<section id="sec-partitions" class="title-slide slide level1 center" data-number="7">
+<h1><span class="header-section-number">7</span> Partitions</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-first-letter" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 7 (Grouping words by their first letter)</strong></span> Split the words of the set <span class="math inline">\(K\)</span> of <a href="#/exr-same-length" class="quarto-xref">Exercise&nbsp;6</a> into groups, so that each word is in exactly one group, and two words are in the same group exactly when they start with the same letter. List the groups.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-first-letter" class="proof solution">
+<p><span class="proof-title"><em>Solution 7</em>. </span>The first letters are i, l, c and d, which give four groups:</p>
+<p><span class="math display">\[
+{\mathopen{}\left\{\text{if}\right\}\mathclose{}}, \quad {\mathopen{}\left\{\text{let}, \text{list}\right\}\mathclose{}}, \quad {\mathopen{}\left\{\text{cond}, \text{cons}\right\}\mathclose{}}, \quad {\mathopen{}\left\{\text{define}\right\}\mathclose{}}.
+\]</span></p>
+<p>Every word of <span class="math inline">\(K\)</span> is in one of them, and no word is in two.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-set-partition" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 15 (Partition of a set)</strong></span> Let <span class="math inline">\(S\)</span> be a set. A <strong>partition</strong> of <span class="math inline">\(S\)</span> <span class="citation" data-cites="wikipedia_partition_of_a_set">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026r</a>)</span> is a collection <span class="math inline">\(\mathcal{C}\)</span> (<a href="https://morrison-lab.github.io/mds/sets.html#def-collection">Definition: Collection of sets, family of sets</a>) of subsets of <span class="math inline">\(S\)</span> such that</p>
+<ul>
+<li>every set in <span class="math inline">\(\mathcal{C}\)</span> is nonempty;</li>
+<li>any two different sets in <span class="math inline">\(\mathcal{C}\)</span> are disjoint: their intersection (<a href="../chapters/sets.html#def-intersection">Definition: Intersection</a>) is empty;</li>
+<li>every element of <span class="math inline">\(S\)</span> is in some set in <span class="math inline">\(\mathcal{C}\)</span>.</li>
+</ul>
+<p>So each element of <span class="math inline">\(S\)</span> is in exactly one set in <span class="math inline">\(\mathcal{C}\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-set-partition" class="theorem example">
+<p><span class="theorem-title"><strong>Example 21 (Partitions and collections that are not partitions)</strong></span> &nbsp;</p>
+<ul>
+<li>The four groups of <a href="#/sol-first-letter" class="quarto-xref">Solution&nbsp;7</a> are a partition (<a href="#/def-set-partition" class="quarto-xref">Definition&nbsp;15</a>) of <span class="math inline">\(K\)</span>.</li>
+<li>The collection <span class="math inline">\({\mathopen{}\left\{{\mathopen{}\left\{\text{if}, \text{let}\right\}\mathclose{}}, {\mathopen{}\left\{\text{let}, \text{list}, \text{cond}, \text{cons}, \text{define}\right\}\mathclose{}}\right\}\mathclose{}}\)</span> is not a partition of <span class="math inline">\(K\)</span>, since let is in both of its sets.</li>
+<li>The collection <span class="math inline">\({\mathopen{}\left\{{\mathopen{}\left\{\text{if}\right\}\mathclose{}}, {\mathopen{}\left\{\text{let}, \text{list}\right\}\mathclose{}}, {\mathopen{}\left\{\text{cond}, \text{cons}\right\}\mathclose{}}\right\}\mathclose{}}\)</span> is not a partition of <span class="math inline">\(K\)</span>, since define is in none of its sets.</li>
+<li>The set of even integers and the set of odd integers (<a href="../chapters/direct-proof.html#def-even-odd">Definition: Even integer</a>) form a partition of <span class="math inline">\(\mathbb{Z}\)</span>, since every integer is even or odd, and none is both.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-classes-partition" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 5 (Equivalence classes form a partition)</strong></span> Let <span class="math inline">\(\sim\)</span> be an equivalence relation on a set <span class="math inline">\(S\)</span> (<a href="#/def-equivalence-relation" class="quarto-xref">Definition&nbsp;13</a>). Then the collection of the different equivalence classes <span class="math inline">\([a]\)</span>, for <span class="math inline">\(a \in S\)</span> (<a href="#/def-equivalence-class" class="quarto-xref">Definition&nbsp;14</a>), is a partition of <span class="math inline">\(S\)</span> (<a href="#/def-set-partition" class="quarto-xref">Definition&nbsp;15</a>).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-partition-equivalence" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 6 (A partition gives an equivalence relation)</strong></span> Let <span class="math inline">\(\mathcal{C}\)</span> be a partition of a set <span class="math inline">\(S\)</span> (<a href="#/def-set-partition" class="quarto-xref">Definition&nbsp;15</a>), and on <span class="math inline">\(S\)</span> let <span class="math inline">\(a \sim b\)</span> when <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are in the same set in <span class="math inline">\(\mathcal{C}\)</span>. Then <span class="math inline">\(\sim\)</span> is an equivalence relation (<a href="#/def-equivalence-relation" class="quarto-xref">Definition&nbsp;13</a>), and its equivalence classes (<a href="#/def-equivalence-class" class="quarto-xref">Definition&nbsp;14</a>) are exactly the sets in <span class="math inline">\(\mathcal{C}\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-first-letter" class="theorem example">
+<p><span class="theorem-title"><strong>Example 22 (Starting with the same letter)</strong></span> By <a href="#/thm-partition-equivalence" class="quarto-xref">Theorem&nbsp;6</a>, the partition of <span class="math inline">\(K\)</span> in <a href="#/sol-first-letter" class="quarto-xref">Solution&nbsp;7</a> gives the equivalence relation “starts with the same letter as”, whose equivalence classes are the four groups. For example, <span class="math inline">\([\text{let}] = {\mathopen{}\left\{\text{let}, \text{list}\right\}\mathclose{}}\)</span>. By <a href="#/thm-classes-partition" class="quarto-xref">Theorem&nbsp;5</a>, the relation “has the same length as” of <a href="#/exm-same-length" class="quarto-xref">Example&nbsp;18</a> gives the partition of <span class="math inline">\(K\)</span> into its four classes from <a href="#/exm-equivalence-classes" class="quarto-xref">Example&nbsp;20</a>, which is a different partition of the same set.</p>
+</div>
+</section></section>
+<section>
+<section id="sec-functions-relations" class="title-slide slide level1 center" data-number="8">
+<h1><span class="header-section-number">8</span> Functions as relations</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-beats-one" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 8 (How many does each one beat?)</strong></span> In the relation <span class="math inline">\(B\)</span> of <a href="#/exm-beats" class="quarto-xref">Example&nbsp;4</a>, how many elements of <span class="math inline">\(G\)</span> does each element of <span class="math inline">\(G\)</span> beat?</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-beats-one" class="proof solution">
+<p><span class="proof-title"><em>Solution 8</em>. </span>Exactly one each: rock beats only scissors, paper beats only rock, and scissors beats only paper. So “the element that <span class="math inline">\(a\)</span> beats” names one element of <span class="math inline">\(G\)</span> for each <span class="math inline">\(a \in G\)</span>, which is what a function (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function, map, mapping, transformation</a>) from <span class="math inline">\(G\)</span> to <span class="math inline">\(G\)</span> does.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-function-domain" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 16 (Domain of a function)</strong></span> The <strong>domain</strong> of a function <span class="math inline">\(f : A \to B\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function, map, mapping, transformation</a>) <span class="citation" data-cites="wikipedia_domain_of_a_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026h</a>)</span> is the set <span class="math inline">\(A\)</span> of elements that <span class="math inline">\(f\)</span> assigns values to.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-codomain" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 17 (Codomain)</strong></span> The <strong>codomain</strong> <span class="citation" data-cites="wikipedia_codomain">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span> of a <a href="https://morrison-lab.github.io/mds/functions.html#def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set <span class="math inline">\(B\)</span> that its values are required to lie in.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-graph" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 18 (Graph of a function)</strong></span> The <strong>graph</strong> <span class="citation" data-cites="wikipedia_graph_of_a_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026l</a>)</span> of a <a href="https://morrison-lab.github.io/mds/functions.html#def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set of <a href="../chapters/sets.html#def-ordered-pair">ordered pairs</a> <span class="math inline">\((a, f(a))\)</span>, one for each element <span class="math inline">\(a\)</span> of its domain:</p>
+<p><span class="math display">\[{\mathopen{}\left\{(a, f(a)) : a \in A\right\}\mathclose{}}\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-graph-length" class="theorem example">
+<p><span class="theorem-title"><strong>Example 23 (The graph of a length function)</strong></span> Let <span class="math inline">\(\operatorname{len}_K : K \to \mathbb{N}\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function, map, mapping, transformation</a>, <a href="../chapters/sets.html#def-natural-numbers">Definition: Natural numbers (our convention)</a>) give the length of each word of the set <span class="math inline">\(K\)</span> of <a href="#/exr-same-length" class="quarto-xref">Exercise&nbsp;6</a>, so <span class="math inline">\(\operatorname{len}_K(a) = \operatorname{len}(a)\)</span>, as in <a href="#/exm-same-length" class="quarto-xref">Example&nbsp;18</a>. Its domain (<a href="#/def-function-domain" class="quarto-xref">Definition&nbsp;16</a>) is <span class="math inline">\(K\)</span> and its codomain (<a href="#/def-codomain" class="quarto-xref">Definition&nbsp;17</a>) is <span class="math inline">\(\mathbb{N}\)</span>. Its graph (<a href="#/def-graph" class="quarto-xref">Definition&nbsp;18</a>) is the set of six pairs</p>
+<p><span class="math display">\[
+{\mathopen{}\left\{(\text{if}, 2), (\text{let}, 3), (\text{cond}, 4), (\text{list}, 4), (\text{cons}, 4), (\text{define}, 6)\right\}\mathclose{}},
+\]</span></p>
+<p>a subset of <span class="math inline">\(K \times \mathbb{N}\)</span>, and so a relation from <span class="math inline">\(K\)</span> to <span class="math inline">\(\mathbb{N}\)</span> (<a href="#/def-binary-relation" class="quarto-xref">Definition&nbsp;1</a>). Each word appears as the first entry of exactly one pair.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-graph-words" class="proof remark">
+<p><span class="proof-title"><em>Remark 4</em> (Two uses of the word “graph”). </span>The graph of a function (<a href="#/def-graph" class="quarto-xref">Definition&nbsp;18</a>) is a set of ordered pairs: the relation that the function gives. The directed graph of a relation (<a href="#/def-relation-digraph" class="quarto-xref">Definition&nbsp;4</a>) is a drawing of a relation on a set, with points and arrows. The two share a word but are different things. For a function from a set to itself, the directed graph of its graph draws one arrow from each point.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-function-relation" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 7 (Functions are relations with one output per input)</strong></span> Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be sets, and let <span class="math inline">\(R\)</span> be a relation from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> (<a href="#/def-binary-relation" class="quarto-xref">Definition&nbsp;1</a>). Then <span class="math inline">\(R\)</span> is the graph (<a href="#/def-graph" class="quarto-xref">Definition&nbsp;18</a>) of a function <span class="math inline">\(f : A \to B\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function, map, mapping, transformation</a>) if and only if each <span class="math inline">\(a \in A\)</span> is related by <span class="math inline">\(R\)</span> to exactly one <span class="math inline">\(b \in B\)</span>. That function is then the only one whose graph is <span class="math inline">\(R\)</span>.</p>
+</div>
+</section>
+<section class="slide level2 scrollable">
+
+<div id="rem-function-as-set-of-pairs" class="proof remark">
+<p><span class="proof-title"><em>Remark 5</em> (What a function is fundamentally). </span><a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function, map, mapping, transformation</a> defines what a function <em>does</em>: it assigns an output to each input. In formal set theory, what a function <em>is</em> is described in terms of <a href="../chapters/sets.html#def-ordered-pair">ordered pairs</a> and its graph (<a href="#/def-graph" class="quarto-xref">Definition&nbsp;18</a>): the set of pairs <span class="math inline">\(G = {\mathopen{}\left\{(a, f(a)) : a \in A\right\}\mathclose{}} \subseteq A \times B\)</span>. Authors define a function formally in one of two ways:</p>
+<ol type="1">
+<li><strong>As its graph</strong> <span class="citation" data-cites="halmos1974naive">(<a href="#/references" role="doc-biblioref" onclick="">Halmos 1974, sec. 8</a>, p.&nbsp;30)</span>: a function is a subset of <span class="math inline">\(A \times B\)</span> containing exactly one pair <span class="math inline">\((a, b)\)</span> for each <span class="math inline">\(a \in A\)</span>, where <span class="math inline">\(b = f(a)\)</span>, and the statement <span class="math inline">\(f(a) = b\)</span> is notation for <span class="math inline">\((a, b) \in f\)</span>. Under this convention, the codomain <span class="math inline">\(B\)</span> is specified alongside the graph in the declaration <span class="math inline">\(f : A \to B\)</span>.</li>
+<li><strong>As a triple <span class="math inline">\((A, B, G)\)</span></strong>: the function consists of the domain <span class="math inline">\(A\)</span>, the codomain <span class="math inline">\(B\)</span>, and the graph <span class="math inline">\(G \subseteq A \times B\)</span>. This explicit packaging retains the codomain <span class="math inline">\(B\)</span> as part of the function itself, distinguishing functions that have the same graph but different codomains (such as a function mapping into <span class="math inline">\(\mathbb{R}\)</span> versus into integers).</li>
+</ol>
+<p>For example, the die-doubling function in <a href="https://morrison-lab.github.io/mds/functions.html#exm-function">Example: Doubling a die roll</a> has the graph of six ordered pairs <span class="math inline">\({\mathopen{}\left\{(1, 2), (2, 4), (3, 6), (4, 8), (5, 10), (6, 12)\right\}\mathclose{}}\)</span>.</p>
+<p>This distinction clarifies what a function is and is not:</p>
+<ul>
+<li><strong>Not an algebraic formula:</strong> A function is not fundamentally an equation or algebraic expression. While many functions are specified by a formula (such as <span class="math inline">\(f(x) = x^2\)</span>), many others cannot be written in closed form (such as empirical measurements or a lookup table), yet every function has a well-defined set of input-output pairs.</li>
+<li><strong>Not a curve:</strong> A curve or plot is a geometric visualization of a function whose domain and codomain are subsets of <span class="math inline">\(\mathbb{R}\)</span>, but functions can map between arbitrary sets (such as sets of words, matrices, or probability distributions).</li>
+<li><strong>Sets of pairs with unique first entries:</strong> Any subset of <span class="math inline">\(A \times B\)</span> in which no two distinct pairs share the same first element defines a function from the set of those first elements to <span class="math inline">\(B\)</span>.</li>
+</ul>
+<p>In computer science, viewing a function as a set of key-value pairs corresponds directly to a <strong>dictionary</strong>, <strong>lookup table</strong>, or <strong>hash map</strong>. Evaluating an expression computes outputs on demand; caching computed outputs <span class="math inline">\((a, f(a))\)</span> on demand to return on future calls without recomputing is known as <strong>memoization</strong>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-function-or-not" class="theorem example">
+<p><span class="theorem-title"><strong>Example 24 (Relations that are functions and relations that are not)</strong></span> &nbsp;</p>
+<ul>
+<li>The relation <span class="math inline">\(B\)</span> of <a href="#/exm-beats" class="quarto-xref">Example&nbsp;4</a> relates each element of <span class="math inline">\(G\)</span> to exactly one element, as <a href="#/sol-beats-one" class="quarto-xref">Solution&nbsp;8</a> found. By <a href="#/thm-function-relation" class="quarto-xref">Theorem&nbsp;7</a>, it is the graph of a function <span class="math inline">\(b : G \to G\)</span>, with <span class="math inline">\(b(\text{rock}) = \text{scissors}\)</span>, <span class="math inline">\(b(\text{scissors}) = \text{paper}\)</span> and <span class="math inline">\(b(\text{paper}) = \text{rock}\)</span>.</li>
+<li>The relation <span class="math inline">\(H\)</span> of <a href="#/exm-word-letters" class="quarto-xref">Example&nbsp;1</a> is not the graph of a function from <span class="math inline">\(W\)</span> to <span class="math inline">\(L\)</span>, since cat is related to two letters, c and t.</li>
+<li>The relation <span class="math inline">\(P\)</span> of <a href="#/exm-parent" class="quarto-xref">Example&nbsp;3</a> is not the graph of a function from <span class="math inline">\(F\)</span> to <span class="math inline">\(F\)</span>, for two reasons: Ada is related to two people, and Dev is related to none.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-racket-function" class="theorem example">
+<p><span class="theorem-title"><strong>Example 25 (Checking for one output per input in Racket)</strong></span> <code>(for/sum ([x L]) body)</code> evaluates <code>body</code> once for each element <code>x</code> of the list <code>L</code>, and returns the sum of the values. With a finite relation stored as a list of pairs, as in <a href="#/exr-racket-member" class="quarto-xref">Exercise&nbsp;4</a>, <code>count-outputs</code> uses it to count the pairs whose first entry is <code>a</code>, and <code>function?</code> uses <code>for/and</code> (<a href="#/exm-racket-properties" class="quarto-xref">Example&nbsp;13</a>) to check the condition of <a href="#/thm-function-relation" class="quarto-xref">Theorem&nbsp;7</a> for each element of the list <code>A</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb4-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>count-outputs R a<span class="op">)</span></span>
+<span id="cb4-2"><a aria-label="2"></a>  <span class="op">(</span>for/sum <span class="op">([</span>p R<span class="op">])</span></span>
+<span id="cb4-3"><a aria-label="3"></a>    <span class="op">(</span><span class="kw">if</span> <span class="op">(</span><span class="kw">equal?</span> <span class="op">(</span>first p<span class="op">)</span> a<span class="op">)</span> <span class="dv">1</span> <span class="dv">0</span><span class="op">)))</span></span>
+<span id="cb4-4"><a aria-label="4"></a></span>
+<span id="cb4-5"><a aria-label="5"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>function? A R<span class="op">)</span></span>
+<span id="cb4-6"><a aria-label="6"></a>  <span class="op">(</span>for/and <span class="op">([</span>a A<span class="op">])</span></span>
+<span id="cb4-7"><a aria-label="7"></a>    <span class="op">(=</span> <span class="op">(</span>count-outputs R a<span class="op">)</span> <span class="dv">1</span><span class="op">)))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>(function? (list 'rock 'paper 'scissors) beats)</code> returns <code>#t</code>, as <a href="#/exm-function-or-not" class="quarto-xref">Example&nbsp;24</a> found, since <code>(count-outputs beats a)</code> is 1 for each of the three elements.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-image" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 19 (Image)</strong></span> The <strong>image</strong> <span class="citation" data-cites="wikipedia_image_mathematics">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026n</a>)</span> of a <a href="https://morrison-lab.github.io/mds/functions.html#def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set of values that <span class="math inline">\(f\)</span> actually takes:</p>
+<p><span class="math display">\[f(A) \stackrel{\text{def}}{=}{\mathopen{}\left\{f(a) : a \in A\right\}\mathclose{}}\]</span></p>
+<p>For a single element <span class="math inline">\(a \in A\)</span>, the value <span class="math inline">\(f(a)\)</span> is also called the <strong>image of</strong> <span class="math inline">\(a\)</span> under <span class="math inline">\(f\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-domain-image" class="theorem example">
+<p><span class="theorem-title"><strong>Example 26 (The images of two functions)</strong></span> &nbsp;</p>
+<ul>
+<li>The function <span class="math inline">\(\operatorname{len}_K : K \to \mathbb{N}\)</span> of <a href="#/exm-graph-length" class="quarto-xref">Example&nbsp;23</a> has the image (<a href="#/def-image" class="quarto-xref">Definition&nbsp;19</a>) <span class="math inline">\(\operatorname{len}_K(K) = {\mathopen{}\left\{2, 3, 4, 6\right\}\mathclose{}}\)</span>, the lengths that occur. Most natural numbers, such as 1 and 5, are in its codomain (<a href="#/def-codomain" class="quarto-xref">Definition&nbsp;17</a>) <span class="math inline">\(\mathbb{N}\)</span> but not in its image.</li>
+<li>The function <span class="math inline">\(b : G \to G\)</span> of <a href="#/exm-function-or-not" class="quarto-xref">Example&nbsp;24</a> has domain (<a href="#/def-function-domain" class="quarto-xref">Definition&nbsp;16</a>) and codomain <span class="math inline">\(G\)</span>, and its image is all of <span class="math inline">\(G\)</span>, since each element of <span class="math inline">\(G\)</span> is beaten by some element.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-range" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 20 (Range)</strong></span> The word <strong>range</strong> of a <a href="https://morrison-lab.github.io/mds/functions.html#def-function">function</a> <span class="math inline">\(f : A \to B\)</span> has two conflicting meanings, and sources use one or the other:</p>
+<ul>
+<li>the <a href="#/def-image">image</a> of <span class="math inline">\(f\)</span>, the set <span class="math inline">\(f(A)\)</span> of values that <span class="math inline">\(f\)</span> actually takes;</li>
+<li>the <a href="#/def-codomain">codomain</a> of <span class="math inline">\(f\)</span>, the set <span class="math inline">\(B\)</span> that its values are required to lie in.</li>
+</ul>
+<p>To avoid the ambiguity, these notes write “image” or “codomain” instead, and recommend that you do too <span class="citation" data-cites="wikipedia_range_of_a_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026s</a>)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-dup-odd" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 9 (Writing a string twice)</strong></span> Let <span class="math inline">\({\mathopen{}\left\{0, 1\right\}\mathclose{}}^*\)</span> be the set of strings over the alphabet <span class="math inline">\({\mathopen{}\left\{0, 1\right\}\mathclose{}}\)</span> (<a href="../chapters/recursion.html#def-string">Definition: String</a>, <a href="../chapters/recursion.html#def-alphabet">Definition: Alphabet</a>), and let <span class="math inline">\(\operatorname{dup} : {\mathopen{}\left\{0, 1\right\}\mathclose{}}^* \to {\mathopen{}\left\{0, 1\right\}\mathclose{}}^*\)</span> write a string twice: <span class="math inline">\(\operatorname{dup}(s) = s s\)</span>, the string <span class="math inline">\(s\)</span> followed by <span class="math inline">\(s\)</span>. For example, <span class="math inline">\(\operatorname{dup}(01) = 0101\)</span>. Is there a string <span class="math inline">\(s \in {\mathopen{}\left\{0, 1\right\}\mathclose{}}^*\)</span> with <span class="math inline">\(\operatorname{dup}(s) = 010\)</span>?</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-dup-odd" class="proof solution">
+<p><span class="proof-title"><em>Solution 9</em>. </span>No. If <span class="math inline">\(s\)</span> has <span class="math inline">\(n\)</span> symbols, then <span class="math inline">\(\operatorname{dup}(s) = s s\)</span> has <span class="math inline">\(2n\)</span> symbols, an even number. The string <span class="math inline">\(010\)</span> has 3 symbols, an odd number, so it is not <span class="math inline">\(\operatorname{dup}(s)\)</span> for any <span class="math inline">\(s\)</span>. So <span class="math inline">\(010\)</span> is in the codomain <span class="math inline">\({\mathopen{}\left\{0, 1\right\}\mathclose{}}^*\)</span> of <span class="math inline">\(\operatorname{dup}\)</span> but not in its image (<a href="#/def-image" class="quarto-xref">Definition&nbsp;19</a>).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-injective" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 21 (Injective function (one-to-one function))</strong></span> A function <span class="math inline">\(f : A \to B\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function, map, mapping, transformation</a>) is <strong>injective</strong> <span class="citation" data-cites="wikipedia_injective_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026o</a>)</span> (also called <strong>one-to-one</strong>) if, for all <span class="math inline">\(a, a' \in A\)</span>, <span class="math inline">\(f(a) = f(a')\)</span> implies <span class="math inline">\(a = a'\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-injective-or-not" class="theorem example">
+<p><span class="theorem-title"><strong>Example 27 (Injective or not)</strong></span> By its contrapositive (<a href="../chapters/contrapositive-contradiction.html#def-contrapositive">Definition: Contrapositive</a>), a function is injective (<a href="#/def-injective" class="quarto-xref">Definition&nbsp;21</a>) exactly when different inputs always give different outputs.</p>
+<ul>
+<li>The function <span class="math inline">\(\operatorname{dup}\)</span> of <a href="#/exr-dup-odd" class="quarto-xref">Exercise&nbsp;9</a> is injective. Suppose <span class="math inline">\(\operatorname{dup}(s) = \operatorname{dup}(t)\)</span>, so <span class="math inline">\(s s = t t\)</span>. The two sides have the same length, so <span class="math inline">\(s\)</span> and <span class="math inline">\(t\)</span> have the same length <span class="math inline">\(n\)</span>, and the first <span class="math inline">\(n\)</span> symbols of each side are <span class="math inline">\(s\)</span> on the left and <span class="math inline">\(t\)</span> on the right. So <span class="math inline">\(s = t\)</span>.</li>
+<li>The function <span class="math inline">\(\operatorname{len}_K\)</span> of <a href="#/exm-graph-length" class="quarto-xref">Example&nbsp;23</a> is not injective, since <span class="math inline">\(\operatorname{len}_K(\text{cond}) = \operatorname{len}_K(\text{list}) = 4\)</span> but <span class="math inline">\(\text{cond} \ne \text{list}\)</span>.</li>
+<li>The function <span class="math inline">\(\operatorname{len} : {\mathopen{}\left\{0, 1\right\}\mathclose{}}^* \to \mathbb{N}\cup {\mathopen{}\left\{0\right\}\mathclose{}}\)</span> that gives the length of a string, its number of symbols, as for the length of a list (<a href="../chapters/recursion.html#def-list-length">Definition: Length of a list</a>), is not injective, since <span class="math inline">\(\operatorname{len}(01) = \operatorname{len}(10) = 2\)</span>.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-surjective" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 22 (Surjective function (onto function))</strong></span> A function <span class="math inline">\(f : A \to B\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function, map, mapping, transformation</a>) is <strong>surjective</strong> <span class="citation" data-cites="wikipedia_surjective_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026u</a>)</span> (also called <strong>onto</strong>) if, for every <span class="math inline">\(b \in B\)</span>, there is some <span class="math inline">\(a \in A\)</span> with <span class="math inline">\(f(a) = b\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-surjective-or-not" class="theorem example">
+<p><span class="theorem-title"><strong>Example 28 (Surjective or not)</strong></span> A function is surjective (<a href="#/def-surjective" class="quarto-xref">Definition&nbsp;22</a>) exactly when its image (<a href="#/def-image" class="quarto-xref">Definition&nbsp;19</a>) is its whole codomain (<a href="#/def-codomain" class="quarto-xref">Definition&nbsp;17</a>).</p>
+<ul>
+<li>The function <span class="math inline">\(\operatorname{len} : {\mathopen{}\left\{0, 1\right\}\mathclose{}}^* \to \mathbb{N}\cup {\mathopen{}\left\{0\right\}\mathclose{}}\)</span> of <a href="#/exm-injective-or-not" class="quarto-xref">Example&nbsp;27</a> is surjective: for each <span class="math inline">\(n \ge 0\)</span>, the string of <span class="math inline">\(n\)</span> zeros has length <span class="math inline">\(n\)</span>.</li>
+<li>The function <span class="math inline">\(\operatorname{dup}\)</span> of <a href="#/exr-dup-odd" class="quarto-xref">Exercise&nbsp;9</a> is not surjective, since <span class="math inline">\(010\)</span> is not in its image (<a href="#/sol-dup-odd" class="quarto-xref">Solution&nbsp;9</a>).</li>
+<li>The function <span class="math inline">\(\operatorname{len}_K\)</span> of <a href="#/exm-graph-length" class="quarto-xref">Example&nbsp;23</a> is not surjective, since no word of <span class="math inline">\(K\)</span> has length 5.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-bijective" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 23 (Bijective function (bijection))</strong></span> A function <span class="math inline">\(f : A \to B\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function, map, mapping, transformation</a>) is <strong>bijective</strong> <span class="citation" data-cites="wikipedia_bijection">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026b</a>)</span> (also called a <strong>bijection</strong>) if it is injective (<a href="#/def-injective" class="quarto-xref">Definition&nbsp;21</a>) and surjective (<a href="#/def-surjective" class="quarto-xref">Definition&nbsp;22</a>).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-bijective-or-not" class="theorem example">
+<p><span class="theorem-title"><strong>Example 29 (Bijective or not)</strong></span> &nbsp;</p>
+<ul>
+<li>Let <span class="math inline">\(\operatorname{flip} : {\mathopen{}\left\{0, 1\right\}\mathclose{}}^* \to {\mathopen{}\left\{0, 1\right\}\mathclose{}}^*\)</span> change every 0 of a string to 1 and every 1 to 0, so that <span class="math inline">\(\operatorname{flip}(0010) = 1101\)</span>. Flipping twice changes each symbol back, so <span class="math inline">\(\operatorname{flip}(\operatorname{flip}(s)) = s\)</span> for every <span class="math inline">\(s \in {\mathopen{}\left\{0, 1\right\}\mathclose{}}^*\)</span>. It follows that <span class="math inline">\(\operatorname{flip}\)</span> is bijective (<a href="#/def-bijective" class="quarto-xref">Definition&nbsp;23</a>). It is injective, since <span class="math inline">\(\operatorname{flip}(s) = \operatorname{flip}(t)\)</span> gives <span class="math inline">\(s = \operatorname{flip}(\operatorname{flip}(s)) = \operatorname{flip}(\operatorname{flip}(t)) = t\)</span>. It is surjective, since each <span class="math inline">\(s \in {\mathopen{}\left\{0, 1\right\}\mathclose{}}^*\)</span> is <span class="math inline">\(\operatorname{flip}(t)\)</span> for <span class="math inline">\(t = \operatorname{flip}(s)\)</span>.</li>
+<li>The function <span class="math inline">\(b : G \to G\)</span> of <a href="#/exm-function-or-not" class="quarto-xref">Example&nbsp;24</a> is bijective: its three values are the three different elements of <span class="math inline">\(G\)</span>.</li>
+<li>The functions <span class="math inline">\(\operatorname{dup}\)</span>, <span class="math inline">\(\operatorname{len}\)</span> and <span class="math inline">\(\operatorname{len}_K\)</span> of <a href="#/exm-injective-or-not" class="quarto-xref">Example&nbsp;27</a> are not bijective, since each fails to be injective or fails to be surjective.</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="sec-inverse-functions" class="title-slide slide level1 center" data-number="9">
+<h1><span class="header-section-number">9</span> Inverse functions and composition</h1>
+
+</section>
+<section class="slide level2">
+
+<div id="exr-flip-twice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 10 (Flipping twice)</strong></span> With <span class="math inline">\(\operatorname{flip}\)</span> as in <a href="#/exm-bijective-or-not" class="quarto-xref">Example&nbsp;29</a>, what is <span class="math inline">\(\operatorname{flip}(\operatorname{flip}(0110))\)</span>?</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-flip-twice" class="proof solution">
+<p><span class="proof-title"><em>Solution 10</em>. </span>First <span class="math inline">\(\operatorname{flip}(0110) = 1001\)</span>, and then <span class="math inline">\(\operatorname{flip}(1001) = 0110\)</span>. So flipping twice gives back the string we started with, <span class="math inline">\(0110\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-identity-function" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 24 (Identity function)</strong></span> The <strong>identity function</strong> on a set <span class="math inline">\(A\)</span> <span class="citation" data-cites="wikipedia_identity_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026m</a>)</span> is the function <span class="math inline">\(\operatorname{id}_A : A \to A\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function, map, mapping, transformation</a>) with <span class="math inline">\(\operatorname{id}_A(a) = a\)</span> for every <span class="math inline">\(a \in A\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-identity-function" class="theorem example">
+<p><span class="theorem-title"><strong>Example 30 (Identity functions)</strong></span> &nbsp;</p>
+<ul>
+<li>Flipping twice is the identity function (<a href="#/def-identity-function" class="quarto-xref">Definition&nbsp;24</a>) on <span class="math inline">\({\mathopen{}\left\{0, 1\right\}\mathclose{}}^*\)</span>: <span class="math inline">\(\operatorname{flip}(\operatorname{flip}(s)) = s\)</span> for every <span class="math inline">\(s \in {\mathopen{}\left\{0, 1\right\}\mathclose{}}^*\)</span>, as <a href="#/sol-flip-twice" class="quarto-xref">Solution&nbsp;10</a> found for <span class="math inline">\(s = 0110\)</span>.</li>
+<li>The graph (<a href="#/def-graph" class="quarto-xref">Definition&nbsp;18</a>) of <span class="math inline">\(\operatorname{id}_G\)</span> is the relation <span class="math inline">\(B^3\)</span> of <a href="#/exm-relation-power" class="quarto-xref">Example&nbsp;16</a>, which relates each element of <span class="math inline">\(G\)</span> to itself.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-inverse-function" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 25 (Inverse function)</strong></span> Let <span class="math inline">\(f : A \to B\)</span> be a <a href="https://morrison-lab.github.io/mds/functions.html#def-function">function</a>. A function <span class="math inline">\(g : B \to A\)</span> is the <strong>inverse function</strong> <span class="citation" data-cites="wikipedia_inverse_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026p</a>)</span> of <span class="math inline">\(f\)</span>, written <span class="math inline">\(f^{-1}\)</span>, if both</p>
+<ul>
+<li><span class="math inline">\(g(f(a)) = a\)</span> for every <span class="math inline">\(a \in A\)</span>, and</li>
+<li><span class="math inline">\(f(g(b)) = b\)</span> for every <span class="math inline">\(b \in B\)</span>.</li>
+</ul>
+<p>A function that has an inverse function is <strong>invertible</strong>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-inverse-not-reciprocal" class="proof remark">
+<p><span class="proof-title"><em>Remark 6</em> (<span class="math inline">\(f^{-1}\)</span> is not <span class="math inline">\(1/f\)</span>). </span>The <span class="math inline">\(-1\)</span> in <span class="math inline">\(f^{-1}\)</span> does not mean a reciprocal: <span class="math inline">\(f^{-1}(b)\)</span> is the input that <span class="math inline">\(f\)</span> maps to <span class="math inline">\(b\)</span>, not <span class="math inline">\(\frac{1}{f(b)}\)</span>. For example, with <span class="math inline">\(f(x) = 2x\)</span> on <span class="math inline">\(\mathbb{R}\)</span>, <span class="math inline">\(f^{-1}(4) = 2\)</span>, but <span class="math inline">\(\frac{1}{f(4)} = \frac{1}{8}\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-inverse-strings" class="theorem example">
+<p><span class="theorem-title"><strong>Example 31 (Inverse functions of strings and games)</strong></span> &nbsp;</p>
+<ul>
+<li><span class="math inline">\(\operatorname{flip}\)</span> is its own inverse function (<a href="#/def-inverse-function" class="quarto-xref">Definition&nbsp;25</a>), <span class="math inline">\(\operatorname{flip}^{-1} = \operatorname{flip}\)</span>, since <span class="math inline">\(\operatorname{flip}(\operatorname{flip}(s)) = s\)</span> for every <span class="math inline">\(s \in {\mathopen{}\left\{0, 1\right\}\mathclose{}}^*\)</span> (<a href="#/exm-identity-function" class="quarto-xref">Example&nbsp;30</a>).</li>
+<li>The function <span class="math inline">\(b : G \to G\)</span> of <a href="#/exm-function-or-not" class="quarto-xref">Example&nbsp;24</a> has the inverse function “the element that beats <span class="math inline">\(a\)</span>”, with <span class="math inline">\(b^{-1}(\text{scissors}) = \text{rock}\)</span>, <span class="math inline">\(b^{-1}(\text{paper}) = \text{scissors}\)</span> and <span class="math inline">\(b^{-1}(\text{rock}) = \text{paper}\)</span>. Its graph is the inverse relation <span class="math inline">\(B^{-1}\)</span> of <a href="#/exm-inverse-relation" class="quarto-xref">Example&nbsp;14</a>.</li>
+<li>The function <span class="math inline">\(\operatorname{len}_K\)</span> of <a href="#/exm-graph-length" class="quarto-xref">Example&nbsp;23</a> has no inverse function, since an inverse <span class="math inline">\(g\)</span> would need <span class="math inline">\(g(4)\)</span> to be cond, list and cons at once.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-inverse-bijective" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 8 (A function has an inverse exactly when it is a bijection)</strong></span> A function <span class="math inline">\(f : A \to B\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function, map, mapping, transformation</a>) has an inverse function (<a href="#/def-inverse-function" class="quarto-xref">Definition&nbsp;25</a>) if and only if <span class="math inline">\(f\)</span> is bijective (<a href="#/def-bijective" class="quarto-xref">Definition&nbsp;23</a>). The graph (<a href="#/def-graph" class="quarto-xref">Definition&nbsp;18</a>) of the inverse function is then the inverse relation (<a href="#/def-inverse-relation" class="quarto-xref">Definition&nbsp;10</a>) of the graph of <span class="math inline">\(f\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-composition" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 26 (Composition)</strong></span> Let <span class="math inline">\(g : A \to B\)</span> and <span class="math inline">\(f : B \to C\)</span> be <a href="https://morrison-lab.github.io/mds/functions.html#def-function">functions</a>. The <strong>composition</strong> <span class="citation" data-cites="wikipedia_function_composition">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026k</a>)</span> of <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> is the function <span class="math inline">\(f \circ g : A \to C\)</span> defined by</p>
+<p><span class="math display">\[(f \circ g)(a) \stackrel{\text{def}}{=}f(g(a)) \quad \text{for each } a \in A.\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-inner-function" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 27 (Inner function)</strong></span> In a composition <span class="math inline">\(f \circ g\)</span> (<a href="#/def-composition" class="quarto-xref">Definition&nbsp;26</a>), <span class="math inline">\(g\)</span> is the <strong>inner function</strong>, applied first.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-outer-function" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 28 (Outer function)</strong></span> In a composition <span class="math inline">\(f \circ g\)</span> (<a href="#/def-composition" class="quarto-xref">Definition&nbsp;26</a>), <span class="math inline">\(f\)</span> is the <strong>outer function</strong>, applied to the result.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-composition-graph" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 9 (The graph of a composition is a composition of graphs)</strong></span> Let <span class="math inline">\(g : A \to B\)</span> and <span class="math inline">\(f : B \to C\)</span> be functions (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function, map, mapping, transformation</a>), and write <span class="math inline">\(\Gamma_f\)</span> for the graph (<a href="#/def-graph" class="quarto-xref">Definition&nbsp;18</a>) of <span class="math inline">\(f\)</span>. Then the graph of the composition <span class="math inline">\(f \circ g\)</span> (<a href="#/def-composition" class="quarto-xref">Definition&nbsp;26</a>) is the composition of relations (<a href="#/def-relation-composition" class="quarto-xref">Definition&nbsp;11</a>)</p>
+<p><span class="math display">\[
+\Gamma_{f \circ g} = \Gamma_f \circ \Gamma_g.
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-function-composition" class="theorem example">
+<p><span class="theorem-title"><strong>Example 32 (Composing functions of strings and games)</strong></span> &nbsp;</p>
+<ul>
+<li><p>Let <span class="math inline">\(\operatorname{pad} : {\mathopen{}\left\{0, 1\right\}\mathclose{}}^* \to {\mathopen{}\left\{0, 1\right\}\mathclose{}}^*\)</span> put a 0 at the end of a string, so <span class="math inline">\(\operatorname{pad}(s) = s 0\)</span>, the string <span class="math inline">\(s\)</span> followed by <span class="math inline">\(0\)</span>. The order of a composition (<a href="#/def-composition" class="quarto-xref">Definition&nbsp;26</a>) matters:</p>
+<p><span class="math display">\[
+\begin{aligned}
+(\operatorname{flip} \circ \operatorname{pad})(1) &amp;= \operatorname{flip}(10) = 01,
+\\
+(\operatorname{pad} \circ \operatorname{flip})(1) &amp;= \operatorname{pad}(0) = 00.
+\end{aligned}
+\]</span></p></li>
+<li><p><span class="math inline">\(\operatorname{len}(\operatorname{dup}(s)) = 2 \operatorname{len}(s)\)</span> for every <span class="math inline">\(s \in {\mathopen{}\left\{0, 1\right\}\mathclose{}}^*\)</span>, so <span class="math inline">\(\operatorname{len} \circ \operatorname{dup}\)</span> doubles the length of a string.</p></li>
+<li><p>The graph of <span class="math inline">\(b\)</span> is <span class="math inline">\(B\)</span>, so by <a href="#/thm-composition-graph" class="quarto-xref">Theorem&nbsp;9</a> the graph of <span class="math inline">\(b \circ b\)</span> is <span class="math inline">\(B \circ B = B^2\)</span>, which is <span class="math inline">\(B^{-1}\)</span> by <a href="#/exm-relation-power" class="quarto-xref">Example&nbsp;16</a>. By <a href="#/thm-inverse-bijective" class="quarto-xref">Theorem&nbsp;8</a>, <span class="math inline">\(B^{-1}\)</span> is also the graph of <span class="math inline">\(b^{-1}\)</span>, and by <a href="#/thm-function-relation" class="quarto-xref">Theorem&nbsp;7</a> only one function has that graph, so <span class="math inline">\(b \circ b = b^{-1}\)</span>, the inverse function of <a href="#/exm-inverse-strings" class="quarto-xref">Example&nbsp;31</a>: the element that <span class="math inline">\(a\)</span>’s victim beats is the element that beats <span class="math inline">\(a\)</span>.</p></li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="references" class="title-slide slide level1 unnumbered center">
+<h1>References</h1>
+
+</section>
+<section class="slide level2 smaller scrollable" id="references">
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-halmos1974naive" class="csl-entry" role="listitem">
+Halmos, Paul R. 1974. <em>Naive Set Theory</em>. Undergraduate Texts in Mathematics. Springer. <a href="https://doi.org/10.1007/978-1-4757-1645-0">https://doi.org/10.1007/978-1-4757-1645-0</a>.
+</div>
+<div id="ref-wikipedia_antisymmetric_relation" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026a. <em>Antisymmetric Relation — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Antisymmetric_relation">https://en.wikipedia.org/wiki/Antisymmetric_relation</a>.
+</div>
+<div id="ref-wikipedia_bijection" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026b. <em>Bijection — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Bijection">https://en.wikipedia.org/wiki/Bijection</a>.
+</div>
+<div id="ref-wikipedia_binary_relation" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026c. <em>Binary Relation — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Binary_relation">https://en.wikipedia.org/wiki/Binary_relation</a>.
+</div>
+<div id="ref-wikipedia_codomain" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026d. <em>Codomain — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Codomain">https://en.wikipedia.org/wiki/Codomain</a>.
+</div>
+<div id="ref-wikipedia_composition_of_relations" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026e. <em>Composition of Relations — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Composition_of_relations">https://en.wikipedia.org/wiki/Composition_of_relations</a>.
+</div>
+<div id="ref-wikipedia_converse_relation" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026f. <em>Converse Relation — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Converse_relation">https://en.wikipedia.org/wiki/Converse_relation</a>.
+</div>
+<div id="ref-wikipedia_directed_graph" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026g. <em>Directed Graph — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Directed_graph">https://en.wikipedia.org/wiki/Directed_graph</a>.
+</div>
+<div id="ref-wikipedia_domain_of_a_function" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026h. <em>Domain of a Function — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Domain_of_a_function">https://en.wikipedia.org/wiki/Domain_of_a_function</a>.
+</div>
+<div id="ref-wikipedia_equivalence_class" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026i. <em>Equivalence Class — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Equivalence_class">https://en.wikipedia.org/wiki/Equivalence_class</a>.
+</div>
+<div id="ref-wikipedia_equivalence_relation" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026j. <em>Equivalence Relation — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Equivalence_relation">https://en.wikipedia.org/wiki/Equivalence_relation</a>.
+</div>
+<div id="ref-wikipedia_function_composition" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026k. <em>Function Composition — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Function_composition">https://en.wikipedia.org/wiki/Function_composition</a>.
+</div>
+<div id="ref-wikipedia_graph_of_a_function" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026l. <em>Graph of a Function — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Graph_of_a_function">https://en.wikipedia.org/wiki/Graph_of_a_function</a>.
+</div>
+<div id="ref-wikipedia_identity_function" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026m. <em>Identity Function — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Identity_function">https://en.wikipedia.org/wiki/Identity_function</a>.
+</div>
+<div id="ref-wikipedia_image_mathematics" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026n. <em>Image (Mathematics) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Image_(mathematics)">https://en.wikipedia.org/wiki/Image_(mathematics)</a>.
+</div>
+<div id="ref-wikipedia_injective_function" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026o. <em>Injective Function — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Injective_function">https://en.wikipedia.org/wiki/Injective_function</a>.
+</div>
+<div id="ref-wikipedia_inverse_function" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026p. <em>Inverse Function — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Inverse_function">https://en.wikipedia.org/wiki/Inverse_function</a>.
+</div>
+<div id="ref-wikipedia_logical_matrix" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026q. <em>Logical Matrix — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Logical_matrix">https://en.wikipedia.org/wiki/Logical_matrix</a>.
+</div>
+<div id="ref-wikipedia_partition_of_a_set" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026r. <em>Partition of a Set — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Partition_of_a_set">https://en.wikipedia.org/wiki/Partition_of_a_set</a>.
+</div>
+<div id="ref-wikipedia_range_of_a_function" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026s. <em>Range of a Function — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Range_of_a_function">https://en.wikipedia.org/wiki/Range_of_a_function</a>.
+</div>
+<div id="ref-wikipedia_reflexive_relation" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026t. <em>Reflexive Relation — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Reflexive_relation">https://en.wikipedia.org/wiki/Reflexive_relation</a>.
+</div>
+<div id="ref-wikipedia_surjective_function" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026u. <em>Surjective Function — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Surjective_function">https://en.wikipedia.org/wiki/Surjective_function</a>.
+</div>
+<div id="ref-wikipedia_symmetric_relation" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026v. <em>Symmetric Relation — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Symmetric_relation">https://en.wikipedia.org/wiki/Symmetric_relation</a>.
+</div>
+<div id="ref-wikipedia_transitive_relation" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026w. <em>Transitive Relation — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Transitive_relation">https://en.wikipedia.org/wiki/Transitive_relation</a>.
+</div>
+</div>
+
+
+<script>
+const defaultAnchorIconFallback = "#";
+
+function getDefaultAnchorTemplate() {
+  const defaultAnchor = document.querySelector("a.anchorjs-link[data-anchorjs-icon]");
+  if (!defaultAnchor) {
+    return null;
+  }
+
+  return {
+    icon: defaultAnchor.getAttribute("data-anchorjs-icon"),
+    style: defaultAnchor.getAttribute("style")
+  };
+}
+
+function alignEquationAnchorWithDefault(anchor, template) {
+  if (!anchor) {
+    return;
+  }
+
+  anchor.classList.remove("external");
+
+  if (template && template.icon) {
+    anchor.setAttribute("data-anchorjs-icon", template.icon);
+    anchor.textContent = "";
+  } else if (!anchor.textContent) {
+    anchor.textContent = defaultAnchorIconFallback;
+  }
+
+  if (template && template.style) {
+    anchor.setAttribute("style", template.style);
+  } else {
+    anchor.removeAttribute("style");
+  }
+}
+
+function alignEquationAnchorsWithDefault() {
+  const template = getDefaultAnchorTemplate();
+  document.querySelectorAll("a.equation-anchor").forEach(function (anchor) {
+    alignEquationAnchorWithDefault(anchor, template);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const equations = document.querySelectorAll("span[id^='eq-']");
+  equations.forEach(function (equation) {
+    if (equation.querySelector(".equation-anchor")) {
+      return;
+    }
+
+    if (!equation.querySelector(".math.display")) {
+      return;
+    }
+
+    const id = equation.getAttribute("id");
+    if (!id) {
+      return;
+    }
+
+    equation.classList.add("equation-anchor-target");
+
+    const anchor = document.createElement("a");
+    anchor.className = "equation-anchor anchorjs-link";
+    anchor.href = "#" + id;
+    anchor.setAttribute("aria-label", "Permalink to this equation");
+    equation.appendChild(anchor);
+  });
+
+  alignEquationAnchorsWithDefault();
+});
+
+window.addEventListener("load", alignEquationAnchorsWithDefault);
+</script>
+
+<script>
+(function () {
+  var css = [
+    "#revealjs-html-link {",
+    "  position: fixed;",
+    "  top: 8px;",
+    "  right: 8px;",
+    "  z-index: 31;",
+    "  font-size: 0.55em;",
+    "  line-height: 1;",
+    "}",
+    "#revealjs-html-link a {",
+    "  color: var(--qwt-muted, rgba(0, 0, 0, 0.5));",
+    "  text-decoration: none;",
+    "  border: 1px solid var(--qwt-border, rgba(0, 0, 0, 0.2));",
+    "  padding: 4px 8px;",
+    "  border-radius: 4px;",
+    "  background: var(--qwt-chip-bg, rgba(255, 255, 255, 0.8));",
+    "  transition: color 0.15s, background 0.15s, border-color 0.15s;",
+    "}",
+    "#revealjs-html-link a:hover {",
+    "  color: var(--qwt-fg, rgba(0, 0, 0, 0.9));",
+    "  background: var(--qwt-chip-bg-hover, rgba(255, 255, 255, 0.98));",
+    "  border-color: var(--qwt-fg, rgba(0, 0, 0, 0.4));",
+    "}"
+  ].join("\n");
+
+  function getHtmlBase() {
+    var url = window.location.href.split("#")[0];
+    return url.replace(/-slides\.html$/, ".html");
+  }
+
+  function getCurrentSectionId() {
+    if (typeof Reveal === "undefined" || !Reveal.getCurrentSlide) {
+      return null;
+    }
+    var slide = Reveal.getCurrentSlide();
+    if (!slide) {
+      return null;
+    }
+    // If the current slide itself has an id, use it
+    if (slide.id) {
+      return slide.id;
+    }
+    // Walk backwards through sibling sections to find the nearest one with an id
+    var sibling = slide.previousElementSibling;
+    while (sibling) {
+      if (sibling.tagName === "SECTION" && sibling.id) {
+        return sibling.id;
+      }
+      sibling = sibling.previousElementSibling;
+    }
+    // Fall back to the first section[id] inside the parent container
+    var parent = slide.parentElement;
+    if (parent && parent.tagName === "SECTION") {
+      var firstNamed = parent.querySelector("section[id]");
+      if (firstNamed) {
+        return firstNamed.id;
+      }
+    }
+    return null;
+  }
+
+  function updateHtmlLink() {
+    var anchor = document.getElementById("revealjs-html-anchor");
+    if (!anchor) {
+      return;
+    }
+    var sectionId = getCurrentSectionId();
+    anchor.href = getHtmlBase() + (sectionId ? "#" + sectionId : "");
+  }
+
+  function initRevealJsHtmlLink() {
+    var htmlBase = getHtmlBase();
+
+    // Don't add the link if the URL doesn't follow the -slides.html convention
+    if (htmlBase === window.location.href.split("#")[0]) {
+      return;
+    }
+
+    // Inject styles
+    var styleElement = document.createElement("style");
+    styleElement.textContent = css;
+    document.head.appendChild(styleElement);
+
+    // Create the link element and append it directly to body so it stays
+    // visible across all slides regardless of Reveal.js section visibility
+    var div = document.createElement("div");
+    div.id = "revealjs-html-link";
+    var anchor = document.createElement("a");
+    anchor.id = "revealjs-html-anchor";
+    anchor.href = htmlBase;
+    anchor.target = "_blank";
+    anchor.title = "View this section in the HTML notes";
+    anchor.setAttribute("aria-label", "View this section in the HTML notes");
+    anchor.innerHTML = "&#128196;&nbsp;Webpage version";
+    div.appendChild(anchor);
+    document.body.appendChild(div);
+
+    // Register Reveal.js slide-change listener to keep the link updated
+    if (typeof Reveal !== "undefined") {
+      Reveal.on("ready", updateHtmlLink);
+      Reveal.on("slidechanged", updateHtmlLink);
+    }
+
+    updateHtmlLink();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initRevealJsHtmlLink);
+  } else {
+    initRevealJsHtmlLink();
+  }
+})();
+</script>
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/morrison-lab\.github\.io\/mcs\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
+    
+
+</body></html>
