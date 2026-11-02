@@ -6,6 +6,8 @@ The notes adapt Kameron Decker Harris's Fall 2026 lecture notes for the course;
 each chapter's Source note says what it draws on.
 
 The notes are published as a Quarto website at <https://morrison-lab.github.io/mcs/>.
+This repository is public, under the licenses in [`LICENSE.md`](LICENSE.md):
+CC BY 4.0 for the notes and MIT for the code.
 The site links prerequisite definitions in [Morrison-Lab/mds](https://github.com/Morrison-Lab/mds).
 
 Built from the [Morrison-Lab/qwt](https://github.com/Morrison-Lab/qwt) template.
