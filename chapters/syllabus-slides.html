@@ -34,7 +34,26 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-2f864dea3a88ad6a30a035ab8c618cbd.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -246,7 +265,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-02 10:44:41 (PST)</p>
+  <p class="date">Last modified: 2026-11-02 14:59:27 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -405,6 +424,25 @@ Communication Facility 463
 <ul>
 <li><em>Discrete Mathematics and Its Applications</em>, by Kenneth Rosen; any recent edition.</li>
 <li><em>Building Blocks for Theoretical Computer Science</em>, by Margaret Fleck, which can be read at no cost on <a href="https://mfleck.cs.illinois.edu/building-blocks/index-sp2020.html">the author’s webpage</a>.</li>
+</ul>
+</section>
+<section id="similar-courses" class="slide level2 unnumbered">
+<h2>Similar Courses</h2>
+</section>
+<section class="slide level2">
+
+<p>Other universities teach courses much like this one, and many post their materials at no cost. They are a good place to see a topic explained a second way.</p>
+<p>Discrete mathematics and proofs:</p>
+<ul>
+<li>MIT’s <a href="https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/">6.042J <em>Mathematics for Computer Science</em></a> (Spring 2015, on MIT OpenCourseWare), with recorded lectures, readings and problem sets.</li>
+<li>Stanford’s <a href="https://web.stanford.edu/class/cs103/">CS 103 <em>Mathematical Foundations of Computing</em></a>, with lecture slides and problem sets.</li>
+<li>The University of Washington’s <a href="https://courses.cs.washington.edu/courses/cse311/">CSE 311 <em>Foundations of Computing I</em></a>, with lecture slides and homework from past quarters.</li>
+</ul>
+<p>Functional programming:</p>
+<ul>
+<li>Stanford’s <a href="https://see.stanford.edu/Course/CS107">CS 107 <em>Programming Paradigms</em></a> (Spring 2008, on Stanford Engineering Everywhere), whose recorded lectures 19 to 23 and handouts introduce Scheme, Racket’s parent language.</li>
+<li>Stanford’s <a href="https://stanford-cs242.github.io/f19/">CS 242 <em>Programming Languages</em></a> (Fall 2019), with lecture notes on the lambda calculus and functional programming.</li>
+<li>Stanford’s <a href="https://web.stanford.edu/class/cs99/">CS 99 <em>Functional Programming and Theorem Proving in Lean 4</em></a>, which carries functional programming over to writing proofs.</li>
 </ul>
 </section>
 <section id="materials" class="slide level2 unnumbered">
@@ -689,6 +727,40 @@ Communication Facility 463
 
 <p>As a future professional, your integrity is crucial. It is your responsibility to read and be familiar with the university’s academic honesty policy, found in <a href="https://catalog.wwu.edu/content.php?catoid=19&amp;navoid=5073">Appendix D</a> of the Western Washington University Course Catalog; <a href="https://academichonesty.wwu.edu/">Academic Honesty Resources for Students</a> explains the procedures and the appeal process. Cheating on an exam will result in failing the course (grade of F), and I will file documentation of the incident with the university. All cases of academic dishonesty will be reported. When in doubt, ask me.</p>
 </section>
+<section id="computer-labs" class="slide level2 unnumbered">
+<h2>Computer Labs</h2>
+</section>
+<section class="slide level2">
+
+<p>Each section’s weekly lab meets in a department computer lab (see <a href="#/sections">Sections</a>). Outside your lab time, you should be able to use any of the department’s open labs, most of which run the Linux operating system. Racket is free, so you can also install it on your own computer (see <a href="#/software">Software</a>).</p>
+</section>
+<section id="writing-to-think" class="slide level2 unnumbered">
+<h2>Writing to Think</h2>
+</section>
+<section class="slide level2">
+
+<p>When you are stuck in this course, try putting your question into words in writing. Write it in full sentences, with the definitions, proof steps or code you used and what you have already tried.</p>
+<p>The habit pays off in two ways. A written question can be posted on Canvas Discussions (see <a href="#/communication">Communication</a>) so I and others can help. Writing your thoughts down also helps clarify your question, and that sometimes answers it. In an interview on the <em>5 Minute Mentor</em> podcast, <a href="https://en.wikipedia.org/wiki/Leslie_Lamport">Leslie Lamport</a> says:</p>
+<blockquote>
+<p>As someone said, “Writing is nature’s way of showing you how fuzzy your thinking is.” If you think you understand something, and don’t write down your ideas, you only think you’re thinking.</p>
+<p>— Leslie Lamport <span class="citation" data-cites="lamport2019think">(<a href="#/references" role="doc-biblioref" onclick="">Lamport 2019</a>)</span></p>
+</blockquote>
+<p>The same holds for proofs, which are the writing this course asks of you most.</p>
+</section>
+<section id="library-writing-resources" class="slide level2 unnumbered">
+<h2>Library Writing Resources</h2>
+</section>
+<section class="slide level2">
+
+<p>The Hacherl Research &amp; Writing Studio supports almost anything that involves words: group projects, essays, posters, podcasts, lab reports, applications, grad theses and more. You can work with them just like an open art studio or lab space, where you get work done with feedback along the way. Drop into the Studio on the second level of Haggard Hall or use their online chat to:</p>
+<ul>
+<li>stay focused and get things done;</li>
+<li>discuss ideas with someone;</li>
+<li>share something you’re making;</li>
+<li>ask for tips any time you have difficulty.</li>
+</ul>
+<p>See <a href="https://library.wwu.edu/rws" class="uri">https://library.wwu.edu/rws</a> for details.</p>
+</section>
 <section id="student-conduct" class="slide level2 unnumbered">
 <h2>Student Conduct</h2>
 </section>
@@ -724,12 +796,33 @@ Communication Facility 463
 <li>To seek confidential support related to sexual violence, please contact CASAS (360-650-3700), the Student Health Center, and/or the Counseling and Wellness Center. To report sexual violence, please contact University Police, Bellingham Police, and/or the Title IX Coordinator in Western’s <a href="https://crtc.wwu.edu/">Civil Rights and Title IX Compliance</a> office (360-650-3307). Faculty are responsible employees who are required to report sex discrimination, including sexual violence that they learn about, to the Title IX Coordinator.</li>
 </ul>
 </section>
+<section id="career-advising" class="slide level2 unnumbered">
+<h2>Career Advising</h2>
+</section>
+<section class="slide level2">
+
+<p>I am glad to meet with you to discuss your short-, medium-, and long-term career goals. <a href="https://aacr.wwu.edu/">Academic Advising &amp; Career Readiness</a> is also available for help with academic planning or your career, such as finding jobs and internships or getting feedback on your resume.</p>
+</section>
 <section id="other-policies" class="slide level2 unnumbered">
 <h2>Other Policies</h2>
 </section>
 <section class="slide level2">
 
 <p>Please read <a href="https://syllabi.wwu.edu/">Syllabi@WWU</a> for additional, important policies, including accommodations, equal opportunity, the medical excuse policy, ethical use of WWU computing resources, and the student conduct code.</p>
+</section>
+<section id="start-of-quarter-survey" class="slide level2 unnumbered">
+<h2>Start-of-Quarter Survey</h2>
+</section>
+<section class="slide level2">
+
+<p>Please fill out the anonymous start-of-quarter survey before class on Friday, January 8. The link is <strong>TBD</strong>, and will be posted on Canvas. Every question is optional. A few more optional questions need your name, so they are not on the form; answer them in a Canvas message to me instead.</p>
+</section>
+<section id="anonymous-feedback" class="slide level2 unnumbered">
+<h2>Anonymous Feedback</h2>
+</section>
+<section class="slide level2 smaller scrollable" id="references">
+
+<p>Unlike the start-of-quarter survey, the anonymous feedback form (link <strong>TBD</strong>, to be posted on Canvas) stays open all quarter, so you can use it at any time. Tell me what is working, what is not, and how I could improve the course. I read every response.</p>
 <!--
 Outtakes from Kameron Decker Harris's Fall 2026 CSCI 201 syllabus,
 not adopted here; restore by moving the text above into a section.
@@ -942,6 +1035,11 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 })();
 </script>
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-lamport2019think" class="csl-entry" role="listitem">
+Lamport, Leslie. 2019. <em>Think and Write, with <span>Leslie Lamport</span></em>. Interview by Edaena Salinas, 5 Minute Mentor podcast (Mentors.fm). <a href="https://mentors.fm/2019/08/13/think-and-write-with-leslie-lamport/">https://mentors.fm/2019/08/13/think-and-write-with-leslie-lamport/</a>.
+</div>
+</div>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">

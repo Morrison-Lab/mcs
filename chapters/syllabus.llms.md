@@ -6,7 +6,7 @@ Winter 2027
 
 Published
 
-Last modified: 2026-11-02 10:44:41 (PST)
+Last modified: 2026-11-02 14:59:27 (PST)
 
 > **NOTE:**
 >
@@ -95,6 +95,22 @@ Other useful references:
 
 - *Discrete Mathematics and Its Applications*, by Kenneth Rosen; any recent edition.
 - *Building Blocks for Theoretical Computer Science*, by Margaret Fleck, which can be read at no cost on [the author’s webpage](https://mfleck.cs.illinois.edu/building-blocks/index-sp2020.html).
+
+## Similar Courses
+
+Other universities teach courses much like this one, and many post their materials at no cost. They are a good place to see a topic explained a second way.
+
+Discrete mathematics and proofs:
+
+- MIT’s [6.042J *Mathematics for Computer Science*](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/) (Spring 2015, on MIT OpenCourseWare), with recorded lectures, readings and problem sets.
+- Stanford’s [CS 103 *Mathematical Foundations of Computing*](https://web.stanford.edu/class/cs103/), with lecture slides and problem sets.
+- The University of Washington’s [CSE 311 *Foundations of Computing I*](https://courses.cs.washington.edu/courses/cse311/), with lecture slides and homework from past quarters.
+
+Functional programming:
+
+- Stanford’s [CS 107 *Programming Paradigms*](https://see.stanford.edu/Course/CS107) (Spring 2008, on Stanford Engineering Everywhere), whose recorded lectures 19 to 23 and handouts introduce Scheme, Racket’s parent language.
+- Stanford’s [CS 242 *Programming Languages*](https://stanford-cs242.github.io/f19/) (Fall 2019), with lecture notes on the lambda calculus and functional programming.
+- Stanford’s [CS 99 *Functional Programming and Theorem Proving in Lean 4*](https://web.stanford.edu/class/cs99/), which carries functional programming over to writing proofs.
 
 ## Materials
 
@@ -242,6 +258,33 @@ Please talk to me *in advance* if you need an accommodation or an extension; the
 
 As a future professional, your integrity is crucial. It is your responsibility to read and be familiar with the university’s academic honesty policy, found in [Appendix D](https://catalog.wwu.edu/content.php?catoid=19&navoid=5073) of the Western Washington University Course Catalog; [Academic Honesty Resources for Students](https://academichonesty.wwu.edu/) explains the procedures and the appeal process. Cheating on an exam will result in failing the course (grade of F), and I will file documentation of the incident with the university. All cases of academic dishonesty will be reported. When in doubt, ask me.
 
+## Computer Labs
+
+Each section’s weekly lab meets in a department computer lab (see [Sections](#sections)). Outside your lab time, you should be able to use any of the department’s open labs, most of which run the Linux operating system. Racket is free, so you can also install it on your own computer (see [Software](#software)).
+
+## Writing to Think
+
+When you are stuck in this course, try putting your question into words in writing. Write it in full sentences, with the definitions, proof steps or code you used and what you have already tried.
+
+The habit pays off in two ways. A written question can be posted on Canvas Discussions (see [Communication](#communication)) so I and others can help. Writing your thoughts down also helps clarify your question, and that sometimes answers it. In an interview on the *5 Minute Mentor* podcast, [Leslie Lamport](https://en.wikipedia.org/wiki/Leslie_Lamport) says:
+
+> As someone said, “Writing is nature’s way of showing you how fuzzy your thinking is.” If you think you understand something, and don’t write down your ideas, you only think you’re thinking.
+>
+> — Leslie Lamport ([Lamport 2019](#ref-lamport2019think))
+
+The same holds for proofs, which are the writing this course asks of you most.
+
+## Library Writing Resources
+
+The Hacherl Research & Writing Studio supports almost anything that involves words: group projects, essays, posters, podcasts, lab reports, applications, grad theses and more. You can work with them just like an open art studio or lab space, where you get work done with feedback along the way. Drop into the Studio on the second level of Haggard Hall or use their online chat to:
+
+- stay focused and get things done;
+- discuss ideas with someone;
+- share something you’re making;
+- ask for tips any time you have difficulty.
+
+See <https://library.wwu.edu/rws> for details.
+
 ## Student Conduct
 
 I am committed to maintaining an inclusive, supportive, and professional environment in all academic settings, including lectures, labs, and course-related online spaces. I expect students to live up to the [Association for Computing Machinery (ACM) Code of Ethics and Professional Conduct](https://www.acm.org/code-of-ethics), the ethical code adopted by nearly every software professional. A pattern of failing to follow the ACM Code of Ethics and Professional Conduct can negatively affect course grades, up to and including a failing grade for the course. Conduct is also considered when determining admission to the major.
@@ -264,8 +307,24 @@ Western encourages students to seek assistance and support at the onset of an il
 - In the case of a family or personal crisis or emergency, please contact the [Dean of Students](https://www.wwu.edu/dean-students).
 - To seek confidential support related to sexual violence, please contact CASAS (360-650-3700), the Student Health Center, and/or the Counseling and Wellness Center. To report sexual violence, please contact University Police, Bellingham Police, and/or the Title IX Coordinator in Western’s [Civil Rights and Title IX Compliance](https://crtc.wwu.edu/) office (360-650-3307). Faculty are responsible employees who are required to report sex discrimination, including sexual violence that they learn about, to the Title IX Coordinator.
 
+## Career Advising
+
+I am glad to meet with you to discuss your short-, medium-, and long-term career goals. [Academic Advising & Career Readiness](https://aacr.wwu.edu/) is also available for help with academic planning or your career, such as finding jobs and internships or getting feedback on your resume.
+
 ## Other Policies
 
 Please read [Syllabi@WWU](https://syllabi.wwu.edu/) for additional, important policies, including accommodations, equal opportunity, the medical excuse policy, ethical use of WWU computing resources, and the student conduct code.
 
+## Start-of-Quarter Survey
+
+Please fill out the anonymous start-of-quarter survey before class on Friday, January 8. The link is **TBD**, and will be posted on Canvas. Every question is optional. A few more optional questions need your name, so they are not on the form; answer them in a Canvas message to me instead.
+
+## Anonymous Feedback
+
+Unlike the start-of-quarter survey, the anonymous feedback form (link **TBD**, to be posted on Canvas) stays open all quarter, so you can use it at any time. Tell me what is working, what is not, and how I could improve the course. I read every response.
+
 Back to top
+
+## References
+
+Lamport, Leslie. 2019. *Think and Write, with Leslie Lamport*. Interview by Edaena Salinas, 5 Minute Mentor podcast (Mentors.fm). <https://mentors.fm/2019/08/13/think-and-write-with-leslie-lamport/>.
