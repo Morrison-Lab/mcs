@@ -3,7 +3,8 @@ Title: Math for Computer Science
 Version: 0.1.0
 Authors@R: 
     person("Ezra", "Morrison", email = "d.ezra.morrison@gmail.com", role = c("aut", "cre"))
-Description: Lecture notes for CSCI 201, math for computer science. Includes support for
+Description: Lecture notes for CSCI 201, discrete math and functional programming,
+    as taught by Ezra Morrison at Western Washington University. Includes support for
     multiple output formats including HTML, DOCX, RevealJS slides, and PDF handouts.
 License: MIT + file LICENSE
 Encoding: UTF-8
