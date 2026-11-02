@@ -20,7 +20,7 @@ The syllabus is subject to change;
 I will announce in class any change made after the first day of class.
 :::
 
-## Course Information {.unnumbered}
+# Course Information {.unnumbered}
 
 Number
 : CSCI 201
@@ -54,7 +54,7 @@ Prerequisites
   (or a score of 3 or higher on the AP Calculus AB or BC exam),
   each with a grade of C- or better.
 
-### Sections {.unnumbered #sections}
+## Sections {.unnumbered #sections}
 
 Each section pairs a lecture time with a lab time.
 Attend the lecture and the lab of the section you registered for.
@@ -72,7 +72,7 @@ read on 2026-10-23;
 check there for any change.
 The lab teaching assistants (TAs) and their office hours are **TBD**.
 
-## Contact Information {.unnumbered}
+# Contact Information {.unnumbered}
 
 Name
 : Ezra Morrison
@@ -88,7 +88,7 @@ All course-related correspondence goes through Canvas,
 including confidential matters;
 see [Communication](#communication).
 
-## Course Description {.unnumbered}
+# Course Description {.unnumbered}
 
 This course is a rigorous introduction to the mathematical structures and reasoning techniques underlying computer science.
 Topics include sets, functions, relations, graphs, trees, and finite automata,
@@ -98,7 +98,7 @@ using direct proof, contrapositive, contradiction, and induction.
 Functional programming is introduced as a way to express computation and recursion
 within a mathematically grounded framework.
 
-## Course Outcomes {.unnumbered}
+# Course Outcomes {.unnumbered}
 
 Homework, labs, and exams test and measure the outcomes below.
 On completion of CSCI 201, students will demonstrate:
@@ -113,7 +113,7 @@ On completion of CSCI 201, students will demonstrate:
   using direct proof, contradiction, contrapositive, and mathematical induction.
 - The ability to use functional style effectively in a functional programming language.
 
-## Textbooks and Readings {.unnumbered}
+# Textbooks and Readings {.unnumbered}
 
 The course notes are this site,
 [*Math for Computer Science* (mcs)](https://morrison-lab.github.io/mcs/).
@@ -133,14 +133,14 @@ Other useful references:
   which can be read at no cost on
   [the author's webpage](https://mfleck.cs.illinois.edu/building-blocks/index-sp2020.html).
 
-## Materials {.unnumbered}
+# Materials {.unnumbered}
 
 I will distribute worksheets, homework, and lab materials on Canvas.
 The lecture notes are on this site, listed in the menu bar.
 Each chapter is also available as slides and as a PDF handout,
 linked under **Other Formats** on the chapter's page.
 
-## Schedule {.unnumbered #schedule}
+# Schedule {.unnumbered #schedule}
 
 The topics and dates of future lectures may change.
 The [course calendar](calendar.qmd) gives the day-by-day agenda,
@@ -171,7 +171,7 @@ The midterm dates are tentative.
 If a midterm's date changes, I will announce the change
 at least two weeks before that exam is given.
 
-## Communication {.unnumbered #communication}
+# Communication {.unnumbered #communication}
 
 **Outbound.**
 I will send official class announcements through Canvas Announcements.
@@ -190,7 +190,7 @@ goes in a Canvas message to me.
 Confidential matters, such as information about your health,
 also go in a Canvas message to me, not to my email.
 
-## Questions and Corrections {.unnumbered}
+# Questions and Corrections {.unnumbered}
 
 If something in the course materials seems wrong, ask.
 The course materials include the notes, worksheets, assignments,
@@ -203,14 +203,14 @@ and we can talk through your reasoning together.
 If you are right, we all learn something and I fix the material.
 If you are not, we can jointly find out where the confusion started.
 
-## Health Precautions {.unnumbered}
+# Health Precautions {.unnumbered}
 
 If you are sick with something that could be communicable,
 let me know ahead of time and I will try to arrange a way for you to keep up,
 so you can stay home and not expose others needlessly.
 Please contact me if you have questions, concerns, or suggestions.
 
-## Software {.unnumbered}
+# Software {.unnumbered}
 
 The labs and the programming parts of homework use [Racket](https://racket-lang.org/),
 a functional programming language.
@@ -218,7 +218,7 @@ Racket is free, and it comes with the DrRacket editor.
 For any software that comes pre-installed in the department labs,
 please use the default installed version.
 
-## Active Learning {.unnumbered}
+# Active Learning {.unnumbered}
 
 Class time is for working on problems, not only for listening.
 You will be asked to think about questions on your own, write down answers,
@@ -227,7 +227,7 @@ Sometimes you may be asked to write on the board.
 I will give you time to think things through before you are put on the spot.
 Please give me feedback about the structure of the class, the activities, or group dynamics.
 
-### ABCD Cards {.unnumbered}
+## ABCD Cards {.unnumbered}
 
 On the first day of class, I will give each student an ABCD card,
 which you will use to vote on answers to questions in class.
@@ -239,7 +239,7 @@ Please bring this card to class each day.
 If you lose your card,
 print a new, landscape-mode color copy of the [ABCD card](../images/abcd-card.pdf).
 
-### Worksheets {.unnumbered}
+## Worksheets {.unnumbered}
 
 Most classes include a worksheet:
 guided practice that reinforces the day's concepts and prepares you for the exams.
@@ -250,7 +250,7 @@ I will post selected worksheet solutions after the submission deadline,
 and review common mistakes at the start of the next class.
 Most midterm and final exam questions will be adapted from worksheet problems.
 
-## Grading {.unnumbered}
+# Grading {.unnumbered}
 
 Course grades are letter grades, based on:
 
@@ -278,7 +278,7 @@ Thresholds for plus and minus grades are at my discretion.
 The overall grade Canvas displays may be inaccurate;
 the weights above are the ones that count.
 
-### Homework and Worksheets {.unnumbered}
+## Homework and Worksheets {.unnumbered}
 
 Homework assignments combine written work and programming.
 Homework and worksheets are graded on completion,
@@ -308,7 +308,7 @@ When writing up your work:
   An answer alone will not get full credit,
   on homework or on exams.
 
-### Labs {.unnumbered}
+## Labs {.unnumbered}
 
 Weekly labs give hands-on programming practice,
 with a TA available to answer questions during the lab period.
@@ -324,7 +324,7 @@ which will typically be 10pm on the Monday after the lab
 - Attending a lab section other than your own requires permission from both me and the TA(s).
 - Late lab submissions are not accepted.
 
-### Exams {.unnumbered #exams}
+## Exams {.unnumbered #exams}
 
 The course has two in-class midterm exams,
 tentatively on Wednesday, January 27 (week 4) and Wednesday, February 17 (week 7),
@@ -345,14 +345,14 @@ If you know in advance that you will be unable to take an exam at the scheduled 
 let me know at least one week before the exam,
 and we may be able to reschedule it.
 
-### Grading Questions {.unnumbered}
+## Grading Questions {.unnumbered}
 
 If you have a question about a grade,
 send it to me in writing, as a Canvas message (see [Communication](#communication)),
 within 48 hours of the graded work being returned.
 You will never lose points for asking.
 
-## Deadlines and Late Work {.unnumbered}
+# Deadlines and Late Work {.unnumbered}
 
 Canvas lists every due date.
 
@@ -367,7 +367,7 @@ the day an assignment is due is too late.
 If you miss a deadline or an exam because of a medical emergency,
 contact me as soon as possible to discuss arrangements.
 
-## Collaboration and AI Tools {.unnumbered}
+# Collaboration and AI Tools {.unnumbered}
 
 **Collaboration.**
 You may work together on homework and worksheets
@@ -395,7 +395,7 @@ including lab work you finish after the lab period.
 work alone, without help from anyone else and without AI tools;
 the only aid allowed is your page(s) of notes, as described under [Exams](#exams).
 
-## Academic Honesty {.unnumbered}
+# Academic Honesty {.unnumbered}
 
 As a future professional, your integrity is crucial.
 It is your responsibility to read and be familiar with the university's academic honesty policy,
@@ -408,7 +408,7 @@ and I will file documentation of the incident with the university.
 All cases of academic dishonesty will be reported.
 When in doubt, ask me.
 
-## Student Conduct {.unnumbered}
+# Student Conduct {.unnumbered}
 
 I am committed to maintaining an inclusive, supportive, and professional environment
 in all academic settings, including lectures, labs, and course-related online spaces.
@@ -419,14 +419,14 @@ A pattern of failing to follow the ACM Code of Ethics and Professional Conduct
 can negatively affect course grades, up to and including a failing grade for the course.
 Conduct is also considered when determining admission to the major.
 
-## Course Materials {.unnumbered}
+# Course Materials {.unnumbered}
 
 Do not sell or distribute questions or answers to any assignment, quiz, or exam,
 or other course materials given out on Canvas.
 The lecture notes on this site are open,
 under the license on the [home page](../index.qmd).
 
-## Disabilities {.unnumbered}
+# Disabilities {.unnumbered}
 
 Reasonable accommodation for persons with documented disabilities
 should be established within the first two weeks of class
@@ -434,7 +434,7 @@ and arranged through the Disability Access Center:
 telephone 360-650-3083; email <drsfrontdesk@wwu.edu>;
 and on the web at [Disability Access Center](https://disability.wwu.edu/).
 
-## Student Services {.unnumbered}
+# Student Services {.unnumbered}
 
 Western encourages students to seek assistance and support at the onset of an illness, difficulty, or crisis.
 
@@ -457,7 +457,7 @@ Western encourages students to seek assistance and support at the onset of an il
   Faculty are responsible employees who are required to report sex discrimination,
   including sexual violence that they learn about, to the Title IX Coordinator.
 
-## Other Policies {.unnumbered}
+# Other Policies {.unnumbered}
 
 Please read [Syllabi\@WWU](https://syllabi.wwu.edu/) for additional, important policies,
 including accommodations, equal opportunity, the medical excuse policy,
