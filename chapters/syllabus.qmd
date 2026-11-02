@@ -236,7 +236,7 @@ let me know ahead of time and I will try to arrange a way for you to keep up,
 so you can stay home and not expose others needlessly.
 Please contact me if you have questions, concerns, or suggestions.
 
-## Software {.unnumbered}
+## Software {.unnumbered #software}
 
 The labs and the programming parts of homework use [Racket](https://racket-lang.org/),
 a functional programming language.
@@ -450,7 +450,7 @@ Write it in full sentences,
 with the definitions, proof steps or code you used and what you have already tried.
 
 The habit pays off in two ways.
-A written question can be posted on the class discussion forum (or Stack Exchange, etc.) so I and others can help.
+A written question can be posted on Canvas Discussions (see [Communication](#communication)) so I and others can help.
 Writing your thoughts down also helps clarify your question,
 and that sometimes answers it.
 In an interview on the *5 Minute Mentor* podcast, [Leslie Lamport](https://en.wikipedia.org/wiki/Leslie_Lamport) says:
@@ -545,8 +545,8 @@ Please fill out the anonymous start-of-quarter survey
 before class on Friday, January 8.
 The link is **TBD**, and will be posted on Canvas.
 Every question is optional.
-Its last page asks a few more optional questions,
-which need your name and so go in a Canvas message to me instead.
+A few more optional questions need your name, so they are not on the form;
+answer them in a Canvas message to me instead.
 
 ## Anonymous Feedback {.unnumbered}
 
