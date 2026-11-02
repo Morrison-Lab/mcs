@@ -1,6 +1,6 @@
 # Math for Computer Science
 
-> Lecture notes for CSCI 201, math for computer science
+> Lecture notes for CSCI 201: Discrete Math and Functional Programming, as taught by Douglas Ezra Morrison at Western Washington University, Winter 2027
 
 ## Pages
 
