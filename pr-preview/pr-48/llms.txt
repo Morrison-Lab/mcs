@@ -1,0 +1,26 @@
+# Math for Computer Science
+
+> Lecture notes for CSCI 201, math for computer science
+
+## Pages
+
+- [Math for Computer Science](https://morrison-lab.github.io/mcs/index.llms.md)
+- [WWU CSCI 201 Syllabus](https://morrison-lab.github.io/mcs/chapters/syllabus.llms.md)
+- [Proofs with Sets](https://morrison-lab.github.io/mcs/chapters/set-proofs.llms.md)
+- [Recursion](https://morrison-lab.github.io/mcs/chapters/recursion.llms.md)
+- [Propositional Logic](https://morrison-lab.github.io/mcs/chapters/propositional-logic.llms.md)
+- [Loop Invariants](https://morrison-lab.github.io/mcs/chapters/loop-invariants.llms.md)
+- [Proving Non-Conditional Statements](https://morrison-lab.github.io/mcs/chapters/iff-existence-disproof.llms.md)
+- [Functional Programming](https://morrison-lab.github.io/mcs/chapters/functional-programming.llms.md)
+- [Inference and Direct Proof](https://morrison-lab.github.io/mcs/chapters/direct-proof.llms.md)
+- [Calendar](https://morrison-lab.github.io/mcs/chapters/calendar.llms.md)
+- [State Machines and Finite Automata](https://morrison-lab.github.io/mcs/chapters/automata.llms.md)
+- [Contrapositive and Contradiction](https://morrison-lab.github.io/mcs/chapters/contrapositive-contradiction.llms.md)
+- [Logical Equivalence and Negation](https://morrison-lab.github.io/mcs/chapters/equivalence-negation.llms.md)
+- [Graphs](https://morrison-lab.github.io/mcs/chapters/graphs.llms.md)
+- [Mathematical Induction](https://morrison-lab.github.io/mcs/chapters/induction.llms.md)
+- [Predicates and Quantifiers](https://morrison-lab.github.io/mcs/chapters/predicates-quantifiers.llms.md)
+- [Recurrence Relations and Growth Rates](https://morrison-lab.github.io/mcs/chapters/recurrences-growth.llms.md)
+- [Relations](https://morrison-lab.github.io/mcs/chapters/relations.llms.md)
+- [Sets](https://morrison-lab.github.io/mcs/chapters/sets.llms.md)
+- [Trees](https://morrison-lab.github.io/mcs/chapters/trees.llms.md)
