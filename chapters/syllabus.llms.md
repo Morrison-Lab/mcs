@@ -6,7 +6,7 @@ Winter 2027
 
 Published
 
-Last modified: 2026-11-02 10:04:06 (PST)
+Last modified: 2026-11-02 10:44:41 (PST)
 
 > **NOTE:**
 >
@@ -15,7 +15,7 @@ Last modified: 2026-11-02 10:04:06 (PST)
 ## Course Information
 
 Number  
-CSCI 201
+[CSCI 201](https://catalog.wwu.edu/search_advanced.php?cur_cat_oid=23&search_database=Search&search_db=Search&cpage=1&ecpage=1&ppage=1&spage=1&tpage=1&location=3&filter%5Bkeyword%5D=CSCI%20201)
 
 Name  
 Discrete Math and Functional Programming for Computer Scientists

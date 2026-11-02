@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Math for Computer Science",
     "section": "",
-    "text": "These are the lecture notes for CSCI 201, math for computer science (discrete mathematics), at Western Washington University. General mathematics that several courses share, such as logic, sets and functions, is kept in the mathematics prerequisites site. These notes include its definitions, from the mds submodule, so each definition is written once and reads the same in both places.\nThe notes are available in multiple formats:\n\nHTML Website: Navigate using the navbar for easy access to all pages\nRevealJS Slides: Each chapter can generate a presentation format with -slides.html suffix\nPDF Handouts: Each chapter can generate a PDF handout with -handout.pdf suffix\nDOCX Documents: Each chapter can generate a Microsoft Word document with .docx extension\n\n\n\nThe notes are released under the MIT License; see the LICENSE file.",
+    "text": "This website collects the lecture notes for CSCI 201, “Discrete Math and Functional Programming for Computer Scientists”, as taught in Winter Quarter 2027 at Western Washington University by Douglas Ezra Morrison.\nThe notes adapt Kameron Decker Harris’s Fall 2026 lecture notes for the course; his notes on logic, proofs, sets and induction are typed transcriptions of Scott Wehrwein’s Spring 2025 handwritten lecture notes. Each chapter’s collapsed Source note records what it draws on.\nGeneral mathematics that several courses share, such as logic, sets and functions, is kept in the mathematics prerequisites site. These notes include its definitions, from the mds submodule, so each definition is written once and reads the same in both places.\nThe notes are available in multiple formats:\n\nHTML Website: Navigate using the navbar for easy access to all pages\nRevealJS Slides: Each chapter can generate a presentation format with -slides.html suffix\nPDF Handouts: Each chapter can generate a PDF handout with -handout.pdf suffix\nDOCX Documents: Each chapter can generate a Microsoft Word document with .docx extension\n\n\n\nThe notes are released under the Creative Commons Attribution 4.0 International license (CC BY 4.0), and their code under the MIT License; the LICENSE.md file in the repository says which covers what.",
     "crumbs": [
       "Home"
     ]
@@ -14,7 +14,7 @@
     "href": "index.html#license",
     "title": "Math for Computer Science",
     "section": "",
-    "text": "The notes are released under the MIT License; see the LICENSE file.",
+    "text": "The notes are released under the Creative Commons Attribution 4.0 International license (CC BY 4.0), and their code under the MIT License; the LICENSE.md file in the repository says which covers what.",
     "crumbs": [
       "Home"
     ]
