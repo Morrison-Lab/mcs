@@ -23,7 +23,7 @@ I will announce in class any change made after the first day of class.
 ## Course Information {.unnumbered}
 
 Number
-: CSCI 201
+: [CSCI 201](https://catalog.wwu.edu/search_advanced.php?cur_cat_oid=23&search_database=Search&search_db=Search&cpage=1&ecpage=1&ppage=1&spage=1&tpage=1&location=3&filter%5Bkeyword%5D=CSCI%20201)
 
 Name
 : Discrete Math and Functional Programming for Computer Scientists
