@@ -3,7 +3,7 @@
 
 Let $\operatorname{len}_K : K \to \Nat$ (@def-function, @def-natural-numbers) give the length of each word of the set $K$ of @exr-same-length,
 so $\operatorname{len}_K(a) = \operatorname{len}(a)$, as in @exm-same-length.
-Its domain (@def-function-domain) is $K$ and its codomain (@def-codomain) is $\Nat$.
+Its [domain](#def-domain) is $K$ and its [codomain](#def-codomain) is $\Nat$.
 Its graph (@def-graph) is the set of six pairs
 
 $$

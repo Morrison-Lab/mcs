@@ -1,4 +1,4 @@
-::: {#def-domain}
+::: {#def-domain-of-discourse}
 #### Domain (domain of discourse, universe of discourse)
 
 The **domain** of a predicate (@def-predicate),

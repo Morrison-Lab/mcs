@@ -11,6 +11,8 @@ format:
     output-file: equivalence-negation.docx
 ---
 
+{{< include ../latex-macros/macros.qmd >}}
+
 ::: {.callout-note appearance='simple' collapse=true}
 ## Source
 
@@ -30,7 +32,7 @@ the exercises are new.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/equivalence-negation/_logical-equivalence_def.qmd >}}
+{{< include ../mds/_subfiles/proof-writing/_def-logically-equivalent.qmd >}}
 
 {{< slidebreak >}}
 
@@ -122,7 +124,7 @@ the exercises are new.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/equivalence-negation/_de-morgan_thm.qmd >}}
+{{< include ../mds/_subfiles/proof-writing/_thm-de-morgan-logic.qmd >}}
 
 {{< slidebreak >}}
 

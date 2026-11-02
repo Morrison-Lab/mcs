@@ -281,7 +281,7 @@ The exercises, the other examples, the Racket functions and all the proofs are n
 
 {{< slidebreak >}}
 
-{{< include _subfiles/relations/_function-domain_def.qmd >}}
+{{< include ../mds/_subfiles/functions/_def-domain.qmd >}}
 
 {{< slidebreak >}}
 

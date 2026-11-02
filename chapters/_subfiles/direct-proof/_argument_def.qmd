@@ -1,4 +1,4 @@
-::: {#def-argument}
+::: {#def-logical-argument}
 #### Argument
 
 An **argument** is a list of propositions (@def-proposition),
