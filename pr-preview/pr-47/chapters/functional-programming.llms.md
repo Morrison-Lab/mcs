@@ -6,7 +6,7 @@ Expressions, functions and cases in Racket
 
 Published
 
-Last modified: 2026-11-02 01:16:36 (PST)
+Last modified: 2026-11-02 10:32:52 (PST)
 
 > **NOTE:**
 >
@@ -22,13 +22,13 @@ Last modified: 2026-11-02 01:16:36 (PST)
 
 > **NOTE:**
 >
-> **Exercise 1 (Operation first)** Racket writes \\7 - 2\\ as `(- 7 2)`, with the operation first and the parentheses around the whole expression. Guess what each Racket expression returns:
+> **Exercise 1 (Operation first)** Racket writes $7 - 2$ as `(- 7 2)`, with the operation first and the parentheses around the whole expression. Guess what each Racket expression returns:
 >
 > 1.  `(* (+ 1 2) (- 10 4))`
 > 2.  `(- 20 (* 3 (+ 1 1)))`
 > 3.  `(+ 1 2 3 4)`
 >
-> Then write \\(2 + 3) \cdot 4 - 1\\ in Racket.
+> Then write $(2 + 3) \cdot 4 - 1$ in Racket.
 
 > **NOTE:**
 >
@@ -38,11 +38,11 @@ Last modified: 2026-11-02 01:16:36 (PST)
 > 2.  `(+ 1 1)` is 2, so `(* 3 (+ 1 1))` is 6, and `(- 20 6)` returns 14.
 > 3.  `+` can take any number of operands, and adds them all, so the expression returns 10.
 >
-> The expression \\(2 + 3) \cdot 4 - 1\\ subtracts 1 from the product of \\2 + 3\\ and 4, so in Racket it is `(- (* (+ 2 3) 4) 1)`, which returns 19.
+> The expression $(2 + 3) \cdot 4 - 1$ subtracts 1 from the product of $2 + 3$ and 4, so in Racket it is `(- (* (+ 2 3) 4) 1)`, which returns 19.
 
 > **NOTE:**
 >
-> **Definition 1 (Function (map, mapping, transformation))** A **function** \\f\\ from a set \\A\\ to a set \\B\\, ([Wikipedia contributors 2026b](#ref-wikipedia_function_mathematics)) written \\f : A \to B\\, assigns to each element \\a \in A\\ exactly one element \\f(a) \in B\\.
+> **Definition 1 (Function (map, mapping, transformation))** A **function** $f$ from a set $A$ to a set $B$, ([Wikipedia contributors 2026b](#ref-wikipedia_function_mathematics)) written $f : A \to B$, assigns to each element $a \in A$ exactly one element $f(a) \in B$.
 >
 > A function is also called a **map** (or **mapping**) or a **transformation**; on this site the three words mean the same thing, although some authors reserve “transformation” for a function from a set to itself.
 
@@ -84,7 +84,7 @@ Last modified: 2026-11-02 01:16:36 (PST)
 >   (- (* x x) (* 2 x)))
 > ```
 >
-> 1.  Write \\h(x)\\ as a formula in ordinary mathematical notation.
+> 1.  Write $h(x)$ as a formula in ordinary mathematical notation.
 > 2.  What does `(h 5)` return?
 > 3.  What does `(h (h 3))` return?
 
@@ -92,17 +92,17 @@ Last modified: 2026-11-02 01:16:36 (PST)
 >
 > *Solution 2*.
 >
-> 1.  \\h(x) = x^2 - 2x\\, since `(* x x)` is \\x^2\\ and `(* 2 x)` is \\2x\\.
-> 2.  \\h(5) = 25 - 10 = 15\\, so `(h 5)` returns 15.
-> 3.  Racket first evaluates the argument `(h 3)`, which is \\9 - 6 = 3\\, and then applies `h` to it, so `(h (h 3))` is `(h 3)` again and returns 3.
+> 1.  $h(x) = x^2 - 2x$, since `(* x x)` is $x^2$ and `(* 2 x)` is $2x$.
+> 2.  $h(5) = 25 - 10 = 15$, so `(h 5)` returns 15.
+> 3.  Racket first evaluates the argument `(h 3)`, which is $9 - 6 = 3$, and then applies `h` to it, so `(h (h 3))` is `(h 3)` again and returns 3.
 
 > **NOTE:**
 >
-> **Definition 4 (Argument (input))** An **argument** (or **input**) of a [function](#def-function) \\f : A \to B\\ is an element \\a \in A\\ that \\f\\ is applied to.
+> **Definition 4 (Argument (input))** An **argument** (or **input**) of a [function](#def-function) $f : A \to B$ is an element $a \in A$ that $f$ is applied to.
 
 > **NOTE:**
 >
-> **Definition 5 (Value (output))** The **value** (or **output**) of a [function](#def-function) \\f : A \to B\\ at an [argument](#def-argument) \\a \in A\\ is the element \\f(a) \in B\\ that \\f\\ assigns to \\a\\.
+> **Definition 5 (Value (output))** The **value** (or **output**) of a [function](#def-function) $f : A \to B$ at an [argument](#def-argument) $a \in A$ is the element $f(a) \in B$ that $f$ assigns to $a$.
 
 > **NOTE:**
 >
@@ -127,7 +127,7 @@ Last modified: 2026-11-02 01:16:36 (PST)
 > = 15
 > ```
 >
-> The first step replaces `x` by 5 in the body of `h`, just as computing \\h(5)\\ replaces \\x\\ by 5 in \\x^2 - 2x\\. Each later step replaces one application by its value ([Remark 2](#rem-evaluation)).
+> The first step replaces `x` by 5 in the body of `h`, just as computing $h(5)$ replaces $x$ by 5 in $x^2 - 2x$. Each later step replaces one application by its value ([Remark 2](#rem-evaluation)).
 
 # 3 Cases
 
@@ -145,7 +145,7 @@ Last modified: 2026-11-02 01:16:36 (PST)
 > Each line in square brackets pairs a test with a value.
 >
 > 1.  Guess what `(ticket-price 4)`, `(ticket-price 5)`, `(ticket-price 17)` and `(ticket-price 70)` return.
-> 2.  Write the function as a formula with cases, for a whole number of years \\a \ge 0\\.
+> 2.  Write the function as a formula with cases, for a whole number of years $a \ge 0$.
 
 > **NOTE:**
 >
@@ -153,14 +153,19 @@ Last modified: 2026-11-02 01:16:36 (PST)
 >
 > 1.  Racket tries the tests in order and returns the value beside the first true one:
 >
->     - `(ticket-price 4)` returns 0, since \\4 \< 5\\.
->     - `(ticket-price 5)` returns 8, since \\5 \< 5\\ is false but \\5 \< 18\\ is true.
->     - `(ticket-price 17)` returns 8, since \\17 \< 18\\.
+>     - `(ticket-price 4)` returns 0, since $4 < 5$.
+>     - `(ticket-price 5)` returns 8, since $5 < 5$ is false but $5 < 18$ is true.
+>     - `(ticket-price 17)` returns 8, since $17 < 18$.
 >     - `(ticket-price 70)` returns 12, since neither test is true, so the `else` line applies.
 >
-> 2.  The second case holds only when the first test is false, so its condition is \\5 \le a \< 18\\, not just \\a \< 18\\:
+> 2.  The second case holds only when the first test is false, so its condition is $5 \le a < 18$, not just $a < 18$:
 >
->     \\ p(a) = \begin{cases} 0 & \text{if } a \< 5, \\ 8 & \text{if } 5 \le a \< 18, \\ 12 & \text{if } a \ge 18. \end{cases} \\
+>     $$p(a) =
+>     \begin{cases}
+>     0 & \text{if } a < 5, \\
+>     8 & \text{if } 5 \le a < 18, \\
+>     12 & \text{if } a \ge 18.
+>     \end{cases}$$
 
 > **NOTE:**
 >
@@ -185,7 +190,11 @@ Last modified: 2026-11-02 01:16:36 (PST)
 
 > **NOTE:**
 >
-> **Example 2 (Absolute value with `if`)** The absolute value \\ \mathopen{}\left\|x\right\|\mathclose{} = \begin{cases} -x & \text{if } x \< 0, \\ x & \text{otherwise} \end{cases} \\ has two cases, so one `if` ([Definition 8](#def-if-cond)) is enough:
+> **Example 2 (Absolute value with `if`)** The absolute value $$\mathopen{}\left|x\right|\mathclose{} =
+> \begin{cases}
+> -x & \text{if } x < 0, \\
+> x & \text{otherwise}
+> \end{cases}$$ has two cases, so one `if` ([Definition 8](#def-if-cond)) is enough:
 >
 > ``` racket
 > (define (absolute x)
@@ -212,7 +221,7 @@ Last modified: 2026-11-02 01:16:36 (PST)
 > ```
 >
 > 1.  The program calls `next_id()` twice in a row. What does each call return?
-> 2.  Is there a mathematical function \\f\\ ([Definition 1](#def-function)) with no arguments whose value is what `next_id()` returns every time it is called?
+> 2.  Is there a mathematical function $f$ ([Definition 1](#def-function)) with no arguments whose value is what `next_id()` returns every time it is called?
 
 > **NOTE:**
 >
@@ -240,9 +249,9 @@ Last modified: 2026-11-02 01:16:36 (PST)
 
 > **NOTE:**
 >
-> *Remark 3* (Why this course uses functional programming). In a program built from pure functions ([Definition 10](#def-pure-function)), an expression can be replaced by its value anywhere it appears without changing what the program does. That is what makes evaluation by substitution ([Example 1](#exm-substitution)) work, and it is also how algebra works: \\h(5)\\ can be replaced by 15 in any formula. So a pure function can be checked with the same reasoning as a formula, and this course proves facts about programs that way.
+> *Remark 3* (Why this course uses functional programming). In a program built from pure functions ([Definition 10](#def-pure-function)), an expression can be replaced by its value anywhere it appears without changing what the program does. That is what makes evaluation by substitution ([Example 1](#exm-substitution)) work, and it is also how algebra works: $h(5)$ can be replaced by 15 in any formula. So a pure function can be checked with the same reasoning as a formula, and this course proves facts about programs that way.
 >
-> `next_id` in [Exercise 4](#exr-next-id) is not pure, so `next_id() + next_id()` cannot be simplified to `2 * next_id()`. On a fresh start, `next_id() + next_id()` returns 3, from \\1 + 2\\, but `2 * next_id()` returns 2. Racket can change variables too, with `set!`, but this course does not use it.
+> `next_id` in [Exercise 4](#exr-next-id) is not pure, so `next_id() + next_id()` cannot be simplified to `2 * next_id()`. On a fresh start, `next_id() + next_id()` returns 3, from $1 + 2$, but `2 * next_id()` returns 2. Racket can change variables too, with `set!`, but this course does not use it.
 
 # 5 Functions as values
 
@@ -269,7 +278,7 @@ Last modified: 2026-11-02 01:16:36 (PST)
 > *Solution 5*. Replace `f` and `x` in the body `(f (f x))` ([Definition 6](#def-racket-define)):
 >
 > 1.  `(twice add-three 10)` is `(add-three (add-three 10))`, which is `(add-three 13)`, which returns 16.
-> 2.  `(twice h 4)` is `(h (h 4))`. Since \\h(4) = 16 - 8 = 8\\ and \\h(8) = 64 - 16 = 48\\, it returns 48.
+> 2.  `(twice h 4)` is `(h (h 4))`. Since $h(4) = 16 - 8 = 8$ and $h(8) = 64 - 16 = 48$, it returns 48.
 > 3.  The argument `(twice add-three 0)` returns 6, so the whole expression is `(twice add-three 6)`, which returns 12.
 
 > **NOTE:**
@@ -306,7 +315,7 @@ Last modified: 2026-11-02 01:16:36 (PST)
 >       (- (apply max L) (apply min L)))
 >     ```
 >
-> 3.  The largest element is 7 and the smallest is \\-1\\, so `(spread (list 4 -1 7 2))` returns \\7 - (-1) = 8\\.
+> 3.  The largest element is 7 and the smallest is $-1$, so `(spread (list 4 -1 7 2))` returns $7 - (-1) = 8$.
 >
 > `spread` needs no recursion: `max` and `min` already take any number of arguments, and `apply` hands each of them the whole list.
 
@@ -333,7 +342,7 @@ Last modified: 2026-11-02 01:16:36 (PST)
 >
 > 1.  Applying it to 7 returns 49.
 > 2.  `map` ([Example 3](#exm-map-filter)) applies the doubling function to each element, and returns `'(2 4 6)`.
-> 3.  In the body of `pair-with`, `y` is `"a"`, so `map` applies the function \\x \mapsto (x, \text{"a"})\\ to each element, and returns `'((1 "a") (2 "a") (3 "a"))`.
+> 3.  In the body of `pair-with`, `y` is `"a"`, so `map` applies the function $x \mapsto (x, \text{"a"})$ to each element, and returns `'((1 "a") (2 "a") (3 "a"))`.
 
 > **NOTE:**
 >
@@ -352,7 +361,7 @@ Last modified: 2026-11-02 01:16:36 (PST)
 
 > **NOTE:**
 >
-> *Remark 4* (Where the name comes from). The word `lambda` comes from the lambda calculus, a model of computation in which a function is written \\\lambda x.\\ e\\, the function that takes \\x\\ to the value of the expression \\e\\. The lambda calculus has only three features: functions, applying a function to an argument, and variables. It has no numbers, strings or loops ([Crichton 2019](#ref-crichton2019cs242)). Applying \\\lambda x.\\ e\\ to an argument replaces each \\x\\ in \\e\\ by that argument, as in evaluation by substitution ([Example 1](#exm-substitution)). The function in [Exercise 7](#exr-pair-with) that squares its argument is \\\lambda x.\\ x \cdot x\\.
+> *Remark 4* (Where the name comes from). The word `lambda` comes from the lambda calculus, a model of computation in which a function is written $\lambda x.\, e$, the function that takes $x$ to the value of the expression $e$. The lambda calculus has only three features: functions, applying a function to an argument, and variables. It has no numbers, strings or loops ([Crichton 2019](#ref-crichton2019cs242)). Applying $\lambda x.\, e$ to an argument replaces each $x$ in $e$ by that argument, as in evaluation by substitution ([Example 1](#exm-substitution)). The function in [Exercise 7](#exr-pair-with) that squares its argument is $\lambda x.\, x \cdot x$.
 >
 > *Media:* Will Crichton’s [notes on the lambda calculus](https://stanford-cs242.github.io/f19/lectures/02-1-lambda-calculus), from Stanford’s CS 242, *Programming Languages*, go further ([Crichton 2019](#ref-crichton2019cs242)).
 
@@ -365,7 +374,7 @@ Last modified: 2026-11-02 01:16:36 (PST)
 >   (lambda (x) (+ x d)))
 > ```
 >
-> `(adder 3)` returns the function \\x \mapsto x + 3\\, which still knows that `d` is 3 after `adder` has returned. So `adder` is a higher-order function ([Definition 12](#def-higher-order)), and its value can be used anywhere a function can:
+> `(adder 3)` returns the function $x \mapsto x + 3$, which still knows that `d` is 3 after `adder` has returned. So `adder` is a higher-order function ([Definition 12](#def-higher-order)), and its value can be used anywhere a function can:
 >
 > - `((adder 3) 4)` returns 7.
 > - `(twice (adder 3) 10)`, with `twice` from [Exercise 5](#exr-twice), returns 16.
@@ -390,7 +399,7 @@ Last modified: 2026-11-02 01:16:36 (PST)
 
 > **NOTE:**
 >
-> **Example 5 (Naming a value used twice)** The solutions of \\a x^2 + b x + c = 0\\ with \\a \ne 0\\ and \\b^2 - 4ac \ge 0\\ are \\ x = \frac{-b \pm s}{2a}, \qquad \text{where } s = \sqrt{b^2 - 4ac}. \\ Both solutions use \\s\\, so a `let` names it and computes it once:
+> **Example 5 (Naming a value used twice)** The solutions of $a x^2 + b x + c = 0$ with $a \ne 0$ and $b^2 - 4ac \ge 0$ are $$x = \frac{-b \pm s}{2a}, \qquad \text{where } s = \sqrt{b^2 - 4ac}.$$ Both solutions use $s$, so a `let` names it and computes it once:
 >
 > ``` racket
 > (define (roots a b c)
@@ -399,7 +408,7 @@ Last modified: 2026-11-02 01:16:36 (PST)
 >           (/ (- (- b) s) (* 2 a)))))
 > ```
 >
-> `(roots 1 -3 2)` returns `'(2 1)`, since \\x^2 - 3x + 2 = (x - 1)(x - 2)\\.
+> `(roots 1 -3 2)` returns `'(2 1)`, since $x^2 - 3x + 2 = (x - 1)(x - 2)$.
 >
 > `let` does not change a variable: inside the body, `s` stands for one value, as a name does in algebra. So `roots` is a pure function ([Definition 10](#def-pure-function)).
 
