@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-02 00:53:06 (PST)
+Last modified: 2026-11-02 01:16:36 (PST)
 
 # Welcome
 
@@ -23,7 +23,7 @@ The notes are available in multiple formats:
 
 ## 0.1 License
 
-The notes are released under the MIT License; see the `LICENSE` file.
+The notes are released under the [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) license (CC BY 4.0), and their code under the MIT License; the `LICENSE.md` file in the [repository](https://github.com/Morrison-Lab/mcs) says which covers what.
 
 ## References
 
