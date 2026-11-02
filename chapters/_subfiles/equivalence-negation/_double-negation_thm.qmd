@@ -1,7 +1,7 @@
 ::: {#thm-double-negation}
 #### Double negation
 
-For a proposition $P$, $\neg \neg P \equiv P$ (@def-logically-equivalent).
+For a proposition $P$, $\neg \neg P$ is [logically equivalent](#def-logically-equivalent) to $P$: $\neg \neg P \equiv P$.
 
 :::
 

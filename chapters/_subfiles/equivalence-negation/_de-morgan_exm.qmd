@@ -2,7 +2,7 @@
 #### Neither coordinate positive
 
 For real numbers $x$ and $y$,
-by the second of De Morgan's laws (@thm-de-morgan-logic),
+by the second of [De Morgan's laws](#thm-de-morgan-logic),
 "not ($x > 0$ or $y > 0$)"
 is logically equivalent to
 "$x \le 0$ and $y \le 0$".

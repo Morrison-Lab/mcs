@@ -1,7 +1,7 @@
 ::: {#def-rule-of-inference}
 #### Rule of inference
 
-A **rule of inference** is a pattern of argument (@def-logical-argument),
+A **rule of inference** is a pattern of [argument](#def-logical-argument),
 written in terms of propositions $P, Q, \ldots$,
 whose premises logically entail its conclusion (@def-logical-entailment)
 whatever propositions are put in place of $P, Q, \ldots$.

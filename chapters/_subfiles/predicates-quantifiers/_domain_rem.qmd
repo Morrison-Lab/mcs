@@ -3,7 +3,7 @@
 
 A predicate can have more than one variable:
 "$x < y$" is a predicate $P(x, y)$ in the two variables $x$ and $y$.
-Its domain (@def-domain-of-discourse) is a set of pairs,
+Its [domain](#def-domain-of-discourse) is a set of pairs,
 such as the pairs $(x, y)$ of real numbers.
 
 :::
