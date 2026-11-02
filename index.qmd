@@ -38,7 +38,7 @@ The notes are available in multiple formats:
 The notes are released under the
 [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) license (CC BY 4.0),
 and their code under the MIT License;
-[`LICENSE.md`](https://github.com/Morrison-Lab/mcs/blob/main/LICENSE.md) says which covers what.
+the `LICENSE.md` file in the [repository](https://github.com/Morrison-Lab/mcs) says which covers what.
 
 ## References {.unnumbered}
 
