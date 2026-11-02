@@ -104,7 +104,7 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/propositional-logic/_truth-table_def.qmd >}}
+{{< include ../mds/_subfiles/proof-writing/_def-truth-table.qmd >}}
 
 {{< slidebreak >}}
 

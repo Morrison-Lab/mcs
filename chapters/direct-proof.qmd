@@ -136,7 +136,7 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/direct-proof/_direct-proof_def.qmd >}}
+{{< include ../mds/_subfiles/proof-writing/_def-direct-proof.qmd >}}
 
 {{< slidebreak >}}
 
@@ -164,7 +164,7 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/direct-proof/_proof-by-cases_def.qmd >}}
+{{< include ../mds/_subfiles/proof-writing/_def-proof-by-cases.qmd >}}
 
 {{< slidebreak >}}
 

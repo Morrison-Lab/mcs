@@ -1,7 +1,7 @@
-::: {#thm-substitution}
+::: {#thm-substitution-logic}
 #### Replacing a part by an equivalent part
 
-If $A \equiv B$ (@def-logical-equivalence),
+If $A \equiv B$ (@def-logically-equivalent),
 then replacing $A$ by $B$ inside a larger proposition
 gives a proposition logically equivalent to the larger one.
 In particular, $\neg A \equiv \neg B$.

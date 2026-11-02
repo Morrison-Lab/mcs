@@ -6,7 +6,7 @@ $\neg \forall x, P(x) \equiv \exists x, \neg P(x)$
 and $\neg \exists x, P(x) \equiv \forall x, \neg P(x)$.
 These notes say "has the same truth value" instead,
 because $P(x)$ is a predicate, not a proposition,
-so @def-logical-equivalence, which compares truth tables, does not apply.
+so @def-logically-equivalent, which compares truth tables, does not apply.
 
 On a finite set $S = \{a, b\}$,
 $\forall x \in S, P(x)$ has the same truth value as $P(a) \land P(b)$,

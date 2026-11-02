@@ -2,7 +2,7 @@
 #### Equivalence is a tautological biconditional
 
 For propositions $A$ and $B$,
-$A \equiv B$ (@def-logical-equivalence) exactly when $A \Leftrightarrow B$ is a tautology (@def-tautology).
+$A \equiv B$ (@def-logically-equivalent) exactly when $A \Leftrightarrow B$ is a tautology (@def-tautology).
 
 :::
 

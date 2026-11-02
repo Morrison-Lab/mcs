@@ -25,7 +25,7 @@ The fifth and last columns of this truth table (@def-truth-table) match in every
 | F | T | T | F | F | F |
 | F | F | T | T | T | T |
 
-So the two propositions are logically equivalent (@def-logical-equivalence).
+So the two propositions are logically equivalent (@def-logically-equivalent).
 
 :::
 

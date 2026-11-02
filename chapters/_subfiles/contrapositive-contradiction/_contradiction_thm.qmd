@@ -27,7 +27,7 @@ which are the rows where $P$ is true:
 | F | T | T | F | F |
 | F | F | T | F | F |
 
-The first and last columns match in every row (@def-logical-equivalence).
+The first and last columns match in every row (@def-logically-equivalent).
 
 :::
 
