@@ -11,6 +11,8 @@ format:
     output-file: equivalence-negation.docx
 ---
 
+{{< include ../latex-macros/macros.qmd >}}
+
 ::: {.callout-note appearance='simple' collapse=true}
 ## Source
 
