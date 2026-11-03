@@ -6,7 +6,7 @@ Winter 2027
 
 Published
 
-Last modified: 2026-11-02 15:55:22 (PST)
+Last modified: 2026-11-02 22:26:19 (PST)
 
 > **NOTE:**
 >
@@ -321,7 +321,7 @@ Please fill out the anonymous start-of-quarter survey before class on Friday, Ja
 
 ## Anonymous Feedback
 
-Unlike the start-of-quarter survey, the anonymous feedback form (link **TBD**, to be posted on Canvas) stays open all quarter, so you can use it at any time. Tell me what is working, what is not, and how I could improve the course. I read every response.
+Unlike the start-of-quarter survey, the [anonymous feedback form](https://docs.google.com/forms/d/e/1FAIpQLSdGo-31iMGMyFMAMxgwGkPVa2mK4vK8lGEBN6fxCGwuZcfV-w/viewform) stays open all quarter, so you can use it at any time. Tell me what is working, what is not, and how I could improve the course. I read every response.
 
 Back to top
 
