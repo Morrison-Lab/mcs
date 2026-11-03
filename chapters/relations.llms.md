@@ -6,7 +6,7 @@ Relations between sets, their properties, equivalence relations, partitions and 
 
 Published
 
-Last modified: 2026-11-02 14:59:27 (PST)
+Last modified: 2026-11-02 15:55:22 (PST)
 
 > **NOTE:**
 >
@@ -607,7 +607,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 > **NOTE:**
 >
-> **Definition 16 (Domain of a function)** The **domain** of a function $f : A \to B$ ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)) ([Wikipedia contributors 2026h](#ref-wikipedia_domain_of_a_function)) is the set $A$ of elements that $f$ assigns values to.
+> **Definition 16 (Domain)** The **domain** ([Wikipedia contributors 2026h](#ref-wikipedia_domain_of_a_function)) of a [function](../chapters/functional-programming.llms.md#def-function) $f : A \to B$ is the set $A$ of elements that $f$ assigns values to.
 
 > **NOTE:**
 >
@@ -621,7 +621,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 > **NOTE:**
 >
-> **Example 23 (The graph of a length function)** Let $\operatorname{len}_K : K \to \mathbb{N}$ ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function), [Definition: Natural numbers (our convention)](../chapters/sets.llms.md#def-natural-numbers)) give the length of each word of the set $K$ of [Exercise 6](#exr-same-length), so $\operatorname{len}_K(a) = \operatorname{len}(a)$, as in [Example 18](#exm-same-length). Its domain ([Definition 16](#def-function-domain)) is $K$ and its codomain ([Definition 17](#def-codomain)) is $\mathbb{N}$. Its graph ([Definition 18](#def-graph)) is the set of six pairs
+> **Example 23 (The graph of a length function)** Let $\operatorname{len}_K : K \to \mathbb{N}$ ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function), [Definition: Natural numbers (our convention)](../chapters/sets.llms.md#def-natural-numbers)) give the length of each word of the set $K$ of [Exercise 6](#exr-same-length), so $\operatorname{len}_K(a) = \operatorname{len}(a)$, as in [Example 18](#exm-same-length). Its [domain](#def-domain) is $K$ and its [codomain](#def-codomain) is $\mathbb{N}$. Its graph ([Definition 18](#def-graph)) is the set of six pairs
 >
 > $${\mathopen{}\left\{(\text{if}, 2), (\text{let}, 3), (\text{cond}, 4), (\text{list}, 4), (\text{cons}, 4), (\text{define}, 6)\right\}\mathclose{}},$$
 >
@@ -697,7 +697,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 > **Example 26 (The images of two functions)**  
 >
 > - The function $\operatorname{len}_K : K \to \mathbb{N}$ of [Example 23](#exm-graph-length) has the image ([Definition 19](#def-image)) $\operatorname{len}_K(K) = {\mathopen{}\left\{2, 3, 4, 6\right\}\mathclose{}}$, the lengths that occur. Most natural numbers, such as 1 and 5, are in its codomain ([Definition 17](#def-codomain)) $\mathbb{N}$ but not in its image.
-> - The function $b : G \to G$ of [Example 24](#exm-function-or-not) has domain ([Definition 16](#def-function-domain)) and codomain $G$, and its image is all of $G$, since each element of $G$ is beaten by some element.
+> - The function $b : G \to G$ of [Example 24](#exm-function-or-not) has [domain](#def-domain) and codomain $G$, and its image is all of $G$, since each element of $G$ is beaten by some element.
 
 > **NOTE:**
 >
@@ -867,7 +867,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 - [Definition 13 (Equivalence relation)](#def-equivalence-relation)
 - [Definition 14 (Equivalence class)](#def-equivalence-class)
 - [Definition 15 (Partition of a set)](#def-set-partition)
-- [Definition 16 (Domain of a function)](#def-function-domain)
+- [Definition 16 (Domain)](#def-domain)
 - [Definition 17 (Codomain)](#def-codomain)
 - [Definition 18 (Graph of a function)](#def-graph)
 - [Definition 19 (Image)](#def-image)

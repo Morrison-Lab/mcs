@@ -6,7 +6,7 @@ Propositions, connectives, and conditionals
 
 Published
 
-Last modified: 2026-11-02 14:59:27 (PST)
+Last modified: 2026-11-02 15:55:22 (PST)
 
 > **NOTE:**
 >
@@ -165,7 +165,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 > **NOTE:**
 >
-> **Definition 7 (Truth table)** A **truth table** for a proposition built from $P_1, \ldots, P_n$ with logical connectives ([Definition 3](#def-logical-connective)) has one row for each of the $2^n$ combinations of truth values of $P_1, \ldots, P_n$, and gives the truth value of the proposition in each row.
+> **Definition 7 (Truth table)** A **truth table** ([Wikipedia contributors 2026k](#ref-wikipedia_truth_table)) for a [proposition](#def-proposition) built from [propositions](#def-proposition) $P_1, \ldots, P_n$ with [logical connectives](#def-logical-connective) has one row for each of the $2^n$ combinations of truth values of $P_1, \ldots, P_n$, and gives the truth value of the proposition in each row.
 
 > **NOTE:**
 >
@@ -368,5 +368,7 @@ Wikipedia contributors. 2026h. *Negation — Wikipedia, the Free Encyclopedia*. 
 Wikipedia contributors. 2026i. *Predicate (Mathematical Logic) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Predicate_(mathematical_logic)>.
 
 Wikipedia contributors. 2026j. *Proposition — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Proposition>.
+
+Wikipedia contributors. 2026k. *Truth Table — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Truth_table>.
 
 Back to top

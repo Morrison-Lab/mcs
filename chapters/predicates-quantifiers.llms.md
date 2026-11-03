@@ -6,7 +6,7 @@ For all, there exists, and the order they come in
 
 Published
 
-Last modified: 2026-11-02 14:59:27 (PST)
+Last modified: 2026-11-02 15:55:22 (PST)
 
 > **NOTE:**
 >
@@ -41,7 +41,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 > **NOTE:**
 >
-> *Remark 1* (Predicates with more than one variable). A predicate can have more than one variable: “$x < y$” is a predicate $P(x, y)$ in the two variables $x$ and $y$. Its domain ([Definition 1](#def-domain)) is a set of pairs, such as the pairs $(x, y)$ of real numbers.
+> *Remark 1* (Predicates with more than one variable). A predicate can have more than one variable: “$x < y$” is a predicate $P(x, y)$ in the two variables $x$ and $y$. Its [domain](#def-domain-of-discourse) is a set of pairs, such as the pairs $(x, y)$ of real numbers.
 
 > **NOTE:**
 >
@@ -117,7 +117,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 > **NOTE:**
 >
-> **Definition 5 (Vacuous truth)** A universally quantified proposition $\forall x \in S, P(x)$ whose domain $S$ is empty is **vacuously true**: it is true, because $S$ has no element $x$ for which $P(x)$ could be false.
+> **Definition 5 (Vacuous truth)** A statement of the form “every element of $A$ has property $P$” is **vacuously true** ([Wikipedia contributors 2026e](#ref-wikipedia_vacuous_truth)) when $A$ is the [empty set](../chapters/sets.llms.md#def-empty-set): $A$ has no elements, so no element of $A$ fails to have property $P$.
 
 # 3 Counterexamples
 
@@ -235,7 +235,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 # Definitions on this page
 
-- [Definition 1 (Domain (domain of discourse, universe of discourse))](#def-domain)
+- [Definition 1 (Domain (domain of discourse, universe of discourse))](#def-domain-of-discourse)
 - [Definition 2 (Quantifier)](#def-quantifier)
 - [Definition 3 (Universal quantifier)](#def-universal-quantifier)
 - [Definition 4 (Existential quantifier)](#def-existential-quantifier)
@@ -251,5 +251,7 @@ Wikipedia contributors. 2026b. *Existential Quantification — Wikipedia, the Fr
 Wikipedia contributors. 2026c. *Quantifier (Logic) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Quantifier_(logic)>.
 
 Wikipedia contributors. 2026d. *Universal Quantification — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Universal_quantification>.
+
+Wikipedia contributors. 2026e. *Vacuous Truth — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Vacuous_truth>.
 
 Back to top

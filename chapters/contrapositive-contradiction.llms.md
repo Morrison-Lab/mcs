@@ -6,7 +6,7 @@ Proving a statement by way of its negation
 
 Published
 
-Last modified: 2026-11-02 14:59:27 (PST)
+Last modified: 2026-11-02 15:55:22 (PST)
 
 > **NOTE:**
 >
@@ -53,7 +53,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 > **NOTE:**
 >
-> *Remark 1* (Two meanings of $\equiv$, and the mod operator). The symbol $\equiv$ also means logical equivalence ([Definition: Logical equivalence](../chapters/equivalence-negation.llms.md#def-logical-equivalence)). The “$(\operatorname{mod} n)$” after it says which meaning is in use: $23 \equiv 8 \pmod{5}$ is a statement about two integers, and $P \equiv Q$ is a statement about two propositions.
+> *Remark 1* (Two meanings of $\equiv$, and the mod operator). The symbol $\equiv$ also means [logical equivalence](../chapters/equivalence-negation.llms.md#def-logically-equivalent). The “$(\operatorname{mod} n)$” after it says which meaning is in use: $23 \equiv 8 \pmod{5}$ is a statement about two integers, and $P \equiv Q$ is a statement about two propositions.
 >
 > Congruence is related to the mod operator of a programming language, but it is not the same thing. In Racket, `(modulo 23 5)` is the number $3$, while $23 \equiv 8 \pmod{5}$ is a proposition ([Definition: Proposition (statement)](../chapters/propositional-logic.llms.md#def-proposition)), which is true or false.
 
@@ -92,7 +92,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 > **NOTE:**
 >
-> *Proof*. By the definition of [implies](../chapters/propositional-logic.llms.md#def-implies), $P \Rightarrow Q$ is false exactly when $P$ is true and $Q$ is false. By the same definition, $\neg Q \Rightarrow \neg P$ is false exactly when $\neg Q$ is true and $\neg P$ is false, that is, exactly when $Q$ is false and $P$ is true. So the two [propositions](../chapters/propositional-logic.llms.md#def-proposition) are false in the same row of a [truth table](../chapters/propositional-logic.llms.md#def-truth-table) and true in the other three, which is [Definition: Logically equivalent](https://morrison-lab.github.io/mds/proof-writing.html#def-logically-equivalent).
+> *Proof*. By the definition of [implies](../chapters/propositional-logic.llms.md#def-implies), $P \Rightarrow Q$ is false exactly when $P$ is true and $Q$ is false. By the same definition, $\neg Q \Rightarrow \neg P$ is false exactly when $\neg Q$ is true and $\neg P$ is false, that is, exactly when $Q$ is false and $P$ is true. So the two [propositions](../chapters/propositional-logic.llms.md#def-proposition) are false in the same row of a [truth table](../chapters/propositional-logic.llms.md#def-truth-table) and true in the other three, which is [Definition: Logically equivalent](../chapters/equivalence-negation.llms.md#def-logically-equivalent).
 
 > **NOTE:**
 >
@@ -108,7 +108,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 >
 > **Example 4 (A product not divisible by** $5$) Claim: let $x$ and $y$ be integers. If $5 \nmid xy$, then $5 \nmid x$ and $5 \nmid y$.
 >
-> A direct proof would start from $5 \nmid xy$, which says only that $xy$ is not $5$ times an integer, and gives no equation to work with. By De Morgan’s laws ([Theorem: De Morgan’s laws](../chapters/equivalence-negation.llms.md#thm-de-morgan-logic)), the negation of “$5 \nmid x$ and $5 \nmid y$” is “$5 \mid x$ or $5 \mid y$”, so the contrapositive ([Definition 2](#def-contrapositive)) is “if $5 \mid x$ or $5 \mid y$, then $5 \mid xy$”. We prove it by cases ([Definition: Proof by cases](../chapters/direct-proof.llms.md#def-proof-by-cases)).
+> A direct proof would start from $5 \nmid xy$, which says only that $xy$ is not $5$ times an integer, and gives no equation to work with. By De Morgan’s laws ([Theorem: De Morgan’s laws for propositions](../chapters/equivalence-negation.llms.md#thm-de-morgan-logic)), the negation of “$5 \nmid x$ and $5 \nmid y$” is “$5 \mid x$ or $5 \mid y$”, so the contrapositive ([Definition 2](#def-contrapositive)) is “if $5 \mid x$ or $5 \mid y$, then $5 \mid xy$”. We prove it by cases ([Definition: Proof by cases (proof by exhaustion)](../chapters/direct-proof.llms.md#def-proof-by-cases)).
 >
 > **Case 1:** $5 \mid x$. Then $x = 5c$ for some integer $c$ ([Definition: Divides](../chapters/direct-proof.llms.md#def-divides)), so
 >
@@ -223,7 +223,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 > |  F  |  T  |    T     |        F         |                   F                   |
 > |  F  |  F  |    T     |        F         |                   F                   |
 >
-> The first and last columns match in every row ([Definition: Logical equivalence](../chapters/equivalence-negation.llms.md#def-logical-equivalence)).
+> The first and last columns match in every row, so the two are [logically equivalent](../chapters/equivalence-negation.llms.md#def-logically-equivalent).
 
 > **NOTE:**
 >

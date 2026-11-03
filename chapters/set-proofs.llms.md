@@ -6,7 +6,7 @@ Membership, subsets and set equality
 
 Published
 
-Last modified: 2026-11-02 14:59:27 (PST)
+Last modified: 2026-11-02 15:55:22 (PST)
 
 > **NOTE:**
 >
@@ -96,7 +96,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 >
 > **Example 2 (A subset proof by contrapositive)** Claim: ${\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x + y > 2\right\}\mathclose{}} \subseteq {\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x > 1 \text{ or } y > 1\right\}\mathclose{}}$. If two numbers add up to more than 2, at least one of them is more than 1.
 >
-> We use the contrapositive outline of [Remark 2](#rem-subset-template). Suppose $p \notin {\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x > 1 \text{ or } y > 1\right\}\mathclose{}}$. If $p$ is not a pair of real numbers, then $p$ is not in the left-hand set either, since every element of that set is a pair of real numbers. Otherwise $p = (a, b)$ with $a$ and $b$ real, and “$a > 1$ or $b > 1$” is false. By De Morgan’s laws ([Theorem: De Morgan’s laws](../chapters/equivalence-negation.llms.md#thm-de-morgan-logic)), $a > 1$ is false and $b > 1$ is false, that is, $a \le 1$ and $b \le 1$, so $a + b \le 1 + 1 = 2$. So $p \notin {\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x + y > 2\right\}\mathclose{}}$. So the left-hand set is a subset of the right-hand set.
+> We use the contrapositive outline of [Remark 2](#rem-subset-template). Suppose $p \notin {\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x > 1 \text{ or } y > 1\right\}\mathclose{}}$. If $p$ is not a pair of real numbers, then $p$ is not in the left-hand set either, since every element of that set is a pair of real numbers. Otherwise $p = (a, b)$ with $a$ and $b$ real, and “$a > 1$ or $b > 1$” is false. By De Morgan’s laws ([Theorem: De Morgan’s laws for propositions](../chapters/equivalence-negation.llms.md#thm-de-morgan-logic)), $a > 1$ is false and $b > 1$ is false, that is, $a \le 1$ and $b \le 1$, so $a + b \le 1 + 1 = 2$. So $p \notin {\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x + y > 2\right\}\mathclose{}}$. So the left-hand set is a subset of the right-hand set.
 >
 > The contrapositive turns the conclusion “$x > 1$ or $y > 1$”, which does not say which number is large, into the hypothesis “$a \le 1$ and $b \le 1$”, which says something about both.
 
@@ -122,7 +122,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 > **NOTE:**
 >
-> *Solution 3*. $A \cup (A \cap B) \subseteq A$. Let $x \in A \cup (A \cap B)$. Then $x \in A$ or $x \in A \cap B$. In the first case, $x \in A$. In the second case, $x \in A$ and $x \in B$, so again $x \in A$. Either way, $x \in A$ ([Definition: Proof by cases](../chapters/direct-proof.llms.md#def-proof-by-cases)).
+> *Solution 3*. $A \cup (A \cap B) \subseteq A$. Let $x \in A \cup (A \cap B)$. Then $x \in A$ or $x \in A \cap B$. In the first case, $x \in A$. In the second case, $x \in A$ and $x \in B$, so again $x \in A$. Either way, $x \in A$ ([Definition: Proof by cases (proof by exhaustion)](../chapters/direct-proof.llms.md#def-proof-by-cases)).
 >
 > $A \subseteq A \cup (A \cap B)$. Let $x \in A$. Then “$x \in A$ or $x \in A \cap B$” is true, since its first part is true ([Definition: Or](../chapters/propositional-logic.llms.md#def-or)), so $x \in A \cup (A \cap B)$.
 >

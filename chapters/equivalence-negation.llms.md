@@ -6,7 +6,7 @@ When two propositions say the same thing, and how to say the opposite
 
 Published
 
-Last modified: 2026-11-02 14:59:27 (PST)
+Last modified: 2026-11-02 15:55:22 (PST)
 
 > **NOTE:**
 >
@@ -35,15 +35,15 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 > **NOTE:**
 >
-> **Definition 1 (Logical equivalence)** Two propositions $A$ and $B$, each built from some of the propositions $P_1, \ldots, P_n$, are **logically equivalent**, written $A \equiv B$, if they have the same truth value in every row of a truth table ([Definition: Truth table](../chapters/propositional-logic.llms.md#def-truth-table)), that is, for every combination of truth values of $P_1, \ldots, P_n$.
+> **Definition 1 (Logically equivalent)** Two [propositions](../chapters/propositional-logic.llms.md#def-proposition) $A$ and $B$, each built from some or all of the propositions $P_1, \ldots, P_n$ with [logical connectives](../chapters/propositional-logic.llms.md#def-logical-connective), are **logically equivalent** ([Wikipedia contributors 2026b](#ref-wikipedia_logical_equivalence)), written $A \equiv B$, when they have the same truth value in every row of a [truth table](../chapters/propositional-logic.llms.md#def-truth-table) on $P_1, \ldots, P_n$.
 
 > **NOTE:**
 >
-> **Example 1 (An equivalence)** By [Exercise 1](#exr-absorption), $P \lor (P \land Q) \equiv P$ ([Definition 1](#def-logical-equivalence)): the truth table of $P \lor (P \land Q)$ has the same column as $P$, in a table with columns for both $P$ and $Q$.
+> **Example 1 (An equivalence)** By [Exercise 1](#exr-absorption), $P \lor (P \land Q)$ is [logically equivalent](#def-logically-equivalent) to $P$: the truth table of $P \lor (P \land Q)$ has the same column as $P$, in a table with columns for both $P$ and $Q$.
 
 > **NOTE:**
 >
-> *Remark 1* (Notation for logical equivalence). $A \equiv B$ ([Definition 1](#def-logical-equivalence)) is a claim about $A$ and $B$, not a new proposition built from them with a logical connective ([Definition: Logical connective](../chapters/propositional-logic.llms.md#def-logical-connective)). Some books write $A \Leftrightarrow B$ or $A \iff B$ for it instead, which is easy to confuse with the biconditional ([Definition: If and only if](../chapters/propositional-logic.llms.md#def-iff)); these notes use $\equiv$.
+> *Remark 1* (Notation for logical equivalence). $A \equiv B$, read “$A$ is [logically equivalent](#def-logically-equivalent) to $B$”, is a claim about $A$ and $B$, not a new proposition built from them with a logical connective ([Definition: Logical connective](../chapters/propositional-logic.llms.md#def-logical-connective)). Some books write $A \Leftrightarrow B$ or $A \iff B$ for it instead, which is easy to confuse with the biconditional ([Definition: If and only if](../chapters/propositional-logic.llms.md#def-iff)); these notes use $\equiv$.
 >
 > Logical equivalence can be chained: if $A \equiv B$ and $B \equiv C$, then $A \equiv C$, since in each row $A$ has the value of $B$, which has the value of $C$.
 
@@ -51,7 +51,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 >
 > **Exercise 2 (Not both)** A continuous integration server runs two test suites. Let $P$ be “the unit tests pass” and $Q$ be “the integration tests pass”.
 >
-> Is “it is not the case that both suites pass”, $\neg (P \land Q)$, logically equivalent ([Definition 1](#def-logical-equivalence)) to “neither suite passes”, $\neg P \land \neg Q$?
+> Is “it is not the case that both suites pass”, $\neg (P \land Q)$, [logically equivalent](#def-logically-equivalent) to “neither suite passes”, $\neg P \land \neg Q$?
 
 > **NOTE:**
 >
@@ -98,7 +98,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 > **NOTE:**
 >
-> **Theorem 1 (Equivalence is a tautological biconditional)** For propositions $A$ and $B$, $A \equiv B$ ([Definition 1](#def-logical-equivalence)) exactly when $A \Leftrightarrow B$ is a tautology ([Definition 2](#def-tautology)).
+> **Theorem 1 (Equivalence is a tautological biconditional)** For propositions $A$ and $B$, $A$ and $B$ are [logically equivalent](#def-logically-equivalent) exactly when $A \Leftrightarrow B$ is a [tautology](#def-tautology).
 
 > **NOTE:**
 >
@@ -181,7 +181,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 > **NOTE:**
 >
-> **Theorem 3 (Double negation)** For a proposition $P$, $\neg \neg P \equiv P$ ([Definition 1](#def-logical-equivalence)).
+> **Theorem 3 (Double negation)** For a proposition $P$, $\neg \neg P$ is [logically equivalent](#def-logically-equivalent) to $P$: $\neg \neg P \equiv P$.
 
 > **NOTE:**
 >
@@ -200,7 +200,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 > **NOTE:**
 >
-> **Theorem 4 (Replacing a part by an equivalent part)** If $A \equiv B$ ([Definition 1](#def-logical-equivalence)), then replacing $A$ by $B$ inside a larger proposition gives a proposition logically equivalent to the larger one. In particular, $\neg A \equiv \neg B$.
+> **Theorem 4 (Replacing a part by an equivalent part)** If $A$ and $B$ are [logically equivalent](#def-logically-equivalent), $A \equiv B$, then replacing $A$ by $B$ inside a larger proposition gives a proposition logically equivalent to the larger one. In particular, $\neg A \equiv \neg B$.
 
 > **NOTE:**
 >
@@ -208,31 +208,33 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 > **NOTE:**
 >
-> **Example 7 (Replacing a part)** Since $P \lor (P \land Q) \equiv P$ ([Example 1](#exm-logical-equivalence)), [Theorem 4](#thm-substitution) gives $R \land (P \lor (P \land Q)) \equiv R \land P$ and $\neg (P \lor (P \land Q)) \equiv \neg P$.
+> **Example 7 (Replacing a part)** Since $P \lor (P \land Q) \equiv P$ ([Example 1](#exm-logical-equivalence)), [Theorem 4](#thm-substitution-logic) gives $R \land (P \lor (P \land Q)) \equiv R \land P$ and $\neg (P \lor (P \land Q)) \equiv \neg P$.
 
 > **NOTE:**
 >
-> **Theorem 5 (De Morgan’s laws)** For propositions $P$ and $Q$ ([Wikipedia contributors 2026](#ref-wikipedia_de_morgans_laws)):
+> **Theorem 5 (De Morgan’s laws for propositions)** For any [propositions](../chapters/propositional-logic.llms.md#def-proposition) $P$ and $Q$ ([Wikipedia contributors 2026a](#ref-wikipedia_de_morgans_laws)):
 >
-> 1.  $\neg (P \land Q) \equiv \neg P \lor \neg Q$;
-> 2.  $\neg (P \lor Q) \equiv \neg P \land \neg Q$.
+> $$\begin{aligned}
+> \neg (P \land Q) &\equiv \neg P \lor \neg Q \\
+> \neg (P \lor Q) &\equiv \neg P \land \neg Q
+> \end{aligned}$$
 
 > **NOTE:**
 >
-> *Proof*. For law 1, the fourth and last columns of this table match in every row:
+> *Proof*. Each side of each law is built from $P$ and $Q$, so by [Definition 1](#def-logically-equivalent) it is enough to compare the two sides in each of the four rows of a [truth table](../chapters/propositional-logic.llms.md#def-truth-table):
 >
-> | $P$ | $Q$ | $P \land Q$ | $\neg (P \land Q)$ | $\neg P$ | $\neg Q$ | $\neg P \lor \neg Q$ |
-> |:---:|:---:|:-----------:|:------------------:|:--------:|:--------:|:--------------------:|
-> |  T  |  T  |      T      |         F          |    F     |    F     |          F           |
-> |  T  |  F  |      F      |         T          |    F     |    T     |          T           |
-> |  F  |  T  |      F      |         T          |    T     |    F     |          T           |
-> |  F  |  F  |      F      |         T          |    T     |    T     |          T           |
+> | $P$ | $Q$ | $\neg (P \land Q)$ | $\neg P \lor \neg Q$ | $\neg (P \lor Q)$ | $\neg P \land \neg Q$ |
+> |:--:|:--:|:--:|:--:|:--:|:--:|
+> | T | T | F | F | F | F |
+> | T | F | T | T | F | F |
+> | F | T | T | T | F | F |
+> | F | F | T | T | T | T |
 >
-> Law 2 follows from law 1. Law 1 holds for any two propositions, so it holds for $\neg P$ and $\neg Q$: $$\neg (\neg P \land \neg Q) \equiv \neg \neg P \lor \neg \neg Q.$$ By double negation ([Theorem 3](#thm-double-negation)) and [Theorem 4](#thm-substitution), the right side is logically equivalent to $P \lor Q$, so $$\neg (\neg P \land \neg Q) \equiv P \lor Q.$$ Negating both sides ([Theorem 4](#thm-substitution)) gives $$\neg \neg (\neg P \land \neg Q) \equiv \neg (P \lor Q),$$ and by double negation the left side is logically equivalent to $\neg P \land \neg Q$. So $\neg (P \lor Q) \equiv \neg P \land \neg Q$.
+> The third and fourth columns agree in every row, which proves the first law, and the fifth and sixth columns agree in every row, which proves the second.
 
 > **NOTE:**
 >
-> **Example 8 (Neither coordinate positive)** For real numbers $x$ and $y$, by law 2 of [Theorem 5](#thm-de-morgan-logic), “not ($x > 0$ or $y > 0$)” is logically equivalent to “$x \le 0$ and $y \le 0$”.
+> **Example 8 (Neither coordinate positive)** For real numbers $x$ and $y$, by the second of [De Morgan’s laws](#thm-de-morgan-logic), “not ($x > 0$ or $y > 0$)” is logically equivalent to “$x \le 0$ and $y \le 0$”.
 
 > **NOTE:**
 >
@@ -264,7 +266,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 > **NOTE:**
 >
-> *Proof*. By double negation ([Theorem 3](#thm-double-negation)), $P \Rightarrow Q \equiv \neg \neg (P \Rightarrow Q)$. By [Theorem 6](#thm-negate-conditional) and [Theorem 4](#thm-substitution), $\neg \neg (P \Rightarrow Q) \equiv \neg (P \land \neg Q)$. By De Morgan’s law 1 ([Theorem 5](#thm-de-morgan-logic)), $\neg (P \land \neg Q) \equiv \neg P \lor \neg \neg Q$, and by double negation again, that is logically equivalent to $\neg P \lor Q$.
+> *Proof*. By double negation ([Theorem 3](#thm-double-negation)), $P \Rightarrow Q \equiv \neg \neg (P \Rightarrow Q)$. By [Theorem 6](#thm-negate-conditional) and [Theorem 4](#thm-substitution-logic), $\neg \neg (P \Rightarrow Q) \equiv \neg (P \land \neg Q)$. By the first of [De Morgan’s laws](#thm-de-morgan-logic), $\neg (P \land \neg Q) \equiv \neg P \lor \neg \neg Q$, and by double negation again, that is logically equivalent to $\neg P \lor Q$.
 
 > **NOTE:**
 >
@@ -286,7 +288,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 > **NOTE:**
 >
-> **Theorem 7 (Negating a quantifier)** For a set $S$ and a predicate $P(x)$ ([Definition: Predicate](../chapters/propositional-logic.llms.md#def-predicate)) whose domain ([Definition: Domain (domain of discourse, universe of discourse)](../chapters/predicates-quantifiers.llms.md#def-domain)) is $S$:
+> **Theorem 7 (Negating a quantifier)** For a set $S$ and a [predicate](../chapters/propositional-logic.llms.md#def-predicate) $P(x)$ whose [domain](../chapters/predicates-quantifiers.llms.md#def-domain-of-discourse) is $S$:
 >
 > 1.  $\neg (\forall x \in S, P(x))$ and $\exists x \in S, \neg P(x)$ have the same truth value;
 > 2.  $\neg (\exists x \in S, P(x))$ and $\forall x \in S, \neg P(x)$ have the same truth value.
@@ -304,7 +306,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 > **NOTE:**
 >
-> *Remark 4* (De Morgan’s laws for quantifiers). [Theorem 7](#thm-negate-quantifiers) is often written $\neg \forall x, P(x) \equiv \exists x, \neg P(x)$ and $\neg \exists x, P(x) \equiv \forall x, \neg P(x)$. These notes say “has the same truth value” instead, because $P(x)$ is a predicate, not a proposition, so [Definition 1](#def-logical-equivalence), which compares truth tables, does not apply.
+> *Remark 4* (De Morgan’s laws for quantifiers). [Theorem 7](#thm-negate-quantifiers) is often written $\neg \forall x, P(x) \equiv \exists x, \neg P(x)$ and $\neg \exists x, P(x) \equiv \forall x, \neg P(x)$. These notes say “has the same truth value” instead, because $P(x)$ is a predicate, not a proposition, so [Definition 1](#def-logically-equivalent), which compares truth tables, does not apply.
 >
 > On a finite set $S = \{a, b\}$, $\forall x \in S, P(x)$ has the same truth value as $P(a) \land P(b)$, and $\exists x \in S, P(x)$ has the same truth value as $P(a) \lor P(b)$, so [Theorem 7](#thm-negate-quantifiers) is De Morgan’s laws ([Theorem 5](#thm-de-morgan-logic)) applied to $P(a)$ and $P(b)$.
 >
@@ -341,12 +343,14 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 # Definitions on this page
 
-- [Definition 1 (Logical equivalence)](#def-logical-equivalence)
+- [Definition 1 (Logically equivalent)](#def-logically-equivalent)
 - [Definition 2 (Tautology)](#def-tautology)
 - [Definition 3 (Contradiction)](#def-contradiction)
 
 # References
 
-Wikipedia contributors. 2026. *De Morgan’s Laws — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/De_Morgan%27s_laws>.
+Wikipedia contributors. 2026a. *De Morgan’s Laws — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/De_Morgan%27s_laws>.
+
+Wikipedia contributors. 2026b. *Logical Equivalence — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Logical_equivalence>.
 
 Back to top

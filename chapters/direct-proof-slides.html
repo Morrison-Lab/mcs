@@ -265,7 +265,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-02 14:59:27 (PST)</p>
+  <p class="date">Last modified: 2026-11-02 15:55:22 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -315,32 +315,32 @@
 </section>
 <section class="slide level2">
 
-<div id="def-argument" class="theorem definition">
+<div id="def-logical-argument" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (Argument)</strong></span> An <strong>argument</strong> is a list of propositions (<a href="../chapters/propositional-logic.html#def-proposition">Definition: Proposition (statement)</a>), called its premises, together with one more proposition, called its conclusion. An argument is written with “so” or <span class="math inline">\(\therefore\)</span> before its conclusion.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="rem-argument-premises" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (Two uses of “premise” and “conclusion”). </span>The premise and conclusion of a conditional <span class="math inline">\(P \Rightarrow Q\)</span> (<a href="../chapters/propositional-logic.html#rem-implies-terms">Remark: Names for the parts, and other notation</a>) are its parts <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>. The premises and conclusion of an argument (<a href="#/def-argument" class="quarto-xref">Definition&nbsp;1</a>) are whole propositions: in argument 1 of <a href="#/exr-valid-arguments" class="quarto-xref">Exercise&nbsp;1</a>, the premises are <span class="math inline">\(P \Rightarrow Q\)</span> and <span class="math inline">\(P\)</span>, and the conclusion is <span class="math inline">\(Q\)</span>.</p>
+<p><span class="proof-title"><em>Remark 1</em> (Two uses of “premise” and “conclusion”). </span>The premise and conclusion of a conditional <span class="math inline">\(P \Rightarrow Q\)</span> (<a href="../chapters/propositional-logic.html#rem-implies-terms">Remark: Names for the parts, and other notation</a>) are its parts <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>. The premises and conclusion of an <a href="#/def-logical-argument">argument</a> are whole propositions: in argument 1 of <a href="#/exr-valid-arguments" class="quarto-xref">Exercise&nbsp;1</a>, the premises are <span class="math inline">\(P \Rightarrow Q\)</span> and <span class="math inline">\(P\)</span>, and the conclusion is <span class="math inline">\(Q\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-logical-entailment" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Logical entailment (logical consequence, deductive consequence))</strong></span> Propositions or predicates <span class="math inline">\(P_1, \ldots, P_n\)</span> (<a href="../chapters/propositional-logic.html#def-proposition">Definition: Proposition (statement)</a>, <a href="../chapters/propositional-logic.html#def-predicate">Definition: Predicate</a>) <strong>logically entail</strong> <span class="citation" data-cites="wikipedia_logical_consequence">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026b</a>)</span> a proposition or predicate <span class="math inline">\(Q\)</span> when every choice of values for their variables that makes all of <span class="math inline">\(P_1, \ldots, P_n\)</span> true also makes <span class="math inline">\(Q\)</span> true. Then <span class="math inline">\(Q\)</span> is a <strong>logical consequence</strong>, or <strong>deductive consequence</strong>, of <span class="math inline">\(P_1, \ldots, P_n\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 2 (Logical entailment (logical consequence, deductive consequence))</strong></span> Propositions or predicates <span class="math inline">\(P_1, \ldots, P_n\)</span> (<a href="../chapters/propositional-logic.html#def-proposition">Definition: Proposition (statement)</a>, <a href="../chapters/propositional-logic.html#def-predicate">Definition: Predicate</a>) <strong>logically entail</strong> <span class="citation" data-cites="wikipedia_logical_consequence">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026c</a>)</span> a proposition or predicate <span class="math inline">\(Q\)</span> when every choice of values for their variables that makes all of <span class="math inline">\(P_1, \ldots, P_n\)</span> true also makes <span class="math inline">\(Q\)</span> true. Then <span class="math inline">\(Q\)</span> is a <strong>logical consequence</strong>, or <strong>deductive consequence</strong>, of <span class="math inline">\(P_1, \ldots, P_n\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-logical-entailment-arguments" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1 (Entailment in the deployment arguments)</strong></span> In <a href="#/exr-valid-arguments" class="quarto-xref">Exercise&nbsp;1</a>, the premises of arguments 1, 3 and 4 (<a href="#/def-argument" class="quarto-xref">Definition&nbsp;1</a>) logically entail their conclusions (<a href="#/def-logical-entailment" class="quarto-xref">Definition&nbsp;2</a>). The premises of argument 2 do not: the values <span class="math inline">\(P\)</span> false and <span class="math inline">\(Q\)</span> true make both premises true and the conclusion false.</p>
+<p><span class="theorem-title"><strong>Example 1 (Entailment in the deployment arguments)</strong></span> In <a href="#/exr-valid-arguments" class="quarto-xref">Exercise&nbsp;1</a>, the premises of <a href="#/def-logical-argument">arguments</a> 1, 3 and 4 logically entail their conclusions (<a href="#/def-logical-entailment" class="quarto-xref">Definition&nbsp;2</a>). The premises of argument 2 do not: the values <span class="math inline">\(P\)</span> false and <span class="math inline">\(Q\)</span> true make both premises true and the conclusion false.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-rule-of-inference" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Rule of inference)</strong></span> A <strong>rule of inference</strong> is a pattern of argument (<a href="#/def-argument" class="quarto-xref">Definition&nbsp;1</a>), written in terms of propositions <span class="math inline">\(P, Q, \ldots\)</span>, whose premises logically entail its conclusion (<a href="#/def-logical-entailment" class="quarto-xref">Definition&nbsp;2</a>) whatever propositions are put in place of <span class="math inline">\(P, Q, \ldots\)</span>. It is written with its premises above a line and its conclusion below: <span class="math display">\[
+<p><span class="theorem-title"><strong>Definition 3 (Rule of inference)</strong></span> A <strong>rule of inference</strong> is a pattern of <a href="#/def-logical-argument">argument</a>, written in terms of propositions <span class="math inline">\(P, Q, \ldots\)</span>, whose premises logically entail its conclusion (<a href="#/def-logical-entailment" class="quarto-xref">Definition&nbsp;2</a>) whatever propositions are put in place of <span class="math inline">\(P, Q, \ldots\)</span>. It is written with its premises above a line and its conclusion below: <span class="math display">\[
 \frac{P_1, \ldots, P_n}{Q}.
 \]</span></p>
 </div>
@@ -422,7 +422,7 @@
 <section class="slide level2">
 
 <div id="def-integers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Integers)</strong></span> The <strong>integers</strong> <span class="citation" data-cites="wikipedia_integer">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026a</a>)</span> are the whole numbers, together with their negatives and <span class="math inline">\(0\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 4 (Integers)</strong></span> The <strong>integers</strong> <span class="citation" data-cites="wikipedia_integer">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026b</a>)</span> are the whole numbers, together with their negatives and <span class="math inline">\(0\)</span>:</p>
 <p><span class="math display">\[\mathbb{Z} \stackrel{\text{def}}{=}\mathopen{}\left\{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\right\}\mathclose{}\]</span></p>
 <p>An <strong>integer</strong> is an element of <span class="math inline">\(\mathbb{Z}\)</span>.</p>
 </div>
@@ -453,13 +453,13 @@
 <section class="slide level2">
 
 <div id="def-even-odd" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Even integer)</strong></span> An integer (<a href="#/def-integers" class="quarto-xref">Definition&nbsp;4</a>) <span class="math inline">\(n\)</span> is <strong>even</strong> <span class="citation" data-cites="wikipedia_parity_mathematics">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span> if <span class="math inline">\(n = 2k\)</span> for some integer <span class="math inline">\(k\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 7 (Even integer)</strong></span> An integer (<a href="#/def-integers" class="quarto-xref">Definition&nbsp;4</a>) <span class="math inline">\(n\)</span> is <strong>even</strong> <span class="citation" data-cites="wikipedia_parity_mathematics">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026e</a>)</span> if <span class="math inline">\(n = 2k\)</span> for some integer <span class="math inline">\(k\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-odd" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Odd integer)</strong></span> An integer (<a href="#/def-integers" class="quarto-xref">Definition&nbsp;4</a>) <span class="math inline">\(n\)</span> is <strong>odd</strong> <span class="citation" data-cites="wikipedia_parity_mathematics">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span> if <span class="math inline">\(n = 2k + 1\)</span> for some integer <span class="math inline">\(k\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 8 (Odd integer)</strong></span> An integer (<a href="#/def-integers" class="quarto-xref">Definition&nbsp;4</a>) <span class="math inline">\(n\)</span> is <strong>odd</strong> <span class="citation" data-cites="wikipedia_parity_mathematics">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026e</a>)</span> if <span class="math inline">\(n = 2k + 1\)</span> for some integer <span class="math inline">\(k\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -551,7 +551,7 @@
 <section class="slide level2">
 
 <div id="def-proof" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Proof)</strong></span> A <strong>proof</strong> <span class="citation" data-cites="wikipedia_mathematical_proof">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026c</a>)</span> of a proposition (<a href="../chapters/propositional-logic.html#def-proposition">Definition: Proposition (statement)</a>) is a finite list of statements that ends with that proposition, in which each statement is</p>
+<p><span class="theorem-title"><strong>Definition 10 (Proof)</strong></span> A <strong>proof</strong> <span class="citation" data-cites="wikipedia_mathematical_proof">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span> of a proposition (<a href="../chapters/propositional-logic.html#def-proposition">Definition: Proposition (statement)</a>) is a finite list of statements that ends with that proposition, in which each statement is</p>
 <ul>
 <li>an assumption,</li>
 <li>a definition,</li>
@@ -575,7 +575,7 @@
 <section class="slide level2">
 
 <div id="def-direct-proof" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Direct proof)</strong></span> A <strong>direct proof</strong> of a conditional <span class="math inline">\(P \Rightarrow Q\)</span> (<a href="../chapters/propositional-logic.html#def-implies">Definition: Implies</a>) is a proof (<a href="#/def-proof" class="quarto-xref">Definition&nbsp;10</a>) of <span class="math inline">\(Q\)</span> in which <span class="math inline">\(P\)</span> is an assumption.</p>
+<p><span class="theorem-title"><strong>Definition 11 (Direct proof)</strong></span> A <strong>direct proof</strong> <span class="citation" data-cites="wikipedia_direct_proof">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026a</a>)</span> of a <a href="../chapters/propositional-logic.html#def-proposition">proposition</a> <span class="math inline">\(Q\)</span> starts from the assumptions that <span class="math inline">\(Q\)</span> is stated under, if any, and reaches <span class="math inline">\(Q\)</span> through a chain of steps, each of which applies a definition, a previously proved <a href="https://morrison-lab.github.io/mds/proof-writing.html#def-result">result</a>, or one rule of logic or algebra to the assumptions or to earlier steps. A direct proof never assumes that <span class="math inline">\(Q\)</span> is false; compare <a href="../chapters/contrapositive-contradiction.html#def-proof-by-contradiction">proof by contradiction</a>, which does.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -652,7 +652,7 @@ n^2 + n = (2 k + 1)^2 + (2 k + 1) = (4 k^2 + 4 k + 1) + (2 k + 1) = 4 k^2 + 6 k 
 <section class="slide level2">
 
 <div id="def-proof-by-cases" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Proof by cases)</strong></span> A <strong>proof by cases</strong> splits the situation into cases that together cover every possibility, and proves the conclusion separately in each case.</p>
+<p><span class="theorem-title"><strong>Definition 12 (Proof by cases (proof by exhaustion))</strong></span> A <strong>proof by cases</strong> <span class="citation" data-cites="wikipedia_proof_by_exhaustion">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026f</a>)</span>, also called a <strong>proof by exhaustion</strong>, of a <a href="../chapters/propositional-logic.html#def-proposition">proposition</a> <span class="math inline">\(Q\)</span> lists <a href="../chapters/propositional-logic.html#def-proposition">propositions</a> <span class="math inline">\(C_1, \ldots, C_k\)</span>, the <em>cases</em>, shows that at least one of them is true, and proves <span class="math inline">\(C_i \Rightarrow Q\)</span> for each <span class="math inline">\(i\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -689,17 +689,23 @@ n^2 + n = (2 k + 1)^2 + (2 k + 1) = (4 k^2 + 4 k + 1) + (2 k + 1) = 4 k^2 + 6 k 
 <section class="slide level2 smaller scrollable" id="references">
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-wikipedia_direct_proof" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026a. <em>Direct Proof — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Direct_proof">https://en.wikipedia.org/wiki/Direct_proof</a>.
+</div>
 <div id="ref-wikipedia_integer" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026a. <em>Integer — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Integer">https://en.wikipedia.org/wiki/Integer</a>.
+Wikipedia contributors. 2026b. <em>Integer — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Integer">https://en.wikipedia.org/wiki/Integer</a>.
 </div>
 <div id="ref-wikipedia_logical_consequence" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026b. <em>Logical Consequence — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Logical_consequence">https://en.wikipedia.org/wiki/Logical_consequence</a>.
+Wikipedia contributors. 2026c. <em>Logical Consequence — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Logical_consequence">https://en.wikipedia.org/wiki/Logical_consequence</a>.
 </div>
 <div id="ref-wikipedia_mathematical_proof" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026c. <em>Mathematical Proof — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Mathematical_proof">https://en.wikipedia.org/wiki/Mathematical_proof</a>.
+Wikipedia contributors. 2026d. <em>Mathematical Proof — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Mathematical_proof">https://en.wikipedia.org/wiki/Mathematical_proof</a>.
 </div>
 <div id="ref-wikipedia_parity_mathematics" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026d. <em>Parity (Mathematics) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Parity_(mathematics)">https://en.wikipedia.org/wiki/Parity_(mathematics)</a>.
+Wikipedia contributors. 2026e. <em>Parity (Mathematics) — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Parity_(mathematics)">https://en.wikipedia.org/wiki/Parity_(mathematics)</a>.
+</div>
+<div id="ref-wikipedia_proof_by_exhaustion" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026f. <em>Proof by Exhaustion — <span>Wikipedia</span><span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Proof_by_exhaustion">https://en.wikipedia.org/wiki/Proof_by_exhaustion</a>.
 </div>
 </div>
 

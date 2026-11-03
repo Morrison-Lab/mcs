@@ -265,7 +265,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-02 14:59:27 (PST)</p>
+  <p class="date">Last modified: 2026-11-02 15:55:22 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -337,7 +337,7 @@
 <section class="slide level2">
 
 <div id="rem-congruence-notation" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (Two meanings of <span class="math inline">\(\equiv\)</span>, and the mod operator). </span>The symbol <span class="math inline">\(\equiv\)</span> also means logical equivalence (<a href="../chapters/equivalence-negation.html#def-logical-equivalence">Definition: Logical equivalence</a>). The “<span class="math inline">\((\operatorname{mod} n)\)</span>” after it says which meaning is in use: <span class="math inline">\(23 \equiv 8 \pmod{5}\)</span> is a statement about two integers, and <span class="math inline">\(P \equiv Q\)</span> is a statement about two propositions.</p>
+<p><span class="proof-title"><em>Remark 1</em> (Two meanings of <span class="math inline">\(\equiv\)</span>, and the mod operator). </span>The symbol <span class="math inline">\(\equiv\)</span> also means <a href="../chapters/equivalence-negation.html#def-logically-equivalent">logical equivalence</a>. The “<span class="math inline">\((\operatorname{mod} n)\)</span>” after it says which meaning is in use: <span class="math inline">\(23 \equiv 8 \pmod{5}\)</span> is a statement about two integers, and <span class="math inline">\(P \equiv Q\)</span> is a statement about two propositions.</p>
 <p>Congruence is related to the mod operator of a programming language, but it is not the same thing. In Racket, <code>(modulo 23 5)</code> is the number <span class="math inline">\(3\)</span>, while <span class="math inline">\(23 \equiv 8 \pmod{5}\)</span> is a proposition (<a href="../chapters/propositional-logic.html#def-proposition">Definition: Proposition (statement)</a>), which is true or false.</p>
 </div>
 </section></section>
@@ -403,7 +403,7 @@
 
 <div id="exm-five-product" class="theorem example">
 <p><span class="theorem-title"><strong>Example 4 (A product not divisible by <span class="math inline">\(5\)</span>)</strong></span> Claim: let <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> be integers. If <span class="math inline">\(5 \nmid xy\)</span>, then <span class="math inline">\(5 \nmid x\)</span> and <span class="math inline">\(5 \nmid y\)</span>.</p>
-<p>A direct proof would start from <span class="math inline">\(5 \nmid xy\)</span>, which says only that <span class="math inline">\(xy\)</span> is not <span class="math inline">\(5\)</span> times an integer, and gives no equation to work with. By De Morgan’s laws (<a href="../chapters/equivalence-negation.html#thm-de-morgan-logic">Theorem: De Morgan’s laws</a>), the negation of “<span class="math inline">\(5 \nmid x\)</span> and <span class="math inline">\(5 \nmid y\)</span>” is “<span class="math inline">\(5 \mid x\)</span> or <span class="math inline">\(5 \mid y\)</span>”, so the contrapositive (<a href="#/def-contrapositive" class="quarto-xref">Definition&nbsp;2</a>) is “if <span class="math inline">\(5 \mid x\)</span> or <span class="math inline">\(5 \mid y\)</span>, then <span class="math inline">\(5 \mid xy\)</span>”. We prove it by cases (<a href="../chapters/direct-proof.html#def-proof-by-cases">Definition: Proof by cases</a>).</p>
+<p>A direct proof would start from <span class="math inline">\(5 \nmid xy\)</span>, which says only that <span class="math inline">\(xy\)</span> is not <span class="math inline">\(5\)</span> times an integer, and gives no equation to work with. By De Morgan’s laws (<a href="../chapters/equivalence-negation.html#thm-de-morgan-logic">Theorem: De Morgan’s laws for propositions</a>), the negation of “<span class="math inline">\(5 \nmid x\)</span> and <span class="math inline">\(5 \nmid y\)</span>” is “<span class="math inline">\(5 \mid x\)</span> or <span class="math inline">\(5 \mid y\)</span>”, so the contrapositive (<a href="#/def-contrapositive" class="quarto-xref">Definition&nbsp;2</a>) is “if <span class="math inline">\(5 \mid x\)</span> or <span class="math inline">\(5 \mid y\)</span>, then <span class="math inline">\(5 \mid xy\)</span>”. We prove it by cases (<a href="../chapters/direct-proof.html#def-proof-by-cases">Definition: Proof by cases (proof by exhaustion)</a>).</p>
 <p><strong>Case 1: <span class="math inline">\(5 \mid x\)</span>.</strong> Then <span class="math inline">\(x = 5c\)</span> for some integer <span class="math inline">\(c\)</span> (<a href="../chapters/direct-proof.html#def-divides">Definition: Divides</a>), so</p>
 <p><span class="math display">\[
 \begin{aligned}

@@ -6,7 +6,7 @@ What follows from what, and how to write it down
 
 Published
 
-Last modified: 2026-11-02 14:59:27 (PST)
+Last modified: 2026-11-02 15:55:22 (PST)
 
 > **NOTE:**
 >
@@ -40,19 +40,19 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 > **NOTE:**
 >
-> *Remark 1* (Two uses of “premise” and “conclusion”). The premise and conclusion of a conditional $P \Rightarrow Q$ ([Remark: Names for the parts, and other notation](../chapters/propositional-logic.llms.md#rem-implies-terms)) are its parts $P$ and $Q$. The premises and conclusion of an argument ([Definition 1](#def-argument)) are whole propositions: in argument 1 of [Exercise 1](#exr-valid-arguments), the premises are $P \Rightarrow Q$ and $P$, and the conclusion is $Q$.
+> *Remark 1* (Two uses of “premise” and “conclusion”). The premise and conclusion of a conditional $P \Rightarrow Q$ ([Remark: Names for the parts, and other notation](../chapters/propositional-logic.llms.md#rem-implies-terms)) are its parts $P$ and $Q$. The premises and conclusion of an [argument](#def-logical-argument) are whole propositions: in argument 1 of [Exercise 1](#exr-valid-arguments), the premises are $P \Rightarrow Q$ and $P$, and the conclusion is $Q$.
 
 > **NOTE:**
 >
-> **Definition 2 (Logical entailment (logical consequence, deductive consequence))** Propositions or predicates $P_1, \ldots, P_n$ ([Definition: Proposition (statement)](../chapters/propositional-logic.llms.md#def-proposition), [Definition: Predicate](../chapters/propositional-logic.llms.md#def-predicate)) **logically entail** ([Wikipedia contributors 2026b](#ref-wikipedia_logical_consequence)) a proposition or predicate $Q$ when every choice of values for their variables that makes all of $P_1, \ldots, P_n$ true also makes $Q$ true. Then $Q$ is a **logical consequence**, or **deductive consequence**, of $P_1, \ldots, P_n$.
+> **Definition 2 (Logical entailment (logical consequence, deductive consequence))** Propositions or predicates $P_1, \ldots, P_n$ ([Definition: Proposition (statement)](../chapters/propositional-logic.llms.md#def-proposition), [Definition: Predicate](../chapters/propositional-logic.llms.md#def-predicate)) **logically entail** ([Wikipedia contributors 2026c](#ref-wikipedia_logical_consequence)) a proposition or predicate $Q$ when every choice of values for their variables that makes all of $P_1, \ldots, P_n$ true also makes $Q$ true. Then $Q$ is a **logical consequence**, or **deductive consequence**, of $P_1, \ldots, P_n$.
 
 > **NOTE:**
 >
-> **Example 1 (Entailment in the deployment arguments)** In [Exercise 1](#exr-valid-arguments), the premises of arguments 1, 3 and 4 ([Definition 1](#def-argument)) logically entail their conclusions ([Definition 2](#def-logical-entailment)). The premises of argument 2 do not: the values $P$ false and $Q$ true make both premises true and the conclusion false.
+> **Example 1 (Entailment in the deployment arguments)** In [Exercise 1](#exr-valid-arguments), the premises of [arguments](#def-logical-argument) 1, 3 and 4 logically entail their conclusions ([Definition 2](#def-logical-entailment)). The premises of argument 2 do not: the values $P$ false and $Q$ true make both premises true and the conclusion false.
 
 > **NOTE:**
 >
-> **Definition 3 (Rule of inference)** A **rule of inference** is a pattern of argument ([Definition 1](#def-argument)), written in terms of propositions $P, Q, \ldots$, whose premises logically entail its conclusion ([Definition 2](#def-logical-entailment)) whatever propositions are put in place of $P, Q, \ldots$. It is written with its premises above a line and its conclusion below: $$\frac{P_1, \ldots, P_n}{Q}.$$
+> **Definition 3 (Rule of inference)** A **rule of inference** is a pattern of [argument](#def-logical-argument), written in terms of propositions $P, Q, \ldots$, whose premises logically entail its conclusion ([Definition 2](#def-logical-entailment)) whatever propositions are put in place of $P, Q, \ldots$. It is written with its premises above a line and its conclusion below: $$\frac{P_1, \ldots, P_n}{Q}.$$
 
 > **NOTE:**
 >
@@ -107,7 +107,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 > **NOTE:**
 >
-> **Definition 4 (Integers)** The **integers** ([Wikipedia contributors 2026a](#ref-wikipedia_integer)) are the whole numbers, together with their negatives and $0$:
+> **Definition 4 (Integers)** The **integers** ([Wikipedia contributors 2026b](#ref-wikipedia_integer)) are the whole numbers, together with their negatives and $0$:
 >
 > $$\mathbb{Z} \stackrel{\text{def}}{=}\mathopen{}\left\{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\right\}\mathclose{}$$
 >
@@ -131,11 +131,11 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 > **NOTE:**
 >
-> **Definition 7 (Even integer)** An integer ([Definition 4](#def-integers)) $n$ is **even** ([Wikipedia contributors 2026d](#ref-wikipedia_parity_mathematics)) if $n = 2k$ for some integer $k$.
+> **Definition 7 (Even integer)** An integer ([Definition 4](#def-integers)) $n$ is **even** ([Wikipedia contributors 2026e](#ref-wikipedia_parity_mathematics)) if $n = 2k$ for some integer $k$.
 
 > **NOTE:**
 >
-> **Definition 8 (Odd integer)** An integer ([Definition 4](#def-integers)) $n$ is **odd** ([Wikipedia contributors 2026d](#ref-wikipedia_parity_mathematics)) if $n = 2k + 1$ for some integer $k$.
+> **Definition 8 (Odd integer)** An integer ([Definition 4](#def-integers)) $n$ is **odd** ([Wikipedia contributors 2026e](#ref-wikipedia_parity_mathematics)) if $n = 2k + 1$ for some integer $k$.
 
 > **NOTE:**
 >
@@ -192,7 +192,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 > **NOTE:**
 >
-> **Definition 10 (Proof)** A **proof** ([Wikipedia contributors 2026c](#ref-wikipedia_mathematical_proof)) of a proposition ([Definition: Proposition (statement)](../chapters/propositional-logic.llms.md#def-proposition)) is a finite list of statements that ends with that proposition, in which each statement is
+> **Definition 10 (Proof)** A **proof** ([Wikipedia contributors 2026d](#ref-wikipedia_mathematical_proof)) of a proposition ([Definition: Proposition (statement)](../chapters/propositional-logic.llms.md#def-proposition)) is a finite list of statements that ends with that proposition, in which each statement is
 >
 > - an assumption,
 > - a definition,
@@ -210,7 +210,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 > **NOTE:**
 >
-> **Definition 11 (Direct proof)** A **direct proof** of a conditional $P \Rightarrow Q$ ([Definition: Implies](../chapters/propositional-logic.llms.md#def-implies)) is a proof ([Definition 10](#def-proof)) of $Q$ in which $P$ is an assumption.
+> **Definition 11 (Direct proof)** A **direct proof** ([Wikipedia contributors 2026a](#ref-wikipedia_direct_proof)) of a [proposition](../chapters/propositional-logic.llms.md#def-proposition) $Q$ starts from the assumptions that $Q$ is stated under, if any, and reaches $Q$ through a chain of steps, each of which applies a definition, a previously proved [result](https://morrison-lab.github.io/mds/proof-writing.html#def-result), or one rule of logic or algebra to the assumptions or to earlier steps. A direct proof never assumes that $Q$ is false; compare [proof by contradiction](../chapters/contrapositive-contradiction.llms.md#def-proof-by-contradiction), which does.
 
 > **NOTE:**
 >
@@ -260,7 +260,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 > **NOTE:**
 >
-> **Definition 12 (Proof by cases)** A **proof by cases** splits the situation into cases that together cover every possibility, and proves the conclusion separately in each case.
+> **Definition 12 (Proof by cases (proof by exhaustion))** A **proof by cases** ([Wikipedia contributors 2026f](#ref-wikipedia_proof_by_exhaustion)), also called a **proof by exhaustion**, of a [proposition](../chapters/propositional-logic.llms.md#def-proposition) $Q$ lists [propositions](../chapters/propositional-logic.llms.md#def-proposition) $C_1, \ldots, C_k$, the *cases*, shows that at least one of them is true, and proves $C_i \Rightarrow Q$ for each $i$.
 
 > **NOTE:**
 >
@@ -280,7 +280,7 @@ Last modified: 2026-11-02 14:59:27 (PST)
 
 # Definitions on this page
 
-- [Definition 1 (Argument)](#def-argument)
+- [Definition 1 (Argument)](#def-logical-argument)
 - [Definition 2 (Logical entailment (logical consequence, deductive consequence))](#def-logical-entailment)
 - [Definition 3 (Rule of inference)](#def-rule-of-inference)
 - [Definition 4 (Integers)](#def-integers)
@@ -291,16 +291,20 @@ Last modified: 2026-11-02 14:59:27 (PST)
 - [Definition 9 (Divides)](#def-divides)
 - [Definition 10 (Proof)](#def-proof)
 - [Definition 11 (Direct proof)](#def-direct-proof)
-- [Definition 12 (Proof by cases)](#def-proof-by-cases)
+- [Definition 12 (Proof by cases (proof by exhaustion))](#def-proof-by-cases)
 
 # References
 
-Wikipedia contributors. 2026a. *Integer — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Integer>.
+Wikipedia contributors. 2026a. *Direct Proof — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Direct_proof>.
 
-Wikipedia contributors. 2026b. *Logical Consequence — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Logical_consequence>.
+Wikipedia contributors. 2026b. *Integer — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Integer>.
 
-Wikipedia contributors. 2026c. *Mathematical Proof — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Mathematical_proof>.
+Wikipedia contributors. 2026c. *Logical Consequence — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Logical_consequence>.
 
-Wikipedia contributors. 2026d. *Parity (Mathematics) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Parity_(mathematics)>.
+Wikipedia contributors. 2026d. *Mathematical Proof — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Mathematical_proof>.
+
+Wikipedia contributors. 2026e. *Parity (Mathematics) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Parity_(mathematics)>.
+
+Wikipedia contributors. 2026f. *Proof by Exhaustion — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Proof_by_exhaustion>.
 
 Back to top
