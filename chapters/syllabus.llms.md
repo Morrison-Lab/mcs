@@ -6,7 +6,7 @@ Winter 2027
 
 Published
 
-Last modified: 2026-11-02 22:26:19 (PST)
+Last modified: 2026-11-03 00:29:02 (PST)
 
 > **NOTE:**
 >
@@ -317,7 +317,7 @@ Please read [Syllabi@WWU](https://syllabi.wwu.edu/) for additional, important po
 
 ## Start-of-Quarter Survey
 
-Please fill out the anonymous start-of-quarter survey before class on Friday, January 8. The link is **TBD**, and will be posted on Canvas. Every question is optional. A few more optional questions need your name, so they are not on the form; answer them in a Canvas message to me instead.
+Please fill out the anonymous [start-of-quarter survey](https://docs.google.com/forms/d/e/1FAIpQLSeR4g368PE_HCeyF2IVcyVmSFBxhTfrTP69BX8ZCSfB6_R80A/viewform) before class on Friday, January 8. Every question is optional. A few more optional questions need your name, so they are not on the form; answer them in a Canvas message to me instead.
 
 ## Anonymous Feedback
 
