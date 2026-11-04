@@ -1,0 +1,22 @@
+:::{#def-relation}
+#### Relation
+
+A **relation** $\sim$ on a set $S$
+[@wikipedia_binary_relation]
+is a rule that,
+for each [ordered pair](sets.qmd#def-ordered-pair) of elements $a, b \in S$,
+says whether $a \sim b$ holds ("$a$ is related to $b$").
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-relation}
+#### Relations on the real numbers
+
+$=$, $<$ and $\le$ are relations on $\reals$.
+For $<$, the pair $(2, 5)$ is related, since $2 < 5$,
+but the pair $(5, 2)$ is not, since $5 < 2$ is false:
+the order of the pair matters.
+
+:::

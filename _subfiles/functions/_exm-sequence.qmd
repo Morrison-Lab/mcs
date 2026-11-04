@@ -1,0 +1,13 @@
+:::{#exm-sequence}
+#### Sequences
+
+- $a_n = \frac{1}{n}$ is the sequence $1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \ldots$;
+  its third term is $a_3 = \frac{1}{3}$.
+- $b_n = (-1)^n$ is the sequence $-1, 1, -1, 1, \ldots$:
+  a sequence can repeat values.
+- The die rolls $4, 1, 4$ form a finite sequence of length $3$,
+  with $a_1 = 4$, $a_2 = 1$, and $a_3 = 4$.
+  As a set, $\set{4, 1, 4} = \set{1, 4}$,
+  but as a sequence, the order and the repeats matter.
+
+:::

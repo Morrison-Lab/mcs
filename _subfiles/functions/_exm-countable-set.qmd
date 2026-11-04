@@ -1,0 +1,10 @@
+:::{#exm-countable-set}
+#### Countable and uncountable sets
+
+- $\set{1, 2, 3, 4, 5, 6}$ is countable, because it is finite.
+- The [non-negative integers](number-systems.qmd#def-nonnegative-integers) $\set{0, 1, 2, \ldots}$ are countably infinite:
+  the sequence $0, 1, 2, \ldots$ lists them.
+- The [integers](number-systems.qmd#def-integers) are countably infinite too:
+  the sequence $0, 1, -1, 2, -2, 3, -3, \ldots$ lists every one of them.
+
+:::

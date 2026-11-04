@@ -1,0 +1,14 @@
+:::{#rem-expression-parse-tree}
+#### Expressions, precedence and parse trees
+
+An expression does not say how to compute the output it fixes,
+and many expressions denote the same function.
+A function is the input-output relationship itself;
+an expression is one way of writing it down.
+
+The rules of operator precedence (PEMDAS: parentheses, exponents,
+multiplication and division, addition and subtraction)
+decide how the symbols group.
+They turn the string into its parse tree (@def-parse-tree).
+
+:::

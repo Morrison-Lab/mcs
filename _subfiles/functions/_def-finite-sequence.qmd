@@ -1,0 +1,8 @@
+:::{#def-finite-sequence}
+#### Finite sequence
+
+Let $S$ be a set.
+A **finite sequence** of length $n$ is a function from $\set{1, \ldots, n}$ to $S$,
+written $\dsn{a}$.
+
+:::

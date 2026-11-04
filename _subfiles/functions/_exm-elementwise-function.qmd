@@ -1,0 +1,31 @@
+:::{#exm-elementwise-function}
+#### The exponential and logistic functions applied to a vector
+
+Let $\vx = \pt{-1, 0, 2}$.
+With $\operatorname{exp}(t) = e^t$ and the logistic function $\expit(t) = \frac{1}{1 + e^{-t}}$,
+
+$$
+\begin{aligned}
+\operatorname{exp}^{\odot}(\vx) &= \pt{e^{-1}, e^{0}, e^{2}}, \\
+\expit^{\odot}(\vx) &= \pt{\expit(-1), \expit(0), \expit(2)}.
+\end{aligned}
+$$
+
+The code evaluates both, using R's `exp()` and `plogis()`,
+which apply to a vector entry by entry.
+
+```{r}
+#| label: elementwise-function
+#| code-fold: false
+x <- c(-1, 0, 2)
+exp_x <- exp(x)
+expit_x <- plogis(x)
+exp_x
+expit_x
+```
+
+So $\operatorname{exp}^{\odot}(\vx) \approx$ (`{r} paste(round(exp_x, 4), collapse = ", ")`)
+and $\expit^{\odot}(\vx) \approx$ (`{r} paste(round(expit_x, 4), collapse = ", ")`).
+Each entry of the output depends only on the entry of $\vx$ in the same position.
+
+:::

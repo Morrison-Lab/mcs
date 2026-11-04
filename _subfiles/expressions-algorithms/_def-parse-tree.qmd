@@ -1,0 +1,11 @@
+:::{#def-parse-tree}
+#### Parse tree
+
+The **parse tree**
+[@wikipedia_parse_tree]
+of an [expression](#def-expression) is the tree
+that shows how its symbols group into operations.
+Its leaves are the constants and variables of the expression,
+and each internal node is an operation applied to the nodes below it.
+
+:::

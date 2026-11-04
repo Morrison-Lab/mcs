@@ -1,0 +1,16 @@
+:::{#rem-elementwise-function-notation}
+#### Notation and software for elementwise application
+
+- The superscript $\odot$ keeps $f^{\odot}$ apart from $f$ itself.
+  Where a function $f$ takes a whole vector as its argument,
+  as in the multivariable calculus of [vector calculus](vector-calculus.qmd),
+  $f(\vx)$ means $f$ evaluated at the vector,
+  which is generally not the vector of its values at the entries.
+- If $f$ has parameters, as in $f_{\vb}$,
+  the same parameters are used at every entry.
+- Software usually applies a scalar function to a vector this way,
+  without a special symbol:
+  R and NumPy evaluate `exp(x)` entry by entry.
+  The matrix exponential of a square matrix is a different function from $\operatorname{exp}^{\odot}$.
+
+:::

@@ -1,0 +1,9 @@
+:::{#def-codomain}
+#### Codomain
+
+The **codomain**
+[@wikipedia_codomain]
+of a [function](#def-function) $f : A \to B$
+is the set $B$ that its values are required to lie in.
+
+:::

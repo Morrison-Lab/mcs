@@ -1,0 +1,9 @@
+:::{#exm-graph}
+#### The graph of a function on three points
+
+Let $f : \set{-1, 0, 2} \to \reals$ with $f(a) = a^2$.
+Then $f(-1) = 1$, $f(0) = 0$, and $f(2) = 4$,
+so the graph of $f$ is $\set{(-1, 1), (0, 0), (2, 4)}$.
+The pair $(1, 1)$ is not in the graph, because $1$ is not in the domain of $f$.
+
+:::

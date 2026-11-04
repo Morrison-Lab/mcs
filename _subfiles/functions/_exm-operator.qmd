@@ -1,0 +1,9 @@
+:::{#exm-operator}
+#### The derivative as an operator
+
+Let $D$ send each differentiable function $f : \reals \to \reals$
+to its derivative function $D f = f'$.
+Then $D$ is an operator, because its arguments and its values are functions.
+For example, $D$ sends $f(x) = x^2$ to the function $(D f)(x) = 2x$.
+
+:::

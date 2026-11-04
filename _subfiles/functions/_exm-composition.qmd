@@ -1,0 +1,28 @@
+:::{#exm-composition}
+#### The order of composition matters
+
+Let $g : \reals \to \reals$ with $g(x) = x + 1$,
+and $f : \reals \to \reals$ with $f(x) = x^2$.
+
+- $$
+  \begin{aligned}
+  (f \circ g)(2) &= f(g(2)) \\
+  &= f(3) \\
+  &= 9:
+  \end{aligned}
+  $$
+
+  $g$ is the inner function, and $f$ is the outer function.
+- $$
+  \begin{aligned}
+  (g \circ f)(2) &= g(f(2)) \\
+  &= g(4) \\
+  &= 5:
+  \end{aligned}
+  $$
+
+  now $f$ is the inner function, and $g$ is the outer function.
+
+Since $9 \ne 5$, $f \circ g$ and $g \circ f$ are different functions.
+
+:::

@@ -1,0 +1,8 @@
+:::{#def-value}
+#### Value (output)
+
+The **value** (or **output**) of a [function](#def-function) $f : A \to B$
+at an [argument](#def-argument) $a \in A$
+is the element $f(a) \in B$ that $f$ assigns to $a$.
+
+:::

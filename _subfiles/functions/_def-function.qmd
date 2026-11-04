@@ -1,0 +1,16 @@
+:::{#def-function}
+#### Function (map, mapping, transformation)
+
+A **function** $f$ from a set $A$ to a set $B$,
+[@wikipedia_function_mathematics]
+written $f : A \to B$,
+assigns to each element $a \in A$
+exactly one element $f(a) \in B$.
+
+A function is also called a **map** (or **mapping**)
+or a **transformation**;
+on this site the three words mean the same thing,
+although some authors reserve "transformation"
+for a function from a set to itself.
+
+:::
