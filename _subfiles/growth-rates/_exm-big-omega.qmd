@@ -1,0 +1,26 @@
+:::{#exm-big-omega}
+#### The function $3n + 5$ is big-Omega of $n$
+
+Let $f(n) = 3n + 5$ and $g(n) = n$.
+To show $f(n) = \Omega(g(n))$ by @def-big-omega,
+choose $c = 3$ and $N = 1$.
+For every [natural number](number-systems.qmd#def-natural-numbers) $n \ge 1$,
+
+$$
+\ba
+|f(n)|
+&= 3n + 5
+&& \text{(} 3n + 5 > 0 \text{)}
+\\
+&\ge 3n
+&& \text{(} 5 \ge 0 \text{)}
+\\
+&= 3 \, |g(n)|,
+&& \text{(} n = |n| \text{, since } n \ge 0 \text{)}
+\ea
+$$
+
+which is the [inequality](proof-writing.qmd#def-inequality) in @def-big-omega with $c = 3$.
+Hence $3n + 5 = \Omega(n)$.
+
+:::

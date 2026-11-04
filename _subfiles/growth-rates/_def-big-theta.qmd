@@ -1,0 +1,12 @@
+:::{#def-big-theta}
+#### Big-Theta
+
+Let $f$ and $g$ be [functions](functions.qmd#def-function) from the [natural numbers](number-systems.qmd#def-natural-numbers) to the [real numbers](number-systems.qmd#def-real-numbers).
+Then $f(n)$ is **big-Theta** of $g(n)$
+[@wikipedia_big_o_notation],
+written $f(n) = \Theta(g(n))$,
+when both $f(n) = O(g(n))$ ([big-O](#def-big-o))
+and $f(n) = \Omega(g(n))$ ([big-Omega](#def-big-omega)).
+In words, $f(n)$ and $g(n)$ are within fixed multiples of each other, from some point on.
+
+:::
