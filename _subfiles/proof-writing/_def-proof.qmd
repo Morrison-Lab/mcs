@@ -1,0 +1,16 @@
+:::{#def-proof}
+#### Proof
+
+A **proof**
+[@wikipedia_mathematical_proof]
+of a proposition (@def-proposition)
+is a finite list of statements that ends with that proposition,
+in which each statement is
+
+- an assumption,
+- a definition,
+- a previously proved result, or
+- a consequence of earlier statements in the list,
+  by one rule of logic or algebra.
+
+:::

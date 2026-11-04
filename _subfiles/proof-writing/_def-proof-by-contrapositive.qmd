@@ -1,0 +1,13 @@
+:::{#def-proof-by-contrapositive}
+#### Proof by contrapositive
+
+A **proof by contrapositive**
+[@wikipedia_contraposition]
+of a [proposition](#def-proposition) "if $P$, then $Q$"
+is a [direct proof](#def-direct-proof) of its
+[contrapositive](#def-contrapositive), "if $\neg Q$, then $\neg P$":
+it assumes that $Q$ is false and reaches the conclusion that $P$ is false.
+By @thm-contrapositive,
+proving the contrapositive proves the original proposition.
+
+:::

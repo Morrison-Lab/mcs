@@ -1,0 +1,8 @@
+:::{#def-proposition}
+#### Proposition, statement
+
+A **proposition**, or **statement**,
+is a declarative sentence that is either true or false
+[@wikipedia_proposition].
+
+:::

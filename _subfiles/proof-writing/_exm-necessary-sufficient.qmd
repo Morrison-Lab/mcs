@@ -1,0 +1,13 @@
+:::{#exm-necessary-sufficient}
+#### Necessary but not sufficient
+
+In @exm-converse,
+"if $n$ is a multiple of $4$, then $n$ is even" is true, so:
+
+- being a multiple of $4$ is a sufficient condition for $n$ to be even;
+- being even is a necessary condition for $n$ to be a multiple of $4$.
+
+Being even is not a sufficient condition for being a multiple of $4$:
+$n = 2$ is even, but not a multiple of $4$.
+
+:::

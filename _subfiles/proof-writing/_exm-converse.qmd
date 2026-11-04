@@ -1,0 +1,22 @@
+:::{#exm-converse}
+#### A true proposition with a false converse
+
+For an integer $n$, call $n$ a multiple of $4$ if $n = 4k$ for some integer $k$.
+
+- "If $n$ is a multiple of $4$, then $n$ is even" is true:
+
+  $$
+  \begin{aligned}
+  n &= 4k \\
+  &= 2 \cd (2k),
+  \end{aligned}
+  $$
+
+  and $2k$ is an integer.
+- Its converse, "if $n$ is even, then $n$ is a multiple of $4$", is false.
+  The integer $n = 2$ is a counterexample (@def-counterexample):
+  $2$ is even, but $2 = 4k$ only for $k = \frac{1}{2}$, which is not an integer.
+
+So a proposition can be true while its converse is false.
+
+:::

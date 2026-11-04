@@ -1,0 +1,9 @@
+:::{#def-sufficient-condition}
+#### Sufficient condition
+
+When the proposition "if $P$, then $Q$" is true,
+$P$ is a **sufficient condition**
+[@wikipedia_necessity_and_sufficiency]
+for $Q$.
+
+:::

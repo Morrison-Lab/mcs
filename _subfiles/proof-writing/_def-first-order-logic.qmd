@@ -1,0 +1,16 @@
+:::{#def-first-order-logic}
+#### First-order logic
+
+**First-order logic**
+[@wikipedia_first_order_logic]
+extends propositional logic (@def-propositional-logic)
+by also allowing:
+
+- variables $x, y, \ldots$ that stand for elements of a [set](sets.qmd#def-set);
+- [predicates](#def-predicate) of one or more of those variables,
+  such as $P(x)$ or $x < y$;
+- [functions](functions.qmd#def-function) of them, such as $x + y$;
+- equality between them;
+- [quantifiers](#def-quantifier) $\forall$ and $\exists$ over them.
+
+:::

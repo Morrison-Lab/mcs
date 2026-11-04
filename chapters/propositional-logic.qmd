@@ -36,11 +36,11 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/proof-writing/_def-proposition.qmd >}}
+{{< include ../_subfiles/proof-writing/_def-proposition.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/proof-writing/_def-predicate.qmd >}}
+{{< include ../_subfiles/proof-writing/_def-predicate.qmd >}}
 
 {{< slidebreak >}}
 
@@ -60,19 +60,19 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/proof-writing/_def-logical-connective.qmd >}}
+{{< include ../_subfiles/proof-writing/_def-logical-connective.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/proof-writing/_def-not.qmd >}}
+{{< include ../_subfiles/proof-writing/_def-not.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/proof-writing/_def-and.qmd >}}
+{{< include ../_subfiles/proof-writing/_def-and.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/proof-writing/_def-or.qmd >}}
+{{< include ../_subfiles/proof-writing/_def-or.qmd >}}
 
 {{< slidebreak >}}
 
@@ -104,7 +104,7 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/proof-writing/_def-truth-table.qmd >}}
+{{< include ../_subfiles/proof-writing/_def-truth-table.qmd >}}
 
 {{< slidebreak >}}
 
@@ -124,7 +124,7 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/proof-writing/_def-implies.qmd >}}
+{{< include ../_subfiles/proof-writing/_def-implies.qmd >}}
 
 {{< slidebreak >}}
 
@@ -132,7 +132,7 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/proof-writing/_exm-implies.qmd >}}
+{{< include ../_subfiles/proof-writing/_exm-implies.qmd >}}
 
 {{< slidebreak >}}
 
@@ -156,7 +156,7 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/proof-writing/_def-converse.qmd >}}
+{{< include ../_subfiles/proof-writing/_def-converse.qmd >}}
 
 ## Conditionals in English {#sec-conditionals-english}
 
@@ -180,7 +180,7 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/proof-writing/_def-iff.qmd >}}
+{{< include ../_subfiles/proof-writing/_def-iff.qmd >}}
 
 {{< slidebreak >}}
 

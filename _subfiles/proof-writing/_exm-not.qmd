@@ -1,0 +1,10 @@
+:::{#exm-not}
+#### Negating a true and a false proposition
+
+Let $P$ be "$5 > 3$", which is true,
+and let $Q$ be "$2 > 3$", which is false.
+
+- $\neg P$, "it is not true that $5 > 3$", is false, because $P$ is true.
+- $\neg Q$, "it is not true that $2 > 3$", is true, because $Q$ is false.
+
+:::

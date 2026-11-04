@@ -1,0 +1,12 @@
+:::{#exm-lemma}
+#### A lemma in the proof of a larger result
+
+To show that the sum of four even integers $a$, $b$, $c$, and $d$ is even,
+write $a + b + c + d = (a + b) + (c + d)$.
+By the result of @exm-proof, $a + b$ and $c + d$ are even,
+and applying that result again to these two sums shows that their sum is even.
+Here that result is proved mainly as a step in the proof of another result,
+so it serves as a lemma.
+For example, $2 + 4 + 6 + 8 = (2 + 4) + (6 + 8) = 6 + 14 = 20$, which is even.
+
+:::

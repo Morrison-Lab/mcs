@@ -1,0 +1,5 @@
+For each step,
+note the definition, [theorem](#def-theorem), or algebraic rule that justifies it.
+A brief annotation to the right of the line is usually enough.
+Annotations make the proof checkable,
+and they teach the reader which tool to reach for next time.

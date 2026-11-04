@@ -1,0 +1,12 @@
+:::{#exm-formal-proof}
+#### A three-step formal proof
+
+Suppose the allowed rules include
+"from $P$ and $P \Rightarrow Q$, conclude $Q$".
+Then this is a [formal proof](#def-formal-proof) of $Q$ from the assumptions $P$ and $P \Rightarrow Q$:
+
+1. $P$ (assumption)
+2. $P \Rightarrow Q$ (assumption)
+3. $Q$ (from steps 1 and 2, by the rule above)
+
+:::

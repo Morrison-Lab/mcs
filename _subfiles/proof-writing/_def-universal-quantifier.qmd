@@ -1,0 +1,11 @@
+:::{#def-universal-quantifier}
+#### Universal quantifier
+
+The **universal quantifier**
+[@wikipedia_universal_quantification]
+"for all" is a quantifier (@def-quantifier):
+$\forall x \in S, P(x)$ ("for every $x$ in $S$, $P(x)$")
+is true when $P(x)$ is true for every element $x$ of $S$,
+and false otherwise.
+
+:::

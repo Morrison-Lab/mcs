@@ -1,0 +1,11 @@
+:::{#def-necessary-sufficient}
+#### Necessary and sufficient condition
+
+When both "if $P$, then $Q$" and its converse (@def-converse) are true,
+$P$ is a **necessary and sufficient condition**
+[@wikipedia_necessity_and_sufficiency]
+for $Q$
+(@def-sufficient-condition, @def-necessary-condition),
+written "$P$ if and only if $Q$".
+
+:::

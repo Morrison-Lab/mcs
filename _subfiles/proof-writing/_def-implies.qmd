@@ -1,0 +1,10 @@
+:::{#def-implies}
+#### Implies
+
+The logical connective (@def-logical-connective) **implies** is written
+[@wikipedia_material_conditional]
+$P \Rightarrow Q$ ("if $P$, then $Q$", or "$P$ implies $Q$");
+it is false when $P$ is true and $Q$ is false,
+and true otherwise.
+
+:::
