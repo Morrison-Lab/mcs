@@ -1,0 +1,10 @@
+:::{#exm-range}
+#### Two ranges of a squaring function
+
+For $f : \reals \to \reals$ with $f(a) = a^2$,
+"the range of $f$" could mean the image $[0, \infty)$
+or the codomain $\reals$.
+The image is always a subset of the codomain,
+because every value $f(a)$ lies in the codomain.
+
+:::

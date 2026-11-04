@@ -38,11 +38,11 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/functions/_def-function.qmd >}}
+{{< include ../_subfiles/functions/_def-function.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/expressions-algorithms/_def-expression.qmd >}}
+{{< include ../_subfiles/expressions-algorithms/_def-expression.qmd >}}
 
 {{< slidebreak >}}
 
@@ -62,11 +62,11 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/functions/_def-argument.qmd >}}
+{{< include ../_subfiles/functions/_def-argument.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/functions/_def-value.qmd >}}
+{{< include ../_subfiles/functions/_def-value.qmd >}}
 
 {{< slidebreak >}}
 

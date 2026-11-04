@@ -1,0 +1,7 @@
+:::{#def-countably-infinite}
+#### Countably infinite set
+
+A set is **countably infinite**
+if it is [countable](#def-countable-set) and not finite.
+
+:::

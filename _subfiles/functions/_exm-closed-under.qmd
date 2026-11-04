@@ -1,0 +1,11 @@
+:::{#exm-closed-under}
+#### Closed and not closed
+
+- The [even](number-systems.qmd#def-even-odd) integers are closed under addition:
+  for example, $2 + 4 = 6$ is even, and $2m + 2n = 2(m + n)$ is even for all integers $m$ and $n$.
+- The odd integers are not closed under addition:
+  $1$ and $3$ are odd, but $1 + 3 = 4$ is even.
+- The [collection](sets.qmd#def-collection) of all [subsets](sets.qmd#def-subset) of a [set](sets.qmd#def-set) $S$ is closed under [union](sets.qmd#def-union):
+  the union of two subsets of $S$ is again a [subset](sets.qmd#def-subset) of $S$.
+
+:::

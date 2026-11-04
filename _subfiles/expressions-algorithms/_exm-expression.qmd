@@ -1,0 +1,16 @@
+:::{#exm-expression}
+#### Two expressions for one function
+
+The expressions $a x^2 + b x + c$ and $(a x + b)\,x + c$
+denote the same function of $x$ for any fixed $a$, $b$ and $c$,
+because they give the same value at every $x$.
+
+Precedence parses $a x^2 + b x + c$ as a sum of three terms:
+the power $x^2$ is applied first,
+then $a$ multiplies $x^2$ and $b$ multiplies $x$,
+and the three products are added.
+The parentheses in $(a x + b)\,x + c$ force a different tree:
+$a$ multiplies $x$, $b$ is added, the sum multiplies $x$,
+and $c$ is added.
+
+:::

@@ -1,0 +1,11 @@
+:::{#exm-no-known-algorithm}
+#### A minimizer with no known formula
+
+The minimizer
+$\argmin_{x \in \reals} \paren{x - \cos x}^2$ is well defined,
+because $x - \cos x$ is strictly increasing and equals zero at one point,
+yet that point has no known closed-form expression,
+so no known finite list of arithmetic steps returns it exactly.
+An algorithm such as bisection approximates it as closely as we like.
+
+:::

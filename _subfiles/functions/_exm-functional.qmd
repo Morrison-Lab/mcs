@@ -1,0 +1,18 @@
+:::{#exm-functional}
+#### Evaluation, integration and expectation as functionals
+
+- Evaluation at $0$ sends each function $f : \reals \to \reals$ to the number $f(0)$.
+- The definite integral sends each continuous function $f : [0, 1] \to \reals$
+  to the number $\int_0^1 f(x)\,dx$.
+  For $f(x) = x^2$, the value is $\frac{1}{3}$.
+- The [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation)
+  sends each random variable, which is a function,
+  to a real number, its population mean.
+- Summing the entries sends each vector $\vx \in \reals^n$ to the number $\sum_{i=1}^n x_i$.
+
+Each takes a function or a vector as its argument and returns a number,
+so each is a functional.
+The derivative operator in @exm-operator is not a functional,
+because its values are functions, not numbers.
+
+:::

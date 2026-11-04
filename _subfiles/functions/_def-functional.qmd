@@ -1,0 +1,10 @@
+:::{#def-functional}
+#### Functional
+
+A **functional**
+[@wikipedia_functional_mathematics]
+is a [function](#def-function)
+whose [arguments](#def-argument) are functions or vectors
+and whose [values](#def-value) are real numbers.
+
+:::

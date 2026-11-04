@@ -1,0 +1,14 @@
+:::{#exm-domain-codomain-image}
+#### Domain, codomain, and image of the doubled die roll
+
+For the function $f : \set{1, 2, 3, 4, 5, 6} \to \reals$ with $f(a) = 2a$ from @exm-function:
+
+- the domain is $\set{1, 2, 3, 4, 5, 6}$;
+- the codomain is $\reals$;
+- the image is $\set{2, 4, 6, 8, 10, 12}$.
+
+The image is a subset of the codomain,
+and here a much smaller one:
+most real numbers, such as $3$ and $-1$, are not values of $f$.
+
+:::

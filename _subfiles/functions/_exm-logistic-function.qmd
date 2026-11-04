@@ -1,0 +1,14 @@
+:::{#exm-logistic-function}
+#### Values of the logistic function
+
+The [logistic function](#def-logistic-function) at $z = -2$, $z = 0$ or $z = 2$ has these [values](#def-value):
+
+```{r}
+#| code-fold: false
+z <- c(-2, 0, 2)
+data.frame(z = z, sigmoid = 1 / (1 + exp(-z)))
+```
+
+The [value](#def-value) at $z = 0$ is $1 / (1 + e^0) = 1/2$.
+The values at $\pm 2$ add to 1; each lies in $(0, 1)$.
+:::
