@@ -19,11 +19,11 @@ Suggests:
     rmarkdown,
     spelling,
     usethis,
-    devtools
-VignetteBuilder: knitr
-Imports: 
-    dplyr,
+    devtools,
     ggplot2,
     htmltools,
     plotly,
     tibble
+VignetteBuilder: knitr
+Imports:
+    dplyr
