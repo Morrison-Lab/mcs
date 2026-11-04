@@ -1,0 +1,38 @@
+:::{#thm-de-morgan-logic}
+#### De Morgan's laws for propositions
+
+For any [propositions](#def-proposition) $P$ and $Q$
+[@wikipedia_de_morgans_laws]:
+
+$$
+\ba
+\neg (P \land Q) &\equiv \neg P \lor \neg Q \\
+\neg (P \lor Q) &\equiv \neg P \land \neg Q
+\ea
+$$
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+::: proof
+
+Each side of each law is built from $P$ and $Q$,
+so by @def-logically-equivalent
+it is enough to compare the two sides in each of the four rows of a [truth table](#def-truth-table):
+
+| $P$ | $Q$ | $\neg (P \land Q)$ | $\neg P \lor \neg Q$ | $\neg (P \lor Q)$ | $\neg P \land \neg Q$ |
+|:---:|:---:|:------------------:|:--------------------:|:-----------------:|:---------------------:|
+| T   | T   | F                  | F                    | F                 | F                     |
+| T   | F   | T                  | T                    | F                 | F                     |
+| F   | T   | T                  | T                    | F                 | F                     |
+| F   | F   | T                  | T                    | T                 | T                     |
+
+The third and fourth columns agree in every row,
+which proves the first law,
+and the fifth and sixth columns agree in every row,
+which proves the second.
+
+:::
+
+:::

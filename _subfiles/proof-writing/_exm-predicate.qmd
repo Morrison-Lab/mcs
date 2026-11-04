@@ -1,0 +1,9 @@
+:::{#exm-predicate}
+#### A predicate
+
+Let $P(x)$ be the predicate "$x > 2$", for real numbers $x$.
+
+- $P(3)$ is the proposition "$3 > 2$", which is true.
+- $P(1)$ is the proposition "$1 > 2$", which is false.
+
+:::

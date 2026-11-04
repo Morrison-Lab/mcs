@@ -1,0 +1,15 @@
+:::{#exm-first-order-logic}
+#### From "for all" to one element
+
+Let $P(x)$ be a [predicate](#def-predicate) about the elements of a [set](sets.qmd#def-set) $S$,
+and let $a \in S$.
+The [propositions](#def-proposition) $\forall x \in S, P(x)$ and $a \in S$
+[logically entail](#def-logical-entailment) $P(a)$:
+if $P(x)$ is true for every element $x$ of $S$,
+then it is true for the element $a$.
+For example,
+$\forall x \in \mathbb{Z}, x^2 \ge 0$ entails $3^2 \ge 0$.
+[Propositional logic](#def-propositional-logic) alone cannot express this entailment,
+because it has no way to refer to the elements of $S$.
+
+:::

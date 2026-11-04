@@ -1,0 +1,13 @@
+:::{#def-logically-equivalent}
+#### Logically equivalent
+
+Two [propositions](#def-proposition) $A$ and $B$,
+each built from some or all of the propositions $P_1, \ldots, P_n$
+with [logical connectives](#def-logical-connective),
+are **logically equivalent**
+[@wikipedia_logical_equivalence],
+written $A \equiv B$,
+when they have the same truth value <!-- check-term-links: allow -->
+in every row of a [truth table](#def-truth-table) on $P_1, \ldots, P_n$.
+
+:::

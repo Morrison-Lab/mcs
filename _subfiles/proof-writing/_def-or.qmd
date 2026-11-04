@@ -1,0 +1,10 @@
+:::{#def-or}
+#### Or
+
+The logical connective (@def-logical-connective) **or** is written
+[@wikipedia_logical_disjunction]
+$P \lor Q$ ("$P$ or $Q$");
+it is true when at least one of $P$ and $Q$ is true,
+and false when both are false.
+
+:::

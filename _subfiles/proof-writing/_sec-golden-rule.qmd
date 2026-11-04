@@ -1,0 +1,9 @@
+In general,
+follow the golden rule:
+treat your readers the way you want to be treated as a reader.
+
+When you read someone else's proof,
+you want to be able to follow every step without guessing,
+to know which [result](#def-result) is being used at each line,
+and to never be left wondering where a quantity came from.
+Write your own [proofs](#def-proof) to meet that same standard.

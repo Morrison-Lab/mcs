@@ -1,0 +1,15 @@
+Show every step of the [derivation](#def-derivation).
+Each line should follow from the previous line by a single, identifiable move:
+
+- applying a definition,
+- substituting a known [result](#def-result), or
+- performing one algebraic operation.
+
+When you skip steps,
+you force the reader to reconstruct your reasoning,
+which is exactly the work the proof was supposed to do *for* them.
+A step that feels "obvious" while you are writing it
+is often the step a reader gets stuck on.
+Phrases like "it can be shown that" or "clearly"
+usually mark a skipped step;
+show the step instead.

@@ -1,0 +1,8 @@
+:::{#rem-proposition-as-result}
+#### "Proposition" as a kind of result
+
+Some sources also call a result of moderate importance a "proposition".
+In these notes, "proposition" always means a sentence that is true or false
+(@def-proposition), whether or not it has been proved.
+
+:::

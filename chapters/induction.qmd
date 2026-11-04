@@ -38,7 +38,7 @@ The exercises, the other examples and the text of the false proof are new.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/proof-writing/_def-proof-by-induction.qmd >}}
+{{< include ../_subfiles/proof-writing/_def-proof-by-induction.qmd >}}
 
 {{< slidebreak >}}
 

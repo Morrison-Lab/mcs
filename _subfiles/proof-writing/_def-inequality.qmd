@@ -1,0 +1,15 @@
+:::{#def-inequality}
+#### Inequality
+
+An **inequality** is a proposition (@def-proposition)
+or a predicate (@def-predicate)
+that compares two expressions $a$ and $b$
+whose values are [real numbers](number-systems.qmd#def-real-numbers),
+in one of the forms:
+
+- $a < b$ ("$a$ is less than $b$");
+- $a \le b$ ("$a$ is less than or equal to $b$");
+- $a > b$ ("$a$ is greater than $b$");
+- $a \ge b$ ("$a$ is greater than or equal to $b$").
+
+:::

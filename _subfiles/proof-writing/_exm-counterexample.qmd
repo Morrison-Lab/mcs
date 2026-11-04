@@ -1,0 +1,11 @@
+:::{#exm-counterexample}
+#### A counterexample
+
+The proposition "for every integer $n$, $n + n > n$" is false.
+The integer $n = 0$ is a counterexample:
+$0 + 0 = 0$, and $0 > 0$ is false.
+The proposition is true for some integers, such as $n = 3$,
+since $3 + 3 = 6 > 3$,
+but one counterexample is enough to make it false.
+
+:::

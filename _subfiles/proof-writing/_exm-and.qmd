@@ -1,0 +1,11 @@
+:::{#exm-and}
+#### Two propositions joined by "and"
+
+Let $P$ be "$3 < 5$", which is true,
+let $Q$ be "$5 < 4$", which is false,
+and let $R$ be "$5 < 7$", which is true.
+
+- $P \land R$ is true, because $P$ and $R$ are both true.
+- $P \land Q$ is false, because $Q$ is false.
+
+:::

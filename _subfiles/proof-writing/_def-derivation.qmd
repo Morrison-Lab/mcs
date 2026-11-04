@@ -1,0 +1,11 @@
+:::{#def-derivation}
+#### Derivation
+
+A **derivation** is a proof (@def-proof), or a part of one,
+written as a chain of expressions, one per line,
+in which each line is joined to the line before it
+by $=$ or by an inequality sign (@def-inequality),
+and carries an annotation that names the reason that step holds:
+an assumption, a definition, a previously proved result, or a rule of algebra.
+
+:::

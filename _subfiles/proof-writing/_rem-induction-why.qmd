@@ -1,0 +1,15 @@
+:::{#rem-induction-why}
+#### Why the two steps suffice
+
+The base case gives $P(n_0)$.
+The inductive step with $n = n_0 + 1$ then gives $P(n_0 + 1)$,
+with $n = n_0 + 2$ it gives $P(n_0 + 2)$,
+and so on:
+each integer $n \ge n_0$ is reached
+after $n - n_0$ uses of the inductive step.
+
+When $P(n)$ is needed only for $n_0 \le n \le r$,
+it is enough to show the inductive step for $n_0 < n \le r$;
+the same chain then stops at $P(r)$.
+
+:::

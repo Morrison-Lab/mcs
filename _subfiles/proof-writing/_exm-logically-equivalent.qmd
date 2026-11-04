@@ -1,0 +1,17 @@
+:::{#exm-logically-equivalent}
+#### $P \Rightarrow Q$ is logically equivalent to $\neg P \lor Q$
+
+Adding a column for $\neg P \lor Q$
+to the [truth table](#def-truth-table) of @exm-truth-table gives:
+
+| $P$ | $Q$ | $\neg P$ | $\neg P \lor Q$ | $P \Rightarrow Q$ |
+|:---:|:---:|:--------:|:---------------:|:-----------------:|
+| T   | T   | F        | T               | T                 |
+| T   | F   | F        | F               | F                 |
+| F   | T   | T        | T               | T                 |
+| F   | F   | T        | T               | T                 |
+
+The last two columns agree in every row,
+so $(P \Rightarrow Q) \equiv (\neg P \lor Q)$.
+
+:::

@@ -1,0 +1,14 @@
+:::{#def-formal-proof}
+#### Formal proof
+
+A **formal proof**
+[@wikipedia_formal_proof]
+is a [proof](#def-proof)
+written in propositional logic (@def-propositional-logic)
+or first-order logic (@def-first-order-logic)
+in which each step is an assumption
+or follows from earlier steps by one rule
+taken from a fixed list of allowed rules,
+so that checking the proof needs no understanding of what its [propositions](#def-proposition) say.
+
+:::

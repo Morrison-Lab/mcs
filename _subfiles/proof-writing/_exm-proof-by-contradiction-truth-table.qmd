@@ -1,0 +1,22 @@
+:::{#exm-proof-by-contradiction-truth-table}
+#### A truth table for a proof by contradiction
+
+There are only four ways to assign truth values to $P$ and $Q$.
+The code lists them, with the truth value of $\neg P \Rightarrow Q$,
+and marks the rows where $\neg P \Rightarrow Q$ is true and $Q$ is false.
+
+```{r}
+#| label: proof-by-contradiction-truth-table
+#| code-fold: false
+tt <- expand.grid(Q = c(TRUE, FALSE), P = c(TRUE, FALSE))
+tt$not_P_implies_Q <- !(!tt$P) | tt$Q
+tt$hypotheses_hold <- tt$not_P_implies_Q & !tt$Q
+tt
+```
+
+The hypotheses of @thm-proof-by-contradiction hold in `{r} sum(tt$hypotheses_hold)` of the
+`{r} nrow(tt)` rows,
+and in `{r} sum(tt$hypotheses_hold & tt$P)` of them $P$ is true.
+So whenever the hypotheses hold, $P$ is true.
+
+:::

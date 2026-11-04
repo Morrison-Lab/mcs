@@ -1,0 +1,10 @@
+:::{#exm-proposition}
+#### Propositions, and a sentence that is not one
+
+- "$2 + 3 = 5$" is a proposition, and it is true.
+- "$7$ is [even](number-systems.qmd#def-even-odd)" is a proposition, and it is false.
+- "$x > 2$" is not a proposition on its own:
+  it is true when $x = 3$ and false when $x = 1$,
+  so it has no truth value until $x$ is given a value.
+
+:::

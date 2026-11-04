@@ -1,0 +1,10 @@
+:::{#exm-theorem-sum-evens}
+#### A theorem
+
+"The sum of two even integers is even" is a result:
+@exm-proof proves it.
+It is of interest in its own right,
+since it applies whenever two even integers are added, as in $2 + 4 = 6$,
+so it is a theorem.
+
+:::

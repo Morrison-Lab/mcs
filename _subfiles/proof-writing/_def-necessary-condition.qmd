@@ -1,0 +1,9 @@
+:::{#def-necessary-condition}
+#### Necessary condition
+
+When the proposition "if $P$, then $Q$" is true,
+$Q$ is a **necessary condition**
+[@wikipedia_necessity_and_sufficiency]
+for $P$.
+
+:::

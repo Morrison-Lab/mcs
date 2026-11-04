@@ -1,0 +1,32 @@
+:::{#exm-proof-by-cases}
+#### The square of a real number is nonnegative
+
+Claim: for every [real number](number-systems.qmd#def-real-numbers) $x$, $x^2 \ge 0$.
+
+Every real number $x$ satisfies $x \ge 0$ or $x < 0$,
+so these two cases cover every $x$.
+
+**Case 1: $x \ge 0$.**
+Then $x^2 = x \cd x$ is a product of two nonnegative numbers, <!-- check-term-links: allow -->
+so $x^2 \ge 0$.
+
+**Case 2: $x < 0$.**
+Then $-x > 0$, and
+
+$$
+\ba
+x^2
+&= x \cd x
+&& \text{(definition of } x^2 \text{)}
+\\&= (-x) \cd (-x)
+&& \text{(the two minus signs cancel)}
+\ea
+$$
+
+is a product of two positive numbers,
+so $x^2 > 0$, and in particular $x^2 \ge 0$.
+
+The claim holds in both cases,
+so it holds for every real number $x$.
+
+:::

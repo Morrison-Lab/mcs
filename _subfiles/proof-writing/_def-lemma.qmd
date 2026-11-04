@@ -1,0 +1,8 @@
+:::{#def-lemma}
+#### Lemma
+
+A **lemma**
+[@wikipedia_lemma_mathematics]
+is a result (@def-result) proved mainly as a step in the proof of another result.
+
+:::

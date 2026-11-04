@@ -1,0 +1,9 @@
+:::{#def-corollary}
+#### Corollary
+
+A **corollary**
+[@wikipedia_corollary]
+is a result (@def-result) that follows from a theorem
+with little extra work.
+
+:::

@@ -1,0 +1,16 @@
+:::{#exm-truth-table}
+#### A truth table for $P \Rightarrow Q$
+
+The [proposition](#def-proposition) $P \Rightarrow Q$ is built from two [propositions](#def-proposition),
+so its [truth table](#def-truth-table) has $2^2 = 4$ rows.
+By the definition of [implies](#def-implies),
+$P \Rightarrow Q$ is false only in the row where $P$ is true and $Q$ is false:
+
+| $P$ | $Q$ | $P \Rightarrow Q$ |
+|:---:|:---:|:-----------------:|
+| T   | T   | T                 |
+| T   | F   | F                 |
+| F   | T   | T                 |
+| F   | F   | T                 |
+
+:::

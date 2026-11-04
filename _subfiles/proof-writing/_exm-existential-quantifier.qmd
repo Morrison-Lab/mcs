@@ -1,0 +1,9 @@
+:::{#exm-existential-quantifier}
+#### An existentially quantified proposition
+
+Let $P(x)$ be the predicate "$x$ is [even](number-systems.qmd#def-even-odd)".
+
+- "$\exists x \in \cb{1, 2, 3}, P(x)$" is true, because $P(2)$ is true.
+- "$\exists x \in \cb{1, 3, 5}, P(x)$" is false, because none of $1$, $3$, and $5$ is even.
+
+:::

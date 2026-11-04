@@ -1,0 +1,10 @@
+:::{#exm-universal-quantifier}
+#### A universally quantified proposition
+
+Let $P(x)$ be the predicate "$x$ is [even](number-systems.qmd#def-even-odd)".
+
+- "$\forall x \in \cb{2, 4, 6}, P(x)$" is true,
+  because $2$, $4$, and $6$ are all even.
+- "$\forall x \in \cb{2, 3, 4}, P(x)$" is false, because $P(3)$ is false.
+
+:::

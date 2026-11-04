@@ -1,0 +1,11 @@
+:::{#exm-iff}
+#### "If and only if" with equal and different truth values
+
+Take $x = 4$.
+
+- "$x$ is [even](number-systems.qmd#def-even-odd) $\Leftrightarrow x > 3$" is true:
+  $4$ is even and $4 > 3$, so both sides are true.
+- "$x > 3 \Leftrightarrow x > 5$" is false:
+  $4 > 3$ is true, but $4 > 5$ is false.
+
+:::
