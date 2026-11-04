@@ -6,7 +6,7 @@ Elements, subsets, products and operations
 
 Published
 
-Last modified: 2026-11-03 22:10:10 (PST)
+Last modified: 2026-11-04 00:19:47 (PST)
 
 > **NOTE:**
 >
@@ -241,7 +241,7 @@ Last modified: 2026-11-03 22:10:10 (PST)
 
 > **NOTE:**
 >
-> **Definition 14 (Strict subset (proper subset))** A [set](#def-set) $A$ is a **strict subset** (also called a **proper subset**) of a set $B$, written $A \subsetneq B$, if $A$ is a [subset](#def-subset) of $B$ and $A \neq B$.
+> **Definition 14 (Strict subset, proper subset)** A [set](#def-set) $A$ is a **strict subset** (also called a **proper subset**) of a set $B$, written $A \subsetneq B$, if $A$ is a [subset](#def-subset) of $B$ and $A \neq B$.
 
 > **NOTE:**
 >
@@ -423,7 +423,7 @@ Last modified: 2026-11-03 22:10:10 (PST)
 - [Definition 11 (Countable set)](#def-countable-set)
 - [Definition 12 (Countably infinite set)](#def-countably-infinite)
 - [Definition 13 (Subset)](#def-subset)
-- [Definition 14 (Strict subset (proper subset))](#def-strict-subset)
+- [Definition 14 (Strict subset, proper subset)](#def-strict-subset)
 - [Definition 15 (Power set)](#def-power-set)
 - [Definition 16 (Ordered pair)](#def-ordered-pair)
 - [Definition 17 (Tuple)](#def-tuple)
