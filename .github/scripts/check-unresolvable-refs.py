@@ -15,7 +15,8 @@ Issue: Morrison-Lab/mcs#29. The check belongs in Morrison-Lab/gha in the end,
 beside check-fform-paren, so every lab site gets it.
 
 Usage: check-unresolvable-refs.py [FILE ...]
-With no files, checks every .qmd file under chapters/ and the repository root.
+With no files, checks every .qmd file under chapters/ and _subfiles/ and in the
+repository root.
 Exits 1 if it finds any, and prints each as FILE:LINE: message.
 """
 
@@ -109,10 +110,17 @@ def check(path, site_numbered):
     return sorted(problems)
 
 
+def discover(root):
+    """Return every .qmd file the check covers when it is given no files."""
+    return sorted(
+        list(root.glob("*.qmd"))
+        + list((root / "chapters").rglob("*.qmd"))
+        + list((root / "_subfiles").rglob("*.qmd")))
+
+
 def main(argv):
     root = pathlib.Path(__file__).resolve().parents[2]
-    files = [pathlib.Path(a) for a in argv] or sorted(
-        list(root.glob("*.qmd")) + list((root / "chapters").rglob("*.qmd")))
+    files = [pathlib.Path(a) for a in argv] or discover(root)
     site_numbered = numbered_sections(root)
     count = 0
     for path in files:
