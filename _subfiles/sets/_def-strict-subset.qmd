@@ -1,5 +1,5 @@
 :::{#def-strict-subset}
-#### Strict subset (proper subset)
+#### Strict subset, proper subset
 
 A [set](#def-set) $A$ is a **strict subset**
 (also called a **proper subset**)

@@ -1,10 +1,10 @@
 :::{#exm-pairwise-disjoint}
-#### Low and high die rolls
+#### Low, middle and high die rolls
 
 For the die rolls $D = \set{1, 2, 3, 4, 5, 6}$ ([sets of die rolls](#exm-set)),
-the sets $\set{1, 2}$ and $\set{5, 6}$ are pairwise disjoint:
-no roll is in both.
-The sets $\set{2, 4, 6}$ and $\set{1, 2}$ are not,
-because $2$ is in both.
+the sets $\set{1, 2}$, $\set{3, 4}$ and $\set{5, 6}$ are [pairwise disjoint](#def-pairwise-disjoint):
+no roll is in more than one of them.
+The sets $\set{1, 2}$, $\set{3, 4}$ and $\set{2, 5}$ are not,
+because $2$ is in both the first and the third.
 
 :::
