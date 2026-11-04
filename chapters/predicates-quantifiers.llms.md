@@ -6,7 +6,7 @@ For all, there exists, and the order they come in
 
 Published
 
-Last modified: 2026-11-03 16:52:17 (PST)
+Last modified: 2026-11-03 17:01:53 (PST)
 
 > **NOTE:**
 >
@@ -27,7 +27,7 @@ Last modified: 2026-11-03 16:52:17 (PST)
 >
 > *Solution 1*.
 >
-> 1.  Neither: $L(s)$ has no truth value until we know which string $s$ is. It is a predicate ([Definition: Predicate](../chapters/propositional-logic.llms.md#def-predicate)), not a proposition ([Definition: Proposition (statement)](../chapters/propositional-logic.llms.md#def-proposition)).
+> 1.  Neither: $L(s)$ has no truth value until we know which string $s$ is. It is a predicate ([Definition: Predicate](../chapters/propositional-logic.llms.md#def-predicate)), not a proposition ([Definition: Proposition, statement](../chapters/propositional-logic.llms.md#def-proposition)).
 >
 > 2.  Each value of $s$ turns $L(s)$ into a proposition:
 >
@@ -76,7 +76,7 @@ Last modified: 2026-11-03 16:52:17 (PST)
 
 > **NOTE:**
 >
-> **Definition 2 (Quantifier)** A **quantifier** ([Wikipedia contributors 2026c](#ref-wikipedia_quantifier_logic)) turns a predicate $P(x)$ ([Definition: Predicate](../chapters/propositional-logic.llms.md#def-predicate)) about the elements $x$ of a set $S$ into a proposition ([Definition: Proposition (statement)](../chapters/propositional-logic.llms.md#def-proposition)). There are two, each defined next: the universal quantifier and the existential quantifier.
+> **Definition 2 (Quantifier)** A **quantifier** ([Wikipedia contributors 2026c](#ref-wikipedia_quantifier_logic)) turns a predicate $P(x)$ ([Definition: Predicate](../chapters/propositional-logic.llms.md#def-predicate)) about the elements $x$ of a set $S$ into a proposition ([Definition: Proposition, statement](../chapters/propositional-logic.llms.md#def-proposition)). There are two, each defined next: the universal quantifier and the existential quantifier.
 
 > **NOTE:**
 >
