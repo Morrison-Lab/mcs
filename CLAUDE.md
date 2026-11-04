@@ -28,6 +28,12 @@ Authoritative style guides:
   excluded from the render (`!mds/`), with `mds/references.bib` in the bibliography
 - `chapters/<topic>.qmd` --- one chapter per topic, a spine of headings, slide breaks and includes;
   its units live in `chapters/_subfiles/<topic>/`, one div per file named `_<stem>_<type>.qmd`
+- `_subfiles/<topic>/` --- the shared basics being moved here from `mds` (Morrison-Lab/mcs#60):
+  logic and proof writing, sets, functions, relations, induction, growth rates and the rest.
+  These files keep the `_<type>-<stem>.qmd` names they had in `mds` (`_def-big-o.qmd`),
+  so each move is a verifiable byte-for-byte copy and every `#id` survives.
+  They are renamed to the `_<stem>_<type>.qmd` convention when phase 3 revises them
+  into pages of their own; do not rename them before then
 - `cross-page-refs.lua` --- turns a cross-reference to a div on another page (`@def-predicate`, cited by an mds definition) into a link to that page;
   Quarto resolves `@id` only within a page, so without it the reference renders as "?@def-predicate".
   It also repoints the links mds text carries (`[text](#def-foo)`, `[text](number-systems.qmd#def-foo)`) at the page here that defines the id,

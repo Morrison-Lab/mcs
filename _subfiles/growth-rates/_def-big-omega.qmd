@@ -1,0 +1,19 @@
+:::{#def-big-omega}
+#### Big-Omega
+
+Let $f$ and $g$ be [functions](functions.qmd#def-function) from the [natural numbers](number-systems.qmd#def-natural-numbers) to the [real numbers](number-systems.qmd#def-real-numbers).
+Then $f(n)$ is **big-Omega** of $g(n)$
+[@wikipedia_big_o_notation],
+written $f(n) = \Omega(g(n))$,
+when there exist a [real number](number-systems.qmd#def-real-numbers) $c > 0$ and a [natural number](number-systems.qmd#def-natural-numbers) $N$
+such that, for every natural number $n \ge N$,
+$$
+|f(n)| \ge c \, |g(n)|.
+$$
+In words, from some point $N$ on,
+the [absolute value](number-systems.qmd#def-absolute-value) of $f(n)$
+is at least a fixed positive multiple $c$ of the absolute value of $g(n)$.
+Dividing by $c$ shows that $f(n) = \Omega(g(n))$
+exactly when $g(n) = O(f(n))$ in the sense of @def-big-o.
+
+:::
