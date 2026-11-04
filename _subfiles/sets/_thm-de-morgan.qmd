@@ -26,19 +26,21 @@ Two sets are equal when they have the same elements (@def-set),
 so it is enough to show that an element $x$ is in the left-hand side
 [if and only if](proof-writing.qmd#def-necessary-sufficient) ($\iff$)
 it is in the right-hand side.
+Each step applies the definition named at its right:
+set difference (@def-set-difference), union (@def-union) or intersection (@def-intersection).
 For the first law:
 
 $$
 \ba
 x \in S \setminus \bigcup_{i \in I} A_i
 &\iff x \in S \text{ and } x \notin \bigcup_{i \in I} A_i
-&& \text{(@def-set-difference)} \\
+&& \text{(set difference)} \\
 &\iff x \in S \text{ and } x \notin A_i \text{ for every } i \in I
-&& \text{(@def-union)} \\
+&& \text{(union)} \\
 &\iff x \in S \setminus A_i \text{ for every } i \in I
-&& \text{(@def-set-difference)} \\
+&& \text{(set difference)} \\
 &\iff x \in \bigcap_{i \in I} (S \setminus A_i)
-&& \text{(@def-intersection)}
+&& \text{(intersection)}
 \ea
 $$
 
@@ -48,13 +50,13 @@ $$
 \ba
 x \in S \setminus \bigcap_{i \in I} A_i
 &\iff x \in S \text{ and } x \notin \bigcap_{i \in I} A_i
-&& \text{(@def-set-difference)} \\
+&& \text{(set difference)} \\
 &\iff x \in S \text{ and } x \notin A_i \text{ for some } i \in I
-&& \text{(@def-intersection)} \\
+&& \text{(intersection)} \\
 &\iff x \in S \setminus A_i \text{ for some } i \in I
-&& \text{(@def-set-difference)} \\
+&& \text{(set difference)} \\
 &\iff x \in \bigcup_{i \in I} (S \setminus A_i)
-&& \text{(@def-union)}
+&& \text{(union)}
 \ea
 $$
 
