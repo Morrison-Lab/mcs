@@ -104,6 +104,8 @@ website:
             href: growth-rates.qmd
           - text: "Induction"
             href: induction.qmd
+          - text: "Relations"
+            href: relations.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mcs
@@ -160,6 +162,7 @@ website:
         contents:
           - growth-rates.qmd
           - induction.qmd
+          - relations.qmd
 
 callouty-theorem:
   thm:
