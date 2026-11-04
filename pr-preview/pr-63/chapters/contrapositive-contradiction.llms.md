@@ -6,7 +6,7 @@ Proving a statement by way of its negation
 
 Published
 
-Last modified: 2026-11-03 16:48:20 (PST)
+Last modified: 2026-11-03 21:44:10 (PST)
 
 > **NOTE:**
 >
@@ -55,7 +55,7 @@ Last modified: 2026-11-03 16:48:20 (PST)
 >
 > *Remark 1* (Two meanings of $\equiv$, and the mod operator). The symbol $\equiv$ also means [logical equivalence](../chapters/equivalence-negation.llms.md#def-logically-equivalent). The “$(\operatorname{mod} n)$” after it says which meaning is in use: $23 \equiv 8 \pmod{5}$ is a statement about two integers, and $P \equiv Q$ is a statement about two propositions.
 >
-> Congruence is related to the mod operator of a programming language, but it is not the same thing. In Racket, `(modulo 23 5)` is the number $3$, while $23 \equiv 8 \pmod{5}$ is a proposition ([Definition: Proposition (statement)](../chapters/propositional-logic.llms.md#def-proposition)), which is true or false.
+> Congruence is related to the mod operator of a programming language, but it is not the same thing. In Racket, `(modulo 23 5)` is the number $3$, while $23 \equiv 8 \pmod{5}$ is a proposition ([Definition: Proposition, statement](../chapters/propositional-logic.llms.md#def-proposition)), which is true or false.
 
 # 2 Proof by contrapositive
 
