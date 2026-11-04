@@ -1,0 +1,18 @@
+---
+title: "Growth Rates"
+format:
+  html: default
+  revealjs:
+    output-file: growth-rates-slides.html
+  pdf:
+    output-file: growth-rates-handout.pdf
+  docx:
+    output-file: growth-rates.docx
+---
+
+{{< include _growth-rates.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
