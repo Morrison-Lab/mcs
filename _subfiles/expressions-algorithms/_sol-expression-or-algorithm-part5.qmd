@@ -1,0 +1,8 @@
+::: {#sol-expression-or-algorithm-part5}
+
+$(a x + b)\,x + c$, Horner's form.
+It uses two multiplications and two additions, where the first form,
+with $x^2$ computed as $x \cdot x$, uses three multiplications and two additions.
+The two [expressions](#def-expression) denote the same [function](functions.qmd#def-function) and describe different [algorithms](#def-algorithm).
+
+:::

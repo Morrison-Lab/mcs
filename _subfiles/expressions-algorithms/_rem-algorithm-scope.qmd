@@ -1,0 +1,11 @@
+:::{#rem-algorithm-scope}
+#### Procedures that are not algorithms here
+
+By the definition of an [algorithm](#def-algorithm), every algorithm [computes](#def-computes) some [function](functions.qmd#def-function).
+That holds because an algorithm has unambiguous steps and halts on every valid [input](functions.qmd#def-argument).
+A procedure that makes random choices can return different [values](functions.qmd#def-value) for the same input.
+A procedure that never halts returns no [value](functions.qmd#def-value) for some inputs.
+Neither computes a function, and neither is an algorithm in this sense,
+although some texts call them [algorithms](#def-algorithm).
+
+:::

@@ -1,0 +1,71 @@
+::: {#fig-logistic-function}
+
+```{r}
+#| label: logistic-function-alt
+#| include: false
+fig_alt <- paste(
+  "The logistic function over the log-odds from -6 to 6, an S-shaped curve",
+  "rising from near 0 on the left to near 1 on the right.",
+  "Dotted horizontal lines mark the values 0 and 1,",
+  "which the curve approaches but never reaches.",
+  "Three points are marked, at log-odds -2, 0 and 2,",
+  "with the middle one at height 0.5."
+)
+```
+
+```{r}
+#| label: logistic-function-plot
+#| fig-alt: !expr fig_alt
+# the Greek letter eta, written as a code point to keep this file ASCII
+eta_symbol <- intToUtf8(0x3b7)
+eta_grid <- seq(-6, 6, length.out = 241)
+logistic_curve <- data.frame(eta = eta_grid, sigmoid = plogis(eta_grid))
+logistic_points <- data.frame(eta = c(-2, 0, 2), sigmoid = plogis(c(-2, 0, 2)))
+logistic_points$label <- sprintf("%.3f", logistic_points$sigmoid)
+
+logistic_function_plot <- ggplot2::ggplot() +
+  ggplot2::geom_hline(
+    yintercept = c(0, 1),
+    linetype = "dotted",
+    colour = "grey50"
+  ) +
+  ggplot2::geom_line(
+    data = logistic_curve,
+    ggplot2::aes(x = eta, y = sigmoid),
+    colour = "#0072B2"
+  ) +
+  ggplot2::geom_point(
+    data = logistic_points,
+    ggplot2::aes(x = eta, y = sigmoid),
+    size = 3,
+    colour = "#D55E00"
+  ) +
+  ggplot2::geom_text(
+    data = logistic_points,
+    ggplot2::aes(x = eta, y = sigmoid, label = label),
+    nudge_x = 0.2,
+    nudge_y = -0.06,
+    hjust = 0
+  ) +
+  ggplot2::scale_x_continuous(breaks = seq(-6, 6, 2)) +
+  ggplot2::labs(
+    x = paste0("Log-odds, ", eta_symbol),
+    y = paste0("Probability, logistic(", eta_symbol, ")")
+  ) +
+  ggplot2::theme_minimal()
+
+if (knitr::is_html_output()) {
+  htmltools::div(
+    role = "img",
+    `aria-label` = fig_alt,
+    plotly::ggplotly(logistic_function_plot)
+  )
+} else {
+  logistic_function_plot
+}
+```
+
+The [logistic function](#def-logistic-function) for $\logodds$ from $-6$ to $6$.
+Its [values](#def-value) lie strictly between $0$ and $1$, and the marked points are the values at $\logodds = -2$, $0$ and $2$ from @exm-logistic-function.
+
+:::

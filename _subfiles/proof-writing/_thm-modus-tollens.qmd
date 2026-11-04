@@ -1,0 +1,23 @@
+:::{#thm-modus-tollens}
+#### Modus tollens
+
+For [propositions](#def-proposition) $P$ and $Q$,
+this is a [rule of inference](#def-rule-of-inference):
+
+$$
+\frac{P \Rightarrow Q, \quad \neg Q}{\neg P}
+$$
+
+:::
+
+::: proof
+
+Suppose both [premises](#def-premise) are true.
+By the definition of [not](#def-not),
+$Q$ is false.
+By the definition of [implies](#def-implies),
+a true $P \Rightarrow Q$ with a false $Q$ needs a false $P$.
+So $P$ is false,
+and the [conclusion](#def-conclusion) $\neg P$ is true.
+
+:::

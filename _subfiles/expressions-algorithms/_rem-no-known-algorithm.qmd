@@ -2,7 +2,7 @@
 #### Values with no known algorithm
 
 Some functions have no known finite algorithm for their exact values,
-and expressions that denote them,
+and [expressions](#def-expression) that [denote](#def-denotes) them,
 such as a limit, a supremum, an integral with no closed form,
 or an $\argmin$ over a set with no formula for the minimizer,
 cannot be evaluated by following their tree.

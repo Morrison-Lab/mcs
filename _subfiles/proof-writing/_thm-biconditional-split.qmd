@@ -1,0 +1,31 @@
+:::{#thm-biconditional-split}
+#### A biconditional is two conditionals
+
+For [propositions](#def-proposition) $P$ and $Q$,
+
+$$
+(P \Leftrightarrow Q) \equiv \paren{(P \Rightarrow Q) \land (Q \Rightarrow P)}.
+$$
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+::: proof
+
+By the definitions of [if and only if](#def-iff), [implies](#def-implies) and [and](#def-and),
+the [truth table](#def-truth-table) is:
+
+| $P$ | $Q$ | $P \Rightarrow Q$ | $Q \Rightarrow P$ | $(P \Rightarrow Q) \land (Q \Rightarrow P)$ | $P \Leftrightarrow Q$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| T | T | T | T | T | T |
+| T | F | F | T | F | F |
+| F | T | T | F | F | F |
+| F | F | T | T | T | T |
+
+The last two columns match in every row,
+so the two [propositions](#def-proposition) are [logically equivalent](#def-logically-equivalent).
+
+:::
+
+:::

@@ -1,0 +1,18 @@
+:::{#exm-inference-rules}
+#### Chaining rules of inference
+<!-- no-figure: the derivation is the display -->
+
+Suppose these three [premises](#def-premise) are true:
+
+- "if it rains, then the game is cancelled";
+- "if the game is cancelled, then we go to the museum";
+- "we do not go to the museum".
+
+By [modus tollens](#thm-modus-tollens) on the second and third premises,
+"the game is not cancelled" is true.
+By modus tollens again,
+on the first [premise](#def-premise) and the fact derived from them,
+"it does not rain" is true.
+So the [conclusion](#def-conclusion) "it does not rain" follows from the premises.
+
+:::

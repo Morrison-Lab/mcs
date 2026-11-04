@@ -5,7 +5,5 @@ An **algorithm**
 [@wikipedia_algorithm]
 is a finite list of unambiguous steps that,
 applied to any valid input, halts and returns an output.
-An algorithm *computes* a [function](functions.qmd#def-function):
-for each input it returns the function's value at that input.
 
 :::

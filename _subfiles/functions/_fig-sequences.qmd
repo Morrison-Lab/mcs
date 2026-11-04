@@ -1,0 +1,50 @@
+::: {#fig-sequences}
+
+```{r}
+#| label: sequences-alt
+#| include: false
+fig_alt <- paste(
+  "Two panels of points plotted against the index n from 1 to 10.",
+  "In the first, the terms 1 over n fall from 1 toward 0,",
+  "getting closer together.",
+  "In the second, the terms of (-1) to the n alternate between -1 and 1."
+)
+```
+
+```{r}
+#| label: sequences-plot
+#| fig-alt: !expr fig_alt
+n <- 1:10
+sequence_labels <- c("a_n = 1/n", "b_n = (-1)^n")
+sequences <- data.frame(
+  n = rep(n, 2),
+  sequence = factor(
+    rep(sequence_labels, each = length(n)),
+    levels = sequence_labels
+  ),
+  term = c(1 / n, (-1)^n)
+)
+
+sequences_plot <- ggplot2::ggplot(sequences) +
+  ggplot2::aes(x = n, y = term) +
+  ggplot2::geom_point(size = 2.5, colour = "#0072B2") +
+  ggplot2::facet_wrap(~sequence, scales = "free_y") +
+  ggplot2::scale_x_continuous(breaks = n) +
+  ggplot2::labs(x = "Index, n", y = "Term value") +
+  ggplot2::theme_minimal()
+
+if (knitr::is_html_output()) {
+  htmltools::div(
+    role = "img",
+    `aria-label` = fig_alt,
+    plotly::ggplotly(sequences_plot)
+  )
+} else {
+  sequences_plot
+}
+```
+
+The first ten [terms](#def-sequence-term) of the [sequences](#def-sequence) $a_n = 1/n$ and $b_n = (-1)^n$ of @exm-sequence, plotted against $n$.
+The terms of $b_n$ take only two [values](#def-value).
+
+:::

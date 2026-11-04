@@ -3,10 +3,10 @@
 
 The three ideas fit together this way:
 
-- A function is the input-output relationship.
-- An [expression](#def-expression) denotes a function,
+- A [function](functions.qmd#def-function) is the input-output relationship.
+- An [expression](#def-expression) [denotes](#def-denotes) a function,
   and many expressions denote the same one.
-- An [algorithm](#def-algorithm) computes a function,
+- An [algorithm](#def-algorithm) [computes](#def-computes) a function,
   and many algorithms compute the same one.
 
 An expression is not an algorithm,

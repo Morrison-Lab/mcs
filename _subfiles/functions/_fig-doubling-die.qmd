@@ -1,0 +1,67 @@
+::: {#fig-doubling-die}
+
+```{r}
+#| label: doubling-die-alt
+#| include: false
+fig_alt <- paste(
+  "A scatter plot of six points,",
+  "one for each die roll from 1 to 6 on the horizontal axis,",
+  "rising along a straight line at heights 2, 4, 6, 8, 10 and 12.",
+  "Dotted lines carry each height across to the vertical axis,",
+  "where the image of the function is marked."
+)
+```
+
+```{r}
+#| label: doubling-die-plot
+#| fig-alt: !expr fig_alt
+rolls <- data.frame(roll = 1:6, double = 2 * (1:6))
+
+doubling_die_plot <- ggplot2::ggplot(rolls) +
+  ggplot2::aes(x = roll, y = double) +
+  ggplot2::geom_segment(
+    ggplot2::aes(xend = 0, yend = double),
+    linetype = "dotted",
+    colour = "grey50"
+  ) +
+  ggplot2::geom_point(
+    ggplot2::aes(colour = "graph of f"),
+    size = 3
+  ) +
+  ggplot2::geom_point(
+    ggplot2::aes(x = 0, colour = "image of f"),
+    shape = 15,
+    size = 3
+  ) +
+  ggplot2::scale_x_continuous(breaks = 0:6, limits = c(0, 6)) +
+  ggplot2::scale_y_continuous(breaks = seq(0, 12, 2), limits = c(0, 12)) +
+  ggplot2::scale_colour_manual(
+    values = c("graph of f" = "#0072B2", "image of f" = "#D55E00")
+  ) +
+  ggplot2::labs(
+    x = "Input, a (the roll)",
+    y = "Output, f(a) = 2a",
+    colour = NULL
+  ) +
+  ggplot2::theme_minimal() +
+  ggplot2::theme(legend.position = "bottom")
+
+if (knitr::is_html_output()) {
+  htmltools::div(
+    role = "img",
+    `aria-label` = fig_alt,
+    plotly::ggplotly(doubling_die_plot) |>
+      plotly::layout(legend = list(orientation = "h", y = -0.2))
+  )
+} else {
+  doubling_die_plot
+}
+```
+
+The [function](#def-function) $f(a) = 2a$ on the die rolls.
+The six points are the [graph](#def-graph) of $f$.
+The markers on the vertical axis are the [image of](#def-image) $f$:
+only the multiples of $2$ from $2$ to $12$ are [values](#def-value) of $f$,
+though the [codomain](#def-codomain) is all of $\reals$.
+
+:::

@@ -1,0 +1,12 @@
+:::{#def-closed-form-expression}
+#### Closed-form expression (formula)
+
+A **closed-form expression** (or **formula**)
+[@wikipedia_closed_form_expression]
+is an [expression](#def-expression) built from constants and variables <!-- check-term-links: allow -->
+using a finite number of operations from a list of accepted [functions](functions.qmd#def-function), <!-- check-term-links: allow -->
+such as [powers](algebra-basics.qmd#def-power), roots, exponentials, logarithms, and trigonometric functions.
+Which functions are accepted is a convention,
+and a source states it when the boundary matters.
+
+:::

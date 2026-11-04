@@ -1,0 +1,21 @@
+:::{#thm-addition-rule}
+#### Addition
+
+For [propositions](#def-proposition) $P$ and $Q$,
+this is a [rule of inference](#def-rule-of-inference):
+
+$$
+\frac{P}{P \lor Q}
+$$
+
+:::
+
+::: proof
+
+Suppose the [premise](#def-premise) is true.
+By the definition of [or](#def-or),
+$P \lor Q$ is true
+when $P$ is true.
+So the [conclusion](#def-conclusion) $P \lor Q$ is true.
+
+:::

@@ -1,5 +1,5 @@
 :::{#def-argument}
-#### Argument (input)
+#### Argument, input
 
 An **argument** (or **input**) of a [function](#def-function) $f : A \to B$
 is an element $a \in A$ that $f$ is applied to.

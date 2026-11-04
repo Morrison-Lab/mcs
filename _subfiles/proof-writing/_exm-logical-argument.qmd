@@ -1,0 +1,14 @@
+:::{#exm-logical-argument}
+#### A logical argument
+<!-- no-figure: three short sentences; nothing to plot -->
+
+"If $n$ is [even](number-systems.qmd#def-even-odd), then $n^2$ is even.
+$n$ is even.
+So $n^2$ is even."
+is a [logical argument](#def-logical-argument).
+Its [premises](#def-premise) are
+"if $n$ is even, then $n^2$ is even"
+and "$n$ is even".
+Its [conclusion](#def-conclusion) is "$n^2$ is even".
+
+:::

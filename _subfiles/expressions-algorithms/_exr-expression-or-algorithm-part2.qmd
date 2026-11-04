@@ -1,0 +1,9 @@
+::: {#exr-expression-or-algorithm-part2}
+
+#### Is an expression an algorithm? (part 2)
+
+Use the setup of @exr-expression-or-algorithm.
+
+Which of the three does $a x^2 + b x + c$ name: a [function](functions.qmd#def-function), an [expression](#def-expression) or an [algorithm](#def-algorithm)?
+
+:::

@@ -1,0 +1,23 @@
+:::{#thm-equivalence-iff}
+#### Equivalence is a tautological biconditional
+
+For [propositions](#def-proposition) $A$ and $B$,
+$A$ and $B$ are [logically equivalent](#def-logically-equivalent)
+exactly when $A \Leftrightarrow B$ is a [tautology](#def-tautology).
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+::: proof
+
+By the definition of [if and only if](#def-iff),
+$A \Leftrightarrow B$ is true in a row of the [truth table](#def-truth-table)
+exactly when $A$ and $B$ have the same truth value in that row. <!-- check-term-links: allow -->
+So $A \Leftrightarrow B$ is true in every row
+exactly when $A$ and $B$ have the same truth value in every row,
+which is the definition of $A \equiv B$.
+
+:::
+
+:::

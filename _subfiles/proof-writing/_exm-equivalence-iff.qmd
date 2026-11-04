@@ -1,0 +1,21 @@
+:::{#exm-equivalence-iff}
+#### A tautological biconditional
+<!-- no-figure: the truth table is the display -->
+
+@exm-logically-equivalent showed that
+$P \Rightarrow Q$ and $\neg P \lor Q$ are [logically equivalent](#def-logically-equivalent).
+Adding a column for the biconditional to its [truth table](#def-truth-table)
+gives:
+
+| $P$ | $Q$ | $\neg P \lor Q$ | $P \Rightarrow Q$ | $(P \Rightarrow Q) \Leftrightarrow (\neg P \lor Q)$ |
+|:---:|:---:|:---------------:|:-----------------:|:---------------------------------------------------:|
+| T   | T   | T               | T                 | T                                                   |
+| T   | F   | F               | F                 | T                                                   |
+| F   | T   | T               | T                 | T                                                   |
+| F   | F   | T               | T                 | T                                                   |
+
+The last column is true in every row,
+so the biconditional is a [tautology](#def-tautology),
+as [equivalence as a tautological biconditional](#thm-equivalence-iff) says it must be.
+
+:::
