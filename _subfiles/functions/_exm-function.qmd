@@ -1,0 +1,11 @@
+:::{#exm-function}
+#### Doubling a die roll
+
+The rule $f(a) = 2a$ defines a function $f : \set{1, 2, 3, 4, 5, 6} \to \reals$,
+because it assigns exactly one real number to each possible roll;
+for example, $f(3) = 6$.
+A rule that assigned both $2$ and $-2$ to the roll $1$
+would not be a function,
+because a function assigns exactly one value to each element.
+
+:::

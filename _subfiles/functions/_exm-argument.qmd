@@ -1,0 +1,10 @@
+:::{#exm-argument}
+#### Arguments of doubling a die roll
+
+For the function $f(a) = 2a$ in @exm-function,
+the roll $3$ is an argument of $f$,
+because $f$ can be applied to it.
+The number $7$ is not an argument of $f$,
+because it is not an element of $\set{1, 2, 3, 4, 5, 6}$.
+
+:::

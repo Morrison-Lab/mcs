@@ -1,0 +1,29 @@
+:::{#rem-function-as-set-of-pairs}
+#### What a function is fundamentally
+
+@def-function defines what a function *does*: it assigns an output to each input.
+In formal set theory, what a function *is* is described in terms of [ordered pairs](sets.qmd#def-ordered-pair)
+and its graph (@def-graph):
+the set of pairs $G = \set{(a, f(a)) : a \in A} \subseteq A \times B$.
+Authors define a function formally in one of two ways:
+
+1. **As its graph** [@halmos1974naive, Section 8, p. 30]: a function is a subset of $A \times B$ containing exactly one pair $(a, b)$ for each $a \in A$, where $b = f(a)$, and the statement $f(a) = b$ is notation for $(a, b) \in f$.
+   Under this convention, the codomain $B$ is specified alongside the graph in the declaration $f : A \to B$.
+2. **As a triple $(A, B, G)$**: the function consists of the domain $A$, the codomain $B$, and the graph $G \subseteq A \times B$.
+   This explicit packaging retains the codomain $B$ as part of the function itself, distinguishing functions that have the same graph but different codomains (such as a function mapping into $\reals$ versus into integers).
+
+For example, the die-doubling function in @exm-function has the graph of six ordered pairs
+$\set{(1, 2), (2, 4), (3, 6), (4, 8), (5, 10), (6, 12)}$.
+
+This distinction clarifies what a function is and is not:
+
+- **Not an algebraic formula:** A function is not fundamentally an equation or algebraic expression.
+  While many functions are specified by a formula (such as $f(x) = x^2$), many others cannot be written in closed form (such as empirical measurements or a lookup table), yet every function has a well-defined set of input-output pairs.
+- **Not a curve:** A curve or plot is a geometric visualization of a function whose domain and codomain are subsets of $\reals$, but functions can map between arbitrary sets (such as sets of words, matrices, or probability distributions).
+- **Sets of pairs with unique first entries:** Any subset of $A \times B$ in which no two distinct pairs share the same first element defines a function from the set of those first elements to $B$.
+
+In computer science, viewing a function as a set of key-value pairs corresponds directly to a **dictionary**, **lookup table**, or **hash map**.
+Evaluating an expression computes outputs on demand;
+caching computed outputs $(a, f(a))$ on demand to return on future calls without recomputing is known as **memoization**.
+
+:::

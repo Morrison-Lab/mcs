@@ -1,0 +1,10 @@
+:::{#def-proof-by-contradiction}
+#### Proof by contradiction
+
+A **proof by contradiction**
+[@wikipedia_proof_by_contradiction]
+of a proposition $P$
+assumes that $P$ is false,
+and derives from that assumption a proposition that is known to be false.
+
+:::

@@ -1,0 +1,92 @@
+:::{#exm-induction-sum}
+#### Sum of the first $n$ natural numbers
+
+For every $n \in \Nat$,
+
+$$
+\sumin i = \frac{n(n+1)}{2}.
+$$
+
+For example, with $n = 3$,
+$1 + 2 + 3 = 6$ and $\frac{3 \cdot 4}{2} = 6$.
+To prove the equation for every $n$,
+let $P(n)$ be the equation and use @def-proof-by-induction with $n_0 = 1$.
+
+**Base case, $n = 1$.**
+The sum has one term:
+
+$$
+\ba
+\sumto{i}{1} i
+&= 1
+&& \text{(definition of a sum)}
+\ea
+$$
+
+and the right side is
+
+$$
+\ba
+\frac{1\,(1+1)}{2}
+&= \frac{1 \cdot 2}{2}
+&& \text{(} 1 + 1 = 2 \text{)}
+\\
+&= \frac{2}{2}
+&& \text{(} 1 \cdot 2 = 2 \text{)}
+\\
+&= 1.
+&& \text{(} \tfrac{2}{2} = 1 \text{)}
+\ea
+$$
+
+So $P(1)$ holds.
+
+**Inductive step.**
+Let $n \ge 2$, and suppose $P(n - 1)$ holds:
+
+$$
+\sumto{i}{n-1} i = \frac{(n-1)\,\paren{(n-1)+1}}{2}.
+$$
+
+Then
+
+$$
+\ba
+\sumin i
+&= 1 + 2 + \cdots + (n-1) + n
+&& \text{(definition of a sum)}
+\\
+&= \paren{1 + 2 + \cdots + (n-1)} + n
+&& \text{(associative law)}
+\\
+&= \sumto{i}{n-1} i + n
+&& \text{(definition of a sum)}
+\\
+&= \frac{(n-1)\,\paren{(n-1)+1}}{2} + n
+&& \text{(induction hypothesis)}
+\\
+&= \frac{(n-1)\,n}{2} + n
+&& \text{(} (n-1) + 1 = n \text{)}
+\\
+&= \frac{(n-1)\,n}{2} + \frac{2n}{2}
+&& \text{(} n = \tfrac{2n}{2} \text{)}
+\\
+&= \frac{(n-1)\,n + 2n}{2}
+&& \text{(common denominator)}
+\\
+&= \frac{\paren{(n-1) + 2}\,n}{2}
+&& \text{(distributive law)}
+\\
+&= \frac{(n+1)\,n}{2}
+&& \text{(} (n-1) + 2 = n + 1 \text{)}
+\\
+&= \frac{n(n+1)}{2},
+&& \text{(commutative law)}
+\ea
+$$
+
+which is $P(n)$.
+By @def-proof-by-induction,
+the equation holds for every $n \in \Nat$.
+
+:::

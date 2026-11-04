@@ -1,0 +1,8 @@
+:::{#def-theorem}
+#### Theorem
+
+A **theorem**
+[@wikipedia_theorem]
+is a result (@def-result) of interest in its own right.
+
+:::

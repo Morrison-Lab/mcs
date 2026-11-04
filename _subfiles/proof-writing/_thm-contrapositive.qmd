@@ -1,0 +1,27 @@
+:::{#thm-contrapositive}
+#### A conditional is equivalent to its contrapositive
+
+For any [propositions](#def-proposition) $P$ and $Q$,
+
+$$
+(P \Rightarrow Q) \equiv (\neg Q \Rightarrow \neg P).
+$$
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+::: proof
+
+By the definition of [implies](#def-implies),
+$P \Rightarrow Q$ is false exactly when $P$ is true and $Q$ is false.
+By the same definition,
+$\neg Q \Rightarrow \neg P$ is false exactly when $\neg Q$ is true and $\neg P$ is false,
+that is, exactly when $Q$ is false and $P$ is true.
+So the two [propositions](#def-proposition) are false in the same row of a [truth table](#def-truth-table)
+and true in the other three,
+which is @def-logically-equivalent.
+
+:::
+
+:::

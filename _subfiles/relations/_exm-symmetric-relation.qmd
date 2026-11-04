@@ -1,0 +1,8 @@
+:::{#exm-symmetric-relation}
+#### Symmetric and non-symmetric relations on the real numbers
+
+On $\reals$, the [relation](functions.qmd#def-relation) $=$ is [symmetric](#def-symmetric-relation):
+whenever $a = b$, also $b = a$.
+The relation $\le$ is not symmetric, since $2 \le 5$ is true but $5 \le 2$ is false.
+
+:::

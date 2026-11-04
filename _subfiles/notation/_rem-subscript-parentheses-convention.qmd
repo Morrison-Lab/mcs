@@ -1,0 +1,20 @@
+::: {#rem-subscript-parentheses-convention}
+
+#### Our convention for subscripts and parentheses
+
+Subscripts and parentheses both attach extra information to a symbol,
+and sources divide the work between them differently.
+These notes follow two rules of thumb:
+
+- A subscript names which member of an [indexed family](sets.qmd#def-indexed-family) we mean.
+  It holds an index, such as the $i$ in $x_i$,
+  or a parameter that picks one [function](functions.qmd#def-function) or distribution out of the family,
+  such as the $\theta$ in $f_\theta$.
+- Parentheses hold the input a function is evaluated at,
+  as in $f(x)$.
+
+Under these rules, $f_\theta(x)$ reads "the member of the family labeled $\theta$, evaluated at $x$".
+The [notation choices page](https://morrison-lab.github.io/macros/notation-choices.html#sec-subscripts-parentheses)
+gives the reason for this split and explains how to read a source that divides the work differently.
+
+:::

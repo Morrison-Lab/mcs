@@ -1,0 +1,11 @@
+:::{#def-truth-table}
+#### Truth table
+
+A **truth table**
+[@wikipedia_truth_table]
+for a [proposition](#def-proposition) built from [propositions](#def-proposition) $P_1, \ldots, P_n$
+with [logical connectives](#def-logical-connective)
+has one row for each of the $2^n$ combinations of truth values of $P_1, \ldots, P_n$, <!-- check-term-links: allow -->
+and gives the truth value of the proposition in each row. <!-- check-term-links: allow -->
+
+:::

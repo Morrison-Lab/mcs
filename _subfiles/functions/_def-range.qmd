@@ -1,0 +1,14 @@
+:::{#def-range}
+#### Range
+
+The word **range** of a [function](#def-function) $f : A \to B$ has two conflicting meanings,
+and sources use one or the other:
+
+- the [image](#def-image) of $f$, the set $f(A)$ of values that $f$ actually takes;
+- the [codomain](#def-codomain) of $f$, the set $B$ that its values are required to lie in.
+
+To avoid the ambiguity, these notes write "image" or "codomain" instead,
+and recommend that you do too
+[@wikipedia_range_of_a_function].
+
+:::

@@ -1,0 +1,16 @@
+:::{#exm-logical-entailment}
+#### Entailment, and its failure
+
+Let $x$ be an [integer](number-systems.qmd#def-integers).
+
+- "$x = 2$" entails "$x^2 = 4$":
+  the only value that makes "$x = 2$" true is $x = 2$,
+  and $2^2 = 4$.
+- "$x > 3$" and "$x < 5$" together entail "$x = 4$":
+  $4$ is the only integer greater than $3$ and less than $5$.
+- "$x^2 = 4$" does not entail "$x = 2$":
+  the value $x = -2$ makes "$x^2 = 4$" true,
+  since $(-2)^2 = 4$,
+  but makes "$x = 2$" false.
+
+:::

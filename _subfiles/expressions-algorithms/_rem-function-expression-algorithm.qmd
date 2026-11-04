@@ -1,0 +1,18 @@
+:::{#rem-function-expression-algorithm}
+#### How functions, expressions and algorithms relate
+
+The three ideas fit together this way:
+
+- A function is the input-output relationship.
+- An [expression](#def-expression) denotes a function,
+  and many expressions denote the same one.
+- An [algorithm](#def-algorithm) computes a function,
+  and many algorithms compute the same one.
+
+An expression is not an algorithm,
+because it does not say what to do, or in what order.
+Given values for its variables,
+evaluating its parse tree from the leaves up is one algorithm for the function it denotes,
+and a different expression for the same function gives a different tree and a different algorithm.
+
+:::

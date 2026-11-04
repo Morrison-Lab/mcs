@@ -1,0 +1,8 @@
+:::{#exm-value}
+#### Values of doubling a die roll
+
+For the function $f(a) = 2a$ in @exm-function,
+the value of $f$ at the argument $3$ is $f(3) = 6$,
+and the value at the argument $5$ is $f(5) = 10$.
+
+:::

@@ -1,0 +1,15 @@
+:::{#def-propositional-logic}
+#### Propositional logic
+
+**Propositional logic**
+[@wikipedia_propositional_calculus]
+is the study of
+[logical entailment](#def-logical-entailment)
+among [propositions](#def-proposition)
+built from basic propositions $P, Q, R, \ldots$
+using only the [logical connectives](#def-logical-connective).
+Whether such propositions entail one another
+depends only on the truth values of the basic propositions, <!-- check-term-links: allow -->
+not on what the basic propositions say.
+
+:::

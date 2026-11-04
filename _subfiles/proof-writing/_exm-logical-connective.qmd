@@ -1,0 +1,14 @@
+:::{#exm-logical-connective}
+#### Truth values of connectives
+
+Let $P$ be "$2 + 3 = 5$", which is true,
+and let $Q$ be "$7$ is [even](number-systems.qmd#def-even-odd)", which is false.
+
+- $\neg Q$, "$7$ is not even", is true, because $Q$ is false.
+- $P \land Q$ is false, because $Q$ is false.
+- $P \lor Q$ is true, because $P$ is true.
+- $P \Rightarrow Q$ is false, because $P$ is true and $Q$ is false.
+- $Q \Rightarrow P$ is true, because $Q$ is false.
+- $P \Leftrightarrow Q$ is false, because $P$ and $Q$ have different truth values.
+
+:::

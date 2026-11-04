@@ -1,0 +1,8 @@
+:::{#rem-graph-real-function}
+#### The graph of a real function is a curve
+
+For a function $f : \reals \to \reals$,
+the graph is a curve in the plane,
+with $a$ on the horizontal axis and $f(a)$ on the vertical axis.
+
+:::

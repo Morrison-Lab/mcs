@@ -1,0 +1,11 @@
+:::{#def-equivalence-relation}
+#### Equivalence relation
+
+Let $\sim$ be a [relation](functions.qmd#def-relation) on a [set](sets.qmd#def-set) $S$.
+The relation $\sim$ is an **equivalence relation**
+[@wikipedia_equivalence_relation]
+if it is [reflexive](#def-reflexive),
+[symmetric](#def-symmetric-relation),
+and [transitive](algebra.qmd#def-transitive).
+
+:::

@@ -115,15 +115,15 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/functions/_def-finite-set.qmd >}}
+{{< include ../_subfiles/functions/_def-finite-set.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/functions/_def-infinite-set.qmd >}}
+{{< include ../_subfiles/functions/_def-infinite-set.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/functions/_exm-finite-set.qmd >}}
+{{< include ../_subfiles/functions/_exm-finite-set.qmd >}}
 
 {{< slidebreak >}}
 
@@ -131,15 +131,15 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/functions/_def-countable-set.qmd >}}
+{{< include ../_subfiles/functions/_def-countable-set.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/functions/_def-countably-infinite.qmd >}}
+{{< include ../_subfiles/functions/_def-countably-infinite.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/functions/_exm-countable-set.qmd >}}
+{{< include ../_subfiles/functions/_exm-countable-set.qmd >}}
 
 {{< slidebreak >}}
 

@@ -1,0 +1,52 @@
+:::{#exm-direct-proof}
+#### The square of an odd integer is odd
+
+Claim: if $n$ is an [odd](number-systems.qmd#def-odd) [integer](number-systems.qmd#def-integers),
+then $n^2$ is odd.
+
+Since $n$ is odd,
+there is an integer $k$ with $n = 2k + 1$.
+Then
+
+$$
+\ba
+n^2
+&= (2k + 1)^2
+&& \text{(substitute } n = 2k + 1 \text{)}
+\\&= (2k)^2 + 2 \cd 2k \cd 1 + 1^2
+&& \text{(square of a sum)}
+\\&= 4k^2 + 4k + 1
+&& \text{(arithmetic)}
+\\&= 2(2k^2 + 2k) + 1
+&& \text{(distributive law, read from right to left)}
+\ea
+$$
+
+and $2k^2 + 2k$ is an integer,
+because adding or multiplying [integers](number-systems.qmd#def-integers) gives an integer.
+So $n^2 = 2 \cd (\text{an integer}) + 1$, which is the definition of odd.
+For example,
+
+$$
+\begin{aligned}
+n &= 7 \\
+&= 2 \cd 3 + 1
+\end{aligned}
+$$
+
+gives
+
+$$
+\begin{aligned}
+n^2 &= 49 \\
+&= 2 \cd 24 + 1,
+\end{aligned}
+$$
+
+and $2 \cd 3^2 + 2 \cd 3 = 24$.
+
+The proof above that
+[the sum of two even integers is even](#exm-proof)
+is also a [direct proof](#def-direct-proof).
+
+:::

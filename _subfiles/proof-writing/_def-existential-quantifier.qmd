@@ -1,0 +1,11 @@
+:::{#def-existential-quantifier}
+#### Existential quantifier
+
+The **existential quantifier**
+[@wikipedia_existential_quantification]
+"there exists" is a quantifier (@def-quantifier):
+$\exists x \in S, P(x)$ ("there is an $x$ in $S$ such that $P(x)$")
+is true when $P(x)$ is true for at least one element $x$ of $S$,
+and false otherwise.
+
+:::

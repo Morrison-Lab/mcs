@@ -1,0 +1,9 @@
+:::{#def-result}
+#### Result
+
+A **result** is a proposition (@def-proposition)
+that has a proof (@def-proof).
+These notes label each result by its role:
+as a theorem, a lemma, or a corollary, each defined next. <!-- check-term-links: allow -->
+
+:::

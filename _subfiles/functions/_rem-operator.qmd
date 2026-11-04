@@ -1,0 +1,8 @@
+:::{#rem-operator}
+#### Other uses of "operator"
+
+Some authors call every function an operator,
+and others reserve the word for functions whose domain and codomain are the same set,
+as in the [linear operator](linear-algebra-matrices.qmd#def-linear-operator).
+
+:::

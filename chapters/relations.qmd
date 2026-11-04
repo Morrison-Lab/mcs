@@ -53,7 +53,7 @@ The exercises, the other examples, the Racket functions and all the proofs are n
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/functions/_def-relation.qmd >}}
+{{< include ../_subfiles/functions/_def-relation.qmd >}}
 
 {{< slidebreak >}}
 
@@ -113,7 +113,7 @@ The exercises, the other examples, the Racket functions and all the proofs are n
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/relations/_def-reflexive.qmd >}}
+{{< include ../_subfiles/relations/_def-reflexive.qmd >}}
 
 {{< slidebreak >}}
 
@@ -121,7 +121,7 @@ The exercises, the other examples, the Racket functions and all the proofs are n
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/relations/_def-symmetric-relation.qmd >}}
+{{< include ../_subfiles/relations/_def-symmetric-relation.qmd >}}
 
 {{< slidebreak >}}
 
@@ -137,7 +137,7 @@ The exercises, the other examples, the Racket functions and all the proofs are n
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/algebra/_def-transitive.qmd >}}
+{{< include ../_subfiles/algebra/_def-transitive.qmd >}}
 
 {{< slidebreak >}}
 
@@ -217,7 +217,7 @@ The exercises, the other examples, the Racket functions and all the proofs are n
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/relations/_def-equivalence-relation.qmd >}}
+{{< include ../_subfiles/relations/_def-equivalence-relation.qmd >}}
 
 {{< slidebreak >}}
 
@@ -233,7 +233,7 @@ The exercises, the other examples, the Racket functions and all the proofs are n
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/relations/_def-equivalence-class.qmd >}}
+{{< include ../_subfiles/relations/_def-equivalence-class.qmd >}}
 
 {{< slidebreak >}}
 
@@ -281,15 +281,15 @@ The exercises, the other examples, the Racket functions and all the proofs are n
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/functions/_def-domain.qmd >}}
+{{< include ../_subfiles/functions/_def-domain.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/functions/_def-codomain.qmd >}}
+{{< include ../_subfiles/functions/_def-codomain.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/functions/_def-graph.qmd >}}
+{{< include ../_subfiles/functions/_def-graph.qmd >}}
 
 {{< slidebreak >}}
 
@@ -305,7 +305,7 @@ The exercises, the other examples, the Racket functions and all the proofs are n
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/functions/_rem-function-as-set-of-pairs.qmd >}}
+{{< include ../_subfiles/functions/_rem-function-as-set-of-pairs.qmd >}}
 
 {{< slidebreak >}}
 
@@ -317,7 +317,7 @@ The exercises, the other examples, the Racket functions and all the proofs are n
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/functions/_def-image.qmd >}}
+{{< include ../_subfiles/functions/_def-image.qmd >}}
 
 {{< slidebreak >}}
 
@@ -325,7 +325,7 @@ The exercises, the other examples, the Racket functions and all the proofs are n
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/functions/_def-range.qmd >}}
+{{< include ../_subfiles/functions/_def-range.qmd >}}
 
 {{< slidebreak >}}
 
@@ -377,7 +377,7 @@ The exercises, the other examples, the Racket functions and all the proofs are n
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/functions/_def-inverse-function.qmd >}}
+{{< include ../_subfiles/functions/_def-inverse-function.qmd >}}
 
 {{< slidebreak >}}
 
@@ -389,7 +389,7 @@ The exercises, the other examples, the Racket functions and all the proofs are n
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/functions/_def-composition.qmd >}}
+{{< include ../_subfiles/functions/_def-composition.qmd >}}
 
 {{< slidebreak >}}
 

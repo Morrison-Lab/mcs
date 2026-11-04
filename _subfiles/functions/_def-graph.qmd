@@ -1,0 +1,11 @@
+:::{#def-graph}
+#### Graph of a function
+
+The **graph**
+[@wikipedia_graph_of_a_function]
+of a [function](#def-function) $f : A \to B$
+is the set of [ordered pairs](sets.qmd#def-ordered-pair) $(a, f(a))$, one for each element $a$ of its domain:
+
+$$\set{(a, f(a)) : a \in A}$$
+
+:::

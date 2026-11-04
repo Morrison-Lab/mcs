@@ -55,15 +55,15 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/proof-writing/_def-quantifier.qmd >}}
+{{< include ../_subfiles/proof-writing/_def-quantifier.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/proof-writing/_def-universal-quantifier.qmd >}}
+{{< include ../_subfiles/proof-writing/_def-universal-quantifier.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/proof-writing/_def-existential-quantifier.qmd >}}
+{{< include ../_subfiles/proof-writing/_def-existential-quantifier.qmd >}}
 
 {{< slidebreak >}}
 
@@ -95,7 +95,7 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/proof-writing/_def-counterexample.qmd >}}
+{{< include ../_subfiles/proof-writing/_def-counterexample.qmd >}}
 
 {{< slidebreak >}}
 

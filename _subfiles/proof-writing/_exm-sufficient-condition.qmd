@@ -1,0 +1,9 @@
+:::{#exm-sufficient-condition}
+#### A sufficient condition
+
+For a real number $x$, "if $x > 5$, then $x > 2$" is true,
+because a number greater than $5$ is greater than $2$.
+So $x > 5$ is a sufficient condition for $x > 2$:
+knowing that $x = 6$ satisfies $x > 5$ is enough to conclude that $6 > 2$.
+
+:::

@@ -1,0 +1,9 @@
+:::{#def-contrapositive}
+#### Contrapositive
+
+The **contrapositive**
+[@wikipedia_contraposition]
+of the [proposition](#def-proposition) "if $P$, then $Q$"
+is the proposition "if $\neg Q$, then $\neg P$".
+
+:::

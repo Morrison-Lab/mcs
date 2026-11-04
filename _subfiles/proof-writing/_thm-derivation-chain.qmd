@@ -1,0 +1,55 @@
+:::{#thm-derivation-chain}
+#### What a derivation shows
+
+Consider a derivation (@def-derivation) with expressions $E_0, E_1, \ldots, E_n$,
+where each line $E_j$ is joined to the line $E_{j-1}$ before it by $=$, $\le$ or $<$.
+
+1. If every step is $=$, then $E_0 = E_n$.
+2. If every step is $=$ or $\le$, then $E_0 \le E_n$.
+3. If every step is $=$, $\le$, or $<$, and at least one step is $<$, then $E_0 < E_n$.
+
+The same holds with $\ge$ and $>$ in place of $\le$ and $<$.
+
+:::
+
+{{< slidebreak >}}
+
+::: {.content-hidden when-format="revealjs"}
+
+::: proof
+
+First, a fact about two steps in a row.
+For numbers $a$, $b$ and $c$, if $a \mathrel{R} b$ and $b \mathrel{S} c$,
+where $R$ and $S$ are each one of $=$, $\le$ and $<$,
+then $a \mathrel{T} c$, where $T$ is
+
+- $<$ if $R$ or $S$ is $<$;
+- otherwise $\le$ if $R$ or $S$ is $\le$;
+- otherwise $=$.
+
+This holds in each case:
+
+- If $R$ and $S$ are both $=$, then $a = c$ ([equalities are transitive](algebra.qmd#thm-equal-trans)).
+- If exactly one of $R$ and $S$ is $=$, replace $b$ by the equal expression
+  in the other relation ([substitution](algebra.qmd#thm-substitution)).
+  This gives the other relation between $a$ and $c$.
+- If neither is $=$, then each of $a \mathrel{R} b$ and $b \mathrel{S} c$ is $\le$ or $<$,
+  and $\le$ means $<$ or $=$ ([strict](algebra.qmd#def-strict-inequality) and [non-strict inequalities](algebra.qmd#def-non-strict-inequality)).
+  A case with an $=$ is covered by the previous bullet, and the remaining case is $a < b$ and $b < c$,
+  which gives $a < c$ because $<$ is transitive on the real numbers.
+  So two steps that are each $\le$ or $<$ give $<$ if either is $<$, and otherwise $\le$.
+
+Now let $T_j$ be the relation named by the same rule applied to the first $j$ steps of the chain,
+with $T_0$ being $=$.
+We show $E_0 \mathrel{T_j} E_j$ by induction on $j$.
+For $j = 0$, $E_0 = E_0$.
+If $E_0 \mathrel{T_j} E_j$, then the step from $E_j$ to $E_{j+1}$ and the fact above give $E_0 \mathrel{T_{j+1}} E_{j+1}$.
+At $j = n$, $T_n$ is $=$ when every step is $=$, which is part 1.
+It is $\le$ or $=$ when every step is $=$ or $\le$, and $=$ implies $\le$, which is part 2.
+It is $<$ when some step is $<$, which is part 3.
+
+The argument for $\ge$ and $>$ is the same with the inequalities reversed.
+
+:::
+
+:::
