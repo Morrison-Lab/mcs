@@ -1,0 +1,29 @@
+:::{#exm-big-o}
+#### The function $3n + 5$ is big-O of $n$
+
+Let $f(n) = 3n + 5$ and $g(n) = n$.
+To show $f(n) = O(g(n))$ by @def-big-o,
+choose $c = 4$ and $N = 5$.
+For every [natural number](number-systems.qmd#def-natural-numbers) $n \ge 5$,
+
+$$
+\ba
+|f(n)|
+&= 3n + 5
+&& \text{(} 3n + 5 > 0 \text{)}
+\\
+&\le 3n + n
+&& \text{(} 5 \le n \text{, since } n \ge 5 \text{)}
+\\
+&= 4n
+&& \text{(} 3n + n = 4n \text{)}
+\\
+&= 4 \, |g(n)|,
+&& \text{(} n = |n| \text{, since } n \ge 0 \text{)}
+\ea
+$$
+
+which is the [inequality](proof-writing.qmd#def-inequality) in @def-big-o with $c = 4$.
+Hence $3n + 5 = O(n)$.
+
+:::

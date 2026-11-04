@@ -34,6 +34,17 @@ with tempfile.TemporaryDirectory() as tmp:
             failures += 1
             print(f"case {i}: expected {expected} finding(s), got {found}")
 
+with tempfile.TemporaryDirectory() as tmp:
+    root = pathlib.Path(tmp)
+    for name in ("index.qmd", "chapters/a.qmd", "chapters/_subfiles/t/_b.qmd", "_subfiles/t/_c.qmd"):
+        (root / name).parent.mkdir(parents=True, exist_ok=True)
+        (root / name).write_text("x\n")
+    found = sorted(str(p.relative_to(root)) for p in checker.discover(root))
+    expected = ["_subfiles/t/_c.qmd", "chapters/_subfiles/t/_b.qmd", "chapters/a.qmd", "index.qmd"]
+    if found != expected:
+        failures += 1
+        print(f"discovery: expected {expected}, got {found}")
+
 real = checker.numbered_sections(here.parents[1])
 print(f"numbered_sections on this repository: {real}")
 if failures:

@@ -1,0 +1,8 @@
+:::{#exm-big-theta}
+#### The function $3n + 5$ is big-Theta of $n$
+
+Let $f(n) = 3n + 5$ and $g(n) = n$.
+By @exm-big-o, $f(n) = O(n)$, and by @exm-big-omega, $f(n) = \Omega(n)$.
+Therefore $f(n) = \Theta(n)$ by @def-big-theta.
+
+:::
