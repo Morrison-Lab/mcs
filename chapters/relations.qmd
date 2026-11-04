@@ -113,7 +113,7 @@ The exercises, the other examples, the Racket functions and all the proofs are n
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/relations/_def-reflexive.qmd >}}
+{{< include ../_subfiles/relations/_def-reflexive.qmd >}}
 
 {{< slidebreak >}}
 
@@ -121,7 +121,7 @@ The exercises, the other examples, the Racket functions and all the proofs are n
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/relations/_def-symmetric-relation.qmd >}}
+{{< include ../_subfiles/relations/_def-symmetric-relation.qmd >}}
 
 {{< slidebreak >}}
 
@@ -137,7 +137,7 @@ The exercises, the other examples, the Racket functions and all the proofs are n
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/algebra/_def-transitive.qmd >}}
+{{< include ../_subfiles/algebra/_def-transitive.qmd >}}
 
 {{< slidebreak >}}
 
@@ -217,7 +217,7 @@ The exercises, the other examples, the Racket functions and all the proofs are n
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/relations/_def-equivalence-relation.qmd >}}
+{{< include ../_subfiles/relations/_def-equivalence-relation.qmd >}}
 
 {{< slidebreak >}}
 
@@ -233,7 +233,7 @@ The exercises, the other examples, the Racket functions and all the proofs are n
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/relations/_def-equivalence-class.qmd >}}
+{{< include ../_subfiles/relations/_def-equivalence-class.qmd >}}
 
 {{< slidebreak >}}
 

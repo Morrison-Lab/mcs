@@ -74,7 +74,7 @@ The exercises, the other examples and the text of the false proof are new.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/induction/_def-strong-induction.qmd >}}
+{{< include ../_subfiles/induction/_def-strong-induction.qmd >}}
 
 {{< slidebreak >}}
 
@@ -86,23 +86,23 @@ The exercises, the other examples and the text of the false proof are new.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/induction/_def-recursive-sequence.qmd >}}
+{{< include ../_subfiles/induction/_def-recursive-sequence.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/induction/_exm-recursive-sequence.qmd >}}
+{{< include ../_subfiles/induction/_exm-recursive-sequence.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/induction/_def-fibonacci-sequence.qmd >}}
+{{< include ../_subfiles/induction/_def-fibonacci-sequence.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/induction/_exm-fibonacci-sequence.qmd >}}
+{{< include ../_subfiles/induction/_exm-fibonacci-sequence.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/induction/_exm-strong-induction.qmd >}}
+{{< include ../_subfiles/induction/_exm-strong-induction.qmd >}}
 
 # A proof by induction that fails {#sec-induction-fails}
 

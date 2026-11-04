@@ -1,0 +1,9 @@
+:::{#def-reflexive}
+#### Reflexive relation
+
+Let $\sim$ be a [relation](functions.qmd#def-relation) on a [set](sets.qmd#def-set) $S$.
+The relation $\sim$ is **reflexive**
+[@wikipedia_reflexive_relation]
+if $a \sim a$ for every $a \in S$.
+
+:::

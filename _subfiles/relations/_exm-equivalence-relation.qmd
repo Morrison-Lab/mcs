@@ -1,0 +1,55 @@
+:::{#exm-equivalence-relation}
+#### Integers with an even difference
+
+On the [integers](number-systems.qmd#def-integers),
+define the [relation](functions.qmd#def-relation) $\sim$ by
+$a \sim b$ when $a - b$ is [even](number-systems.qmd#def-even-odd).
+For example, $7 \sim 3$, since $7 - 3 = 4 = 2 \cdot 2$,
+but $7 \not\sim 4$, since $7 - 4 = 3$ is [odd](number-systems.qmd#def-odd).
+The relation $\sim$ is an [equivalence relation](#def-equivalence-relation).
+
+**[Reflexive](#def-reflexive).**
+For every [integer](number-systems.qmd#def-integers) $a$, $a - a = 0 = 2 \cdot 0$, so $a \sim a$.
+
+**[Symmetric](#def-symmetric-relation).**
+Suppose $a \sim b$, so $a - b = 2k$ for some integer $k$.
+Then
+
+$$
+\ba
+b - a
+&= -(a - b)
+&& \text{(negate the difference)}
+\\
+&= -2k
+&& \text{(} a - b = 2k \text{)}
+\\
+&= 2(-k),
+&& \text{(factor out } 2 \text{)}
+\ea
+$$
+
+and $-k$ is an integer, so $b \sim a$.
+
+**[Transitive](algebra.qmd#def-transitive).**
+Suppose $a \sim b$ and $b \sim c$,
+so $a - b = 2j$ and $b - c = 2k$ for some integers $j$ and $k$.
+Then
+
+$$
+\ba
+a - c
+&= (a - b) + (b - c)
+&& \text{(the } b \text{ terms cancel)}
+\\
+&= 2j + 2k
+&& \text{(} a - b = 2j \text{ and } b - c = 2k \text{)}
+\\
+&= 2(j + k),
+&& \text{(distributive law)}
+\ea
+$$
+
+and $j + k$ is an integer, so $a \sim c$.
+
+:::

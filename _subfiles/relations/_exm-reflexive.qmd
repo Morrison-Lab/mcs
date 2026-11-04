@@ -1,0 +1,9 @@
+:::{#exm-reflexive}
+#### Reflexive and non-reflexive relations on the real numbers
+
+On $\reals$, the [relation](functions.qmd#def-relation) $=$ is [reflexive](#def-reflexive),
+since $a = a$ for every [real number](number-systems.qmd#def-real-numbers) $a$.
+The relation $\le$ is also reflexive, since $a \le a$ for every real number $a$.
+The relation $<$ is not reflexive, since $2 < 2$ is false.
+
+:::
