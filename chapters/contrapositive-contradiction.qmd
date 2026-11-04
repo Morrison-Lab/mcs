@@ -160,19 +160,19 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/number-systems/_def-rational-numbers.qmd >}}
+{{< include ../_subfiles/number-systems/_def-rational-numbers.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/number-systems/_exm-rational-numbers.qmd >}}
+{{< include ../_subfiles/number-systems/_exm-rational-numbers.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/number-systems/_def-irrational-numbers.qmd >}}
+{{< include ../_subfiles/number-systems/_def-irrational-numbers.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/number-systems/_exm-irrational-numbers.qmd >}}
+{{< include ../_subfiles/number-systems/_exm-irrational-numbers.qmd >}}
 
 {{< slidebreak >}}
 

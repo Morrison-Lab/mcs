@@ -1,0 +1,12 @@
+:::{#def-pairwise-disjoint}
+#### Pairwise disjoint sets (disjoint, mutually disjoint)
+
+Some [sets](#def-set) $A_1, A_2, \ldots$ (a list that may end or go on without end)
+are **pairwise disjoint**
+[@wikipedia_disjoint_sets]
+(also called **disjoint** or **mutually disjoint**)
+when no two of them share an element:
+
+$$A_i \cap A_j = \emptyset \quad \text{for all } i \neq j$$
+
+:::

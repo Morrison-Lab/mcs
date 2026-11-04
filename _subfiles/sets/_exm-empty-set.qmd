@@ -1,0 +1,7 @@
+:::{#exm-empty-set}
+#### Impossible die rolls
+
+No roll of a six-sided die is greater than 6,
+so $\set{x \in \set{1, 2, 3, 4, 5, 6} : x > 6} = \emptyset$.
+
+:::

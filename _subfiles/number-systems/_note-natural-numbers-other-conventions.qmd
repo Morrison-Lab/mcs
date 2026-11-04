@@ -1,0 +1,31 @@
+::: {.callout-note}
+#### Other conventions for the natural numbers
+
+Other sources may define $\Nat$ differently,
+so check each source's definition before reading its formulas:
+
+- Many sources include $0$ in $\Nat$.
+  The international standard ISO 80000-2 defines $\Nat$ to include $0$,
+  continuing the earlier standard ISO 31-11 (1978).
+- Other sources start $\Nat$ at $1$, as these notes do.
+- To remove the ambiguity,
+  some sources write $\Nat_1$ or $\mathbb{Z}^+$ for $\cb{1, 2, 3, \ldots}$,
+  and $\Nat_0$ or $\mathbb{Z}^{0+}$ for $\cb{0, 1, 2, \ldots}$.
+- The words vary too.
+  "Positive integers" ($\cb{1, 2, 3, \ldots}$)
+  and "non-negative integers" ($\cb{0, 1, 2, \ldots}$)
+  are unambiguous.
+  "Whole numbers" usually includes $0$,
+  but can also mean all of the integers, negative ones included.
+  "Counting numbers" usually starts at $1$,
+  but some sources include $0$.
+- Some older texts write $J$ for the natural numbers.
+
+When a formula's meaning depends on whether $0$ is included,
+we write the set out explicitly,
+for example $\cb{0, 1, 2, \ldots}$ or $\cb{1, \ldots, n}$.
+
+Source: [Wikipedia, "Natural number", "Terminology and notation" and "Zero as natural number"](https://en.wikipedia.org/w/index.php?title=Natural_number&oldid=1375965996),
+which cites ISO 80000-2:2019 and the textbooks using each notation.
+
+:::

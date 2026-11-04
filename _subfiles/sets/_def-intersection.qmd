@@ -1,0 +1,12 @@
+:::{#def-intersection}
+#### Intersection
+
+The **intersection**
+[@wikipedia_intersection_set_theory]
+of sets $A$ and $B$,
+written $A \cap B$,
+is the set of elements that are in both $A$ and $B$:
+
+$$A \cap B \eqdef \set{x : x \in A \text{ and } x \in B}$$
+
+:::

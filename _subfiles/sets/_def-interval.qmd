@@ -1,0 +1,80 @@
+:::{#def-bound}
+#### Lower bound and upper bound
+
+For a [subset](#def-subset) $S \subseteq \reals$ of the [real numbers](number-systems.qmd#def-real-numbers),
+a [real number](number-systems.qmd#def-real-numbers) $a$ is a **lower bound** of $S$ if $a \le x$ for every $x \in S$,
+and a real number $b$ is an **upper bound** of $S$ if $x \le b$ for every $x \in S$;
+each is a **bound** of $S$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-interval}
+#### Interval
+
+An **interval**
+[@wikipedia_interval_mathematics]
+is a [subset](#def-subset) of the [real numbers](number-systems.qmd#def-real-numbers)
+that consists of all real numbers between two bounds $a \le b$ (@def-bound),
+possibly including one or both bounds,
+or of all real numbers on one side of a single bound,
+or all of $\reals$.
+The bounds $a$ and $b$ that define the interval are its **endpoints**.
+
+A square bracket means the endpoint belongs to the interval,
+and a parenthesis means it does not.
+The symbols $\infty$ and $-\infty$ are not real numbers,
+so they always get a parenthesis.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-closed-interval}
+#### Closed interval
+
+For [real numbers](number-systems.qmd#def-real-numbers) $a \le b$,
+the **closed interval** is the interval (@def-interval) $[a, b] \eqdef \set{x \in \reals : a \le x \le b}$
+that includes both bounds (@def-bound).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-open-interval}
+#### Open interval
+
+For [real numbers](number-systems.qmd#def-real-numbers) $a \le b$,
+the **open interval** is the interval (@def-interval) $(a, b) \eqdef \set{x \in \reals : a < x < b}$
+that includes neither bound (@def-bound).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-half-open-interval}
+#### Half-open intervals
+
+For [real numbers](number-systems.qmd#def-real-numbers) $a \le b$,
+the **half-open intervals** are the intervals (@def-interval) $[a, b) \eqdef \set{x \in \reals : a \le x < b}$
+and $(a, b] \eqdef \set{x \in \reals : a < x \le b}$
+that include one bound (@def-bound) and not the other.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-unbounded-interval}
+#### Unbounded intervals
+
+For [real numbers](number-systems.qmd#def-real-numbers) $a$ and $b$,
+the **unbounded intervals** are the intervals (@def-interval) with at most one bound (@def-bound):
+
+- $[a, \infty) \eqdef \set{x \in \reals : x \ge a}$
+  and $(a, \infty) \eqdef \set{x \in \reals : x > a}$;
+- $(-\infty, b] \eqdef \set{x \in \reals : x \le b}$
+  and $(-\infty, b) \eqdef \set{x \in \reals : x < b}$;
+- $(-\infty, \infty) \eqdef \reals$.
+
+:::

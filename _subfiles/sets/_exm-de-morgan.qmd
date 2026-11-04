@@ -1,0 +1,40 @@
+:::{#exm-de-morgan}
+#### De Morgan's laws for die rolls
+
+In $S = \set{1, 2, 3, 4, 5, 6}$,
+let $A = \set{2, 4, 6}$ and $B = \set{1, 2, 3}$, as in @exm-set-operations,
+so $A^c = \set{1, 3, 5}$ and $B^c = \set{4, 5, 6}$.
+
+- $$
+  \begin{aligned}
+  (A \cup B)^c &= \set{1, 2, 3, 4, 6}^c \\
+  &= \set{5},
+  \end{aligned}
+  $$
+
+  and
+
+  $$
+  \begin{aligned}
+  A^c \cap B^c &= \set{1, 3, 5} \cap \set{4, 5, 6} \\
+  &= \set{5}.
+  \end{aligned}
+  $$
+
+- $$
+  \begin{aligned}
+  (A \cap B)^c &= \set{2}^c \\
+  &= \set{1, 3, 4, 5, 6},
+  \end{aligned}
+  $$
+
+  and
+
+  $$
+  \begin{aligned}
+  A^c \cup B^c &= \set{1, 3, 5} \cup \set{4, 5, 6} \\
+  &= \set{1, 3, 4, 5, 6}.
+  \end{aligned}
+  $$
+
+:::

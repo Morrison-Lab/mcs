@@ -1,0 +1,31 @@
+:::{#def-integers}
+#### Integers
+
+The **integers**
+[@wikipedia_integer]
+are the whole numbers,
+together with their negatives and $0$:
+
+$$\mathbb{Z} \eqdef \cb{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots}$$
+
+An **integer** is an element of $\mathbb{Z}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-positive-integer}
+#### Positive integers
+
+The integers (@def-integers) greater than $0$ are the **positive integers**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-negative-integer}
+#### Negative integers
+
+The integers (@def-integers) less than $0$ are the **negative integers**.
+
+:::

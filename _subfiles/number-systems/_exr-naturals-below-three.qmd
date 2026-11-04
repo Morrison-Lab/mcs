@@ -1,0 +1,8 @@
+:::{#exr-naturals-below-three}
+#### Which numbers are natural?
+
+List the elements of the set
+$\cb{n \in \Nat : n < 3}$.
+Is your answer the same in every textbook?
+
+:::

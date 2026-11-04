@@ -1,0 +1,7 @@
+:::{#exm-extended-nonneg-reals}
+#### Adding with $\infty$
+
+In $[0, \infty]$, $2 + 3 = 5$ as usual,
+while $2 + \infty = \infty$ and $\infty + \infty = \infty$.
+
+:::

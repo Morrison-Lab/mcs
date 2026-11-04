@@ -1,0 +1,10 @@
+:::{#exm-even-odd}
+#### Even and odd integers
+
+- $6$ is even, because $6 = 2 \cd 3$.
+- $0$ is even, because $0 = 2 \cd 0$.
+- $-3$ is odd, because $-3 = 2 \cd (-2) + 1$.
+- $7$ is odd, because $7 = 2 \cd 3 + 1$.
+- $2.5$ is neither even nor odd, because it is not an integer.
+
+:::

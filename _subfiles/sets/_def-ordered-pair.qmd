@@ -1,0 +1,11 @@
+:::{#def-ordered-pair}
+#### Ordered pair
+
+An **ordered pair**
+[@wikipedia_ordered_pair]
+$(a, b)$ is a pair of objects listed in order,
+with $a$ first and $b$ second;
+two ordered pairs are equal, $(a, b) = (c, d)$,
+when $a = c$ and $b = d$.
+
+:::
