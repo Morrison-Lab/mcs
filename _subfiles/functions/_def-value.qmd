@@ -1,5 +1,5 @@
 :::{#def-value}
-#### Value (output)
+#### Value, output
 
 The **value** (or **output**) of a [function](#def-function) $f : A \to B$
 at an [argument](#def-argument) $a \in A$

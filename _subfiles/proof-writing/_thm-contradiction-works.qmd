@@ -1,0 +1,36 @@
+:::{#thm-contradiction-works}
+#### Why a proof by contradiction works
+
+For [propositions](#def-proposition) $P$ and $C$,
+
+$$
+P \equiv \paren{\neg P \Rightarrow (C \land \neg C)}.
+$$
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+::: proof
+
+By the definitions of [and](#def-and) and [not](#def-not),
+$C \land \neg C$ is false in every row,
+so it is a [contradiction](#def-contradiction).
+So, by the definition of [implies](#def-implies),
+$\neg P \Rightarrow (C \land \neg C)$ is true exactly in the rows
+where $\neg P$ is false,
+which are the rows where $P$ is true:
+
+| $P$ | $C$ | $\neg P$ | $C \land \neg C$ | $\neg P \Rightarrow (C \land \neg C)$ |
+|:---:|:---:|:---:|:---:|:---:|
+| T | T | F | F | T |
+| T | F | F | F | T |
+| F | T | T | F | F |
+| F | F | T | F | F |
+
+The first and last columns match in every row,
+so the two are [logically equivalent](#def-logically-equivalent).
+
+:::
+
+:::

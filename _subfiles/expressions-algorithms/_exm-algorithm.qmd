@@ -1,14 +1,64 @@
 :::{#exm-algorithm}
 #### Two algorithms for one function
 
-Take the function that @exm-expression writes two ways.
+Take the [function](functions.qmd#def-function) that @exm-expression writes two ways.
 Evaluating the tree of $a x^2 + b x + c$, with $x^2$ computed as $x \cdot x$,
 takes three multiplications and two additions.
 Evaluating the tree of Horner's form $(a x + b)\,x + c$
 takes two multiplications and two additions.
-At $a = 2$, $b = -3$, $c = 5$ and $x = 1.5$,
-the first algorithm computes $4.5 - 4.5 + 5 = 5$
-and the second computes $(3 - 3) \cdot 1.5 + 5 = 5$,
-the same value by different steps.
+We evaluate both forms at $a = 2$, $b = -3$, $c = 5$ and $x = 1.5$, in R and in Python,
+and give each intermediate quantity a name.
+(The code calls $c$ `c0`,
+because `c` is a built-in function in R.)
+The two [algorithms](#def-algorithm) [compute](#def-computes) the same function,
+so the two [values](functions.qmd#def-value) must agree.
+
+::: {.panel-tabset}
+
+### R
+
+```{r}
+#| label: two-algorithms-r
+#| code-fold: false
+a <- 2
+b <- -3
+c0 <- 5
+x <- 1.5
+# Expanded form: 3 multiplications, 2 additions
+square_term <- a * x * x
+linear_term <- b * x
+expanded <- square_term + linear_term + c0
+# Horner's form: 2 multiplications, 2 additions
+inner <- a * x + b
+horner <- inner * x + c0
+c(square_term, linear_term, expanded)
+c(inner, horner)
+```
+
+### Python
+
+```{python}
+#| label: two-algorithms-python
+#| code-fold: false
+a = 2
+b = -3
+c0 = 5
+x = 1.5
+# Expanded form: 3 multiplications, 2 additions
+square_term = a * x * x
+linear_term = b * x
+expanded = square_term + linear_term + c0
+# Horner's form: 2 multiplications, 2 additions
+inner = a * x + b
+horner = inner * x + c0
+print(square_term, linear_term, expanded)
+print(inner, horner)
+```
+
+:::
+
+The expanded form adds `{r} square_term`, `{r} linear_term` and `{r} c0` to reach `{r} expanded`.
+Horner's form multiplies `{r} inner` by `{r} x` and adds `{r} c0` to reach `{r} horner`.
+Different steps give the same [value](functions.qmd#def-value).
 
 :::

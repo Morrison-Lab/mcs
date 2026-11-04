@@ -1,0 +1,5 @@
+::: {#sol-expression-or-algorithm-part2}
+
+It is an [expression](#def-expression): it names a [function](functions.qmd#def-function), and it is not an [algorithm](#def-algorithm).
+
+:::

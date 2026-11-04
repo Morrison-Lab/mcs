@@ -1,0 +1,23 @@
+:::{#thm-modus-ponens}
+#### Modus ponens
+
+For [propositions](#def-proposition) $P$ and $Q$,
+this is a [rule of inference](#def-rule-of-inference):
+
+$$
+\frac{P \Rightarrow Q, \quad P}{Q}
+$$
+
+:::
+
+::: proof
+
+By the definition of [implies](#def-implies),
+$P \Rightarrow Q$ is false
+only when $P$ is true and $Q$ is false.
+Both [premises](#def-premise) are true,
+so $P$ is true and $P \Rightarrow Q$ is true.
+So $Q$ is not false,
+and the [conclusion](#def-conclusion) $Q$ is true.
+
+:::

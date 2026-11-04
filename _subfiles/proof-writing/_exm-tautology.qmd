@@ -1,0 +1,16 @@
+:::{#exm-tautology}
+#### $P \lor \neg P$ is a tautology
+<!-- no-figure: the truth table is the display -->
+
+By the definitions of [or](#def-or) and [not](#def-not),
+the [truth table](#def-truth-table) of $P \lor \neg P$ is:
+
+| $P$ | $\neg P$ | $P \lor \neg P$ |
+|:---:|:--------:|:---------------:|
+| T   | F        | T               |
+| F   | T        | T               |
+
+The last column is true in every row,
+so $P \lor \neg P$ is a [tautology](#def-tautology).
+
+:::

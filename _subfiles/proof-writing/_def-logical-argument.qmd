@@ -1,0 +1,9 @@
+:::{#def-logical-argument}
+#### Logical argument
+
+A **logical argument** is a list of [propositions](#def-proposition)
+$P_1, \ldots, P_n$
+together with one more [proposition](#def-proposition) $Q$.
+It is written with "so" or $\therefore$ before $Q$.
+
+:::

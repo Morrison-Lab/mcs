@@ -1,0 +1,15 @@
+:::{#exm-disproof}
+#### A disproof
+
+Claim: every [prime](number-systems.qmd#def-prime) is [odd](number-systems.qmd#def-odd).
+
+[Disproof](#def-disproof): the [integer](number-systems.qmd#def-integers) $2$ is prime,
+and $2$ is not odd,
+since $2 = 2k + 1$ would need $k = 1/2$,
+which is not an integer.
+So there is a prime that is not odd,
+which is the [negation](#def-not) of the claim.
+
+This disproof gives a [counterexample](#def-counterexample), $2$.
+
+:::

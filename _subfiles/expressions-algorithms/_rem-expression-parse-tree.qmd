@@ -1,8 +1,8 @@
 :::{#rem-expression-parse-tree}
 #### Expressions, precedence and parse trees
 
-An expression does not say how to compute the output it fixes,
-and many expressions denote the same function.
+An [expression](#def-expression) does not say how to compute the [output](functions.qmd#def-value) it fixes,
+and many [expressions](#def-expression) [denote](#def-denotes) the same [function](functions.qmd#def-function).
 A function is the input-output relationship itself;
 an expression is one way of writing it down.
 

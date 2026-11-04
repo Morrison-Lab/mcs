@@ -1,0 +1,16 @@
+:::{#exm-negate-quantifiers}
+#### Negating "every integer is even"
+<!-- no-figure: a rewording of one sentence; nothing to plot -->
+
+Let $S$ be the [integers](number-systems.qmd#def-integers),
+and let $P(x)$ be "$x$ is [even](number-systems.qmd#def-even-odd)".
+By the first of [De Morgan's laws for quantifiers](#thm-negate-quantifiers),
+$\neg (\forall x \in S, P(x)) \equiv \exists x \in S, \neg P(x)$:
+the [negation](#def-not) of "every [integer](number-systems.qmd#def-integers) is even"
+is "some integer is not even".
+By the second law,
+$\neg (\exists x \in S, P(x)) \equiv \forall x \in S, \neg P(x)$:
+the negation of "some integer is even"
+is "no integer is even".
+
+:::

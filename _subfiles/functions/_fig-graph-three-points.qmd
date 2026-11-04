@@ -1,0 +1,63 @@
+::: {#fig-graph-three-points}
+
+```{r}
+#| label: graph-three-points-alt
+#| include: false
+fig_alt <- paste(
+  "A plot with three filled points at (-1, 1), (0, 0) and (2, 4).",
+  "A faint parabola passes through them,",
+  "but the parabola is drawn lightly",
+  "because only the three points belong to the graph.",
+  "A hollow point at (1, 1) marks a pair that is not in the graph."
+)
+```
+
+```{r}
+#| label: graph-three-points-plot
+#| fig-alt: !expr fig_alt
+graph_points <- data.frame(a = c(-1, 0, 2), value = c(-1, 0, 2)^2)
+parabola <- data.frame(a = seq(-1.5, 2.5, length.out = 201))
+parabola$value <- parabola$a^2
+
+graph_three_points_plot <- ggplot2::ggplot() +
+  ggplot2::geom_line(
+    data = parabola,
+    ggplot2::aes(x = a, y = value),
+    colour = "grey80"
+  ) +
+  ggplot2::geom_point(
+    data = graph_points,
+    ggplot2::aes(x = a, y = value, colour = "in the graph"),
+    size = 3
+  ) +
+  ggplot2::geom_point(
+    data = data.frame(a = 1, value = 1),
+    ggplot2::aes(x = a, y = value, colour = "not in the graph"),
+    shape = 1,
+    size = 3,
+    stroke = 1.2
+  ) +
+  ggplot2::scale_colour_manual(
+    values = c("in the graph" = "#0072B2", "not in the graph" = "#D55E00")
+  ) +
+  ggplot2::scale_x_continuous(breaks = -1:2) +
+  ggplot2::labs(x = "Input, a", y = "Output, f(a) = a^2", colour = NULL) +
+  ggplot2::theme_minimal() +
+  ggplot2::theme(legend.position = "bottom")
+
+if (knitr::is_html_output()) {
+  htmltools::div(
+    role = "img",
+    `aria-label` = fig_alt,
+    plotly::ggplotly(graph_three_points_plot) |>
+      plotly::layout(legend = list(orientation = "h", y = -0.2))
+  )
+} else {
+  graph_three_points_plot
+}
+```
+
+The [graph](#def-graph) of $f(a) = a^2$ on the [domain](#def-domain) $\set{-1, 0, 2}$.
+The pair $(1, 1)$ lies on the curve $y = a^2$ but not in the graph of $f$, because $1$ is not in the domain.
+
+:::

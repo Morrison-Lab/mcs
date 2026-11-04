@@ -1,0 +1,69 @@
+::: {#fig-inverse-function}
+
+```{r}
+#| label: inverse-function-alt
+#| include: false
+fig_alt <- paste(
+  "The line y = 2x + 1 and its inverse, the line y = (x - 1) / 2,",
+  "are mirror images across the dashed diagonal y = x,",
+  "drawn at 45 degrees on equal axes.",
+  "The point (3, 7) on the first line corresponds to the point (7, 3)",
+  "on the second."
+)
+```
+
+```{r}
+#| label: inverse-function-plot
+#| fig-alt: !expr fig_alt
+x_f <- seq(-2, 4, length.out = 101)
+x_inverse <- seq(-3, 9, length.out = 101)
+lines_data <- data.frame(
+  x = c(x_f, x_inverse, x_inverse),
+  y = c(2 * x_f + 1, (x_inverse - 1) / 2, x_inverse),
+  curve = rep(
+    c("f", "inverse of f", "y = x"),
+    times = c(length(x_f), length(x_inverse), length(x_inverse))
+  )
+)
+marked <- data.frame(x = c(3, 7), y = c(7, 3))
+labels_data <- data.frame(
+  x = c(1.2, 7, 7.5),
+  y = c(5.2, 0.6, 8.2),
+  label = c("f", "inverse of f", "y = x")
+)
+
+inverse_function_plot <- ggplot2::ggplot() +
+  ggplot2::geom_line(
+    data = lines_data,
+    ggplot2::aes(x = x, y = y, colour = curve, linetype = curve)
+  ) +
+  ggplot2::geom_point(data = marked, ggplot2::aes(x = x, y = y), size = 3) +
+  ggplot2::geom_text(
+    data = labels_data,
+    ggplot2::aes(x = x, y = y, label = label)
+  ) +
+  ggplot2::coord_fixed(xlim = c(-3, 9), ylim = c(-3, 9)) +
+  ggplot2::scale_colour_manual(
+    values = c("f" = "#0072B2", "inverse of f" = "#D55E00", "y = x" = "grey40")
+  ) +
+  ggplot2::scale_linetype_manual(
+    values = c("f" = "solid", "inverse of f" = "solid", "y = x" = "dashed")
+  ) +
+  ggplot2::labs(x = "Input, x", y = "Output, y") +
+  ggplot2::theme_minimal() +
+  ggplot2::theme(legend.position = "none")
+
+if (knitr::is_html_output()) {
+  htmltools::div(
+    role = "img",
+    `aria-label` = fig_alt,
+    plotly::ggplotly(inverse_function_plot)
+  )
+} else {
+  inverse_function_plot
+}
+```
+
+The [graph](#def-graph) of the [inverse function](#def-inverse-function) $f^{-1}$ of $f(x) = 2x + 1$ is the graph of $f$ reflected across the line $y = x$, so $(3, 7)$ becomes $(7, 3)$.
+
+:::

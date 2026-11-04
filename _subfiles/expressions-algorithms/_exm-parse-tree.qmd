@@ -1,7 +1,8 @@
 :::{#exm-parse-tree}
 #### The parse tree of a polynomial
 
-The parse tree of $(a x + b)\,x + c$, with each operation having two children, is:
+The [parse tree](#def-parse-tree) of $(a x + b)\,x + c$, with each operation having two children, is drawn in @fig-parse-trees (left)
+and written out as a list here:
 
 - the root $+$, whose children are
     - the node $\times$, whose children are
@@ -13,7 +14,7 @@ The parse tree of $(a x + b)\,x + c$, with each operation having two children, i
 
 Read from the leaves up, the tree says to multiply $a$ by $x$,
 add $b$, multiply by $x$, and add $c$.
-The expression $a x^2 + b x + c$ has a different tree.
+The [expression](#def-expression) $a x^2 + b x + c$ has a different tree (@fig-parse-trees, right).
 Its root is the $+$ whose children are $a x^2 + b x$ and $c$,
 and the first of these is a $+$ whose children are $a x^2$ and $b x$.
 

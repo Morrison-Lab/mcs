@@ -1,0 +1,17 @@
+:::{#exm-biconditional-split}
+#### Proving an "if and only if" in two parts
+<!-- no-figure: two short conditionals; nothing to plot -->
+
+Let $n$ be an [integer](number-systems.qmd#def-integers).
+By [a biconditional is two conditionals](#thm-biconditional-split),
+to prove "$n$ is [even](number-systems.qmd#def-even-odd) [if and only if](#def-iff) $n + 2$ is even",
+it is enough to prove both conditionals:
+
+- If $n = 2m$,
+  then $n + 2 = 2(m + 1)$,
+  which is even.
+- If $n + 2 = 2m$,
+  then $n = 2(m - 1)$,
+  which is even.
+
+:::

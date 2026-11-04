@@ -1,0 +1,129 @@
+::: {#fig-parse-trees}
+
+```{r}
+#| label: parse-trees-alt
+#| include: false
+fig_alt <- paste(
+  "Two parse trees, drawn with the root at the top.",
+  "In the left tree the root plus has children times and the leaf c.",
+  "That times has children plus and the leaf x.",
+  "The plus below it has children times and the leaf b,",
+  "and that times has the leaves a and x.",
+  "In the right tree the root plus has children plus and the leaf c.",
+  "That plus has two children, both times.",
+  "The first times has the leaf a and a power node with leaves x and 2.",
+  "The second times has the leaves b and x."
+)
+```
+
+```{r}
+#| label: parse-trees-plot
+#| fig-alt: !expr fig_alt
+#| fig-height: 4
+# Each tree is a nested list: the first element is the node's label,
+# and the remaining elements are its children.
+times <- intToUtf8(215)
+trees <- list(
+  "(a * x + b) * x + c" = list(
+    "+",
+    list(times, list("+", list(times, "a", "x"), "b"), "x"),
+    "c"
+  ),
+  "a * x^2 + b * x + c" = list(
+    "+",
+    list(
+      "+",
+      list(times, "a", list("^", "x", "2")),
+      list(times, "b", "x")
+    ),
+    "c"
+  )
+)
+
+# Leaves sit at consecutive x positions;
+# each operation sits above the mean of its children.
+layout_tree <- function(node, depth = 0, next_x = 0) {
+  if (!is.list(node)) {
+    return(list(
+      nodes = data.frame(label = node, x = next_x, y = -depth, is_leaf = TRUE),
+      edges = NULL,
+      next_x = next_x + 1
+    ))
+  }
+  nodes <- NULL
+  edges <- NULL
+  child_x <- numeric()
+  for (child in node[-1]) {
+    sub <- layout_tree(child, depth + 1, next_x)
+    next_x <- sub$next_x
+    child_x <- c(child_x, sub$nodes$x[1])
+    edges <- rbind(
+      edges,
+      sub$edges,
+      data.frame(
+        x = NA_real_,
+        y = -depth,
+        xend = sub$nodes$x[1],
+        yend = sub$nodes$y[1]
+      )
+    )
+    nodes <- rbind(nodes, sub$nodes)
+  }
+  me <- data.frame(
+    label = node[[1]],
+    x = mean(child_x),
+    y = -depth,
+    is_leaf = FALSE
+  )
+  edges$x[is.na(edges$x)] <- me$x
+  list(nodes = rbind(me, nodes), edges = edges, next_x = next_x)
+}
+
+laid_out <- lapply(trees, layout_tree)
+tree_nodes <- do.call(rbind, Map(
+  function(res, name) cbind(res$nodes, tree = name),
+  laid_out,
+  names(trees)
+))
+tree_edges <- do.call(rbind, Map(
+  function(res, name) cbind(res$edges, tree = name),
+  laid_out,
+  names(trees)
+))
+tree_nodes$kind <- ifelse(tree_nodes$is_leaf, "leaf", "operation")
+tree_nodes$tree <- factor(tree_nodes$tree, levels = names(trees))
+tree_edges$tree <- factor(tree_edges$tree, levels = names(trees))
+
+ggplot2::ggplot() +
+  ggplot2::geom_segment(
+    data = tree_edges,
+    ggplot2::aes(x = x, y = y, xend = xend, yend = yend),
+    colour = "grey50"
+  ) +
+  ggplot2::geom_label(
+    data = tree_nodes,
+    ggplot2::aes(x = x, y = y, label = label, fill = kind),
+    size = 5,
+    linewidth = 0
+  ) +
+  ggplot2::scale_fill_manual(
+    values = c(operation = "#CCE5F6", leaf = "#F9DDBF")
+  ) +
+  ggplot2::facet_wrap(
+    ~tree,
+    scales = "free_x",
+    labeller = ggplot2::label_parsed
+  ) +
+  ggplot2::labs(fill = "node type") +
+  ggplot2::theme_void() +
+  ggplot2::theme(
+    legend.position = "bottom",
+    strip.text = ggplot2::element_text(size = 12)
+  )
+```
+
+The [parse trees](#def-parse-tree) of $(a x + b)\,x + c$ and $a x^2 + b x + c$.
+Each operation is a node with one child per [argument](functions.qmd#def-argument), and the leaves are the symbols that are not operations.
+The caret is the [power](algebra-basics.qmd#def-power) operation, which takes a [base](algebra-basics.qmd#def-power-base) and an [exponent](algebra-basics.qmd#def-power-exponent).
+
+:::

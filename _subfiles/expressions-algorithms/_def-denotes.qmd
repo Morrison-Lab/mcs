@@ -1,0 +1,9 @@
+:::{#def-denotes}
+#### Denotes
+
+An [expression](#def-expression) **denotes** a [function](functions.qmd#def-function)
+when evaluating the expression at each [input](functions.qmd#def-argument) of the function,
+with the expression's variables taking that input,
+gives the function's [value](functions.qmd#def-value) at that input.
+
+:::

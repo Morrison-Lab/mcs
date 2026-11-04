@@ -1,5 +1,5 @@
 :::{#def-closed-under}
-#### Closed under an operation (closure)
+#### Closed under an operation
 
 A set $A$ is **closed under**
 [@wikipedia_closure_mathematics]
@@ -7,6 +7,6 @@ an operation,
 such as addition of numbers or union of sets,
 if applying the operation to elements of $A$
 always gives an element of $A$.
-This property is called **closure** under the operation.
+This property is called closure under the operation.
 
 :::

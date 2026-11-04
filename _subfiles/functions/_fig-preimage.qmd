@@ -1,0 +1,71 @@
+::: {#fig-preimage}
+
+```{r}
+#| label: preimage-alt
+#| include: false
+fig_alt <- paste(
+  "The six points of the doubled die roll, at heights 2, 4, 6, 8, 10 and 12.",
+  "Horizontal lines at heights 4 and 6 each pass through one point,",
+  "at die rolls 2 and 3.",
+  "A dashed horizontal line at height 3 passes through no point."
+)
+```
+
+```{r}
+#| label: preimage-plot
+#| fig-alt: !expr fig_alt
+rolls <- data.frame(roll = 1:6, double = 2 * (1:6))
+levels_shown <- data.frame(
+  height = c(3, 4, 6),
+  hits = c(
+    "preimage is empty",
+    "preimage contains a roll",
+    "preimage contains a roll"
+  )
+)
+
+preimage_plot <- ggplot2::ggplot() +
+  ggplot2::geom_hline(
+    data = levels_shown,
+    ggplot2::aes(yintercept = height, linetype = hits),
+    colour = "#D55E00"
+  ) +
+  ggplot2::geom_point(
+    data = rolls,
+    ggplot2::aes(x = roll, y = double),
+    size = 3,
+    colour = "#0072B2"
+  ) +
+  ggplot2::scale_x_continuous(breaks = 1:6) +
+  ggplot2::scale_y_continuous(breaks = c(2, 3, 4, 6, 8, 10, 12)) +
+  ggplot2::scale_linetype_manual(
+    values = c(
+      "preimage contains a roll" = "solid",
+      "preimage is empty" = "dashed"
+    )
+  ) +
+  ggplot2::labs(
+    x = "Input, a (the roll)",
+    y = "Output, f(a) = 2a",
+    linetype = NULL
+  ) +
+  ggplot2::theme_minimal() +
+  ggplot2::theme(legend.position = "bottom")
+
+if (knitr::is_html_output()) {
+  htmltools::div(
+    role = "img",
+    `aria-label` = fig_alt,
+    plotly::ggplotly(preimage_plot) |>
+      plotly::layout(legend = list(orientation = "h", y = -0.2))
+  )
+} else {
+  preimage_plot
+}
+```
+
+The [preimage](#def-preimage) of a [set](sets.qmd#def-set) of [values](#def-value) is the set of rolls whose points lie at those heights.
+The heights $4$ and $6$ are reached at the rolls $2$ and $3$, so the preimage of $\set{4, 6}$ is $\set{2, 3}$.
+The height $3$ is reached by no roll, so its preimage is empty.
+
+:::

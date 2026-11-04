@@ -1,0 +1,47 @@
+::: {#fig-not-invertible}
+
+```{r}
+#| label: not-invertible-alt
+#| include: false
+fig_alt <- paste(
+  "The parabola y = x^2 is crossed twice",
+  "by the dotted horizontal line y = 4, at x = -2 and x = 2,",
+  "which are marked."
+)
+```
+
+```{r}
+#| label: not-invertible-plot
+#| fig-alt: !expr fig_alt
+x_square <- seq(-3, 3, length.out = 101)
+square_data <- data.frame(x = x_square, y = x_square^2)
+marked <- data.frame(x = c(-2, 2), y = c(4, 4))
+
+not_invertible_plot <- ggplot2::ggplot() +
+  ggplot2::geom_hline(yintercept = 4, colour = "grey40", linetype = "dotted") +
+  ggplot2::geom_line(
+    data = square_data,
+    ggplot2::aes(x = x, y = y),
+    colour = "#0072B2"
+  ) +
+  ggplot2::geom_point(data = marked, ggplot2::aes(x = x, y = y), size = 3) +
+  ggplot2::annotate("text", x = -2.8, y = 4.6, label = "y = 4") +
+  ggplot2::scale_x_continuous(breaks = -3:3) +
+  ggplot2::labs(x = "Input, x", y = "Output, h(x) = x^2") +
+  ggplot2::theme_minimal()
+
+if (knitr::is_html_output()) {
+  htmltools::div(
+    role = "img",
+    `aria-label` = fig_alt,
+    plotly::ggplotly(not_invertible_plot)
+  )
+} else {
+  not_invertible_plot
+}
+```
+
+The horizontal line $y = 4$ meets the [graph](#def-graph) of $h(x) = x^2$ twice, at $x = -2$ and $x = 2$,
+so $h$ has no [inverse function](#def-inverse-function).
+
+:::

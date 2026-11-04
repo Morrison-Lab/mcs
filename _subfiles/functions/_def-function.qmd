@@ -1,5 +1,5 @@
 :::{#def-function}
-#### Function (map, mapping, transformation)
+#### Function, map, mapping, transformation
 
 A **function** $f$ from a set $A$ to a set $B$,
 [@wikipedia_function_mathematics]

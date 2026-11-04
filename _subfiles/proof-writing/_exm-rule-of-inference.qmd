@@ -1,0 +1,20 @@
+:::{#exm-rule-of-inference}
+#### A pattern that is not a rule of inference
+<!-- no-figure: the truth table row is the display -->
+
+The pattern
+
+$$
+\frac{P \Rightarrow Q, \quad Q}{P}
+$$
+
+is not a [rule of inference](#def-rule-of-inference).
+In the row of the [truth table](#def-truth-table) where $P$ is false and $Q$ is true,
+both [premises](#def-premise) are true,
+by the definition of [implies](#def-implies),
+but the [conclusion](#def-conclusion) $P$ is false.
+For example, "if $n = 2$, then $n$ is [even](number-systems.qmd#def-even-odd)" and "$n$ is even"
+are both true for $n = 4$,
+but "$n = 2$" is false.
+
+:::

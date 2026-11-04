@@ -1,8 +1,8 @@
 :::{#exm-expression}
 #### Two expressions for one function
 
-The expressions $a x^2 + b x + c$ and $(a x + b)\,x + c$
-denote the same function of $x$ for any fixed $a$, $b$ and $c$,
+The [expressions](#def-expression) $a x^2 + b x + c$ and $(a x + b)\,x + c$
+[denote](#def-denotes) the same [function](functions.qmd#def-function) of $x$ for any fixed $a$, $b$ and $c$,
 because they give the same value at every $x$.
 
 Precedence parses $a x^2 + b x + c$ as a sum of three terms:

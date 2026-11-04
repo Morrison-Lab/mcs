@@ -1,0 +1,7 @@
+:::{#rem-constructive-proof-several}
+#### Several existential quantifiers
+
+A [proposition](#def-proposition) can open with several [existential quantifiers](#def-existential-quantifier).
+A [constructive proof](#def-constructive-proof) of it names one element for each [quantifier](#def-quantifier).
+
+:::

@@ -1,0 +1,9 @@
+::: {#sol-expression-or-algorithm}
+
+A [function](functions.qmd#def-function) is the input-output relationship.
+An [expression](#def-expression) is a string of symbols that [denotes](#def-denotes) a function,
+and many [expressions](#def-expression) denote the same one.
+An [algorithm](#def-algorithm) is a [finite](functions.qmd#def-finite-sequence) list of steps that [computes](#def-computes) a function,
+and many [algorithms](#def-algorithm) compute the same one.
+
+:::

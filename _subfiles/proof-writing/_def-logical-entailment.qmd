@@ -1,5 +1,5 @@
 :::{#def-logical-entailment}
-#### Logical entailment (logical consequence, deductive consequence)
+#### Logical entailment, logical consequence, deductive consequence
 
 Propositions or predicates $\dsn{P}$
 (@def-proposition, @def-predicate)

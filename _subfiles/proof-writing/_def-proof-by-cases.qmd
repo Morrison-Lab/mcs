@@ -1,5 +1,5 @@
 :::{#def-proof-by-cases}
-#### Proof by cases (proof by exhaustion)
+#### Proof by cases, proof by exhaustion
 
 A **proof by cases**
 [@wikipedia_proof_by_exhaustion],

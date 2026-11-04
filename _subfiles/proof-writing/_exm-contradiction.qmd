@@ -1,0 +1,16 @@
+:::{#exm-contradiction}
+#### $P \land \neg P$ is a contradiction
+<!-- no-figure: the truth table is the display -->
+
+By the definitions of [and](#def-and) and [not](#def-not),
+the [truth table](#def-truth-table) of $P \land \neg P$ is:
+
+| $P$ | $\neg P$ | $P \land \neg P$ |
+|:---:|:--------:|:----------------:|
+| T   | F        | F                |
+| F   | T        | F                |
+
+The last column is false in every row,
+so $P \land \neg P$ is a [contradiction](#def-contradiction).
+
+:::

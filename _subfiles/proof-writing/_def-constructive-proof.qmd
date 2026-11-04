@@ -1,0 +1,11 @@
+:::{#def-constructive-proof}
+#### Constructive proof
+
+A **constructive proof**
+[@wikipedia_constructive_proof]
+of a [proposition](#def-proposition) $\exists x \in S,\ P(x)$
+with an [existential quantifier](#def-existential-quantifier)
+names a particular element of $S$
+and shows that $P$ is true of it.
+
+:::
