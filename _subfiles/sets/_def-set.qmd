@@ -1,8 +1,7 @@
 :::{#def-set}
 #### Set
 
-A **set**
-[@wikipedia_set_mathematics]
+A **[set](https://en.wikipedia.org/wiki/Set_(mathematics))**
 is a collection of distinct objects,
 called its elements.
 We write $a \in A$ when $a$ is an element of the set $A$,
