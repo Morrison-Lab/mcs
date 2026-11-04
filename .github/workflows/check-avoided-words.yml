@@ -20,4 +20,6 @@ jobs:
     with:
       fail: false
       whole-tree: ${{ github.event_name == 'workflow_dispatch' }}
-      paths-ignore: '_extensions/**,**/outtakes/**,latex-macros/**'
+      # _subfiles/ holds the shared basics moved here from mds (Morrison-Lab/mcs#60);
+      # their wording is revised in phase 3, not in the moves.
+      paths-ignore: '_extensions/**,**/outtakes/**,latex-macros/**,_subfiles/**'
