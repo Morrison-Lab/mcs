@@ -1,8 +1,0 @@
-:::{#def-prime}
-#### Prime number
-
-An [integer](#def-integers) $n \ge 2$ is **prime**
-if no [positive integer](#def-positive-integer) other than $1$ and $n$ [divides](#def-divides) it
-[@wikipedia_prime_number].
-
-:::
