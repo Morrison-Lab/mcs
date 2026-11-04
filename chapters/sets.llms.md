@@ -6,7 +6,7 @@ Elements, subsets, products and operations
 
 Published
 
-Last modified: 2026-11-03 22:00:55 (PST)
+Last modified: 2026-11-03 22:10:10 (PST)
 
 > **NOTE:**
 >
@@ -36,7 +36,7 @@ Last modified: 2026-11-03 22:00:55 (PST)
 
 > **NOTE:**
 >
-> **Definition 1 (Set)** A **set** ([Wikipedia contributors 2026n](#ref-wikipedia_set_mathematics)) is a collection of distinct objects, called its elements. We write $a \in A$ when $a$ is an element of the set $A$, and $a \notin A$ when it is not. Two sets are equal when they have exactly the same elements.
+> **Definition 1 (Set)** A **[set](https://en.wikipedia.org/wiki/Set_(mathematics))** is a collection of distinct objects, called its elements. We write $a \in A$ when $a$ is an element of the set $A$, and $a \notin A$ when it is not. Two sets are equal when they have exactly the same elements.
 
 > **NOTE:**
 >
