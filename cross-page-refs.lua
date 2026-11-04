@@ -212,6 +212,20 @@ function Pandoc(doc)
     local pages = index[id]
     local base
     if pages then
+      -- A reference page at the site root (growth-rates.qmd) includes the
+      -- same subfiles as the course chapter on its topic, so both define
+      -- the id. A citation goes to the course chapter, as it did before the
+      -- reference page existed; the reference page is for links from
+      -- other sites.
+      local course = {}
+      for _, p in ipairs(pages) do
+        if p.page:match("^chapters/") then
+          table.insert(course, p)
+        end
+      end
+      if #course > 0 then
+        pages = course
+      end
       base = (html or not site) and string.rep("../", depth) or site
       if #pages > 1 then
         local names = {}
