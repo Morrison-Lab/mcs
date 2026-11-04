@@ -1,0 +1,21 @@
+:::{#def-recursive-sequence}
+#### Recursively defined sequence
+
+Let $n_0$ be an [integer](number-systems.qmd#def-integers) and $m$ a positive integer.
+A [sequence](functions.qmd#def-sequence) $a_{n_0}, a_{n_0 + 1}, \ldots$
+is **recursively defined**
+[@wikipedia_recurrence_relation]
+by two things:
+
+1. **Initial [terms](functions.qmd#def-sequence-term):**
+   specific [values](functions.qmd#def-value) for $a_{n_0}, \ldots, a_{n_0 + m - 1}$.
+2. **Recurrence:** a rule that gives $a_n$
+   from the $m$ entries $a_{n-1}, \ldots, a_{n-m}$ just before it,
+   for every integer $n \ge n_0 + m$.
+
+The initial terms and the recurrence together fix every
+[term](functions.qmd#def-sequence-term):
+the first $m$ entries are given,
+and each later entry follows from the $m$ entries before it.
+
+:::

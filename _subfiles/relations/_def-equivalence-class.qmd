@@ -1,0 +1,14 @@
+:::{#def-equivalence-class}
+#### Equivalence class
+
+Let $\sim$ be an [equivalence relation](#def-equivalence-relation) on a [set](sets.qmd#def-set) $S$,
+and let $a \in S$.
+The **equivalence class**
+[@wikipedia_equivalence_class]
+of $a$ is the set of elements of $S$ related to $a$:
+
+$$
+[a] \eqdef \set{b \in S : b \sim a}.
+$$
+
+:::

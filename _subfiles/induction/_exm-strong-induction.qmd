@@ -1,0 +1,54 @@
+:::{#exm-strong-induction}
+#### Every term of the Fibonacci sequence is less than a power of 2
+
+Let $F_1, F_2, \ldots$ be the [Fibonacci sequence](#def-fibonacci-sequence).
+To prove $F_n < 2^n$ for every $n \in \Nat$,
+let $P(n)$ be the [inequality](proof-writing.qmd#def-inequality) $F_n < 2^n$
+and use @def-strong-induction with $n_0 = 1$.
+
+**[Base cases](proof-writing.qmd#def-proof-by-induction), $n = 1$ and $n = 2$.**
+The step below uses the two entries $F_{n-1}$ and $F_{n-2}$ before $F_n$,
+which do not exist for $n = 1$ and $n = 2$,
+so these two cases are shown directly:
+
+$$
+\ba
+F_1 &= 1 < 2 = 2^1
+&& \text{(} 1 < 2 \text{)}
+\\
+F_2 &= 1 < 4 = 2^2.
+&& \text{(} 1 < 4 \text{)}
+\ea
+$$
+
+**Step of the [strong induction](#def-strong-induction), $n \ge 3$.**
+Let $n \ge 3$, and suppose $P(k)$ holds for every [integer](number-systems.qmd#def-integers) $k$ with $1 \le k < n$.
+Then $k = n - 1$ and $k = n - 2$ both satisfy $1 \le k < n$,
+so $F_{n-1} < 2^{n-1}$ and $F_{n-2} < 2^{n-2}$.
+Therefore
+
+$$
+\ba
+F_n
+&= F_{n-1} + F_{n-2}
+&& \text{(definition of } F_n \text{, since } n \ge 3 \text{)}
+\\
+&< 2^{n-1} + 2^{n-2}
+&& \text{(strong induction hypothesis, twice)}
+\\
+&< 2^{n-1} + 2^{n-1}
+&& \text{(} 2^{n-2} < 2^{n-1} \text{)}
+\\
+&= 2 \cdot 2^{n-1}
+&& \text{(} a + a = 2a \text{)}
+\\
+&= 2^n,
+&& \text{(} 2 \cdot 2^{n-1} = 2^n \text{)}
+\ea
+$$
+
+which is $P(n)$.
+By @def-strong-induction,
+$F_n < 2^n$ for every $n \in \Nat$.
+
+:::

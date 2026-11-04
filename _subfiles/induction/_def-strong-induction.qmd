@@ -1,0 +1,28 @@
+:::{#def-strong-induction}
+#### Proof by strong induction
+
+Let $n_0$ be an [integer](number-systems.qmd#def-integers),
+and let $P(n)$ be a [predicate](proof-writing.qmd#def-predicate)
+about the [integers](number-systems.qmd#def-integers) $n \ge n_0$.
+A **proof by strong induction**
+[@wikipedia_mathematical_induction]
+on $n$
+shows that $P(n)$ holds for every integer $n \ge n_0$
+by showing one thing:
+for every integer $n \ge n_0$,
+if $P(k)$ holds for every integer $k$ with $n_0 \le k < n$,
+then $P(n)$ holds.
+
+The assumption that $P(k)$ holds for every integer $k$ with $n_0 \le k < n$
+is the **strong induction hypothesis**.
+
+For $n = n_0$ no integer $k$ satisfies $n_0 \le k < n$,
+so the strong induction hypothesis is [vacuously true](sets.qmd#def-vacuous-truth),
+and the proof for $n = n_0$ is a
+[base case](proof-writing.qmd#def-proof-by-induction).
+When the proof for $n$ needs particular earlier cases
+that do not exist for the first few $n$,
+those few cases are shown separately as further
+[base cases](proof-writing.qmd#def-proof-by-induction).
+
+:::
