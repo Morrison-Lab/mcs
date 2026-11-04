@@ -6,7 +6,7 @@ What follows from what, and how to write it down
 
 Published
 
-Last modified: 2026-11-03 21:54:19 (PST)
+Last modified: 2026-11-03 22:00:55 (PST)
 
 > **NOTE:**
 >
@@ -44,7 +44,7 @@ Last modified: 2026-11-03 21:54:19 (PST)
 
 > **NOTE:**
 >
-> **Definition 2 (Logical entailment (logical consequence, deductive consequence))** Propositions or predicates $P_1, \ldots, P_n$ ([Definition: Proposition, statement](../chapters/propositional-logic.llms.md#def-proposition), [Definition: Predicate](../chapters/propositional-logic.llms.md#def-predicate)) **logically entail** ([Wikipedia contributors 2026c](#ref-wikipedia_logical_consequence)) a proposition or predicate $Q$ when every choice of values for their variables that makes all of $P_1, \ldots, P_n$ true also makes $Q$ true. Then $Q$ is a **logical consequence**, or **deductive consequence**, of $P_1, \ldots, P_n$.
+> **Definition 2 (Logical entailment, logical consequence, deductive consequence)** Propositions or predicates $P_1, \ldots, P_n$ ([Definition: Proposition, statement](../chapters/propositional-logic.llms.md#def-proposition), [Definition: Predicate](../chapters/propositional-logic.llms.md#def-predicate)) **logically entail** ([Wikipedia contributors 2026c](#ref-wikipedia_logical_consequence)) a proposition or predicate $Q$ when every choice of values for their variables that makes all of $P_1, \ldots, P_n$ true also makes $Q$ true. Then $Q$ is a **logical consequence**, or **deductive consequence**, of $P_1, \ldots, P_n$.
 
 > **NOTE:**
 >
@@ -260,7 +260,7 @@ Last modified: 2026-11-03 21:54:19 (PST)
 
 > **NOTE:**
 >
-> **Definition 12 (Proof by cases (proof by exhaustion))** A **proof by cases** ([Wikipedia contributors 2026f](#ref-wikipedia_proof_by_exhaustion)), also called a **proof by exhaustion**, of a [proposition](../chapters/propositional-logic.llms.md#def-proposition) $Q$ lists [propositions](../chapters/propositional-logic.llms.md#def-proposition) $C_1, \ldots, C_k$, the *cases*, shows that at least one of them is true, and proves $C_i \Rightarrow Q$ for each $i$.
+> **Definition 12 (Proof by cases, proof by exhaustion)** A **proof by cases** ([Wikipedia contributors 2026f](#ref-wikipedia_proof_by_exhaustion)), also called a **proof by exhaustion**, of a [proposition](../chapters/propositional-logic.llms.md#def-proposition) $Q$ lists [propositions](../chapters/propositional-logic.llms.md#def-proposition) $C_1, \ldots, C_k$, the *cases*, shows that at least one of them is true, and proves $C_i \Rightarrow Q$ for each $i$.
 
 > **NOTE:**
 >
@@ -281,7 +281,7 @@ Last modified: 2026-11-03 21:54:19 (PST)
 # Definitions on this page
 
 - [Definition 1 (Argument)](#def-logical-argument)
-- [Definition 2 (Logical entailment (logical consequence, deductive consequence))](#def-logical-entailment)
+- [Definition 2 (Logical entailment, logical consequence, deductive consequence)](#def-logical-entailment)
 - [Definition 3 (Rule of inference)](#def-rule-of-inference)
 - [Definition 4 (Integers)](#def-integers)
 - [Definition 5 (Positive integers)](#def-positive-integer)
@@ -291,7 +291,7 @@ Last modified: 2026-11-03 21:54:19 (PST)
 - [Definition 9 (Divides)](#def-divides)
 - [Definition 10 (Proof)](#def-proof)
 - [Definition 11 (Direct proof)](#def-direct-proof)
-- [Definition 12 (Proof by cases (proof by exhaustion))](#def-proof-by-cases)
+- [Definition 12 (Proof by cases, proof by exhaustion)](#def-proof-by-cases)
 
 # References
 

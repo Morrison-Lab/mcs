@@ -6,7 +6,7 @@ If and only if, existence, and disproof
 
 Published
 
-Last modified: 2026-11-03 21:54:19 (PST)
+Last modified: 2026-11-03 22:00:55 (PST)
 
 > **NOTE:**
 >
@@ -153,7 +153,7 @@ Last modified: 2026-11-03 21:54:19 (PST)
 >
 > **Example 4 (An irrational power of an irrational number)** Claim: there are irrational numbers $x$ and $y$ ([Definition: Irrational numbers](../chapters/contrapositive-contradiction.llms.md#def-irrational-numbers)) for which $x^y$ is rational ([Definition: Rational numbers](../chapters/contrapositive-contradiction.llms.md#def-rational-numbers)).
 >
-> The number $\sqrt{2}$ is irrational ([Theorem:](../chapters/contrapositive-contradiction.llms.md#thm-sqrt-two) $\sqrt{2}$ is irrational). Consider $\sqrt{2}^{\sqrt{2}}$, and take two cases ([Definition: Proof by cases (proof by exhaustion)](../chapters/direct-proof.llms.md#def-proof-by-cases)).
+> The number $\sqrt{2}$ is irrational ([Theorem:](../chapters/contrapositive-contradiction.llms.md#thm-sqrt-two) $\sqrt{2}$ is irrational). Consider $\sqrt{2}^{\sqrt{2}}$, and take two cases ([Definition: Proof by cases, proof by exhaustion](../chapters/direct-proof.llms.md#def-proof-by-cases)).
 >
 > **Case 1:** $\sqrt{2}^{\sqrt{2}}$ is rational. Then $x = \sqrt{2}$ and $y = \sqrt{2}$ work.
 >
@@ -192,7 +192,7 @@ Last modified: 2026-11-03 21:54:19 (PST)
 >
 > **Example 5 (No integer squares to two)** Claim to disprove: there is an integer $n$ with $n^2 = 2$.
 >
-> By [Theorem: Negating a quantifier](../chapters/equivalence-negation.llms.md#thm-negate-quantifiers), its negation is “for every integer $n$, $n^2 \ne 2$”. We prove the negation by cases ([Definition: Proof by cases (proof by exhaustion)](../chapters/direct-proof.llms.md#def-proof-by-cases)). Let $n$ be an integer.
+> By [Theorem: Negating a quantifier](../chapters/equivalence-negation.llms.md#thm-negate-quantifiers), its negation is “for every integer $n$, $n^2 \ne 2$”. We prove the negation by cases ([Definition: Proof by cases, proof by exhaustion](../chapters/direct-proof.llms.md#def-proof-by-cases)). Let $n$ be an integer.
 >
 > - If $n$ is $-1$, $0$ or $1$, then $n^2$ is $1$, $0$ or $1$, which is not $2$.
 > - Otherwise $n \le -2$ or $n \ge 2$, so $\mathopen{}\left|n\right|\mathclose{} \ge 2$, and $n^2 = \mathopen{}\left|n\right|\mathclose{}^2 \ge 2^2 = 4$, so $n^2 \ne 2$.

@@ -6,7 +6,7 @@ Proving that an algorithm with a loop is correct
 
 Published
 
-Last modified: 2026-11-03 21:54:19 (PST)
+Last modified: 2026-11-03 22:00:55 (PST)
 
 > **NOTE:**
 >

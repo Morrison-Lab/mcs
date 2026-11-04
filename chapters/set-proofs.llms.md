@@ -6,7 +6,7 @@ Membership, subsets and set equality
 
 Published
 
-Last modified: 2026-11-03 21:54:19 (PST)
+Last modified: 2026-11-03 22:00:55 (PST)
 
 > **NOTE:**
 >
@@ -122,7 +122,7 @@ Last modified: 2026-11-03 21:54:19 (PST)
 
 > **NOTE:**
 >
-> *Solution 3*. $A \cup (A \cap B) \subseteq A$. Let $x \in A \cup (A \cap B)$. Then $x \in A$ or $x \in A \cap B$. In the first case, $x \in A$. In the second case, $x \in A$ and $x \in B$, so again $x \in A$. Either way, $x \in A$ ([Definition: Proof by cases (proof by exhaustion)](../chapters/direct-proof.llms.md#def-proof-by-cases)).
+> *Solution 3*. $A \cup (A \cap B) \subseteq A$. Let $x \in A \cup (A \cap B)$. Then $x \in A$ or $x \in A \cap B$. In the first case, $x \in A$. In the second case, $x \in A$ and $x \in B$, so again $x \in A$. Either way, $x \in A$ ([Definition: Proof by cases, proof by exhaustion](../chapters/direct-proof.llms.md#def-proof-by-cases)).
 >
 > $A \subseteq A \cup (A \cap B)$. Let $x \in A$. Then “$x \in A$ or $x \in A \cap B$” is true, since its first part is true ([Definition: Or](../chapters/propositional-logic.llms.md#def-or)), so $x \in A \cup (A \cap B)$.
 >

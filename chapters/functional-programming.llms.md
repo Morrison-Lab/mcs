@@ -6,7 +6,7 @@ Expressions, functions and cases in Racket
 
 Published
 
-Last modified: 2026-11-03 21:54:19 (PST)
+Last modified: 2026-11-03 22:00:55 (PST)
 
 > **NOTE:**
 >
@@ -42,13 +42,13 @@ Last modified: 2026-11-03 21:54:19 (PST)
 
 > **NOTE:**
 >
-> **Definition 1 (Function (map, mapping, transformation))** A **function** $f$ from a set $A$ to a set $B$, ([Wikipedia contributors 2026b](#ref-wikipedia_function_mathematics)) written $f : A \to B$, assigns to each element $a \in A$ exactly one element $f(a) \in B$.
+> **Definition 1 (Function, map, mapping, transformation)** A **function** $f$ from a set $A$ to a set $B$, ([Wikipedia contributors 2026b](#ref-wikipedia_function_mathematics)) written $f : A \to B$, assigns to each element $a \in A$ exactly one element $f(a) \in B$.
 >
 > A function is also called a **map** (or **mapping**) or a **transformation**; on this site the three words mean the same thing, although some authors reserve “transformation” for a function from a set to itself.
 
 > **NOTE:**
 >
-> **Definition 2 (Expression)** An **expression** ([Wikipedia contributors 2026a](#ref-wikipedia_expression_mathematics)) is a string of symbols, built from constants, variables, operations and function names according to the rules of the notation. When its variables are read as inputs, an expression *denotes* a [function](../chapters/functional-programming.llms.md#def-function): it fixes the output for each input.
+> **Definition 2 (Expression)** An **expression** ([Wikipedia contributors 2026a](#ref-wikipedia_expression_mathematics)) is a string of symbols, built from constants, variables, operations and function names according to the rules of the notation.
 
 > **NOTE:**
 >
@@ -98,11 +98,11 @@ Last modified: 2026-11-03 21:54:19 (PST)
 
 > **NOTE:**
 >
-> **Definition 4 (Argument (input))** An **argument** (or **input**) of a [function](#def-function) $f : A \to B$ is an element $a \in A$ that $f$ is applied to.
+> **Definition 4 (Argument, input)** An **argument** (or **input**) of a [function](#def-function) $f : A \to B$ is an element $a \in A$ that $f$ is applied to.
 
 > **NOTE:**
 >
-> **Definition 5 (Value (output))** The **value** (or **output**) of a [function](#def-function) $f : A \to B$ at an [argument](#def-argument) $a \in A$ is the element $f(a) \in B$ that $f$ assigns to $a$.
+> **Definition 5 (Value, output)** The **value** (or **output**) of a [function](#def-function) $f : A \to B$ at an [argument](#def-argument) $a \in A$ is the element $f(a) \in B$ that $f$ assigns to $a$.
 
 > **NOTE:**
 >
@@ -433,11 +433,11 @@ Last modified: 2026-11-03 21:54:19 (PST)
 
 # Definitions on this page
 
-- [Definition 1 (Function (map, mapping, transformation))](#def-function)
+- [Definition 1 (Function, map, mapping, transformation)](#def-function)
 - [Definition 2 (Expression)](#def-expression)
 - [Definition 3 (Racket expression, prefix notation)](#def-racket-expression)
-- [Definition 4 (Argument (input))](#def-argument)
-- [Definition 5 (Value (output))](#def-value)
+- [Definition 4 (Argument, input)](#def-argument)
+- [Definition 5 (Value, output)](#def-value)
 - [Definition 6 (Defining a function in Racket)](#def-racket-define)
 - [Definition 7 (True and false in Racket)](#def-booleans)
 - [Definition 8 (`if` and `cond`)](#def-if-cond)

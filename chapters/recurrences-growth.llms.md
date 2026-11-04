@@ -6,7 +6,7 @@ Solving recurrence relations, running times, and big-O notation
 
 Published
 
-Last modified: 2026-11-03 21:54:19 (PST)
+Last modified: 2026-11-03 22:00:55 (PST)
 
 > **NOTE:**
 >
@@ -235,7 +235,7 @@ Last modified: 2026-11-03 21:54:19 (PST)
 
 > **NOTE:**
 >
-> **Definition 4 (Running time)** Fix, for an algorithm ([Definition: Algorithm](https://morrison-lab.github.io/mds/expressions-algorithms.html#def-algorithm)), the size of an input and what one step is ([Remark 3](#rem-size-step)). The **running time** ([Wikipedia contributors 2026f](#ref-wikipedia_time_complexity)) of the algorithm is the function $T$ ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)) whose value $T(n)$ is the largest number of steps that the algorithm takes on any input of size $n$.
+> **Definition 4 (Running time)** Fix, for an algorithm ([Definition: Algorithm](https://morrison-lab.github.io/mds/expressions-algorithms.html#def-algorithm)), the size of an input and what one step is ([Remark 3](#rem-size-step)). The **running time** ([Wikipedia contributors 2026f](#ref-wikipedia_time_complexity)) of the algorithm is the function $T$ ([Definition: Function, map, mapping, transformation](../chapters/functional-programming.llms.md#def-function)) whose value $T(n)$ is the largest number of steps that the algorithm takes on any input of size $n$.
 
 > **NOTE:**
 >
@@ -437,7 +437,7 @@ Last modified: 2026-11-03 21:54:19 (PST)
 
 > **NOTE:**
 >
-> **Theorem 5 (Sums of big-O functions)** Let $f$, $g$ and $h$ be functions ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)) from the natural numbers ([Definition: Natural numbers (our convention)](../chapters/sets.llms.md#def-natural-numbers)) to the real numbers ([Definition: Real numbers](../chapters/sets.llms.md#def-real-numbers)). If $f(n) = O(h(n))$ and $g(n) = O(h(n))$ ([Definition 5](#def-big-o)), then $f(n) + g(n) = O(h(n))$.
+> **Theorem 5 (Sums of big-O functions)** Let $f$, $g$ and $h$ be functions ([Definition: Function, map, mapping, transformation](../chapters/functional-programming.llms.md#def-function)) from the natural numbers ([Definition: Natural numbers (our convention)](../chapters/sets.llms.md#def-natural-numbers)) to the real numbers ([Definition: Real numbers](../chapters/sets.llms.md#def-real-numbers)). If $f(n) = O(h(n))$ and $g(n) = O(h(n))$ ([Definition 5](#def-big-o)), then $f(n) + g(n) = O(h(n))$.
 
 > **NOTE:**
 >

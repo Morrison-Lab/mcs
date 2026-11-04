@@ -6,7 +6,7 @@ Relations between sets, their properties, equivalence relations, partitions and 
 
 Published
 
-Last modified: 2026-11-03 21:54:19 (PST)
+Last modified: 2026-11-03 22:00:55 (PST)
 
 > **NOTE:**
 >
@@ -460,7 +460,7 @@ Last modified: 2026-11-03 21:54:19 (PST)
 
 > **NOTE:**
 >
-> **Theorem 3 (Having the same value is an equivalence relation)** Let $f : A \to B$ be a function ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)), and on $A$ let $a \sim a'$ when $f(a) = f(a')$. Then $\sim$ is an equivalence relation ([Definition 13](#def-equivalence-relation)).
+> **Theorem 3 (Having the same value is an equivalence relation)** Let $f : A \to B$ be a function ([Definition: Function, map, mapping, transformation](../chapters/functional-programming.llms.md#def-function)), and on $A$ let $a \sim a'$ when $f(a) = f(a')$. Then $\sim$ is an equivalence relation ([Definition 13](#def-equivalence-relation)).
 
 > **NOTE:**
 >
@@ -544,7 +544,7 @@ Last modified: 2026-11-03 21:54:19 (PST)
 
 > **NOTE:**
 >
-> **Definition 15 (Partition of a set)** Let $S$ be a set. A **partition** of $S$ ([Wikipedia contributors 2026r](#ref-wikipedia_partition_of_a_set)) is a collection $\mathcal{C}$ ([Definition: Collection of sets (family of sets)](https://morrison-lab.github.io/mds/sets.html#def-collection)) of subsets of $S$ such that
+> **Definition 15 (Partition of a set)** Let $S$ be a set. A **partition** of $S$ ([Wikipedia contributors 2026r](#ref-wikipedia_partition_of_a_set)) is a collection $\mathcal{C}$ ([Definition: Collection of sets, family of sets](https://morrison-lab.github.io/mds/sets.html#def-collection)) of subsets of $S$ such that
 >
 > - every set in $\mathcal{C}$ is nonempty;
 > - any two different sets in $\mathcal{C}$ are disjoint: their intersection ([Definition: Intersection](../chapters/sets.llms.md#def-intersection)) is empty;
@@ -603,7 +603,7 @@ Last modified: 2026-11-03 21:54:19 (PST)
 
 > **NOTE:**
 >
-> *Solution 8*. Exactly one each: rock beats only scissors, paper beats only rock, and scissors beats only paper. So “the element that $a$ beats” names one element of $G$ for each $a \in G$, which is what a function ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)) from $G$ to $G$ does.
+> *Solution 8*. Exactly one each: rock beats only scissors, paper beats only rock, and scissors beats only paper. So “the element that $a$ beats” names one element of $G$ for each $a \in G$, which is what a function ([Definition: Function, map, mapping, transformation](../chapters/functional-programming.llms.md#def-function)) from $G$ to $G$ does.
 
 > **NOTE:**
 >
@@ -621,7 +621,7 @@ Last modified: 2026-11-03 21:54:19 (PST)
 
 > **NOTE:**
 >
-> **Example 23 (The graph of a length function)** Let $\operatorname{len}_K : K \to \mathbb{N}$ ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function), [Definition: Natural numbers (our convention)](../chapters/sets.llms.md#def-natural-numbers)) give the length of each word of the set $K$ of [Exercise 6](#exr-same-length), so $\operatorname{len}_K(a) = \operatorname{len}(a)$, as in [Example 18](#exm-same-length). Its [domain](#def-domain) is $K$ and its [codomain](#def-codomain) is $\mathbb{N}$. Its graph ([Definition 18](#def-graph)) is the set of six pairs
+> **Example 23 (The graph of a length function)** Let $\operatorname{len}_K : K \to \mathbb{N}$ ([Definition: Function, map, mapping, transformation](../chapters/functional-programming.llms.md#def-function), [Definition: Natural numbers (our convention)](../chapters/sets.llms.md#def-natural-numbers)) give the length of each word of the set $K$ of [Exercise 6](#exr-same-length), so $\operatorname{len}_K(a) = \operatorname{len}(a)$, as in [Example 18](#exm-same-length). Its [domain](#def-domain) is $K$ and its [codomain](#def-codomain) is $\mathbb{N}$. Its graph ([Definition 18](#def-graph)) is the set of six pairs
 >
 > $${\mathopen{}\left\{(\text{if}, 2), (\text{let}, 3), (\text{cond}, 4), (\text{list}, 4), (\text{cons}, 4), (\text{define}, 6)\right\}\mathclose{}},$$
 >
@@ -633,7 +633,7 @@ Last modified: 2026-11-03 21:54:19 (PST)
 
 > **NOTE:**
 >
-> **Theorem 7 (Functions are relations with one output per input)** Let $A$ and $B$ be sets, and let $R$ be a relation from $A$ to $B$ ([Definition 1](#def-binary-relation)). Then $R$ is the graph ([Definition 18](#def-graph)) of a function $f : A \to B$ ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)) if and only if each $a \in A$ is related by $R$ to exactly one $b \in B$. That function is then the only one whose graph is $R$.
+> **Theorem 7 (Functions are relations with one output per input)** Let $A$ and $B$ be sets, and let $R$ be a relation from $A$ to $B$ ([Definition 1](#def-binary-relation)). Then $R$ is the graph ([Definition 18](#def-graph)) of a function $f : A \to B$ ([Definition: Function, map, mapping, transformation](../chapters/functional-programming.llms.md#def-function)) if and only if each $a \in A$ is related by $R$ to exactly one $b \in B$. That function is then the only one whose graph is $R$.
 
 > **NOTE:**
 >
@@ -645,7 +645,7 @@ Last modified: 2026-11-03 21:54:19 (PST)
 
 > **NOTE:**
 >
-> *Remark 5* (What a function is fundamentally). [Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function) defines what a function *does*: it assigns an output to each input. In formal set theory, what a function *is* is described in terms of [ordered pairs](../chapters/sets.llms.md#def-ordered-pair) and its graph ([Definition 18](#def-graph)): the set of pairs $G = {\mathopen{}\left\{(a, f(a)) : a \in A\right\}\mathclose{}} \subseteq A \times B$. Authors define a function formally in one of two ways:
+> *Remark 5* (What a function is fundamentally). [Definition: Function, map, mapping, transformation](../chapters/functional-programming.llms.md#def-function) defines what a function *does*: it assigns an output to each input. In formal set theory, what a function *is* is described in terms of [ordered pairs](../chapters/sets.llms.md#def-ordered-pair) and its graph ([Definition 18](#def-graph)): the set of pairs $G = {\mathopen{}\left\{(a, f(a)) : a \in A\right\}\mathclose{}} \subseteq A \times B$. Authors define a function formally in one of two ways:
 >
 > 1.  **As its graph** ([Halmos 1974, sec. 8](#ref-halmos1974naive), p. 30): a function is a subset of $A \times B$ containing exactly one pair $(a, b)$ for each $a \in A$, where $b = f(a)$, and the statement $f(a) = b$ is notation for $(a, b) \in f$. Under this convention, the codomain $B$ is specified alongside the graph in the declaration $f : A \to B$.
 > 2.  **As a triple** $(A, B, G)$: the function consists of the domain $A$, the codomain $B$, and the graph $G \subseteq A \times B$. This explicit packaging retains the codomain $B$ as part of the function itself, distinguishing functions that have the same graph but different codomains (such as a function mapping into $\mathbb{R}$ versus into integers).
@@ -718,7 +718,7 @@ Last modified: 2026-11-03 21:54:19 (PST)
 
 > **NOTE:**
 >
-> **Definition 21 (Injective function (one-to-one function))** A function $f : A \to B$ ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)) is **injective** ([Wikipedia contributors 2026o](#ref-wikipedia_injective_function)) (also called **one-to-one**) if, for all $a, a' \in A$, $f(a) = f(a')$ implies $a = a'$.
+> **Definition 21 (Injective function (one-to-one function))** A function $f : A \to B$ ([Definition: Function, map, mapping, transformation](../chapters/functional-programming.llms.md#def-function)) is **injective** ([Wikipedia contributors 2026o](#ref-wikipedia_injective_function)) (also called **one-to-one**) if, for all $a, a' \in A$, $f(a) = f(a')$ implies $a = a'$.
 
 > **NOTE:**
 >
@@ -730,7 +730,7 @@ Last modified: 2026-11-03 21:54:19 (PST)
 
 > **NOTE:**
 >
-> **Definition 22 (Surjective function (onto function))** A function $f : A \to B$ ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)) is **surjective** ([Wikipedia contributors 2026u](#ref-wikipedia_surjective_function)) (also called **onto**) if, for every $b \in B$, there is some $a \in A$ with $f(a) = b$.
+> **Definition 22 (Surjective function (onto function))** A function $f : A \to B$ ([Definition: Function, map, mapping, transformation](../chapters/functional-programming.llms.md#def-function)) is **surjective** ([Wikipedia contributors 2026u](#ref-wikipedia_surjective_function)) (also called **onto**) if, for every $b \in B$, there is some $a \in A$ with $f(a) = b$.
 
 > **NOTE:**
 >
@@ -742,7 +742,7 @@ Last modified: 2026-11-03 21:54:19 (PST)
 
 > **NOTE:**
 >
-> **Definition 23 (Bijective function (bijection))** A function $f : A \to B$ ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)) is **bijective** ([Wikipedia contributors 2026b](#ref-wikipedia_bijection)) (also called a **bijection**) if it is injective ([Definition 21](#def-injective)) and surjective ([Definition 22](#def-surjective)).
+> **Definition 23 (Bijective function (bijection))** A function $f : A \to B$ ([Definition: Function, map, mapping, transformation](../chapters/functional-programming.llms.md#def-function)) is **bijective** ([Wikipedia contributors 2026b](#ref-wikipedia_bijection)) (also called a **bijection**) if it is injective ([Definition 21](#def-injective)) and surjective ([Definition 22](#def-surjective)).
 
 > **NOTE:**
 >
@@ -764,7 +764,7 @@ Last modified: 2026-11-03 21:54:19 (PST)
 
 > **NOTE:**
 >
-> **Definition 24 (Identity function)** The **identity function** on a set $A$ ([Wikipedia contributors 2026m](#ref-wikipedia_identity_function)) is the function $\operatorname{id}_A : A \to A$ ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)) with $\operatorname{id}_A(a) = a$ for every $a \in A$.
+> **Definition 24 (Identity function)** The **identity function** on a set $A$ ([Wikipedia contributors 2026m](#ref-wikipedia_identity_function)) is the function $\operatorname{id}_A : A \to A$ ([Definition: Function, map, mapping, transformation](../chapters/functional-programming.llms.md#def-function)) with $\operatorname{id}_A(a) = a$ for every $a \in A$.
 
 > **NOTE:**
 >
@@ -796,7 +796,7 @@ Last modified: 2026-11-03 21:54:19 (PST)
 
 > **NOTE:**
 >
-> **Theorem 8 (A function has an inverse exactly when it is a bijection)** A function $f : A \to B$ ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)) has an inverse function ([Definition 25](#def-inverse-function)) if and only if $f$ is bijective ([Definition 23](#def-bijective)). The graph ([Definition 18](#def-graph)) of the inverse function is then the inverse relation ([Definition 10](#def-inverse-relation)) of the graph of $f$.
+> **Theorem 8 (A function has an inverse exactly when it is a bijection)** A function $f : A \to B$ ([Definition: Function, map, mapping, transformation](../chapters/functional-programming.llms.md#def-function)) has an inverse function ([Definition 25](#def-inverse-function)) if and only if $f$ is bijective ([Definition 23](#def-bijective)). The graph ([Definition 18](#def-graph)) of the inverse function is then the inverse relation ([Definition 10](#def-inverse-relation)) of the graph of $f$.
 
 > **NOTE:**
 >
@@ -826,7 +826,7 @@ Last modified: 2026-11-03 21:54:19 (PST)
 
 > **NOTE:**
 >
-> **Theorem 9 (The graph of a composition is a composition of graphs)** Let $g : A \to B$ and $f : B \to C$ be functions ([Definition: Function (map, mapping, transformation)](../chapters/functional-programming.llms.md#def-function)), and write $\Gamma_f$ for the graph ([Definition 18](#def-graph)) of $f$. Then the graph of the composition $f \circ g$ ([Definition 26](#def-composition)) is the composition of relations ([Definition 11](#def-relation-composition))
+> **Theorem 9 (The graph of a composition is a composition of graphs)** Let $g : A \to B$ and $f : B \to C$ be functions ([Definition: Function, map, mapping, transformation](../chapters/functional-programming.llms.md#def-function)), and write $\Gamma_f$ for the graph ([Definition 18](#def-graph)) of $f$. Then the graph of the composition $f \circ g$ ([Definition 26](#def-composition)) is the composition of relations ([Definition 11](#def-relation-composition))
 >
 > $$\Gamma_{f \circ g} = \Gamma_f \circ \Gamma_g.$$
 
