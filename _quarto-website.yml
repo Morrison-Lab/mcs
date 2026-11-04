@@ -102,6 +102,8 @@ website:
         menu:
           - text: "Growth Rates"
             href: growth-rates.qmd
+          - text: "Induction"
+            href: induction.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mcs
@@ -157,6 +159,7 @@ website:
       - section: "Math Reference"
         contents:
           - growth-rates.qmd
+          - induction.qmd
 
 callouty-theorem:
   thm:
