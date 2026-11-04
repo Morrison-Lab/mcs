@@ -1,0 +1,36 @@
+:::{#def-extended-nonneg-reals}
+#### Extended non-negative real numbers
+
+The **extended non-negative real numbers**, written $[0, \infty]$,
+are the non-negative real numbers together with an extra element $\infty$
+that is greater than every real number:
+
+$$[0, \infty] \eqdef [0, \infty) \cup \set{\infty}$$
+
+Addition extends to $[0, \infty]$ by setting
+
+$$
+\begin{aligned}
+x + \infty &= \infty + x \\
+&= \infty
+\end{aligned}
+$$
+
+for every $x \in [0, \infty]$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-infinity-arithmetic}
+#### Arithmetic with $\infty$
+
+$\infty$ is not a real number,
+so some real-number arithmetic does not extend to it:
+$\infty - \infty$ is left undefined,
+and $\infty + 1 = \infty + 2$ does not imply $1 = 2$.
+Measure theory uses $[0, \infty]$
+because the size of a set, such as the length of the whole real line, can be infinite
+[@wikipedia_extended_real_number_line].
+
+:::

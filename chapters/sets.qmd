@@ -43,11 +43,11 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/sets/_def-set.qmd >}}
+{{< include ../_subfiles/sets/_def-set.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/sets/_exm-set.qmd >}}
+{{< include ../_subfiles/sets/_exm-set.qmd >}}
 
 {{< slidebreak >}}
 
@@ -59,15 +59,15 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/number-systems/_def-natural-numbers.qmd >}}
+{{< include ../_subfiles/number-systems/_def-natural-numbers.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/number-systems/_note-natural-numbers-other-conventions.qmd >}}
+{{< include ../_subfiles/number-systems/_note-natural-numbers-other-conventions.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/number-systems/_def-real-numbers.qmd >}}
+{{< include ../_subfiles/number-systems/_def-real-numbers.qmd >}}
 
 {{< slidebreak >}}
 
@@ -83,19 +83,19 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/sets/_def-set-builder.qmd >}}
+{{< include ../_subfiles/sets/_def-set-builder.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/sets/_exm-set-builder.qmd >}}
+{{< include ../_subfiles/sets/_exm-set-builder.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/sets/_def-empty-set.qmd >}}
+{{< include ../_subfiles/sets/_def-empty-set.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/sets/_exm-empty-set.qmd >}}
+{{< include ../_subfiles/sets/_exm-empty-set.qmd >}}
 
 {{< slidebreak >}}
 
@@ -163,15 +163,15 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/sets/_def-subset.qmd >}}
+{{< include ../_subfiles/sets/_def-subset.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/sets/_exm-subset.qmd >}}
+{{< include ../_subfiles/sets/_exm-subset.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/sets/_def-strict-subset.qmd >}}
+{{< include ../_subfiles/sets/_def-strict-subset.qmd >}}
 
 {{< slidebreak >}}
 
@@ -179,11 +179,11 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/sets/_thm-empty-subset.qmd >}}
+{{< include ../_subfiles/sets/_thm-empty-subset.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/sets/_thm-subset-reflexive.qmd >}}
+{{< include ../_subfiles/sets/_thm-subset-reflexive.qmd >}}
 
 {{< slidebreak >}}
 
@@ -203,7 +203,7 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/sets/_def-ordered-pair.qmd >}}
+{{< include ../_subfiles/sets/_def-ordered-pair.qmd >}}
 
 {{< slidebreak >}}
 
@@ -215,7 +215,7 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/sets/_def-cartesian-product.qmd >}}
+{{< include ../_subfiles/sets/_def-cartesian-product.qmd >}}
 
 {{< slidebreak >}}
 
@@ -235,15 +235,15 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/sets/_def-union.qmd >}}
+{{< include ../_subfiles/sets/_def-union.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/sets/_def-intersection.qmd >}}
+{{< include ../_subfiles/sets/_def-intersection.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/sets/_def-set-difference.qmd >}}
+{{< include ../_subfiles/sets/_def-set-difference.qmd >}}
 
 {{< slidebreak >}}
 
@@ -251,11 +251,11 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/sets/_exm-set-operations.qmd >}}
+{{< include ../_subfiles/sets/_exm-set-operations.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/sets/_def-complement.qmd >}}
+{{< include ../_subfiles/sets/_def-complement.qmd >}}
 
 {{< slidebreak >}}
 
@@ -263,7 +263,7 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/sets/_exm-complement.qmd >}}
+{{< include ../_subfiles/sets/_exm-complement.qmd >}}
 
 {{< slidebreak >}}
 

@@ -1,0 +1,10 @@
+:::{#def-set-builder}
+#### Set-builder notation
+
+For a set $A$ and a statement $P(x)$ about an element $x$,
+**set-builder notation**
+[@wikipedia_set_builder_notation]
+$\set{x \in A : P(x)}$
+denotes the set of elements $x$ of $A$ for which $P(x)$ is true.
+
+:::

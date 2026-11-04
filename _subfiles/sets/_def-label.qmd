@@ -1,0 +1,8 @@
+::: {#def-label}
+
+#### Label
+
+A **label** is a name or symbol attached to an object,
+so that we can refer to the object and tell it apart from other objects.
+
+:::

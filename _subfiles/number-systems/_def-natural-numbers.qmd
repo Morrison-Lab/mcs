@@ -1,0 +1,10 @@
+:::{#def-natural-numbers}
+#### Natural numbers (our convention)
+
+In these notes, the **natural numbers**
+[@wikipedia_natural_number]
+are the positive integers (@def-positive-integer):
+
+$$\Nat \eqdef \cb{1, 2, 3, \ldots}$$
+
+:::

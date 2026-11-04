@@ -1,0 +1,10 @@
+:::{#exm-rational-numbers}
+#### Rational numbers
+
+- $\frac{3}{4}$ is rational, with $a = 3$ and $b = 4$.
+- $0.75$ is rational, because $0.75 = \frac{3}{4}$.
+- Every integer is rational: for example, $-5 = \frac{-5}{1}$.
+- $0.333\ldots$, with the $3$s repeating forever, is rational,
+  because $0.333\ldots = \frac{1}{3}$.
+
+:::

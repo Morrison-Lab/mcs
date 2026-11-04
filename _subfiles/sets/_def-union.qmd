@@ -1,0 +1,12 @@
+:::{#def-union}
+#### Union
+
+The **union**
+[@wikipedia_union_set_theory]
+of sets $A$ and $B$,
+written $A \cup B$,
+is the set of elements that are in $A$, in $B$, or in both:
+
+$$A \cup B \eqdef \set{x : x \in A \text{ or } x \in B}$$
+
+:::

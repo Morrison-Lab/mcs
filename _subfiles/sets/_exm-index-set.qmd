@@ -1,0 +1,8 @@
+::: {#exm-index-set}
+
+#### Index sets
+
+The set $\{1, \ldots, n\}$ labels the entries of a vector with $n$ entries.
+The set of nonnegative real numbers can label moments in time.
+
+:::

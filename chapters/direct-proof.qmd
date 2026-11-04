@@ -84,19 +84,19 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/number-systems/_def-integers.qmd >}}
+{{< include ../_subfiles/number-systems/_def-integers.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/number-systems/_exm-integers.qmd >}}
+{{< include ../_subfiles/number-systems/_exm-integers.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/number-systems/_def-even-odd.qmd >}}
+{{< include ../_subfiles/number-systems/_def-even-odd.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/number-systems/_exm-even-odd.qmd >}}
+{{< include ../_subfiles/number-systems/_exm-even-odd.qmd >}}
 
 {{< slidebreak >}}
 

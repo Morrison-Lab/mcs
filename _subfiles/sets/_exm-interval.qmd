@@ -1,0 +1,10 @@
+:::{#exm-interval}
+#### Which numbers are in an interval
+
+- $1 \in [1, 2]$, but $1 \notin (1, 2)$.
+- $2 \in (1, 2]$, but $2 \notin [1, 2)$.
+- $1.5$ is in all four of $[1, 2]$, $(1, 2)$, $[1, 2)$, and $(1, 2]$.
+- $[0, \infty)$ is the set of non-negative real numbers:
+  $0 \in [0, \infty)$ and $1000 \in [0, \infty)$, but $-0.1 \notin [0, \infty)$.
+
+:::

@@ -1,0 +1,10 @@
+::: {#exm-indexed-family}
+
+#### Indexed families
+
+The entries $x_1, \ldots, x_n$ of a vector are an indexed family of numbers,
+with index set $\{1, \ldots, n\}$.
+The functions $f_\theta$, one for each parameter value $\theta$ in a parameter set,
+are an indexed family of functions.
+
+:::

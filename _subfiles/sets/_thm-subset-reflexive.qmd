@@ -1,0 +1,13 @@
+:::{#thm-subset-reflexive}
+#### Every set is a subset of itself
+
+For every set $A$, $A \subseteq A$.
+
+:::
+
+::: proof
+
+Every element of $A$ is an element of $A$,
+which is @def-subset with $B = A$.
+
+:::

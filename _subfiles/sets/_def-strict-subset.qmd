@@ -1,0 +1,28 @@
+:::{#def-strict-subset}
+#### Strict subset (proper subset)
+
+A [set](#def-set) $A$ is a **strict subset**
+(also called a **proper subset**)
+of a set $B$,
+written $A \subsetneq B$,
+if $A$ is a [subset](#def-subset) of $B$
+and $A \neq B$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-subset-symbol}
+#### The symbol $\subset$
+
+Sources disagree about the symbol $\subset$:
+some use it for "subset" ($\subseteq$),
+and others for "strict subset" ($\subsetneq$)
+[@wikipedia_subset].
+For example, $\set{1, 2} \subset \set{1, 2}$ is true in the first reading,
+because $\set{1, 2} \subseteq \set{1, 2}$,
+and false in the second,
+because the two sets are equal.
+These notes avoid $\subset$ and write $\subseteq$ or $\subsetneq$.
+
+:::

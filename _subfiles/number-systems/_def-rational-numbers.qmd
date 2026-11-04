@@ -1,0 +1,12 @@
+:::{#def-rational-numbers}
+#### Rational numbers
+
+A **rational number**
+[@wikipedia_rational_number]
+is a number that can be written as a fraction $\frac{a}{b}$,
+where $a$ and $b$ are integers (@def-integers) and $b \ne 0$.
+The set of rational numbers is written $\mathbb{Q}$:
+
+$$\mathbb{Q} \eqdef \cb{\frac{a}{b} : a \in \mathbb{Z},\ b \in \mathbb{Z},\ b \ne 0}$$
+
+:::
