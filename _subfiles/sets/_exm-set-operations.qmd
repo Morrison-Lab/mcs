@@ -1,0 +1,12 @@
+:::{#exm-set-operations}
+#### Combining sets of die rolls
+
+Let $A = \set{2, 4, 6}$ (the even rolls) and $B = \set{1, 2, 3}$ (the rolls of at most 3).
+Then:
+
+- $A \cup B = \set{1, 2, 3, 4, 6}$, the rolls that are even or at most 3;
+- $A \cap B = \set{2}$, the only roll that is both;
+- $A \setminus B = \set{4, 6}$, the even rolls greater than 3;
+- $\set{2, 4, 6} \cap \set{1, 3, 5} = \emptyset$: no roll is both even and odd.
+
+:::

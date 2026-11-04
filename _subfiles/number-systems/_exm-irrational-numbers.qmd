@@ -1,0 +1,11 @@
+:::{#exm-irrational-numbers}
+#### Irrational numbers
+
+- $\sqrt{2} = 1.41421\ldots$, the [square root](algebra.qmd#def-square-root) of $2$, is irrational:
+  no fraction of integers $\frac{a}{b}$ squares to $2$
+  [@wikipedia_square_root_of_2].
+- $\pi = 3.14159\ldots$ is irrational
+  [@wikipedia_proof_that_pi_is_irrational].
+- $1.5$ is not irrational, because $1.5 = \frac{3}{2}$ is rational.
+
+:::

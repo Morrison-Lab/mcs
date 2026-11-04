@@ -83,7 +83,7 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/sets/_def-vacuous-truth.qmd >}}
+{{< include ../_subfiles/sets/_def-vacuous-truth.qmd >}}
 
 # Counterexamples {#sec-counterexamples}
 

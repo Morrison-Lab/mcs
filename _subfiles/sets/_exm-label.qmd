@@ -1,0 +1,9 @@
+::: {#exm-label}
+
+#### Labels
+
+The numbers $1, 2, 3$ can label three students in a class list.
+Then "student 2" refers to one particular student.
+The letters $A$ and $B$ can label two sets.
+
+:::

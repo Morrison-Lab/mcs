@@ -1,0 +1,12 @@
+:::{#exm-strict-subset-superset}
+#### Strict subsets and supersets of die rolls
+
+For the even rolls $A = \set{2, 4, 6}$
+and the possible rolls $B = \set{1, 2, 3, 4, 5, 6}$:
+
+- $A \subsetneq B$, because $A \subseteq B$ (@exm-subset) and $1 \in B$ but $1 \notin A$, so $A \neq B$;
+- $B \supseteq A$ and $B \supsetneq A$, for the same reasons;
+- $B \subseteq B$, but $B$ is not a strict subset of itself, because $B = B$;
+  likewise $B \supseteq B$, but $B$ is not a strict superset of itself, because $B = B$.
+
+:::

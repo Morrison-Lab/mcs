@@ -1,0 +1,8 @@
+:::{#def-nonnegative-integers}
+#### Non-negative integers
+
+The **non-negative integers** are the natural numbers (@def-natural-numbers) together with $0$:
+
+$$\Nat_0 \eqdef \cb{0, 1, 2, 3, \ldots} = \Nat \cup \cb{0}$$
+
+:::

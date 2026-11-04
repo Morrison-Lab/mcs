@@ -1,0 +1,26 @@
+:::{#def-real-numbers}
+#### Real numbers
+
+A **real number**
+[@wikipedia_real_number]
+is a number that can be written as a decimal expansion:
+an integer part, followed by a decimal point
+and a finite or infinite list of decimal places after it.
+Equivalently, the real numbers are the points on the number line.
+The set of real numbers is written $\reals$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-real-numbers-working-definition}
+#### A working definition
+
+@def-real-numbers is a working definition, not a construction:
+it does not say what an infinite decimal expansion is,
+or how to add or multiply two of them.
+@rudin1976principles [Appendix to Chapter 1] constructs the real numbers rigorously.
+Some real numbers have two decimal expansions:
+for example, $0.999\ldots$ and $1.000\ldots$ are the same real number, $1$.
+
+:::

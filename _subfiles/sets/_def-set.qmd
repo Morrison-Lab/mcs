@@ -1,0 +1,27 @@
+:::{#def-set}
+#### Set
+
+A **set**
+[@wikipedia_set_mathematics]
+is a collection of distinct objects,
+called its elements.
+We write $a \in A$ when $a$ is an element of the set $A$,
+and $a \notin A$ when it is not.
+Two sets are equal when they have exactly the same elements.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-naive-set}
+#### Naive and formal set theory
+
+@def-set is the informal ("naive") notion of a set,
+which is all these notes need.
+Formal set theory states axioms for sets instead
+[@wikipedia_set_mathematics].
+For example, the last sentence of @def-set,
+that two sets are equal when they have exactly the same elements,
+is one of those axioms, the *axiom of extensionality*.
+
+:::

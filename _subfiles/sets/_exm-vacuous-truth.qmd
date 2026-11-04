@@ -1,0 +1,9 @@
+:::{#exm-vacuous-truth}
+#### Every impossible die roll is even
+
+The set of die rolls greater than 6 is $\emptyset$ (@exm-empty-set).
+So "every die roll greater than 6 is even" is vacuously true,
+and so is "every die roll greater than 6 is odd":
+there is no such roll to fail either statement.
+
+:::

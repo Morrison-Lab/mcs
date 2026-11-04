@@ -1,0 +1,14 @@
+:::{#exm-collection}
+#### The collection of all subsets of a two-element set
+
+The subsets of $\set{1, 2}$ are $\emptyset$, $\set{1}$, $\set{2}$, and $\set{1, 2}$
+(@thm-empty-subset and @thm-subset-reflexive give the first and the last),
+so the collection of all subsets of $\set{1, 2}$ is
+
+$$\set{\emptyset, \set{1}, \set{2}, \set{1, 2}}$$
+
+It has four elements, each of them a set.
+The collection $\set{\emptyset}$ has one element, the empty set,
+so it is not equal to $\emptyset$, which has none.
+
+:::
