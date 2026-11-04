@@ -22,11 +22,6 @@ or of all real numbers on one side of a single bound,
 or all of $\reals$.
 The bounds $a$ and $b$ that define the interval are its **endpoints**.
 
-A square bracket means the endpoint belongs to the interval,
-and a parenthesis means it does not.
-The symbols $\infty$ and $-\infty$ are not real numbers,
-so they always get a parenthesis.
-
 :::
 
 {{< slidebreak >}}

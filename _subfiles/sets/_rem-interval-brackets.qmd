@@ -1,0 +1,9 @@
+:::{#rem-interval-brackets .remark}
+#### Brackets and parentheses in interval notation
+
+In the notation for an [interval](#def-interval), a bracket marks an [endpoint](#def-interval) that belongs to the interval,
+while a parenthesis marks an endpoint that is excluded.
+The symbols $\infty$, $-\infty$ denote no [real number](number-systems.qmd#def-real-numbers),
+so they always get a parenthesis.
+
+:::

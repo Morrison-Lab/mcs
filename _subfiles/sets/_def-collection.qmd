@@ -1,5 +1,5 @@
 :::{#def-collection}
-#### Collection of sets (family of sets)
+#### Collection of sets, family of sets
 
 A **collection of sets**
 (also called a **family of sets**)
