@@ -25,3 +25,4 @@ jobs:
       paths-ignore: |
         _extensions/**
         mds/**
+        _subfiles/**
