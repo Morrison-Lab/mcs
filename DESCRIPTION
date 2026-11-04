@@ -22,4 +22,8 @@ Suggests:
     devtools
 VignetteBuilder: knitr
 Imports: 
-    dplyr
+    dplyr,
+    ggplot2,
+    htmltools,
+    plotly,
+    tibble
