@@ -6,7 +6,7 @@ What follows from what, and how to write it down
 
 Published
 
-Last modified: 2026-11-03 16:39:06 (PST)
+Last modified: 2026-11-03 21:55:05 (PST)
 
 > **NOTE:**
 >
@@ -36,7 +36,7 @@ Last modified: 2026-11-03 16:39:06 (PST)
 
 > **NOTE:**
 >
-> **Definition 1 (Argument)** An **argument** is a list of propositions ([Definition: Proposition (statement)](../chapters/propositional-logic.llms.md#def-proposition)), called its premises, together with one more proposition, called its conclusion. An argument is written with “so” or $\therefore$ before its conclusion.
+> **Definition 1 (Argument)** An **argument** is a list of propositions ([Definition: Proposition, statement](../chapters/propositional-logic.llms.md#def-proposition)), called its premises, together with one more proposition, called its conclusion. An argument is written with “so” or $\therefore$ before its conclusion.
 
 > **NOTE:**
 >
@@ -44,7 +44,7 @@ Last modified: 2026-11-03 16:39:06 (PST)
 
 > **NOTE:**
 >
-> **Definition 2 (Logical entailment (logical consequence, deductive consequence))** Propositions or predicates $P_1, \ldots, P_n$ ([Definition: Proposition (statement)](../chapters/propositional-logic.llms.md#def-proposition), [Definition: Predicate](../chapters/propositional-logic.llms.md#def-predicate)) **logically entail** ([Wikipedia contributors 2026c](#ref-wikipedia_logical_consequence)) a proposition or predicate $Q$ when every choice of values for their variables that makes all of $P_1, \ldots, P_n$ true also makes $Q$ true. Then $Q$ is a **logical consequence**, or **deductive consequence**, of $P_1, \ldots, P_n$.
+> **Definition 2 (Logical entailment (logical consequence, deductive consequence))** Propositions or predicates $P_1, \ldots, P_n$ ([Definition: Proposition, statement](../chapters/propositional-logic.llms.md#def-proposition), [Definition: Predicate](../chapters/propositional-logic.llms.md#def-predicate)) **logically entail** ([Wikipedia contributors 2026c](#ref-wikipedia_logical_consequence)) a proposition or predicate $Q$ when every choice of values for their variables that makes all of $P_1, \ldots, P_n$ true also makes $Q$ true. Then $Q$ is a **logical consequence**, or **deductive consequence**, of $P_1, \ldots, P_n$.
 
 > **NOTE:**
 >
@@ -192,7 +192,7 @@ Last modified: 2026-11-03 16:39:06 (PST)
 
 > **NOTE:**
 >
-> **Definition 10 (Proof)** A **proof** ([Wikipedia contributors 2026d](#ref-wikipedia_mathematical_proof)) of a proposition ([Definition: Proposition (statement)](../chapters/propositional-logic.llms.md#def-proposition)) is a finite list of statements that ends with that proposition, in which each statement is
+> **Definition 10 (Proof)** A **proof** ([Wikipedia contributors 2026d](#ref-wikipedia_mathematical_proof)) of a proposition ([Definition: Proposition, statement](../chapters/propositional-logic.llms.md#def-proposition)) is a finite list of statements that ends with that proposition, in which each statement is
 >
 > - an assumption,
 > - a definition,

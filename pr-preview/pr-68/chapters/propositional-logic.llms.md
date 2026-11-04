@@ -6,7 +6,7 @@ Propositions, connectives, and conditionals
 
 Published
 
-Last modified: 2026-11-03 16:39:06 (PST)
+Last modified: 2026-11-03 21:55:05 (PST)
 
 > **NOTE:**
 >
@@ -46,7 +46,7 @@ Last modified: 2026-11-03 16:39:06 (PST)
 
 > **NOTE:**
 >
-> **Definition 1 (Proposition (statement))** A **proposition** ([Wikipedia contributors 2026j](#ref-wikipedia_proposition)), or **statement**, is a declarative sentence that is either true or false.
+> **Definition 1 (Proposition, statement)** A **proposition**, or **statement**, is a declarative sentence that is either true or false ([Wikipedia contributors 2026j](#ref-wikipedia_proposition)).
 
 > **NOTE:**
 >
@@ -336,7 +336,7 @@ Last modified: 2026-11-03 16:39:06 (PST)
 
 # Definitions on this page
 
-- [Definition 1 (Proposition (statement))](#def-proposition)
+- [Definition 1 (Proposition, statement)](#def-proposition)
 - [Definition 2 (Predicate)](#def-predicate)
 - [Definition 3 (Logical connective)](#def-logical-connective)
 - [Definition 4 (Not)](#def-not)
