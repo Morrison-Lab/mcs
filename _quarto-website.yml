@@ -104,8 +104,6 @@ website:
             href: growth-rates.qmd
           - text: "Induction"
             href: induction.qmd
-          - text: "Notation"
-            href: notation.qmd
           - text: "Relations"
             href: relations.qmd
     right:
@@ -164,7 +162,6 @@ website:
         contents:
           - growth-rates.qmd
           - induction.qmd
-          - notation.qmd
           - relations.qmd
 
 callouty-theorem:
