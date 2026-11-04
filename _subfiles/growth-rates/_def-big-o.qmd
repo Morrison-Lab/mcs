@@ -1,0 +1,19 @@
+:::{#def-big-o}
+#### Big-O
+
+Let $f$ and $g$ be [functions](functions.qmd#def-function) from the [natural numbers](number-systems.qmd#def-natural-numbers) to the [real numbers](number-systems.qmd#def-real-numbers).
+Then $f(n)$ is **big-O** of $g(n)$
+[@wikipedia_big_o_notation],
+written $f(n) = O(g(n))$,
+when there exist a [real number](number-systems.qmd#def-real-numbers) $c > 0$ and a [natural number](number-systems.qmd#def-natural-numbers) $N$
+such that, for every natural number $n \ge N$,
+$$
+|f(n)| \le c \, |g(n)|.
+$$
+In words, from some point $N$ on,
+the [absolute value](number-systems.qmd#def-absolute-value) of $f(n)$
+is at most a fixed multiple $c$ of the absolute value of $g(n)$.
+The "there exist" is an [existential quantifier](proof-writing.qmd#def-existential-quantifier),
+and the "for every" is a [universal quantifier](proof-writing.qmd#def-universal-quantifier).
+
+:::
