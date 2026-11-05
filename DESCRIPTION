@@ -19,7 +19,11 @@ Suggests:
     rmarkdown,
     spelling,
     usethis,
-    devtools
+    devtools,
+    ggplot2,
+    htmltools,
+    plotly,
+    tibble
 VignetteBuilder: knitr
-Imports: 
+Imports:
     dplyr
