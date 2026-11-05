@@ -11,7 +11,7 @@ $$
 |f(n)| \le c \, |g(n)|.
 $$
 In words, from some point $N$ on,
-the [absolute value](number-systems.qmd#def-absolute-value) of $f(n)$
+the [absolute value](algebra.qmd#def-absolute-value) of $f(n)$
 is at most a fixed multiple $c$ of the absolute value of $g(n)$.
 The "there exist" is an [existential quantifier](proof-writing.qmd#def-existential-quantifier),
 and the "for every" is a [universal quantifier](proof-writing.qmd#def-universal-quantifier).
