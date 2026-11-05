@@ -1,6 +1,0 @@
-::: {#def-disproof}
-#### Disproof
-
-A **disproof** of a proposition $P$ is a proof (@def-proof) of its negation, $\neg P$ (@def-not).
-
-:::
