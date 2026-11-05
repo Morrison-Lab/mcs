@@ -6,7 +6,7 @@ Elements, subsets, products and operations
 
 Published
 
-Last modified: 2026-11-04 22:27:55 (PST)
+Last modified: 2026-11-04 23:06:06 (PST)
 
 > **NOTE:**
 >
@@ -48,7 +48,7 @@ Last modified: 2026-11-04 22:27:55 (PST)
 
 > **NOTE:**
 >
-> **Definition 2 (Roster notation)** Writing a set ([Definition 1](#def-set)) by listing its elements between braces, as in ${\mathopen{}\left\{1, 2, 3\right\}\mathclose{}}$, is called **roster notation** ([Wikipedia contributors 2026n](#ref-wikipedia_set_mathematics)). An ellipsis, “$\ldots$”, can stand for elements that follow a clear pattern, as in ${\mathopen{}\left\{10, 20, 30, \ldots, 90\right\}\mathclose{}}$.
+> **Definition 2 (Roster notation)** Writing a [set](#def-set) by listing its elements between braces, as in ${\mathopen{}\left\{1, 2, 3\right\}\mathclose{}}$, is called **roster notation** ([Wikipedia contributors 2026n](#ref-wikipedia_set_mathematics)). An ellipsis, “$\ldots$”, can stand for elements that follow a clear pattern, as in ${\mathopen{}\left\{10, 20, 30, \ldots, 90\right\}\mathclose{}}$.
 
 > **NOTE:**
 >
@@ -125,7 +125,7 @@ Last modified: 2026-11-04 22:27:55 (PST)
 
 > **NOTE:**
 >
-> **Definition 7 (Set-builder notation with an expression)** For a set $A$ and an expression $f(x)$ that has a value for each element $x$ of $A$, the notation ${\mathopen{}\left\{f(x) : x \in A\right\}\mathclose{}}$ denotes the set of the values $f(x)$ for $x \in A$ ([Wikipedia contributors 2026o](#ref-wikipedia_set_builder_notation)). That is, an object $y$ is an element of ${\mathopen{}\left\{f(x) : x \in A\right\}\mathclose{}}$ when $y = f(x)$ for some $x \in A$.
+> **Definition 7 (Set-builder notation with an expression)** For a [set](#def-set) $A$ and a rule $f(x)$ that gives an object for each element $x$ of $A$, the notation ${\mathopen{}\left\{f(x) : x \in A\right\}\mathclose{}}$ stands for the set of the objects $f(x)$ for $x \in A$ ([Wikipedia contributors 2026o](#ref-wikipedia_set_builder_notation)). That is, an object $y$ is an element of ${\mathopen{}\left\{f(x) : x \in A\right\}\mathclose{}}$ when $y = f(x)$ for some $x \in A$.
 
 > **NOTE:**
 >
@@ -273,9 +273,9 @@ Last modified: 2026-11-04 22:27:55 (PST)
 
 > **NOTE:**
 >
-> **Definition 15 (Power set)** The **power set** of a set $A$, written $\mathcal{P}(A)$, is the set of all subsets ([Definition 13](#def-subset)) of $A$ ([Wikipedia contributors 2026l](#ref-wikipedia_power_set)):
+> **Definition 15 (Power set)** The **power set** ([Wikipedia contributors 2026l](#ref-wikipedia_power_set)) of a [set](#def-set) $A$, written ${\mathcal{P}\mathopen{}\left(A\right)\mathclose{}}$, is the set of all [subsets](#def-subset) of $A$:
 >
-> $$\mathcal{P}(A) \stackrel{\text{def}}{=}{\mathopen{}\left\{S : S \subseteq A\right\}\mathclose{}}.$$
+> $${\mathcal{P}\mathopen{}\left(A\right)\mathclose{}} \stackrel{\text{def}}{=}{\mathopen{}\left\{S : S \subseteq A\right\}\mathclose{}}$$
 
 > **NOTE:**
 >
@@ -299,7 +299,7 @@ Last modified: 2026-11-04 22:27:55 (PST)
 
 > **NOTE:**
 >
-> **Definition 17 (Tuple)** For a natural number $n$, an $n$-tuple $(a_1, a_2, \ldots, a_n)$ is a list of $n$ objects in order ([Wikipedia contributors 2026q](#ref-wikipedia_tuple)). Two $n$-tuples are equal when their entries are equal in each position. A $2$-tuple is an ordered pair ([Definition 16](#def-ordered-pair)).
+> **Definition 17 (Tuple)** For a [natural number](../chapters/sets.llms.md#def-natural-numbers) $n$, an $n$-tuple ([Wikipedia contributors 2026q](#ref-wikipedia_tuple)) $(a_1, a_2, \ldots, a_n)$ is a list of $n$ objects in order. Two $n$-tuples are equal when their entries are equal in each position.
 
 > **NOTE:**
 >
@@ -316,11 +316,9 @@ Last modified: 2026-11-04 22:27:55 (PST)
 
 > **NOTE:**
 >
-> **Definition 19 (Cartesian product of several sets)** For a natural number $n$ and sets $A_1, A_2, \ldots, A_n$, the **Cartesian product** $A_1 \times A_2 \times \cdots \times A_n$ is the set of $n$-tuples ([Definition 17](#def-tuple)) whose $i$th entry is in $A_i$ for each $i$ ([Wikipedia contributors 2026c](#ref-wikipedia_cartesian_product)):
+> **Definition 19 (Cartesian product of several sets)** For a [natural number](../chapters/sets.llms.md#def-natural-numbers) $n$ and [sets](#def-set) $A_1, A_2, \ldots, A_n$, the **Cartesian product** ([Wikipedia contributors 2026c](#ref-wikipedia_cartesian_product)) $A_1 \times A_2 \times \cdots \times A_n$ is the [set](#def-set) of $n$-[tuples](#def-tuple) whose $i$th entry is in $A_i$ for each $i$:
 >
-> $$A_1 \times \cdots \times A_n \stackrel{\text{def}}{=}{\mathopen{}\left\{(a_1, \ldots, a_n) : a_i \in A_i \text{ for each } i\right\}\mathclose{}}.$$
->
-> For $n = 2$ this is [Definition 18](#def-cartesian-product).
+> $$A_1 \times \cdots \times A_n \stackrel{\text{def}}{=}{\mathopen{}\left\{(a_1, \ldots, a_n) : a_i \in A_i \text{ for each } i\right\}\mathclose{}}$$
 
 > **NOTE:**
 >
