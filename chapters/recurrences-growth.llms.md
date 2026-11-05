@@ -6,7 +6,7 @@ Solving recurrence relations, running times, and big-O notation
 
 Published
 
-Last modified: 2026-11-04 18:53:59 (PST)
+Last modified: 2026-11-04 19:04:53 (PST)
 
 > **NOTE:**
 >
@@ -18,7 +18,7 @@ Last modified: 2026-11-04 18:53:59 (PST)
 
 > **NOTE:**
 >
-> **Exercise 1 (Double and add a power of 2)** A sequence ([Definition: Sequence](https://morrison-lab.github.io/mds/functions.html#def-sequence)) starts with $b_0 = 0$, and for every integer ([Definition: Integers](../chapters/direct-proof.llms.md#def-integers)) $n \ge 1$ the term $b_n$ is twice the term before it, plus $2^n$. Find $b_1$, $b_2$, $b_3$, $b_4$ and $b_5$.
+> **Exercise 1 (Double and add a power of 2)** A sequence ([Definition: Sequence](../functions.llms.md#def-sequence)) starts with $b_0 = 0$, and for every integer ([Definition: Integers](../chapters/direct-proof.llms.md#def-integers)) $n \ge 1$ the term $b_n$ is twice the term before it, plus $2^n$. Find $b_1$, $b_2$, $b_3$, $b_4$ and $b_5$.
 
 > **NOTE:**
 >
@@ -56,7 +56,7 @@ Last modified: 2026-11-04 18:53:59 (PST)
 
 > **NOTE:**
 >
-> **Definition 2 (Closed form)** A **closed form** ([Wikipedia contributors 2026b](#ref-wikipedia_closed_form_expression)) for a sequence $a_{n_0}, a_{n_0 + 1}, \ldots$ ([Definition: Sequence](https://morrison-lab.github.io/mds/functions.html#def-sequence)) is a formula for $a_n$ that uses only $n$ and fixed numbers, combined by a fixed number of operations such as addition, multiplication, powers and floors ([Definition: Floor](../chapters/loop-invariants.llms.md#def-floor)), and that uses no other term of the sequence.
+> **Definition 2 (Closed form)** A **closed form** ([Wikipedia contributors 2026b](#ref-wikipedia_closed_form_expression)) for a sequence $a_{n_0}, a_{n_0 + 1}, \ldots$ ([Definition: Sequence](../functions.llms.md#def-sequence)) is a formula for $a_n$ that uses only $n$ and fixed numbers, combined by a fixed number of operations such as addition, multiplication, powers and floors ([Definition: Floor](../chapters/loop-invariants.llms.md#def-floor)), and that uses no other term of the sequence.
 
 > **NOTE:**
 >

@@ -6,7 +6,7 @@ Recursive definitions, recursive programs and proofs about them
 
 Published
 
-Last modified: 2026-11-04 18:53:59 (PST)
+Last modified: 2026-11-04 19:04:53 (PST)
 
 > **NOTE:**
 >
@@ -23,7 +23,7 @@ Last modified: 2026-11-04 18:53:59 (PST)
 
 > **NOTE:**
 >
-> **Exercise 1 (Double and subtract one)** A sequence ([Definition: Sequence](https://morrison-lab.github.io/mds/functions.html#def-sequence)) starts with $a_0 = 2$, and each later term is twice the term before it, minus 1. Find $a_1$, $a_2$, $a_3$, $a_4$ and $a_5$.
+> **Exercise 1 (Double and subtract one)** A sequence ([Definition: Sequence](../functions.llms.md#def-sequence)) starts with $a_0 = 2$, and each later term is twice the term before it, minus 1. Find $a_1$, $a_2$, $a_3$, $a_4$ and $a_5$.
 
 > **NOTE:**
 >

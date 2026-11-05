@@ -4,34 +4,34 @@ Code
 
 Published
 
-Last modified: 2026-11-04 18:53:59 (PST)
+Last modified: 2026-11-04 19:04:53 (PST)
 
 > **NOTE:**
 >
-> *Remark*. A [proof by induction](chapters/induction.llms.md#def-proof-by-induction) proves a [proposition](chapters/propositional-logic.llms.md#def-proposition) about every [integer](number-systems.llms.md#def-integers) from some starting integer on. A [sequence](https://morrison-lab.github.io/mds/functions.html#def-sequence) defined by a rule on its earlier [terms](https://morrison-lab.github.io/mds/functions.html#def-sequence-term) is the usual place to use it. This page defines such [sequences](https://morrison-lab.github.io/mds/functions.html#def-sequence), then adds the stronger form, [strong induction](induction.llms.md#def-strong-induction), that they often need.
+> *Remark*. A [proof by induction](chapters/induction.llms.md#def-proof-by-induction) proves a [proposition](chapters/propositional-logic.llms.md#def-proposition) about every [integer](number-systems.llms.md#def-integers) from some starting integer on. A [sequence](functions.llms.md#def-sequence) defined by a rule on its earlier [terms](functions.llms.md#def-sequence-term) is the usual place to use it. This page defines such [sequences](functions.llms.md#def-sequence), then adds the stronger form, [strong induction](induction.llms.md#def-strong-induction), that they often need.
 
 # 1 Recursively defined sequences
 
 > **NOTE:**
 >
-> **Definition 1 (Recursively defined sequence)** Let $n_0$ be an [integer](number-systems.llms.md#def-integers) and $m$ a positive integer. A [sequence](https://morrison-lab.github.io/mds/functions.html#def-sequence) $a_{n_0}, a_{n_0 + 1}, \ldots$ is **recursively defined** ([Wikipedia contributors 2026c](#ref-wikipedia_recurrence_relation)) by two things:
+> **Definition 1 (Recursively defined sequence)** Let $n_0$ be an [integer](number-systems.llms.md#def-integers) and $m$ a positive integer. A [sequence](functions.llms.md#def-sequence) $a_{n_0}, a_{n_0 + 1}, \ldots$ is **recursively defined** ([Wikipedia contributors 2026c](#ref-wikipedia_recurrence_relation)) by two things:
 >
-> 1.  **Initial [terms](https://morrison-lab.github.io/mds/functions.html#def-sequence-term):** specific [values](chapters/functional-programming.llms.md#def-value) for $a_{n_0}, \ldots, a_{n_0 + m - 1}$.
+> 1.  **Initial [terms](functions.llms.md#def-sequence-term):** specific [values](functions.llms.md#def-value) for $a_{n_0}, \ldots, a_{n_0 + m - 1}$.
 > 2.  **Recurrence:** a rule that gives $a_n$ from the $m$ entries $a_{n-1}, \ldots, a_{n-m}$ just before it, for every integer $n \ge n_0 + m$.
 >
-> The initial terms and the recurrence together fix every [term](https://morrison-lab.github.io/mds/functions.html#def-sequence-term): the first $m$ entries are given, and each later entry follows from the $m$ entries before it.
+> The initial terms and the recurrence together fix every [term](functions.llms.md#def-sequence-term): the first $m$ entries are given, and each later entry follows from the $m$ entries before it.
 
 > **NOTE:**
 >
-> **Example 1 (Powers of 3)** The [sequence](https://morrison-lab.github.io/mds/functions.html#def-sequence) $a_0, a_1, \ldots$ with initial [term](https://morrison-lab.github.io/mds/functions.html#def-sequence-term) $a_0 = 1$ and recurrence $a_n = 3 a_{n-1}$ for $n \ge 1$ has $m = 1$, and its [terms](https://morrison-lab.github.io/mds/functions.html#def-sequence-term) are $1, 3, 9, 27, \ldots$ A [proof by induction](chapters/induction.llms.md#def-proof-by-induction) shows $a_n = 3^n$ for every [integer](number-systems.llms.md#def-integers) $n \ge 0$, using the recurrence in the inductive step: if $a_{n-1} = 3^{n-1}$, then $a_n = 3 \cdot 3^{n-1} = 3^n$.
+> **Example 1 (Powers of 3)** The [sequence](functions.llms.md#def-sequence) $a_0, a_1, \ldots$ with initial [term](functions.llms.md#def-sequence-term) $a_0 = 1$ and recurrence $a_n = 3 a_{n-1}$ for $n \ge 1$ has $m = 1$, and its [terms](functions.llms.md#def-sequence-term) are $1, 3, 9, 27, \ldots$ A [proof by induction](chapters/induction.llms.md#def-proof-by-induction) shows $a_n = 3^n$ for every [integer](number-systems.llms.md#def-integers) $n \ge 0$, using the recurrence in the inductive step: if $a_{n-1} = 3^{n-1}$, then $a_n = 3 \cdot 3^{n-1} = 3^n$.
 
 > **NOTE:**
 >
-> **Definition 2 (Fibonacci sequence)** The **Fibonacci sequence** $F_1, F_2, \ldots$ ([Wikipedia contributors 2026a](#ref-wikipedia_fibonacci_sequence)) is the [recursively defined sequence](#def-recursive-sequence) with $m = 2$, initial [terms](https://morrison-lab.github.io/mds/functions.html#def-sequence-term) $F_1 = 1$ and $F_2 = 1$, and recurrence $F_n = F_{n-1} + F_{n-2}$ for every [integer](number-systems.llms.md#def-integers) $n \ge 3$.
+> **Definition 2 (Fibonacci sequence)** The **Fibonacci sequence** $F_1, F_2, \ldots$ ([Wikipedia contributors 2026a](#ref-wikipedia_fibonacci_sequence)) is the [recursively defined sequence](#def-recursive-sequence) with $m = 2$, initial [terms](functions.llms.md#def-sequence-term) $F_1 = 1$ and $F_2 = 1$, and recurrence $F_n = F_{n-1} + F_{n-2}$ for every [integer](number-systems.llms.md#def-integers) $n \ge 3$.
 
 > **NOTE:**
 >
-> **Example 2 (The first Fibonacci numbers)** $F_3 = F_2 + F_1 = 1 + 1 = 2$, $F_4 = F_3 + F_2 = 2 + 1 = 3$, $F_5 = F_4 + F_3 = 3 + 2 = 5$, and $F_6 = F_5 + F_4 = 5 + 3 = 8$. So the [sequence](https://morrison-lab.github.io/mds/functions.html#def-sequence) begins $1, 1, 2, 3, 5, 8, \ldots$
+> **Example 2 (The first Fibonacci numbers)** $F_3 = F_2 + F_1 = 1 + 1 = 2$, $F_4 = F_3 + F_2 = 2 + 1 = 3$, $F_5 = F_4 + F_3 = 3 + 2 = 5$, and $F_6 = F_5 + F_4 = 5 + 3 = 8$. So the [sequence](functions.llms.md#def-sequence) begins $1, 1, 2, 3, 5, 8, \ldots$
 
 # 2 Strong induction
 

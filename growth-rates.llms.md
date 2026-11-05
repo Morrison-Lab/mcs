@@ -4,17 +4,17 @@ Code
 
 Published
 
-Last modified: 2026-11-04 18:53:59 (PST)
+Last modified: 2026-11-04 19:04:53 (PST)
 
 > **NOTE:**
 >
-> *Remark*. The running time of an [algorithm](https://morrison-lab.github.io/mds/expressions-algorithms.html#def-algorithm) is a [function](chapters/functional-programming.llms.md#def-function) of the size $n$ of its [input](chapters/functional-programming.llms.md#def-argument). To compare running times, we ignore fixed factors and small inputs. This page defines the notation for that comparison.
+> *Remark*. The running time of an [algorithm](https://morrison-lab.github.io/mds/expressions-algorithms.html#def-algorithm) is a [function](functions.llms.md#def-function) of the size $n$ of its [input](functions.llms.md#def-argument). To compare running times, we ignore fixed factors and small inputs. This page defines the notation for that comparison.
 
 # 1 Upper bounds
 
 > **NOTE:**
 >
-> **Definition 1 (Big-O)** Let $f$ and $g$ be [functions](chapters/functional-programming.llms.md#def-function) from the [natural numbers](number-systems.llms.md#def-natural-numbers) to the [real numbers](number-systems.llms.md#def-real-numbers). Then $f(n)$ is **big-O** of $g(n)$ ([Wikipedia contributors 2026](#ref-wikipedia_big_o_notation)), written $f(n) = O(g(n))$, when there exist a [real number](number-systems.llms.md#def-real-numbers) $c > 0$ and a [natural number](number-systems.llms.md#def-natural-numbers) $N$ such that, for every natural number $n \ge N$, $$|f(n)| \le c \, |g(n)|.$$ In words, from some point $N$ on, the [absolute value](https://morrison-lab.github.io/mds/algebra.html#def-absolute-value) of $f(n)$ is at most a fixed multiple $c$ of the absolute value of $g(n)$. The “there exist” is an [existential quantifier](chapters/predicates-quantifiers.llms.md#def-existential-quantifier), and the “for every” is a [universal quantifier](chapters/predicates-quantifiers.llms.md#def-universal-quantifier).
+> **Definition 1 (Big-O)** Let $f$ and $g$ be [functions](functions.llms.md#def-function) from the [natural numbers](number-systems.llms.md#def-natural-numbers) to the [real numbers](number-systems.llms.md#def-real-numbers). Then $f(n)$ is **big-O** of $g(n)$ ([Wikipedia contributors 2026](#ref-wikipedia_big_o_notation)), written $f(n) = O(g(n))$, when there exist a [real number](number-systems.llms.md#def-real-numbers) $c > 0$ and a [natural number](number-systems.llms.md#def-natural-numbers) $N$ such that, for every natural number $n \ge N$, $$|f(n)| \le c \, |g(n)|.$$ In words, from some point $N$ on, the [absolute value](https://morrison-lab.github.io/mds/algebra.html#def-absolute-value) of $f(n)$ is at most a fixed multiple $c$ of the absolute value of $g(n)$. The “there exist” is an [existential quantifier](chapters/predicates-quantifiers.llms.md#def-existential-quantifier), and the “for every” is a [universal quantifier](chapters/predicates-quantifiers.llms.md#def-universal-quantifier).
 
 > **NOTE:**
 >
@@ -41,7 +41,7 @@ Last modified: 2026-11-04 18:53:59 (PST)
 
 > **NOTE:**
 >
-> **Definition 2 (Big-Omega)** Let $f$ and $g$ be [functions](chapters/functional-programming.llms.md#def-function) from the [natural numbers](number-systems.llms.md#def-natural-numbers) to the [real numbers](number-systems.llms.md#def-real-numbers). Then $f(n)$ is **big-Omega** of $g(n)$ ([Wikipedia contributors 2026](#ref-wikipedia_big_o_notation)), written $f(n) = \Omega(g(n))$, when there exist a [real number](number-systems.llms.md#def-real-numbers) $c > 0$ and a [natural number](number-systems.llms.md#def-natural-numbers) $N$ such that, for every natural number $n \ge N$, $$|f(n)| \ge c \, |g(n)|.$$ In words, from some point $N$ on, the [absolute value](https://morrison-lab.github.io/mds/algebra.html#def-absolute-value) of $f(n)$ is at least a fixed positive multiple $c$ of the absolute value of $g(n)$. Dividing by $c$ shows that $f(n) = \Omega(g(n))$ exactly when $g(n) = O(f(n))$ in the sense of [Definition 1](#def-big-o).
+> **Definition 2 (Big-Omega)** Let $f$ and $g$ be [functions](functions.llms.md#def-function) from the [natural numbers](number-systems.llms.md#def-natural-numbers) to the [real numbers](number-systems.llms.md#def-real-numbers). Then $f(n)$ is **big-Omega** of $g(n)$ ([Wikipedia contributors 2026](#ref-wikipedia_big_o_notation)), written $f(n) = \Omega(g(n))$, when there exist a [real number](number-systems.llms.md#def-real-numbers) $c > 0$ and a [natural number](number-systems.llms.md#def-natural-numbers) $N$ such that, for every natural number $n \ge N$, $$|f(n)| \ge c \, |g(n)|.$$ In words, from some point $N$ on, the [absolute value](https://morrison-lab.github.io/mds/algebra.html#def-absolute-value) of $f(n)$ is at least a fixed positive multiple $c$ of the absolute value of $g(n)$. Dividing by $c$ shows that $f(n) = \Omega(g(n))$ exactly when $g(n) = O(f(n))$ in the sense of [Definition 1](#def-big-o).
 
 > **NOTE:**
 >
@@ -65,7 +65,7 @@ Last modified: 2026-11-04 18:53:59 (PST)
 
 > **NOTE:**
 >
-> **Definition 3 (Big-Theta)** Let $f$ and $g$ be [functions](chapters/functional-programming.llms.md#def-function) from the [natural numbers](number-systems.llms.md#def-natural-numbers) to the [real numbers](number-systems.llms.md#def-real-numbers). Then $f(n)$ is **big-Theta** of $g(n)$ ([Wikipedia contributors 2026](#ref-wikipedia_big_o_notation)), written $f(n) = \Theta(g(n))$, when both $f(n) = O(g(n))$ ([big-O](#def-big-o)) and $f(n) = \Omega(g(n))$ ([big-Omega](#def-big-omega)). In words, $f(n)$ and $g(n)$ are within fixed multiples of each other, from some point on.
+> **Definition 3 (Big-Theta)** Let $f$ and $g$ be [functions](functions.llms.md#def-function) from the [natural numbers](number-systems.llms.md#def-natural-numbers) to the [real numbers](number-systems.llms.md#def-real-numbers). Then $f(n)$ is **big-Theta** of $g(n)$ ([Wikipedia contributors 2026](#ref-wikipedia_big_o_notation)), written $f(n) = \Theta(g(n))$, when both $f(n) = O(g(n))$ ([big-O](#def-big-o)) and $f(n) = \Omega(g(n))$ ([big-Omega](#def-big-omega)). In words, $f(n)$ and $g(n)$ are within fixed multiples of each other, from some point on.
 
 > **NOTE:**
 >

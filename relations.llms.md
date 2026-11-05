@@ -4,39 +4,39 @@ Code
 
 Published
 
-Last modified: 2026-11-04 18:53:59 (PST)
+Last modified: 2026-11-04 19:04:53 (PST)
 
 > **NOTE:**
 >
-> *Remark*. A [relation](chapters/relations.llms.md#def-relation) says which pairs of elements of a [set](sets.llms.md#def-set) are related. This page defines the properties that make a relation behave like equality, and the groups of elements that such a relation puts together.
+> *Remark*. A [relation](functions.llms.md#def-relation) says which pairs of elements of a [set](sets.llms.md#def-set) are related. This page defines the properties that make a relation behave like equality, and the groups of elements that such a relation puts together.
 
 # 1 Properties of relations
 
 > **NOTE:**
 >
-> **Definition 1 (Reflexive relation)** Let $\sim$ be a [relation](chapters/relations.llms.md#def-relation) on a [set](sets.llms.md#def-set) $S$. The relation $\sim$ is **reflexive** ([Wikipedia contributors 2026c](#ref-wikipedia_reflexive_relation)) if $a \sim a$ for every $a \in S$.
+> **Definition 1 (Reflexive relation)** Let $\sim$ be a [relation](functions.llms.md#def-relation) on a [set](sets.llms.md#def-set) $S$. The relation $\sim$ is **reflexive** ([Wikipedia contributors 2026c](#ref-wikipedia_reflexive_relation)) if $a \sim a$ for every $a \in S$.
 
 > **NOTE:**
 >
-> **Example 1 (Reflexive and non-reflexive relations on the real numbers)** On $\mathbb{R}$, the [relation](chapters/relations.llms.md#def-relation) $=$ is [reflexive](#def-reflexive), since $a = a$ for every [real number](number-systems.llms.md#def-real-numbers) $a$. The relation $\le$ is also reflexive, since $a \le a$ for every real number $a$. The relation $<$ is not reflexive, since $2 < 2$ is false.
+> **Example 1 (Reflexive and non-reflexive relations on the real numbers)** On $\mathbb{R}$, the [relation](functions.llms.md#def-relation) $=$ is [reflexive](#def-reflexive), since $a = a$ for every [real number](number-systems.llms.md#def-real-numbers) $a$. The relation $\le$ is also reflexive, since $a \le a$ for every real number $a$. The relation $<$ is not reflexive, since $2 < 2$ is false.
 
 > **NOTE:**
 >
-> **Definition 2 (Symmetric relation)** Let $\sim$ be a [relation](chapters/relations.llms.md#def-relation) on a [set](sets.llms.md#def-set) $S$. The relation $\sim$ is **symmetric** ([Wikipedia contributors 2026d](#ref-wikipedia_symmetric_relation)) if, [for all](chapters/predicates-quantifiers.llms.md#def-universal-quantifier) $a, b \in S$, $a \sim b$ [implies](chapters/propositional-logic.llms.md#def-implies) $b \sim a$.
+> **Definition 2 (Symmetric relation)** Let $\sim$ be a [relation](functions.llms.md#def-relation) on a [set](sets.llms.md#def-set) $S$. The relation $\sim$ is **symmetric** ([Wikipedia contributors 2026d](#ref-wikipedia_symmetric_relation)) if, [for all](chapters/predicates-quantifiers.llms.md#def-universal-quantifier) $a, b \in S$, $a \sim b$ [implies](chapters/propositional-logic.llms.md#def-implies) $b \sim a$.
 
 > **NOTE:**
 >
-> **Example 2 (Symmetric and non-symmetric relations on the real numbers)** On $\mathbb{R}$, the [relation](chapters/relations.llms.md#def-relation) $=$ is [symmetric](#def-symmetric-relation): whenever $a = b$, also $b = a$. The relation $\le$ is not symmetric, since $2 \le 5$ is true but $5 \le 2$ is false.
+> **Example 2 (Symmetric and non-symmetric relations on the real numbers)** On $\mathbb{R}$, the [relation](functions.llms.md#def-relation) $=$ is [symmetric](#def-symmetric-relation): whenever $a = b$, also $b = a$. The relation $\le$ is not symmetric, since $2 \le 5$ is true but $5 \le 2$ is false.
 
 # 2 Equivalence relations
 
 > **NOTE:**
 >
-> **Definition 3 (Equivalence relation)** Let $\sim$ be a [relation](chapters/relations.llms.md#def-relation) on a [set](sets.llms.md#def-set) $S$. The relation $\sim$ is an **equivalence relation** ([Wikipedia contributors 2026b](#ref-wikipedia_equivalence_relation)) if it is [reflexive](#def-reflexive), [symmetric](#def-symmetric-relation), and [transitive](chapters/relations.llms.md#def-transitive).
+> **Definition 3 (Equivalence relation)** Let $\sim$ be a [relation](functions.llms.md#def-relation) on a [set](sets.llms.md#def-set) $S$. The relation $\sim$ is an **equivalence relation** ([Wikipedia contributors 2026b](#ref-wikipedia_equivalence_relation)) if it is [reflexive](#def-reflexive), [symmetric](#def-symmetric-relation), and [transitive](chapters/relations.llms.md#def-transitive).
 
 > **NOTE:**
 >
-> **Example 3 (Integers with an even difference)** On the [integers](number-systems.llms.md#def-integers), define the [relation](chapters/relations.llms.md#def-relation) $\sim$ by $a \sim b$ when $a - b$ is [even](number-systems.llms.md#def-even-odd). For example, $7 \sim 3$, since $7 - 3 = 4 = 2 \cdot 2$, but $7 \not\sim 4$, since $7 - 4 = 3$ is [odd](number-systems.llms.md#def-odd). The relation $\sim$ is an [equivalence relation](#def-equivalence-relation).
+> **Example 3 (Integers with an even difference)** On the [integers](number-systems.llms.md#def-integers), define the [relation](functions.llms.md#def-relation) $\sim$ by $a \sim b$ when $a - b$ is [even](number-systems.llms.md#def-even-odd). For example, $7 \sim 3$, since $7 - 3 = 4 = 2 \cdot 2$, but $7 \not\sim 4$, since $7 - 4 = 3$ is [odd](number-systems.llms.md#def-odd). The relation $\sim$ is an [equivalence relation](#def-equivalence-relation).
 >
 > **[Reflexive](#def-reflexive).** For every [integer](number-systems.llms.md#def-integers) $a$, $a - a = 0 = 2 \cdot 0$, so $a \sim a$.
 >

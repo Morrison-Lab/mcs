@@ -6,7 +6,7 @@ Elements, subsets, products and operations
 
 Published
 
-Last modified: 2026-11-04 18:53:59 (PST)
+Last modified: 2026-11-04 19:04:53 (PST)
 
 > **NOTE:**
 >
@@ -148,7 +148,7 @@ Last modified: 2026-11-04 18:53:59 (PST)
 
 > **NOTE:**
 >
-> **Definition 8 (Finite set)** A set $A$ is **finite** ([Wikipedia contributors 2026g](#ref-wikipedia_finite_set)) if it is empty, or if, for some natural number $n$, its elements can be listed as a finite sequence ([Definition: Finite sequence](https://morrison-lab.github.io/mds/functions.html#def-finite-sequence)) $a_1, \ldots, a_n$ in which each element of $A$ appears exactly once.
+> **Definition 8 (Finite set)** A set $A$ is **finite** ([Wikipedia contributors 2026g](#ref-wikipedia_finite_set)) if it is empty, or if, for some natural number $n$, its elements can be listed as a finite sequence ([Definition: Finite sequence](../functions.llms.md#def-finite-sequence)) $a_1, \ldots, a_n$ in which each element of $A$ appears exactly once.
 
 > **NOTE:**
 >
@@ -177,7 +177,7 @@ Last modified: 2026-11-04 18:53:59 (PST)
 
 > **NOTE:**
 >
-> **Definition 11 (Countable set)** A set is **countable** ([Wikipedia contributors 2026e](#ref-wikipedia_countable_set)) if it is finite ([Definition 8](#def-finite-set)), or if its elements can be listed as a sequence ([Definition: Sequence](https://morrison-lab.github.io/mds/functions.html#def-sequence)) $a_1, a_2, a_3, \ldots$ in which every element appears.
+> **Definition 11 (Countable set)** A set is **countable** ([Wikipedia contributors 2026e](#ref-wikipedia_countable_set)) if it is finite ([Definition 8](#def-finite-set)), or if its elements can be listed as a sequence ([Definition: Sequence](../functions.llms.md#def-sequence)) $a_1, a_2, a_3, \ldots$ in which every element appears.
 
 > **NOTE:**
 >

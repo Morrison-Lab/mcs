@@ -4,11 +4,11 @@ Code
 
 Published
 
-Last modified: 2026-11-04 18:53:59 (PST)
+Last modified: 2026-11-04 19:04:53 (PST)
 
 > **NOTE:**
 >
-> *Remark*. Probability and statistics describe events, outcomes, and parameters as sets. This page collects the definitions of sets that the Morrison Lab’s probability and statistics notes build on. The Functions page defines functions between sets, and the Expressions and Algorithms page defines the expressions that write functions down and the algorithms that compute them.
+> *Remark*. Probability and statistics describe events, outcomes, and parameters as sets. This page collects the definitions of sets that the Morrison Lab’s probability and statistics notes build on. The [Functions](functions.llms.md) page defines functions between sets, and the Expressions and Algorithms page defines the expressions that write functions down and the algorithms that compute them.
 
 > **NOTE:**
 >

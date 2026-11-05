@@ -6,7 +6,7 @@ Relations between sets, their properties, equivalence relations, partitions and 
 
 Published
 
-Last modified: 2026-11-04 18:53:59 (PST)
+Last modified: 2026-11-04 19:04:53 (PST)
 
 > **NOTE:**
 >
@@ -650,7 +650,7 @@ Last modified: 2026-11-04 18:53:59 (PST)
 > 1.  **As its graph** ([Halmos 1974, sec. 8](#ref-halmos1974naive), p. 30): a function is a subset of $A \times B$ containing exactly one pair $(a, b)$ for each $a \in A$, where $b = f(a)$, and the statement $f(a) = b$ is notation for $(a, b) \in f$. Under this convention, the codomain $B$ is specified alongside the graph in the declaration $f : A \to B$.
 > 2.  **As a triple** $(A, B, G)$: the function consists of the domain $A$, the codomain $B$, and the graph $G \subseteq A \times B$. This explicit packaging retains the codomain $B$ as part of the function itself, distinguishing functions that have the same graph but different codomains (such as a function mapping into $\mathbb{R}$ versus into integers).
 >
-> For example, the die-doubling function in [Example: Doubling a die roll](https://morrison-lab.github.io/mds/functions.html#exm-function) has the graph of six ordered pairs ${\mathopen{}\left\{(1, 2), (2, 4), (3, 6), (4, 8), (5, 10), (6, 12)\right\}\mathclose{}}$.
+> For example, the die-doubling function in [Example: Doubling a die roll](../functions.llms.md#exm-function) has the graph of six ordered pairs ${\mathopen{}\left\{(1, 2), (2, 4), (3, 6), (4, 8), (5, 10), (6, 12)\right\}\mathclose{}}$.
 >
 > This distinction clarifies what a function is and is not:
 >
