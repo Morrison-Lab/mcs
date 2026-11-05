@@ -11,7 +11,7 @@ $$
 |f(n)| \ge c \, |g(n)|.
 $$
 In words, from some point $N$ on,
-the [absolute value](number-systems.qmd#def-absolute-value) of $f(n)$
+the [absolute value](algebra.qmd#def-absolute-value) of $f(n)$
 is at least a fixed positive multiple $c$ of the absolute value of $g(n)$.
 Dividing by $c$ shows that $f(n) = \Omega(g(n))$
 exactly when $g(n) = O(f(n))$ in the sense of @def-big-o.
