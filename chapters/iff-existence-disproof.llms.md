@@ -6,7 +6,7 @@ If and only if, existence, and disproof
 
 Published
 
-Last modified: 2026-11-05 03:16:57 (PST)
+Last modified: 2026-11-05 08:10:00 (PST)
 
 > **NOTE:**
 >
@@ -47,13 +47,13 @@ Last modified: 2026-11-05 03:16:57 (PST)
 
 > **NOTE:**
 >
-> **Theorem 1 (A biconditional is two conditionals)** For propositions $P$ and $Q$,
+> **Theorem 1 (A biconditional is two conditionals)** For [propositions](../chapters/propositional-logic.llms.md#def-proposition) $P$ and $Q$,
 >
 > $$(P \Leftrightarrow Q) \equiv \mathopen{}\left((P \Rightarrow Q) \land (Q \Rightarrow P)\right)\mathclose{}.$$
 
 > **NOTE:**
 >
-> *Proof*. The fifth and last columns of this truth table ([Definition: Truth table](../chapters/propositional-logic.llms.md#def-truth-table)) match in every row ([Definition: If and only if](../chapters/propositional-logic.llms.md#def-iff), [Definition: Implies](../chapters/propositional-logic.llms.md#def-implies), [Definition: And](../chapters/propositional-logic.llms.md#def-and)):
+> *Proof*. By the definitions of [if and only if](../chapters/propositional-logic.llms.md#def-iff), [implies](../chapters/propositional-logic.llms.md#def-implies) and [and](../chapters/propositional-logic.llms.md#def-and), the [truth table](../chapters/propositional-logic.llms.md#def-truth-table) is:
 >
 > | $P$ | $Q$ | $P \Rightarrow Q$ | $Q \Rightarrow P$ | $(P \Rightarrow Q) \land (Q \Rightarrow P)$ | $P \Leftrightarrow Q$ |
 > |:--:|:--:|:--:|:--:|:--:|:--:|
@@ -62,7 +62,7 @@ Last modified: 2026-11-05 03:16:57 (PST)
 > | F | T | T | F | F | F |
 > | F | F | T | T | T | T |
 >
-> So the two propositions are [logically equivalent](../chapters/equivalence-negation.llms.md#def-logically-equivalent).
+> The last two columns match in every row, so the two [propositions](../chapters/propositional-logic.llms.md#def-proposition) are [logically equivalent](../chapters/equivalence-negation.llms.md#def-logically-equivalent).
 
 > **NOTE:**
 >
@@ -89,11 +89,14 @@ Last modified: 2026-11-05 03:16:57 (PST)
 
 > **NOTE:**
 >
-> **Theorem 2 (A cycle of conditionals)** Let $P_1, P_2, \ldots, P_k$ be propositions. If $P_1 \Rightarrow P_2$, $P_2 \Rightarrow P_3$, $\ldots$, $P_{k-1} \Rightarrow P_k$ and $P_k \Rightarrow P_1$ are all true, then $P_1, \ldots, P_k$ all have the same truth value.
+> **Theorem 2 (A cycle of conditionals)** Let $P_1, P_2, \ldots, P_k$ be [propositions](../chapters/propositional-logic.llms.md#def-proposition). If $P_1 \Rightarrow P_2$, $P_2 \Rightarrow P_3$, $\ldots$, $P_{k-1} \Rightarrow P_k$ and $P_k \Rightarrow P_1$ are all true, then $P_1, \ldots, P_k$ all have the same truth value.
 
 > **NOTE:**
 >
-> *Proof*. Suppose one of the propositions, $P_i$, is true. By modus ponens ([Theorem: Common rules of inference](../chapters/direct-proof.llms.md#thm-inference-rules)), $P_i \Rightarrow P_{i+1}$ makes $P_{i+1}$ true, then $P_{i+1} \Rightarrow P_{i+2}$ makes $P_{i+2}$ true, and so on around the cycle, with $P_k \Rightarrow P_1$ leading from $P_k$ back to $P_1$, until every proposition in the list is true. So either all of $P_1, \ldots, P_k$ are true, or none of them is true, and then all of them are false.
+> *Proof*. There are two cases.
+>
+> - None of $P_1, \ldots, P_k$ is true. Then all of them are false, so they all have the same truth value.
+> - Some $P_i$ is true. By the definition of [implies](../chapters/propositional-logic.llms.md#def-implies), for any $P$ and $Q$, if $P \Rightarrow Q$ and $P$ are both true, then $Q$ is true. So $P_i \Rightarrow P_{i+1}$ makes $P_{i+1}$ true, then $P_{i+1} \Rightarrow P_{i+2}$ makes $P_{i+2}$ true, and so on around the cycle, with $P_k \Rightarrow P_1$ carrying the truth of $P_k$ back to $P_1$. After at most $k - 1$ steps, every [proposition](../chapters/propositional-logic.llms.md#def-proposition) in the list is true.
 
 > **NOTE:**
 >
@@ -123,7 +126,11 @@ Last modified: 2026-11-05 03:16:57 (PST)
 
 > **NOTE:**
 >
-> **Definition 1 (Constructive proof)** A **constructive proof** of a proposition $\exists x \in S,\ P(x)$ ([Definition: Existential quantifier](../chapters/predicates-quantifiers.llms.md#def-existential-quantifier)) names a particular element of $S$ and shows that $P$ is true of it ([Wikipedia contributors 2026](#ref-wikipedia_constructive_proof)). A proposition with several existential quantifiers, such as “there are integers $m$ and $n$ with $m + n = 1$”, gets a constructive proof that names one element for each quantifier.
+> **Definition 1 (Constructive proof)** A **constructive proof** ([Wikipedia contributors 2026](#ref-wikipedia_constructive_proof)) of a [proposition](../chapters/propositional-logic.llms.md#def-proposition) $\exists x \in S,\ P(x)$ with an [existential quantifier](../chapters/predicates-quantifiers.llms.md#def-existential-quantifier) names a particular element of $S$ and shows that $P$ is true of it.
+
+> **NOTE:**
+>
+> *Remark 2* (Several existential quantifiers). A [proposition](../chapters/propositional-logic.llms.md#def-proposition) can open with several [existential quantifiers](../chapters/predicates-quantifiers.llms.md#def-existential-quantifier). A [constructive proof](#def-constructive-proof) of it names one element for each [quantifier](../chapters/predicates-quantifiers.llms.md#def-quantifier). For example, a constructive proof of “there are integers $m$ and $n$ with $m + n = 1$” names one value of $m$ and one of $n$.
 
 > **NOTE:**
 >
@@ -147,7 +154,7 @@ Last modified: 2026-11-05 03:16:57 (PST)
 
 > **NOTE:**
 >
-> **Definition 2 (Non-constructive proof)** A **non-constructive proof** of a proposition $\exists x \in S,\ P(x)$ shows that it is true without naming any element $x$ of $S$ for which $P(x)$ is true ([Wikipedia contributors 2026](#ref-wikipedia_constructive_proof)).
+> **Definition 2 (Non-constructive proof)** A **non-constructive proof** ([Wikipedia contributors 2026](#ref-wikipedia_constructive_proof)) of a [proposition](../chapters/propositional-logic.llms.md#def-proposition) $\exists x \in S,\ P(x)$ shows that it is true without naming any element $x$ of $S$ for which $P(x)$ is true. It is a [proof](../chapters/direct-proof.llms.md#def-proof) that is not a [constructive proof](#def-constructive-proof).
 
 > **NOTE:**
 >
@@ -186,7 +193,7 @@ Last modified: 2026-11-05 03:16:57 (PST)
 
 > **NOTE:**
 >
-> **Definition 3 (Disproof)** A **disproof** of a proposition $P$ is a proof ([Definition: Proof](../chapters/direct-proof.llms.md#def-proof)) of its negation, $\neg P$ ([Definition: Not](../chapters/propositional-logic.llms.md#def-not)).
+> **Definition 3 (Disproof)** A **disproof** of a [proposition](../chapters/propositional-logic.llms.md#def-proposition) $P$ is a [proof](../chapters/direct-proof.llms.md#def-proof) of its [negation](../chapters/propositional-logic.llms.md#def-not), $\neg P$.
 
 > **NOTE:**
 >

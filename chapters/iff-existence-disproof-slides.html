@@ -265,7 +265,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-05 03:16:57 (PST)</p>
+  <p class="date">Last modified: 2026-11-05 08:10:00 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -324,7 +324,7 @@ x^2
 <section class="slide level2">
 
 <div id="thm-biconditional-split" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 1 (A biconditional is two conditionals)</strong></span> For propositions <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>,</p>
+<p><span class="theorem-title"><strong>Theorem 1 (A biconditional is two conditionals)</strong></span> For <a href="../chapters/propositional-logic.html#def-proposition">propositions</a> <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>,</p>
 <p><span class="math display">\[
 (P \Leftrightarrow Q) \equiv \mathopen{}\left((P \Rightarrow Q) \land (Q \Rightarrow P)\right)\mathclose{}.
 \]</span></p>
@@ -360,7 +360,7 @@ Therefore <span class="math inline">\(P\)</span>.</div>
 <section class="slide level2">
 
 <div id="thm-equivalent-cycle" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 2 (A cycle of conditionals)</strong></span> Let <span class="math inline">\(P_1, P_2, \ldots, P_k\)</span> be propositions. If <span class="math inline">\(P_1 \Rightarrow P_2\)</span>, <span class="math inline">\(P_2 \Rightarrow P_3\)</span>, <span class="math inline">\(\ldots\)</span>, <span class="math inline">\(P_{k-1} \Rightarrow P_k\)</span> and <span class="math inline">\(P_k \Rightarrow P_1\)</span> are all true, then <span class="math inline">\(P_1, \ldots, P_k\)</span> all have the same truth value.</p>
+<p><span class="theorem-title"><strong>Theorem 2 (A cycle of conditionals)</strong></span> Let <span class="math inline">\(P_1, P_2, \ldots, P_k\)</span> be <a href="../chapters/propositional-logic.html#def-proposition">propositions</a>. If <span class="math inline">\(P_1 \Rightarrow P_2\)</span>, <span class="math inline">\(P_2 \Rightarrow P_3\)</span>, <span class="math inline">\(\ldots\)</span>, <span class="math inline">\(P_{k-1} \Rightarrow P_k\)</span> and <span class="math inline">\(P_k \Rightarrow P_1\)</span> are all true, then <span class="math inline">\(P_1, \ldots, P_k\)</span> all have the same truth value. <!-- check-term-links: allow --></p>
 </div>
 </section>
 <section class="slide level2">
@@ -401,7 +401,13 @@ Therefore <span class="math inline">\(P\)</span>.</div>
 <section class="slide level2">
 
 <div id="def-constructive-proof" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Constructive proof)</strong></span> A <strong>constructive proof</strong> of a proposition <span class="math inline">\(\exists x \in S,\ P(x)\)</span> (<a href="../chapters/predicates-quantifiers.html#def-existential-quantifier">Definition: Existential quantifier</a>) names a particular element of <span class="math inline">\(S\)</span> and shows that <span class="math inline">\(P\)</span> is true of it <span class="citation" data-cites="wikipedia_constructive_proof">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026</a>)</span>. A proposition with several existential quantifiers, such as “there are integers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> with <span class="math inline">\(m + n = 1\)</span>”, gets a constructive proof that names one element for each quantifier.</p>
+<p><span class="theorem-title"><strong>Definition 1 (Constructive proof)</strong></span> A <strong>constructive proof</strong> <span class="citation" data-cites="wikipedia_constructive_proof">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026</a>)</span> of a <a href="../chapters/propositional-logic.html#def-proposition">proposition</a> <span class="math inline">\(\exists x \in S,\ P(x)\)</span> with an <a href="../chapters/predicates-quantifiers.html#def-existential-quantifier">existential quantifier</a> names a particular element of <span class="math inline">\(S\)</span> and shows that <span class="math inline">\(P\)</span> is true of it.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-constructive-proof-several" class="proof remark">
+<p><span class="proof-title"><em>Remark 2</em> (Several existential quantifiers). </span>A <a href="../chapters/propositional-logic.html#def-proposition">proposition</a> can open with several <a href="../chapters/predicates-quantifiers.html#def-existential-quantifier">existential quantifiers</a>. A <a href="#/def-constructive-proof">constructive proof</a> of it names one element for each <a href="../chapters/predicates-quantifiers.html#def-quantifier">quantifier</a>. For example, a constructive proof of “there are integers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> with <span class="math inline">\(m + n = 1\)</span>” names one value of <span class="math inline">\(m\)</span> and one of <span class="math inline">\(n\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -427,7 +433,7 @@ x - y
 <section class="slide level2">
 
 <div id="def-nonconstructive-proof" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Non-constructive proof)</strong></span> A <strong>non-constructive proof</strong> of a proposition <span class="math inline">\(\exists x \in S,\ P(x)\)</span> shows that it is true without naming any element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span> for which <span class="math inline">\(P(x)\)</span> is true <span class="citation" data-cites="wikipedia_constructive_proof">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026</a>)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 2 (Non-constructive proof)</strong></span> A <strong>non-constructive proof</strong> <span class="citation" data-cites="wikipedia_constructive_proof">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026</a>)</span> of a <a href="../chapters/propositional-logic.html#def-proposition">proposition</a> <span class="math inline">\(\exists x \in S,\ P(x)\)</span> shows that it is true without naming any element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span> for which <span class="math inline">\(P(x)\)</span> is true. It is a <a href="../chapters/direct-proof.html#def-proof">proof</a> that is not a <a href="#/def-constructive-proof">constructive proof</a>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -473,7 +479,7 @@ x^y
 <section class="slide level2">
 
 <div id="def-disproof" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Disproof)</strong></span> A <strong>disproof</strong> of a proposition <span class="math inline">\(P\)</span> is a proof (<a href="../chapters/direct-proof.html#def-proof">Definition: Proof</a>) of its negation, <span class="math inline">\(\neg P\)</span> (<a href="../chapters/propositional-logic.html#def-not">Definition: Not</a>).</p>
+<p><span class="theorem-title"><strong>Definition 3 (Disproof)</strong></span> A <strong>disproof</strong> of a <a href="../chapters/propositional-logic.html#def-proposition">proposition</a> <span class="math inline">\(P\)</span> is a <a href="../chapters/direct-proof.html#def-proof">proof</a> of its <a href="../chapters/propositional-logic.html#def-not">negation</a>, <span class="math inline">\(\neg P\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
