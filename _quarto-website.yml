@@ -110,6 +110,8 @@ website:
             href: number-systems.qmd
           - text: "Sets"
             href: sets.qmd
+          - text: "Functions"
+            href: functions.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mcs
@@ -169,6 +171,7 @@ website:
           - relations.qmd
           - number-systems.qmd
           - sets.qmd
+          - functions.qmd
 
 callouty-theorem:
   thm:
