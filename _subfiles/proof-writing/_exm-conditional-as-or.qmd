@@ -1,0 +1,11 @@
+:::{#exm-conditional-as-or}
+#### "If ..., then ..." as "or"
+<!-- no-figure: a rewording of one sentence; nothing to plot -->
+
+Let $n$ be an [integer](number-systems.qmd#def-integers).
+By [a conditional without the arrow](#cor-conditional-as-or),
+"if $n > 2$, then $n^2 > 4$"
+says the same thing as
+"$n \le 2$, or $n^2 > 4$".
+
+:::
