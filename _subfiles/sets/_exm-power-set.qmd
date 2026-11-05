@@ -1,0 +1,18 @@
+:::{#exm-power-set}
+#### The power set of a two-element set
+<!-- no-figure: a short list of four sets; nothing to plot -->
+
+The [power set](#def-power-set) of $\set{0, 1}$ has four elements:
+
+$$\powerset{\set{0, 1}} = \set{\emptyset, \set{0}, \set{1}, \set{0, 1}}$$
+
+It contains the [empty set](#def-empty-set),
+since the empty set is a [subset](#def-subset) of every [set](#def-set)
+by @thm-empty-subset,
+and it contains $\set{0, 1}$ itself,
+by @thm-subset-reflexive.
+Its elements are [sets](#def-set):
+$\set{0} \in \powerset{\set{0, 1}}$,
+but $0 \notin \powerset{\set{0, 1}}$.
+
+:::

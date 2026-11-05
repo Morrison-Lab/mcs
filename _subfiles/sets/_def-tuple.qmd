@@ -1,0 +1,12 @@
+:::{#def-tuple}
+#### Tuple
+
+For a [natural number](number-systems.qmd#def-natural-numbers) $n$,
+an **$n$-tuple**
+[@wikipedia_tuple]
+$(a_1, a_2, \ldots, a_n)$
+is a list of $n$ objects in order.
+Two $n$-tuples are equal <!-- check-term-links: allow -->
+when their entries are equal in each position.
+
+:::

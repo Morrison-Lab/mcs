@@ -106,6 +106,10 @@ website:
             href: induction.qmd
           - text: "Relations"
             href: relations.qmd
+          - text: "Number Systems"
+            href: number-systems.qmd
+          - text: "Sets"
+            href: sets.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mcs
@@ -163,6 +167,8 @@ website:
           - growth-rates.qmd
           - induction.qmd
           - relations.qmd
+          - number-systems.qmd
+          - sets.qmd
 
 callouty-theorem:
   thm:

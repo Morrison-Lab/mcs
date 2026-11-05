@@ -1,0 +1,40 @@
+:::{#exm-floor}
+#### Floors
+
+- $\floor{2.7} = 2$, by the [definition of the floor](#def-floor).
+- $\floor{3} = 3$,
+  because $3$ is already an [integer](#def-integers).
+- $\floor{-1.5} = -2$,
+  because $-2 \le -1.5 < -1$.
+
+The [graph](functions.qmd#def-graph) of $\floor{x}$ is a staircase:
+each step starts at an integer, with a filled dot,
+and stops before the next integer, at an open dot.
+
+```{r}
+#| code-fold: true
+#| echo: !expr knitr::is_html_output()
+#| message: false
+#| warning: false
+#| fig-alt: >-
+#|   The graph of the floor function from -3 to 3. It is a staircase of
+#|   horizontal steps one unit long. Each step starts with a filled dot at an
+#|   integer k at height k and ends with an open dot at k + 1.
+
+# one step per integer k, from x = k to x = k + 1 at height k
+k <- -3:2
+steps <- tibble::tibble(x = k, xend = k + 1, y = k)
+
+floor_plot <- ggplot2::ggplot(steps) +
+  ggplot2::geom_segment(ggplot2::aes(x = x, xend = xend, y = y, yend = y)) +
+  ggplot2::geom_point(ggplot2::aes(x = x, y = y), size = 2) +
+  ggplot2::geom_point(
+    ggplot2::aes(x = xend, y = y),
+    size = 2, shape = 21, fill = "white"
+  ) +
+  ggplot2::labs(x = "x", y = "floor of x")
+
+floor_plot
+```
+
+:::
