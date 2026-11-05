@@ -104,6 +104,8 @@ website:
             href: growth-rates.qmd
           - text: "Induction"
             href: induction.qmd
+          - text: "Notation"
+            href: notation.qmd
           - text: "Relations"
             href: relations.qmd
           - text: "Number Systems"
@@ -172,6 +174,7 @@ website:
         contents:
           - growth-rates.qmd
           - induction.qmd
+          - notation.qmd
           - relations.qmd
           - number-systems.qmd
           - sets.qmd
