@@ -4,7 +4,8 @@
 
 ## Pages
 
-- [Relations](https://morrison-lab.github.io/mcs/relations.llms.md)
+- [Sets](https://morrison-lab.github.io/mcs/sets.llms.md)
+- [Number Systems](https://morrison-lab.github.io/mcs/number-systems.llms.md)
 - [Math for Computer Science](https://morrison-lab.github.io/mcs/index.llms.md)
 - [Trees](https://morrison-lab.github.io/mcs/chapters/trees.llms.md)
 - [Sets](https://morrison-lab.github.io/mcs/chapters/sets.llms.md)
@@ -27,3 +28,4 @@
 - [WWU CSCI 201 Syllabus](https://morrison-lab.github.io/mcs/chapters/syllabus.llms.md)
 - [Growth Rates](https://morrison-lab.github.io/mcs/growth-rates.llms.md)
 - [Induction and Recursion](https://morrison-lab.github.io/mcs/induction.llms.md)
+- [Relations](https://morrison-lab.github.io/mcs/relations.llms.md)

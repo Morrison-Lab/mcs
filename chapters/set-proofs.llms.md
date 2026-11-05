@@ -6,7 +6,7 @@ Membership, subsets and set equality
 
 Published
 
-Last modified: 2026-11-04 18:42:39 (PST)
+Last modified: 2026-11-04 18:53:59 (PST)
 
 > **NOTE:**
 >
@@ -58,7 +58,7 @@ Last modified: 2026-11-04 18:42:39 (PST)
 
 > **NOTE:**
 >
-> **Exercise 2 (A disk inside a square)** Let $D = {\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x^2 + y^2 \le 1\right\}\mathclose{}}$, the points of the plane at distance at most 1 from the origin. Prove that $D \subseteq [-1, 1] \times [-1, 1]$, where $[-1, 1] = {\mathopen{}\left\{x \in \mathbb{R}: -1 \le x \le 1\right\}\mathclose{}}$ ([Definition: Subset](../chapters/sets.llms.md#def-subset), [Definition: Cartesian product](../chapters/sets.llms.md#def-cartesian-product), [Definition: Closed interval](https://morrison-lab.github.io/mds/sets.html#def-closed-interval)).
+> **Exercise 2 (A disk inside a square)** Let $D = {\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x^2 + y^2 \le 1\right\}\mathclose{}}$, the points of the plane at distance at most 1 from the origin. Prove that $D \subseteq [-1, 1] \times [-1, 1]$, where $[-1, 1] = {\mathopen{}\left\{x \in \mathbb{R}: -1 \le x \le 1\right\}\mathclose{}}$ ([Definition: Subset](../chapters/sets.llms.md#def-subset), [Definition: Cartesian product](../chapters/sets.llms.md#def-cartesian-product), [Definition: Closed interval](../sets.llms.md#def-closed-interval)).
 
 > **NOTE:**
 >

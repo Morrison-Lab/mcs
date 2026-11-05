@@ -6,7 +6,7 @@ Elements, subsets, products and operations
 
 Published
 
-Last modified: 2026-11-04 18:42:39 (PST)
+Last modified: 2026-11-04 18:53:59 (PST)
 
 > **NOTE:**
 >
@@ -188,7 +188,7 @@ Last modified: 2026-11-04 18:42:39 (PST)
 > **Example 7 (Countable and uncountable sets)**  
 >
 > - ${\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}$ is countable, because it is finite.
-> - The [non-negative integers](https://morrison-lab.github.io/mds/number-systems.html#def-nonnegative-integers) ${\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}}$ are countably infinite: the sequence $0, 1, 2, \ldots$ lists them.
+> - The [non-negative integers](../number-systems.llms.md#def-nonnegative-integers) ${\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}}$ are countably infinite: the sequence $0, 1, 2, \ldots$ lists them.
 > - The [integers](../chapters/direct-proof.llms.md#def-integers) are countably infinite too: the sequence $0, 1, -1, 2, -2, 3, -3, \ldots$ lists every one of them.
 
 > **NOTE:**

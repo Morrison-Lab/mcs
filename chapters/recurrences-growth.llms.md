@@ -6,7 +6,7 @@ Solving recurrence relations, running times, and big-O notation
 
 Published
 
-Last modified: 2026-11-04 18:42:39 (PST)
+Last modified: 2026-11-04 18:53:59 (PST)
 
 > **NOTE:**
 >
@@ -151,7 +151,7 @@ Last modified: 2026-11-04 18:42:39 (PST)
 
 > **NOTE:**
 >
-> **Theorem 1 (A closed form for** $b_n = 2 b_{n-1} + 2^n$) Let $b_0, b_1, \ldots$ be the sequence with $b_0 = 0$ and $b_n = 2 b_{n-1} + 2^n$ for every integer $n \ge 1$ ([Example 1](#exm-double-plus-power-sequence)). Then $b_n = n \cdot 2^n$ for every non-negative integer ([Definition: Non-negative integers](https://morrison-lab.github.io/mds/number-systems.html#def-nonnegative-integers)) $n$.
+> **Theorem 1 (A closed form for** $b_n = 2 b_{n-1} + 2^n$) Let $b_0, b_1, \ldots$ be the sequence with $b_0 = 0$ and $b_n = 2 b_{n-1} + 2^n$ for every integer $n \ge 1$ ([Example 1](#exm-double-plus-power-sequence)). Then $b_n = n \cdot 2^n$ for every non-negative integer ([Definition: Non-negative integers](../number-systems.llms.md#def-nonnegative-integers)) $n$.
 
 > **NOTE:**
 >
@@ -175,7 +175,7 @@ Last modified: 2026-11-04 18:42:39 (PST)
 
 > **NOTE:**
 >
-> **Theorem 2 (A closed form for** $e_n = 3 e_{n-1} + 2^n$) Let $e_0, e_1, \ldots$ be the sequence with $e_0 = 1$ and $e_n = 3 e_{n-1} + 2^n$ for every integer $n \ge 1$. Then $e_n = 3^{n+1} - 2^{n+1}$, as guessed in [Exercise 3](#exr-triple-plus-power-check), for every non-negative integer ([Definition: Non-negative integers](https://morrison-lab.github.io/mds/number-systems.html#def-nonnegative-integers)) $n$.
+> **Theorem 2 (A closed form for** $e_n = 3 e_{n-1} + 2^n$) Let $e_0, e_1, \ldots$ be the sequence with $e_0 = 1$ and $e_n = 3 e_{n-1} + 2^n$ for every integer $n \ge 1$. Then $e_n = 3^{n+1} - 2^{n+1}$, as guessed in [Exercise 3](#exr-triple-plus-power-check), for every non-negative integer ([Definition: Non-negative integers](../number-systems.llms.md#def-nonnegative-integers)) $n$.
 
 > **NOTE:**
 >
@@ -261,7 +261,7 @@ Last modified: 2026-11-04 18:42:39 (PST)
 
 > **NOTE:**
 >
-> **Theorem 3 (A closed form for the running time of `pal`)** Let $T(0) = T(1) = 1$ and $T(n) = T(n - 2) + 1$ for every integer $n \ge 2$, as in [Example 5](#exm-pal-running-time). Then $T(n) = \mathopen{}\left\lfloor n / 2\right\rfloor\mathclose{} + 1$ ([Definition: Floor](../chapters/loop-invariants.llms.md#def-floor)) for every non-negative integer ([Definition: Non-negative integers](https://morrison-lab.github.io/mds/number-systems.html#def-nonnegative-integers)) $n$.
+> **Theorem 3 (A closed form for the running time of `pal`)** Let $T(0) = T(1) = 1$ and $T(n) = T(n - 2) + 1$ for every integer $n \ge 2$, as in [Example 5](#exm-pal-running-time). Then $T(n) = \mathopen{}\left\lfloor n / 2\right\rfloor\mathclose{} + 1$ ([Definition: Floor](../chapters/loop-invariants.llms.md#def-floor)) for every non-negative integer ([Definition: Non-negative integers](../number-systems.llms.md#def-nonnegative-integers)) $n$.
 
 > **NOTE:**
 >
@@ -319,7 +319,7 @@ Last modified: 2026-11-04 18:42:39 (PST)
 
 > **NOTE:**
 >
-> **Theorem 4 (Two calls of size** $n - 1$ give $2^n$ base cases) For every non-negative integer ([Definition: Non-negative integers](https://morrison-lab.github.io/mds/number-systems.html#def-nonnegative-integers)) $n$, the calls that `(dm n)` of [Exercise 5](#exr-twice-calls) makes include exactly $2^n$ calls of `(dm 0)`, counting `(dm 0)` itself when $n = 0$. So, counting each call as one step, the running time ([Definition 4](#def-running-time)) of `dm` satisfies $T(n) \ge 2^n$.
+> **Theorem 4 (Two calls of size** $n - 1$ give $2^n$ base cases) For every non-negative integer ([Definition: Non-negative integers](../number-systems.llms.md#def-nonnegative-integers)) $n$, the calls that `(dm n)` of [Exercise 5](#exr-twice-calls) makes include exactly $2^n$ calls of `(dm 0)`, counting `(dm 0)` itself when $n = 0$. So, counting each call as one step, the running time ([Definition 4](#def-running-time)) of `dm` satisfies $T(n) \ge 2^n$.
 
 > **NOTE:**
 >
@@ -370,7 +370,7 @@ Last modified: 2026-11-04 18:42:39 (PST)
 
 > **NOTE:**
 >
-> **Definition 5 (Big-O)** Let $f$ and $g$ be [functions](../chapters/functional-programming.llms.md#def-function) from the [natural numbers](../chapters/sets.llms.md#def-natural-numbers) to the [real numbers](../chapters/sets.llms.md#def-real-numbers). Then $f(n)$ is **big-O** of $g(n)$ ([Wikipedia contributors 2026a](#ref-wikipedia_big_o_notation)), written $f(n) = O(g(n))$, when there exist a [real number](../chapters/sets.llms.md#def-real-numbers) $c > 0$ and a [natural number](../chapters/sets.llms.md#def-natural-numbers) $N$ such that, for every natural number $n \ge N$, $$|f(n)| \le c \, |g(n)|.$$ In words, from some point $N$ on, the [absolute value](https://morrison-lab.github.io/mds/algebra-basics.html#def-absolute-value) of $f(n)$ is at most a fixed multiple $c$ of the absolute value of $g(n)$. The “there exist” is an [existential quantifier](../chapters/predicates-quantifiers.llms.md#def-existential-quantifier), and the “for every” is a [universal quantifier](../chapters/predicates-quantifiers.llms.md#def-universal-quantifier).
+> **Definition 5 (Big-O)** Let $f$ and $g$ be [functions](../chapters/functional-programming.llms.md#def-function) from the [natural numbers](../chapters/sets.llms.md#def-natural-numbers) to the [real numbers](../chapters/sets.llms.md#def-real-numbers). Then $f(n)$ is **big-O** of $g(n)$ ([Wikipedia contributors 2026a](#ref-wikipedia_big_o_notation)), written $f(n) = O(g(n))$, when there exist a [real number](../chapters/sets.llms.md#def-real-numbers) $c > 0$ and a [natural number](../chapters/sets.llms.md#def-natural-numbers) $N$ such that, for every natural number $n \ge N$, $$|f(n)| \le c \, |g(n)|.$$ In words, from some point $N$ on, the [absolute value](https://morrison-lab.github.io/mds/algebra.html#def-absolute-value) of $f(n)$ is at most a fixed multiple $c$ of the absolute value of $g(n)$. The “there exist” is an [existential quantifier](../chapters/predicates-quantifiers.llms.md#def-existential-quantifier), and the “for every” is a [universal quantifier](../chapters/predicates-quantifiers.llms.md#def-universal-quantifier).
 
 > **NOTE:**
 >
@@ -410,7 +410,7 @@ Last modified: 2026-11-04 18:42:39 (PST)
 
 > **NOTE:**
 >
-> **Definition 7 (Big-Omega)** Let $f$ and $g$ be [functions](../chapters/functional-programming.llms.md#def-function) from the [natural numbers](../chapters/sets.llms.md#def-natural-numbers) to the [real numbers](../chapters/sets.llms.md#def-real-numbers). Then $f(n)$ is **big-Omega** of $g(n)$ ([Wikipedia contributors 2026a](#ref-wikipedia_big_o_notation)), written $f(n) = \Omega(g(n))$, when there exist a [real number](../chapters/sets.llms.md#def-real-numbers) $c > 0$ and a [natural number](../chapters/sets.llms.md#def-natural-numbers) $N$ such that, for every natural number $n \ge N$, $$|f(n)| \ge c \, |g(n)|.$$ In words, from some point $N$ on, the [absolute value](https://morrison-lab.github.io/mds/algebra-basics.html#def-absolute-value) of $f(n)$ is at least a fixed positive multiple $c$ of the absolute value of $g(n)$. Dividing by $c$ shows that $f(n) = \Omega(g(n))$ exactly when $g(n) = O(f(n))$ in the sense of [Definition 5](#def-big-o).
+> **Definition 7 (Big-Omega)** Let $f$ and $g$ be [functions](../chapters/functional-programming.llms.md#def-function) from the [natural numbers](../chapters/sets.llms.md#def-natural-numbers) to the [real numbers](../chapters/sets.llms.md#def-real-numbers). Then $f(n)$ is **big-Omega** of $g(n)$ ([Wikipedia contributors 2026a](#ref-wikipedia_big_o_notation)), written $f(n) = \Omega(g(n))$, when there exist a [real number](../chapters/sets.llms.md#def-real-numbers) $c > 0$ and a [natural number](../chapters/sets.llms.md#def-natural-numbers) $N$ such that, for every natural number $n \ge N$, $$|f(n)| \ge c \, |g(n)|.$$ In words, from some point $N$ on, the [absolute value](https://morrison-lab.github.io/mds/algebra.html#def-absolute-value) of $f(n)$ is at least a fixed positive multiple $c$ of the absolute value of $g(n)$. Dividing by $c$ shows that $f(n) = \Omega(g(n))$ exactly when $g(n) = O(f(n))$ in the sense of [Definition 5](#def-big-o).
 
 > **NOTE:**
 >

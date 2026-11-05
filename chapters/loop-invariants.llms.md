@@ -6,7 +6,7 @@ Proving that an algorithm with a loop is correct
 
 Published
 
-Last modified: 2026-11-04 18:42:39 (PST)
+Last modified: 2026-11-04 18:53:59 (PST)
 
 > **NOTE:**
 >
@@ -24,7 +24,7 @@ Last modified: 2026-11-04 18:42:39 (PST)
 
 > **NOTE:**
 >
-> **Exercise 1 (Tracing a square-root loop)** The algorithm `root` takes a non-negative integer ([Definition: Non-negative integers](https://morrison-lab.github.io/mds/number-systems.html#def-nonnegative-integers)) $n$:
+> **Exercise 1 (Tracing a square-root loop)** The algorithm `root` takes a non-negative integer ([Definition: Non-negative integers](../number-systems.llms.md#def-nonnegative-integers)) $n$:
 >
 > ``` text
 > procedure root(n)        // n is a non-negative integer

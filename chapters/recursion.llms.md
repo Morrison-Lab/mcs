@@ -6,7 +6,7 @@ Recursive definitions, recursive programs and proofs about them
 
 Published
 
-Last modified: 2026-11-04 18:42:39 (PST)
+Last modified: 2026-11-04 18:53:59 (PST)
 
 > **NOTE:**
 >
@@ -112,7 +112,7 @@ Last modified: 2026-11-04 18:42:39 (PST)
 
 > **NOTE:**
 >
-> **Example 4 (The natural numbers, defined recursively)** The natural numbers ([Definition: Natural numbers (our convention)](../chapters/sets.llms.md#def-natural-numbers)) are a recursively defined set ([Definition 2](#def-recursive-set)). The base case is $1 \in \mathbb{N}$, and the recursive rule is that if $n \in \mathbb{N}$, then $n + 1 \in \mathbb{N}$. The base case gives 1, one application of the rule gives $1 + 1 = 2$, a second gives $2 + 1 = 3$, and so on. The non-negative integers ([Definition: Non-negative integers](https://morrison-lab.github.io/mds/number-systems.html#def-nonnegative-integers)) have the same recursive rule, with the base case $0 \in \mathbb{N}_0$.
+> **Example 4 (The natural numbers, defined recursively)** The natural numbers ([Definition: Natural numbers (our convention)](../chapters/sets.llms.md#def-natural-numbers)) are a recursively defined set ([Definition 2](#def-recursive-set)). The base case is $1 \in \mathbb{N}$, and the recursive rule is that if $n \in \mathbb{N}$, then $n + 1 \in \mathbb{N}$. The base case gives 1, one application of the rule gives $1 + 1 = 2$, a second gives $2 + 1 = 3$, and so on. The non-negative integers ([Definition: Non-negative integers](../number-systems.llms.md#def-nonnegative-integers)) have the same recursive rule, with the base case $0 \in \mathbb{N}_0$.
 
 > **NOTE:**
 >
@@ -159,7 +159,7 @@ Last modified: 2026-11-04 18:42:39 (PST)
 
 > **NOTE:**
 >
-> **Exercise 3 (Tracing a recursive Racket function)** The Racket function `binary` takes a non-negative integer ([Definition: Non-negative integers](https://morrison-lab.github.io/mds/number-systems.html#def-nonnegative-integers)) `n` and returns a string:
+> **Exercise 3 (Tracing a recursive Racket function)** The Racket function `binary` takes a non-negative integer ([Definition: Non-negative integers](../number-systems.llms.md#def-nonnegative-integers)) `n` and returns a string:
 >
 > ``` racket
 > (define (binary n)

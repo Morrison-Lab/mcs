@@ -6,7 +6,7 @@ Relations between sets, their properties, equivalence relations, partitions and 
 
 Published
 
-Last modified: 2026-11-04 18:42:39 (PST)
+Last modified: 2026-11-04 18:53:59 (PST)
 
 > **NOTE:**
 >
@@ -544,7 +544,7 @@ Last modified: 2026-11-04 18:42:39 (PST)
 
 > **NOTE:**
 >
-> **Definition 15 (Partition of a set)** Let $S$ be a set. A **partition** of $S$ ([Wikipedia contributors 2026r](#ref-wikipedia_partition_of_a_set)) is a collection $\mathcal{C}$ ([Definition: Collection of sets, family of sets](https://morrison-lab.github.io/mds/sets.html#def-collection)) of subsets of $S$ such that
+> **Definition 15 (Partition of a set)** Let $S$ be a set. A **partition** of $S$ ([Wikipedia contributors 2026r](#ref-wikipedia_partition_of_a_set)) is a collection $\mathcal{C}$ ([Definition: Collection of sets, family of sets](../sets.llms.md#def-collection)) of subsets of $S$ such that
 >
 > - every set in $\mathcal{C}$ is nonempty;
 > - any two different sets in $\mathcal{C}$ are disjoint: their intersection ([Definition: Intersection](../chapters/sets.llms.md#def-intersection)) is empty;

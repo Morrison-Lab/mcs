@@ -90,6 +90,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./number-systems.html" rel="next">
 <link href="./induction.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -197,25 +198,25 @@ div.csl-indent {
 })();
 </script>
 <style>
-div.callout-lem.callout {
-  border-left-color: #1565C0;
+div.callout-remark.callout {
+  border-left-color: #AD1457;
 }
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
 }
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
 }
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
 }
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-cor.callout {
   border-left-color: #00838F;
@@ -227,15 +228,25 @@ div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-prp.callout {
-  border-left-color: #827717;
+div.callout-solution.callout {
+  border-left-color: #4E342E;
 }
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
 }
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-proof.callout {
   border-left-color: #37474F;
@@ -246,6 +257,26 @@ div.callout-proof.callout-style-default .callout-header {
 div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-prp.callout {
+  border-left-color: #827717;
+}
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
+}
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-def.callout {
   border-left-color: #1B5E20;
@@ -266,36 +297,6 @@ div.callout-exr.callout-style-default .callout-header {
 div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
-}
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
-}
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-solution.callout {
-  border-left-color: #4E342E;
-}
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
-}
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -657,6 +658,14 @@ window.Quarto = {
     <a class="dropdown-item" href="./relations.html">
  <span class="dropdown-text">Relations</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./number-systems.html">
+ <span class="dropdown-text">Number Systems</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./sets.html">
+ <span class="dropdown-text">Sets</span></a>
+  </li>  
     </ul>
   </li>
 </ul>
@@ -888,6 +897,18 @@ window.Quarto = {
  <span class="menu-text">Relations</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./number-systems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Number Systems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sets</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -924,7 +945,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-11-04 18:42:39 (PST)</p>
+      <p class="date">Last modified: 2026-11-04 18:53:59 (PST)</p>
     </div>
   </div>
   
@@ -943,7 +964,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div class="proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span>A <a href="chapters/relations.html#def-relation">relation</a> says which pairs of elements of a <a href="chapters/sets.html#def-set">set</a> are related. This page defines the properties that make a relation behave like equality, and the groups of elements that such a relation puts together.</p>
+<p><span class="proof-title"><em>Remark</em>. </span>A <a href="chapters/relations.html#def-relation">relation</a> says which pairs of elements of a <a href="./sets.html#def-set">set</a> are related. This page defines the properties that make a relation behave like equality, and the groups of elements that such a relation puts together.</p>
 </div>
 </div>
 </div>
@@ -957,7 +978,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="def-reflexive" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Reflexive relation)</strong></span> Let <span class="math inline">\(\sim\)</span> be a <a href="chapters/relations.html#def-relation">relation</a> on a <a href="chapters/sets.html#def-set">set</a> <span class="math inline">\(S\)</span>. The relation <span class="math inline">\(\sim\)</span> is <strong>reflexive</strong> <span class="citation" data-cites="wikipedia_reflexive_relation">(<a href="#ref-wikipedia_reflexive_relation" role="doc-biblioref">Wikipedia contributors 2026c</a>)</span> if <span class="math inline">\(a \sim a\)</span> for every <span class="math inline">\(a \in S\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 1 (Reflexive relation)</strong></span> Let <span class="math inline">\(\sim\)</span> be a <a href="chapters/relations.html#def-relation">relation</a> on a <a href="./sets.html#def-set">set</a> <span class="math inline">\(S\)</span>. The relation <span class="math inline">\(\sim\)</span> is <strong>reflexive</strong> <span class="citation" data-cites="wikipedia_reflexive_relation">(<a href="#ref-wikipedia_reflexive_relation" role="doc-biblioref">Wikipedia contributors 2026c</a>)</span> if <span class="math inline">\(a \sim a\)</span> for every <span class="math inline">\(a \in S\)</span>.</p>
 </div>
 </div>
 </div>
@@ -969,7 +990,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="exm-reflexive" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1 (Reflexive and non-reflexive relations on the real numbers)</strong></span> On <span class="math inline">\(\mathbb{R}\)</span>, the <a href="chapters/relations.html#def-relation">relation</a> <span class="math inline">\(=\)</span> is <a href="#def-reflexive">reflexive</a>, since <span class="math inline">\(a = a\)</span> for every <a href="chapters/sets.html#def-real-numbers">real number</a> <span class="math inline">\(a\)</span>. The relation <span class="math inline">\(\le\)</span> is also reflexive, since <span class="math inline">\(a \le a\)</span> for every real number <span class="math inline">\(a\)</span>. The relation <span class="math inline">\(&lt;\)</span> is not reflexive, since <span class="math inline">\(2 &lt; 2\)</span> is false.</p>
+<p><span class="theorem-title"><strong>Example 1 (Reflexive and non-reflexive relations on the real numbers)</strong></span> On <span class="math inline">\(\mathbb{R}\)</span>, the <a href="chapters/relations.html#def-relation">relation</a> <span class="math inline">\(=\)</span> is <a href="#def-reflexive">reflexive</a>, since <span class="math inline">\(a = a\)</span> for every <a href="./number-systems.html#def-real-numbers">real number</a> <span class="math inline">\(a\)</span>. The relation <span class="math inline">\(\le\)</span> is also reflexive, since <span class="math inline">\(a \le a\)</span> for every real number <span class="math inline">\(a\)</span>. The relation <span class="math inline">\(&lt;\)</span> is not reflexive, since <span class="math inline">\(2 &lt; 2\)</span> is false.</p>
 </div>
 </div>
 </div>
@@ -981,7 +1002,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="def-symmetric-relation" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Symmetric relation)</strong></span> Let <span class="math inline">\(\sim\)</span> be a <a href="chapters/relations.html#def-relation">relation</a> on a <a href="chapters/sets.html#def-set">set</a> <span class="math inline">\(S\)</span>. The relation <span class="math inline">\(\sim\)</span> is <strong>symmetric</strong> <span class="citation" data-cites="wikipedia_symmetric_relation">(<a href="#ref-wikipedia_symmetric_relation" role="doc-biblioref">Wikipedia contributors 2026d</a>)</span> if, <a href="chapters/predicates-quantifiers.html#def-universal-quantifier">for all</a> <span class="math inline">\(a, b \in S\)</span>, <span class="math inline">\(a \sim b\)</span> <a href="chapters/propositional-logic.html#def-implies">implies</a> <span class="math inline">\(b \sim a\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 2 (Symmetric relation)</strong></span> Let <span class="math inline">\(\sim\)</span> be a <a href="chapters/relations.html#def-relation">relation</a> on a <a href="./sets.html#def-set">set</a> <span class="math inline">\(S\)</span>. The relation <span class="math inline">\(\sim\)</span> is <strong>symmetric</strong> <span class="citation" data-cites="wikipedia_symmetric_relation">(<a href="#ref-wikipedia_symmetric_relation" role="doc-biblioref">Wikipedia contributors 2026d</a>)</span> if, <a href="chapters/predicates-quantifiers.html#def-universal-quantifier">for all</a> <span class="math inline">\(a, b \in S\)</span>, <span class="math inline">\(a \sim b\)</span> <a href="chapters/propositional-logic.html#def-implies">implies</a> <span class="math inline">\(b \sim a\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1008,7 +1029,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="def-equivalence-relation" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Equivalence relation)</strong></span> Let <span class="math inline">\(\sim\)</span> be a <a href="chapters/relations.html#def-relation">relation</a> on a <a href="chapters/sets.html#def-set">set</a> <span class="math inline">\(S\)</span>. The relation <span class="math inline">\(\sim\)</span> is an <strong>equivalence relation</strong> <span class="citation" data-cites="wikipedia_equivalence_relation">(<a href="#ref-wikipedia_equivalence_relation" role="doc-biblioref">Wikipedia contributors 2026b</a>)</span> if it is <a href="#def-reflexive">reflexive</a>, <a href="#def-symmetric-relation">symmetric</a>, and <a href="chapters/relations.html#def-transitive">transitive</a>.</p>
+<p><span class="theorem-title"><strong>Definition 3 (Equivalence relation)</strong></span> Let <span class="math inline">\(\sim\)</span> be a <a href="chapters/relations.html#def-relation">relation</a> on a <a href="./sets.html#def-set">set</a> <span class="math inline">\(S\)</span>. The relation <span class="math inline">\(\sim\)</span> is an <strong>equivalence relation</strong> <span class="citation" data-cites="wikipedia_equivalence_relation">(<a href="#ref-wikipedia_equivalence_relation" role="doc-biblioref">Wikipedia contributors 2026b</a>)</span> if it is <a href="#def-reflexive">reflexive</a>, <a href="#def-symmetric-relation">symmetric</a>, and <a href="chapters/relations.html#def-transitive">transitive</a>.</p>
 </div>
 </div>
 </div>
@@ -1020,8 +1041,8 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="exm-equivalence-relation" class="theorem example">
-<p><span class="theorem-title"><strong>Example 3 (Integers with an even difference)</strong></span> On the <a href="chapters/direct-proof.html#def-integers">integers</a>, define the <a href="chapters/relations.html#def-relation">relation</a> <span class="math inline">\(\sim\)</span> by <span class="math inline">\(a \sim b\)</span> when <span class="math inline">\(a - b\)</span> is <a href="chapters/direct-proof.html#def-even-odd">even</a>. For example, <span class="math inline">\(7 \sim 3\)</span>, since <span class="math inline">\(7 - 3 = 4 = 2 \cdot 2\)</span>, but <span class="math inline">\(7 \not\sim 4\)</span>, since <span class="math inline">\(7 - 4 = 3\)</span> is <a href="chapters/direct-proof.html#def-odd">odd</a>. The relation <span class="math inline">\(\sim\)</span> is an <a href="#def-equivalence-relation">equivalence relation</a>.</p>
-<p><strong><a href="#def-reflexive">Reflexive</a>.</strong> For every <a href="chapters/direct-proof.html#def-integers">integer</a> <span class="math inline">\(a\)</span>, <span class="math inline">\(a - a = 0 = 2 \cdot 0\)</span>, so <span class="math inline">\(a \sim a\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 3 (Integers with an even difference)</strong></span> On the <a href="./number-systems.html#def-integers">integers</a>, define the <a href="chapters/relations.html#def-relation">relation</a> <span class="math inline">\(\sim\)</span> by <span class="math inline">\(a \sim b\)</span> when <span class="math inline">\(a - b\)</span> is <a href="./number-systems.html#def-even-odd">even</a>. For example, <span class="math inline">\(7 \sim 3\)</span>, since <span class="math inline">\(7 - 3 = 4 = 2 \cdot 2\)</span>, but <span class="math inline">\(7 \not\sim 4\)</span>, since <span class="math inline">\(7 - 4 = 3\)</span> is <a href="./number-systems.html#def-odd">odd</a>. The relation <span class="math inline">\(\sim\)</span> is an <a href="#def-equivalence-relation">equivalence relation</a>.</p>
+<p><strong><a href="#def-reflexive">Reflexive</a>.</strong> For every <a href="./number-systems.html#def-integers">integer</a> <span class="math inline">\(a\)</span>, <span class="math inline">\(a - a = 0 = 2 \cdot 0\)</span>, so <span class="math inline">\(a \sim a\)</span>.</p>
 <p><strong><a href="#def-symmetric-relation">Symmetric</a>.</strong> Suppose <span class="math inline">\(a \sim b\)</span>, so <span class="math inline">\(a - b = 2k\)</span> for some integer <span class="math inline">\(k\)</span>. Then</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1063,7 +1084,7 @@ a - c
 </div>
 <div class="callout-body-container">
 <div id="def-equivalence-class" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Equivalence class)</strong></span> Let <span class="math inline">\(\sim\)</span> be an <a href="#def-equivalence-relation">equivalence relation</a> on a <a href="chapters/sets.html#def-set">set</a> <span class="math inline">\(S\)</span>, and let <span class="math inline">\(a \in S\)</span>. The <strong>equivalence class</strong> <span class="citation" data-cites="wikipedia_equivalence_class">(<a href="#ref-wikipedia_equivalence_class" role="doc-biblioref">Wikipedia contributors 2026a</a>)</span> of <span class="math inline">\(a\)</span> is the set of elements of <span class="math inline">\(S\)</span> related to <span class="math inline">\(a\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 4 (Equivalence class)</strong></span> Let <span class="math inline">\(\sim\)</span> be an <a href="#def-equivalence-relation">equivalence relation</a> on a <a href="./sets.html#def-set">set</a> <span class="math inline">\(S\)</span>, and let <span class="math inline">\(a \in S\)</span>. The <strong>equivalence class</strong> <span class="citation" data-cites="wikipedia_equivalence_class">(<a href="#ref-wikipedia_equivalence_class" role="doc-biblioref">Wikipedia contributors 2026a</a>)</span> of <span class="math inline">\(a\)</span> is the set of elements of <span class="math inline">\(S\)</span> related to <span class="math inline">\(a\)</span>:</p>
 <p><span class="math display">\[
 [a] \stackrel{\text{def}}{=}{\mathopen{}\left\{b \in S : b \sim a\right\}\mathclose{}}.
 \]</span></p>
@@ -1078,7 +1099,7 @@ a - c
 </div>
 <div class="callout-body-container">
 <div id="exm-equivalence-class" class="theorem example">
-<p><span class="theorem-title"><strong>Example 4 (Equivalence classes of integers with an even difference)</strong></span> Let <span class="math inline">\(\sim\)</span> be the <a href="#def-equivalence-relation">equivalence relation</a> of <a href="#exm-equivalence-relation" class="quarto-xref">Example&nbsp;3</a> on the <a href="chapters/direct-proof.html#def-integers">integers</a>. The <a href="#def-equivalence-class">equivalence class</a> <span class="math inline">\([0]\)</span> holds the integers <span class="math inline">\(b\)</span> with <span class="math inline">\(b - 0\)</span> even, which are the <a href="chapters/direct-proof.html#def-even-odd">even integers</a>: <span class="math inline">\([0] = \mathopen{}\left\{\ldots, -4, -2, 0, 2, 4, \ldots\right\}\mathclose{}\)</span>. The class <span class="math inline">\([1]\)</span> holds the integers <span class="math inline">\(b\)</span> with <span class="math inline">\(b - 1\)</span> even, which are the <a href="chapters/direct-proof.html#def-odd">odd integers</a>: <span class="math inline">\([1] = \mathopen{}\left\{\ldots, -3, -1, 1, 3, 5, \ldots\right\}\mathclose{}\)</span>. The class <span class="math inline">\([2]\)</span> is the same <a href="chapters/sets.html#def-set">set</a> as <span class="math inline">\([0]\)</span>, since <span class="math inline">\(2 \sim 0\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 4 (Equivalence classes of integers with an even difference)</strong></span> Let <span class="math inline">\(\sim\)</span> be the <a href="#def-equivalence-relation">equivalence relation</a> of <a href="#exm-equivalence-relation" class="quarto-xref">Example&nbsp;3</a> on the <a href="./number-systems.html#def-integers">integers</a>. The <a href="#def-equivalence-class">equivalence class</a> <span class="math inline">\([0]\)</span> holds the integers <span class="math inline">\(b\)</span> with <span class="math inline">\(b - 0\)</span> even, which are the <a href="./number-systems.html#def-even-odd">even integers</a>: <span class="math inline">\([0] = \mathopen{}\left\{\ldots, -4, -2, 0, 2, 4, \ldots\right\}\mathclose{}\)</span>. The class <span class="math inline">\([1]\)</span> holds the integers <span class="math inline">\(b\)</span> with <span class="math inline">\(b - 1\)</span> even, which are the <a href="./number-systems.html#def-odd">odd integers</a>: <span class="math inline">\([1] = \mathopen{}\left\{\ldots, -3, -1, 1, 3, 5, \ldots\right\}\mathclose{}\)</span>. The class <span class="math inline">\([2]\)</span> is the same <a href="./sets.html#def-set">set</a> as <span class="math inline">\([0]\)</span>, since <span class="math inline">\(2 \sim 0\)</span>.</p>
 </div>
 </div>
 </div>
@@ -2260,6 +2281,9 @@ document.addEventListener("DOMContentLoaded", function () {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./number-systems.html" class="pagination-link" aria-label="Number Systems">
+        <span class="nav-page-text">Number Systems</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
