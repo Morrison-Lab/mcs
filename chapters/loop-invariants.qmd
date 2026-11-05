@@ -42,7 +42,7 @@ the algorithms, the exercises, the examples, the theorems and their proofs.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/loop-invariants/_floor_def.qmd >}}
+{{< include ../_subfiles/number-systems/_floor_def.qmd >}}
 
 {{< slidebreak >}}
 
