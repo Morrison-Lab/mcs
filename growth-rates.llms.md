@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-04 19:29:35 (PST)
+Last modified: 2026-11-04 21:37:00 (PST)
 
 > **NOTE:**
 >
@@ -14,7 +14,7 @@ Last modified: 2026-11-04 19:29:35 (PST)
 
 > **NOTE:**
 >
-> **Definition 1 (Big-O)** Let $f$ and $g$ be [functions](functions.llms.md#def-function) from the [natural numbers](number-systems.llms.md#def-natural-numbers) to the [real numbers](number-systems.llms.md#def-real-numbers). Then $f(n)$ is **big-O** of $g(n)$ ([Wikipedia contributors 2026](#ref-wikipedia_big_o_notation)), written $f(n) = O(g(n))$, when there exist a [real number](number-systems.llms.md#def-real-numbers) $c > 0$ and a [natural number](number-systems.llms.md#def-natural-numbers) $N$ such that, for every natural number $n \ge N$, $$|f(n)| \le c \, |g(n)|.$$ In words, from some point $N$ on, the [absolute value](https://morrison-lab.github.io/mds/algebra.html#def-absolute-value) of $f(n)$ is at most a fixed multiple $c$ of the absolute value of $g(n)$. The “there exist” is an [existential quantifier](chapters/predicates-quantifiers.llms.md#def-existential-quantifier), and the “for every” is a [universal quantifier](chapters/predicates-quantifiers.llms.md#def-universal-quantifier).
+> **Definition 1 (Big-O)** Let $f$ and $g$ be [functions](functions.llms.md#def-function) from the [natural numbers](number-systems.llms.md#def-natural-numbers) to the [real numbers](number-systems.llms.md#def-real-numbers). Then $f(n)$ is **big-O** of $g(n)$ ([Wikipedia contributors 2026](#ref-wikipedia_big_o_notation)), written $f(n) = O(g(n))$, when there exist a [real number](number-systems.llms.md#def-real-numbers) $c > 0$ and a [natural number](number-systems.llms.md#def-natural-numbers) $N$ such that, for every natural number $n \ge N$, $$|f(n)| \le c \, |g(n)|.$$ In words, from some point $N$ on, the [absolute value](https://morrison-lab.github.io/mds/algebra.html#def-absolute-value) of $f(n)$ is at most a fixed multiple $c$ of the absolute value of $g(n)$. The “there exist” is an [existential quantifier](proof-writing.llms.md#def-existential-quantifier), and the “for every” is a [universal quantifier](proof-writing.llms.md#def-universal-quantifier).
 
 > **NOTE:**
 >
@@ -35,7 +35,7 @@ Last modified: 2026-11-04 19:29:35 (PST)
 > && \text{(} n = |n| \text{, since } n \ge 0 \text{)}
 > \end{aligned}$$
 >
-> which is the [inequality](https://morrison-lab.github.io/mds/proof-writing.html#def-inequality) in [Definition 1](#def-big-o) with $c = 4$. Hence $3n + 5 = O(n)$.
+> which is the [inequality](proof-writing.llms.md#def-inequality) in [Definition 1](#def-big-o) with $c = 4$. Hence $3n + 5 = O(n)$.
 
 # 2 Lower bounds
 
@@ -59,7 +59,7 @@ Last modified: 2026-11-04 19:29:35 (PST)
 > && \text{(} n = |n| \text{, since } n \ge 0 \text{)}
 > \end{aligned}$$
 >
-> which is the [inequality](https://morrison-lab.github.io/mds/proof-writing.html#def-inequality) in [Definition 2](#def-big-omega) with $c = 3$. Hence $3n + 5 = \Omega(n)$.
+> which is the [inequality](proof-writing.llms.md#def-inequality) in [Definition 2](#def-big-omega) with $c = 3$. Hence $3n + 5 = \Omega(n)$.
 
 # 3 Matching bounds
 

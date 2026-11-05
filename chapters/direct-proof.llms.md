@@ -6,7 +6,7 @@ What follows from what, and how to write it down
 
 Published
 
-Last modified: 2026-11-04 19:29:35 (PST)
+Last modified: 2026-11-04 21:37:00 (PST)
 
 > **NOTE:**
 >
@@ -210,7 +210,7 @@ Last modified: 2026-11-04 19:29:35 (PST)
 
 > **NOTE:**
 >
-> **Definition 11 (Direct proof)** A **direct proof** ([Wikipedia contributors 2026a](#ref-wikipedia_direct_proof)) of a [proposition](../chapters/propositional-logic.llms.md#def-proposition) $Q$ starts from the assumptions that $Q$ is stated under, if any, and reaches $Q$ through a chain of steps, each of which applies a definition, a previously proved [result](https://morrison-lab.github.io/mds/proof-writing.html#def-result), or one rule of logic or algebra to the assumptions or to earlier steps. A direct proof never assumes that $Q$ is false; compare [proof by contradiction](../chapters/contrapositive-contradiction.llms.md#def-proof-by-contradiction), which does.
+> **Definition 11 (Direct proof)** A **direct proof** ([Wikipedia contributors 2026a](#ref-wikipedia_direct_proof)) of a [proposition](../chapters/propositional-logic.llms.md#def-proposition) $Q$ starts from the assumptions that $Q$ is stated under, if any, and reaches $Q$ through a chain of steps, each of which applies a definition, a previously proved [result](../proof-writing.llms.md#def-result), or one rule of logic or algebra to the assumptions or to earlier steps. A direct proof never assumes that $Q$ is false; compare [proof by contradiction](../chapters/contrapositive-contradiction.llms.md#def-proof-by-contradiction), which does.
 
 > **NOTE:**
 >
