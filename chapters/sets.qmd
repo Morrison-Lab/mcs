@@ -51,7 +51,7 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_roster_def.qmd >}}
+{{< include ../_subfiles/sets/_def-roster-notation.qmd >}}
 
 {{< slidebreak >}}
 
@@ -99,7 +99,7 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_set-builder-expression_def.qmd >}}
+{{< include ../_subfiles/sets/_def-set-builder-expression.qmd >}}
 
 {{< slidebreak >}}
 
@@ -187,7 +187,7 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_power-set_def.qmd >}}
+{{< include ../_subfiles/sets/_def-power-set.qmd >}}
 
 {{< slidebreak >}}
 
@@ -207,7 +207,7 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_tuple_def.qmd >}}
+{{< include ../_subfiles/sets/_def-tuple.qmd >}}
 
 {{< slidebreak >}}
 
@@ -219,7 +219,7 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_cartesian-product-many_def.qmd >}}
+{{< include ../_subfiles/sets/_def-cartesian-product-many.qmd >}}
 
 {{< slidebreak >}}
 
