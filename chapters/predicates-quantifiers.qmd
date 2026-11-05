@@ -35,7 +35,7 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/predicates-quantifiers/_domain_def.qmd >}}
+{{< include ../_subfiles/proof-writing/_domain-of-discourse_def.qmd >}}
 
 {{< slidebreak >}}
 
