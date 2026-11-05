@@ -265,7 +265,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-04 19:44:14 (PST)</p>
+  <p class="date">Last modified: 2026-11-04 21:37:09 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -455,7 +455,7 @@ So <span class="math inline">\(P(n)\)</span> holds for every integer <span class
 
 <div id="exm-squares-powers" class="theorem example">
 <p><span class="theorem-title"><strong>Example 2 (An induction that starts at 4)</strong></span> Claim: <span class="math inline">\(n^2 \le 2^n\)</span> for every integer (<a href="../chapters/direct-proof.html#def-integers">Definition: Integers</a>) <span class="math inline">\(n \ge 4\)</span>.</p>
-<p>Let <span class="math inline">\(P(n)\)</span> be the inequality <span class="math inline">\(n^2 \le 2^n\)</span> (<a href="https://morrison-lab.github.io/mds/proof-writing.html#def-inequality">Definition: Inequality</a>), and follow <a href="#/rem-induction-template" class="quarto-xref">Remark&nbsp;2</a> with <span class="math inline">\(n_0 = 4\)</span>. <a href="#/sol-squares-powers" class="quarto-xref">Solution&nbsp;2</a> shows that <span class="math inline">\(n_0 = 1\)</span> would not work, since <span class="math inline">\(P(3)\)</span> is false.</p>
+<p>Let <span class="math inline">\(P(n)\)</span> be the inequality <span class="math inline">\(n^2 \le 2^n\)</span> (<a href="../proof-writing.html#def-inequality">Definition: Inequality</a>), and follow <a href="#/rem-induction-template" class="quarto-xref">Remark&nbsp;2</a> with <span class="math inline">\(n_0 = 4\)</span>. <a href="#/sol-squares-powers" class="quarto-xref">Solution&nbsp;2</a> shows that <span class="math inline">\(n_0 = 1\)</span> would not work, since <span class="math inline">\(P(3)\)</span> is false.</p>
 <p><strong>Base case.</strong> <span class="math inline">\(4^2 = 16 \le 16 = 2^4\)</span>.</p>
 <p><strong>Inductive step.</strong> Let <span class="math inline">\(k \ge 4\)</span>, and suppose <span class="math inline">\(k^2 \le 2^k\)</span>. The goal is <span class="math inline">\((k + 1)^2 \le 2^{k + 1}\)</span>. Since <span class="math inline">\(k \ge 4\)</span>, we have <span class="math inline">\(k^2 \ge 4k = 2k + 2k \ge 2k + 8 &gt; 2k + 1\)</span>. So</p>
 <p><span class="math display">\[
@@ -542,7 +542,7 @@ So <span class="math inline">\(P(n)\)</span> holds for every integer <span class
 <section class="slide level2">
 
 <div id="exm-strong-induction" class="theorem example">
-<p><span class="theorem-title"><strong>Example 5 (Every term of the Fibonacci sequence is less than a power of 2)</strong></span> Let <span class="math inline">\(F_1, F_2, \ldots\)</span> be the <a href="#/def-fibonacci-sequence">Fibonacci sequence</a>. To prove <span class="math inline">\(F_n &lt; 2^n\)</span> for every <span class="math inline">\(n \in \mathbb{N}\)</span>, let <span class="math inline">\(P(n)\)</span> be the <a href="https://morrison-lab.github.io/mds/proof-writing.html#def-inequality">inequality</a> <span class="math inline">\(F_n &lt; 2^n\)</span> and use <a href="#/def-strong-induction" class="quarto-xref">Definition&nbsp;2</a> with <span class="math inline">\(n_0 = 1\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 5 (Every term of the Fibonacci sequence is less than a power of 2)</strong></span> Let <span class="math inline">\(F_1, F_2, \ldots\)</span> be the <a href="#/def-fibonacci-sequence">Fibonacci sequence</a>. To prove <span class="math inline">\(F_n &lt; 2^n\)</span> for every <span class="math inline">\(n \in \mathbb{N}\)</span>, let <span class="math inline">\(P(n)\)</span> be the <a href="../proof-writing.html#def-inequality">inequality</a> <span class="math inline">\(F_n &lt; 2^n\)</span> and use <a href="#/def-strong-induction" class="quarto-xref">Definition&nbsp;2</a> with <span class="math inline">\(n_0 = 1\)</span>.</p>
 <p><strong><a href="../chapters/induction.html#def-proof-by-induction">Base cases</a>, <span class="math inline">\(n = 1\)</span> and <span class="math inline">\(n = 2\)</span>.</strong> The step below uses the two entries <span class="math inline">\(F_{n-1}\)</span> and <span class="math inline">\(F_{n-2}\)</span> before <span class="math inline">\(F_n\)</span>, which do not exist for <span class="math inline">\(n = 1\)</span> and <span class="math inline">\(n = 2\)</span>, so these two cases are shown directly:</p>
 <p><span class="math display">\[
 \begin{aligned}

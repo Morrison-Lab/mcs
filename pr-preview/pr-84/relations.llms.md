@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-04 19:44:14 (PST)
+Last modified: 2026-11-04 21:37:09 (PST)
 
 > **NOTE:**
 >
@@ -22,7 +22,7 @@ Last modified: 2026-11-04 19:44:14 (PST)
 
 > **NOTE:**
 >
-> **Definition 2 (Symmetric relation)** Let $\sim$ be a [relation](functions.llms.md#def-relation) on a [set](sets.llms.md#def-set) $S$. The relation $\sim$ is **symmetric** ([Wikipedia contributors 2026d](#ref-wikipedia_symmetric_relation)) if, [for all](chapters/predicates-quantifiers.llms.md#def-universal-quantifier) $a, b \in S$, $a \sim b$ [implies](chapters/propositional-logic.llms.md#def-implies) $b \sim a$.
+> **Definition 2 (Symmetric relation)** Let $\sim$ be a [relation](functions.llms.md#def-relation) on a [set](sets.llms.md#def-set) $S$. The relation $\sim$ is **symmetric** ([Wikipedia contributors 2026d](#ref-wikipedia_symmetric_relation)) if, [for all](proof-writing.llms.md#def-universal-quantifier) $a, b \in S$, $a \sim b$ [implies](proof-writing.llms.md#def-implies) $b \sim a$.
 
 > **NOTE:**
 >

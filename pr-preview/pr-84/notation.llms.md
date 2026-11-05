@@ -4,15 +4,15 @@ Code
 
 Published
 
-Last modified: 2026-11-04 19:44:14 (PST)
+Last modified: 2026-11-04 21:37:09 (PST)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may encounter in other sources.
 
 | symbol | meaning | LaTeX |
 |----|----|----|
-| $\neg$ | [not](chapters/propositional-logic.llms.md#def-not) | `\neg` |
-| $\forall$ | [for all](chapters/predicates-quantifiers.llms.md#def-universal-quantifier) | `\forall` |
-| $\exists$ | [there exists](chapters/predicates-quantifiers.llms.md#def-existential-quantifier) | `\exists` |
+| $\neg$ | [not](proof-writing.llms.md#def-not) | `\neg` |
+| $\forall$ | [for all](proof-writing.llms.md#def-universal-quantifier) | `\forall` |
+| $\exists$ | [there exists](proof-writing.llms.md#def-existential-quantifier) | `\exists` |
 | $\cup$ | union, “or” | `\cup` |
 | $\cap$ | intersection, “and” | `\cap` |
 | $\mid$ | given, [conditional on](https://morrison-lab.github.io/pds/probability-basics.html#def-conditional-prob) | `\mid`, `|` |
@@ -23,7 +23,7 @@ Mathematical notation is not standardized. This section states the conventions t
 | $x^{\top}$ | transpose of $x$ | `x\'` |
 | $'$ | transpose or [derivative](https://morrison-lab.github.io/mds/calculus.html#def-derivative)[^1] | `'` |
 | $\perp\!\!\!\perp$ | [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) | `\perp\!\!\!\perp` |
-| $\therefore$ | [therefore](chapters/direct-proof.llms.md#def-logical-entailment), thus | `\therefore` |
+| $\therefore$ | [therefore](proof-writing.llms.md#def-logical-entailment), thus | `\therefore` |
 | $\eta$ | [linear predictor](https://en.wikipedia.org/wiki/Generalized_linear_model#:~:text=The%20linear%20predictor%20is%20the,data%20through%20the%20link%20function "linear predictor notation") of a generalized linear model[^2] | `\eta` |
 | $\mathopen{}\left\lfloor x\right\rfloor\mathclose{}$ | floor of $x$: largest [integer](number-systems.llms.md#def-integers) less than or equal to $x$ | `\lfloor x \rfloor` |
 | ${\mathopen{}\left\lceil x\right\rceil\mathclose{}}$ | ceiling of $x$: smallest [integer](number-systems.llms.md#def-integers) greater than or equal to $x$ | `\lceil x \rceil` |
@@ -62,9 +62,9 @@ It’s worth noting that calculus was formalized in the [1600s](https://en.wikip
 
 # 4 Further reading
 
-For the logical symbols and proof conventions used in these notes (whose definitions are on the [Proof Writing](https://morrison-lab.github.io/mds/proof-writing.html#sec-proof-definitions) page):
+For the logical symbols and proof conventions used in these notes (whose definitions are on the [Proof Writing](proof-writing.llms.md#sec-proof-definitions) page):
 
-- Velleman ([2019](#ref-velleman2019prove)) explains how mathematical statements are built from logical connectives ([definition](chapters/propositional-logic.llms.md#def-logical-connective)) and quantifiers ([definition](chapters/predicates-quantifiers.llms.md#def-quantifier)), and how to read and write them.
+- Velleman ([2019](#ref-velleman2019prove)) explains how mathematical statements are built from logical connectives ([definition](proof-writing.llms.md#def-logical-connective)) and quantifiers ([definition](proof-writing.llms.md#def-quantifier)), and how to read and write them.
 - Barker-Plummer et al. ([2011](#ref-barkerplummer2011language)) covers the same symbols as a formal language, with propositional logic (the logic of connectives) and first-order logic (which adds quantifiers).
 
 For set and function notation, see the [Sets](sets.llms.md), [Functions](functions.llms.md), and [Expressions and Algorithms](expressions-algorithms.llms.md) pages.

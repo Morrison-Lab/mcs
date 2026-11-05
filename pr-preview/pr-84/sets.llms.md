@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-04 19:44:14 (PST)
+Last modified: 2026-11-04 21:37:09 (PST)
 
 > **NOTE:**
 >
@@ -309,7 +309,7 @@ Last modified: 2026-11-04 19:44:14 (PST)
 
 > **NOTE:**
 >
-> *Proof*. Two sets are equal when they have the same elements ([Definition 1](#def-set)), so it is enough to show that an element $x$ is in the left-hand side [if and only if](https://morrison-lab.github.io/mds/proof-writing.html#def-necessary-sufficient) ($\iff$) it is in the right-hand side. Each step applies the definition named at its right: set difference ([Definition 26](#def-set-difference)), union ([Definition 22](#def-union)) or intersection ([Definition 24](#def-intersection)). For the first law:
+> *Proof*. Two sets are equal when they have the same elements ([Definition 1](#def-set)), so it is enough to show that an element $x$ is in the left-hand side [if and only if](proof-writing.llms.md#def-necessary-sufficient) ($\iff$) it is in the right-hand side. Each step applies the definition named at its right: set difference ([Definition 26](#def-set-difference)), union ([Definition 22](#def-union)) or intersection ([Definition 24](#def-intersection)). For the first law:
 >
 > $$\begin{aligned}
 > x \in S \setminus \bigcup_{i \in I} A_i

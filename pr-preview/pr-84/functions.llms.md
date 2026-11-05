@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-04 19:44:14 (PST)
+Last modified: 2026-11-04 21:37:09 (PST)
 
 > **NOTE:**
 >
@@ -773,7 +773,7 @@ Figure 9: The [logistic function](#def-logistic-function) for $\eta$ from $-6$ 
 
 > **NOTE:**
 >
-> *Remark 8* (Cantor’s diagonal argument). The standard [proof](chapters/direct-proof.llms.md#def-proof) is Cantor’s diagonal argument: given any sequence of numbers in $[0, 1]$, it builds a number in $[0, 1]$ whose [decimal expansion](number-systems.llms.md#def-real-numbers) differs from the $n$th number’s in the $n$th digit (its $n$th decimal place, one of $0, 1, \ldots, 9$), so the sequence misses it ([Wikipedia contributors 2026b](#ref-wikipedia_cantors_diagonal_argument)). One way to choose the $n$th digit is to use $5$, unless the $n$th number’s $n$th digit is $5$, in which case use $4$. For example, if the sequence starts $0.1234\ldots$, $0.3579\ldots$, $0.2468\ldots$, the diagonal digits are $1$, $5$, and $6$, so the new number starts $0.545\ldots$, which differs from the first number in the first digit, from the second in the second digit, and from the third in the third digit.
+> *Remark 8* (Cantor’s diagonal argument). The standard [proof](proof-writing.llms.md#def-proof) is Cantor’s diagonal argument: given any sequence of numbers in $[0, 1]$, it builds a number in $[0, 1]$ whose [decimal expansion](number-systems.llms.md#def-real-numbers) differs from the $n$th number’s in the $n$th digit (its $n$th decimal place, one of $0, 1, \ldots, 9$), so the sequence misses it ([Wikipedia contributors 2026b](#ref-wikipedia_cantors_diagonal_argument)). One way to choose the $n$th digit is to use $5$, unless the $n$th number’s $n$th digit is $5$, in which case use $4$. For example, if the sequence starts $0.1234\ldots$, $0.3579\ldots$, $0.2468\ldots$, the diagonal digits are $1$, $5$, and $6$, so the new number starts $0.545\ldots$, which differs from the first number in the first digit, from the second in the second digit, and from the third in the third digit.
 
 # Definitions on this page
 

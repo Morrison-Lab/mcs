@@ -6,7 +6,7 @@ Ordinary and strong induction
 
 Published
 
-Last modified: 2026-11-04 19:44:14 (PST)
+Last modified: 2026-11-04 21:37:09 (PST)
 
 > **NOTE:**
 >
@@ -137,7 +137,7 @@ Last modified: 2026-11-04 19:44:14 (PST)
 >
 > **Example 2 (An induction that starts at 4)** Claim: $n^2 \le 2^n$ for every integer ([Definition: Integers](../chapters/direct-proof.llms.md#def-integers)) $n \ge 4$.
 >
-> Let $P(n)$ be the inequality $n^2 \le 2^n$ ([Definition: Inequality](https://morrison-lab.github.io/mds/proof-writing.html#def-inequality)), and follow [Remark 2](#rem-induction-template) with $n_0 = 4$. [Solution 2](#sol-squares-powers) shows that $n_0 = 1$ would not work, since $P(3)$ is false.
+> Let $P(n)$ be the inequality $n^2 \le 2^n$ ([Definition: Inequality](../proof-writing.llms.md#def-inequality)), and follow [Remark 2](#rem-induction-template) with $n_0 = 4$. [Solution 2](#sol-squares-powers) shows that $n_0 = 1$ would not work, since $P(3)$ is false.
 >
 > **Base case.** $4^2 = 16 \le 16 = 2^4$.
 >
@@ -221,7 +221,7 @@ Last modified: 2026-11-04 19:44:14 (PST)
 
 > **NOTE:**
 >
-> **Example 5 (Every term of the Fibonacci sequence is less than a power of 2)** Let $F_1, F_2, \ldots$ be the [Fibonacci sequence](#def-fibonacci-sequence). To prove $F_n < 2^n$ for every $n \in \mathbb{N}$, let $P(n)$ be the [inequality](https://morrison-lab.github.io/mds/proof-writing.html#def-inequality) $F_n < 2^n$ and use [Definition 2](#def-strong-induction) with $n_0 = 1$.
+> **Example 5 (Every term of the Fibonacci sequence is less than a power of 2)** Let $F_1, F_2, \ldots$ be the [Fibonacci sequence](#def-fibonacci-sequence). To prove $F_n < 2^n$ for every $n \in \mathbb{N}$, let $P(n)$ be the [inequality](../proof-writing.llms.md#def-inequality) $F_n < 2^n$ and use [Definition 2](#def-strong-induction) with $n_0 = 1$.
 >
 > **[Base cases](../chapters/induction.llms.md#def-proof-by-induction),** $n = 1$ and $n = 2$. The step below uses the two entries $F_{n-1}$ and $F_{n-2}$ before $F_n$, which do not exist for $n = 1$ and $n = 2$, so these two cases are shown directly:
 >
