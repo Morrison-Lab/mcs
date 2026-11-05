@@ -6,7 +6,7 @@ Probability and statistics describe events, outcomes, and parameters as sets.
 This page collects the definitions of sets
 that the Morrison Lab's probability and statistics notes build on.
 The [Functions](functions.qmd) page defines functions between sets,
-and the Expressions and Algorithms page defines
+and the [Expressions and Algorithms](expressions-algorithms.qmd) page defines
 the expressions that write functions down and the algorithms that compute them.
 
 :::
