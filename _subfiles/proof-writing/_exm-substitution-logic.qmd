@@ -1,0 +1,15 @@
+:::{#exm-substitution-logic}
+#### Simplifying part of a proposition
+<!-- no-figure: a one-line rewriting; nothing to plot -->
+
+By [double negation](#thm-double-negation),
+$\neg \neg Q \equiv Q$.
+Take $F$ to be $\neg P \lor \neg \neg Q$,
+with $A = \neg \neg Q$ and $B = Q$.
+By [replacing a part by an equivalent part](#thm-substitution-logic),
+
+$$
+\neg P \lor \neg \neg Q \equiv \neg P \lor Q.
+$$
+
+:::

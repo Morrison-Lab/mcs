@@ -1,0 +1,13 @@
+:::{#exm-distributive}
+#### Distributing "and" over "or"
+<!-- no-figure: a rewording of one sentence; nothing to plot -->
+
+Let $n$ be an [integer](number-systems.qmd#def-integers).
+"$n$ is [even](number-systems.qmd#def-even-odd), and $n > 0$ or $n < 0$"
+has the form $A \land (B \lor C)$.
+By the first [distributive law](#thm-distributive),
+it says the same thing as
+"$n$ is even and $n > 0$, or $n$ is even and $n < 0$",
+which has the form $(A \land B) \lor (A \land C)$.
+
+:::
