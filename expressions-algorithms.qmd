@@ -11,3 +11,8 @@ format:
 ---
 
 {{< include _expressions-algorithms.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
