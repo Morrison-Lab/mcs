@@ -52,7 +52,7 @@ the exercises are new.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/equivalence-negation/_tautology_def.qmd >}}
+{{< include ../_subfiles/proof-writing/_tautology_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -60,7 +60,7 @@ the exercises are new.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/equivalence-negation/_contradiction_def.qmd >}}
+{{< include ../_subfiles/proof-writing/_contradiction_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -72,7 +72,7 @@ the exercises are new.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/equivalence-negation/_equivalence-iff_thm.qmd >}}
+{{< include ../_subfiles/proof-writing/_equivalence-iff_thm.qmd >}}
 
 {{< slidebreak >}}
 
@@ -88,7 +88,7 @@ the exercises are new.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/equivalence-negation/_distributive_thm.qmd >}}
+{{< include ../_subfiles/proof-writing/_distributive_thm.qmd >}}
 
 {{< slidebreak >}}
 
@@ -108,7 +108,7 @@ the exercises are new.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/equivalence-negation/_double-negation_thm.qmd >}}
+{{< include ../_subfiles/proof-writing/_double-negation_thm.qmd >}}
 
 {{< slidebreak >}}
 
@@ -116,7 +116,7 @@ the exercises are new.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/equivalence-negation/_substitution_thm.qmd >}}
+{{< include ../_subfiles/proof-writing/_substitution-logic_thm.qmd >}}
 
 {{< slidebreak >}}
 
@@ -140,7 +140,7 @@ the exercises are new.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/equivalence-negation/_negate-conditional_thm.qmd >}}
+{{< include ../_subfiles/proof-writing/_negate-conditional_thm.qmd >}}
 
 {{< slidebreak >}}
 
@@ -148,7 +148,7 @@ the exercises are new.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/equivalence-negation/_conditional-as-or_cor.qmd >}}
+{{< include ../_subfiles/proof-writing/_conditional-as-or_cor.qmd >}}
 
 {{< slidebreak >}}
 
@@ -164,7 +164,7 @@ the exercises are new.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/equivalence-negation/_negate-quantifiers_thm.qmd >}}
+{{< include ../_subfiles/proof-writing/_negate-quantifiers_thm.qmd >}}
 
 {{< slidebreak >}}
 
