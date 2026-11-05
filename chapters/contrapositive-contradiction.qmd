@@ -52,7 +52,7 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/contrapositive-contradiction/_congruence_def.qmd >}}
+{{< include ../_subfiles/number-systems/_congruence_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -124,7 +124,7 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/contrapositive-contradiction/_contradiction_thm.qmd >}}
+{{< include ../_subfiles/proof-writing/_contradiction-works_thm.qmd >}}
 
 {{< slidebreak >}}
 
@@ -196,7 +196,7 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/contrapositive-contradiction/_prime_def.qmd >}}
+{{< include ../_subfiles/number-systems/_prime_def.qmd >}}
 
 {{< slidebreak >}}
 

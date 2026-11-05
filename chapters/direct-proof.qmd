@@ -40,7 +40,7 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/direct-proof/_argument_def.qmd >}}
+{{< include ../_subfiles/proof-writing/_logical-argument_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -56,7 +56,7 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/direct-proof/_rule-of-inference_def.qmd >}}
+{{< include ../_subfiles/proof-writing/_rule-of-inference_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -108,7 +108,7 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/direct-proof/_divides_def.qmd >}}
+{{< include ../_subfiles/number-systems/_divides_def.qmd >}}
 
 {{< slidebreak >}}
 
