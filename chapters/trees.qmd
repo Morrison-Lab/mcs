@@ -359,7 +359,7 @@ the examples, the exercises and the Racket functions are new.
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/expressions-algorithms/_def-parse-tree.qmd >}}
+{{< include ../_subfiles/expressions-algorithms/_parse-tree_def.qmd >}}
 
 {{< slidebreak >}}
 

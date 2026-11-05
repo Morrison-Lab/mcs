@@ -11,24 +11,24 @@ then adds the stronger form, [strong induction](induction.qmd#def-strong-inducti
 
 # Recursively defined sequences
 
-{{< include _subfiles/induction/_def-recursive-sequence.qmd >}}
+{{< include _subfiles/induction/_recursive-sequence_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/induction/_exm-recursive-sequence.qmd >}}
+{{< include _subfiles/induction/_recursive-sequence_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/induction/_def-fibonacci-sequence.qmd >}}
+{{< include _subfiles/induction/_fibonacci-sequence_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/induction/_exm-fibonacci-sequence.qmd >}}
+{{< include _subfiles/induction/_fibonacci-sequence_exm.qmd >}}
 
 # Strong induction
 
-{{< include _subfiles/induction/_def-strong-induction.qmd >}}
+{{< include _subfiles/induction/_strong-induction_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/induction/_exm-strong-induction.qmd >}}
+{{< include _subfiles/induction/_strong-induction_exm.qmd >}}

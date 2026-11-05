@@ -55,15 +55,15 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/proof-writing/_def-quantifier.qmd >}}
+{{< include ../_subfiles/proof-writing/_quantifier_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/proof-writing/_def-universal-quantifier.qmd >}}
+{{< include ../_subfiles/proof-writing/_universal-quantifier_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/proof-writing/_def-existential-quantifier.qmd >}}
+{{< include ../_subfiles/proof-writing/_existential-quantifier_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -83,7 +83,7 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/sets/_def-vacuous-truth.qmd >}}
+{{< include ../_subfiles/sets/_vacuous-truth_def.qmd >}}
 
 # Counterexamples {#sec-counterexamples}
 
@@ -95,7 +95,7 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/proof-writing/_def-counterexample.qmd >}}
+{{< include ../_subfiles/proof-writing/_counterexample_def.qmd >}}
 
 {{< slidebreak >}}
 

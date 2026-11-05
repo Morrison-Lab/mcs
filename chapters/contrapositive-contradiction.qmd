@@ -72,7 +72,7 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/proof-writing/_def-contrapositive.qmd >}}
+{{< include ../_subfiles/proof-writing/_contrapositive_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -80,7 +80,7 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/proof-writing/_thm-contrapositive.qmd >}}
+{{< include ../_subfiles/proof-writing/_contrapositive_thm.qmd >}}
 
 {{< slidebreak >}}
 
@@ -88,7 +88,7 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/proof-writing/_def-proof-by-contrapositive.qmd >}}
+{{< include ../_subfiles/proof-writing/_proof-by-contrapositive_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -116,11 +116,11 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/proof-writing/_def-proof-by-contradiction.qmd >}}
+{{< include ../_subfiles/proof-writing/_proof-by-contradiction_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/proof-writing/_exm-proof-by-contradiction.qmd >}}
+{{< include ../_subfiles/proof-writing/_proof-by-contradiction_exm.qmd >}}
 
 {{< slidebreak >}}
 
@@ -160,19 +160,19 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/number-systems/_def-rational-numbers.qmd >}}
+{{< include ../_subfiles/number-systems/_rational-numbers_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/number-systems/_exm-rational-numbers.qmd >}}
+{{< include ../_subfiles/number-systems/_rational-numbers_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/number-systems/_def-irrational-numbers.qmd >}}
+{{< include ../_subfiles/number-systems/_irrational-numbers_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/number-systems/_exm-irrational-numbers.qmd >}}
+{{< include ../_subfiles/number-systems/_irrational-numbers_exm.qmd >}}
 
 {{< slidebreak >}}
 

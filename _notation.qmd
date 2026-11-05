@@ -58,15 +58,15 @@ defined in the `latex-macros` submodule's `macros.qmd`.
 
 # Subscripts and parentheses {#sec-subscripts-parentheses}
 
-{{< include _subfiles/notation/_rem-subscript-parentheses-convention.qmd >}}
+{{< include _subfiles/notation/_subscript-parentheses-convention_rem.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/notation/_prose-subscript-parentheses-alternatives.qmd >}}
+{{< include _subfiles/notation/_subscript-parentheses-alternatives_prose.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/notation/_exm-process-notation.qmd >}}
+{{< include _subfiles/notation/_process-notation_exm.qmd >}}
 
 # Why is notation in probability and statistics so inconsistent and disorganized?
 
