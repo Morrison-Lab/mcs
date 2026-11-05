@@ -6,7 +6,7 @@ What follows from what, and how to write it down
 
 Published
 
-Last modified: 2026-11-05 02:48:21 (PST)
+Last modified: 2026-11-05 07:57:21 (PST)
 
 > **NOTE:**
 >
@@ -36,7 +36,7 @@ Last modified: 2026-11-05 02:48:21 (PST)
 
 > **NOTE:**
 >
-> **Definition 1 (Argument)** An **argument** is a list of propositions ([Definition: Proposition, statement](../chapters/propositional-logic.llms.md#def-proposition)), called its premises, together with one more proposition, called its conclusion. An argument is written with “so” or $\therefore$ before its conclusion.
+> **Definition 1 (Logical argument)** A **logical argument** is a list of [propositions](../chapters/propositional-logic.llms.md#def-proposition) $P_1, \ldots, P_n$ together with one more [proposition](../chapters/propositional-logic.llms.md#def-proposition) $Q$. It is written with “so” or $\therefore$ before $Q$.
 
 > **NOTE:**
 >
@@ -52,7 +52,9 @@ Last modified: 2026-11-05 02:48:21 (PST)
 
 > **NOTE:**
 >
-> **Definition 3 (Rule of inference)** A **rule of inference** is a pattern of [argument](#def-logical-argument), written in terms of propositions $P, Q, \ldots$, whose premises logically entail its conclusion ([Definition 2](#def-logical-entailment)) whatever propositions are put in place of $P, Q, \ldots$. It is written with its premises above a line and its conclusion below: $$\frac{P_1, \ldots, P_n}{Q}.$$
+> **Definition 3 (Rule of inference)** A **rule of inference** is a pattern of [logical argument](#def-logical-argument), written with [propositions](../chapters/propositional-logic.llms.md#def-proposition) $P, Q, \ldots$ as placeholders, whose [premises](../proof-writing.llms.md#def-premise) [logically entail](#def-logical-entailment) its [conclusion](../proof-writing.llms.md#def-conclusion) whatever propositions are put in place of $P, Q, \ldots$. It is written with its premises above a line and its conclusion below:
+>
+> $$\frac{P_1, \ldots, P_n}{Q}.$$
 
 > **NOTE:**
 >
@@ -160,7 +162,7 @@ Last modified: 2026-11-05 02:48:21 (PST)
 
 > **NOTE:**
 >
-> **Definition 9 (Divides)** Let $a$ and $b$ be integers ([Definition 4](#def-integers)). We say that $a$ **divides** $b$, written $a \mid b$, if $b = a c$ for some integer $c$. When $a$ does not divide $b$, we write $a \nmid b$.
+> **Definition 9 (Divides)** Let $a$ and $b$ each be an [integer](#def-integers). We say that $a$ **divides** $b$, written $a \mid b$, if $b = a c$ for some integer $c$. When $a$ does not divide $b$, we write $a \nmid b$.
 
 > **NOTE:**
 >
@@ -280,7 +282,7 @@ Last modified: 2026-11-05 02:48:21 (PST)
 
 # Definitions on this page
 
-- [Definition 1 (Argument)](#def-logical-argument)
+- [Definition 1 (Logical argument)](#def-logical-argument)
 - [Definition 2 (Logical entailment, logical consequence, deductive consequence)](#def-logical-entailment)
 - [Definition 3 (Rule of inference)](#def-rule-of-inference)
 - [Definition 4 (Integers)](#def-integers)
