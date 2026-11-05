@@ -6,7 +6,7 @@ For all, there exists, and the order they come in
 
 Published
 
-Last modified: 2026-11-04 23:28:18 (PST)
+Last modified: 2026-11-05 03:04:30 (PST)
 
 > **NOTE:**
 >
@@ -37,7 +37,7 @@ Last modified: 2026-11-04 23:28:18 (PST)
 
 > **NOTE:**
 >
-> **Definition 1 (Domain (domain of discourse, universe of discourse))** The **domain** of a predicate ([Definition: Predicate](../chapters/propositional-logic.llms.md#def-predicate)), also called its **domain of discourse** or **universe of discourse**, is the set of values its variable may take.
+> **Definition 1 (Domain of discourse, universe of discourse)** The **domain of discourse** (or **universe of discourse**) of a [predicate](../chapters/propositional-logic.llms.md#def-predicate) $P(x)$ is the [set](../chapters/sets.llms.md#def-set) of values its variable $x$ may take. A predicate in several variables has a domain of discourse for each variable.
 
 > **NOTE:**
 >
@@ -235,7 +235,7 @@ Last modified: 2026-11-04 23:28:18 (PST)
 
 # Definitions on this page
 
-- [Definition 1 (Domain (domain of discourse, universe of discourse))](#def-domain-of-discourse)
+- [Definition 1 (Domain of discourse, universe of discourse)](#def-domain-of-discourse)
 - [Definition 2 (Quantifier)](#def-quantifier)
 - [Definition 3 (Universal quantifier)](#def-universal-quantifier)
 - [Definition 4 (Existential quantifier)](#def-existential-quantifier)
