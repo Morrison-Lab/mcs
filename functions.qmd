@@ -1,0 +1,19 @@
+---
+title: "Functions"
+format:
+  html: default
+  revealjs:
+    output-file: functions-slides.html
+  pdf:
+    output-file: functions-handout.pdf
+  docx:
+    output-file: functions.docx
+---
+
+{{< include _functions.qmd >}}
+
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
