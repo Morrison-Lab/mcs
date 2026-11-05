@@ -23,6 +23,7 @@ Suggests:
     ggplot2,
     htmltools,
     plotly,
+    reticulate,
     tibble
 VignetteBuilder: knitr
 Imports:

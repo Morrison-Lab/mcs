@@ -30,6 +30,7 @@ jobs:
         any::ggplot2
         any::plotly
         any::htmltools
+        any::reticulate
       tinytex: true
       # One bare `quarto render` of every declared format, as before.
       formats: ''
