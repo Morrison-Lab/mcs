@@ -1,0 +1,27 @@
+:::{#thm-negate-conditional}
+#### Negating a conditional
+
+For [propositions](#def-proposition) $P$ and $Q$,
+
+$$
+\neg (P \Rightarrow Q) \equiv P \land \neg Q.
+$$
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+::: proof
+
+By the definition of [implies](#def-implies),
+$P \Rightarrow Q$ is false
+exactly when $P$ is true and $Q$ is false.
+So $\neg (P \Rightarrow Q)$ is true exactly in that row of the [truth table](#def-truth-table).
+By the definition of [and](#def-and),
+$P \land \neg Q$ is true
+exactly when $P$ is true and $\neg Q$ is true.
+That is the same row.
+
+:::
+
+:::
