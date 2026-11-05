@@ -204,8 +204,8 @@ We can use any of:
 - $\Rightarrow$ (`\Rightarrow`),
 - $\models$ (`\models`)
 
-to denote logical entailment (@def-logical-entailment).
-$\Rightarrow$ also writes the connective "implies" (@def-implies);
+to denote [logical entailment](#def-logical-entailment).
+$\Rightarrow$ also writes the connective ["implies"](#def-implies);
 $P$ entails $Q$ exactly when $P \Rightarrow Q$ is true
 for every choice of values for the variables in $P$ and $Q$.
 
