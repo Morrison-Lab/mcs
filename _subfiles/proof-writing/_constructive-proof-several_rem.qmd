@@ -3,5 +3,6 @@
 
 A [proposition](#def-proposition) can open with several [existential quantifiers](#def-existential-quantifier).
 A [constructive proof](#def-constructive-proof) of it names one element for each [quantifier](#def-quantifier).
+For example, a constructive proof of "there are integers $m$ and $n$ with $m + n = 1$" names one value of $m$ and one of $n$.
 
 :::

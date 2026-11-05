@@ -41,7 +41,7 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/iff-existence-disproof/_biconditional-split_thm.qmd >}}
+{{< include ../_subfiles/proof-writing/_biconditional-split_thm.qmd >}}
 
 {{< slidebreak >}}
 
@@ -53,7 +53,7 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/iff-existence-disproof/_equivalent-cycle_thm.qmd >}}
+{{< include ../_subfiles/proof-writing/_equivalent-cycle_thm.qmd >}}
 
 {{< slidebreak >}}
 
@@ -69,7 +69,11 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/iff-existence-disproof/_constructive_def.qmd >}}
+{{< include ../_subfiles/proof-writing/_constructive-proof_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../_subfiles/proof-writing/_constructive-proof-several_rem.qmd >}}
 
 {{< slidebreak >}}
 
@@ -77,7 +81,7 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/iff-existence-disproof/_nonconstructive_def.qmd >}}
+{{< include ../_subfiles/proof-writing/_nonconstructive-proof_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -93,7 +97,7 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/iff-existence-disproof/_disproof_def.qmd >}}
+{{< include ../_subfiles/proof-writing/_disproof_def.qmd >}}
 
 {{< slidebreak >}}
 
