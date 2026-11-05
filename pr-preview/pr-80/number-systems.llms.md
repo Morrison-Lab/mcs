@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-04 18:23:35 (PST)
+Last modified: 2026-11-04 18:49:49 (PST)
 
 > **NOTE:**
 >
@@ -257,9 +257,7 @@ Last modified: 2026-11-04 18:23:35 (PST)
 - [Definition 14 (Floor)](#def-floor)
 - [Definition 15 (Irrational numbers)](#def-irrational-numbers)
 
-Back to top
-
-## References
+# References
 
 Rudin, Walter. 1976. *Principles of Mathematical Analysis*. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill.
 
@@ -286,3 +284,5 @@ Wikipedia contributors. 2026j. *Rational Number — Wikipedia, the Free Encyclop
 Wikipedia contributors. 2026k. *Real Number — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Real_number>.
 
 Wikipedia contributors. 2026l. *Square Root of 2 — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Square_root_of_2>.
+
+Back to top
