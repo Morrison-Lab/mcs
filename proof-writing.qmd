@@ -1,0 +1,41 @@
+---
+title: "Proof Writing"
+format:
+  html: default
+  revealjs:
+    output-file: proof-writing-slides.html
+  pdf:
+    output-file: proof-writing-handout.pdf
+  docx:
+    output-file: proof-writing.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include _proof-writing.qmd >}}
+
+# Further reading {#sec-further-reading}
+
+- @velleman2019prove
+  is a structured introduction to proof techniques
+  such as [direct proof](#def-direct-proof), [proof by contradiction](proof-writing.qmd#def-proof-by-contradiction), and induction.
+- @barkerplummer2011language
+  treats proofs as [formal proofs](#def-formal-proof)
+  in [propositional logic](#def-propositional-logic)
+  and [first-order logic](#def-first-order-logic).
+
+Free course materials on formal logic:
+
+- Thomas Icard's [Phil 150/250, Mathematical Logic course notes](https://web.stanford.edu/~icard/phil150)
+  (Stanford) review sets, relations and functions,
+  then cover propositional, modal and first-order logic.
+- John Wilcox's [logic handouts](https://www.johnwilcox.org/logic.html)
+  supplement the same Stanford course,
+  with a handout per week on the syntax and semantics of propositional and first-order logic, natural deduction and metalogic.
+- Eric Pacuit's [Phil 151: First Order Logic](https://cs.stanford.edu/~epacuit/classes/phil151winter09.html)
+  (Stanford, Winter 2009) posts a syllabus, a modal logic study guide and problem sets.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

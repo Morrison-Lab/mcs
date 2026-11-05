@@ -114,6 +114,8 @@ website:
             href: functions.qmd
           - text: "Expressions and Algorithms"
             href: expressions-algorithms.qmd
+          - text: "Proof Writing"
+            href: proof-writing.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mcs
@@ -175,6 +177,7 @@ website:
           - sets.qmd
           - functions.qmd
           - expressions-algorithms.qmd
+          - proof-writing.qmd
 
 callouty-theorem:
   thm:
