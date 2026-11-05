@@ -331,7 +331,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-04 21:49:26 (PST)</p>
+  <p class="date">Last modified: 2026-11-04 22:27:55 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -400,8 +400,14 @@
 </section>
 <section class="slide level2">
 
+<div id="def-denotes" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3 (Denotes)</strong></span> An <a href="#/def-expression">expression</a> <strong>denotes</strong> a <a href="../chapters/functional-programming.html#def-function">function</a> when evaluating the expression at each <a href="../chapters/functional-programming.html#def-argument">input</a> of the function, with the expression’s variables taking that input, gives the function’s <a href="../chapters/functional-programming.html#def-value">value</a> at that input.</p>
+</div>
+</section>
+<section class="slide level2">
+
 <div id="def-racket-expression" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Racket expression, prefix notation)</strong></span> A <strong>Racket expression</strong> (<a href="#/def-expression" class="quarto-xref">Definition&nbsp;2</a>) is one of:</p>
+<p><span class="theorem-title"><strong>Definition 4 (Racket expression, prefix notation)</strong></span> A <strong>Racket expression</strong> (<a href="#/def-expression" class="quarto-xref">Definition&nbsp;2</a>) is one of:</p>
 <ul>
 <li>a constant, such as the number <code>7</code>;</li>
 <li>a name, such as <code>x</code> or <code>+</code>;</li>
@@ -413,7 +419,7 @@
 <section class="slide level2">
 
 <div id="rem-evaluation" class="proof remark">
-<p><span class="proof-title"><em>Remark 2</em> (How Racket evaluates an application). </span>To <strong>evaluate</strong> an application <code>(f e1 ... en)</code> (<a href="#/def-racket-expression" class="quarto-xref">Definition&nbsp;3</a>), Racket evaluates each operand <code>e1</code>, …, <code>en</code> to a value, then applies <code>f</code> to those values. In part 1 of <a href="#/exr-evaluate-nested" class="quarto-xref">Exercise&nbsp;1</a>:</p>
+<p><span class="proof-title"><em>Remark 2</em> (How Racket evaluates an application). </span>To <strong>evaluate</strong> an application <code>(f e1 ... en)</code> (<a href="#/def-racket-expression" class="quarto-xref">Definition&nbsp;4</a>), Racket evaluates each operand <code>e1</code>, …, <code>en</code> to a value, then applies <code>f</code> to those values. In part 1 of <a href="#/exr-evaluate-nested" class="quarto-xref">Exercise&nbsp;1</a>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a aria-label="1"></a>(* (+ 1 2) (- 10 4))</span>
 <span id="cb1-2"><a aria-label="2"></a>= (* 3 (- 10 4))</span>
 <span id="cb1-3"><a aria-label="3"></a>= (* 3 6)</span>
@@ -453,28 +459,28 @@
 <section class="slide level2">
 
 <div id="def-argument" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Argument, input)</strong></span> An <strong>argument</strong> (or <strong>input</strong>) of a <a href="#/def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is an element <span class="math inline">\(a \in A\)</span> that <span class="math inline">\(f\)</span> is applied to.</p>
+<p><span class="theorem-title"><strong>Definition 5 (Argument, input)</strong></span> An <strong>argument</strong> (or <strong>input</strong>) of a <a href="#/def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is an element <span class="math inline">\(a \in A\)</span> that <span class="math inline">\(f\)</span> is applied to.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-value" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Value, output)</strong></span> The <strong>value</strong> (or <strong>output</strong>) of a <a href="#/def-function">function</a> <span class="math inline">\(f : A \to B\)</span> at an <a href="#/def-argument">argument</a> <span class="math inline">\(a \in A\)</span> is the element <span class="math inline">\(f(a) \in B\)</span> that <span class="math inline">\(f\)</span> assigns to <span class="math inline">\(a\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 6 (Value, output)</strong></span> The <strong>value</strong> (or <strong>output</strong>) of a <a href="#/def-function">function</a> <span class="math inline">\(f : A \to B\)</span> at an <a href="#/def-argument">argument</a> <span class="math inline">\(a \in A\)</span> is the element <span class="math inline">\(f(a) \in B\)</span> that <span class="math inline">\(f\)</span> assigns to <span class="math inline">\(a\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-racket-define" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Defining a function in Racket)</strong></span> The Racket definition</p>
+<p><span class="theorem-title"><strong>Definition 7 (Defining a function in Racket)</strong></span> The Racket definition</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb3-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>f x1 ... xn<span class="op">)</span></span>
 <span id="cb3-2"><a aria-label="2"></a>  body<span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>defines a function named <code>f</code> with <strong>parameters</strong> <code>x1</code>, …, <code>xn</code>: names that stand for its arguments (<a href="#/def-argument" class="quarto-xref">Definition&nbsp;4</a>). To evaluate an application <code>(f a1 ... an)</code>, Racket evaluates the arguments <code>a1</code>, …, <code>an</code>, replaces each parameter in <code>body</code> by the value of its argument, and evaluates the result. The value of the application is the value (<a href="#/def-value" class="quarto-xref">Definition&nbsp;5</a>) of <code>f</code> at those arguments.</p>
+<p>defines a function named <code>f</code> with <strong>parameters</strong> <code>x1</code>, …, <code>xn</code>: names that stand for its arguments (<a href="#/def-argument" class="quarto-xref">Definition&nbsp;5</a>). To evaluate an application <code>(f a1 ... an)</code>, Racket evaluates the arguments <code>a1</code>, …, <code>an</code>, replaces each parameter in <code>body</code> by the value of its argument, and evaluates the result. The value of the application is the value (<a href="#/def-value" class="quarto-xref">Definition&nbsp;6</a>) of <code>f</code> at those arguments.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-substitution" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1 (Replacing a parameter by its argument)</strong></span> With <code>h</code> from <a href="#/exr-formula-from-code" class="quarto-xref">Exercise&nbsp;2</a>, <a href="#/def-racket-define" class="quarto-xref">Definition&nbsp;6</a> evaluates <code>(h 5)</code> in four steps:</p>
+<p><span class="theorem-title"><strong>Example 1 (Replacing a parameter by its argument)</strong></span> With <code>h</code> from <a href="#/exr-formula-from-code" class="quarto-xref">Exercise&nbsp;2</a>, <a href="#/def-racket-define" class="quarto-xref">Definition&nbsp;7</a> evaluates <code>(h 5)</code> in four steps:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a aria-label="1"></a>(h 5)</span>
 <span id="cb4-2"><a aria-label="2"></a>= (- (* 5 5) (* 2 5))</span>
 <span id="cb4-3"><a aria-label="3"></a>= (- 25 (* 2 5))</span>
@@ -530,20 +536,20 @@ p(a) =
 <section class="slide level2">
 
 <div id="def-booleans" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (True and false in Racket)</strong></span> Racket writes the two truth values as <code>#t</code> (true) and <code>#f</code> (false). A comparison such as <code>(&lt; 4 5)</code> or <code>(= 3 7)</code> returns one of them, and <code>and</code>, <code>or</code> and <code>not</code> combine them: <code>(and (&lt; 1 2) (&lt; 3 2))</code> returns <code>#f</code>.</p>
+<p><span class="theorem-title"><strong>Definition 8 (True and false in Racket)</strong></span> Racket writes the two truth values as <code>#t</code> (true) and <code>#f</code> (false). A comparison such as <code>(&lt; 4 5)</code> or <code>(= 3 7)</code> returns one of them, and <code>and</code>, <code>or</code> and <code>not</code> combine them: <code>(and (&lt; 1 2) (&lt; 3 2))</code> returns <code>#f</code>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-if-cond" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (<code>if</code> and <code>cond</code>)</strong></span> The expression <code>(if test a b)</code> evaluates <code>test</code>, and returns the value of <code>a</code> if <code>test</code> is true and the value of <code>b</code> if it is false.</p>
+<p><span class="theorem-title"><strong>Definition 9 (<code>if</code> and <code>cond</code>)</strong></span> The expression <code>(if test a b)</code> evaluates <code>test</code>, and returns the value of <code>a</code> if <code>test</code> is true and the value of <code>b</code> if it is false.</p>
 <p>The expression</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb6-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">cond</span> <span class="op">[</span>test1 a1<span class="op">]</span></span>
 <span id="cb6-2"><a aria-label="2"></a>      <span class="op">[</span>test2 a2<span class="op">]</span></span>
 <span id="cb6-3"><a aria-label="3"></a>      ...</span>
 <span id="cb6-4"><a aria-label="4"></a>      <span class="op">[</span><span class="kw">else</span> an<span class="op">])</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>evaluates the tests in order and returns the value of the expression beside the first true one, or the value of <code>an</code> if none is true. Like a function defined by cases in mathematics, each case of a <code>cond</code> applies only when every case before it fails.</p>
-<p><code>if</code> and <code>cond</code> look like applications (<a href="#/def-racket-expression" class="quarto-xref">Definition&nbsp;3</a>), but they are not: an application evaluates all of its operands (<a href="#/rem-evaluation" class="quarto-xref">Remark&nbsp;2</a>), while <code>if</code> and <code>cond</code> evaluate only the tests they need and the one branch they return. <code>and</code>, <code>or</code> and <code>define</code> are not applications either.</p>
+<p><code>if</code> and <code>cond</code> look like applications (<a href="#/def-racket-expression" class="quarto-xref">Definition&nbsp;4</a>), but they are not: an application evaluates all of its operands (<a href="#/rem-evaluation" class="quarto-xref">Remark&nbsp;2</a>), while <code>if</code> and <code>cond</code> evaluate only the tests they need and the one branch they return. <code>and</code>, <code>or</code> and <code>define</code> are not applications either.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -555,7 +561,7 @@ p(a) =
 -x &amp; \text{if } x &lt; 0, \\
 x &amp; \text{otherwise}
 \end{cases}
-\]</span> has two cases, so one <code>if</code> (<a href="#/def-if-cond" class="quarto-xref">Definition&nbsp;8</a>) is enough:</p>
+\]</span> has two cases, so one <code>if</code> (<a href="#/def-if-cond" class="quarto-xref">Definition&nbsp;9</a>) is enough:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb7-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>absolute x<span class="op">)</span></span>
 <span id="cb7-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(&lt;</span> x <span class="dv">0</span><span class="op">)</span></span>
 <span id="cb7-3"><a aria-label="3"></a>      <span class="op">(-</span> x<span class="op">)</span></span>
@@ -597,16 +603,16 @@ x &amp; \text{otherwise}
 <section class="slide level2">
 
 <div id="def-side-effect" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Side effect)</strong></span> A <strong>side effect</strong> of a piece of code is any change it makes besides returning a value, such as changing a variable, printing, or writing a file. <code>next_id</code> in <a href="#/exr-next-id" class="quarto-xref">Exercise&nbsp;4</a> has a side effect: it changes <code>count</code>.</p>
+<p><span class="theorem-title"><strong>Definition 10 (Side effect)</strong></span> A <strong>side effect</strong> of a piece of code is any change it makes besides returning a value, such as changing a variable, printing, or writing a file. <code>next_id</code> in <a href="#/exr-next-id" class="quarto-xref">Exercise&nbsp;4</a> has a side effect: it changes <code>count</code>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-pure-function" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Pure function)</strong></span> A function in a program is <strong>pure</strong> <span class="citation" data-cites="wikipedia_pure_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026e</a>)</span> if</p>
+<p><span class="theorem-title"><strong>Definition 11 (Pure function)</strong></span> A function in a program is <strong>pure</strong> <span class="citation" data-cites="wikipedia_pure_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026e</a>)</span> if</p>
 <ul>
 <li>it returns the same value whenever it is called with the same arguments, and</li>
-<li>it has no side effects (<a href="#/def-side-effect" class="quarto-xref">Definition&nbsp;9</a>).</li>
+<li>it has no side effects (<a href="#/def-side-effect" class="quarto-xref">Definition&nbsp;10</a>).</li>
 </ul>
 <p>A pure function computes a mathematical function (<a href="#/def-function" class="quarto-xref">Definition&nbsp;1</a>) of its arguments.</p>
 </div>
@@ -614,13 +620,13 @@ x &amp; \text{otherwise}
 <section class="slide level2">
 
 <div id="def-functional-programming" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Functional programming)</strong></span> <strong>Functional programming</strong> <span class="citation" data-cites="wikipedia_functional_programming">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026c</a>)</span> is a style of programming in which a program is built by defining and applying pure functions (<a href="#/def-pure-function" class="quarto-xref">Definition&nbsp;10</a>), rather than by running statements that change variables.</p>
+<p><span class="theorem-title"><strong>Definition 12 (Functional programming)</strong></span> <strong>Functional programming</strong> <span class="citation" data-cites="wikipedia_functional_programming">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026c</a>)</span> is a style of programming in which a program is built by defining and applying pure functions (<a href="#/def-pure-function" class="quarto-xref">Definition&nbsp;11</a>), rather than by running statements that change variables.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="rem-replace-by-value" class="proof remark">
-<p><span class="proof-title"><em>Remark 3</em> (Why this course uses functional programming). </span>In a program built from pure functions (<a href="#/def-pure-function" class="quarto-xref">Definition&nbsp;10</a>), an expression can be replaced by its value anywhere it appears without changing what the program does. That is what makes evaluation by substitution (<a href="#/exm-substitution" class="quarto-xref">Example&nbsp;1</a>) work, and it is also how algebra works: <span class="math inline">\(h(5)\)</span> can be replaced by 15 in any formula. So a pure function can be checked with the same reasoning as a formula, and this course proves facts about programs that way.</p>
+<p><span class="proof-title"><em>Remark 3</em> (Why this course uses functional programming). </span>In a program built from pure functions (<a href="#/def-pure-function" class="quarto-xref">Definition&nbsp;11</a>), an expression can be replaced by its value anywhere it appears without changing what the program does. That is what makes evaluation by substitution (<a href="#/exm-substitution" class="quarto-xref">Example&nbsp;1</a>) work, and it is also how algebra works: <span class="math inline">\(h(5)\)</span> can be replaced by 15 in any formula. So a pure function can be checked with the same reasoning as a formula, and this course proves facts about programs that way.</p>
 <p><code>next_id</code> in <a href="#/exr-next-id" class="quarto-xref">Exercise&nbsp;4</a> is not pure, so <code>next_id() + next_id()</code> cannot be simplified to <code>2 * next_id()</code>. On a fresh start, <code>next_id() + next_id()</code> returns 3, from <span class="math inline">\(1 + 2\)</span>, but <code>2 * next_id()</code> returns 2. Racket can change variables too, with <code>set!</code>, but this course does not use it.</p>
 </div>
 </section></section>
@@ -649,7 +655,7 @@ x &amp; \text{otherwise}
 <section class="slide level2 scrollable">
 
 <div id="sol-twice" class="proof solution">
-<p><span class="proof-title"><em>Solution 5</em>. </span>Replace <code>f</code> and <code>x</code> in the body <code>(f (f x))</code> (<a href="#/def-racket-define" class="quarto-xref">Definition&nbsp;6</a>):</p>
+<p><span class="proof-title"><em>Solution 5</em>. </span>Replace <code>f</code> and <code>x</code> in the body <code>(f (f x))</code> (<a href="#/def-racket-define" class="quarto-xref">Definition&nbsp;7</a>):</p>
 <ol type="1">
 <li><code>(twice add-three 10)</code> is <code>(add-three (add-three 10))</code>, which is <code>(add-three 13)</code>, which returns 16.</li>
 <li><code>(twice h 4)</code> is <code>(h (h 4))</code>. Since <span class="math inline">\(h(4) = 16 - 8 = 8\)</span> and <span class="math inline">\(h(8) = 64 - 16 = 48\)</span>, it returns 48.</li>
@@ -660,13 +666,13 @@ x &amp; \text{otherwise}
 <section class="slide level2">
 
 <div id="def-higher-order" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Higher-order function)</strong></span> A <strong>higher-order function</strong> <span class="citation" data-cites="wikipedia_higher_order_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span> is a function that takes a function as an argument, or returns a function as its value. <code>twice</code> in <a href="#/exr-twice" class="quarto-xref">Exercise&nbsp;5</a> is a higher-order function.</p>
+<p><span class="theorem-title"><strong>Definition 13 (Higher-order function)</strong></span> A <strong>higher-order function</strong> <span class="citation" data-cites="wikipedia_higher_order_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span> is a function that takes a function as an argument, or returns a function as its value. <code>twice</code> in <a href="#/exr-twice" class="quarto-xref">Exercise&nbsp;5</a> is a higher-order function.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-map-filter" class="theorem example">
-<p><span class="theorem-title"><strong>Example 3 (<code>map</code> and <code>filter</code>)</strong></span> Racket’s <code>(list 5 7 9)</code> makes the list of 5, 7 and 9, which Racket prints as <code>'(5 7 9)</code>. Two built-in higher-order functions (<a href="#/def-higher-order" class="quarto-xref">Definition&nbsp;12</a>) work on lists:</p>
+<p><span class="theorem-title"><strong>Example 3 (<code>map</code> and <code>filter</code>)</strong></span> Racket’s <code>(list 5 7 9)</code> makes the list of 5, 7 and 9, which Racket prints as <code>'(5 7 9)</code>. Two built-in higher-order functions (<a href="#/def-higher-order" class="quarto-xref">Definition&nbsp;13</a>) work on lists:</p>
 <ul>
 <li><code>(map f L)</code> applies <code>f</code> to each element of the list <code>L</code>, and returns the list of results. With <code>add-three</code> from <a href="#/exr-twice" class="quarto-xref">Exercise&nbsp;5</a>, <code>(map add-three (list 5 7 9))</code> returns <code>'(8 10 12)</code>.</li>
 <li><code>(filter p L)</code> returns the list of the elements <code>x</code> of <code>L</code> for which <code>(p x)</code> is true. <code>(filter even? (list 5 6 7 8))</code> returns <code>'(6 8)</code>.</li>
@@ -732,10 +738,10 @@ x &amp; \text{otherwise}
 <section class="slide level2">
 
 <div id="def-lambda" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 13 (<code>lambda</code>)</strong></span> The Racket expression</p>
+<p><span class="theorem-title"><strong>Definition 14 (<code>lambda</code>)</strong></span> The Racket expression</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb12-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">lambda</span> <span class="op">(</span>x1 ... xn<span class="op">)</span></span>
 <span id="cb12-2"><a aria-label="2"></a>  body<span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>is a <strong><code>lambda</code> expression</strong>. Its value is the function with parameters <code>x1</code>, …, <code>xn</code> whose value at its arguments is the value of <code>body</code>, found as in <a href="#/def-racket-define" class="quarto-xref">Definition&nbsp;6</a>. The function has no name. The body may use any name defined where the <code>lambda</code> expression appears, as the body of the <code>lambda</code> in <code>pair-with</code> (<a href="#/exr-pair-with" class="quarto-xref">Exercise&nbsp;7</a>) uses <code>y</code>.</p>
+<p>is a <strong><code>lambda</code> expression</strong>. Its value is the function with parameters <code>x1</code>, …, <code>xn</code> whose value at its arguments is the value of <code>body</code>, found as in <a href="#/def-racket-define" class="quarto-xref">Definition&nbsp;7</a>. The function has no name. The body may use any name defined where the <code>lambda</code> expression appears, as the body of the <code>lambda</code> in <code>pair-with</code> (<a href="#/exr-pair-with" class="quarto-xref">Exercise&nbsp;7</a>) uses <code>y</code>.</p>
 <p>The definition <code>(define (f x) body)</code> is shorthand for <code>(define f (lambda (x) body))</code>: it gives the name <code>f</code> to the function the <code>lambda</code> expression makes.</p>
 <p><em>Video:</em> Jerry Cain uses <code>lambda</code> with <code>map</code> in Scheme, the language Racket grew out of, in <a href="https://www.youtube.com/watch?v=3LeCydausnk">Stanford CS 107 Lecture 22</a> <span class="citation" data-cites="cain2008cs107videos">(<a href="#/references" role="doc-biblioref" onclick="">Cain 2008</a>)</span>.</p>
 </div>
@@ -753,7 +759,7 @@ x &amp; \text{otherwise}
 <p><span class="theorem-title"><strong>Example 4 (A function that returns a function)</strong></span> The function <code>adder</code> takes a number <code>d</code> and returns a function:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb13-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>adder d<span class="op">)</span></span>
 <span id="cb13-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">lambda</span> <span class="op">(</span>x<span class="op">)</span> <span class="op">(+</span> x d<span class="op">)))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>(adder 3)</code> returns the function <span class="math inline">\(x \mapsto x + 3\)</span>, which still knows that <code>d</code> is 3 after <code>adder</code> has returned. So <code>adder</code> is a higher-order function (<a href="#/def-higher-order" class="quarto-xref">Definition&nbsp;12</a>), and its value can be used anywhere a function can:</p>
+<p><code>(adder 3)</code> returns the function <span class="math inline">\(x \mapsto x + 3\)</span>, which still knows that <code>d</code> is 3 after <code>adder</code> has returned. So <code>adder</code> is a higher-order function (<a href="#/def-higher-order" class="quarto-xref">Definition&nbsp;13</a>), and its value can be used anywhere a function can:</p>
 <ul>
 <li><code>((adder 3) 4)</code> returns 7.</li>
 <li><code>(twice (adder 3) 10)</code>, with <code>twice</code> from <a href="#/exr-twice" class="quarto-xref">Exercise&nbsp;5</a>, returns 16.</li>
@@ -764,13 +770,13 @@ x &amp; \text{otherwise}
 <section class="slide level2">
 
 <div id="def-let" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (<code>let</code>)</strong></span> The Racket expression</p>
+<p><span class="theorem-title"><strong>Definition 15 (<code>let</code>)</strong></span> The Racket expression</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb14-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">let</span> <span class="op">([</span>name1 e1<span class="op">]</span></span>
 <span id="cb14-2"><a aria-label="2"></a>      ...</span>
 <span id="cb14-3"><a aria-label="3"></a>      <span class="op">[</span>namen en<span class="op">])</span></span>
 <span id="cb14-4"><a aria-label="4"></a>  body<span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>evaluates <code>e1</code>, …, <code>en</code>, gives each value its name, and returns the value of <code>body</code>, which can use those names. The names last only inside <code>body</code>.</p>
-<p>A <code>let</code> expression is shorthand for applying a <code>lambda</code> expression (<a href="#/def-lambda" class="quarto-xref">Definition&nbsp;13</a>): it has the same value as <code>((lambda (name1 ... namen) body) e1 ... en)</code>. So <code>(let ([s (+ 1 2)]) (* s s))</code> and <code>((lambda (s) (* s s)) (+ 1 2))</code> both return 9.</p>
+<p>A <code>let</code> expression is shorthand for applying a <code>lambda</code> expression (<a href="#/def-lambda" class="quarto-xref">Definition&nbsp;14</a>): it has the same value as <code>((lambda (name1 ... namen) body) e1 ... en)</code>. So <code>(let ([s (+ 1 2)]) (* s s))</code> and <code>((lambda (s) (* s s)) (+ 1 2))</code> both return 9.</p>
 <p><em>Video:</em> Cain uses <code>let</code> to save a result that would otherwise be computed twice, and shows how <code>let</code> becomes a <code>lambda</code>, in <a href="https://www.youtube.com/watch?v=3LeCydausnk">CS 107 Lecture 22</a> <span class="citation" data-cites="cain2008cs107videos">(<a href="#/references" role="doc-biblioref" onclick="">Cain 2008</a>)</span>.</p>
 </div>
 </section>
@@ -785,7 +791,7 @@ x = \frac{-b \pm s}{2a}, \qquad \text{where } s = \sqrt{b^2 - 4ac}.
 <span id="cb15-3"><a aria-label="3"></a>    <span class="op">(</span><span class="kw">list</span> <span class="op">(/</span> <span class="op">(+</span> <span class="op">(-</span> b<span class="op">)</span> s<span class="op">)</span> <span class="op">(*</span> <span class="dv">2</span> a<span class="op">))</span></span>
 <span id="cb15-4"><a aria-label="4"></a>          <span class="op">(/</span> <span class="op">(-</span> <span class="op">(-</span> b<span class="op">)</span> s<span class="op">)</span> <span class="op">(*</span> <span class="dv">2</span> a<span class="op">)))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><code>(roots 1 -3 2)</code> returns <code>'(2 1)</code>, since <span class="math inline">\(x^2 - 3x + 2 = (x - 1)(x - 2)\)</span>.</p>
-<p><code>let</code> does not change a variable: inside the body, <code>s</code> stands for one value, as a name does in algebra. So <code>roots</code> is a pure function (<a href="#/def-pure-function" class="quarto-xref">Definition&nbsp;10</a>).</p>
+<p><code>let</code> does not change a variable: inside the body, <code>s</code> stands for one value, as a name does in algebra. So <code>roots</code> is a pure function (<a href="#/def-pure-function" class="quarto-xref">Definition&nbsp;11</a>).</p>
 </div>
 </section>
 <section class="slide level2">

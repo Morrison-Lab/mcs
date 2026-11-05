@@ -6,7 +6,7 @@ Expressions, functions and cases in Racket
 
 Published
 
-Last modified: 2026-11-04 21:49:26 (PST)
+Last modified: 2026-11-04 22:27:55 (PST)
 
 > **NOTE:**
 >
@@ -52,7 +52,11 @@ Last modified: 2026-11-04 21:49:26 (PST)
 
 > **NOTE:**
 >
-> **Definition 3 (Racket expression, prefix notation)** A **Racket expression** ([Definition 2](#def-expression)) is one of:
+> **Definition 3 (Denotes)** An [expression](#def-expression) **denotes** a [function](../chapters/functional-programming.llms.md#def-function) when evaluating the expression at each [input](../chapters/functional-programming.llms.md#def-argument) of the function, with the expression’s variables taking that input, gives the function’s [value](../chapters/functional-programming.llms.md#def-value) at that input.
+
+> **NOTE:**
+>
+> **Definition 4 (Racket expression, prefix notation)** A **Racket expression** ([Definition 2](#def-expression)) is one of:
 >
 > - a constant, such as the number `7`;
 > - a name, such as `x` or `+`;
@@ -62,7 +66,7 @@ Last modified: 2026-11-04 21:49:26 (PST)
 
 > **NOTE:**
 >
-> *Remark 2* (How Racket evaluates an application). To **evaluate** an application `(f e1 ... en)` ([Definition 3](#def-racket-expression)), Racket evaluates each operand `e1`, …, `en` to a value, then applies `f` to those values. In part 1 of [Exercise 1](#exr-evaluate-nested):
+> *Remark 2* (How Racket evaluates an application). To **evaluate** an application `(f e1 ... en)` ([Definition 4](#def-racket-expression)), Racket evaluates each operand `e1`, …, `en` to a value, then applies `f` to those values. In part 1 of [Exercise 1](#exr-evaluate-nested):
 >
 > ``` text
 > (* (+ 1 2) (- 10 4))
@@ -98,26 +102,26 @@ Last modified: 2026-11-04 21:49:26 (PST)
 
 > **NOTE:**
 >
-> **Definition 4 (Argument, input)** An **argument** (or **input**) of a [function](#def-function) $f : A \to B$ is an element $a \in A$ that $f$ is applied to.
+> **Definition 5 (Argument, input)** An **argument** (or **input**) of a [function](#def-function) $f : A \to B$ is an element $a \in A$ that $f$ is applied to.
 
 > **NOTE:**
 >
-> **Definition 5 (Value, output)** The **value** (or **output**) of a [function](#def-function) $f : A \to B$ at an [argument](#def-argument) $a \in A$ is the element $f(a) \in B$ that $f$ assigns to $a$.
+> **Definition 6 (Value, output)** The **value** (or **output**) of a [function](#def-function) $f : A \to B$ at an [argument](#def-argument) $a \in A$ is the element $f(a) \in B$ that $f$ assigns to $a$.
 
 > **NOTE:**
 >
-> **Definition 6 (Defining a function in Racket)** The Racket definition
+> **Definition 7 (Defining a function in Racket)** The Racket definition
 >
 > ``` racket
 > (define (f x1 ... xn)
 >   body)
 > ```
 >
-> defines a function named `f` with **parameters** `x1`, …, `xn`: names that stand for its arguments ([Definition 4](#def-argument)). To evaluate an application `(f a1 ... an)`, Racket evaluates the arguments `a1`, …, `an`, replaces each parameter in `body` by the value of its argument, and evaluates the result. The value of the application is the value ([Definition 5](#def-value)) of `f` at those arguments.
+> defines a function named `f` with **parameters** `x1`, …, `xn`: names that stand for its arguments ([Definition 5](#def-argument)). To evaluate an application `(f a1 ... an)`, Racket evaluates the arguments `a1`, …, `an`, replaces each parameter in `body` by the value of its argument, and evaluates the result. The value of the application is the value ([Definition 6](#def-value)) of `f` at those arguments.
 
 > **NOTE:**
 >
-> **Example 1 (Replacing a parameter by its argument)** With `h` from [Exercise 2](#exr-formula-from-code), [Definition 6](#def-racket-define) evaluates `(h 5)` in four steps:
+> **Example 1 (Replacing a parameter by its argument)** With `h` from [Exercise 2](#exr-formula-from-code), [Definition 7](#def-racket-define) evaluates `(h 5)` in four steps:
 >
 > ``` text
 > (h 5)
@@ -169,11 +173,11 @@ Last modified: 2026-11-04 21:49:26 (PST)
 
 > **NOTE:**
 >
-> **Definition 7 (True and false in Racket)** Racket writes the two truth values as `#t` (true) and `#f` (false). A comparison such as `(< 4 5)` or `(= 3 7)` returns one of them, and `and`, `or` and `not` combine them: `(and (< 1 2) (< 3 2))` returns `#f`.
+> **Definition 8 (True and false in Racket)** Racket writes the two truth values as `#t` (true) and `#f` (false). A comparison such as `(< 4 5)` or `(= 3 7)` returns one of them, and `and`, `or` and `not` combine them: `(and (< 1 2) (< 3 2))` returns `#f`.
 
 > **NOTE:**
 >
-> **Definition 8 (`if` and `cond`)** The expression `(if test a b)` evaluates `test`, and returns the value of `a` if `test` is true and the value of `b` if it is false.
+> **Definition 9 (`if` and `cond`)** The expression `(if test a b)` evaluates `test`, and returns the value of `a` if `test` is true and the value of `b` if it is false.
 >
 > The expression
 >
@@ -186,7 +190,7 @@ Last modified: 2026-11-04 21:49:26 (PST)
 >
 > evaluates the tests in order and returns the value of the expression beside the first true one, or the value of `an` if none is true. Like a function defined by cases in mathematics, each case of a `cond` applies only when every case before it fails.
 >
-> `if` and `cond` look like applications ([Definition 3](#def-racket-expression)), but they are not: an application evaluates all of its operands ([Remark 2](#rem-evaluation)), while `if` and `cond` evaluate only the tests they need and the one branch they return. `and`, `or` and `define` are not applications either.
+> `if` and `cond` look like applications ([Definition 4](#def-racket-expression)), but they are not: an application evaluates all of its operands ([Remark 2](#rem-evaluation)), while `if` and `cond` evaluate only the tests they need and the one branch they return. `and`, `or` and `define` are not applications either.
 
 > **NOTE:**
 >
@@ -194,7 +198,7 @@ Last modified: 2026-11-04 21:49:26 (PST)
 > \begin{cases}
 > -x & \text{if } x < 0, \\
 > x & \text{otherwise}
-> \end{cases}$$ has two cases, so one `if` ([Definition 8](#def-if-cond)) is enough:
+> \end{cases}$$ has two cases, so one `if` ([Definition 9](#def-if-cond)) is enough:
 >
 > ``` racket
 > (define (absolute x)
@@ -232,24 +236,24 @@ Last modified: 2026-11-04 21:49:26 (PST)
 
 > **NOTE:**
 >
-> **Definition 9 (Side effect)** A **side effect** of a piece of code is any change it makes besides returning a value, such as changing a variable, printing, or writing a file. `next_id` in [Exercise 4](#exr-next-id) has a side effect: it changes `count`.
+> **Definition 10 (Side effect)** A **side effect** of a piece of code is any change it makes besides returning a value, such as changing a variable, printing, or writing a file. `next_id` in [Exercise 4](#exr-next-id) has a side effect: it changes `count`.
 
 > **NOTE:**
 >
-> **Definition 10 (Pure function)** A function in a program is **pure** ([Wikipedia contributors 2026e](#ref-wikipedia_pure_function)) if
+> **Definition 11 (Pure function)** A function in a program is **pure** ([Wikipedia contributors 2026e](#ref-wikipedia_pure_function)) if
 >
 > - it returns the same value whenever it is called with the same arguments, and
-> - it has no side effects ([Definition 9](#def-side-effect)).
+> - it has no side effects ([Definition 10](#def-side-effect)).
 >
 > A pure function computes a mathematical function ([Definition 1](#def-function)) of its arguments.
 
 > **NOTE:**
 >
-> **Definition 11 (Functional programming)** **Functional programming** ([Wikipedia contributors 2026c](#ref-wikipedia_functional_programming)) is a style of programming in which a program is built by defining and applying pure functions ([Definition 10](#def-pure-function)), rather than by running statements that change variables.
+> **Definition 12 (Functional programming)** **Functional programming** ([Wikipedia contributors 2026c](#ref-wikipedia_functional_programming)) is a style of programming in which a program is built by defining and applying pure functions ([Definition 11](#def-pure-function)), rather than by running statements that change variables.
 
 > **NOTE:**
 >
-> *Remark 3* (Why this course uses functional programming). In a program built from pure functions ([Definition 10](#def-pure-function)), an expression can be replaced by its value anywhere it appears without changing what the program does. That is what makes evaluation by substitution ([Example 1](#exm-substitution)) work, and it is also how algebra works: $h(5)$ can be replaced by 15 in any formula. So a pure function can be checked with the same reasoning as a formula, and this course proves facts about programs that way.
+> *Remark 3* (Why this course uses functional programming). In a program built from pure functions ([Definition 11](#def-pure-function)), an expression can be replaced by its value anywhere it appears without changing what the program does. That is what makes evaluation by substitution ([Example 1](#exm-substitution)) work, and it is also how algebra works: $h(5)$ can be replaced by 15 in any formula. So a pure function can be checked with the same reasoning as a formula, and this course proves facts about programs that way.
 >
 > `next_id` in [Exercise 4](#exr-next-id) is not pure, so `next_id() + next_id()` cannot be simplified to `2 * next_id()`. On a fresh start, `next_id() + next_id()` returns 3, from $1 + 2$, but `2 * next_id()` returns 2. Racket can change variables too, with `set!`, but this course does not use it.
 
@@ -275,7 +279,7 @@ Last modified: 2026-11-04 21:49:26 (PST)
 
 > **NOTE:**
 >
-> *Solution 5*. Replace `f` and `x` in the body `(f (f x))` ([Definition 6](#def-racket-define)):
+> *Solution 5*. Replace `f` and `x` in the body `(f (f x))` ([Definition 7](#def-racket-define)):
 >
 > 1.  `(twice add-three 10)` is `(add-three (add-three 10))`, which is `(add-three 13)`, which returns 16.
 > 2.  `(twice h 4)` is `(h (h 4))`. Since $h(4) = 16 - 8 = 8$ and $h(8) = 64 - 16 = 48$, it returns 48.
@@ -283,11 +287,11 @@ Last modified: 2026-11-04 21:49:26 (PST)
 
 > **NOTE:**
 >
-> **Definition 12 (Higher-order function)** A **higher-order function** ([Wikipedia contributors 2026d](#ref-wikipedia_higher_order_function)) is a function that takes a function as an argument, or returns a function as its value. `twice` in [Exercise 5](#exr-twice) is a higher-order function.
+> **Definition 13 (Higher-order function)** A **higher-order function** ([Wikipedia contributors 2026d](#ref-wikipedia_higher_order_function)) is a function that takes a function as an argument, or returns a function as its value. `twice` in [Exercise 5](#exr-twice) is a higher-order function.
 
 > **NOTE:**
 >
-> **Example 3 (`map` and `filter`)** Racket’s `(list 5 7 9)` makes the list of 5, 7 and 9, which Racket prints as `'(5 7 9)`. Two built-in higher-order functions ([Definition 12](#def-higher-order)) work on lists:
+> **Example 3 (`map` and `filter`)** Racket’s `(list 5 7 9)` makes the list of 5, 7 and 9, which Racket prints as `'(5 7 9)`. Two built-in higher-order functions ([Definition 13](#def-higher-order)) work on lists:
 >
 > - `(map f L)` applies `f` to each element of the list `L`, and returns the list of results. With `add-three` from [Exercise 5](#exr-twice), `(map add-three (list 5 7 9))` returns `'(8 10 12)`.
 > - `(filter p L)` returns the list of the elements `x` of `L` for which `(p x)` is true. `(filter even? (list 5 6 7 8))` returns `'(6 8)`.
@@ -346,14 +350,14 @@ Last modified: 2026-11-04 21:49:26 (PST)
 
 > **NOTE:**
 >
-> **Definition 13 (`lambda`)** The Racket expression
+> **Definition 14 (`lambda`)** The Racket expression
 >
 > ``` racket
 > (lambda (x1 ... xn)
 >   body)
 > ```
 >
-> is a **`lambda` expression**. Its value is the function with parameters `x1`, …, `xn` whose value at its arguments is the value of `body`, found as in [Definition 6](#def-racket-define). The function has no name. The body may use any name defined where the `lambda` expression appears, as the body of the `lambda` in `pair-with` ([Exercise 7](#exr-pair-with)) uses `y`.
+> is a **`lambda` expression**. Its value is the function with parameters `x1`, …, `xn` whose value at its arguments is the value of `body`, found as in [Definition 7](#def-racket-define). The function has no name. The body may use any name defined where the `lambda` expression appears, as the body of the `lambda` in `pair-with` ([Exercise 7](#exr-pair-with)) uses `y`.
 >
 > The definition `(define (f x) body)` is shorthand for `(define f (lambda (x) body))`: it gives the name `f` to the function the `lambda` expression makes.
 >
@@ -374,7 +378,7 @@ Last modified: 2026-11-04 21:49:26 (PST)
 >   (lambda (x) (+ x d)))
 > ```
 >
-> `(adder 3)` returns the function $x \mapsto x + 3$, which still knows that `d` is 3 after `adder` has returned. So `adder` is a higher-order function ([Definition 12](#def-higher-order)), and its value can be used anywhere a function can:
+> `(adder 3)` returns the function $x \mapsto x + 3$, which still knows that `d` is 3 after `adder` has returned. So `adder` is a higher-order function ([Definition 13](#def-higher-order)), and its value can be used anywhere a function can:
 >
 > - `((adder 3) 4)` returns 7.
 > - `(twice (adder 3) 10)`, with `twice` from [Exercise 5](#exr-twice), returns 16.
@@ -382,7 +386,7 @@ Last modified: 2026-11-04 21:49:26 (PST)
 
 > **NOTE:**
 >
-> **Definition 14 (`let`)** The Racket expression
+> **Definition 15 (`let`)** The Racket expression
 >
 > ``` racket
 > (let ([name1 e1]
@@ -393,7 +397,7 @@ Last modified: 2026-11-04 21:49:26 (PST)
 >
 > evaluates `e1`, …, `en`, gives each value its name, and returns the value of `body`, which can use those names. The names last only inside `body`.
 >
-> A `let` expression is shorthand for applying a `lambda` expression ([Definition 13](#def-lambda)): it has the same value as `((lambda (name1 ... namen) body) e1 ... en)`. So `(let ([s (+ 1 2)]) (* s s))` and `((lambda (s) (* s s)) (+ 1 2))` both return 9.
+> A `let` expression is shorthand for applying a `lambda` expression ([Definition 14](#def-lambda)): it has the same value as `((lambda (name1 ... namen) body) e1 ... en)`. So `(let ([s (+ 1 2)]) (* s s))` and `((lambda (s) (* s s)) (+ 1 2))` both return 9.
 >
 > *Video:* Cain uses `let` to save a result that would otherwise be computed twice, and shows how `let` becomes a `lambda`, in [CS 107 Lecture 22](https://www.youtube.com/watch?v=3LeCydausnk) ([Cain 2008](#ref-cain2008cs107videos)).
 
@@ -410,7 +414,7 @@ Last modified: 2026-11-04 21:49:26 (PST)
 >
 > `(roots 1 -3 2)` returns `'(2 1)`, since $x^2 - 3x + 2 = (x - 1)(x - 2)$.
 >
-> `let` does not change a variable: inside the body, `s` stands for one value, as a name does in algebra. So `roots` is a pure function ([Definition 10](#def-pure-function)).
+> `let` does not change a variable: inside the body, `s` stands for one value, as a name does in algebra. So `roots` is a pure function ([Definition 11](#def-pure-function)).
 
 > **NOTE:**
 >
@@ -435,18 +439,19 @@ Last modified: 2026-11-04 21:49:26 (PST)
 
 - [Definition 1 (Function, map, mapping, transformation)](#def-function)
 - [Definition 2 (Expression)](#def-expression)
-- [Definition 3 (Racket expression, prefix notation)](#def-racket-expression)
-- [Definition 4 (Argument, input)](#def-argument)
-- [Definition 5 (Value, output)](#def-value)
-- [Definition 6 (Defining a function in Racket)](#def-racket-define)
-- [Definition 7 (True and false in Racket)](#def-booleans)
-- [Definition 8 (`if` and `cond`)](#def-if-cond)
-- [Definition 9 (Side effect)](#def-side-effect)
-- [Definition 10 (Pure function)](#def-pure-function)
-- [Definition 11 (Functional programming)](#def-functional-programming)
-- [Definition 12 (Higher-order function)](#def-higher-order)
-- [Definition 13 (`lambda`)](#def-lambda)
-- [Definition 14 (`let`)](#def-let)
+- [Definition 3 (Denotes)](#def-denotes)
+- [Definition 4 (Racket expression, prefix notation)](#def-racket-expression)
+- [Definition 5 (Argument, input)](#def-argument)
+- [Definition 6 (Value, output)](#def-value)
+- [Definition 7 (Defining a function in Racket)](#def-racket-define)
+- [Definition 8 (True and false in Racket)](#def-booleans)
+- [Definition 9 (`if` and `cond`)](#def-if-cond)
+- [Definition 10 (Side effect)](#def-side-effect)
+- [Definition 11 (Pure function)](#def-pure-function)
+- [Definition 12 (Functional programming)](#def-functional-programming)
+- [Definition 13 (Higher-order function)](#def-higher-order)
+- [Definition 14 (`lambda`)](#def-lambda)
+- [Definition 15 (`let`)](#def-let)
 
 # References
 

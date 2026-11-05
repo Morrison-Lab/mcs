@@ -6,7 +6,7 @@ Relations between sets, their properties, equivalence relations, partitions and 
 
 Published
 
-Last modified: 2026-11-04 21:49:26 (PST)
+Last modified: 2026-11-04 22:27:55 (PST)
 
 > **NOTE:**
 >
