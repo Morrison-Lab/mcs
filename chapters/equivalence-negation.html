@@ -198,6 +198,26 @@ div.csl-indent {
 })();
 </script>
 <style>
+div.callout-proof.callout {
+  border-left-color: #37474F;
+}
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
+}
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-def.callout {
   border-left-color: #1B5E20;
 }
@@ -207,6 +227,36 @@ div.callout-def.callout-style-default .callout-header {
 div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-solution.callout {
   border-left-color: #4E342E;
@@ -218,15 +268,15 @@ div.callout-solution .callout-toggle::before {  background-image: url('data:imag
 div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-proof.callout {
-  border-left-color: #37474F;
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
 }
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
 }
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-prp.callout {
   border-left-color: #827717;
@@ -247,56 +297,6 @@ div.callout-remark.callout-style-default .callout-header {
 div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
-}
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
-}
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cor.callout {
-  border-left-color: #00838F;
-}
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
-}
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -987,7 +987,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-11-05 03:04:30 (PST)</p>
+      <p class="date">Last modified: 2026-11-05 03:16:57 (PST)</p>
     </div>
   </div>
   
@@ -1221,7 +1221,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="def-tautology" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Tautology)</strong></span> A <strong>tautology</strong> is a proposition that is true in every row of its truth table (<a href="../chapters/propositional-logic.html#def-truth-table">Definition: Truth table</a>).</p>
+<p><span class="theorem-title"><strong>Definition 2 (Tautology)</strong></span> A <strong>tautology</strong> is a <a href="../chapters/propositional-logic.html#def-proposition">proposition</a> that is true in every row of its <a href="../chapters/propositional-logic.html#def-truth-table">truth table</a>.</p>
 </div>
 </div>
 </div>
@@ -1266,7 +1266,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="def-contradiction" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Contradiction)</strong></span> A <strong>contradiction</strong> is a proposition that is false in every row of its truth table (<a href="../chapters/propositional-logic.html#def-truth-table">Definition: Truth table</a>).</p>
+<p><span class="theorem-title"><strong>Definition 3 (Contradiction)</strong></span> A <strong>contradiction</strong> is a <a href="../chapters/propositional-logic.html#def-proposition">proposition</a> that is false in every row of its <a href="../chapters/propositional-logic.html#def-truth-table">truth table</a>.</p>
 </div>
 </div>
 </div>
@@ -1323,7 +1323,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="thm-equivalence-iff" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 1 (Equivalence is a tautological biconditional)</strong></span> For propositions <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are <a href="#def-logically-equivalent">logically equivalent</a> exactly when <span class="math inline">\(A \Leftrightarrow B\)</span> is a <a href="#def-tautology">tautology</a>.</p>
+<p><span class="theorem-title"><strong>Theorem 1 (Equivalence is a tautological biconditional)</strong></span> For <a href="../chapters/propositional-logic.html#def-proposition">propositions</a> <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are <a href="#def-logically-equivalent">logically equivalent</a> exactly when <span class="math inline">\(A \Leftrightarrow B\)</span> is a <a href="#def-tautology">tautology</a>.</p>
 </div>
 </div>
 </div>
@@ -1341,7 +1341,7 @@ window.Quarto = {
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>By <a href="../chapters/propositional-logic.html#def-iff">Definition: If and only if</a>, <span class="math inline">\(A \Leftrightarrow B\)</span> is true in a row of the truth table exactly when <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have the same truth value in that row. So <span class="math inline">\(A \Leftrightarrow B\)</span> is true in every row exactly when <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have the same truth value in every row, which is what <span class="math inline">\(A \equiv B\)</span> means.</p>
+<p><span class="proof-title"><em>Proof</em>. </span>By the definition of <a href="../chapters/propositional-logic.html#def-iff">if and only if</a>, <span class="math inline">\(A \Leftrightarrow B\)</span> is true in a row of the <a href="../chapters/propositional-logic.html#def-truth-table">truth table</a> exactly when <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have the same truth value in that row. <!-- check-term-links: allow --> So <span class="math inline">\(A \Leftrightarrow B\)</span> is true in every row exactly when <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have the same truth value in every row, which is the definition of <span class="math inline">\(A \equiv B\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1502,11 +1502,13 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="thm-distributive" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 2 (Distributive laws)</strong></span> For propositions <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span>:</p>
-<ol type="1">
-<li><span class="math inline">\(A \land (B \lor C) \equiv (A \land B) \lor (A \land C)\)</span>;</li>
-<li><span class="math inline">\(A \lor (B \land C) \equiv (A \lor B) \land (A \lor C)\)</span>.</li>
-</ol>
+<p><span class="theorem-title"><strong>Theorem 2 (Distributive laws for propositions)</strong></span> For <a href="../chapters/propositional-logic.html#def-proposition">propositions</a> <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+A \land (B \lor C) &amp;\equiv (A \land B) \lor (A \land C) \\
+A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
+\end{aligned}
+\]</span></p>
 </div>
 </div>
 </div>
@@ -1524,7 +1526,7 @@ window.Quarto = {
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Law 2 is <a href="#sol-or-distributes" class="quarto-xref">Solution&nbsp;3</a>. For law 1, the fourth and fifth columns of this table match in every row:</p>
+<p><span class="proof-title"><em>Proof</em>. </span>By the definitions of <a href="../chapters/propositional-logic.html#def-and">and</a> and <a href="../chapters/propositional-logic.html#def-or">or</a>, the <a href="../chapters/propositional-logic.html#def-truth-table">truth table</a> for the first law is:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 20%">
@@ -1601,6 +1603,84 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
+<p>and for the second law:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(A\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(B\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(C\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(A \lor (B \land C)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((A \lor B) \land (A \lor C)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+</tbody>
+</table>
+<p>In each table the last two columns match in every row, so each law is a <a href="#def-logically-equivalent">logical equivalence</a>.</p>
 </div>
 </div>
 </div>
@@ -1674,7 +1754,10 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="thm-double-negation" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 3 (Double negation)</strong></span> For a proposition <span class="math inline">\(P\)</span>, <span class="math inline">\(\neg \neg P\)</span> is <a href="#def-logically-equivalent">logically equivalent</a> to <span class="math inline">\(P\)</span>: <span class="math inline">\(\neg \neg P \equiv P\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 3 (Double negation)</strong></span> For a <a href="../chapters/propositional-logic.html#def-proposition">proposition</a> <span class="math inline">\(P\)</span>,</p>
+<p><span class="math display">\[
+\neg \neg P \equiv P.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -1692,7 +1775,7 @@ window.Quarto = {
 <div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span></p>
+<p><span class="proof-title"><em>Proof</em>. </span>By the definition of <a href="../chapters/propositional-logic.html#def-not">not</a>, the <a href="../chapters/propositional-logic.html#def-truth-table">truth table</a> is:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1714,7 +1797,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p>The first and last columns match in both rows.</p>
+<p>The first and last columns match in both rows, so the two sides are <a href="#def-logically-equivalent">logically equivalent</a>.</p>
 </div>
 </div>
 </div>
@@ -1738,7 +1821,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="thm-substitution-logic" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 4 (Replacing a part by an equivalent part)</strong></span> If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are <a href="#def-logically-equivalent">logically equivalent</a>, <span class="math inline">\(A \equiv B\)</span>, then replacing <span class="math inline">\(A\)</span> by <span class="math inline">\(B\)</span> inside a larger proposition gives a proposition logically equivalent to the larger one. In particular, <span class="math inline">\(\neg A \equiv \neg B\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 4 (Replacing a part by an equivalent part)</strong></span> Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be <a href="#def-logically-equivalent">logically equivalent</a> <a href="../chapters/propositional-logic.html#def-proposition">propositions</a>. Let <span class="math inline">\(F\)</span> be a <a href="../chapters/propositional-logic.html#def-proposition">proposition</a> built from <span class="math inline">\(A\)</span> and other propositions with <a href="../chapters/propositional-logic.html#def-logical-connective">logical connectives</a>, and let <span class="math inline">\(F'\)</span> be <span class="math inline">\(F\)</span> with <span class="math inline">\(A\)</span> replaced by <span class="math inline">\(B\)</span>. Then <span class="math inline">\(F \equiv F'\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1756,7 +1839,7 @@ window.Quarto = {
 <div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>The truth value of the larger proposition in a row of its truth table depends on the truth value of <span class="math inline">\(A\)</span> in that row, not on how <span class="math inline">\(A\)</span> is written. <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have the same truth value in every row, so the two larger propositions do too.</p>
+<p><span class="proof-title"><em>Proof</em>. </span>The truth value of <span class="math inline">\(F\)</span> in a row of its <a href="../chapters/propositional-logic.html#def-truth-table">truth table</a> <!-- check-term-links: allow --> is computed from the truth values of its parts in that row, <!-- check-term-links: allow --> using the truth table of each connective. <span class="math inline">\(F'\)</span> is computed the same way, except that <span class="math inline">\(B\)</span> takes the place of <span class="math inline">\(A\)</span>. <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have the same truth value in every row, <!-- check-term-links: allow --> so each step of the computation gives the same value for <span class="math inline">\(F'\)</span> as for <span class="math inline">\(F\)</span>. So <span class="math inline">\(F\)</span> and <span class="math inline">\(F'\)</span> have the same truth value in every row. <!-- check-term-links: allow --></p>
 </div>
 </div>
 </div>
@@ -1915,7 +1998,10 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="thm-negate-conditional" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 6 (Negating a conditional)</strong></span> For propositions <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>, <span class="math inline">\(\neg (P \Rightarrow Q) \equiv P \land \neg Q\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 6 (Negating a conditional)</strong></span> For <a href="../chapters/propositional-logic.html#def-proposition">propositions</a> <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>,</p>
+<p><span class="math display">\[
+\neg (P \Rightarrow Q) \equiv P \land \neg Q.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -1933,7 +2019,7 @@ window.Quarto = {
 <div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>By <a href="../chapters/propositional-logic.html#def-implies">Definition: Implies</a>, <span class="math inline">\(P \Rightarrow Q\)</span> is false exactly when <span class="math inline">\(P\)</span> is true and <span class="math inline">\(Q\)</span> is false, so <span class="math inline">\(\neg (P \Rightarrow Q)\)</span> is true exactly in that row. <span class="math inline">\(P \land \neg Q\)</span> is true exactly when <span class="math inline">\(P\)</span> is true and <span class="math inline">\(\neg Q\)</span> is true, which is the same row.</p>
+<p><span class="proof-title"><em>Proof</em>. </span>By the definition of <a href="../chapters/propositional-logic.html#def-implies">implies</a>, <span class="math inline">\(P \Rightarrow Q\)</span> is false exactly when <span class="math inline">\(P\)</span> is true and <span class="math inline">\(Q\)</span> is false. So <span class="math inline">\(\neg (P \Rightarrow Q)\)</span> is true exactly in that row of the <a href="../chapters/propositional-logic.html#def-truth-table">truth table</a>. By the definition of <a href="../chapters/propositional-logic.html#def-and">and</a>, <span class="math inline">\(P \land \neg Q\)</span> is true exactly when <span class="math inline">\(P\)</span> is true and <span class="math inline">\(\neg Q\)</span> is true. That is the same row.</p>
 </div>
 </div>
 </div>
@@ -1957,7 +2043,10 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="cor-conditional-as-or" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corollary 1 (A conditional without the arrow)</strong></span> For propositions <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>, <span class="math inline">\(P \Rightarrow Q \equiv \neg P \lor Q\)</span>.</p>
+<p><span class="theorem-title"><strong>Corollary 1 (A conditional without the arrow)</strong></span> For <a href="../chapters/propositional-logic.html#def-proposition">propositions</a> <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>,</p>
+<p><span class="math display">\[
+(P \Rightarrow Q) \equiv (\neg P \lor Q).
+\]</span></p>
 </div>
 </div>
 </div>
@@ -1975,7 +2064,13 @@ window.Quarto = {
 <div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>By double negation (<a href="#thm-double-negation" class="quarto-xref">Theorem&nbsp;3</a>), <span class="math inline">\(P \Rightarrow Q \equiv \neg \neg (P \Rightarrow Q)\)</span>. By <a href="#thm-negate-conditional" class="quarto-xref">Theorem&nbsp;6</a> and <a href="#thm-substitution-logic" class="quarto-xref">Theorem&nbsp;4</a>, <span class="math inline">\(\neg \neg (P \Rightarrow Q) \equiv \neg (P \land \neg Q)\)</span>. By the first of <a href="#thm-de-morgan-logic">De Morgan’s laws</a>, <span class="math inline">\(\neg (P \land \neg Q) \equiv \neg P \lor \neg \neg Q\)</span>, and by double negation again, that is logically equivalent to <span class="math inline">\(\neg P \lor Q\)</span>.</p>
+<p><span class="proof-title"><em>Proof</em>. </span></p>
+<ol type="1">
+<li>By <a href="#thm-double-negation">double negation</a>, <span class="math inline">\(P \Rightarrow Q \equiv \neg \neg (P \Rightarrow Q)\)</span>.</li>
+<li>By <a href="#thm-negate-conditional">negating a conditional</a> and <a href="#thm-substitution-logic">replacing a part by an equivalent part</a>, <span class="math inline">\(\neg \neg (P \Rightarrow Q) \equiv \neg (P \land \neg Q)\)</span>.</li>
+<li>By the first of <a href="#thm-de-morgan-logic">De Morgan’s laws</a>, <span class="math inline">\(\neg (P \land \neg Q) \equiv \neg P \lor \neg \neg Q\)</span>.</li>
+<li>By double negation and replacing a part by an equivalent part again, <span class="math inline">\(\neg P \lor \neg \neg Q \equiv \neg P \lor Q\)</span>.</li>
+</ol>
 </div>
 </div>
 </div>
@@ -2034,11 +2129,13 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="thm-negate-quantifiers" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 7 (Negating a quantifier)</strong></span> For a set <span class="math inline">\(S\)</span> and a <a href="../chapters/propositional-logic.html#def-predicate">predicate</a> <span class="math inline">\(P(x)\)</span> whose <a href="../chapters/predicates-quantifiers.html#def-domain-of-discourse">domain</a> is <span class="math inline">\(S\)</span>:</p>
-<ol type="1">
-<li><span class="math inline">\(\neg (\forall x \in S, P(x))\)</span> and <span class="math inline">\(\exists x \in S, \neg P(x)\)</span> have the same truth value;</li>
-<li><span class="math inline">\(\neg (\exists x \in S, P(x))\)</span> and <span class="math inline">\(\forall x \in S, \neg P(x)\)</span> have the same truth value.</li>
-</ol>
+<p><span class="theorem-title"><strong>Theorem 7 (De Morgan’s laws for quantifiers)</strong></span> For a <a href="../chapters/sets.html#def-set">set</a> <span class="math inline">\(S\)</span> and a <a href="../chapters/propositional-logic.html#def-predicate">predicate</a> <span class="math inline">\(P(x)\)</span> whose <a href="../chapters/predicates-quantifiers.html#def-domain-of-discourse">domain of discourse</a> is <span class="math inline">\(S\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\neg (\forall x \in S, P(x)) &amp;\equiv \exists x \in S, \neg P(x) \\
+\neg (\exists x \in S, P(x)) &amp;\equiv \forall x \in S, \neg P(x)
+\end{aligned}
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2058,8 +2155,8 @@ window.Quarto = {
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span></p>
 <ol type="1">
-<li>By <a href="../chapters/predicates-quantifiers.html#def-universal-quantifier">Definition: Universal quantifier</a>, <span class="math inline">\(\forall x \in S, P(x)\)</span> is false exactly when <span class="math inline">\(P(x)\)</span> is false for at least one <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span>, which by <a href="../chapters/predicates-quantifiers.html#def-existential-quantifier">Definition: Existential quantifier</a> is when <span class="math inline">\(\exists x \in S, \neg P(x)\)</span> is true.</li>
-<li>By <a href="../chapters/predicates-quantifiers.html#def-existential-quantifier">Definition: Existential quantifier</a>, <span class="math inline">\(\exists x \in S, P(x)\)</span> is false exactly when <span class="math inline">\(P(x)\)</span> is false for every <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span>, which by <a href="../chapters/predicates-quantifiers.html#def-universal-quantifier">Definition: Universal quantifier</a> is when <span class="math inline">\(\forall x \in S, \neg P(x)\)</span> is true.</li>
+<li>By the definition of the <a href="../chapters/predicates-quantifiers.html#def-universal-quantifier">universal quantifier</a>, <span class="math inline">\(\forall x \in S, P(x)\)</span> is false exactly when <span class="math inline">\(P(x)\)</span> is false for at least one <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span>. By the definition of the <a href="../chapters/predicates-quantifiers.html#def-existential-quantifier">existential quantifier</a>, that is exactly when <span class="math inline">\(\exists x \in S, \neg P(x)\)</span> is true.</li>
+<li>By the definition of the existential quantifier, <span class="math inline">\(\exists x \in S, P(x)\)</span> is false exactly when <span class="math inline">\(P(x)\)</span> is false for every <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span>. By the definition of the universal quantifier, that is exactly when <span class="math inline">\(\forall x \in S, \neg P(x)\)</span> is true.</li>
 </ol>
 </div>
 </div>
@@ -3406,7 +3503,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_tautology_def.qmd &gt;}}</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_tautology_def.qmd &gt;}}</span>
 <span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a></span>
@@ -3414,7 +3511,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_contradiction_def.qmd &gt;}}</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_contradiction_def.qmd &gt;}}</span>
 <span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a></span>
@@ -3426,7 +3523,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_equivalence-iff_thm.qmd &gt;}}</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_equivalence-iff_thm.qmd &gt;}}</span>
 <span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a></span>
@@ -3442,7 +3539,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_distributive_thm.qmd &gt;}}</span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_distributive_thm.qmd &gt;}}</span>
 <span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a></span>
@@ -3462,7 +3559,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_double-negation_thm.qmd &gt;}}</span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_double-negation_thm.qmd &gt;}}</span>
 <span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a></span>
@@ -3470,7 +3567,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_substitution_thm.qmd &gt;}}</span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_substitution-logic_thm.qmd &gt;}}</span>
 <span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a></span>
@@ -3494,7 +3591,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_negate-conditional_thm.qmd &gt;}}</span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_negate-conditional_thm.qmd &gt;}}</span>
 <span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a></span>
@@ -3502,7 +3599,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_conditional-as-or_cor.qmd &gt;}}</span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_conditional-as-or_cor.qmd &gt;}}</span>
 <span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a></span>
@@ -3518,7 +3615,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_negate-quantifiers_thm.qmd &gt;}}</span>
+<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_negate-quantifiers_thm.qmd &gt;}}</span>
 <span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a></span>
