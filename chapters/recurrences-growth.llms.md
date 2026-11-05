@@ -6,7 +6,7 @@ Solving recurrence relations, running times, and big-O notation
 
 Published
 
-Last modified: 2026-11-04 19:04:53 (PST)
+Last modified: 2026-11-04 19:29:35 (PST)
 
 > **NOTE:**
 >
@@ -228,14 +228,14 @@ Last modified: 2026-11-04 19:04:53 (PST)
 
 > **NOTE:**
 >
-> *Remark 3* (The size of an input and a step). To count the work an algorithm ([Definition: Algorithm](https://morrison-lab.github.io/mds/expressions-algorithms.html#def-algorithm)) does, we first fix two things:
+> *Remark 3* (The size of an input and a step). To count the work an algorithm ([Definition: Algorithm](../expressions-algorithms.llms.md#def-algorithm)) does, we first fix two things:
 >
 > - the *size* of an input, such as the number of symbols in a string or the number of entries in an array;
 > - what one *step* is, such as one comparison, one arithmetic operation or one call of a function.
 
 > **NOTE:**
 >
-> **Definition 4 (Running time)** Fix, for an algorithm ([Definition: Algorithm](https://morrison-lab.github.io/mds/expressions-algorithms.html#def-algorithm)), the size of an input and what one step is ([Remark 3](#rem-size-step)). The **running time** ([Wikipedia contributors 2026f](#ref-wikipedia_time_complexity)) of the algorithm is the function $T$ ([Definition: Function, map, mapping, transformation](../chapters/functional-programming.llms.md#def-function)) whose value $T(n)$ is the largest number of steps that the algorithm takes on any input of size $n$.
+> **Definition 4 (Running time)** Fix, for an algorithm ([Definition: Algorithm](../expressions-algorithms.llms.md#def-algorithm)), the size of an input and what one step is ([Remark 3](#rem-size-step)). The **running time** ([Wikipedia contributors 2026f](#ref-wikipedia_time_complexity)) of the algorithm is the function $T$ ([Definition: Function, map, mapping, transformation](../chapters/functional-programming.llms.md#def-function)) whose value $T(n)$ is the largest number of steps that the algorithm takes on any input of size $n$.
 
 > **NOTE:**
 >

@@ -6,7 +6,7 @@ Proving that an algorithm with a loop is correct
 
 Published
 
-Last modified: 2026-11-04 19:04:53 (PST)
+Last modified: 2026-11-04 19:29:35 (PST)
 
 > **NOTE:**
 >
@@ -52,7 +52,7 @@ Last modified: 2026-11-04 19:04:53 (PST)
 
 > **NOTE:**
 >
-> *Remark 1* (How to read the pseudocode in this chapter). The algorithms ([Definition: Algorithm](https://morrison-lab.github.io/mds/expressions-algorithms.html#def-algorithm)) in this chapter are written in pseudocode, not in a particular programming language:
+> *Remark 1* (How to read the pseudocode in this chapter). The algorithms ([Definition: Algorithm](../expressions-algorithms.llms.md#def-algorithm)) in this chapter are written in pseudocode, not in a particular programming language:
 >
 > - `x := e` sets the variable `x` to the value of the expression `e`;
 > - the indented lines under `while` are the *body* of the loop, and a `while` loop tests its condition before every pass through the body, running the body when the condition is true and stopping when it is false;
@@ -76,7 +76,7 @@ Last modified: 2026-11-04 19:04:53 (PST)
 
 > **NOTE:**
 >
-> **Definition 2 (Precondition)** A **precondition** of an algorithm ([Definition: Algorithm](https://morrison-lab.github.io/mds/expressions-algorithms.html#def-algorithm)) is a condition on its input that the algorithm assumes is true when it starts.
+> **Definition 2 (Precondition)** A **precondition** of an algorithm ([Definition: Algorithm](../expressions-algorithms.llms.md#def-algorithm)) is a condition on its input that the algorithm assumes is true when it starts.
 
 > **NOTE:**
 >

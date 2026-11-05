@@ -334,7 +334,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-04 19:04:53 (PST)</p>
+  <p class="date">Last modified: 2026-11-04 19:29:35 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -1463,7 +1463,7 @@ Figure&nbsp;9: The office graph, with its vertices in columns by their distance 
 <section class="slide level2">
 
 <div id="def-bfs" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 32 (Breadth-first search)</strong></span> Let <span class="math inline">\(G\)</span> be a graph (<a href="#/def-graph-vertices-edges" class="quarto-xref">Definition&nbsp;1</a>) or a directed graph (<a href="#/def-directed-graph" class="quarto-xref">Definition&nbsp;5</a>) with no parallel edges (<a href="#/def-parallel-edges" class="quarto-xref">Definition&nbsp;3</a>), given by an adjacency list (<a href="#/def-adjacency-list" class="quarto-xref">Definition&nbsp;16</a>), and let <span class="math inline">\(s\)</span> be a vertex of <span class="math inline">\(G\)</span>. <strong>Breadth-first search</strong> <span class="citation" data-cites="wikipedia_breadth_first_search">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span> from <span class="math inline">\(s\)</span> is the algorithm (<a href="https://morrison-lab.github.io/mds/expressions-algorithms.html#def-algorithm">Definition: Algorithm</a>) <code>bfs</code>, written in the pseudocode of <a href="../chapters/loop-invariants.html#rem-pseudocode">Remark: How to read the pseudocode in this chapter</a>:</p>
+<p><span class="theorem-title"><strong>Definition 32 (Breadth-first search)</strong></span> Let <span class="math inline">\(G\)</span> be a graph (<a href="#/def-graph-vertices-edges" class="quarto-xref">Definition&nbsp;1</a>) or a directed graph (<a href="#/def-directed-graph" class="quarto-xref">Definition&nbsp;5</a>) with no parallel edges (<a href="#/def-parallel-edges" class="quarto-xref">Definition&nbsp;3</a>), given by an adjacency list (<a href="#/def-adjacency-list" class="quarto-xref">Definition&nbsp;16</a>), and let <span class="math inline">\(s\)</span> be a vertex of <span class="math inline">\(G\)</span>. <strong>Breadth-first search</strong> <span class="citation" data-cites="wikipedia_breadth_first_search">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span> from <span class="math inline">\(s\)</span> is the algorithm (<a href="../expressions-algorithms.html#def-algorithm">Definition: Algorithm</a>) <code>bfs</code>, written in the pseudocode of <a href="../chapters/loop-invariants.html#rem-pseudocode">Remark: How to read the pseudocode in this chapter</a>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a aria-label="1"></a>procedure bfs(G, s)</span>
 <span id="cb4-2"><a aria-label="2"></a>    mark s, and set dist[s] := 0</span>
 <span id="cb4-3"><a aria-label="3"></a>    Q := a queue containing only s</span>

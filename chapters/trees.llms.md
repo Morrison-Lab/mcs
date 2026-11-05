@@ -6,7 +6,7 @@ Trees and forests, rooted trees, binary trees, preorder, inorder, postorder and 
 
 Published
 
-Last modified: 2026-11-04 19:04:53 (PST)
+Last modified: 2026-11-04 19:29:35 (PST)
 
 > **NOTE:**
 >
@@ -784,7 +784,7 @@ Last modified: 2026-11-04 19:04:53 (PST)
 >
 > $$7 - 2 \times 3 + 4 \times 2,$$
 >
-> the symbols of the expression in their order, without the parentheses. With the usual precedence ([Remark: Expressions, precedence and parse trees](https://morrison-lab.github.io/mds/expressions-algorithms.html#rem-expression-parse-tree)), this string groups as $(7 - (2 \times 3)) + (4 \times 2)$, whose parse tree has $+$ at its root and whose value is 9, not 55. So the inorder needs parentheses to give back the expression, for example a pair around each operation: $((7 - 2) \times (3 + (4 \times 2)))$. The prefix form ([Definition 20](#def-prefix-form)) and the postfix form ([Definition 21](#def-postfix-form)) need no parentheses, since each operation has exactly two operands.
+> the symbols of the expression in their order, without the parentheses. With the usual precedence ([Remark: Expressions, precedence and parse trees](../expressions-algorithms.llms.md#rem-expression-parse-tree)), this string groups as $(7 - (2 \times 3)) + (4 \times 2)$, whose parse tree has $+$ at its root and whose value is 9, not 55. So the inorder needs parentheses to give back the expression, for example a pair around each operation: $((7 - 2) \times (3 + (4 \times 2)))$. The prefix form ([Definition 20](#def-prefix-form)) and the postfix form ([Definition 21](#def-postfix-form)) need no parentheses, since each operation has exactly two operands.
 
 > **NOTE:**
 >

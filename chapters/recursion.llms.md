@@ -6,7 +6,7 @@ Recursive definitions, recursive programs and proofs about them
 
 Published
 
-Last modified: 2026-11-04 19:04:53 (PST)
+Last modified: 2026-11-04 19:29:35 (PST)
 
 > **NOTE:**
 >
@@ -354,7 +354,7 @@ Last modified: 2026-11-04 19:04:53 (PST)
 
 > **NOTE:**
 >
-> **Definition 9 (Recursive algorithm)** An algorithm ([Definition: Algorithm](https://morrison-lab.github.io/mds/expressions-algorithms.html#def-algorithm)) is **recursive** ([Wikipedia contributors 2026d](#ref-wikipedia_recursion_computer_science)) if it solves a problem by calling itself on smaller inputs of the same problem and using what those calls return. The inputs that it answers without calling itself are its base cases, as in [Definition 1](#def-recursive-definition).
+> **Definition 9 (Recursive algorithm)** An algorithm ([Definition: Algorithm](../expressions-algorithms.llms.md#def-algorithm)) is **recursive** ([Wikipedia contributors 2026d](#ref-wikipedia_recursion_computer_science)) if it solves a problem by calling itself on smaller inputs of the same problem and using what those calls return. The inputs that it answers without calling itself are its base cases, as in [Definition 1](#def-recursive-definition).
 
 > **NOTE:**
 >

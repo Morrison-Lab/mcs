@@ -6,7 +6,7 @@ Vertices and edges, degrees, walks and connectedness, Euler circuits, Hamiltonia
 
 Published
 
-Last modified: 2026-11-04 19:04:53 (PST)
+Last modified: 2026-11-04 19:29:35 (PST)
 
 > **NOTE:**
 >
@@ -841,7 +841,7 @@ Last modified: 2026-11-04 19:04:53 (PST)
 
 > **NOTE:**
 >
-> **Definition 32 (Breadth-first search)** Let $G$ be a graph ([Definition 1](#def-graph-vertices-edges)) or a directed graph ([Definition 5](#def-directed-graph)) with no parallel edges ([Definition 3](#def-parallel-edges)), given by an adjacency list ([Definition 16](#def-adjacency-list)), and let $s$ be a vertex of $G$. **Breadth-first search** ([Wikipedia contributors 2026d](#ref-wikipedia_breadth_first_search)) from $s$ is the algorithm ([Definition: Algorithm](https://morrison-lab.github.io/mds/expressions-algorithms.html#def-algorithm)) `bfs`, written in the pseudocode of [Remark: How to read the pseudocode in this chapter](../chapters/loop-invariants.llms.md#rem-pseudocode):
+> **Definition 32 (Breadth-first search)** Let $G$ be a graph ([Definition 1](#def-graph-vertices-edges)) or a directed graph ([Definition 5](#def-directed-graph)) with no parallel edges ([Definition 3](#def-parallel-edges)), given by an adjacency list ([Definition 16](#def-adjacency-list)), and let $s$ be a vertex of $G$. **Breadth-first search** ([Wikipedia contributors 2026d](#ref-wikipedia_breadth_first_search)) from $s$ is the algorithm ([Definition: Algorithm](../expressions-algorithms.llms.md#def-algorithm)) `bfs`, written in the pseudocode of [Remark: How to read the pseudocode in this chapter](../chapters/loop-invariants.llms.md#rem-pseudocode):
 >
 > ``` text
 > procedure bfs(G, s)

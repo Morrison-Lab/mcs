@@ -4,11 +4,11 @@ Code
 
 Published
 
-Last modified: 2026-11-04 19:04:53 (PST)
+Last modified: 2026-11-04 19:29:35 (PST)
 
 > **NOTE:**
 >
-> *Remark*. The running time of an [algorithm](https://morrison-lab.github.io/mds/expressions-algorithms.html#def-algorithm) is a [function](functions.llms.md#def-function) of the size $n$ of its [input](functions.llms.md#def-argument). To compare running times, we ignore fixed factors and small inputs. This page defines the notation for that comparison.
+> *Remark*. The running time of an [algorithm](expressions-algorithms.llms.md#def-algorithm) is a [function](functions.llms.md#def-function) of the size $n$ of its [input](functions.llms.md#def-argument). To compare running times, we ignore fixed factors and small inputs. This page defines the notation for that comparison.
 
 # 1 Upper bounds
 
