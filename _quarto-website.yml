@@ -112,6 +112,8 @@ website:
             href: sets.qmd
           - text: "Functions"
             href: functions.qmd
+          - text: "Expressions and Algorithms"
+            href: expressions-algorithms.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mcs
@@ -172,6 +174,7 @@ website:
           - number-systems.qmd
           - sets.qmd
           - functions.qmd
+          - expressions-algorithms.qmd
 
 callouty-theorem:
   thm:

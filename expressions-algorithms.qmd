@@ -1,0 +1,18 @@
+---
+title: "Expressions and Algorithms"
+format:
+  html: default
+  revealjs:
+    output-file: expressions-algorithms-slides.html
+  pdf:
+    output-file: expressions-algorithms-handout.pdf
+  docx:
+    output-file: expressions-algorithms.docx
+---
+
+{{< include _expressions-algorithms.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
