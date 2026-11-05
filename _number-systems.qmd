@@ -14,104 +14,104 @@ and the [factorial](#def-factorial) of a [non-negative integer](#def-nonnegative
 
 # Natural numbers {#sec-notation-naturals}
 
-{{< include _subfiles/number-systems/_exr-naturals-below-three.qmd >}}
+{{< include _subfiles/number-systems/_naturals-below-three_exr.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/number-systems/_sol-naturals-below-three.qmd >}}
+{{< include _subfiles/number-systems/_naturals-below-three_sol.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/number-systems/_def-integers.qmd >}}
+{{< include _subfiles/number-systems/_integers_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/number-systems/_exm-integers.qmd >}}
+{{< include _subfiles/number-systems/_integers_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/number-systems/_def-even-odd.qmd >}}
+{{< include _subfiles/number-systems/_even-odd_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/number-systems/_exm-even-odd.qmd >}}
+{{< include _subfiles/number-systems/_even-odd_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/number-systems/_def-natural-numbers.qmd >}}
+{{< include _subfiles/number-systems/_natural-numbers_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/number-systems/_def-nonnegative-integers.qmd >}}
+{{< include _subfiles/number-systems/_nonnegative-integers_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/number-systems/_exm-natural-numbers.qmd >}}
+{{< include _subfiles/number-systems/_natural-numbers_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/number-systems/_note-natural-numbers-other-conventions.qmd >}}
+{{< include _subfiles/number-systems/_natural-numbers-other-conventions_note.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/number-systems/_def-factorial.qmd >}}
+{{< include _subfiles/number-systems/_factorial_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/number-systems/_exm-factorial.qmd >}}
+{{< include _subfiles/number-systems/_factorial_exm.qmd >}}
 
 # Divisibility, primes and congruence {#sec-number-systems-divisibility}
 
-{{< include _subfiles/number-systems/_def-divides.qmd >}}
+{{< include _subfiles/number-systems/_divides_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/number-systems/_exm-divides.qmd >}}
+{{< include _subfiles/number-systems/_divides_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/number-systems/_def-prime.qmd >}}
+{{< include _subfiles/number-systems/_prime_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/number-systems/_exm-prime.qmd >}}
+{{< include _subfiles/number-systems/_prime_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/number-systems/_def-congruence.qmd >}}
+{{< include _subfiles/number-systems/_congruence_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/number-systems/_exm-congruence.qmd >}}
+{{< include _subfiles/number-systems/_congruence_exm.qmd >}}
 
 # Rational, real, and irrational numbers {#sec-notation-reals}
 
-{{< include _subfiles/number-systems/_def-rational-numbers.qmd >}}
+{{< include _subfiles/number-systems/_rational-numbers_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/number-systems/_exm-rational-numbers.qmd >}}
+{{< include _subfiles/number-systems/_rational-numbers_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/number-systems/_def-real-numbers.qmd >}}
+{{< include _subfiles/number-systems/_real-numbers_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/number-systems/_exm-real-numbers.qmd >}}
+{{< include _subfiles/number-systems/_real-numbers_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/number-systems/_def-floor.qmd >}}
+{{< include _subfiles/number-systems/_floor_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/number-systems/_exm-floor.qmd >}}
+{{< include _subfiles/number-systems/_floor_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/number-systems/_def-irrational-numbers.qmd >}}
+{{< include _subfiles/number-systems/_irrational-numbers_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/number-systems/_exm-irrational-numbers.qmd >}}
+{{< include _subfiles/number-systems/_irrational-numbers_exm.qmd >}}

@@ -10,32 +10,32 @@ and the groups of elements that such a relation puts together.
 
 # Properties of relations
 
-{{< include _subfiles/relations/_def-reflexive.qmd >}}
+{{< include _subfiles/relations/_reflexive_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/relations/_exm-reflexive.qmd >}}
+{{< include _subfiles/relations/_reflexive_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/relations/_def-symmetric-relation.qmd >}}
+{{< include _subfiles/relations/_symmetric-relation_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/relations/_exm-symmetric-relation.qmd >}}
+{{< include _subfiles/relations/_symmetric-relation_exm.qmd >}}
 
 # Equivalence relations
 
-{{< include _subfiles/relations/_def-equivalence-relation.qmd >}}
+{{< include _subfiles/relations/_equivalence-relation_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/relations/_exm-equivalence-relation.qmd >}}
+{{< include _subfiles/relations/_equivalence-relation_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/relations/_def-equivalence-class.qmd >}}
+{{< include _subfiles/relations/_equivalence-class_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/relations/_exm-equivalence-class.qmd >}}
+{{< include _subfiles/relations/_equivalence-class_exm.qmd >}}

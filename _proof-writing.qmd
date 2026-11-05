@@ -8,195 +8,195 @@ The symbols for [logical entailment](#def-logical-entailment) are listed under
 
 # Definitions for proofs {#sec-proof-definitions}
 
-{{< include _subfiles/proof-writing/_def-proposition.qmd >}}
+{{< include _subfiles/proof-writing/_proposition_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-proposition.qmd >}}
+{{< include _subfiles/proof-writing/_proposition_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-predicate.qmd >}}
+{{< include _subfiles/proof-writing/_predicate_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-predicate.qmd >}}
+{{< include _subfiles/proof-writing/_predicate_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-domain-of-discourse.qmd >}}
+{{< include _subfiles/proof-writing/_domain-of-discourse_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-domain-of-discourse.qmd >}}
+{{< include _subfiles/proof-writing/_domain-of-discourse_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-logical-connective.qmd >}}
+{{< include _subfiles/proof-writing/_logical-connective_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-not.qmd >}}
+{{< include _subfiles/proof-writing/_not_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-not.qmd >}}
+{{< include _subfiles/proof-writing/_not_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-and.qmd >}}
+{{< include _subfiles/proof-writing/_and_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-and.qmd >}}
+{{< include _subfiles/proof-writing/_and_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-or.qmd >}}
+{{< include _subfiles/proof-writing/_or_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-or.qmd >}}
+{{< include _subfiles/proof-writing/_or_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-implies.qmd >}}
+{{< include _subfiles/proof-writing/_implies_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-implies.qmd >}}
+{{< include _subfiles/proof-writing/_implies_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-iff.qmd >}}
+{{< include _subfiles/proof-writing/_iff_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-iff.qmd >}}
+{{< include _subfiles/proof-writing/_iff_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-logical-connective.qmd >}}
+{{< include _subfiles/proof-writing/_logical-connective_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-truth-table.qmd >}}
+{{< include _subfiles/proof-writing/_truth-table_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-truth-table.qmd >}}
+{{< include _subfiles/proof-writing/_truth-table_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-logically-equivalent.qmd >}}
+{{< include _subfiles/proof-writing/_logically-equivalent_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-logically-equivalent.qmd >}}
+{{< include _subfiles/proof-writing/_logically-equivalent_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_thm-biconditional-split.qmd >}}
+{{< include _subfiles/proof-writing/_biconditional-split_thm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-biconditional-split.qmd >}}
+{{< include _subfiles/proof-writing/_biconditional-split_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_thm-equivalent-cycle.qmd >}}
+{{< include _subfiles/proof-writing/_equivalent-cycle_thm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-equivalent-cycle.qmd >}}
+{{< include _subfiles/proof-writing/_equivalent-cycle_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_thm-de-morgan-logic.qmd >}}
+{{< include _subfiles/proof-writing/_de-morgan-logic_thm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-tautology.qmd >}}
+{{< include _subfiles/proof-writing/_tautology_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-tautology.qmd >}}
+{{< include _subfiles/proof-writing/_tautology_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-contradiction.qmd >}}
+{{< include _subfiles/proof-writing/_contradiction_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-contradiction.qmd >}}
+{{< include _subfiles/proof-writing/_contradiction_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_thm-equivalence-iff.qmd >}}
+{{< include _subfiles/proof-writing/_equivalence-iff_thm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-equivalence-iff.qmd >}}
+{{< include _subfiles/proof-writing/_equivalence-iff_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_thm-double-negation.qmd >}}
+{{< include _subfiles/proof-writing/_double-negation_thm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-double-negation.qmd >}}
+{{< include _subfiles/proof-writing/_double-negation_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-quantifier.qmd >}}
+{{< include _subfiles/proof-writing/_quantifier_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-universal-quantifier.qmd >}}
+{{< include _subfiles/proof-writing/_universal-quantifier_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-universal-quantifier.qmd >}}
+{{< include _subfiles/proof-writing/_universal-quantifier_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-existential-quantifier.qmd >}}
+{{< include _subfiles/proof-writing/_existential-quantifier_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-existential-quantifier.qmd >}}
+{{< include _subfiles/proof-writing/_existential-quantifier_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-quantifier.qmd >}}
+{{< include _subfiles/proof-writing/_quantifier_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_thm-negate-quantifiers.qmd >}}
+{{< include _subfiles/proof-writing/_negate-quantifiers_thm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_rem-negate-quantifiers.qmd >}}
+{{< include _subfiles/proof-writing/_negate-quantifiers_rem.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-negate-quantifiers.qmd >}}
+{{< include _subfiles/proof-writing/_negate-quantifiers_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-inequality.qmd >}}
+{{< include _subfiles/proof-writing/_inequality_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-inequality.qmd >}}
+{{< include _subfiles/proof-writing/_inequality_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-logical-entailment.qmd >}}
+{{< include _subfiles/proof-writing/_logical-entailment_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-logical-entailment.qmd >}}
+{{< include _subfiles/proof-writing/_logical-entailment_exm.qmd >}}
 
 We can use any of:
 
@@ -213,224 +213,224 @@ Let's save $\rightarrow$ (`\rightarrow`) for [convergence](algebra.qmd#def-conve
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-logical-argument.qmd >}}
+{{< include _subfiles/proof-writing/_logical-argument_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-premise.qmd >}}
+{{< include _subfiles/proof-writing/_premise_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-conclusion.qmd >}}
+{{< include _subfiles/proof-writing/_conclusion_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-logical-argument.qmd >}}
+{{< include _subfiles/proof-writing/_logical-argument_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-rule-of-inference.qmd >}}
+{{< include _subfiles/proof-writing/_rule-of-inference_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-rule-of-inference.qmd >}}
+{{< include _subfiles/proof-writing/_rule-of-inference_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_thm-modus-ponens.qmd >}}
+{{< include _subfiles/proof-writing/_modus-ponens_thm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_thm-modus-tollens.qmd >}}
+{{< include _subfiles/proof-writing/_modus-tollens_thm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_thm-disjunctive-syllogism.qmd >}}
+{{< include _subfiles/proof-writing/_disjunctive-syllogism_thm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_thm-addition-rule.qmd >}}
+{{< include _subfiles/proof-writing/_addition-rule_thm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_thm-simplification.qmd >}}
+{{< include _subfiles/proof-writing/_simplification_thm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_thm-conjunction-rule.qmd >}}
+{{< include _subfiles/proof-writing/_conjunction-rule_thm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-inference-rules.qmd >}}
+{{< include _subfiles/proof-writing/_inference-rules_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-proof.qmd >}}
+{{< include _subfiles/proof-writing/_proof_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-proof.qmd >}}
+{{< include _subfiles/proof-writing/_proof_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-derivation.qmd >}}
+{{< include _subfiles/proof-writing/_derivation_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-derivation.qmd >}}
+{{< include _subfiles/proof-writing/_derivation_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_thm-derivation-chain.qmd >}}
+{{< include _subfiles/proof-writing/_derivation-chain_thm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-derivation-chain.qmd >}}
+{{< include _subfiles/proof-writing/_derivation-chain_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-result.qmd >}}
+{{< include _subfiles/proof-writing/_result_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-result.qmd >}}
+{{< include _subfiles/proof-writing/_result_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_rem-proposition-as-result.qmd >}}
+{{< include _subfiles/proof-writing/_proposition-as-result_rem.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-theorem.qmd >}}
+{{< include _subfiles/proof-writing/_theorem_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-theorem-sum-evens.qmd >}}
+{{< include _subfiles/proof-writing/_theorem-sum-evens_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-lemma.qmd >}}
+{{< include _subfiles/proof-writing/_lemma_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-lemma.qmd >}}
+{{< include _subfiles/proof-writing/_lemma_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-corollary.qmd >}}
+{{< include _subfiles/proof-writing/_corollary_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-theorem.qmd >}}
+{{< include _subfiles/proof-writing/_theorem_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-counterexample.qmd >}}
+{{< include _subfiles/proof-writing/_counterexample_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-counterexample.qmd >}}
+{{< include _subfiles/proof-writing/_counterexample_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-disproof.qmd >}}
+{{< include _subfiles/proof-writing/_disproof_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-disproof.qmd >}}
+{{< include _subfiles/proof-writing/_disproof_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-constructive-proof.qmd >}}
+{{< include _subfiles/proof-writing/_constructive-proof_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_rem-constructive-proof-several.qmd >}}
+{{< include _subfiles/proof-writing/_constructive-proof-several_rem.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-constructive-proof.qmd >}}
+{{< include _subfiles/proof-writing/_constructive-proof_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-nonconstructive-proof.qmd >}}
+{{< include _subfiles/proof-writing/_nonconstructive-proof_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-nonconstructive-proof.qmd >}}
+{{< include _subfiles/proof-writing/_nonconstructive-proof_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-converse.qmd >}}
+{{< include _subfiles/proof-writing/_converse_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-converse.qmd >}}
+{{< include _subfiles/proof-writing/_converse_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-contrapositive.qmd >}}
+{{< include _subfiles/proof-writing/_contrapositive_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_thm-contrapositive.qmd >}}
+{{< include _subfiles/proof-writing/_contrapositive_thm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-contrapositive.qmd >}}
+{{< include _subfiles/proof-writing/_contrapositive_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-sufficient-condition.qmd >}}
+{{< include _subfiles/proof-writing/_sufficient-condition_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-sufficient-condition.qmd >}}
+{{< include _subfiles/proof-writing/_sufficient-condition_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-necessary-condition.qmd >}}
+{{< include _subfiles/proof-writing/_necessary-condition_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-necessary-condition.qmd >}}
+{{< include _subfiles/proof-writing/_necessary-condition_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-necessary-sufficient.qmd >}}
+{{< include _subfiles/proof-writing/_necessary-sufficient_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-necessary-sufficient.qmd >}}
+{{< include _subfiles/proof-writing/_necessary-sufficient_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-proof-by-contradiction.qmd >}}
+{{< include _subfiles/proof-writing/_proof-by-contradiction_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-proof-by-contradiction.qmd >}}
+{{< include _subfiles/proof-writing/_proof-by-contradiction_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_thm-proof-by-contradiction.qmd >}}
+{{< include _subfiles/proof-writing/_proof-by-contradiction_thm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_thm-contradiction-works.qmd >}}
+{{< include _subfiles/proof-writing/_contradiction-works_thm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-proof-by-contradiction-truth-table.qmd >}}
+{{< include _subfiles/proof-writing/_proof-by-contradiction-truth-table_exm.qmd >}}
 
 
 # Don't skip steps {#sec-dont-skip-steps}
 
-{{< include _subfiles/proof-writing/_sec-dont-skip-steps.qmd >}}
+{{< include _subfiles/proof-writing/_dont-skip-steps_sec.qmd >}}
 
 # Annotate each step {#sec-annotate-each-step}
 
-{{< include _subfiles/proof-writing/_sec-annotate-each-step.qmd >}}
+{{< include _subfiles/proof-writing/_annotate-each-step_sec.qmd >}}
 
 For example,
 here is a derivation that the
@@ -471,31 +471,31 @@ $\Var{X} = \E{X^2} - \sqf{\E{X}}$
 
 # Direct proof {#sec-direct-proof}
 
-{{< include _subfiles/proof-writing/_def-direct-proof.qmd >}}
+{{< include _subfiles/proof-writing/_direct-proof_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-direct-proof.qmd >}}
+{{< include _subfiles/proof-writing/_direct-proof_exm.qmd >}}
 
 # Proof by contrapositive {#sec-proof-by-contrapositive}
 
-{{< include _subfiles/proof-writing/_def-proof-by-contrapositive.qmd >}}
+{{< include _subfiles/proof-writing/_proof-by-contrapositive_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-proof-by-contrapositive.qmd >}}
+{{< include _subfiles/proof-writing/_proof-by-contrapositive_exm.qmd >}}
 
 # Proof by cases {#sec-proof-by-cases}
 
-{{< include _subfiles/proof-writing/_def-proof-by-cases.qmd >}}
+{{< include _subfiles/proof-writing/_proof-by-cases_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-proof-by-cases.qmd >}}
+{{< include _subfiles/proof-writing/_proof-by-cases_exm.qmd >}}
 
 # Follow the golden rule {#sec-golden-rule}
 
-{{< include _subfiles/proof-writing/_sec-golden-rule.qmd >}}
+{{< include _subfiles/proof-writing/_golden-rule_sec.qmd >}}
 
 # Proof by induction {#sec-proof-by-induction}
 
@@ -505,38 +505,38 @@ or for every integer $n$ from some starting value on.
 Checking the statement one $n$ at a time would never finish;
 induction proves it for all of them with two arguments.
 
-{{< include _subfiles/proof-writing/_def-proof-by-induction.qmd >}}
+{{< include _subfiles/proof-writing/_proof-by-induction_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_rem-induction-why.qmd >}}
+{{< include _subfiles/proof-writing/_induction-why_rem.qmd >}}
 
 {{< slidebreak >}}
 
 The following example uses [summation notation](algebra.qmd#def-summation).
 
-{{< include _subfiles/proof-writing/_exm-induction-sum.qmd >}}
+{{< include _subfiles/proof-writing/_induction-sum_exm.qmd >}}
 
 # Formal logic {#sec-formal-logic}
 
-{{< include _subfiles/proof-writing/_def-propositional-logic.qmd >}}
+{{< include _subfiles/proof-writing/_propositional-logic_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-propositional-logic.qmd >}}
+{{< include _subfiles/proof-writing/_propositional-logic_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-first-order-logic.qmd >}}
+{{< include _subfiles/proof-writing/_first-order-logic_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-first-order-logic.qmd >}}
+{{< include _subfiles/proof-writing/_first-order-logic_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_def-formal-proof.qmd >}}
+{{< include _subfiles/proof-writing/_formal-proof_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/proof-writing/_exm-formal-proof.qmd >}}
+{{< include _subfiles/proof-writing/_formal-proof_exm.qmd >}}

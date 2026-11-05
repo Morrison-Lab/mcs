@@ -36,11 +36,11 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/proof-writing/_def-proposition.qmd >}}
+{{< include ../_subfiles/proof-writing/_proposition_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/proof-writing/_def-predicate.qmd >}}
+{{< include ../_subfiles/proof-writing/_predicate_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -60,19 +60,19 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/proof-writing/_def-logical-connective.qmd >}}
+{{< include ../_subfiles/proof-writing/_logical-connective_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/proof-writing/_def-not.qmd >}}
+{{< include ../_subfiles/proof-writing/_not_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/proof-writing/_def-and.qmd >}}
+{{< include ../_subfiles/proof-writing/_and_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/proof-writing/_def-or.qmd >}}
+{{< include ../_subfiles/proof-writing/_or_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -104,7 +104,7 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/proof-writing/_def-truth-table.qmd >}}
+{{< include ../_subfiles/proof-writing/_truth-table_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -124,7 +124,7 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/proof-writing/_def-implies.qmd >}}
+{{< include ../_subfiles/proof-writing/_implies_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -132,7 +132,7 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/proof-writing/_exm-implies.qmd >}}
+{{< include ../_subfiles/proof-writing/_implies_exm.qmd >}}
 
 {{< slidebreak >}}
 
@@ -156,7 +156,7 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/proof-writing/_def-converse.qmd >}}
+{{< include ../_subfiles/proof-writing/_converse_def.qmd >}}
 
 ## Conditionals in English {#sec-conditionals-english}
 
@@ -180,7 +180,7 @@ notes, so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/proof-writing/_def-iff.qmd >}}
+{{< include ../_subfiles/proof-writing/_iff_def.qmd >}}
 
 {{< slidebreak >}}
 

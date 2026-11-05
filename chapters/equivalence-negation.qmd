@@ -32,7 +32,7 @@ the exercises are new.
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/proof-writing/_def-logically-equivalent.qmd >}}
+{{< include ../_subfiles/proof-writing/_logically-equivalent_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -124,7 +124,7 @@ the exercises are new.
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/proof-writing/_thm-de-morgan-logic.qmd >}}
+{{< include ../_subfiles/proof-writing/_de-morgan-logic_thm.qmd >}}
 
 {{< slidebreak >}}
 

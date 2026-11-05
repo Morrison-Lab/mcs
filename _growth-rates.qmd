@@ -10,24 +10,24 @@ This page defines the notation for that comparison.
 
 # Upper bounds
 
-{{< include _subfiles/growth-rates/_def-big-o.qmd >}}
+{{< include _subfiles/growth-rates/_big-o_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/growth-rates/_exm-big-o.qmd >}}
+{{< include _subfiles/growth-rates/_big-o_exm.qmd >}}
 
 # Lower bounds
 
-{{< include _subfiles/growth-rates/_def-big-omega.qmd >}}
+{{< include _subfiles/growth-rates/_big-omega_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/growth-rates/_exm-big-omega.qmd >}}
+{{< include _subfiles/growth-rates/_big-omega_exm.qmd >}}
 
 # Matching bounds
 
-{{< include _subfiles/growth-rates/_def-big-theta.qmd >}}
+{{< include _subfiles/growth-rates/_big-theta_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/growth-rates/_exm-big-theta.qmd >}}
+{{< include _subfiles/growth-rates/_big-theta_exm.qmd >}}

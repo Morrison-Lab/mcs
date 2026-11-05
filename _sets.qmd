@@ -13,228 +13,228 @@ the expressions that write functions down and the algorithms that compute them.
 
 []{#sets}
 
-{{< include _subfiles/sets/_def-set.qmd >}}
+{{< include _subfiles/sets/_set_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_exm-set.qmd >}}
+{{< include _subfiles/sets/_set_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-roster-notation.qmd >}}
+{{< include _subfiles/sets/_roster-notation_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_exm-roster-notation.qmd >}}
+{{< include _subfiles/sets/_roster-notation_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-set-builder.qmd >}}
+{{< include _subfiles/sets/_set-builder_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_exm-set-builder.qmd >}}
+{{< include _subfiles/sets/_set-builder_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-set-builder-expression.qmd >}}
+{{< include _subfiles/sets/_set-builder-expression_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_exm-set-builder-expression.qmd >}}
+{{< include _subfiles/sets/_set-builder-expression_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-subset.qmd >}}
+{{< include _subfiles/sets/_subset_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_exm-subset.qmd >}}
+{{< include _subfiles/sets/_subset_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_thm-subset-reflexive.qmd >}}
+{{< include _subfiles/sets/_subset-reflexive_thm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-strict-subset.qmd >}}
+{{< include _subfiles/sets/_strict-subset_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-superset.qmd >}}
+{{< include _subfiles/sets/_superset_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-strict-superset.qmd >}}
+{{< include _subfiles/sets/_strict-superset_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_exm-strict-subset-superset.qmd >}}
+{{< include _subfiles/sets/_strict-subset-superset_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-empty-set.qmd >}}
+{{< include _subfiles/sets/_empty-set_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_exm-empty-set.qmd >}}
+{{< include _subfiles/sets/_empty-set_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-vacuous-truth.qmd >}}
+{{< include _subfiles/sets/_vacuous-truth_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_exm-vacuous-truth.qmd >}}
+{{< include _subfiles/sets/_vacuous-truth_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_thm-empty-set-unique.qmd >}}
+{{< include _subfiles/sets/_empty-set-unique_thm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_thm-empty-subset.qmd >}}
+{{< include _subfiles/sets/_empty-subset_thm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-power-set.qmd >}}
+{{< include _subfiles/sets/_power-set_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_exm-power-set.qmd >}}
+{{< include _subfiles/sets/_power-set_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-interval.qmd >}}
+{{< include _subfiles/sets/_interval_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_rem-interval-brackets.qmd >}}
+{{< include _subfiles/sets/_interval-brackets_rem.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_exm-interval.qmd >}}
+{{< include _subfiles/sets/_interval_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-collection.qmd >}}
+{{< include _subfiles/sets/_collection_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_exm-collection.qmd >}}
+{{< include _subfiles/sets/_collection_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-label.qmd >}}
+{{< include _subfiles/sets/_label_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_exm-label.qmd >}}
+{{< include _subfiles/sets/_label_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-index-set.qmd >}}
+{{< include _subfiles/sets/_index-set_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_exm-index-set.qmd >}}
+{{< include _subfiles/sets/_index-set_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-indexed-family.qmd >}}
+{{< include _subfiles/sets/_indexed-family_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_exm-indexed-family.qmd >}}
+{{< include _subfiles/sets/_indexed-family_exm.qmd >}}
 
 # Combining sets
 
-{{< include _subfiles/sets/_def-union.qmd >}}
+{{< include _subfiles/sets/_union_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-indexed-union.qmd >}}
+{{< include _subfiles/sets/_indexed-union_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-intersection.qmd >}}
+{{< include _subfiles/sets/_intersection_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-indexed-intersection.qmd >}}
+{{< include _subfiles/sets/_indexed-intersection_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-set-difference.qmd >}}
+{{< include _subfiles/sets/_set-difference_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-complement.qmd >}}
+{{< include _subfiles/sets/_complement_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_exm-complement.qmd >}}
+{{< include _subfiles/sets/_complement_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_exm-set-operations.qmd >}}
+{{< include _subfiles/sets/_set-operations_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_exm-indexed-union-intersection.qmd >}}
+{{< include _subfiles/sets/_indexed-union-intersection_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_thm-de-morgan.qmd >}}
+{{< include _subfiles/sets/_de-morgan_thm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_exm-de-morgan.qmd >}}
+{{< include _subfiles/sets/_de-morgan_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-disjoint-sets.qmd >}}
+{{< include _subfiles/sets/_disjoint-sets_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-pairwise-disjoint.qmd >}}
+{{< include _subfiles/sets/_pairwise-disjoint_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_exm-pairwise-disjoint.qmd >}}
+{{< include _subfiles/sets/_pairwise-disjoint_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-ordered-pair.qmd >}}
+{{< include _subfiles/sets/_ordered-pair_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-cartesian-product.qmd >}}
+{{< include _subfiles/sets/_cartesian-product_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_exm-cartesian-product.qmd >}}
+{{< include _subfiles/sets/_cartesian-product_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-tuple.qmd >}}
+{{< include _subfiles/sets/_tuple_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_exm-tuple.qmd >}}
+{{< include _subfiles/sets/_tuple_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_def-cartesian-product-many.qmd >}}
+{{< include _subfiles/sets/_cartesian-product-many_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_exm-cartesian-product-many.qmd >}}
+{{< include _subfiles/sets/_cartesian-product-many_exm.qmd >}}
 
 # Extended non-negative real numbers
 
-{{< include _subfiles/sets/_def-extended-nonneg-reals.qmd >}}
+{{< include _subfiles/sets/_extended-nonneg-reals_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/sets/_exm-extended-nonneg-reals.qmd >}}
+{{< include _subfiles/sets/_extended-nonneg-reals_exm.qmd >}}
