@@ -46,6 +46,10 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
+{{< include ../_subfiles/expressions-algorithms/_def-denotes.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include _subfiles/functional-programming/_racket-expression_def.qmd >}}
 
 {{< slidebreak >}}
