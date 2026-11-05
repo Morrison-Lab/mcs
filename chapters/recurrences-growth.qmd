@@ -212,7 +212,7 @@ The algorithms `pal` and `root` come from earlier chapters of these notes.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/recurrences-growth/_factorial_def.qmd >}}
+{{< include ../_subfiles/number-systems/_factorial_def.qmd >}}
 
 {{< slidebreak >}}
 
