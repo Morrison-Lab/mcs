@@ -6,6 +6,5 @@ format:
   html: default
 ---
 
-The CSCI 201 calendar now lives with the rest of the course logistics,
-in [Morrison-Lab/csci201](https://github.com/Morrison-Lab/csci201).
+The CSCI 201 calendar now lives with the rest of the course logistics.
 Read it at the [CSCI 201 calendar](https://morrison-lab.github.io/csci201/chapters/calendar.html).
