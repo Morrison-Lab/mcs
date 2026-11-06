@@ -33,13 +33,15 @@ These come from those notes:
 
 The exercises are new.
 
-The definitions of the contrapositive, proof by contrapositive, proof by contradiction,
-and rational and irrational numbers,
-their examples of a proof by contradiction and of rational and irrational numbers,
+The definitions of the contrapositive, proof by contrapositive and proof by contradiction,
+their example of a proof by contradiction,
 and the theorem that a conditional is equivalent to its contrapositive,
-are included from the
-[mathematics prerequisites](https://morrison-lab.github.io/mds/) notes,
-so they read the same in both places.
+are on the
+[proof writing](../proof-writing.qmd) page,
+and the definitions of rational and irrational numbers, with their examples,
+are on the
+[number systems](../number-systems.qmd) page.
+The other data science notes link to both pages.
 :::
 
 # Congruence modulo $n$ {#sec-congruence}
