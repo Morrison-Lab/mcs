@@ -48,9 +48,9 @@ website:
       # (rme, mds, sds); keep them in the sidebar's order and grouping.
       - text: "Course Logistics"
         menu:
-          - text: "Calendar"
+          - text: "Calendar (on the csci201 site)"
             href: chapters/calendar.qmd
-          - text: "Syllabus"
+          - text: "Syllabus (on the csci201 site)"
             href: chapters/syllabus.qmd
       - text: "Functional Programming"
         href: chapters/functional-programming.qmd
@@ -141,8 +141,10 @@ website:
         href: index.qmd
       - section: "Course Logistics"
         contents:
-          - chapters/calendar.qmd
-          - chapters/syllabus.qmd
+          - text: "Calendar (on the csci201 site)"
+            href: chapters/calendar.qmd
+          - text: "Syllabus (on the csci201 site)"
+            href: chapters/syllabus.qmd
       - chapters/functional-programming.qmd
       - section: "Logic"
         contents:
