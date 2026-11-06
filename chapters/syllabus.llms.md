@@ -6,7 +6,7 @@ Winter 2027
 
 Published
 
-Last modified: 2026-11-05 17:26:53 (PST)
+Last modified: 2026-11-05 18:11:22 (PST)
 
 > **NOTE:**
 >
@@ -87,11 +87,16 @@ Homework, labs, and exams test and measure the outcomes below. On completion of 
 
 The course notes are this site, [*Math for Computer Science* (mcs)](https://morrison-lab.github.io/mcs/). Its definitions come from the lab’s [*Math for Data Science* (mds)](https://morrison-lab.github.io/mds/) notes, which also cover background mathematics this course builds on.
 
-The readings in the [schedule](#schedule) are sections of:
+These notes are the required text; you do not need to buy a textbook.
 
-- *Discrete Mathematics with Applications* (5th ed.), by Susanna Epp.
+The readings in the [schedule](#schedule) are sections of *Discrete Mathematics with Applications* (5th ed.), by Susanna Epp. This book is recommended, not required: its readings and exercises give more practice, but nothing graded depends on it.
 
-Other useful references:
+For the functional programming half of the course:
+
+- [*The Racket Guide*](https://docs.racket-lang.org/guide/), free on the Racket website, is the reference for the language the labs use (`#lang racket`).
+- [*How to Design Programs*](https://htdp.org/) (2nd ed.), by Matthias Felleisen, Robert Bruce Findler, Matthew Flatt and Shriram Krishnamurthi, free online, teaches a step-by-step recipe for designing functions. It uses its own teaching languages rather than `#lang racket`, so its code may need small changes to run in the labs.
+
+Other useful references for discrete mathematics:
 
 - *Discrete Mathematics and Its Applications*, by Kenneth Rosen; any recent edition.
 - *Building Blocks for Theoretical Computer Science*, by Margaret Fleck, which can be read at no cost on [the author’s webpage](https://mfleck.cs.illinois.edu/building-blocks/index-sp2020.html).
@@ -118,7 +123,7 @@ I will distribute worksheets, homework, and lab materials on Canvas. The lecture
 
 ## Schedule
 
-The topics and dates of future lectures may change. The [course calendar](../chapters/calendar.llms.md) gives the day-by-day agenda, including every deadline; the table below gives the topics and readings week by week. Readings are sections of Epp’s *Discrete Mathematics with Applications* (5th ed.). Classes begin on Tuesday, January 5, so the first lecture is on Wednesday, January 6. Monday, January 18 (Martin Luther King Jr. Day) and Monday, February 15 (Presidents’ Day) are university holidays, with no class.
+The topics and dates of future lectures may change. The [course calendar](../chapters/calendar.llms.md) gives the day-by-day agenda, including every deadline; the table below gives the topics and readings week by week. Readings are sections of Epp’s *Discrete Mathematics with Applications* (5th ed.), which is recommended, not required. Classes begin on Tuesday, January 5, so the first lecture is on Wednesday, January 6. Monday, January 18 (Martin Luther King Jr. Day) and Monday, February 15 (Presidents’ Day) are university holidays, with no class.
 
 | Week | Dates | Topics | Assigned work | Reading |
 |:---|:---|:---|:---|:---|
