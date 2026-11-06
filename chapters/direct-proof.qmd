@@ -24,10 +24,11 @@ the template for a direct proof,
 and the ideas of proof by cases and "without loss of generality" come from those notes;
 the exercises are new.
 
-The definitions of logical entailment, the integers, even and odd integers,
-and proof are included from the
-[mathematics prerequisites](https://morrison-lab.github.io/mds/) notes,
-so they read the same in both places.
+The definitions of logical entailment and proof are on the
+[proof writing](../proof-writing.qmd) page,
+and those of the integers and of even and odd integers are on the
+[number systems](../number-systems.qmd) page.
+The other data science notes link to both pages.
 :::
 
 # Rules of inference {#sec-inference}

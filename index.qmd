@@ -23,8 +23,8 @@ The notes adapt [Kameron Decker Harris](https://cs.wwu.edu/harri267)'s Fall 2026
 his notes on logic, proofs, sets and induction are typed transcriptions of Scott Wehrwein's Spring 2025 handwritten lecture notes.
 Each chapter's collapsed **Source** note records what it draws on.
 
-General mathematics that several courses share, such as logic, sets and functions, is kept in the [mathematics prerequisites](https://morrison-lab.github.io/mds/) site.
-These notes include its definitions, from the `mds` submodule, so each definition is written once and reads the same in both places.
+General mathematics that several courses share, such as logic, sets and functions, is kept in these notes.
+The [mathematics for data science](https://morrison-lab.github.io/mds/) notes link to these pages for those definitions.
 
 The notes are available in multiple formats:
 

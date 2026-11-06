@@ -37,9 +37,9 @@ The definitions of the contrapositive, proof by contrapositive, proof by contrad
 and rational and irrational numbers,
 their examples of a proof by contradiction and of rational and irrational numbers,
 and the theorem that a conditional is equivalent to its contrapositive,
-are included from the
-[mathematics prerequisites](https://morrison-lab.github.io/mds/) notes,
-so they read the same in both places.
+are on the
+[proof writing](../proof-writing.qmd) page,
+which the other data science notes link to.
 :::
 
 # Congruence modulo $n$ {#sec-congruence}
