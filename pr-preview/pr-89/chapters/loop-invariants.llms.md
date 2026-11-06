@@ -6,7 +6,7 @@ Proving that an algorithm with a loop is correct
 
 Published
 
-Last modified: 2026-11-04 23:25:12 (PST)
+Last modified: 2026-11-06 14:52:04 (PST)
 
 > **NOTE:**
 >
@@ -64,7 +64,7 @@ Last modified: 2026-11-04 23:25:12 (PST)
 
 > **NOTE:**
 >
-> **Definition 1 (Floor)** The **floor** $\mathopen{}\left\lfloor x\right\rfloor\mathclose{}$ of a real number ([Definition: Real numbers](../chapters/sets.llms.md#def-real-numbers)) $x$ ([Wikipedia contributors 2026b](#ref-wikipedia_floor_ceiling)) is the largest integer ([Definition: Integers](../chapters/direct-proof.llms.md#def-integers)) that is at most $x$.
+> **Definition 1 (Floor)** The **floor** $\mathopen{}\left\lfloor x\right\rfloor\mathclose{}$ of a [real number](../chapters/sets.llms.md#def-real-numbers) $x$ ([Wikipedia contributors 2026b](#ref-wikipedia_floor_ceiling)) is the largest [integer](../chapters/direct-proof.llms.md#def-integers) that is at most $x$.
 
 > **NOTE:**
 >

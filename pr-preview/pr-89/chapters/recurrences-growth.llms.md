@@ -6,7 +6,7 @@ Solving recurrence relations, running times, and big-O notation
 
 Published
 
-Last modified: 2026-11-04 23:25:12 (PST)
+Last modified: 2026-11-06 14:52:04 (PST)
 
 > **NOTE:**
 >
@@ -517,7 +517,7 @@ Last modified: 2026-11-04 23:25:12 (PST)
 
 > **NOTE:**
 >
-> **Definition 10 (Factorial)** For a natural number ([Definition: Natural numbers (our convention)](../chapters/sets.llms.md#def-natural-numbers)) $n$, the **factorial** of $n$ ([Wikipedia contributors 2026c](#ref-wikipedia_factorial)), written $n!$, is the product $1 \cdot 2 \cdots n$ of the natural numbers from 1 to $n$.
+> **Definition 10 (Factorial)** For a [non-negative integer](../number-systems.llms.md#def-nonnegative-integers) $n$, the **factorial** of $n$ ([Wikipedia contributors 2026c](#ref-wikipedia_factorial)), written ${{n}!}$, is $1 \cdot 2 \cdots n$, the [natural numbers](../chapters/sets.llms.md#def-natural-numbers) from 1 to $n$ multiplied together. For $n = 0$ there is nothing to multiply, and ${{0}!} = 1$.
 
 > **NOTE:**
 >

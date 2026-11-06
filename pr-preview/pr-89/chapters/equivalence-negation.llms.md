@@ -6,7 +6,7 @@ When two propositions say the same thing, and how to say the opposite
 
 Published
 
-Last modified: 2026-11-04 23:25:12 (PST)
+Last modified: 2026-11-06 14:52:04 (PST)
 
 > **NOTE:**
 >
@@ -68,7 +68,7 @@ Last modified: 2026-11-04 23:25:12 (PST)
 
 > **NOTE:**
 >
-> **Definition 2 (Tautology)** A **tautology** is a proposition that is true in every row of its truth table ([Definition: Truth table](../chapters/propositional-logic.llms.md#def-truth-table)).
+> **Definition 2 (Tautology)** A **tautology** is a [proposition](../chapters/propositional-logic.llms.md#def-proposition) that is true in every row of its [truth table](../chapters/propositional-logic.llms.md#def-truth-table).
 
 > **NOTE:**
 >
@@ -81,7 +81,7 @@ Last modified: 2026-11-04 23:25:12 (PST)
 
 > **NOTE:**
 >
-> **Definition 3 (Contradiction)** A **contradiction** is a proposition that is false in every row of its truth table ([Definition: Truth table](../chapters/propositional-logic.llms.md#def-truth-table)).
+> **Definition 3 (Contradiction)** A **contradiction** is a [proposition](../chapters/propositional-logic.llms.md#def-proposition) that is false in every row of its [truth table](../chapters/propositional-logic.llms.md#def-truth-table).
 
 > **NOTE:**
 >
@@ -98,11 +98,11 @@ Last modified: 2026-11-04 23:25:12 (PST)
 
 > **NOTE:**
 >
-> **Theorem 1 (Equivalence is a tautological biconditional)** For propositions $A$ and $B$, $A$ and $B$ are [logically equivalent](#def-logically-equivalent) exactly when $A \Leftrightarrow B$ is a [tautology](#def-tautology).
+> **Theorem 1 (Equivalence is a tautological biconditional)** For [propositions](../chapters/propositional-logic.llms.md#def-proposition) $A$ and $B$, $A$ and $B$ are [logically equivalent](#def-logically-equivalent) exactly when $A \Leftrightarrow B$ is a [tautology](#def-tautology).
 
 > **NOTE:**
 >
-> *Proof*. By [Definition: If and only if](../chapters/propositional-logic.llms.md#def-iff), $A \Leftrightarrow B$ is true in a row of the truth table exactly when $A$ and $B$ have the same truth value in that row. So $A \Leftrightarrow B$ is true in every row exactly when $A$ and $B$ have the same truth value in every row, which is what $A \equiv B$ means.
+> *Proof*. By the definition of [if and only if](../chapters/propositional-logic.llms.md#def-iff), $A \Leftrightarrow B$ is true in a row of the [truth table](../chapters/propositional-logic.llms.md#def-truth-table) exactly when $A$ and $B$ have the same truth value in that row. So $A \Leftrightarrow B$ is true in every row exactly when $A$ and $B$ have the same truth value in every row, which is the definition of $A \equiv B$.
 
 > **NOTE:**
 >
@@ -131,14 +131,16 @@ Last modified: 2026-11-04 23:25:12 (PST)
 
 > **NOTE:**
 >
-> **Theorem 2 (Distributive laws)** For propositions $A$, $B$ and $C$:
+> **Theorem 2 (Distributive laws for propositions)** For [propositions](../chapters/propositional-logic.llms.md#def-proposition) $A$, $B$ and $C$:
 >
-> 1.  $A \land (B \lor C) \equiv (A \land B) \lor (A \land C)$;
-> 2.  $A \lor (B \land C) \equiv (A \lor B) \land (A \lor C)$.
+> $$\begin{aligned}
+> A \land (B \lor C) &\equiv (A \land B) \lor (A \land C) \\
+> A \lor (B \land C) &\equiv (A \lor B) \land (A \lor C)
+> \end{aligned}$$
 
 > **NOTE:**
 >
-> *Proof*. Law 2 is [Solution 3](#sol-or-distributes). For law 1, the fourth and fifth columns of this table match in every row:
+> *Proof*. By the definitions of [and](../chapters/propositional-logic.llms.md#def-and) and [or](../chapters/propositional-logic.llms.md#def-or), the [truth table](../chapters/propositional-logic.llms.md#def-truth-table) for the first law is:
 >
 > | $A$ | $B$ | $C$ | $A \land (B \lor C)$ | $(A \land B) \lor (A \land C)$ |
 > |:---:|:---:|:---:|:--------------------:|:------------------------------:|
@@ -150,6 +152,21 @@ Last modified: 2026-11-04 23:25:12 (PST)
 > |  F  |  T  |  F  |          F           |               F                |
 > |  F  |  F  |  T  |          F           |               F                |
 > |  F  |  F  |  F  |          F           |               F                |
+>
+> and for the second law:
+>
+> | $A$ | $B$ | $C$ | $A \lor (B \land C)$ | $(A \lor B) \land (A \lor C)$ |
+> |:---:|:---:|:---:|:--------------------:|:-----------------------------:|
+> |  T  |  T  |  T  |          T           |               T               |
+> |  T  |  T  |  F  |          T           |               T               |
+> |  T  |  F  |  T  |          T           |               T               |
+> |  T  |  F  |  F  |          T           |               T               |
+> |  F  |  T  |  T  |          T           |               T               |
+> |  F  |  T  |  F  |          F           |               F               |
+> |  F  |  F  |  T  |          F           |               F               |
+> |  F  |  F  |  F  |          F           |               F               |
+>
+> In each table the last two columns match in every row, so each law is a [logical equivalence](#def-logically-equivalent).
 
 > **NOTE:**
 >
@@ -181,18 +198,20 @@ Last modified: 2026-11-04 23:25:12 (PST)
 
 > **NOTE:**
 >
-> **Theorem 3 (Double negation)** For a proposition $P$, $\neg \neg P$ is [logically equivalent](#def-logically-equivalent) to $P$: $\neg \neg P \equiv P$.
+> **Theorem 3 (Double negation)** For a [proposition](../chapters/propositional-logic.llms.md#def-proposition) $P$,
+>
+> $$\neg \neg P \equiv P.$$
 
 > **NOTE:**
 >
-> *Proof*.
+> *Proof*. By the definition of [not](../chapters/propositional-logic.llms.md#def-not), the [truth table](../chapters/propositional-logic.llms.md#def-truth-table) is:
 >
 > | $P$ | $\neg P$ | $\neg \neg P$ |
 > |:---:|:--------:|:-------------:|
 > |  T  |    F     |       T       |
 > |  F  |    T     |       F       |
 >
-> The first and last columns match in both rows.
+> The first and last columns match in both rows, so the two sides are [logically equivalent](#def-logically-equivalent).
 
 > **NOTE:**
 >
@@ -200,11 +219,11 @@ Last modified: 2026-11-04 23:25:12 (PST)
 
 > **NOTE:**
 >
-> **Theorem 4 (Replacing a part by an equivalent part)** If $A$ and $B$ are [logically equivalent](#def-logically-equivalent), $A \equiv B$, then replacing $A$ by $B$ inside a larger proposition gives a proposition logically equivalent to the larger one. In particular, $\neg A \equiv \neg B$.
+> **Theorem 4 (Replacing a part by an equivalent part)** Let $A$ and $B$ be [logically equivalent](#def-logically-equivalent) [propositions](../chapters/propositional-logic.llms.md#def-proposition). Let $F$ be a [proposition](../chapters/propositional-logic.llms.md#def-proposition) built from $A$ and other propositions with [logical connectives](../chapters/propositional-logic.llms.md#def-logical-connective), and let $F'$ be $F$ with $A$ replaced by $B$. Then $F \equiv F'$.
 
 > **NOTE:**
 >
-> *Proof*. The truth value of the larger proposition in a row of its truth table depends on the truth value of $A$ in that row, not on how $A$ is written. $A$ and $B$ have the same truth value in every row, so the two larger propositions do too.
+> *Proof*. The truth value of $F$ in a row of its [truth table](../chapters/propositional-logic.llms.md#def-truth-table) is computed from the truth values of its parts in that row, using the truth table of each connective. $F'$ is computed the same way, except that $B$ takes the place of $A$. $A$ and $B$ have the same truth value in every row, so each step of the computation gives the same value for $F'$ as for $F$. So $F$ and $F'$ have the same truth value in every row.
 
 > **NOTE:**
 >
@@ -250,11 +269,13 @@ Last modified: 2026-11-04 23:25:12 (PST)
 
 > **NOTE:**
 >
-> **Theorem 6 (Negating a conditional)** For propositions $P$ and $Q$, $\neg (P \Rightarrow Q) \equiv P \land \neg Q$.
+> **Theorem 6 (Negating a conditional)** For [propositions](../chapters/propositional-logic.llms.md#def-proposition) $P$ and $Q$,
+>
+> $$\neg (P \Rightarrow Q) \equiv P \land \neg Q.$$
 
 > **NOTE:**
 >
-> *Proof*. By [Definition: Implies](../chapters/propositional-logic.llms.md#def-implies), $P \Rightarrow Q$ is false exactly when $P$ is true and $Q$ is false, so $\neg (P \Rightarrow Q)$ is true exactly in that row. $P \land \neg Q$ is true exactly when $P$ is true and $\neg Q$ is true, which is the same row.
+> *Proof*. By the definition of [implies](../chapters/propositional-logic.llms.md#def-implies), $P \Rightarrow Q$ is false exactly when $P$ is true and $Q$ is false. So $\neg (P \Rightarrow Q)$ is true exactly in that row of the [truth table](../chapters/propositional-logic.llms.md#def-truth-table). By the definition of [and](../chapters/propositional-logic.llms.md#def-and), $P \land \neg Q$ is true exactly when $P$ is true and $\neg Q$ is true. That is the same row.
 
 > **NOTE:**
 >
@@ -262,11 +283,18 @@ Last modified: 2026-11-04 23:25:12 (PST)
 
 > **NOTE:**
 >
-> **Corollary 1 (A conditional without the arrow)** For propositions $P$ and $Q$, $P \Rightarrow Q \equiv \neg P \lor Q$.
+> **Corollary 1 (A conditional without the arrow)** For [propositions](../chapters/propositional-logic.llms.md#def-proposition) $P$ and $Q$,
+>
+> $$(P \Rightarrow Q) \equiv (\neg P \lor Q).$$
 
 > **NOTE:**
 >
-> *Proof*. By double negation ([Theorem 3](#thm-double-negation)), $P \Rightarrow Q \equiv \neg \neg (P \Rightarrow Q)$. By [Theorem 6](#thm-negate-conditional) and [Theorem 4](#thm-substitution-logic), $\neg \neg (P \Rightarrow Q) \equiv \neg (P \land \neg Q)$. By the first of [De Morgan’s laws](#thm-de-morgan-logic), $\neg (P \land \neg Q) \equiv \neg P \lor \neg \neg Q$, and by double negation again, that is logically equivalent to $\neg P \lor Q$.
+> *Proof*.
+>
+> 1.  By [double negation](#thm-double-negation), $P \Rightarrow Q \equiv \neg \neg (P \Rightarrow Q)$.
+> 2.  By [negating a conditional](#thm-negate-conditional) and [replacing a part by an equivalent part](#thm-substitution-logic), $\neg \neg (P \Rightarrow Q) \equiv \neg (P \land \neg Q)$.
+> 3.  By the first of [De Morgan’s laws](#thm-de-morgan-logic), $\neg (P \land \neg Q) \equiv \neg P \lor \neg \neg Q$.
+> 4.  By double negation and replacing a part by an equivalent part again, $\neg P \lor \neg \neg Q \equiv \neg P \lor Q$.
 
 > **NOTE:**
 >
@@ -288,17 +316,19 @@ Last modified: 2026-11-04 23:25:12 (PST)
 
 > **NOTE:**
 >
-> **Theorem 7 (Negating a quantifier)** For a set $S$ and a [predicate](../chapters/propositional-logic.llms.md#def-predicate) $P(x)$ whose [domain](../chapters/predicates-quantifiers.llms.md#def-domain-of-discourse) is $S$:
+> **Theorem 7 (De Morgan’s laws for quantifiers)** For a [set](../chapters/sets.llms.md#def-set) $S$ and a [predicate](../chapters/propositional-logic.llms.md#def-predicate) $P(x)$ whose [domain of discourse](../chapters/predicates-quantifiers.llms.md#def-domain-of-discourse) is $S$:
 >
-> 1.  $\neg (\forall x \in S, P(x))$ and $\exists x \in S, \neg P(x)$ have the same truth value;
-> 2.  $\neg (\exists x \in S, P(x))$ and $\forall x \in S, \neg P(x)$ have the same truth value.
+> $$\begin{aligned}
+> \neg (\forall x \in S, P(x)) &\equiv \exists x \in S, \neg P(x) \\
+> \neg (\exists x \in S, P(x)) &\equiv \forall x \in S, \neg P(x)
+> \end{aligned}$$
 
 > **NOTE:**
 >
 > *Proof*.
 >
-> 1.  By [Definition: Universal quantifier](../chapters/predicates-quantifiers.llms.md#def-universal-quantifier), $\forall x \in S, P(x)$ is false exactly when $P(x)$ is false for at least one $x$ in $S$, which by [Definition: Existential quantifier](../chapters/predicates-quantifiers.llms.md#def-existential-quantifier) is when $\exists x \in S, \neg P(x)$ is true.
-> 2.  By [Definition: Existential quantifier](../chapters/predicates-quantifiers.llms.md#def-existential-quantifier), $\exists x \in S, P(x)$ is false exactly when $P(x)$ is false for every $x$ in $S$, which by [Definition: Universal quantifier](../chapters/predicates-quantifiers.llms.md#def-universal-quantifier) is when $\forall x \in S, \neg P(x)$ is true.
+> 1.  By the definition of the [universal quantifier](../chapters/predicates-quantifiers.llms.md#def-universal-quantifier), $\forall x \in S, P(x)$ is false exactly when $P(x)$ is false for at least one $x$ in $S$. By the definition of the [existential quantifier](../chapters/predicates-quantifiers.llms.md#def-existential-quantifier), that is exactly when $\exists x \in S, \neg P(x)$ is true.
+> 2.  By the definition of the existential quantifier, $\exists x \in S, P(x)$ is false exactly when $P(x)$ is false for every $x$ in $S$. By the definition of the universal quantifier, that is exactly when $\forall x \in S, \neg P(x)$ is true.
 
 > **NOTE:**
 >

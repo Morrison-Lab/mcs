@@ -6,7 +6,7 @@ Proving a statement by way of its negation
 
 Published
 
-Last modified: 2026-11-04 23:25:12 (PST)
+Last modified: 2026-11-06 14:52:04 (PST)
 
 > **NOTE:**
 >
@@ -42,7 +42,7 @@ Last modified: 2026-11-04 23:25:12 (PST)
 
 > **NOTE:**
 >
-> **Definition 1 (Congruence modulo** $n$) Let $a$ and $b$ be integers ([Definition: Integers](../chapters/direct-proof.llms.md#def-integers)), and let $n$ be a positive integer. We say that $a$ is **congruent to** $b$ modulo $n$, written $a \equiv b \pmod{n}$, if $n \mid (a - b)$ ([Definition: Divides](../chapters/direct-proof.llms.md#def-divides)) ([Wikipedia contributors 2026d](#ref-wikipedia_modular_arithmetic)). When $a$ is not congruent to $b$ modulo $n$, we write $a \not\equiv b \pmod{n}$.
+> **Definition 1 (Congruence modulo** $n$) Let $a$ and $b$ be [integers](../chapters/direct-proof.llms.md#def-integers), and let $n$ be a [positive integer](../chapters/direct-proof.llms.md#def-positive-integer). We say that $a$ is **congruent to** $b$ modulo $n$, written $a \equiv b \pmod{n}$, if $n$ [divides](../chapters/direct-proof.llms.md#def-divides) $a - b$, written $n \mid (a - b)$, ([Wikipedia contributors 2026d](#ref-wikipedia_modular_arithmetic)). When $a$ is not congruent to $b$ modulo $n$, we write $a \not\equiv b \pmod{n}$.
 
 > **NOTE:**
 >
@@ -208,13 +208,13 @@ Last modified: 2026-11-04 23:25:12 (PST)
 
 > **NOTE:**
 >
-> **Theorem 2 (Why a proof by contradiction works)** For propositions $P$ and $C$,
+> **Theorem 2 (Why a proof by contradiction works)** For [propositions](../chapters/propositional-logic.llms.md#def-proposition) $P$ and $C$,
 >
 > $$P \equiv \mathopen{}\left(\neg P \Rightarrow (C \land \neg C)\right)\mathclose{}.$$
 
 > **NOTE:**
 >
-> *Proof*. $C \land \neg C$ is false in every row ([Definition: And](../chapters/propositional-logic.llms.md#def-and), [Definition: Not](../chapters/propositional-logic.llms.md#def-not)), so it is a contradiction ([Definition: Contradiction](../chapters/equivalence-negation.llms.md#def-contradiction)). So, by [Definition: Implies](../chapters/propositional-logic.llms.md#def-implies), $\neg P \Rightarrow (C \land \neg C)$ is true exactly in the rows where $\neg P$ is false, which are the rows where $P$ is true:
+> *Proof*. By the definitions of [and](../chapters/propositional-logic.llms.md#def-and) and [not](../chapters/propositional-logic.llms.md#def-not), $C \land \neg C$ is false in every row, so it is a [contradiction](../chapters/equivalence-negation.llms.md#def-contradiction). So, by the definition of [implies](../chapters/propositional-logic.llms.md#def-implies), $\neg P \Rightarrow (C \land \neg C)$ is true exactly in the rows where $\neg P$ is false, which are the rows where $P$ is true:
 >
 > | $P$ | $C$ | $\neg P$ | $C \land \neg C$ | $\neg P \Rightarrow (C \land \neg C)$ |
 > |:---:|:---:|:--------:|:----------------:|:-------------------------------------:|
@@ -380,7 +380,7 @@ Last modified: 2026-11-04 23:25:12 (PST)
 
 > **NOTE:**
 >
-> **Definition 7 (Prime number)** An integer $n \ge 2$ is **prime** if its only positive divisors ([Definition: Divides](../chapters/direct-proof.llms.md#def-divides)) are $1$ and $n$ ([Wikipedia contributors 2026e](#ref-wikipedia_prime_number)).
+> **Definition 7 (Prime number)** An [integer](../chapters/direct-proof.llms.md#def-integers) $n \ge 2$ is **prime** if no [positive integer](../chapters/direct-proof.llms.md#def-positive-integer) other than $1$ and $n$ [divides](../chapters/direct-proof.llms.md#def-divides) it ([Wikipedia contributors 2026e](#ref-wikipedia_prime_number)).
 
 > **NOTE:**
 >
