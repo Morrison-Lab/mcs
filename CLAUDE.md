@@ -8,6 +8,8 @@ The same conventions apply to GitHub Copilot --- see [`.github/copilot-instructi
 `mcs` holds the lecture notes for CSCI 201, math for computer science, as a [Quarto](https://quarto.org/) website.
 It was created from the [`Morrison-Lab/qwt`](https://github.com/Morrison-Lab/qwt) template, and general mathematics lives in [`Morrison-Lab/mds`](https://github.com/Morrison-Lab/mds), which these notes include (from the `mds/` submodule, with `{{< include ../mds/_subfiles/... >}}`) or link to, rather than duplicate.
 Assessments, solutions and labs belong in the private `Morrison-Lab/mcsg` repository, never here.
+The CSCI 201 syllabus, calendar and Canvas sync belong in `Morrison-Lab/csci201`, the course-logistics shell ([mcs#94](https://github.com/Morrison-Lab/mcs/issues/94)).
+`chapters/syllabus.qmd` and `chapters/calendar.qmd` here are link-out pages to that site, so edit the originals there.
 
 Authoritative style guides:
 
