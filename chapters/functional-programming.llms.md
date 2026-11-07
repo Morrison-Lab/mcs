@@ -6,13 +6,13 @@ Expressions, functions and cases in Racket
 
 Published
 
-Last modified: 2026-11-05 19:20:18 (PST)
+Last modified: 2026-11-06 15:35:15 (PST)
 
 > **NOTE:**
 >
 > Kameron Decker Harris’s Fall 2026 syllabus opens the course with an introduction to functional programming; this chapter, its examples and its exercises are new.
 >
-> The definitions of expression, function, argument and value are included from the [mathematics prerequisites](https://morrison-lab.github.io/mds/) notes, so they read the same in both places.
+> The definition of an expression is on the [expressions and algorithms](../expressions-algorithms.llms.md) page, and those of a function, an argument and a value are on the [functions](../functions.llms.md) page. The other data science notes link to both pages.
 
 # 1 Expressions
 
