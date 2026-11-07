@@ -124,6 +124,10 @@ the exercises are new.
 
 {{< slidebreak >}}
 
+{{< include ../_subfiles/proof-writing/_substitution-logic_exm.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include ../_subfiles/proof-writing/_de-morgan-logic_thm.qmd >}}
 
 {{< slidebreak >}}
