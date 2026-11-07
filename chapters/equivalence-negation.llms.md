@@ -6,7 +6,7 @@ When two propositions say the same thing, and how to say the opposite
 
 Published
 
-Last modified: 2026-11-06 15:35:15 (PST)
+Last modified: 2026-11-06 16:46:50 (PST)
 
 > **NOTE:**
 >
@@ -231,6 +231,14 @@ Last modified: 2026-11-06 15:35:15 (PST)
 
 > **NOTE:**
 >
+> **Example 8 (Simplifying part of a proposition)**  
+>
+> By [double negation](#thm-double-negation), $\neg \neg Q \equiv Q$. Take $F$ to be $\neg P \lor \neg \neg Q$, with $A = \neg \neg Q$ and $B = Q$. By [replacing a part by an equivalent part](#thm-substitution-logic),
+>
+> $$\neg P \lor \neg \neg Q \equiv \neg P \lor Q.$$
+
+> **NOTE:**
+>
 > **Theorem 5 (De Morgan’s laws for propositions)** For any [propositions](../chapters/propositional-logic.llms.md#def-proposition) $P$ and $Q$ ([Wikipedia contributors 2026a](#ref-wikipedia_de_morgans_laws)):
 >
 > $$\begin{aligned}
@@ -253,7 +261,7 @@ Last modified: 2026-11-06 15:35:15 (PST)
 
 > **NOTE:**
 >
-> **Example 8 (Neither coordinate positive)** For real numbers $x$ and $y$, by the second of [De Morgan’s laws](#thm-de-morgan-logic), “not ($x > 0$ or $y > 0$)” is logically equivalent to “$x \le 0$ and $y \le 0$”.
+> **Example 9 (Neither coordinate positive)** For real numbers $x$ and $y$, by the second of [De Morgan’s laws](#thm-de-morgan-logic), “not ($x > 0$ or $y > 0$)” is logically equivalent to “$x \le 0$ and $y \le 0$”.
 
 > **NOTE:**
 >
@@ -279,7 +287,7 @@ Last modified: 2026-11-06 15:35:15 (PST)
 
 > **NOTE:**
 >
-> **Example 9 (When a search claim fails)** The negation of “if the list is sorted, then binary search finds the key” is “the list is sorted and binary search does not find the key” ([Theorem 6](#thm-negate-conditional)).
+> **Example 10 (When a search claim fails)** The negation of “if the list is sorted, then binary search finds the key” is “the list is sorted and binary search does not find the key” ([Theorem 6](#thm-negate-conditional)).
 
 > **NOTE:**
 >
@@ -298,7 +306,7 @@ Last modified: 2026-11-06 15:35:15 (PST)
 
 > **NOTE:**
 >
-> **Example 10 (A rule as an “or”)** By [Corollary 1](#cor-conditional-as-or), “if the tests pass, then the build is deployed” is logically equivalent to “the tests fail or the build is deployed”.
+> **Example 11 (A rule as an “or”)** By [Corollary 1](#cor-conditional-as-or), “if the tests pass, then the build is deployed” is logically equivalent to “the tests fail or the build is deployed”.
 
 # 3 Negating quantified propositions
 
@@ -332,7 +340,7 @@ Last modified: 2026-11-06 15:35:15 (PST)
 
 > **NOTE:**
 >
-> **Example 11 (No natural square root of 2)** By part 2 of [Theorem 7](#thm-negate-quantifiers), $\neg (\exists n \in \mathbb{N}, n^2 = 2)$ has the same truth value as $\forall n \in \mathbb{N}, n^2 \ne 2$.
+> **Example 12 (No natural square root of 2)** By part 2 of [Theorem 7](#thm-negate-quantifiers), $\neg (\exists n \in \mathbb{N}, n^2 = 2)$ has the same truth value as $\forall n \in \mathbb{N}, n^2 \ne 2$.
 
 > **NOTE:**
 >

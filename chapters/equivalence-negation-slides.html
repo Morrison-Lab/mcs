@@ -331,7 +331,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-06 15:35:15 (PST)</p>
+  <p class="date">Last modified: 2026-11-06 16:46:50 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -775,6 +775,17 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 </section>
 <section class="slide level2">
 
+<div id="exm-substitution-logic" class="theorem example">
+<p><span class="theorem-title"><strong>Example 8 (Simplifying part of a proposition)</strong></span> &nbsp;</p>
+<!-- no-figure: a one-line rewriting; nothing to plot -->
+<p>By <a href="#/thm-double-negation">double negation</a>, <span class="math inline">\(\neg \neg Q \equiv Q\)</span>. Take <span class="math inline">\(F\)</span> to be <span class="math inline">\(\neg P \lor \neg \neg Q\)</span>, with <span class="math inline">\(A = \neg \neg Q\)</span> and <span class="math inline">\(B = Q\)</span>. By <a href="#/thm-substitution-logic">replacing a part by an equivalent part</a>,</p>
+<p><span class="math display">\[
+\neg P \lor \neg \neg Q \equiv \neg P \lor Q.
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
 <div id="thm-de-morgan-logic" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 5 (De Morgan’s laws for propositions)</strong></span> For any <a href="../chapters/propositional-logic.html#def-proposition">propositions</a> <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> <span class="citation" data-cites="wikipedia_de_morgans_laws">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026a</a>)</span>:</p>
 <p><span class="math display">\[
@@ -788,7 +799,7 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 <section class="slide level2">
 
 <div id="exm-de-morgan-logic" class="theorem example">
-<p><span class="theorem-title"><strong>Example 8 (Neither coordinate positive)</strong></span> For real numbers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, by the second of <a href="#/thm-de-morgan-logic">De Morgan’s laws</a>, “not (<span class="math inline">\(x &gt; 0\)</span> or <span class="math inline">\(y &gt; 0\)</span>)” is logically equivalent to “<span class="math inline">\(x \le 0\)</span> and <span class="math inline">\(y \le 0\)</span>”.</p>
+<p><span class="theorem-title"><strong>Example 9 (Neither coordinate positive)</strong></span> For real numbers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, by the second of <a href="#/thm-de-morgan-logic">De Morgan’s laws</a>, “not (<span class="math inline">\(x &gt; 0\)</span> or <span class="math inline">\(y &gt; 0\)</span>)” is logically equivalent to “<span class="math inline">\(x \le 0\)</span> and <span class="math inline">\(y \le 0\)</span>”.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -817,7 +828,7 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 <section class="slide level2">
 
 <div id="exm-negate-conditional" class="theorem example">
-<p><span class="theorem-title"><strong>Example 9 (When a search claim fails)</strong></span> The negation of “if the list is sorted, then binary search finds the key” is “the list is sorted and binary search does not find the key” (<a href="#/thm-negate-conditional" class="quarto-xref">Theorem&nbsp;6</a>).</p>
+<p><span class="theorem-title"><strong>Example 10 (When a search claim fails)</strong></span> The negation of “if the list is sorted, then binary search finds the key” is “the list is sorted and binary search does not find the key” (<a href="#/thm-negate-conditional" class="quarto-xref">Theorem&nbsp;6</a>).</p>
 </div>
 </section>
 <section class="slide level2">
@@ -832,7 +843,7 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 <section class="slide level2">
 
 <div id="exm-conditional-as-or" class="theorem example">
-<p><span class="theorem-title"><strong>Example 10 (A rule as an “or”)</strong></span> By <a href="#/cor-conditional-as-or" class="quarto-xref">Corollary&nbsp;1</a>, “if the tests pass, then the build is deployed” is logically equivalent to “the tests fail or the build is deployed”.</p>
+<p><span class="theorem-title"><strong>Example 11 (A rule as an “or”)</strong></span> By <a href="#/cor-conditional-as-or" class="quarto-xref">Corollary&nbsp;1</a>, “if the tests pass, then the build is deployed” is logically equivalent to “the tests fail or the build is deployed”.</p>
 </div>
 </section></section>
 <section>
@@ -869,7 +880,7 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 <section class="slide level2">
 
 <div id="exm-negate-quantifiers" class="theorem example">
-<p><span class="theorem-title"><strong>Example 11 (No natural square root of 2)</strong></span> By part 2 of <a href="#/thm-negate-quantifiers" class="quarto-xref">Theorem&nbsp;7</a>, <span class="math inline">\(\neg (\exists n \in \mathbb{N}, n^2 = 2)\)</span> has the same truth value as <span class="math inline">\(\forall n \in \mathbb{N}, n^2 \ne 2\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 12 (No natural square root of 2)</strong></span> By part 2 of <a href="#/thm-negate-quantifiers" class="quarto-xref">Theorem&nbsp;7</a>, <span class="math inline">\(\neg (\exists n \in \mathbb{N}, n^2 = 2)\)</span> has the same truth value as <span class="math inline">\(\forall n \in \mathbb{N}, n^2 \ne 2\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
