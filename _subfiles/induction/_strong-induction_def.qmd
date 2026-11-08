@@ -17,7 +17,7 @@ The assumption that $P(k)$ holds for every integer $k$ with $n_0 \le k < n$
 is the **strong induction hypothesis**.
 
 For $n = n_0$ no integer $k$ satisfies $n_0 \le k < n$,
-so the strong induction hypothesis is [vacuously true](sets.qmd#def-vacuous-truth),
+so the strong induction hypothesis is [vacuously true](predicates-quantifiers.qmd#def-vacuous-truth),
 and the proof for $n = n_0$ is a
 [base case](proof-writing.qmd#def-proof-by-induction).
 When the proof for $n$ needs particular earlier cases
