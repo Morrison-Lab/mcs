@@ -335,7 +335,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-09 11:08:20 (PST)</p>
+  <p class="date">Last modified: 2026-11-09 11:17:43 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -392,9 +392,9 @@ x = \frac{-b \pm \sqrt{b^2 - 4 a c}}{2 a},
 <section class="slide level2">
 
 <div id="exm-closed-form-solution" class="theorem example">
-<p><span class="theorem-title"><strong>Example 3 (Least squares versus logistic regression)</strong></span> Minimizing the <a href="https://morrison-lab.github.io/mds/vector-calculus.html#def-squared-error">squared-error</a> cost of a <a href="https://morrison-lab.github.io/mds/algebra.html#def-linear-function">linear</a> model over <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\)</span> gives the <a href="https://morrison-lab.github.io/mds/linear-algebra-projections.html#def-normal-equations">normal equations</a> <span class="math inline">\({D}^{\top} D \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= {D}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>. When <span class="math inline">\({D}^{\top} D\)</span> is <a href="https://morrison-lab.github.io/mds/linear-algebra-special-matrices.html#def-matrix-inverse">invertible</a>, the unique minimizer is</p>
+<p><span class="theorem-title"><strong>Example 3 (Least squares versus logistic regression)</strong></span> Minimizing the <a href="https://morrison-lab.github.io/mds/vector-calculus.html#def-squared-error">squared-error</a> cost of a <a href="https://morrison-lab.github.io/mds/algebra.html#def-linear-function">linear</a> model over <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\)</span> gives the <a href="https://morrison-lab.github.io/mds/linear-algebra-projections.html#def-normal-equations">normal equations</a> <span class="math inline">\({\mathbf{D}}^{\top} \mathbf{D} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= {\mathbf{D}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>. When <span class="math inline">\({\mathbf{D}}^{\top} \mathbf{D}\)</span> is <a href="https://morrison-lab.github.io/mds/linear-algebra-special-matrices.html#def-matrix-inverse">invertible</a>, the unique minimizer is</p>
 <p><span class="math display">\[
-\hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}= {\mathopen{}\left({D}^{\top} D\right)\mathclose{}}^{-1} {D}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}},
+\hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}= {\mathopen{}\left({\mathbf{D}}^{\top} \mathbf{D}\right)\mathclose{}}^{-1} {\mathbf{D}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}},
 \]</span></p>
 <p>whose right-hand side is a <a href="#/def-closed-form-expression">closed-form expression</a>, so <a href="https://morrison-lab.github.io/mds/linear-algebra-projections.html#def-least-squares">least squares</a> has a <a href="#/def-closed-form-solution">closed-form solution</a>.</p>
 <p>For logistic regression, no closed-form expression is known for a minimizer of the negative log-likelihood over <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\)</span>, so that problem has no known closed-form solution. When a minimizer exists, an <a href="https://morrison-lab.github.io/mds/optimization.html#def-iterative-method">iterative method</a> approximates it. <!-- check-term-links: allow --></p>

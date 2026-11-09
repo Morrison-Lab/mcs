@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-09 11:08:20 (PST)
+Last modified: 2026-11-09 11:17:43 (PST)
 
 > **NOTE:**
 >
@@ -44,9 +44,9 @@ Last modified: 2026-11-09 11:08:20 (PST)
 
 > **NOTE:**
 >
-> **Example 3 (Least squares versus logistic regression)** Minimizing the [squared-error](https://morrison-lab.github.io/mds/vector-calculus.html#def-squared-error) cost of a [linear](https://morrison-lab.github.io/mds/algebra.html#def-linear-function) model over $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$ gives the [normal equations](https://morrison-lab.github.io/mds/linear-algebra-projections.html#def-normal-equations) ${D}^{\top} D \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= {D}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$. When ${D}^{\top} D$ is [invertible](https://morrison-lab.github.io/mds/linear-algebra-special-matrices.html#def-matrix-inverse), the unique minimizer is
+> **Example 3 (Least squares versus logistic regression)** Minimizing the [squared-error](https://morrison-lab.github.io/mds/vector-calculus.html#def-squared-error) cost of a [linear](https://morrison-lab.github.io/mds/algebra.html#def-linear-function) model over $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$ gives the [normal equations](https://morrison-lab.github.io/mds/linear-algebra-projections.html#def-normal-equations) ${\mathbf{D}}^{\top} \mathbf{D} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}= {\mathbf{D}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$. When ${\mathbf{D}}^{\top} \mathbf{D}$ is [invertible](https://morrison-lab.github.io/mds/linear-algebra-special-matrices.html#def-matrix-inverse), the unique minimizer is
 >
-> $$\hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}= {\mathopen{}\left({D}^{\top} D\right)\mathclose{}}^{-1} {D}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}},$$
+> $$\hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}= {\mathopen{}\left({\mathbf{D}}^{\top} \mathbf{D}\right)\mathclose{}}^{-1} {\mathbf{D}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}},$$
 >
 > whose right-hand side is a [closed-form expression](#def-closed-form-expression), so [least squares](https://morrison-lab.github.io/mds/linear-algebra-projections.html#def-least-squares) has a [closed-form solution](#def-closed-form-solution).
 >
