@@ -49,7 +49,7 @@ The proof that a tree with $n$ vertices has $n - 1$ edges, the other proofs,
 the examples, the exercises and the Racket functions are new.
 :::
 
-# Trees {#sec-trees}
+# Trees and forests {#sec-trees}
 
 {{< include _subfiles/trees/_pipes_exr.qmd >}}
 

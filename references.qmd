@@ -10,7 +10,7 @@ format:
     output-file: references.docx
 ---
 
-# References {.unnumbered}
+# References {.unnumbered} <!-- check-heading-levels: allow -->
 
 ::: {#refs}
 :::
