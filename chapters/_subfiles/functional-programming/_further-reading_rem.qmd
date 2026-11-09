@@ -9,5 +9,8 @@
   build functional programs on types, in the language OCaml [@crichton2019cs242].
 - Stanford's [CS 99](https://web.stanford.edu/class/cs99/) teaches Lean 4,
   a functional programming language in which a computer checks proofs about the programs [@aniva2025cs99].
+- The textbook [*How to Design Programs*](https://htdp.org/) teaches a step-by-step method for writing functional programs.
+- Thomas Mailund's [*Functional Programming in R 4*](https://link.springer.com/book/10.1007/978-1-4842-9487-1) (Apress)
+  applies functional programming to statistical programming in R.
 
 :::
