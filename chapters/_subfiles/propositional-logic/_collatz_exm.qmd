@@ -33,9 +33,9 @@ while (current != 1) {
 }
 
 steps <- seq_along(values) - 1
-collatz_6 <- tibble::tibble(step = steps, value = values)
+collatz_seq <- tibble::tibble(step = steps, value = values)
 
-collatz_plot <- ggplot2::ggplot(collatz_6) +
+collatz_plot <- ggplot2::ggplot(collatz_seq) +
   ggplot2::aes(x = step, y = value) +
   ggplot2::geom_line() +
   ggplot2::geom_point(size = 2) +
