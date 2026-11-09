@@ -6,13 +6,13 @@ What follows from what, and how to write it down
 
 Published
 
-Last modified: 2026-11-06 14:52:04 (PST)
+Last modified: 2026-11-09 08:20:24 (PST)
 
 > **NOTE:**
 >
 > Adapted from Kameron Decker Harris’s Fall 2026 lecture notes “Logic 4, Proofs Intro, Direct Proof”, which are typed transcriptions of Scott Wehrwein’s Spring 2025 handwritten lecture notes. The rules of inference, the definition of “divides”, the observation that a definition’s “if” means “if and only if”, the template for a direct proof, and the ideas of proof by cases and “without loss of generality” come from those notes; the exercises are new.
 >
-> The definitions of logical entailment, the integers, even and odd integers, and proof are included from the [mathematics prerequisites](https://morrison-lab.github.io/mds/) notes, so they read the same in both places.
+> The definitions of logical entailment and proof are on the [proof writing](../proof-writing.llms.md) page, and those of the integers and of even and odd integers are on the [number systems](../number-systems.llms.md) page. The other data science notes link to both pages.
 
 # 1 Rules of inference
 

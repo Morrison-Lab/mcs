@@ -6,7 +6,7 @@ Proving a statement by way of its negation
 
 Published
 
-Last modified: 2026-11-06 14:52:04 (PST)
+Last modified: 2026-11-09 08:20:24 (PST)
 
 > **NOTE:**
 >
@@ -23,7 +23,7 @@ Last modified: 2026-11-06 14:52:04 (PST)
 >
 > The exercises are new.
 >
-> The definitions of the contrapositive, proof by contrapositive, proof by contradiction, and rational and irrational numbers, their examples of a proof by contradiction and of rational and irrational numbers, and the theorem that a conditional is equivalent to its contrapositive, are included from the [mathematics prerequisites](https://morrison-lab.github.io/mds/) notes, so they read the same in both places.
+> The definitions of the contrapositive, proof by contrapositive and proof by contradiction, their example of a proof by contradiction, and the theorem that a conditional is equivalent to its contrapositive, are on the [proof writing](../proof-writing.llms.md) page, and the definitions of rational and irrational numbers, with their examples, are on the [number systems](../number-systems.llms.md) page. The other data science notes link to both pages.
 
 # 1 Congruence modulo $n$
 

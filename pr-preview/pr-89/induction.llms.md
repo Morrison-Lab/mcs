@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-06 14:52:04 (PST)
+Last modified: 2026-11-09 08:20:24 (PST)
 
 > **NOTE:**
 >
@@ -41,7 +41,7 @@ Last modified: 2026-11-06 14:52:04 (PST)
 >
 > The assumption that $P(k)$ holds for every integer $k$ with $n_0 \le k < n$ is the **strong induction hypothesis**.
 >
-> For $n = n_0$ no integer $k$ satisfies $n_0 \le k < n$, so the strong induction hypothesis is [vacuously true](sets.llms.md#def-vacuous-truth), and the proof for $n = n_0$ is a [base case](proof-writing.llms.md#def-proof-by-induction). When the proof for $n$ needs particular earlier cases that do not exist for the first few $n$, those few cases are shown separately as further [base cases](proof-writing.llms.md#def-proof-by-induction).
+> For $n = n_0$ no integer $k$ satisfies $n_0 \le k < n$, so the strong induction hypothesis is [vacuously true](chapters/predicates-quantifiers.llms.md#def-vacuous-truth), and the proof for $n = n_0$ is a [base case](proof-writing.llms.md#def-proof-by-induction). When the proof for $n$ needs particular earlier cases that do not exist for the first few $n$, those few cases are shown separately as further [base cases](proof-writing.llms.md#def-proof-by-induction).
 
 > **NOTE:**
 >

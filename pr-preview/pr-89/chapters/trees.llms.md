@@ -6,7 +6,7 @@ Trees and forests, rooted trees, binary trees, preorder, inorder, postorder and 
 
 Published
 
-Last modified: 2026-11-06 14:52:04 (PST)
+Last modified: 2026-11-09 08:20:24 (PST)
 
 > **NOTE:**
 >
@@ -22,7 +22,7 @@ Last modified: 2026-11-06 14:52:04 (PST)
 > - expression trees, and the infix, prefix (Polish) and postfix (reverse Polish) forms of an expression, with parentheses needed only in the infix form;
 > - spanning trees, the theorem that a graph is connected if and only if it has a spanning tree, and the spanning trees that depth-first and breadth-first search build.
 >
-> The notes define the traversals for ordered rooted trees, by pseudocode; here they are defined recursively for binary trees, as lists, and a remark extends preorder and postorder to ordered rooted trees. In the notes a forest is not connected; here a forest is any graph with no cycles, so a tree is a forest too. The notes’ $m$-ary trees, full $m$-ary trees, balanced trees, and the counting theorems for them, siblings, back edges, and spanning forests of directed graphs are left out. A bound on the number of vertices of a binary tree of a given height is in their place. The definition of a parse tree is included from the [mathematics prerequisites](https://morrison-lab.github.io/mds/) notes, so it reads the same in both places. Level order, as breadth-first search from the root, follows the course calendar’s “tree traversal”. The proof that a tree with $n$ vertices has $n - 1$ edges, the other proofs, the examples, the exercises and the Racket functions are new.
+> The notes define the traversals for ordered rooted trees, by pseudocode; here they are defined recursively for binary trees, as lists, and a remark extends preorder and postorder to ordered rooted trees. In the notes a forest is not connected; here a forest is any graph with no cycles, so a tree is a forest too. The notes’ $m$-ary trees, full $m$-ary trees, balanced trees, and the counting theorems for them, siblings, back edges, and spanning forests of directed graphs are left out. A bound on the number of vertices of a binary tree of a given height is in their place. The definition of a parse tree is on the [expressions and algorithms](../expressions-algorithms.llms.md) page, which the other data science notes link to. Level order, as breadth-first search from the root, follows the course calendar’s “tree traversal”. The proof that a tree with $n$ vertices has $n - 1$ edges, the other proofs, the examples, the exercises and the Racket functions are new.
 
 # 1 Trees
 

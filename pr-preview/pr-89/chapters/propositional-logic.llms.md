@@ -6,13 +6,13 @@ Propositions, connectives, and conditionals
 
 Published
 
-Last modified: 2026-11-06 14:52:04 (PST)
+Last modified: 2026-11-09 08:20:24 (PST)
 
 > **NOTE:**
 >
 > Adapted from Kameron Decker Harris’s Fall 2026 lecture notes “Logic 1” and “Logic 2”, which are typed transcriptions of Scott Wehrwein’s Spring 2025 handwritten lecture notes. The examples of propositions, the truth tables to decode, the list of English phrasings of a conditional, and the “only if” example come from those notes; the other exercises are new.
 >
-> The definitions are included from the [mathematics prerequisites](https://morrison-lab.github.io/mds/proof-writing.html#sec-proof-definitions) notes, so they read the same in both places.
+> The definitions are on the [proof writing](../proof-writing.llms.md#sec-proof-definitions) page, which the other data science notes link to.
 
 # 1 Propositions
 
