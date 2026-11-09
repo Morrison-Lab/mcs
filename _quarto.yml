@@ -41,6 +41,11 @@ format:
         \usepackage{needspace}
         \usepackage{etoolbox}
         \AtBeginEnvironment{longtable}{\Needspace{8\baselineskip}}
+        % Keep a callout box (exercise, solution, remark) from starting near
+        % the foot of a page: a box shorter than 12 lines moves whole to the
+        % next page, and a longer one keeps its title with its first lines.
+        % A page with no callout does not load tcolorbox, so guard the call.
+        \AtBeginDocument{\ifdefined\tcbset\tcbset{before=\Needspace{12\baselineskip}}\fi}
         % Number theorem-type environments through the whole handout, as the
         % web page does, rather than within unnumbered sections ("0.1"
         % repeated in each section). Same snippet as Morrison-Lab/mlg, plus
