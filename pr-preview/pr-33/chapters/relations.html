@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.19">
+<meta name="generator" content="quarto-1.11.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -94,19 +94,22 @@ div.csl-indent {
 <link href="../chapters/recurrences-growth.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-c086fb9aa89bc5726abb3173de9057c1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-afcad65dfbb5ead0cc214e61744c3688.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-5fc16af90d58a2426109a2ad05df5ae6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-afcad65dfbb5ead0cc214e61744c3688.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.js"></script>
+<link href="../site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -118,11 +121,8 @@ div.csl-indent {
   "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
+    "/"
   ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -201,26 +201,6 @@ div.csl-indent {
 })();
 </script>
 <style>
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-solution.callout {
-  border-left-color: #4E342E;
-}
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
-}
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-exr.callout {
   border-left-color: #FFA500;
 }
@@ -231,15 +211,15 @@ div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-def.callout {
-  border-left-color: #1B5E20;
+div.callout-prp.callout {
+  border-left-color: #827717;
 }
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
 }
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-proof.callout {
   border-left-color: #37474F;
@@ -261,25 +241,15 @@ div.callout-remark .callout-toggle::before {  background-image: url('data:image/
 div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-prp.callout {
-  border-left-color: #827717;
+div.callout-def.callout {
+  border-left-color: #1B5E20;
 }
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
 }
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cor.callout {
-  border-left-color: #00838F;
-}
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
-}
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-exm.callout {
   border-left-color: #6A1B9A;
@@ -291,6 +261,26 @@ div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-lem.callout {
   border-left-color: #1565C0;
 }
@@ -300,6 +290,16 @@ div.callout-lem.callout-style-default .callout-header {
 div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -336,7 +336,7 @@ window.Quarto = {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar docked nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -359,6 +359,7 @@ window.Quarto = {
       for (let i=0; i < toggles.length; i++) {
         const toggle = toggles[i];
         if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
           if (alternate) {
             toggle.classList.add("alternate");
           } else {
@@ -388,13 +389,19 @@ window.Quarto = {
       manageTransitions('#quarto-margin-sidebar .nav-link', true);
       // Switch the toggles
       setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
       if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
         manageTransitions("body", false);
-        window.scrollTo(0, 1);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
         setTimeout(() => {
-          window.scrollTo(0, 0);
+          window.scrollTo(0, scrollY);
           manageTransitions("body", true);
         }, 40);
       }
@@ -488,6 +495,7 @@ window.Quarto = {
       // Read the current dark / light value
       let toAlternate = !hasAlternateSentinel();
       toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
       setStyleSentinel(toAlternate);
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
@@ -502,15 +510,14 @@ window.Quarto = {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Math for Computer Science</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -519,78 +526,167 @@ window.Quarto = {
     <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/calendar.html"> 
-<span class="menu-text">Calendar</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-course-logistics" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Course Logistics</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-course-logistics">    
+        <li>
+    <a class="dropdown-item" href="../chapters/calendar.html">
+ <span class="dropdown-text">Calendar (on the csci201 site)</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/syllabus.html"> 
-<span class="menu-text">Syllabus</span></a>
+        <li>
+    <a class="dropdown-item" href="../chapters/syllabus.html">
+ <span class="dropdown-text">Syllabus (on the csci201 site)</span></a>
   </li>  
+    </ul>
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="../chapters/propositional-logic.html"> 
-<span class="menu-text">Propositional Logic</span></a>
+    <a class="nav-link" href="../chapters/functional-programming.html"> 
+<span class="menu-text">Functional Programming</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/predicates-quantifiers.html"> 
-<span class="menu-text">Predicates and Quantifiers</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-logic" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Logic</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-logic">    
+        <li>
+    <a class="dropdown-item" href="../chapters/propositional-logic.html">
+ <span class="dropdown-text">Propositional Logic</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/equivalence-negation.html"> 
-<span class="menu-text">Logical Equivalence and Negation</span></a>
+        <li>
+    <a class="dropdown-item" href="../chapters/predicates-quantifiers.html">
+ <span class="dropdown-text">Predicates and Quantifiers</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/direct-proof.html"> 
-<span class="menu-text">Inference and Direct Proof</span></a>
+        <li>
+    <a class="dropdown-item" href="../chapters/equivalence-negation.html">
+ <span class="dropdown-text">Logical Equivalence and Negation</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/contrapositive-contradiction.html"> 
-<span class="menu-text">Contrapositive and Contradiction</span></a>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-proofs" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Proofs</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-proofs">    
+        <li>
+    <a class="dropdown-item" href="../chapters/direct-proof.html">
+ <span class="dropdown-text">Inference and Direct Proof</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/iff-existence-disproof.html"> 
-<span class="menu-text">Proving Non-Conditional Statements</span></a>
+        <li>
+    <a class="dropdown-item" href="../chapters/contrapositive-contradiction.html">
+ <span class="dropdown-text">Contrapositive and Contradiction</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/sets.html"> 
-<span class="menu-text">Sets</span></a>
+        <li>
+    <a class="dropdown-item" href="../chapters/iff-existence-disproof.html">
+ <span class="dropdown-text">Proving Non-Conditional Statements</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/set-proofs.html"> 
-<span class="menu-text">Proofs with Sets</span></a>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-sets" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Sets</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-sets">    
+        <li>
+    <a class="dropdown-item" href="../chapters/sets.html">
+ <span class="dropdown-text">Sets</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/induction.html"> 
-<span class="menu-text">Induction</span></a>
+        <li>
+    <a class="dropdown-item" href="../chapters/set-proofs.html">
+ <span class="dropdown-text">Proofs with Sets</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/loop-invariants.html"> 
-<span class="menu-text">Loop Invariants</span></a>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-induction-and-recursion" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Induction and Recursion</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-induction-and-recursion">    
+        <li>
+    <a class="dropdown-item" href="../chapters/induction.html">
+ <span class="dropdown-text">Induction</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/recursion.html"> 
-<span class="menu-text">Recursion</span></a>
+        <li>
+    <a class="dropdown-item" href="../chapters/loop-invariants.html">
+ <span class="dropdown-text">Loop Invariants</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/recurrences-growth.html"> 
-<span class="menu-text">Recurrences and Growth</span></a>
+        <li>
+    <a class="dropdown-item" href="../chapters/recursion.html">
+ <span class="dropdown-text">Recursion</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/relations.html"> 
-<span class="menu-text">Relations</span></a>
+        <li>
+    <a class="dropdown-item" href="../chapters/recurrences-growth.html">
+ <span class="dropdown-text">Recurrences and Growth</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/graphs.html"> 
-<span class="menu-text">Graphs</span></a>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-discrete-structures" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Discrete Structures</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-discrete-structures">    
+        <li>
+    <a class="dropdown-item" href="../chapters/relations.html">
+ <span class="dropdown-text">Relations</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/automata.html"> 
-<span class="menu-text">Automata</span></a>
+        <li>
+    <a class="dropdown-item" href="../chapters/graphs.html">
+ <span class="dropdown-text">Graphs</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/trees.html"> 
-<span class="menu-text">Trees</span></a>
+        <li>
+    <a class="dropdown-item" href="../chapters/automata.html">
+ <span class="dropdown-text">Automata</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../chapters/trees.html">
+ <span class="dropdown-text">Trees</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-math-reference" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Math Reference</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-math-reference">    
+        <li>
+    <a class="dropdown-item" href="../growth-rates.html">
+ <span class="dropdown-text">Growth Rates</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../induction.html">
+ <span class="dropdown-text">Induction</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../notation.html">
+ <span class="dropdown-text">Notation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../relations.html">
+ <span class="dropdown-text">Relations</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../number-systems.html">
+ <span class="dropdown-text">Number Systems</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../sets.html">
+ <span class="dropdown-text">Sets</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../functions.html">
+ <span class="dropdown-text">Functions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../expressions-algorithms.html">
+ <span class="dropdown-text">Expressions and Algorithms</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../proof-writing.html">
+ <span class="dropdown-text">Proof Writing</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -601,22 +697,23 @@ window.Quarto = {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
 </div>
+            <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/relations.html">Relations</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/relations.html">Discrete Structures</a></li><li class="breadcrumb-item"><a href="../chapters/relations.html">Relations</a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -624,7 +721,7 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" aria-label="Section">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -633,121 +730,237 @@ window.Quarto = {
  <span class="menu-text">Home</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">Course Logistics</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/calendar.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Calendar</span></a>
+ <span class="menu-text">Calendar (on the csci201 site)</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/syllabus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">WWU CSCI 201 Syllabus</span></a>
+ <span class="menu-text">Syllabus (on the csci201 site)</span></a>
   </div>
 </li>
+      </ul>
+  </li>
         <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/functional-programming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Functional Programming</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-2-label">Logic</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/propositional-logic.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Propositional Logic</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/predicates-quantifiers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Predicates and Quantifiers</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/equivalence-negation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Logical Equivalence and Negation</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-3-label">Proofs</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/direct-proof.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Inference and Direct Proof</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/contrapositive-contradiction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Contrapositive and Contradiction</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/iff-existence-disproof.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Proving Non-Conditional Statements</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-4-label">Sets</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/sets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sets</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/set-proofs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Proofs with Sets</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-controls="quarto-sidebar-section-5" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-5-label">Induction and Recursion</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-5" aria-labelledby="quarto-sidebar-section-5-label" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/induction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mathematical Induction</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/loop-invariants.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Loop Invariants</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/recursion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Recursion</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/recurrences-growth.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Recurrence Relations and Growth Rates</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-controls="quarto-sidebar-section-6" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-6-label">Discrete Structures</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-6" aria-labelledby="quarto-sidebar-section-6-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/relations.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Relations</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/graphs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Graphs</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/automata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">State Machines and Finite Automata</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/trees.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Trees</span></a>
   </div>
 </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-controls="quarto-sidebar-section-7" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-7-label">Math Reference</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-7" aria-labelledby="quarto-sidebar-section-7-label" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../growth-rates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Growth Rates</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../induction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Induction and Recursion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../relations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Relations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../number-systems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Number Systems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sets</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../expressions-algorithms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Expressions and Algorithms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../proof-writing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proof Writing</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
@@ -760,15 +973,16 @@ window.Quarto = {
   <li><a href="#sec-partitions" id="toc-sec-partitions" class="nav-link" data-scroll-target="#sec-partitions"><span class="header-section-number">7</span> Partitions</a></li>
   <li><a href="#sec-functions-relations" id="toc-sec-functions-relations" class="nav-link" data-scroll-target="#sec-functions-relations"><span class="header-section-number">8</span> Functions as relations</a></li>
   <li><a href="#sec-inverse-functions" id="toc-sec-inverse-functions" class="nav-link" data-scroll-target="#sec-inverse-functions"><span class="header-section-number">9</span> Inverse functions and composition</a></li>
+  <li><a href="#def-list-section" id="toc-def-list-section" class="nav-link" data-scroll-target="#def-list-section">Definitions on this page</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Morrison-Lab/mcs/edit/main/chapters/relations.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mcs/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mcs/blob/main/chapters/relations.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="relations-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li><li><a href="relations-handout.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="relations.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><!-- qwt-page-banners -->
+<main class="content" id="quarto-document-content" tabindex="-1"><!-- qwt-page-banners -->
 <div class="preview-changes-banner" style="background-color: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; padding: 12px; margin: 16px 0;">
     <p style="margin: 0;">
-        <strong>📋 Changes in this PR:</strong> <a href="automata.html">State Machines and Finite Automata</a>, <a href="calendar.html">Calendar</a>, <a href="contrapositive-contradiction.html">Contrapositive and Contradiction</a>, <a href="direct-proof.html">Inference and Direct Proof</a>, <a href="equivalence-negation.html">Logical Equivalence and Negation</a>, <a href="graphs.html">Graphs</a>, <a href="iff-existence-disproof.html">Proving Non-Conditional Statements</a>, <a href="induction.html">Mathematical Induction</a>, <a href="loop-invariants.html">Loop Invariants</a>, <a href="predicates-quantifiers.html">Predicates and Quantifiers</a>, <a href="propositional-logic.html">Propositional Logic</a>, <a href="recurrences-growth.html">Recurrence Relations and Growth Rates</a>, <a href="recursion.html">Recursion</a>, <a href="relations.html">Relations</a>, <a href="set-proofs.html">Proofs with Sets</a>, <a href="sets.html">Sets</a>, <a href="syllabus.html">WWU CSCI 201 Syllabus</a>, <a href="trees.html">Trees</a>, <a href="../index.html">Math for Computer Science</a>
+        <strong>📋 Changes in this PR:</strong> <a href="automata.html">State Machines and Finite Automata</a>, <a href="calendar.html">Calendar</a>, <a href="contrapositive-contradiction.html">Contrapositive and Contradiction</a>, <a href="direct-proof.html">Inference and Direct Proof</a>, <a href="equivalence-negation.html">Logical Equivalence and Negation</a>, <a href="functional-programming.html">Functional Programming</a>, <a href="graphs.html">Graphs</a>, <a href="iff-existence-disproof.html">Proving Non-Conditional Statements</a>, <a href="induction.html">Mathematical Induction</a>, <a href="loop-invariants.html">Loop Invariants</a>, <a href="predicates-quantifiers.html">Predicates and Quantifiers</a>, <a href="propositional-logic.html">Propositional Logic</a>, <a href="recurrences-growth.html">Recurrence Relations and Growth Rates</a>, <a href="recursion.html">Recursion</a>, <a href="relations.html">Relations</a>, <a href="set-proofs.html">Proofs with Sets</a>, <a href="sets.html">Sets</a>, <a href="syllabus.html">WWU CSCI 201 Syllabus</a>, <a href="trees.html">Trees</a>, <a href="../expressions-algorithms.html">Expressions and Algorithms</a>, <a href="../functions.html">Functions</a>, <a href="../growth-rates.html">Growth Rates</a>, <a href="../index.html">Math for Computer Science</a>, <a href="../induction.html">Induction and Recursion</a>, <a href="../notation.html">Notation</a>, <a href="../number-systems.html">Number Systems</a>, <a href="../proof-writing.html">Proof Writing</a>, <a href="../relations.html">Relations</a>, <a href="../sets.html">Sets</a>
         <br>
         <strong>💡 Tip:</strong> If change highlighting is glitchy, add the <code>no-preview-highlights</code> label to this PR to disable it.
     </p>
@@ -783,7 +997,7 @@ window.Quarto = {
 
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/relations.html">Discrete Structures</a></li><li class="breadcrumb-item"><a href="../chapters/relations.html">Relations</a></li></ol></nav>
 <div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">Relations</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 <p class="subtitle lead">Relations between sets, their properties, equivalence relations, partitions and functions</p>
@@ -797,7 +1011,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-26 21:49:29 (PDT)</p>
+      <p class="date">Last modified: 2026-11-09 08:20:30 (PST)</p>
     </div>
   </div>
   
@@ -834,7 +1048,7 @@ window.Quarto = {
 <li>the domain, codomain and range of a function;</li>
 <li>injective, surjective and bijective functions, the identity function, and the fact that a function has an inverse function exactly when it is bijective.</li>
 </ul>
-<p>The definitions included from mds come from that site, and the definitions of an antisymmetric relation, the composition of relations and a partition follow the standard ones cited with them. The exercises, the other examples, the Racket functions and all the proofs are new.</p>
+<p>The definitions of a relation, a function and the terms about them are on the <a href="../relations.html">relations</a> and <a href="../functions.html">functions</a> pages, which the other data science notes link to, and the definitions of an antisymmetric relation, the composition of relations and a partition follow the standard ones cited with them. The exercises, the other examples, the Racket functions and all the proofs are new.</p>
 </div>
 </div>
 </div>
@@ -852,13 +1066,13 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-word-letters" class="quarto-xref">Solution&nbsp;1</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -981,13 +1195,13 @@ P = {\mathopen{}\left\{(\text{Ada}, \text{Ben}), (\text{Ada}, \text{Cora}), (\te
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-beats" class="quarto-xref">Solution&nbsp;2</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1158,13 +1372,13 @@ M_B =
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-beats-transitive" class="quarto-xref">Solution&nbsp;3</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1373,13 +1587,13 @@ Figure&nbsp;3: The directed graph of the relation “shares a letter with” on 
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-racket-member" class="quarto-xref">Solution&nbsp;4</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1440,13 +1654,13 @@ Figure&nbsp;3: The directed graph of the relation “shares a letter with” on 
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-grandparent" class="quarto-xref">Solution&nbsp;5</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1520,7 +1734,7 @@ M_{B^{-1}} =
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -1635,7 +1849,7 @@ B^3 = {\mathopen{}\left\{(\text{rock}, \text{rock}), (\text{paper}, \text{paper}
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -1685,13 +1899,13 @@ B^3 = {\mathopen{}\left\{(\text{rock}, \text{rock}), (\text{paper}, \text{paper}
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-same-length" class="quarto-xref">Solution&nbsp;6</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1738,12 +1952,12 @@ B^3 = {\mathopen{}\left\{(\text{rock}, \text{rock}), (\text{paper}, \text{paper}
 </div>
 <div class="callout-body-container">
 <div id="thm-same-value" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 3 (Having the same value is an equivalence relation)</strong></span> Let <span class="math inline">\(f : A \to B\)</span> be a function (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>), and on <span class="math inline">\(A\)</span> let <span class="math inline">\(a \sim a'\)</span> when <span class="math inline">\(f(a) = f(a')\)</span>. Then <span class="math inline">\(\sim\)</span> is an equivalence relation (<a href="#def-equivalence-relation" class="quarto-xref">Definition&nbsp;13</a>).</p>
+<p><span class="theorem-title"><strong>Theorem 3 (Having the same value is an equivalence relation)</strong></span> Let <span class="math inline">\(f : A \to B\)</span> be a function (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>), and on <span class="math inline">\(A\)</span> let <span class="math inline">\(a \sim a'\)</span> when <span class="math inline">\(f(a) = f(a')\)</span>. Then <span class="math inline">\(\sim\)</span> is an equivalence relation (<a href="#def-equivalence-relation" class="quarto-xref">Definition&nbsp;13</a>).</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -1841,7 +2055,7 @@ x - z
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -1879,13 +2093,13 @@ x - z
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-first-letter" class="quarto-xref">Solution&nbsp;7</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1908,7 +2122,7 @@ x - z
 </div>
 <div class="callout-body-container">
 <div id="def-set-partition" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Partition of a set)</strong></span> Let <span class="math inline">\(S\)</span> be a set. A <strong>partition</strong> of <span class="math inline">\(S\)</span> <span class="citation" data-cites="wikipedia_partition_of_a_set">(<a href="#ref-wikipedia_partition_of_a_set" role="doc-biblioref">Wikipedia contributors 2026r</a>)</span> is a collection <span class="math inline">\(\mathcal{C}\)</span> (<a href="https://morrison-lab.github.io/mds/sets.html#def-collection">Definition: Collection of sets (family of sets)</a>) of subsets of <span class="math inline">\(S\)</span> such that</p>
+<p><span class="theorem-title"><strong>Definition 15 (Partition of a set)</strong></span> Let <span class="math inline">\(S\)</span> be a set. A <strong>partition</strong> of <span class="math inline">\(S\)</span> <span class="citation" data-cites="wikipedia_partition_of_a_set">(<a href="#ref-wikipedia_partition_of_a_set" role="doc-biblioref">Wikipedia contributors 2026r</a>)</span> is a collection <span class="math inline">\(\mathcal{C}\)</span> (<a href="../sets.html#def-collection">Definition: Collection of sets, family of sets</a>) of subsets of <span class="math inline">\(S\)</span> such that</p>
 <ul>
 <li>every set in <span class="math inline">\(\mathcal{C}\)</span> is nonempty;</li>
 <li>any two different sets in <span class="math inline">\(\mathcal{C}\)</span> are disjoint: their intersection (<a href="../chapters/sets.html#def-intersection">Definition: Intersection</a>) is empty;</li>
@@ -1949,7 +2163,7 @@ x - z
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -1982,7 +2196,7 @@ x - z
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -2031,20 +2245,20 @@ x - z
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-beats-one" class="quarto-xref">Solution&nbsp;8</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-beats-one" class="proof solution">
-<p><span class="proof-title"><em>Solution 8</em>. </span>Exactly one each: rock beats only scissors, paper beats only rock, and scissors beats only paper. So “the element that <span class="math inline">\(a\)</span> beats” names one element of <span class="math inline">\(G\)</span> for each <span class="math inline">\(a \in G\)</span>, which is what a function (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>) from <span class="math inline">\(G\)</span> to <span class="math inline">\(G\)</span> does.</p>
+<p><span class="proof-title"><em>Solution 8</em>. </span>Exactly one each: rock beats only scissors, paper beats only rock, and scissors beats only paper. So “the element that <span class="math inline">\(a\)</span> beats” names one element of <span class="math inline">\(G\)</span> for each <span class="math inline">\(a \in G\)</span>, which is what a function (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>) from <span class="math inline">\(G\)</span> to <span class="math inline">\(G\)</span> does.</p>
 </div>
 </div>
 </div>
@@ -2055,8 +2269,8 @@ x - z
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-function-domain" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 16 (Domain of a function)</strong></span> The <strong>domain</strong> of a function <span class="math inline">\(f : A \to B\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>) <span class="citation" data-cites="wikipedia_domain_of_a_function">(<a href="#ref-wikipedia_domain_of_a_function" role="doc-biblioref">Wikipedia contributors 2026h</a>)</span> is the set <span class="math inline">\(A\)</span> of elements that <span class="math inline">\(f\)</span> assigns values to.</p>
+<div id="def-domain" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 16 (Domain)</strong></span> The <strong>domain</strong> <span class="citation" data-cites="wikipedia_domain_of_a_function">(<a href="#ref-wikipedia_domain_of_a_function" role="doc-biblioref">Wikipedia contributors 2026h</a>)</span> of a <a href="../chapters/functional-programming.html#def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set <span class="math inline">\(A\)</span> of elements that <span class="math inline">\(f\)</span> assigns values to.</p>
 </div>
 </div>
 </div>
@@ -2068,7 +2282,7 @@ x - z
 </div>
 <div class="callout-body-container">
 <div id="def-codomain" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 17 (Codomain)</strong></span> The <strong>codomain</strong> <span class="citation" data-cites="wikipedia_codomain">(<a href="#ref-wikipedia_codomain" role="doc-biblioref">Wikipedia contributors 2026d</a>)</span> of a <a href="https://morrison-lab.github.io/mds/functions.html#def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set <span class="math inline">\(B\)</span> that its values are required to lie in.</p>
+<p><span class="theorem-title"><strong>Definition 17 (Codomain)</strong></span> The <strong>codomain</strong> <span class="citation" data-cites="wikipedia_codomain">(<a href="#ref-wikipedia_codomain" role="doc-biblioref">Wikipedia contributors 2026d</a>)</span> of a <a href="../chapters/functional-programming.html#def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set <span class="math inline">\(B\)</span> that its values are required to lie in.</p>
 </div>
 </div>
 </div>
@@ -2080,7 +2294,7 @@ x - z
 </div>
 <div class="callout-body-container">
 <div id="def-graph" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18 (Graph of a function)</strong></span> The <strong>graph</strong> <span class="citation" data-cites="wikipedia_graph_of_a_function">(<a href="#ref-wikipedia_graph_of_a_function" role="doc-biblioref">Wikipedia contributors 2026l</a>)</span> of a <a href="https://morrison-lab.github.io/mds/functions.html#def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set of <a href="../chapters/sets.html#def-ordered-pair">ordered pairs</a> <span class="math inline">\((a, f(a))\)</span>, one for each element <span class="math inline">\(a\)</span> of its domain:</p>
+<p><span class="theorem-title"><strong>Definition 18 (Graph of a function)</strong></span> The <strong>graph</strong> <span class="citation" data-cites="wikipedia_graph_of_a_function">(<a href="#ref-wikipedia_graph_of_a_function" role="doc-biblioref">Wikipedia contributors 2026l</a>)</span> of a <a href="../chapters/functional-programming.html#def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set of <a href="../chapters/sets.html#def-ordered-pair">ordered pairs</a> <span class="math inline">\((a, f(a))\)</span>, one for each element <span class="math inline">\(a\)</span> of its domain:</p>
 <p><span class="math display">\[{\mathopen{}\left\{(a, f(a)) : a \in A\right\}\mathclose{}}\]</span></p>
 </div>
 </div>
@@ -2093,7 +2307,7 @@ x - z
 </div>
 <div class="callout-body-container">
 <div id="exm-graph-length" class="theorem example">
-<p><span class="theorem-title"><strong>Example 23 (The graph of a length function)</strong></span> Let <span class="math inline">\(\operatorname{len}_K : K \to \mathbb{N}\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>, <a href="../chapters/sets.html#def-natural-numbers">Definition: Natural numbers (our convention)</a>) give the length of each word of the set <span class="math inline">\(K\)</span> of <a href="#exr-same-length" class="quarto-xref">Exercise&nbsp;6</a>, so <span class="math inline">\(\operatorname{len}_K(a) = \operatorname{len}(a)\)</span>, as in <a href="#exm-same-length" class="quarto-xref">Example&nbsp;18</a>. Its domain (<a href="#def-function-domain" class="quarto-xref">Definition&nbsp;16</a>) is <span class="math inline">\(K\)</span> and its codomain (<a href="#def-codomain" class="quarto-xref">Definition&nbsp;17</a>) is <span class="math inline">\(\mathbb{N}\)</span>. Its graph (<a href="#def-graph" class="quarto-xref">Definition&nbsp;18</a>) is the set of six pairs</p>
+<p><span class="theorem-title"><strong>Example 23 (The graph of a length function)</strong></span> Let <span class="math inline">\(\operatorname{len}_K : K \to \mathbb{N}\)</span> (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>, <a href="../chapters/sets.html#def-natural-numbers">Definition: Natural numbers (our convention)</a>) give the length of each word of the set <span class="math inline">\(K\)</span> of <a href="#exr-same-length" class="quarto-xref">Exercise&nbsp;6</a>, so <span class="math inline">\(\operatorname{len}_K(a) = \operatorname{len}(a)\)</span>, as in <a href="#exm-same-length" class="quarto-xref">Example&nbsp;18</a>. Its <a href="#def-domain">domain</a> is <span class="math inline">\(K\)</span> and its <a href="#def-codomain">codomain</a> is <span class="math inline">\(\mathbb{N}\)</span>. Its graph (<a href="#def-graph" class="quarto-xref">Definition&nbsp;18</a>) is the set of six pairs</p>
 <p><span class="math display">\[
 {\mathopen{}\left\{(\text{if}, 2), (\text{let}, 3), (\text{cond}, 4), (\text{list}, 4), (\text{cons}, 4), (\text{define}, 6)\right\}\mathclose{}},
 \]</span></p>
@@ -2121,12 +2335,12 @@ x - z
 </div>
 <div class="callout-body-container">
 <div id="thm-function-relation" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 7 (Functions are relations with one output per input)</strong></span> Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be sets, and let <span class="math inline">\(R\)</span> be a relation from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> (<a href="#def-binary-relation" class="quarto-xref">Definition&nbsp;1</a>). Then <span class="math inline">\(R\)</span> is the graph (<a href="#def-graph" class="quarto-xref">Definition&nbsp;18</a>) of a function <span class="math inline">\(f : A \to B\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>) if and only if each <span class="math inline">\(a \in A\)</span> is related by <span class="math inline">\(R\)</span> to exactly one <span class="math inline">\(b \in B\)</span>. That function is then the only one whose graph is <span class="math inline">\(R\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 7 (Functions are relations with one output per input)</strong></span> Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be sets, and let <span class="math inline">\(R\)</span> be a relation from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> (<a href="#def-binary-relation" class="quarto-xref">Definition&nbsp;1</a>). Then <span class="math inline">\(R\)</span> is the graph (<a href="#def-graph" class="quarto-xref">Definition&nbsp;18</a>) of a function <span class="math inline">\(f : A \to B\)</span> (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>) if and only if each <span class="math inline">\(a \in A\)</span> is related by <span class="math inline">\(R\)</span> to exactly one <span class="math inline">\(b \in B\)</span>. That function is then the only one whose graph is <span class="math inline">\(R\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -2153,12 +2367,12 @@ x - z
 </div>
 <div class="callout-body-container">
 <div id="rem-function-as-set-of-pairs" class="proof remark">
-<p><span class="proof-title"><em>Remark 5</em> (What a function is fundamentally). </span><a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a> defines what a function <em>does</em>: it assigns an output to each input. In formal set theory, what a function <em>is</em> is described in terms of <a href="../chapters/sets.html#def-ordered-pair">ordered pairs</a> and its graph (<a href="#def-graph" class="quarto-xref">Definition&nbsp;18</a>): the set of pairs <span class="math inline">\(G = {\mathopen{}\left\{(a, f(a)) : a \in A\right\}\mathclose{}} \subseteq A \times B\)</span>. Authors define a function formally in one of two ways:</p>
+<p><span class="proof-title"><em>Remark 5</em> (What a function is fundamentally). </span><a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a> defines what a function <em>does</em>: it assigns an output to each input. In formal set theory, what a function <em>is</em> is described in terms of <a href="../chapters/sets.html#def-ordered-pair">ordered pairs</a> and its graph (<a href="#def-graph" class="quarto-xref">Definition&nbsp;18</a>): the set of pairs <span class="math inline">\(G = {\mathopen{}\left\{(a, f(a)) : a \in A\right\}\mathclose{}} \subseteq A \times B\)</span>. Authors define a function formally in one of two ways:</p>
 <ol type="1">
 <li><strong>As its graph</strong> <span class="citation" data-cites="halmos1974naive">(<a href="#ref-halmos1974naive" role="doc-biblioref">Halmos 1974, sec. 8</a>, p.&nbsp;30)</span>: a function is a subset of <span class="math inline">\(A \times B\)</span> containing exactly one pair <span class="math inline">\((a, b)\)</span> for each <span class="math inline">\(a \in A\)</span>, where <span class="math inline">\(b = f(a)\)</span>, and the statement <span class="math inline">\(f(a) = b\)</span> is notation for <span class="math inline">\((a, b) \in f\)</span>. Under this convention, the codomain <span class="math inline">\(B\)</span> is specified alongside the graph in the declaration <span class="math inline">\(f : A \to B\)</span>.</li>
 <li><strong>As a triple <span class="math inline">\((A, B, G)\)</span></strong>: the function consists of the domain <span class="math inline">\(A\)</span>, the codomain <span class="math inline">\(B\)</span>, and the graph <span class="math inline">\(G \subseteq A \times B\)</span>. This explicit packaging retains the codomain <span class="math inline">\(B\)</span> as part of the function itself, distinguishing functions that have the same graph but different codomains (such as a function mapping into <span class="math inline">\(\mathbb{R}\)</span> versus into integers).</li>
 </ol>
-<p>For example, the die-doubling function in <a href="https://morrison-lab.github.io/mds/functions.html#exm-function">Example: Doubling a die roll</a> has the graph of six ordered pairs <span class="math inline">\({\mathopen{}\left\{(1, 2), (2, 4), (3, 6), (4, 8), (5, 10), (6, 12)\right\}\mathclose{}}\)</span>.</p>
+<p>For example, the die-doubling function in <a href="../functions.html#exm-function">Example: Doubling a die roll</a> has the graph of six ordered pairs <span class="math inline">\({\mathopen{}\left\{(1, 2), (2, 4), (3, 6), (4, 8), (5, 10), (6, 12)\right\}\mathclose{}}\)</span>.</p>
 <p>This distinction clarifies what a function is and is not:</p>
 <ul>
 <li><strong>Not an algebraic formula:</strong> A function is not fundamentally an equation or algebraic expression. While many functions are specified by a formula (such as <span class="math inline">\(f(x) = x^2\)</span>), many others cannot be written in closed form (such as empirical measurements or a lookup table), yet every function has a well-defined set of input-output pairs.</li>
@@ -2214,7 +2428,7 @@ x - z
 </div>
 <div class="callout-body-container">
 <div id="def-image" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19 (Image)</strong></span> The <strong>image</strong> <span class="citation" data-cites="wikipedia_image_mathematics">(<a href="#ref-wikipedia_image_mathematics" role="doc-biblioref">Wikipedia contributors 2026n</a>)</span> of a <a href="https://morrison-lab.github.io/mds/functions.html#def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set of values that <span class="math inline">\(f\)</span> actually takes:</p>
+<p><span class="theorem-title"><strong>Definition 19 (Image)</strong></span> The <strong>image</strong> <span class="citation" data-cites="wikipedia_image_mathematics">(<a href="#ref-wikipedia_image_mathematics" role="doc-biblioref">Wikipedia contributors 2026n</a>)</span> of a <a href="../chapters/functional-programming.html#def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set of values that <span class="math inline">\(f\)</span> actually takes:</p>
 <p><span class="math display">\[f(A) \stackrel{\text{def}}{=}{\mathopen{}\left\{f(a) : a \in A\right\}\mathclose{}}\]</span></p>
 <p>For a single element <span class="math inline">\(a \in A\)</span>, the value <span class="math inline">\(f(a)\)</span> is also called the <strong>image of</strong> <span class="math inline">\(a\)</span> under <span class="math inline">\(f\)</span>.</p>
 </div>
@@ -2231,7 +2445,7 @@ x - z
 <p><span class="theorem-title"><strong>Example 26 (The images of two functions)</strong></span> &nbsp;</p>
 <ul>
 <li>The function <span class="math inline">\(\operatorname{len}_K : K \to \mathbb{N}\)</span> of <a href="#exm-graph-length" class="quarto-xref">Example&nbsp;23</a> has the image (<a href="#def-image" class="quarto-xref">Definition&nbsp;19</a>) <span class="math inline">\(\operatorname{len}_K(K) = {\mathopen{}\left\{2, 3, 4, 6\right\}\mathclose{}}\)</span>, the lengths that occur. Most natural numbers, such as 1 and 5, are in its codomain (<a href="#def-codomain" class="quarto-xref">Definition&nbsp;17</a>) <span class="math inline">\(\mathbb{N}\)</span> but not in its image.</li>
-<li>The function <span class="math inline">\(b : G \to G\)</span> of <a href="#exm-function-or-not" class="quarto-xref">Example&nbsp;24</a> has domain (<a href="#def-function-domain" class="quarto-xref">Definition&nbsp;16</a>) and codomain <span class="math inline">\(G\)</span>, and its image is all of <span class="math inline">\(G\)</span>, since each element of <span class="math inline">\(G\)</span> is beaten by some element.</li>
+<li>The function <span class="math inline">\(b : G \to G\)</span> of <a href="#exm-function-or-not" class="quarto-xref">Example&nbsp;24</a> has <a href="#def-domain">domain</a> and codomain <span class="math inline">\(G\)</span>, and its image is all of <span class="math inline">\(G\)</span>, since each element of <span class="math inline">\(G\)</span> is beaten by some element.</li>
 </ul>
 </div>
 </div>
@@ -2244,7 +2458,7 @@ x - z
 </div>
 <div class="callout-body-container">
 <div id="def-range" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 20 (Range)</strong></span> The word <strong>range</strong> of a <a href="https://morrison-lab.github.io/mds/functions.html#def-function">function</a> <span class="math inline">\(f : A \to B\)</span> has two conflicting meanings, and sources use one or the other:</p>
+<p><span class="theorem-title"><strong>Definition 20 (Range)</strong></span> The word <strong>range</strong> of a <a href="../chapters/functional-programming.html#def-function">function</a> <span class="math inline">\(f : A \to B\)</span> has two conflicting meanings, and sources use one or the other:</p>
 <ul>
 <li>the <a href="#def-image">image</a> of <span class="math inline">\(f\)</span>, the set <span class="math inline">\(f(A)\)</span> of values that <span class="math inline">\(f\)</span> actually takes;</li>
 <li>the <a href="#def-codomain">codomain</a> of <span class="math inline">\(f\)</span>, the set <span class="math inline">\(B\)</span> that its values are required to lie in.</li>
@@ -2266,13 +2480,13 @@ x - z
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-dup-odd" class="quarto-xref">Solution&nbsp;9</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2291,7 +2505,7 @@ x - z
 </div>
 <div class="callout-body-container">
 <div id="def-injective" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 21 (Injective function (one-to-one function))</strong></span> A function <span class="math inline">\(f : A \to B\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>) is <strong>injective</strong> <span class="citation" data-cites="wikipedia_injective_function">(<a href="#ref-wikipedia_injective_function" role="doc-biblioref">Wikipedia contributors 2026o</a>)</span> (also called <strong>one-to-one</strong>) if, for all <span class="math inline">\(a, a' \in A\)</span>, <span class="math inline">\(f(a) = f(a')\)</span> implies <span class="math inline">\(a = a'\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 21 (Injective function (one-to-one function))</strong></span> A function <span class="math inline">\(f : A \to B\)</span> (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>) is <strong>injective</strong> <span class="citation" data-cites="wikipedia_injective_function">(<a href="#ref-wikipedia_injective_function" role="doc-biblioref">Wikipedia contributors 2026o</a>)</span> (also called <strong>one-to-one</strong>) if, for all <span class="math inline">\(a, a' \in A\)</span>, <span class="math inline">\(f(a) = f(a')\)</span> implies <span class="math inline">\(a = a'\)</span>.</p>
 </div>
 </div>
 </div>
@@ -2320,7 +2534,7 @@ x - z
 </div>
 <div class="callout-body-container">
 <div id="def-surjective" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 22 (Surjective function (onto function))</strong></span> A function <span class="math inline">\(f : A \to B\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>) is <strong>surjective</strong> <span class="citation" data-cites="wikipedia_surjective_function">(<a href="#ref-wikipedia_surjective_function" role="doc-biblioref">Wikipedia contributors 2026u</a>)</span> (also called <strong>onto</strong>) if, for every <span class="math inline">\(b \in B\)</span>, there is some <span class="math inline">\(a \in A\)</span> with <span class="math inline">\(f(a) = b\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 22 (Surjective function (onto function))</strong></span> A function <span class="math inline">\(f : A \to B\)</span> (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>) is <strong>surjective</strong> <span class="citation" data-cites="wikipedia_surjective_function">(<a href="#ref-wikipedia_surjective_function" role="doc-biblioref">Wikipedia contributors 2026u</a>)</span> (also called <strong>onto</strong>) if, for every <span class="math inline">\(b \in B\)</span>, there is some <span class="math inline">\(a \in A\)</span> with <span class="math inline">\(f(a) = b\)</span>.</p>
 </div>
 </div>
 </div>
@@ -2349,7 +2563,7 @@ x - z
 </div>
 <div class="callout-body-container">
 <div id="def-bijective" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 23 (Bijective function (bijection))</strong></span> A function <span class="math inline">\(f : A \to B\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>) is <strong>bijective</strong> <span class="citation" data-cites="wikipedia_bijection">(<a href="#ref-wikipedia_bijection" role="doc-biblioref">Wikipedia contributors 2026b</a>)</span> (also called a <strong>bijection</strong>) if it is injective (<a href="#def-injective" class="quarto-xref">Definition&nbsp;21</a>) and surjective (<a href="#def-surjective" class="quarto-xref">Definition&nbsp;22</a>).</p>
+<p><span class="theorem-title"><strong>Definition 23 (Bijective function (bijection))</strong></span> A function <span class="math inline">\(f : A \to B\)</span> (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>) is <strong>bijective</strong> <span class="citation" data-cites="wikipedia_bijection">(<a href="#ref-wikipedia_bijection" role="doc-biblioref">Wikipedia contributors 2026b</a>)</span> (also called a <strong>bijection</strong>) if it is injective (<a href="#def-injective" class="quarto-xref">Definition&nbsp;21</a>) and surjective (<a href="#def-surjective" class="quarto-xref">Definition&nbsp;22</a>).</p>
 </div>
 </div>
 </div>
@@ -2386,13 +2600,13 @@ x - z
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-flip-twice" class="quarto-xref">Solution&nbsp;10</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2411,7 +2625,7 @@ x - z
 </div>
 <div class="callout-body-container">
 <div id="def-identity-function" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 24 (Identity function)</strong></span> The <strong>identity function</strong> on a set <span class="math inline">\(A\)</span> <span class="citation" data-cites="wikipedia_identity_function">(<a href="#ref-wikipedia_identity_function" role="doc-biblioref">Wikipedia contributors 2026m</a>)</span> is the function <span class="math inline">\(\operatorname{id}_A : A \to A\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>) with <span class="math inline">\(\operatorname{id}_A(a) = a\)</span> for every <span class="math inline">\(a \in A\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 24 (Identity function)</strong></span> The <strong>identity function</strong> on a set <span class="math inline">\(A\)</span> <span class="citation" data-cites="wikipedia_identity_function">(<a href="#ref-wikipedia_identity_function" role="doc-biblioref">Wikipedia contributors 2026m</a>)</span> is the function <span class="math inline">\(\operatorname{id}_A : A \to A\)</span> (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>) with <span class="math inline">\(\operatorname{id}_A(a) = a\)</span> for every <span class="math inline">\(a \in A\)</span>.</p>
 </div>
 </div>
 </div>
@@ -2439,7 +2653,7 @@ x - z
 </div>
 <div class="callout-body-container">
 <div id="def-inverse-function" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 25 (Inverse function)</strong></span> Let <span class="math inline">\(f : A \to B\)</span> be a <a href="https://morrison-lab.github.io/mds/functions.html#def-function">function</a>. A function <span class="math inline">\(g : B \to A\)</span> is the <strong>inverse function</strong> <span class="citation" data-cites="wikipedia_inverse_function">(<a href="#ref-wikipedia_inverse_function" role="doc-biblioref">Wikipedia contributors 2026p</a>)</span> of <span class="math inline">\(f\)</span>, written <span class="math inline">\(f^{-1}\)</span>, if both</p>
+<p><span class="theorem-title"><strong>Definition 25 (Inverse function)</strong></span> Let <span class="math inline">\(f : A \to B\)</span> be a <a href="../chapters/functional-programming.html#def-function">function</a>. A function <span class="math inline">\(g : B \to A\)</span> is the <strong>inverse function</strong> <span class="citation" data-cites="wikipedia_inverse_function">(<a href="#ref-wikipedia_inverse_function" role="doc-biblioref">Wikipedia contributors 2026p</a>)</span> of <span class="math inline">\(f\)</span>, written <span class="math inline">\(f^{-1}\)</span>, if both</p>
 <ul>
 <li><span class="math inline">\(g(f(a)) = a\)</span> for every <span class="math inline">\(a \in A\)</span>, and</li>
 <li><span class="math inline">\(f(g(b)) = b\)</span> for every <span class="math inline">\(b \in B\)</span>.</li>
@@ -2485,12 +2699,12 @@ x - z
 </div>
 <div class="callout-body-container">
 <div id="thm-inverse-bijective" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 8 (A function has an inverse exactly when it is a bijection)</strong></span> A function <span class="math inline">\(f : A \to B\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>) has an inverse function (<a href="#def-inverse-function" class="quarto-xref">Definition&nbsp;25</a>) if and only if <span class="math inline">\(f\)</span> is bijective (<a href="#def-bijective" class="quarto-xref">Definition&nbsp;23</a>). The graph (<a href="#def-graph" class="quarto-xref">Definition&nbsp;18</a>) of the inverse function is then the inverse relation (<a href="#def-inverse-relation" class="quarto-xref">Definition&nbsp;10</a>) of the graph of <span class="math inline">\(f\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 8 (A function has an inverse exactly when it is a bijection)</strong></span> A function <span class="math inline">\(f : A \to B\)</span> (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>) has an inverse function (<a href="#def-inverse-function" class="quarto-xref">Definition&nbsp;25</a>) if and only if <span class="math inline">\(f\)</span> is bijective (<a href="#def-bijective" class="quarto-xref">Definition&nbsp;23</a>). The graph (<a href="#def-graph" class="quarto-xref">Definition&nbsp;18</a>) of the inverse function is then the inverse relation (<a href="#def-inverse-relation" class="quarto-xref">Definition&nbsp;10</a>) of the graph of <span class="math inline">\(f\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -2519,7 +2733,7 @@ x - z
 </div>
 <div class="callout-body-container">
 <div id="def-composition" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 26 (Composition)</strong></span> Let <span class="math inline">\(g : A \to B\)</span> and <span class="math inline">\(f : B \to C\)</span> be <a href="https://morrison-lab.github.io/mds/functions.html#def-function">functions</a>. The <strong>composition</strong> <span class="citation" data-cites="wikipedia_function_composition">(<a href="#ref-wikipedia_function_composition" role="doc-biblioref">Wikipedia contributors 2026k</a>)</span> of <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> is the function <span class="math inline">\(f \circ g : A \to C\)</span> defined by</p>
+<p><span class="theorem-title"><strong>Definition 26 (Composition)</strong></span> Let <span class="math inline">\(g : A \to B\)</span> and <span class="math inline">\(f : B \to C\)</span> be <a href="../chapters/functional-programming.html#def-function">functions</a>. The <strong>composition</strong> <span class="citation" data-cites="wikipedia_function_composition">(<a href="#ref-wikipedia_function_composition" role="doc-biblioref">Wikipedia contributors 2026k</a>)</span> of <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> is the function <span class="math inline">\(f \circ g : A \to C\)</span> defined by</p>
 <p><span class="math display">\[(f \circ g)(a) \stackrel{\text{def}}{=}f(g(a)) \quad \text{for each } a \in A.\]</span></p>
 </div>
 </div>
@@ -2556,7 +2770,7 @@ x - z
 </div>
 <div class="callout-body-container">
 <div id="thm-composition-graph" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 9 (The graph of a composition is a composition of graphs)</strong></span> Let <span class="math inline">\(g : A \to B\)</span> and <span class="math inline">\(f : B \to C\)</span> be functions (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>), and write <span class="math inline">\(\Gamma_f\)</span> for the graph (<a href="#def-graph" class="quarto-xref">Definition&nbsp;18</a>) of <span class="math inline">\(f\)</span>. Then the graph of the composition <span class="math inline">\(f \circ g\)</span> (<a href="#def-composition" class="quarto-xref">Definition&nbsp;26</a>) is the composition of relations (<a href="#def-relation-composition" class="quarto-xref">Definition&nbsp;11</a>)</p>
+<p><span class="theorem-title"><strong>Theorem 9 (The graph of a composition is a composition of graphs)</strong></span> Let <span class="math inline">\(g : A \to B\)</span> and <span class="math inline">\(f : B \to C\)</span> be functions (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>), and write <span class="math inline">\(\Gamma_f\)</span> for the graph (<a href="#def-graph" class="quarto-xref">Definition&nbsp;18</a>) of <span class="math inline">\(f\)</span>. Then the graph of the composition <span class="math inline">\(f \circ g\)</span> (<a href="#def-composition" class="quarto-xref">Definition&nbsp;26</a>) is the composition of relations (<a href="#def-relation-composition" class="quarto-xref">Definition&nbsp;11</a>)</p>
 <p><span class="math display">\[
 \Gamma_{f \circ g} = \Gamma_f \circ \Gamma_g.
 \]</span></p>
@@ -2564,7 +2778,7 @@ x - z
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -2606,6 +2820,39 @@ x - z
 </div>
 </div>
 </div>
+</section>
+<section id="def-list-section" class="level1 unnumbered">
+<h1 class="unnumbered">Definitions on this page</h1>
+<ul>
+<li><a href="#def-binary-relation"><span class="quarto-xref">Definition&nbsp;1</span> (Relation from one set to another)</a></li>
+<li><a href="#def-relation"><span class="quarto-xref">Definition&nbsp;2</span> (Relation)</a></li>
+<li><a href="#def-arrow-diagram"><span class="quarto-xref">Definition&nbsp;3</span> (Arrow diagram)</a></li>
+<li><a href="#def-relation-digraph"><span class="quarto-xref">Definition&nbsp;4</span> (Directed graph of a relation)</a></li>
+<li><a href="#def-relation-matrix"><span class="quarto-xref">Definition&nbsp;5</span> (Matrix of a relation)</a></li>
+<li><a href="#def-reflexive"><span class="quarto-xref">Definition&nbsp;6</span> (Reflexive relation)</a></li>
+<li><a href="#def-symmetric-relation"><span class="quarto-xref">Definition&nbsp;7</span> (Symmetric relation)</a></li>
+<li><a href="#def-antisymmetric"><span class="quarto-xref">Definition&nbsp;8</span> (Antisymmetric relation)</a></li>
+<li><a href="#def-transitive"><span class="quarto-xref">Definition&nbsp;9</span> (Transitive relation)</a></li>
+<li><a href="#def-inverse-relation"><span class="quarto-xref">Definition&nbsp;10</span> (Inverse relation (converse relation))</a></li>
+<li><a href="#def-relation-composition"><span class="quarto-xref">Definition&nbsp;11</span> (Composition of relations)</a></li>
+<li><a href="#def-relation-power"><span class="quarto-xref">Definition&nbsp;12</span> (Power of a relation)</a></li>
+<li><a href="#def-equivalence-relation"><span class="quarto-xref">Definition&nbsp;13</span> (Equivalence relation)</a></li>
+<li><a href="#def-equivalence-class"><span class="quarto-xref">Definition&nbsp;14</span> (Equivalence class)</a></li>
+<li><a href="#def-set-partition"><span class="quarto-xref">Definition&nbsp;15</span> (Partition of a set)</a></li>
+<li><a href="#def-domain"><span class="quarto-xref">Definition&nbsp;16</span> (Domain)</a></li>
+<li><a href="#def-codomain"><span class="quarto-xref">Definition&nbsp;17</span> (Codomain)</a></li>
+<li><a href="#def-graph"><span class="quarto-xref">Definition&nbsp;18</span> (Graph of a function)</a></li>
+<li><a href="#def-image"><span class="quarto-xref">Definition&nbsp;19</span> (Image)</a></li>
+<li><a href="#def-range"><span class="quarto-xref">Definition&nbsp;20</span> (Range)</a></li>
+<li><a href="#def-injective"><span class="quarto-xref">Definition&nbsp;21</span> (Injective function (one-to-one function))</a></li>
+<li><a href="#def-surjective"><span class="quarto-xref">Definition&nbsp;22</span> (Surjective function (onto function))</a></li>
+<li><a href="#def-bijective"><span class="quarto-xref">Definition&nbsp;23</span> (Bijective function (bijection))</a></li>
+<li><a href="#def-identity-function"><span class="quarto-xref">Definition&nbsp;24</span> (Identity function)</a></li>
+<li><a href="#def-inverse-function"><span class="quarto-xref">Definition&nbsp;25</span> (Inverse function)</a></li>
+<li><a href="#def-composition"><span class="quarto-xref">Definition&nbsp;26</span> (Composition)</a></li>
+<li><a href="#def-inner-function"><span class="quarto-xref">Definition&nbsp;27</span> (Inner function)</a></li>
+<li><a href="#def-outer-function"><span class="quarto-xref">Definition&nbsp;28</span> (Outer function)</a></li>
+</ul>
 </section>
 <section id="references" class="level1 unnumbered">
 <h1 class="unnumbered">References</h1>
@@ -2942,6 +3189,51 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script>
+// Put each folded code cell inside the tab it belongs to.
+// Quarto hoists the `details.code-fold` of a cross-referenced figure out of the figure,
+// so an R and a Python tab end up with their folds stacked above the whole figure.
+// For every language tabset, take the run of folds immediately before it (or before the figure
+// that holds it), match each fold to a tab by language, and move it to the top of that tab.
+// The selectors cover both the website tabsets (Bootstrap) and the slide tabsets (tabby).
+document.querySelectorAll("div.panel-tabset").forEach(function (tabset) {
+  var anchor = tabset.closest("div.quarto-float") || tabset;
+  var panes = Array.prototype.slice.call(tabset.querySelectorAll(":scope > .tab-content > div"));
+  var tabs = Array.prototype.slice.call(tabset.querySelectorAll(":scope > ul > li > a"));
+  var folds = [];
+  var node = anchor.previousElementSibling;
+  while (node && node.matches("details.code-fold")) {
+    folds.unshift(node);
+    node = node.previousElementSibling;
+  }
+  if (folds.length === 0 || folds.length !== panes.length || tabs.length !== panes.length) {
+    return;
+  }
+  var language = function (fold) {
+    var code = fold.querySelector("pre.sourceCode");
+    var found = code && Array.prototype.find.call(code.classList, function (name) {
+      return name !== "sourceCode" && name !== "downlit" && name !== "code-with-copy";
+    });
+    return found ? found.toLowerCase() : "";
+  };
+  var used = {};
+  var unused = function () {
+    return tabs.findIndex(function (tab, j) {
+      return !used[j];
+    });
+  };
+  folds.forEach(function (fold) {
+    var index = tabs.findIndex(function (tab, j) {
+      return !used[j] && tab.textContent.trim().toLowerCase() === language(fold);
+    });
+    if (index < 0) {
+      index = unused();
+    }
+    used[index] = true;
+    panes[index].insertBefore(fold, panes[index].firstChild);
+  });
+});
+</script>
 <!--
 Page-navigation helpers for the HTML format, included after the body of every
 page by `include-after-body: page-navigation.html` under `format.html` in
@@ -3209,15 +3501,50 @@ document.addEventListener("DOMContentLoaded", function () {
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
     if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle dark mode");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
       const i = window.document.createElement("i");
       i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle dark mode");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
     }
     setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
@@ -3347,7 +3674,8 @@ document.addEventListener("DOMContentLoaded", function () {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
       // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
       for (var i=0; i<links.length; i++) {
         const link = links[i];
         if (!isInternal(link.href)) {
@@ -3356,10 +3684,71 @@ document.addEventListener("DOMContentLoaded", function () {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+          if (!link.classList.contains('no-external-icon')) {
             // default icon
             link.classList.add("external");
+          }
         }
       }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
       const config = {
         allowHTML: true,
@@ -3373,6 +3762,7 @@ document.addEventListener("DOMContentLoaded", function () {
         interactiveBorder: 10,
         theme: 'quarto',
         placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
       };
       if (contentFn) {
         config.content = contentFn;
@@ -3535,44 +3925,54 @@ document.addEventListener("DOMContentLoaded", function () {
           const lineIds = lines.map((line) => {
             return targetCell + "-" + line;
           })
-          let top = null;
-          let height = null;
-          let parent = null;
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
           if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
             }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
             }
+            placeBand(gutterDiv, el, lastEl);
             selectedAnnoteEl = annoteEl;
           }
         };
@@ -3671,7 +4071,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
   </script>
-<nav class="page-navigation">
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
   <div class="nav-page nav-page-previous">
       <a href="../chapters/recurrences-growth.html" class="pagination-link" aria-label="Recurrence Relations and Growth Rates">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Recurrence Relations and Growth Rates</span>
@@ -3715,391 +4118,403 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>the domain, codomain and range of a function;</span>
 <span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>injective, surjective and bijective functions, the identity function, and the fact that a function has an inverse function exactly when it is bijective.</span>
 <span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>The definitions included from mds come from that site,</span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>and the definitions of an antisymmetric relation, the composition of relations and a partition follow the standard ones cited with them.</span>
-<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>The exercises, the other examples, the Racket functions and all the proofs are new.</span>
-<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a><span class="fu"># Relations {#sec-relations}</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>The definitions of a relation, a function and the terms about them are on the</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">relations</span><span class="co">](../relations.qmd)</span> and <span class="co">[</span><span class="ot">functions</span><span class="co">](../functions.qmd)</span> pages,</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>which the other data science notes link to,</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>and the definitions of an antisymmetric relation, the composition of relations and a partition follow the standard ones cited with them.</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>The exercises, the other examples, the Racket functions and all the proofs are new.</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_word-letters_exr.qmd &gt;}}</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a><span class="fu"># Relations {#sec-relations}</span></span>
 <span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_word-letters_exr.qmd &gt;}}</span>
 <span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_word-letters_sol.qmd &gt;}}</span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_word-letters_sol.qmd &gt;}}</span>
 <span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_binary-relation_def.qmd &gt;}}</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_binary-relation_def.qmd &gt;}}</span>
 <span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_word-letters_exm.qmd &gt;}}</span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_word-letters_exm.qmd &gt;}}</span>
 <span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../mds/_subfiles/functions/_def-relation.qmd &gt;}}</span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/functions/_relation_def.qmd &gt;}}</span>
 <span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_relation-on-set_rem.qmd &gt;}}</span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_relation-on-set_rem.qmd &gt;}}</span>
 <span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_parent_exm.qmd &gt;}}</span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a><span class="fu"># Drawing relations {#sec-drawing-relations}</span></span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_parent_exm.qmd &gt;}}</span>
 <span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_beats_exr.qmd &gt;}}</span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a><span class="fu"># Drawing relations {#sec-drawing-relations}</span></span>
 <span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_beats_exr.qmd &gt;}}</span>
 <span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_beats_sol.qmd &gt;}}</span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_beats_sol.qmd &gt;}}</span>
 <span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_beats_exm.qmd &gt;}}</span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_beats_exm.qmd &gt;}}</span>
 <span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_arrow-diagram_def.qmd &gt;}}</span>
+<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_arrow-diagram_def.qmd &gt;}}</span>
 <span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_arrow-diagram_exm.qmd &gt;}}</span>
+<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_arrow-diagram_exm.qmd &gt;}}</span>
 <span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_relation-digraph_def.qmd &gt;}}</span>
+<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_relation-digraph_def.qmd &gt;}}</span>
 <span id="cb5-91"><a href="#cb5-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-92"><a href="#cb5-92" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_relation-digraph_exm.qmd &gt;}}</span>
+<span id="cb5-92"><a href="#cb5-92" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-93"><a href="#cb5-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-94"><a href="#cb5-94" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-94"><a href="#cb5-94" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_relation-digraph_exm.qmd &gt;}}</span>
 <span id="cb5-95"><a href="#cb5-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-96"><a href="#cb5-96" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_relation-matrix_def.qmd &gt;}}</span>
+<span id="cb5-96"><a href="#cb5-96" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-97"><a href="#cb5-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-98"><a href="#cb5-98" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-98"><a href="#cb5-98" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_relation-matrix_def.qmd &gt;}}</span>
 <span id="cb5-99"><a href="#cb5-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-100"><a href="#cb5-100" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_relation-matrix_exm.qmd &gt;}}</span>
+<span id="cb5-100"><a href="#cb5-100" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-101"><a href="#cb5-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-102"><a href="#cb5-102" aria-hidden="true" tabindex="-1"></a><span class="fu"># Properties of relations {#sec-relation-properties}</span></span>
+<span id="cb5-102"><a href="#cb5-102" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_relation-matrix_exm.qmd &gt;}}</span>
 <span id="cb5-103"><a href="#cb5-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-104"><a href="#cb5-104" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_beats-transitive_exr.qmd &gt;}}</span>
+<span id="cb5-104"><a href="#cb5-104" aria-hidden="true" tabindex="-1"></a><span class="fu"># Properties of relations {#sec-relation-properties}</span></span>
 <span id="cb5-105"><a href="#cb5-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-106"><a href="#cb5-106" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-106"><a href="#cb5-106" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_beats-transitive_exr.qmd &gt;}}</span>
 <span id="cb5-107"><a href="#cb5-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-108"><a href="#cb5-108" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_beats-transitive_sol.qmd &gt;}}</span>
+<span id="cb5-108"><a href="#cb5-108" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-109"><a href="#cb5-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-110"><a href="#cb5-110" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-110"><a href="#cb5-110" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_beats-transitive_sol.qmd &gt;}}</span>
 <span id="cb5-111"><a href="#cb5-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-112"><a href="#cb5-112" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_shares-letter_exm.qmd &gt;}}</span>
+<span id="cb5-112"><a href="#cb5-112" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-113"><a href="#cb5-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-114"><a href="#cb5-114" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-114"><a href="#cb5-114" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_shares-letter_exm.qmd &gt;}}</span>
 <span id="cb5-115"><a href="#cb5-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-116"><a href="#cb5-116" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../mds/_subfiles/relations/_def-reflexive.qmd &gt;}}</span>
+<span id="cb5-116"><a href="#cb5-116" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-117"><a href="#cb5-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-118"><a href="#cb5-118" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-118"><a href="#cb5-118" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/relations/_reflexive_def.qmd &gt;}}</span>
 <span id="cb5-119"><a href="#cb5-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-120"><a href="#cb5-120" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_reflexive_exm.qmd &gt;}}</span>
+<span id="cb5-120"><a href="#cb5-120" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-121"><a href="#cb5-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-122"><a href="#cb5-122" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-122"><a href="#cb5-122" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_reflexive_exm.qmd &gt;}}</span>
 <span id="cb5-123"><a href="#cb5-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-124"><a href="#cb5-124" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../mds/_subfiles/relations/_def-symmetric-relation.qmd &gt;}}</span>
+<span id="cb5-124"><a href="#cb5-124" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-125"><a href="#cb5-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-126"><a href="#cb5-126" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-126"><a href="#cb5-126" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/relations/_symmetric-relation_def.qmd &gt;}}</span>
 <span id="cb5-127"><a href="#cb5-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-128"><a href="#cb5-128" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_symmetric_exm.qmd &gt;}}</span>
+<span id="cb5-128"><a href="#cb5-128" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-129"><a href="#cb5-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-130"><a href="#cb5-130" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-130"><a href="#cb5-130" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_symmetric_exm.qmd &gt;}}</span>
 <span id="cb5-131"><a href="#cb5-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-132"><a href="#cb5-132" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_antisymmetric_def.qmd &gt;}}</span>
+<span id="cb5-132"><a href="#cb5-132" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-133"><a href="#cb5-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-134"><a href="#cb5-134" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-134"><a href="#cb5-134" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_antisymmetric_def.qmd &gt;}}</span>
 <span id="cb5-135"><a href="#cb5-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-136"><a href="#cb5-136" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_antisymmetric_exm.qmd &gt;}}</span>
+<span id="cb5-136"><a href="#cb5-136" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-137"><a href="#cb5-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-138"><a href="#cb5-138" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-138"><a href="#cb5-138" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_antisymmetric_exm.qmd &gt;}}</span>
 <span id="cb5-139"><a href="#cb5-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-140"><a href="#cb5-140" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../mds/_subfiles/algebra/_def-transitive.qmd &gt;}}</span>
+<span id="cb5-140"><a href="#cb5-140" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-141"><a href="#cb5-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-142"><a href="#cb5-142" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-142"><a href="#cb5-142" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/algebra/_transitive_def.qmd &gt;}}</span>
 <span id="cb5-143"><a href="#cb5-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-144"><a href="#cb5-144" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_transitive_exm.qmd &gt;}}</span>
+<span id="cb5-144"><a href="#cb5-144" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-145"><a href="#cb5-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-146"><a href="#cb5-146" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-146"><a href="#cb5-146" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_transitive_exm.qmd &gt;}}</span>
 <span id="cb5-147"><a href="#cb5-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-148"><a href="#cb5-148" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_symmetric-antisymmetric_rem.qmd &gt;}}</span>
+<span id="cb5-148"><a href="#cb5-148" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-149"><a href="#cb5-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-150"><a href="#cb5-150" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-150"><a href="#cb5-150" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_symmetric-antisymmetric_rem.qmd &gt;}}</span>
 <span id="cb5-151"><a href="#cb5-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-152"><a href="#cb5-152" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_properties-pictures_rem.qmd &gt;}}</span>
+<span id="cb5-152"><a href="#cb5-152" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-153"><a href="#cb5-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-154"><a href="#cb5-154" aria-hidden="true" tabindex="-1"></a><span class="fu"># Relations in Racket {#sec-racket-relations}</span></span>
+<span id="cb5-154"><a href="#cb5-154" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_properties-pictures_rem.qmd &gt;}}</span>
 <span id="cb5-155"><a href="#cb5-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-156"><a href="#cb5-156" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_racket-member_exr.qmd &gt;}}</span>
+<span id="cb5-156"><a href="#cb5-156" aria-hidden="true" tabindex="-1"></a><span class="fu"># Relations in Racket {#sec-racket-relations}</span></span>
 <span id="cb5-157"><a href="#cb5-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-158"><a href="#cb5-158" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-158"><a href="#cb5-158" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_racket-member_exr.qmd &gt;}}</span>
 <span id="cb5-159"><a href="#cb5-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-160"><a href="#cb5-160" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_racket-member_sol.qmd &gt;}}</span>
+<span id="cb5-160"><a href="#cb5-160" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-161"><a href="#cb5-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-162"><a href="#cb5-162" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-162"><a href="#cb5-162" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_racket-member_sol.qmd &gt;}}</span>
 <span id="cb5-163"><a href="#cb5-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-164"><a href="#cb5-164" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_racket-properties_exm.qmd &gt;}}</span>
+<span id="cb5-164"><a href="#cb5-164" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-165"><a href="#cb5-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-166"><a href="#cb5-166" aria-hidden="true" tabindex="-1"></a><span class="fu"># Inverses and composition {#sec-inverse-composition}</span></span>
+<span id="cb5-166"><a href="#cb5-166" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_racket-properties_exm.qmd &gt;}}</span>
 <span id="cb5-167"><a href="#cb5-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-168"><a href="#cb5-168" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_grandparent_exr.qmd &gt;}}</span>
+<span id="cb5-168"><a href="#cb5-168" aria-hidden="true" tabindex="-1"></a><span class="fu"># Inverses and composition {#sec-inverse-composition}</span></span>
 <span id="cb5-169"><a href="#cb5-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-170"><a href="#cb5-170" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-170"><a href="#cb5-170" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_grandparent_exr.qmd &gt;}}</span>
 <span id="cb5-171"><a href="#cb5-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-172"><a href="#cb5-172" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_grandparent_sol.qmd &gt;}}</span>
+<span id="cb5-172"><a href="#cb5-172" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-173"><a href="#cb5-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-174"><a href="#cb5-174" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-174"><a href="#cb5-174" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_grandparent_sol.qmd &gt;}}</span>
 <span id="cb5-175"><a href="#cb5-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-176"><a href="#cb5-176" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_inverse-relation_def.qmd &gt;}}</span>
+<span id="cb5-176"><a href="#cb5-176" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-177"><a href="#cb5-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-178"><a href="#cb5-178" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-178"><a href="#cb5-178" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_inverse-relation_def.qmd &gt;}}</span>
 <span id="cb5-179"><a href="#cb5-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-180"><a href="#cb5-180" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_inverse-relation_exm.qmd &gt;}}</span>
+<span id="cb5-180"><a href="#cb5-180" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-181"><a href="#cb5-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-182"><a href="#cb5-182" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-182"><a href="#cb5-182" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_inverse-relation_exm.qmd &gt;}}</span>
 <span id="cb5-183"><a href="#cb5-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-184"><a href="#cb5-184" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_symmetric-inverse_thm.qmd &gt;}}</span>
+<span id="cb5-184"><a href="#cb5-184" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-185"><a href="#cb5-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-186"><a href="#cb5-186" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-186"><a href="#cb5-186" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_symmetric-inverse_thm.qmd &gt;}}</span>
 <span id="cb5-187"><a href="#cb5-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-188"><a href="#cb5-188" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_relation-composition_def.qmd &gt;}}</span>
+<span id="cb5-188"><a href="#cb5-188" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-189"><a href="#cb5-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-190"><a href="#cb5-190" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-190"><a href="#cb5-190" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_relation-composition_def.qmd &gt;}}</span>
 <span id="cb5-191"><a href="#cb5-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-192"><a href="#cb5-192" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_relation-composition_exm.qmd &gt;}}</span>
+<span id="cb5-192"><a href="#cb5-192" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-193"><a href="#cb5-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-194"><a href="#cb5-194" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-194"><a href="#cb5-194" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_relation-composition_exm.qmd &gt;}}</span>
 <span id="cb5-195"><a href="#cb5-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-196"><a href="#cb5-196" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_relation-power_def.qmd &gt;}}</span>
+<span id="cb5-196"><a href="#cb5-196" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-197"><a href="#cb5-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-198"><a href="#cb5-198" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-198"><a href="#cb5-198" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_relation-power_def.qmd &gt;}}</span>
 <span id="cb5-199"><a href="#cb5-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-200"><a href="#cb5-200" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_relation-power_exm.qmd &gt;}}</span>
+<span id="cb5-200"><a href="#cb5-200" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-201"><a href="#cb5-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-202"><a href="#cb5-202" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-202"><a href="#cb5-202" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_relation-power_exm.qmd &gt;}}</span>
 <span id="cb5-203"><a href="#cb5-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-204"><a href="#cb5-204" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_transitive-composition_thm.qmd &gt;}}</span>
+<span id="cb5-204"><a href="#cb5-204" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-205"><a href="#cb5-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-206"><a href="#cb5-206" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-206"><a href="#cb5-206" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_transitive-composition_thm.qmd &gt;}}</span>
 <span id="cb5-207"><a href="#cb5-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-208"><a href="#cb5-208" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_transitive-composition_exm.qmd &gt;}}</span>
+<span id="cb5-208"><a href="#cb5-208" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-209"><a href="#cb5-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-210"><a href="#cb5-210" aria-hidden="true" tabindex="-1"></a><span class="fu"># Equivalence relations {#sec-equivalence-relations}</span></span>
+<span id="cb5-210"><a href="#cb5-210" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_transitive-composition_exm.qmd &gt;}}</span>
 <span id="cb5-211"><a href="#cb5-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-212"><a href="#cb5-212" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_same-length_exr.qmd &gt;}}</span>
+<span id="cb5-212"><a href="#cb5-212" aria-hidden="true" tabindex="-1"></a><span class="fu"># Equivalence relations {#sec-equivalence-relations}</span></span>
 <span id="cb5-213"><a href="#cb5-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-214"><a href="#cb5-214" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-214"><a href="#cb5-214" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_same-length_exr.qmd &gt;}}</span>
 <span id="cb5-215"><a href="#cb5-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-216"><a href="#cb5-216" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_same-length_sol.qmd &gt;}}</span>
+<span id="cb5-216"><a href="#cb5-216" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-217"><a href="#cb5-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-218"><a href="#cb5-218" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-218"><a href="#cb5-218" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_same-length_sol.qmd &gt;}}</span>
 <span id="cb5-219"><a href="#cb5-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-220"><a href="#cb5-220" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../mds/_subfiles/relations/_def-equivalence-relation.qmd &gt;}}</span>
+<span id="cb5-220"><a href="#cb5-220" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-221"><a href="#cb5-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-222"><a href="#cb5-222" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-222"><a href="#cb5-222" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/relations/_equivalence-relation_def.qmd &gt;}}</span>
 <span id="cb5-223"><a href="#cb5-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-224"><a href="#cb5-224" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_same-length_exm.qmd &gt;}}</span>
+<span id="cb5-224"><a href="#cb5-224" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-225"><a href="#cb5-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-226"><a href="#cb5-226" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-226"><a href="#cb5-226" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_same-length_exm.qmd &gt;}}</span>
 <span id="cb5-227"><a href="#cb5-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-228"><a href="#cb5-228" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_same-value_thm.qmd &gt;}}</span>
+<span id="cb5-228"><a href="#cb5-228" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-229"><a href="#cb5-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-230"><a href="#cb5-230" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-230"><a href="#cb5-230" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_same-value_thm.qmd &gt;}}</span>
 <span id="cb5-231"><a href="#cb5-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-232"><a href="#cb5-232" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_integer-difference_exm.qmd &gt;}}</span>
+<span id="cb5-232"><a href="#cb5-232" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-233"><a href="#cb5-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-234"><a href="#cb5-234" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-234"><a href="#cb5-234" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_integer-difference_exm.qmd &gt;}}</span>
 <span id="cb5-235"><a href="#cb5-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-236"><a href="#cb5-236" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../mds/_subfiles/relations/_def-equivalence-class.qmd &gt;}}</span>
+<span id="cb5-236"><a href="#cb5-236" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-237"><a href="#cb5-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-238"><a href="#cb5-238" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-238"><a href="#cb5-238" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/relations/_equivalence-class_def.qmd &gt;}}</span>
 <span id="cb5-239"><a href="#cb5-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-240"><a href="#cb5-240" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_equivalence-class_exm.qmd &gt;}}</span>
+<span id="cb5-240"><a href="#cb5-240" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-241"><a href="#cb5-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-242"><a href="#cb5-242" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-242"><a href="#cb5-242" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_equivalence-class_exm.qmd &gt;}}</span>
 <span id="cb5-243"><a href="#cb5-243" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-244"><a href="#cb5-244" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_related-classes_thm.qmd &gt;}}</span>
+<span id="cb5-244"><a href="#cb5-244" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-245"><a href="#cb5-245" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-246"><a href="#cb5-246" aria-hidden="true" tabindex="-1"></a><span class="fu"># Partitions {#sec-partitions}</span></span>
+<span id="cb5-246"><a href="#cb5-246" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_related-classes_thm.qmd &gt;}}</span>
 <span id="cb5-247"><a href="#cb5-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-248"><a href="#cb5-248" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_first-letter_exr.qmd &gt;}}</span>
+<span id="cb5-248"><a href="#cb5-248" aria-hidden="true" tabindex="-1"></a><span class="fu"># Partitions {#sec-partitions}</span></span>
 <span id="cb5-249"><a href="#cb5-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-250"><a href="#cb5-250" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-250"><a href="#cb5-250" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_first-letter_exr.qmd &gt;}}</span>
 <span id="cb5-251"><a href="#cb5-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-252"><a href="#cb5-252" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_first-letter_sol.qmd &gt;}}</span>
+<span id="cb5-252"><a href="#cb5-252" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-253"><a href="#cb5-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-254"><a href="#cb5-254" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-254"><a href="#cb5-254" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_first-letter_sol.qmd &gt;}}</span>
 <span id="cb5-255"><a href="#cb5-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-256"><a href="#cb5-256" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_set-partition_def.qmd &gt;}}</span>
+<span id="cb5-256"><a href="#cb5-256" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-257"><a href="#cb5-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-258"><a href="#cb5-258" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-258"><a href="#cb5-258" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_set-partition_def.qmd &gt;}}</span>
 <span id="cb5-259"><a href="#cb5-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-260"><a href="#cb5-260" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_set-partition_exm.qmd &gt;}}</span>
+<span id="cb5-260"><a href="#cb5-260" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-261"><a href="#cb5-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-262"><a href="#cb5-262" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-262"><a href="#cb5-262" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_set-partition_exm.qmd &gt;}}</span>
 <span id="cb5-263"><a href="#cb5-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-264"><a href="#cb5-264" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_classes-partition_thm.qmd &gt;}}</span>
+<span id="cb5-264"><a href="#cb5-264" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-265"><a href="#cb5-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-266"><a href="#cb5-266" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-266"><a href="#cb5-266" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_classes-partition_thm.qmd &gt;}}</span>
 <span id="cb5-267"><a href="#cb5-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-268"><a href="#cb5-268" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_partition-equivalence_thm.qmd &gt;}}</span>
+<span id="cb5-268"><a href="#cb5-268" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-269"><a href="#cb5-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-270"><a href="#cb5-270" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-270"><a href="#cb5-270" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_partition-equivalence_thm.qmd &gt;}}</span>
 <span id="cb5-271"><a href="#cb5-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-272"><a href="#cb5-272" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_first-letter_exm.qmd &gt;}}</span>
+<span id="cb5-272"><a href="#cb5-272" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-273"><a href="#cb5-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-274"><a href="#cb5-274" aria-hidden="true" tabindex="-1"></a><span class="fu"># Functions as relations {#sec-functions-relations}</span></span>
+<span id="cb5-274"><a href="#cb5-274" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_first-letter_exm.qmd &gt;}}</span>
 <span id="cb5-275"><a href="#cb5-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-276"><a href="#cb5-276" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_beats-one_exr.qmd &gt;}}</span>
+<span id="cb5-276"><a href="#cb5-276" aria-hidden="true" tabindex="-1"></a><span class="fu"># Functions as relations {#sec-functions-relations}</span></span>
 <span id="cb5-277"><a href="#cb5-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-278"><a href="#cb5-278" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-278"><a href="#cb5-278" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_beats-one_exr.qmd &gt;}}</span>
 <span id="cb5-279"><a href="#cb5-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-280"><a href="#cb5-280" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_beats-one_sol.qmd &gt;}}</span>
+<span id="cb5-280"><a href="#cb5-280" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-281"><a href="#cb5-281" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-282"><a href="#cb5-282" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-282"><a href="#cb5-282" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_beats-one_sol.qmd &gt;}}</span>
 <span id="cb5-283"><a href="#cb5-283" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-284"><a href="#cb5-284" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_function-domain_def.qmd &gt;}}</span>
+<span id="cb5-284"><a href="#cb5-284" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-285"><a href="#cb5-285" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-286"><a href="#cb5-286" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-286"><a href="#cb5-286" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/functions/_domain_def.qmd &gt;}}</span>
 <span id="cb5-287"><a href="#cb5-287" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-288"><a href="#cb5-288" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../mds/_subfiles/functions/_def-codomain.qmd &gt;}}</span>
+<span id="cb5-288"><a href="#cb5-288" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-289"><a href="#cb5-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-290"><a href="#cb5-290" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-290"><a href="#cb5-290" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/functions/_codomain_def.qmd &gt;}}</span>
 <span id="cb5-291"><a href="#cb5-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-292"><a href="#cb5-292" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../mds/_subfiles/functions/_def-graph.qmd &gt;}}</span>
+<span id="cb5-292"><a href="#cb5-292" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-293"><a href="#cb5-293" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-294"><a href="#cb5-294" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-294"><a href="#cb5-294" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/functions/_graph_def.qmd &gt;}}</span>
 <span id="cb5-295"><a href="#cb5-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-296"><a href="#cb5-296" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_graph-length_exm.qmd &gt;}}</span>
+<span id="cb5-296"><a href="#cb5-296" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-297"><a href="#cb5-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-298"><a href="#cb5-298" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-298"><a href="#cb5-298" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_graph-length_exm.qmd &gt;}}</span>
 <span id="cb5-299"><a href="#cb5-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-300"><a href="#cb5-300" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_graph-words_rem.qmd &gt;}}</span>
+<span id="cb5-300"><a href="#cb5-300" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-301"><a href="#cb5-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-302"><a href="#cb5-302" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-302"><a href="#cb5-302" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_graph-words_rem.qmd &gt;}}</span>
 <span id="cb5-303"><a href="#cb5-303" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-304"><a href="#cb5-304" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_function-relation_thm.qmd &gt;}}</span>
+<span id="cb5-304"><a href="#cb5-304" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-305"><a href="#cb5-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-306"><a href="#cb5-306" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-306"><a href="#cb5-306" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_function-relation_thm.qmd &gt;}}</span>
 <span id="cb5-307"><a href="#cb5-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-308"><a href="#cb5-308" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../mds/_subfiles/functions/_rem-function-as-set-of-pairs.qmd &gt;}}</span>
+<span id="cb5-308"><a href="#cb5-308" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-309"><a href="#cb5-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-310"><a href="#cb5-310" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-310"><a href="#cb5-310" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/functions/_function-as-set-of-pairs_rem.qmd &gt;}}</span>
 <span id="cb5-311"><a href="#cb5-311" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-312"><a href="#cb5-312" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_function-or-not_exm.qmd &gt;}}</span>
+<span id="cb5-312"><a href="#cb5-312" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-313"><a href="#cb5-313" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-314"><a href="#cb5-314" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-314"><a href="#cb5-314" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_function-or-not_exm.qmd &gt;}}</span>
 <span id="cb5-315"><a href="#cb5-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-316"><a href="#cb5-316" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_racket-function_exm.qmd &gt;}}</span>
+<span id="cb5-316"><a href="#cb5-316" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-317"><a href="#cb5-317" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-318"><a href="#cb5-318" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-318"><a href="#cb5-318" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_racket-function_exm.qmd &gt;}}</span>
 <span id="cb5-319"><a href="#cb5-319" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-320"><a href="#cb5-320" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../mds/_subfiles/functions/_def-image.qmd &gt;}}</span>
+<span id="cb5-320"><a href="#cb5-320" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-321"><a href="#cb5-321" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-322"><a href="#cb5-322" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-322"><a href="#cb5-322" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/functions/_image_def.qmd &gt;}}</span>
 <span id="cb5-323"><a href="#cb5-323" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-324"><a href="#cb5-324" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_domain-image_exm.qmd &gt;}}</span>
+<span id="cb5-324"><a href="#cb5-324" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-325"><a href="#cb5-325" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-326"><a href="#cb5-326" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-326"><a href="#cb5-326" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_domain-image_exm.qmd &gt;}}</span>
 <span id="cb5-327"><a href="#cb5-327" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-328"><a href="#cb5-328" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../mds/_subfiles/functions/_def-range.qmd &gt;}}</span>
+<span id="cb5-328"><a href="#cb5-328" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-329"><a href="#cb5-329" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-330"><a href="#cb5-330" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-330"><a href="#cb5-330" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/functions/_range_def.qmd &gt;}}</span>
 <span id="cb5-331"><a href="#cb5-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-332"><a href="#cb5-332" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_dup-odd_exr.qmd &gt;}}</span>
+<span id="cb5-332"><a href="#cb5-332" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-333"><a href="#cb5-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-334"><a href="#cb5-334" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-334"><a href="#cb5-334" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_dup-odd_exr.qmd &gt;}}</span>
 <span id="cb5-335"><a href="#cb5-335" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-336"><a href="#cb5-336" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_dup-odd_sol.qmd &gt;}}</span>
+<span id="cb5-336"><a href="#cb5-336" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-337"><a href="#cb5-337" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-338"><a href="#cb5-338" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-338"><a href="#cb5-338" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_dup-odd_sol.qmd &gt;}}</span>
 <span id="cb5-339"><a href="#cb5-339" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-340"><a href="#cb5-340" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_injective_def.qmd &gt;}}</span>
+<span id="cb5-340"><a href="#cb5-340" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-341"><a href="#cb5-341" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-342"><a href="#cb5-342" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-342"><a href="#cb5-342" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_injective_def.qmd &gt;}}</span>
 <span id="cb5-343"><a href="#cb5-343" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-344"><a href="#cb5-344" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_injective_exm.qmd &gt;}}</span>
+<span id="cb5-344"><a href="#cb5-344" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-345"><a href="#cb5-345" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-346"><a href="#cb5-346" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-346"><a href="#cb5-346" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_injective_exm.qmd &gt;}}</span>
 <span id="cb5-347"><a href="#cb5-347" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-348"><a href="#cb5-348" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_surjective_def.qmd &gt;}}</span>
+<span id="cb5-348"><a href="#cb5-348" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-349"><a href="#cb5-349" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-350"><a href="#cb5-350" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-350"><a href="#cb5-350" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_surjective_def.qmd &gt;}}</span>
 <span id="cb5-351"><a href="#cb5-351" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-352"><a href="#cb5-352" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_surjective_exm.qmd &gt;}}</span>
+<span id="cb5-352"><a href="#cb5-352" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-353"><a href="#cb5-353" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-354"><a href="#cb5-354" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-354"><a href="#cb5-354" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_surjective_exm.qmd &gt;}}</span>
 <span id="cb5-355"><a href="#cb5-355" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-356"><a href="#cb5-356" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_bijective_def.qmd &gt;}}</span>
+<span id="cb5-356"><a href="#cb5-356" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-357"><a href="#cb5-357" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-358"><a href="#cb5-358" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-358"><a href="#cb5-358" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_bijective_def.qmd &gt;}}</span>
 <span id="cb5-359"><a href="#cb5-359" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-360"><a href="#cb5-360" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_bijective_exm.qmd &gt;}}</span>
+<span id="cb5-360"><a href="#cb5-360" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-361"><a href="#cb5-361" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-362"><a href="#cb5-362" aria-hidden="true" tabindex="-1"></a><span class="fu"># Inverse functions and composition {#sec-inverse-functions}</span></span>
+<span id="cb5-362"><a href="#cb5-362" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_bijective_exm.qmd &gt;}}</span>
 <span id="cb5-363"><a href="#cb5-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-364"><a href="#cb5-364" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_flip-twice_exr.qmd &gt;}}</span>
+<span id="cb5-364"><a href="#cb5-364" aria-hidden="true" tabindex="-1"></a><span class="fu"># Inverse functions and composition {#sec-inverse-functions}</span></span>
 <span id="cb5-365"><a href="#cb5-365" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-366"><a href="#cb5-366" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-366"><a href="#cb5-366" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_flip-twice_exr.qmd &gt;}}</span>
 <span id="cb5-367"><a href="#cb5-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-368"><a href="#cb5-368" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_flip-twice_sol.qmd &gt;}}</span>
+<span id="cb5-368"><a href="#cb5-368" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-369"><a href="#cb5-369" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-370"><a href="#cb5-370" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-370"><a href="#cb5-370" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_flip-twice_sol.qmd &gt;}}</span>
 <span id="cb5-371"><a href="#cb5-371" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-372"><a href="#cb5-372" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_identity-function_def.qmd &gt;}}</span>
+<span id="cb5-372"><a href="#cb5-372" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-373"><a href="#cb5-373" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-374"><a href="#cb5-374" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-374"><a href="#cb5-374" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_identity-function_def.qmd &gt;}}</span>
 <span id="cb5-375"><a href="#cb5-375" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-376"><a href="#cb5-376" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_identity-function_exm.qmd &gt;}}</span>
+<span id="cb5-376"><a href="#cb5-376" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-377"><a href="#cb5-377" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-378"><a href="#cb5-378" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-378"><a href="#cb5-378" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_identity-function_exm.qmd &gt;}}</span>
 <span id="cb5-379"><a href="#cb5-379" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-380"><a href="#cb5-380" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../mds/_subfiles/functions/_def-inverse-function.qmd &gt;}}</span>
+<span id="cb5-380"><a href="#cb5-380" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-381"><a href="#cb5-381" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-382"><a href="#cb5-382" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-382"><a href="#cb5-382" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/functions/_inverse-function_def.qmd &gt;}}</span>
 <span id="cb5-383"><a href="#cb5-383" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-384"><a href="#cb5-384" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_inverse-function_exm.qmd &gt;}}</span>
+<span id="cb5-384"><a href="#cb5-384" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-385"><a href="#cb5-385" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-386"><a href="#cb5-386" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-386"><a href="#cb5-386" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_inverse-function_exm.qmd &gt;}}</span>
 <span id="cb5-387"><a href="#cb5-387" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-388"><a href="#cb5-388" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_inverse-bijective_thm.qmd &gt;}}</span>
+<span id="cb5-388"><a href="#cb5-388" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-389"><a href="#cb5-389" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-390"><a href="#cb5-390" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-390"><a href="#cb5-390" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_inverse-bijective_thm.qmd &gt;}}</span>
 <span id="cb5-391"><a href="#cb5-391" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-392"><a href="#cb5-392" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../mds/_subfiles/functions/_def-composition.qmd &gt;}}</span>
+<span id="cb5-392"><a href="#cb5-392" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-393"><a href="#cb5-393" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-394"><a href="#cb5-394" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-394"><a href="#cb5-394" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/functions/_composition_def.qmd &gt;}}</span>
 <span id="cb5-395"><a href="#cb5-395" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-396"><a href="#cb5-396" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_composition-graph_thm.qmd &gt;}}</span>
+<span id="cb5-396"><a href="#cb5-396" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-397"><a href="#cb5-397" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-398"><a href="#cb5-398" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb5-398"><a href="#cb5-398" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_composition-graph_thm.qmd &gt;}}</span>
 <span id="cb5-399"><a href="#cb5-399" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-400"><a href="#cb5-400" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_function-composition_exm.qmd &gt;}}</span>
+<span id="cb5-400"><a href="#cb5-400" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb5-401"><a href="#cb5-401" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-402"><a href="#cb5-402" aria-hidden="true" tabindex="-1"></a><span class="fu"># References {.unnumbered}</span></span>
+<span id="cb5-402"><a href="#cb5-402" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/relations/_function-composition_exm.qmd &gt;}}</span>
 <span id="cb5-403"><a href="#cb5-403" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-404"><a href="#cb5-404" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
-<span id="cb5-405"><a href="#cb5-405" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb5-404"><a href="#cb5-404" aria-hidden="true" tabindex="-1"></a><span class="fu"># References {.unnumbered}</span></span>
+<span id="cb5-405"><a href="#cb5-405" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-406"><a href="#cb5-406" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb5-407"><a href="#cb5-407" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      &nbsp;
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ Douglas Ezra Morrison, adapting materials by Kameron Decker Harris, Scott Wehrwein, and others as acknowledged throughout
+  </li>  
+</ul>
     </div>   
     <div class="nav-footer-center">
-<p>Built with <a href="https://quarto.org/">Quarto</a></p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Morrison-Lab/mcs/edit/main/chapters/relations.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mcs/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mcs/blob/main/chapters/relations.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
-    <div class="nav-footer-right">
       &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Morrison-Lab/mcs/edit/main/chapters/relations.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mcs/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mcs/blob/main/chapters/relations.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/Morrison-Lab/mcs/issues/new/choose">
+<p>Found a typo or error, or have a request or suggestion? Open an issue.</p>
+</a>
+  </li>  
+</ul>
     </div>
   </div>
 </footer>

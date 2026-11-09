@@ -6,17 +6,17 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.10.19">
+  <meta name="generator" content="quarto-1.11.9">
 
   <title>Math for Computer Science – Relations</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
@@ -123,7 +123,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-3a7eae3b872f08785a56513611f0329a.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-2f864dea3a88ad6a30a035ab8c618cbd.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -334,7 +334,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-26 21:49:29 (PDT)</p>
+  <p class="date">Last modified: 2026-11-09 08:20:30 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -360,7 +360,7 @@
 <li>the domain, codomain and range of a function;</li>
 <li>injective, surjective and bijective functions, the identity function, and the fact that a function has an inverse function exactly when it is bijective.</li>
 </ul>
-<p>The definitions included from mds come from that site, and the definitions of an antisymmetric relation, the composition of relations and a partition follow the standard ones cited with them. The exercises, the other examples, the Racket functions and all the proofs are new.</p>
+<p>The definitions of a relation, a function and the terms about them are on the <a href="../relations.html">relations</a> and <a href="../functions.html">functions</a> pages, which the other data science notes link to, and the definitions of an antisymmetric relation, the composition of relations and a partition follow the standard ones cited with them. The exercises, the other examples, the Racket functions and all the proofs are new.</p>
 </div>
 </div>
 </div>
@@ -908,7 +908,7 @@ B^3 = {\mathopen{}\left\{(\text{rock}, \text{rock}), (\text{paper}, \text{paper}
 <section class="slide level2">
 
 <div id="thm-same-value" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 3 (Having the same value is an equivalence relation)</strong></span> Let <span class="math inline">\(f : A \to B\)</span> be a function (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>), and on <span class="math inline">\(A\)</span> let <span class="math inline">\(a \sim a'\)</span> when <span class="math inline">\(f(a) = f(a')\)</span>. Then <span class="math inline">\(\sim\)</span> is an equivalence relation (<a href="#/def-equivalence-relation" class="quarto-xref">Definition&nbsp;13</a>).</p>
+<p><span class="theorem-title"><strong>Theorem 3 (Having the same value is an equivalence relation)</strong></span> Let <span class="math inline">\(f : A \to B\)</span> be a function (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>), and on <span class="math inline">\(A\)</span> let <span class="math inline">\(a \sim a'\)</span> when <span class="math inline">\(f(a) = f(a')\)</span>. Then <span class="math inline">\(\sim\)</span> is an equivalence relation (<a href="#/def-equivalence-relation" class="quarto-xref">Definition&nbsp;13</a>).</p>
 </div>
 </section>
 <section class="slide level2">
@@ -988,7 +988,7 @@ x - z
 <section class="slide level2">
 
 <div id="def-set-partition" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Partition of a set)</strong></span> Let <span class="math inline">\(S\)</span> be a set. A <strong>partition</strong> of <span class="math inline">\(S\)</span> <span class="citation" data-cites="wikipedia_partition_of_a_set">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026r</a>)</span> is a collection <span class="math inline">\(\mathcal{C}\)</span> (<a href="https://morrison-lab.github.io/mds/sets.html#def-collection">Definition: Collection of sets (family of sets)</a>) of subsets of <span class="math inline">\(S\)</span> such that</p>
+<p><span class="theorem-title"><strong>Definition 15 (Partition of a set)</strong></span> Let <span class="math inline">\(S\)</span> be a set. A <strong>partition</strong> of <span class="math inline">\(S\)</span> <span class="citation" data-cites="wikipedia_partition_of_a_set">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026r</a>)</span> is a collection <span class="math inline">\(\mathcal{C}\)</span> (<a href="../sets.html#def-collection">Definition: Collection of sets, family of sets</a>) of subsets of <span class="math inline">\(S\)</span> such that</p>
 <ul>
 <li>every set in <span class="math inline">\(\mathcal{C}\)</span> is nonempty;</li>
 <li>any two different sets in <span class="math inline">\(\mathcal{C}\)</span> are disjoint: their intersection (<a href="../chapters/sets.html#def-intersection">Definition: Intersection</a>) is empty;</li>
@@ -1041,32 +1041,32 @@ x - z
 <section class="slide level2">
 
 <div id="sol-beats-one" class="proof solution">
-<p><span class="proof-title"><em>Solution 8</em>. </span>Exactly one each: rock beats only scissors, paper beats only rock, and scissors beats only paper. So “the element that <span class="math inline">\(a\)</span> beats” names one element of <span class="math inline">\(G\)</span> for each <span class="math inline">\(a \in G\)</span>, which is what a function (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>) from <span class="math inline">\(G\)</span> to <span class="math inline">\(G\)</span> does.</p>
+<p><span class="proof-title"><em>Solution 8</em>. </span>Exactly one each: rock beats only scissors, paper beats only rock, and scissors beats only paper. So “the element that <span class="math inline">\(a\)</span> beats” names one element of <span class="math inline">\(G\)</span> for each <span class="math inline">\(a \in G\)</span>, which is what a function (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>) from <span class="math inline">\(G\)</span> to <span class="math inline">\(G\)</span> does.</p>
 </div>
 </section>
 <section class="slide level2">
 
-<div id="def-function-domain" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 16 (Domain of a function)</strong></span> The <strong>domain</strong> of a function <span class="math inline">\(f : A \to B\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>) <span class="citation" data-cites="wikipedia_domain_of_a_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026h</a>)</span> is the set <span class="math inline">\(A\)</span> of elements that <span class="math inline">\(f\)</span> assigns values to.</p>
+<div id="def-domain" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 16 (Domain)</strong></span> The <strong>domain</strong> <span class="citation" data-cites="wikipedia_domain_of_a_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026h</a>)</span> of a <a href="../chapters/functional-programming.html#def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set <span class="math inline">\(A\)</span> of elements that <span class="math inline">\(f\)</span> assigns values to.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-codomain" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 17 (Codomain)</strong></span> The <strong>codomain</strong> <span class="citation" data-cites="wikipedia_codomain">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span> of a <a href="https://morrison-lab.github.io/mds/functions.html#def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set <span class="math inline">\(B\)</span> that its values are required to lie in.</p>
+<p><span class="theorem-title"><strong>Definition 17 (Codomain)</strong></span> The <strong>codomain</strong> <span class="citation" data-cites="wikipedia_codomain">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span> of a <a href="../chapters/functional-programming.html#def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set <span class="math inline">\(B\)</span> that its values are required to lie in.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-graph" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18 (Graph of a function)</strong></span> The <strong>graph</strong> <span class="citation" data-cites="wikipedia_graph_of_a_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026l</a>)</span> of a <a href="https://morrison-lab.github.io/mds/functions.html#def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set of <a href="../chapters/sets.html#def-ordered-pair">ordered pairs</a> <span class="math inline">\((a, f(a))\)</span>, one for each element <span class="math inline">\(a\)</span> of its domain:</p>
+<p><span class="theorem-title"><strong>Definition 18 (Graph of a function)</strong></span> The <strong>graph</strong> <span class="citation" data-cites="wikipedia_graph_of_a_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026l</a>)</span> of a <a href="../chapters/functional-programming.html#def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set of <a href="../chapters/sets.html#def-ordered-pair">ordered pairs</a> <span class="math inline">\((a, f(a))\)</span>, one for each element <span class="math inline">\(a\)</span> of its domain:</p>
 <p><span class="math display">\[{\mathopen{}\left\{(a, f(a)) : a \in A\right\}\mathclose{}}\]</span></p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-graph-length" class="theorem example">
-<p><span class="theorem-title"><strong>Example 23 (The graph of a length function)</strong></span> Let <span class="math inline">\(\operatorname{len}_K : K \to \mathbb{N}\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>, <a href="../chapters/sets.html#def-natural-numbers">Definition: Natural numbers (our convention)</a>) give the length of each word of the set <span class="math inline">\(K\)</span> of <a href="#/exr-same-length" class="quarto-xref">Exercise&nbsp;6</a>, so <span class="math inline">\(\operatorname{len}_K(a) = \operatorname{len}(a)\)</span>, as in <a href="#/exm-same-length" class="quarto-xref">Example&nbsp;18</a>. Its domain (<a href="#/def-function-domain" class="quarto-xref">Definition&nbsp;16</a>) is <span class="math inline">\(K\)</span> and its codomain (<a href="#/def-codomain" class="quarto-xref">Definition&nbsp;17</a>) is <span class="math inline">\(\mathbb{N}\)</span>. Its graph (<a href="#/def-graph" class="quarto-xref">Definition&nbsp;18</a>) is the set of six pairs</p>
+<p><span class="theorem-title"><strong>Example 23 (The graph of a length function)</strong></span> Let <span class="math inline">\(\operatorname{len}_K : K \to \mathbb{N}\)</span> (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>, <a href="../chapters/sets.html#def-natural-numbers">Definition: Natural numbers (our convention)</a>) give the length of each word of the set <span class="math inline">\(K\)</span> of <a href="#/exr-same-length" class="quarto-xref">Exercise&nbsp;6</a>, so <span class="math inline">\(\operatorname{len}_K(a) = \operatorname{len}(a)\)</span>, as in <a href="#/exm-same-length" class="quarto-xref">Example&nbsp;18</a>. Its <a href="#/def-domain">domain</a> is <span class="math inline">\(K\)</span> and its <a href="#/def-codomain">codomain</a> is <span class="math inline">\(\mathbb{N}\)</span>. Its graph (<a href="#/def-graph" class="quarto-xref">Definition&nbsp;18</a>) is the set of six pairs</p>
 <p><span class="math display">\[
 {\mathopen{}\left\{(\text{if}, 2), (\text{let}, 3), (\text{cond}, 4), (\text{list}, 4), (\text{cons}, 4), (\text{define}, 6)\right\}\mathclose{}},
 \]</span></p>
@@ -1082,18 +1082,18 @@ x - z
 <section class="slide level2">
 
 <div id="thm-function-relation" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 7 (Functions are relations with one output per input)</strong></span> Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be sets, and let <span class="math inline">\(R\)</span> be a relation from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> (<a href="#/def-binary-relation" class="quarto-xref">Definition&nbsp;1</a>). Then <span class="math inline">\(R\)</span> is the graph (<a href="#/def-graph" class="quarto-xref">Definition&nbsp;18</a>) of a function <span class="math inline">\(f : A \to B\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>) if and only if each <span class="math inline">\(a \in A\)</span> is related by <span class="math inline">\(R\)</span> to exactly one <span class="math inline">\(b \in B\)</span>. That function is then the only one whose graph is <span class="math inline">\(R\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 7 (Functions are relations with one output per input)</strong></span> Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be sets, and let <span class="math inline">\(R\)</span> be a relation from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> (<a href="#/def-binary-relation" class="quarto-xref">Definition&nbsp;1</a>). Then <span class="math inline">\(R\)</span> is the graph (<a href="#/def-graph" class="quarto-xref">Definition&nbsp;18</a>) of a function <span class="math inline">\(f : A \to B\)</span> (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>) if and only if each <span class="math inline">\(a \in A\)</span> is related by <span class="math inline">\(R\)</span> to exactly one <span class="math inline">\(b \in B\)</span>. That function is then the only one whose graph is <span class="math inline">\(R\)</span>.</p>
 </div>
 </section>
 <section class="slide level2 scrollable">
 
 <div id="rem-function-as-set-of-pairs" class="proof remark">
-<p><span class="proof-title"><em>Remark 5</em> (What a function is fundamentally). </span><a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a> defines what a function <em>does</em>: it assigns an output to each input. In formal set theory, what a function <em>is</em> is described in terms of <a href="../chapters/sets.html#def-ordered-pair">ordered pairs</a> and its graph (<a href="#/def-graph" class="quarto-xref">Definition&nbsp;18</a>): the set of pairs <span class="math inline">\(G = {\mathopen{}\left\{(a, f(a)) : a \in A\right\}\mathclose{}} \subseteq A \times B\)</span>. Authors define a function formally in one of two ways:</p>
+<p><span class="proof-title"><em>Remark 5</em> (What a function is fundamentally). </span><a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a> defines what a function <em>does</em>: it assigns an output to each input. In formal set theory, what a function <em>is</em> is described in terms of <a href="../chapters/sets.html#def-ordered-pair">ordered pairs</a> and its graph (<a href="#/def-graph" class="quarto-xref">Definition&nbsp;18</a>): the set of pairs <span class="math inline">\(G = {\mathopen{}\left\{(a, f(a)) : a \in A\right\}\mathclose{}} \subseteq A \times B\)</span>. Authors define a function formally in one of two ways:</p>
 <ol type="1">
 <li><strong>As its graph</strong> <span class="citation" data-cites="halmos1974naive">(<a href="#/references" role="doc-biblioref" onclick="">Halmos 1974, sec. 8</a>, p.&nbsp;30)</span>: a function is a subset of <span class="math inline">\(A \times B\)</span> containing exactly one pair <span class="math inline">\((a, b)\)</span> for each <span class="math inline">\(a \in A\)</span>, where <span class="math inline">\(b = f(a)\)</span>, and the statement <span class="math inline">\(f(a) = b\)</span> is notation for <span class="math inline">\((a, b) \in f\)</span>. Under this convention, the codomain <span class="math inline">\(B\)</span> is specified alongside the graph in the declaration <span class="math inline">\(f : A \to B\)</span>.</li>
 <li><strong>As a triple <span class="math inline">\((A, B, G)\)</span></strong>: the function consists of the domain <span class="math inline">\(A\)</span>, the codomain <span class="math inline">\(B\)</span>, and the graph <span class="math inline">\(G \subseteq A \times B\)</span>. This explicit packaging retains the codomain <span class="math inline">\(B\)</span> as part of the function itself, distinguishing functions that have the same graph but different codomains (such as a function mapping into <span class="math inline">\(\mathbb{R}\)</span> versus into integers).</li>
 </ol>
-<p>For example, the die-doubling function in <a href="https://morrison-lab.github.io/mds/functions.html#exm-function">Example: Doubling a die roll</a> has the graph of six ordered pairs <span class="math inline">\({\mathopen{}\left\{(1, 2), (2, 4), (3, 6), (4, 8), (5, 10), (6, 12)\right\}\mathclose{}}\)</span>.</p>
+<p>For example, the die-doubling function in <a href="../functions.html#exm-function">Example: Doubling a die roll</a> has the graph of six ordered pairs <span class="math inline">\({\mathopen{}\left\{(1, 2), (2, 4), (3, 6), (4, 8), (5, 10), (6, 12)\right\}\mathclose{}}\)</span>.</p>
 <p>This distinction clarifies what a function is and is not:</p>
 <ul>
 <li><strong>Not an algebraic formula:</strong> A function is not fundamentally an equation or algebraic expression. While many functions are specified by a formula (such as <span class="math inline">\(f(x) = x^2\)</span>), many others cannot be written in closed form (such as empirical measurements or a lookup table), yet every function has a well-defined set of input-output pairs.</li>
@@ -1131,7 +1131,7 @@ x - z
 <section class="slide level2">
 
 <div id="def-image" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19 (Image)</strong></span> The <strong>image</strong> <span class="citation" data-cites="wikipedia_image_mathematics">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026n</a>)</span> of a <a href="https://morrison-lab.github.io/mds/functions.html#def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set of values that <span class="math inline">\(f\)</span> actually takes:</p>
+<p><span class="theorem-title"><strong>Definition 19 (Image)</strong></span> The <strong>image</strong> <span class="citation" data-cites="wikipedia_image_mathematics">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026n</a>)</span> of a <a href="../chapters/functional-programming.html#def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set of values that <span class="math inline">\(f\)</span> actually takes:</p>
 <p><span class="math display">\[f(A) \stackrel{\text{def}}{=}{\mathopen{}\left\{f(a) : a \in A\right\}\mathclose{}}\]</span></p>
 <p>For a single element <span class="math inline">\(a \in A\)</span>, the value <span class="math inline">\(f(a)\)</span> is also called the <strong>image of</strong> <span class="math inline">\(a\)</span> under <span class="math inline">\(f\)</span>.</p>
 </div>
@@ -1142,14 +1142,14 @@ x - z
 <p><span class="theorem-title"><strong>Example 26 (The images of two functions)</strong></span> &nbsp;</p>
 <ul>
 <li>The function <span class="math inline">\(\operatorname{len}_K : K \to \mathbb{N}\)</span> of <a href="#/exm-graph-length" class="quarto-xref">Example&nbsp;23</a> has the image (<a href="#/def-image" class="quarto-xref">Definition&nbsp;19</a>) <span class="math inline">\(\operatorname{len}_K(K) = {\mathopen{}\left\{2, 3, 4, 6\right\}\mathclose{}}\)</span>, the lengths that occur. Most natural numbers, such as 1 and 5, are in its codomain (<a href="#/def-codomain" class="quarto-xref">Definition&nbsp;17</a>) <span class="math inline">\(\mathbb{N}\)</span> but not in its image.</li>
-<li>The function <span class="math inline">\(b : G \to G\)</span> of <a href="#/exm-function-or-not" class="quarto-xref">Example&nbsp;24</a> has domain (<a href="#/def-function-domain" class="quarto-xref">Definition&nbsp;16</a>) and codomain <span class="math inline">\(G\)</span>, and its image is all of <span class="math inline">\(G\)</span>, since each element of <span class="math inline">\(G\)</span> is beaten by some element.</li>
+<li>The function <span class="math inline">\(b : G \to G\)</span> of <a href="#/exm-function-or-not" class="quarto-xref">Example&nbsp;24</a> has <a href="#/def-domain">domain</a> and codomain <span class="math inline">\(G\)</span>, and its image is all of <span class="math inline">\(G\)</span>, since each element of <span class="math inline">\(G\)</span> is beaten by some element.</li>
 </ul>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-range" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 20 (Range)</strong></span> The word <strong>range</strong> of a <a href="https://morrison-lab.github.io/mds/functions.html#def-function">function</a> <span class="math inline">\(f : A \to B\)</span> has two conflicting meanings, and sources use one or the other:</p>
+<p><span class="theorem-title"><strong>Definition 20 (Range)</strong></span> The word <strong>range</strong> of a <a href="../chapters/functional-programming.html#def-function">function</a> <span class="math inline">\(f : A \to B\)</span> has two conflicting meanings, and sources use one or the other:</p>
 <ul>
 <li>the <a href="#/def-image">image</a> of <span class="math inline">\(f\)</span>, the set <span class="math inline">\(f(A)\)</span> of values that <span class="math inline">\(f\)</span> actually takes;</li>
 <li>the <a href="#/def-codomain">codomain</a> of <span class="math inline">\(f\)</span>, the set <span class="math inline">\(B\)</span> that its values are required to lie in.</li>
@@ -1172,7 +1172,7 @@ x - z
 <section class="slide level2">
 
 <div id="def-injective" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 21 (Injective function (one-to-one function))</strong></span> A function <span class="math inline">\(f : A \to B\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>) is <strong>injective</strong> <span class="citation" data-cites="wikipedia_injective_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026o</a>)</span> (also called <strong>one-to-one</strong>) if, for all <span class="math inline">\(a, a' \in A\)</span>, <span class="math inline">\(f(a) = f(a')\)</span> implies <span class="math inline">\(a = a'\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 21 (Injective function (one-to-one function))</strong></span> A function <span class="math inline">\(f : A \to B\)</span> (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>) is <strong>injective</strong> <span class="citation" data-cites="wikipedia_injective_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026o</a>)</span> (also called <strong>one-to-one</strong>) if, for all <span class="math inline">\(a, a' \in A\)</span>, <span class="math inline">\(f(a) = f(a')\)</span> implies <span class="math inline">\(a = a'\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1189,7 +1189,7 @@ x - z
 <section class="slide level2">
 
 <div id="def-surjective" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 22 (Surjective function (onto function))</strong></span> A function <span class="math inline">\(f : A \to B\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>) is <strong>surjective</strong> <span class="citation" data-cites="wikipedia_surjective_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026u</a>)</span> (also called <strong>onto</strong>) if, for every <span class="math inline">\(b \in B\)</span>, there is some <span class="math inline">\(a \in A\)</span> with <span class="math inline">\(f(a) = b\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 22 (Surjective function (onto function))</strong></span> A function <span class="math inline">\(f : A \to B\)</span> (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>) is <strong>surjective</strong> <span class="citation" data-cites="wikipedia_surjective_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026u</a>)</span> (also called <strong>onto</strong>) if, for every <span class="math inline">\(b \in B\)</span>, there is some <span class="math inline">\(a \in A\)</span> with <span class="math inline">\(f(a) = b\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1206,7 +1206,7 @@ x - z
 <section class="slide level2">
 
 <div id="def-bijective" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 23 (Bijective function (bijection))</strong></span> A function <span class="math inline">\(f : A \to B\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>) is <strong>bijective</strong> <span class="citation" data-cites="wikipedia_bijection">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026b</a>)</span> (also called a <strong>bijection</strong>) if it is injective (<a href="#/def-injective" class="quarto-xref">Definition&nbsp;21</a>) and surjective (<a href="#/def-surjective" class="quarto-xref">Definition&nbsp;22</a>).</p>
+<p><span class="theorem-title"><strong>Definition 23 (Bijective function (bijection))</strong></span> A function <span class="math inline">\(f : A \to B\)</span> (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>) is <strong>bijective</strong> <span class="citation" data-cites="wikipedia_bijection">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026b</a>)</span> (also called a <strong>bijection</strong>) if it is injective (<a href="#/def-injective" class="quarto-xref">Definition&nbsp;21</a>) and surjective (<a href="#/def-surjective" class="quarto-xref">Definition&nbsp;22</a>).</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1240,7 +1240,7 @@ x - z
 <section class="slide level2">
 
 <div id="def-identity-function" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 24 (Identity function)</strong></span> The <strong>identity function</strong> on a set <span class="math inline">\(A\)</span> <span class="citation" data-cites="wikipedia_identity_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026m</a>)</span> is the function <span class="math inline">\(\operatorname{id}_A : A \to A\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>) with <span class="math inline">\(\operatorname{id}_A(a) = a\)</span> for every <span class="math inline">\(a \in A\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 24 (Identity function)</strong></span> The <strong>identity function</strong> on a set <span class="math inline">\(A\)</span> <span class="citation" data-cites="wikipedia_identity_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026m</a>)</span> is the function <span class="math inline">\(\operatorname{id}_A : A \to A\)</span> (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>) with <span class="math inline">\(\operatorname{id}_A(a) = a\)</span> for every <span class="math inline">\(a \in A\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1256,7 +1256,7 @@ x - z
 <section class="slide level2">
 
 <div id="def-inverse-function" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 25 (Inverse function)</strong></span> Let <span class="math inline">\(f : A \to B\)</span> be a <a href="https://morrison-lab.github.io/mds/functions.html#def-function">function</a>. A function <span class="math inline">\(g : B \to A\)</span> is the <strong>inverse function</strong> <span class="citation" data-cites="wikipedia_inverse_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026p</a>)</span> of <span class="math inline">\(f\)</span>, written <span class="math inline">\(f^{-1}\)</span>, if both</p>
+<p><span class="theorem-title"><strong>Definition 25 (Inverse function)</strong></span> Let <span class="math inline">\(f : A \to B\)</span> be a <a href="../chapters/functional-programming.html#def-function">function</a>. A function <span class="math inline">\(g : B \to A\)</span> is the <strong>inverse function</strong> <span class="citation" data-cites="wikipedia_inverse_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026p</a>)</span> of <span class="math inline">\(f\)</span>, written <span class="math inline">\(f^{-1}\)</span>, if both</p>
 <ul>
 <li><span class="math inline">\(g(f(a)) = a\)</span> for every <span class="math inline">\(a \in A\)</span>, and</li>
 <li><span class="math inline">\(f(g(b)) = b\)</span> for every <span class="math inline">\(b \in B\)</span>.</li>
@@ -1284,13 +1284,13 @@ x - z
 <section class="slide level2">
 
 <div id="thm-inverse-bijective" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 8 (A function has an inverse exactly when it is a bijection)</strong></span> A function <span class="math inline">\(f : A \to B\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>) has an inverse function (<a href="#/def-inverse-function" class="quarto-xref">Definition&nbsp;25</a>) if and only if <span class="math inline">\(f\)</span> is bijective (<a href="#/def-bijective" class="quarto-xref">Definition&nbsp;23</a>). The graph (<a href="#/def-graph" class="quarto-xref">Definition&nbsp;18</a>) of the inverse function is then the inverse relation (<a href="#/def-inverse-relation" class="quarto-xref">Definition&nbsp;10</a>) of the graph of <span class="math inline">\(f\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 8 (A function has an inverse exactly when it is a bijection)</strong></span> A function <span class="math inline">\(f : A \to B\)</span> (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>) has an inverse function (<a href="#/def-inverse-function" class="quarto-xref">Definition&nbsp;25</a>) if and only if <span class="math inline">\(f\)</span> is bijective (<a href="#/def-bijective" class="quarto-xref">Definition&nbsp;23</a>). The graph (<a href="#/def-graph" class="quarto-xref">Definition&nbsp;18</a>) of the inverse function is then the inverse relation (<a href="#/def-inverse-relation" class="quarto-xref">Definition&nbsp;10</a>) of the graph of <span class="math inline">\(f\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-composition" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 26 (Composition)</strong></span> Let <span class="math inline">\(g : A \to B\)</span> and <span class="math inline">\(f : B \to C\)</span> be <a href="https://morrison-lab.github.io/mds/functions.html#def-function">functions</a>. The <strong>composition</strong> <span class="citation" data-cites="wikipedia_function_composition">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026k</a>)</span> of <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> is the function <span class="math inline">\(f \circ g : A \to C\)</span> defined by</p>
+<p><span class="theorem-title"><strong>Definition 26 (Composition)</strong></span> Let <span class="math inline">\(g : A \to B\)</span> and <span class="math inline">\(f : B \to C\)</span> be <a href="../chapters/functional-programming.html#def-function">functions</a>. The <strong>composition</strong> <span class="citation" data-cites="wikipedia_function_composition">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026k</a>)</span> of <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> is the function <span class="math inline">\(f \circ g : A \to C\)</span> defined by</p>
 <p><span class="math display">\[(f \circ g)(a) \stackrel{\text{def}}{=}f(g(a)) \quad \text{for each } a \in A.\]</span></p>
 </div>
 </section>
@@ -1309,7 +1309,7 @@ x - z
 <section class="slide level2">
 
 <div id="thm-composition-graph" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 9 (The graph of a composition is a composition of graphs)</strong></span> Let <span class="math inline">\(g : A \to B\)</span> and <span class="math inline">\(f : B \to C\)</span> be functions (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>), and write <span class="math inline">\(\Gamma_f\)</span> for the graph (<a href="#/def-graph" class="quarto-xref">Definition&nbsp;18</a>) of <span class="math inline">\(f\)</span>. Then the graph of the composition <span class="math inline">\(f \circ g\)</span> (<a href="#/def-composition" class="quarto-xref">Definition&nbsp;26</a>) is the composition of relations (<a href="#/def-relation-composition" class="quarto-xref">Definition&nbsp;11</a>)</p>
+<p><span class="theorem-title"><strong>Theorem 9 (The graph of a composition is a composition of graphs)</strong></span> Let <span class="math inline">\(g : A \to B\)</span> and <span class="math inline">\(f : B \to C\)</span> be functions (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>), and write <span class="math inline">\(\Gamma_f\)</span> for the graph (<a href="#/def-graph" class="quarto-xref">Definition&nbsp;18</a>) of <span class="math inline">\(f\)</span>. Then the graph of the composition <span class="math inline">\(f \circ g\)</span> (<a href="#/def-composition" class="quarto-xref">Definition&nbsp;26</a>) is the composition of relations (<a href="#/def-relation-composition" class="quarto-xref">Definition&nbsp;11</a>)</p>
 <p><span class="math display">\[
 \Gamma_{f \circ g} = \Gamma_f \circ \Gamma_g.
 \]</span></p>
@@ -1642,7 +1642,7 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"\u003ci class=\"fas fa-gear\">\u003c/i>","content":"\u003cul class=\"slide-menu-items\">\n\u003cli class=\"slide-tool-item active\" data-item=\"0\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\">\u003ckbd>f\u003c/kbd> Fullscreen\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"1\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\">\u003ckbd>s\u003c/kbd> Speaker View\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"2\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\">\u003ckbd>o\u003c/kbd> Slide Overview\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"3\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\">\u003ckbd>e\u003c/kbd> PDF Export Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"4\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\">\u003ckbd>r\u003c/kbd> Scroll View Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"5\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\">\u003ckbd>?\u003c/kbd> Keyboard Help\u003c/a>\u003c/li>\n\u003c/ul>"}],"openButton":true,"openButtonLabel":"Slide menu"},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -1822,6 +1822,51 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
         ]
       });
     </script>
+    <script>
+    // Put each folded code cell inside the tab it belongs to.
+    // Quarto hoists the `details.code-fold` of a cross-referenced figure out of the figure,
+    // so an R and a Python tab end up with their folds stacked above the whole figure.
+    // For every language tabset, take the run of folds immediately before it (or before the figure
+    // that holds it), match each fold to a tab by language, and move it to the top of that tab.
+    // The selectors cover both the website tabsets (Bootstrap) and the slide tabsets (tabby).
+    document.querySelectorAll("div.panel-tabset").forEach(function (tabset) {
+      var anchor = tabset.closest("div.quarto-float") || tabset;
+      var panes = Array.prototype.slice.call(tabset.querySelectorAll(":scope > .tab-content > div"));
+      var tabs = Array.prototype.slice.call(tabset.querySelectorAll(":scope > ul > li > a"));
+      var folds = [];
+      var node = anchor.previousElementSibling;
+      while (node && node.matches("details.code-fold")) {
+        folds.unshift(node);
+        node = node.previousElementSibling;
+      }
+      if (folds.length === 0 || folds.length !== panes.length || tabs.length !== panes.length) {
+        return;
+      }
+      var language = function (fold) {
+        var code = fold.querySelector("pre.sourceCode");
+        var found = code && Array.prototype.find.call(code.classList, function (name) {
+          return name !== "sourceCode" && name !== "downlit" && name !== "code-with-copy";
+        });
+        return found ? found.toLowerCase() : "";
+      };
+      var used = {};
+      var unused = function () {
+        return tabs.findIndex(function (tab, j) {
+          return !used[j];
+        });
+      };
+      folds.forEach(function (fold) {
+        var index = tabs.findIndex(function (tab, j) {
+          return !used[j] && tab.textContent.trim().toLowerCase() === language(fold);
+        });
+        if (index < 0) {
+          index = unused();
+        }
+        used[index] = true;
+        panes[index].insertBefore(fold, panes[index].firstChild);
+      });
+    });
+    </script>
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
@@ -1897,7 +1942,8 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
           // Inspect non-navigation links and adorn them if external
-         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          window.quartoDecorateExternalLinks = function (root) {
+         var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
           for (var i=0; i<links.length; i++) {
             const link = links[i];
             if (!isInternal(link.href)) {
@@ -1906,8 +1952,69 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
               if (link.dataset.originalHref !== undefined) {
                 link.href = link.dataset.originalHref;
               }
+              if (!link.classList.contains('no-external-icon')) {
+              }
             }
           }
+          };
+          window.quartoDecorateExternalLinks(window.document);
+        // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+        // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+        const hideOnEscAndFocusOut = {
+          name: 'hideOnEscAndFocusOut',
+          defaultValue: true,
+          fn(instance) {
+            const dismiss = () => {
+              // A show scheduled by the trigger delay would otherwise reopen it
+              instance.clearDelayTimeouts();
+              instance.hide();
+            };
+            const onKeyDown = (event) => {
+              if (event.key !== 'Escape') {
+                return;
+              }
+              // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+              // except an open reveal.js slide menu, which Esc should close too.
+              // The menu handles keys only when its keyboard option is on.
+              const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+                window.Reveal.getConfig().menu?.keyboard !== false;
+              if (!menuHandlesEsc) {
+                event.stopPropagation();
+              }
+              if (instance.popper.contains(window.document.activeElement)) {
+                // Disabled while refocusing so the focus trigger does not reopen it
+                instance.disable();
+                instance.reference.focus();
+                instance.enable();
+              }
+              dismiss();
+            };
+            const onFocusOut = (event) => {
+              const target = event.relatedTarget;
+              if (target && !instance.reference.contains(target) &&
+                  !instance.popper.contains(target)) {
+                dismiss();
+              }
+            };
+            // On the trigger too: a click trigger (code-annotations: select) has no
+            // blur handling. Attached for the instance's lifetime so leaving the
+            // trigger also cancels a show still pending on the trigger delay.
+            instance.reference.addEventListener('focusout', onFocusOut);
+            return {
+              onShow() {
+                window.document.addEventListener('keydown', onKeyDown, true);
+                instance.popper.addEventListener('focusout', onFocusOut);
+              },
+              onHide() {
+                window.document.removeEventListener('keydown', onKeyDown, true);
+                instance.popper.removeEventListener('focusout', onFocusOut);
+              },
+              onDestroy() {
+                instance.reference.removeEventListener('focusout', onFocusOut);
+              },
+            };
+          },
+        };
         function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
           const config = {
             allowHTML: true,
@@ -1921,6 +2028,7 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
             interactiveBorder: 10,
             theme: 'light-border',
             placement: 'bottom-start',
+            plugins: [hideOnEscAndFocusOut],
           };
           if (contentFn) {
             config.content = contentFn;

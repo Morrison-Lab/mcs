@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.19">
+<meta name="generator" content="quarto-1.11.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -94,19 +94,22 @@ div.csl-indent {
 <link href="../chapters/recursion.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-c086fb9aa89bc5726abb3173de9057c1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-afcad65dfbb5ead0cc214e61744c3688.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-5fc16af90d58a2426109a2ad05df5ae6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-afcad65dfbb5ead0cc214e61744c3688.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.js"></script>
+<link href="../site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -115,11 +118,8 @@ div.csl-indent {
   "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
+    "/"
   ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -198,6 +198,16 @@ div.csl-indent {
 })();
 </script>
 <style>
+div.callout-proof.callout {
+  border-left-color: #37474F;
+}
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
+}
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-cor.callout {
   border-left-color: #00838F;
 }
@@ -208,15 +218,65 @@ div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-proof.callout {
-  border-left-color: #37474F;
+div.callout-lem.callout {
+  border-left-color: #1565C0;
 }
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
 }
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-prp.callout {
+  border-left-color: #827717;
+}
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
+}
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-def.callout {
+  border-left-color: #1B5E20;
+}
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
+}
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-remark.callout {
+  border-left-color: #AD1457;
+}
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
+}
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-solution.callout {
   border-left-color: #4E342E;
@@ -237,66 +297,6 @@ div.callout-exm.callout-style-default .callout-header {
 div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-def.callout {
-  border-left-color: #1B5E20;
-}
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
-}
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-prp.callout {
-  border-left-color: #827717;
-}
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
-}
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -333,7 +333,7 @@ window.Quarto = {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar docked nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -356,6 +356,7 @@ window.Quarto = {
       for (let i=0; i < toggles.length; i++) {
         const toggle = toggles[i];
         if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
           if (alternate) {
             toggle.classList.add("alternate");
           } else {
@@ -385,13 +386,19 @@ window.Quarto = {
       manageTransitions('#quarto-margin-sidebar .nav-link', true);
       // Switch the toggles
       setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
       if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
         manageTransitions("body", false);
-        window.scrollTo(0, 1);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
         setTimeout(() => {
-          window.scrollTo(0, 0);
+          window.scrollTo(0, scrollY);
           manageTransitions("body", true);
         }, 40);
       }
@@ -485,6 +492,7 @@ window.Quarto = {
       // Read the current dark / light value
       let toAlternate = !hasAlternateSentinel();
       toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
       setStyleSentinel(toAlternate);
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
@@ -499,15 +507,14 @@ window.Quarto = {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Math for Computer Science</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -516,78 +523,167 @@ window.Quarto = {
     <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/calendar.html"> 
-<span class="menu-text">Calendar</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-course-logistics" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Course Logistics</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-course-logistics">    
+        <li>
+    <a class="dropdown-item" href="../chapters/calendar.html">
+ <span class="dropdown-text">Calendar (on the csci201 site)</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/syllabus.html"> 
-<span class="menu-text">Syllabus</span></a>
+        <li>
+    <a class="dropdown-item" href="../chapters/syllabus.html">
+ <span class="dropdown-text">Syllabus (on the csci201 site)</span></a>
   </li>  
+    </ul>
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="../chapters/propositional-logic.html"> 
-<span class="menu-text">Propositional Logic</span></a>
+    <a class="nav-link" href="../chapters/functional-programming.html"> 
+<span class="menu-text">Functional Programming</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/predicates-quantifiers.html"> 
-<span class="menu-text">Predicates and Quantifiers</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-logic" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Logic</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-logic">    
+        <li>
+    <a class="dropdown-item" href="../chapters/propositional-logic.html">
+ <span class="dropdown-text">Propositional Logic</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/equivalence-negation.html"> 
-<span class="menu-text">Logical Equivalence and Negation</span></a>
+        <li>
+    <a class="dropdown-item" href="../chapters/predicates-quantifiers.html">
+ <span class="dropdown-text">Predicates and Quantifiers</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/direct-proof.html"> 
-<span class="menu-text">Inference and Direct Proof</span></a>
+        <li>
+    <a class="dropdown-item" href="../chapters/equivalence-negation.html">
+ <span class="dropdown-text">Logical Equivalence and Negation</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/contrapositive-contradiction.html"> 
-<span class="menu-text">Contrapositive and Contradiction</span></a>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-proofs" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Proofs</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-proofs">    
+        <li>
+    <a class="dropdown-item" href="../chapters/direct-proof.html">
+ <span class="dropdown-text">Inference and Direct Proof</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/iff-existence-disproof.html"> 
-<span class="menu-text">Proving Non-Conditional Statements</span></a>
+        <li>
+    <a class="dropdown-item" href="../chapters/contrapositive-contradiction.html">
+ <span class="dropdown-text">Contrapositive and Contradiction</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/sets.html"> 
-<span class="menu-text">Sets</span></a>
+        <li>
+    <a class="dropdown-item" href="../chapters/iff-existence-disproof.html">
+ <span class="dropdown-text">Proving Non-Conditional Statements</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/set-proofs.html"> 
-<span class="menu-text">Proofs with Sets</span></a>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-sets" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Sets</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-sets">    
+        <li>
+    <a class="dropdown-item" href="../chapters/sets.html">
+ <span class="dropdown-text">Sets</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/induction.html"> 
-<span class="menu-text">Induction</span></a>
+        <li>
+    <a class="dropdown-item" href="../chapters/set-proofs.html">
+ <span class="dropdown-text">Proofs with Sets</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/loop-invariants.html"> 
-<span class="menu-text">Loop Invariants</span></a>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-induction-and-recursion" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Induction and Recursion</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-induction-and-recursion">    
+        <li>
+    <a class="dropdown-item" href="../chapters/induction.html">
+ <span class="dropdown-text">Induction</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/recursion.html"> 
-<span class="menu-text">Recursion</span></a>
+        <li>
+    <a class="dropdown-item" href="../chapters/loop-invariants.html">
+ <span class="dropdown-text">Loop Invariants</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/recurrences-growth.html"> 
-<span class="menu-text">Recurrences and Growth</span></a>
+        <li>
+    <a class="dropdown-item" href="../chapters/recursion.html">
+ <span class="dropdown-text">Recursion</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/relations.html"> 
-<span class="menu-text">Relations</span></a>
+        <li>
+    <a class="dropdown-item" href="../chapters/recurrences-growth.html">
+ <span class="dropdown-text">Recurrences and Growth</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/graphs.html"> 
-<span class="menu-text">Graphs</span></a>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-discrete-structures" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Discrete Structures</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-discrete-structures">    
+        <li>
+    <a class="dropdown-item" href="../chapters/relations.html">
+ <span class="dropdown-text">Relations</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/automata.html"> 
-<span class="menu-text">Automata</span></a>
+        <li>
+    <a class="dropdown-item" href="../chapters/graphs.html">
+ <span class="dropdown-text">Graphs</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../chapters/trees.html"> 
-<span class="menu-text">Trees</span></a>
+        <li>
+    <a class="dropdown-item" href="../chapters/automata.html">
+ <span class="dropdown-text">Automata</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../chapters/trees.html">
+ <span class="dropdown-text">Trees</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-math-reference" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Math Reference</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-math-reference">    
+        <li>
+    <a class="dropdown-item" href="../growth-rates.html">
+ <span class="dropdown-text">Growth Rates</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../induction.html">
+ <span class="dropdown-text">Induction</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../notation.html">
+ <span class="dropdown-text">Notation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../relations.html">
+ <span class="dropdown-text">Relations</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../number-systems.html">
+ <span class="dropdown-text">Number Systems</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../sets.html">
+ <span class="dropdown-text">Sets</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../functions.html">
+ <span class="dropdown-text">Functions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../expressions-algorithms.html">
+ <span class="dropdown-text">Expressions and Algorithms</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../proof-writing.html">
+ <span class="dropdown-text">Proof Writing</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -598,22 +694,23 @@ window.Quarto = {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
 </div>
+            <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/recurrences-growth.html">Recurrence Relations and Growth Rates</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/induction.html">Induction and Recursion</a></li><li class="breadcrumb-item"><a href="../chapters/recurrences-growth.html">Recurrence Relations and Growth Rates</a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -621,7 +718,7 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" aria-label="Section">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -630,121 +727,237 @@ window.Quarto = {
  <span class="menu-text">Home</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">Course Logistics</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/calendar.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Calendar</span></a>
+ <span class="menu-text">Calendar (on the csci201 site)</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/syllabus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">WWU CSCI 201 Syllabus</span></a>
+ <span class="menu-text">Syllabus (on the csci201 site)</span></a>
   </div>
 </li>
+      </ul>
+  </li>
         <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/functional-programming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Functional Programming</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-2-label">Logic</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/propositional-logic.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Propositional Logic</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/predicates-quantifiers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Predicates and Quantifiers</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/equivalence-negation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Logical Equivalence and Negation</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-3-label">Proofs</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/direct-proof.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Inference and Direct Proof</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/contrapositive-contradiction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Contrapositive and Contradiction</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/iff-existence-disproof.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Proving Non-Conditional Statements</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-4-label">Sets</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/sets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sets</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/set-proofs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Proofs with Sets</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-controls="quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-5-label">Induction and Recursion</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-5" aria-labelledby="quarto-sidebar-section-5-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/induction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mathematical Induction</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/loop-invariants.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Loop Invariants</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/recursion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Recursion</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/recurrences-growth.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Recurrence Relations and Growth Rates</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-controls="quarto-sidebar-section-6" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-6-label">Discrete Structures</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-6" aria-labelledby="quarto-sidebar-section-6-label" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/relations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Relations</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/graphs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Graphs</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/automata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">State Machines and Finite Automata</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/trees.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Trees</span></a>
   </div>
 </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-controls="quarto-sidebar-section-7" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-7-label">Math Reference</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-7" aria-labelledby="quarto-sidebar-section-7-label" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../growth-rates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Growth Rates</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../induction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Induction and Recursion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../relations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Relations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../number-systems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Number Systems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sets</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../expressions-algorithms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Expressions and Algorithms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../proof-writing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proof Writing</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
@@ -757,15 +970,16 @@ window.Quarto = {
   <li><a href="#sec-disproving-bounds" id="toc-sec-disproving-bounds" class="nav-link" data-scroll-target="#sec-disproving-bounds"><span class="header-section-number">7</span> Disproving a bound</a></li>
   <li><a href="#sec-growth-rates" id="toc-sec-growth-rates" class="nav-link" data-scroll-target="#sec-growth-rates"><span class="header-section-number">8</span> Common growth rates</a></li>
   <li><a href="#sec-loop-steps" id="toc-sec-loop-steps" class="nav-link" data-scroll-target="#sec-loop-steps"><span class="header-section-number">9</span> Counting the steps of loops</a></li>
+  <li><a href="#def-list-section" id="toc-def-list-section" class="nav-link" data-scroll-target="#def-list-section">Definitions on this page</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Morrison-Lab/mcs/edit/main/chapters/recurrences-growth.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mcs/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mcs/blob/main/chapters/recurrences-growth.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="recurrences-growth-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li><li><a href="recurrences-growth-handout.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="recurrences-growth.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><!-- qwt-page-banners -->
+<main class="content" id="quarto-document-content" tabindex="-1"><!-- qwt-page-banners -->
 <div class="preview-changes-banner" style="background-color: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; padding: 12px; margin: 16px 0;">
     <p style="margin: 0;">
-        <strong>📋 Changes in this PR:</strong> <a href="automata.html">State Machines and Finite Automata</a>, <a href="calendar.html">Calendar</a>, <a href="contrapositive-contradiction.html">Contrapositive and Contradiction</a>, <a href="direct-proof.html">Inference and Direct Proof</a>, <a href="equivalence-negation.html">Logical Equivalence and Negation</a>, <a href="graphs.html">Graphs</a>, <a href="iff-existence-disproof.html">Proving Non-Conditional Statements</a>, <a href="induction.html">Mathematical Induction</a>, <a href="loop-invariants.html">Loop Invariants</a>, <a href="predicates-quantifiers.html">Predicates and Quantifiers</a>, <a href="propositional-logic.html">Propositional Logic</a>, <a href="recurrences-growth.html">Recurrence Relations and Growth Rates</a>, <a href="recursion.html">Recursion</a>, <a href="relations.html">Relations</a>, <a href="set-proofs.html">Proofs with Sets</a>, <a href="sets.html">Sets</a>, <a href="syllabus.html">WWU CSCI 201 Syllabus</a>, <a href="trees.html">Trees</a>, <a href="../index.html">Math for Computer Science</a>
+        <strong>📋 Changes in this PR:</strong> <a href="automata.html">State Machines and Finite Automata</a>, <a href="calendar.html">Calendar</a>, <a href="contrapositive-contradiction.html">Contrapositive and Contradiction</a>, <a href="direct-proof.html">Inference and Direct Proof</a>, <a href="equivalence-negation.html">Logical Equivalence and Negation</a>, <a href="functional-programming.html">Functional Programming</a>, <a href="graphs.html">Graphs</a>, <a href="iff-existence-disproof.html">Proving Non-Conditional Statements</a>, <a href="induction.html">Mathematical Induction</a>, <a href="loop-invariants.html">Loop Invariants</a>, <a href="predicates-quantifiers.html">Predicates and Quantifiers</a>, <a href="propositional-logic.html">Propositional Logic</a>, <a href="recurrences-growth.html">Recurrence Relations and Growth Rates</a>, <a href="recursion.html">Recursion</a>, <a href="relations.html">Relations</a>, <a href="set-proofs.html">Proofs with Sets</a>, <a href="sets.html">Sets</a>, <a href="syllabus.html">WWU CSCI 201 Syllabus</a>, <a href="trees.html">Trees</a>, <a href="../expressions-algorithms.html">Expressions and Algorithms</a>, <a href="../functions.html">Functions</a>, <a href="../growth-rates.html">Growth Rates</a>, <a href="../index.html">Math for Computer Science</a>, <a href="../induction.html">Induction and Recursion</a>, <a href="../notation.html">Notation</a>, <a href="../number-systems.html">Number Systems</a>, <a href="../proof-writing.html">Proof Writing</a>, <a href="../relations.html">Relations</a>, <a href="../sets.html">Sets</a>
         <br>
         <strong>💡 Tip:</strong> If change highlighting is glitchy, add the <code>no-preview-highlights</code> label to this PR to disable it.
     </p>
@@ -780,7 +994,7 @@ window.Quarto = {
 
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/induction.html">Induction and Recursion</a></li><li class="breadcrumb-item"><a href="../chapters/recurrences-growth.html">Recurrence Relations and Growth Rates</a></li></ol></nav>
 <div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">Recurrence Relations and Growth Rates</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 <p class="subtitle lead">Solving recurrence relations, running times, and big-O notation</p>
@@ -794,7 +1008,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-26 21:49:29 (PDT)</p>
+      <p class="date">Last modified: 2026-11-09 08:20:30 (PST)</p>
     </div>
   </div>
   
@@ -832,18 +1046,18 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="exr-double-plus-power-terms" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1 (Double and add a power of 2)</strong></span> A sequence (<a href="https://morrison-lab.github.io/mds/functions.html#def-sequence">Definition: Sequence</a>) starts with <span class="math inline">\(b_0 = 0\)</span>, and for every integer (<a href="../chapters/direct-proof.html#def-integers">Definition: Integers</a>) <span class="math inline">\(n \ge 1\)</span> the term <span class="math inline">\(b_n\)</span> is twice the term before it, plus <span class="math inline">\(2^n\)</span>. Find <span class="math inline">\(b_1\)</span>, <span class="math inline">\(b_2\)</span>, <span class="math inline">\(b_3\)</span>, <span class="math inline">\(b_4\)</span> and <span class="math inline">\(b_5\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercise 1 (Double and add a power of 2)</strong></span> A sequence (<a href="../functions.html#def-sequence">Definition: Sequence</a>) starts with <span class="math inline">\(b_0 = 0\)</span>, and for every integer (<a href="../chapters/direct-proof.html#def-integers">Definition: Integers</a>) <span class="math inline">\(n \ge 1\)</span> the term <span class="math inline">\(b_n\)</span> is twice the term before it, plus <span class="math inline">\(2^n\)</span>. Find <span class="math inline">\(b_1\)</span>, <span class="math inline">\(b_2\)</span>, <span class="math inline">\(b_3\)</span>, <span class="math inline">\(b_4\)</span> and <span class="math inline">\(b_5\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-double-plus-power-terms" class="quarto-xref">Solution&nbsp;1</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -905,7 +1119,7 @@ b_n = 2 b_{n-1} + 2^n
 </div>
 <div class="callout-body-container">
 <div id="def-closed-form" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Closed form)</strong></span> A <strong>closed form</strong> <span class="citation" data-cites="wikipedia_closed_form_expression">(<a href="#ref-wikipedia_closed_form_expression" role="doc-biblioref">Wikipedia contributors 2026b</a>)</span> for a sequence <span class="math inline">\(a_{n_0}, a_{n_0 + 1}, \ldots\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-sequence">Definition: Sequence</a>) is a formula for <span class="math inline">\(a_n\)</span> that uses only <span class="math inline">\(n\)</span> and fixed numbers, combined by a fixed number of operations such as addition, multiplication, powers and floors (<a href="../chapters/loop-invariants.html#def-floor">Definition: Floor</a>), and that uses no other term of the sequence.</p>
+<p><span class="theorem-title"><strong>Definition 2 (Closed form)</strong></span> A <strong>closed form</strong> <span class="citation" data-cites="wikipedia_closed_form_expression">(<a href="#ref-wikipedia_closed_form_expression" role="doc-biblioref">Wikipedia contributors 2026b</a>)</span> for a sequence <span class="math inline">\(a_{n_0}, a_{n_0 + 1}, \ldots\)</span> (<a href="../functions.html#def-sequence">Definition: Sequence</a>) is a formula for <span class="math inline">\(a_n\)</span> that uses only <span class="math inline">\(n\)</span> and fixed numbers, combined by a fixed number of operations such as addition, multiplication, powers and floors (<a href="../chapters/loop-invariants.html#def-floor">Definition: Floor</a>), and that uses no other term of the sequence.</p>
 </div>
 </div>
 </div>
@@ -937,13 +1151,13 @@ b_n = 2 b_{n-1} + 2^n
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-substitute-once" class="quarto-xref">Solution&nbsp;2</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1054,13 +1268,13 @@ e_n = 3 e_{n-1} + 2^n
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-triple-plus-power-check" class="quarto-xref">Solution&nbsp;3</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1121,12 +1335,12 @@ e_n = 3 e_{n-1} + 2^n
 </div>
 <div class="callout-body-container">
 <div id="thm-double-plus-power-closed" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 1 (A closed form for <span class="math inline">\(b_n = 2 b_{n-1} + 2^n\)</span>)</strong></span> Let <span class="math inline">\(b_0, b_1, \ldots\)</span> be the sequence with <span class="math inline">\(b_0 = 0\)</span> and <span class="math inline">\(b_n = 2 b_{n-1} + 2^n\)</span> for every integer <span class="math inline">\(n \ge 1\)</span> (<a href="#exm-double-plus-power-sequence" class="quarto-xref">Example&nbsp;1</a>). Then <span class="math inline">\(b_n = n \cdot 2^n\)</span> for every non-negative integer (<a href="https://morrison-lab.github.io/mds/number-systems.html#def-nonnegative-integers">Definition: Non-negative integers</a>) <span class="math inline">\(n\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 1 (A closed form for <span class="math inline">\(b_n = 2 b_{n-1} + 2^n\)</span>)</strong></span> Let <span class="math inline">\(b_0, b_1, \ldots\)</span> be the sequence with <span class="math inline">\(b_0 = 0\)</span> and <span class="math inline">\(b_n = 2 b_{n-1} + 2^n\)</span> for every integer <span class="math inline">\(n \ge 1\)</span> (<a href="#exm-double-plus-power-sequence" class="quarto-xref">Example&nbsp;1</a>). Then <span class="math inline">\(b_n = n \cdot 2^n\)</span> for every non-negative integer (<a href="../number-systems.html#def-nonnegative-integers">Definition: Non-negative integers</a>) <span class="math inline">\(n\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -1165,12 +1379,12 @@ b_{k + 1}
 </div>
 <div class="callout-body-container">
 <div id="thm-triple-plus-power-closed" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 2 (A closed form for <span class="math inline">\(e_n = 3 e_{n-1} + 2^n\)</span>)</strong></span> Let <span class="math inline">\(e_0, e_1, \ldots\)</span> be the sequence with <span class="math inline">\(e_0 = 1\)</span> and <span class="math inline">\(e_n = 3 e_{n-1} + 2^n\)</span> for every integer <span class="math inline">\(n \ge 1\)</span>. Then <span class="math inline">\(e_n = 3^{n+1} - 2^{n+1}\)</span>, as guessed in <a href="#exr-triple-plus-power-check" class="quarto-xref">Exercise&nbsp;3</a>, for every non-negative integer (<a href="https://morrison-lab.github.io/mds/number-systems.html#def-nonnegative-integers">Definition: Non-negative integers</a>) <span class="math inline">\(n\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 2 (A closed form for <span class="math inline">\(e_n = 3 e_{n-1} + 2^n\)</span>)</strong></span> Let <span class="math inline">\(e_0, e_1, \ldots\)</span> be the sequence with <span class="math inline">\(e_0 = 1\)</span> and <span class="math inline">\(e_n = 3 e_{n-1} + 2^n\)</span> for every integer <span class="math inline">\(n \ge 1\)</span>. Then <span class="math inline">\(e_n = 3^{n+1} - 2^{n+1}\)</span>, as guessed in <a href="#exr-triple-plus-power-check" class="quarto-xref">Exercise&nbsp;3</a>, for every non-negative integer (<a href="../number-systems.html#def-nonnegative-integers">Definition: Non-negative integers</a>) <span class="math inline">\(n\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -1251,13 +1465,13 @@ e_{k + 1}
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-pal-calls" class="quarto-xref">Solution&nbsp;4</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1276,7 +1490,7 @@ e_{k + 1}
 </div>
 <div class="callout-body-container">
 <div id="rem-size-step" class="proof remark">
-<p><span class="proof-title"><em>Remark 3</em> (The size of an input and a step). </span>To count the work an algorithm (<a href="https://morrison-lab.github.io/mds/expressions-algorithms.html#def-algorithm">Definition: Algorithm</a>) does, we first fix two things:</p>
+<p><span class="proof-title"><em>Remark 3</em> (The size of an input and a step). </span>To count the work an algorithm (<a href="../expressions-algorithms.html#def-algorithm">Definition: Algorithm</a>) does, we first fix two things:</p>
 <ul>
 <li>the <em>size</em> of an input, such as the number of symbols in a string or the number of entries in an array;</li>
 <li>what one <em>step</em> is, such as one comparison, one arithmetic operation or one call of a function.</li>
@@ -1292,7 +1506,7 @@ e_{k + 1}
 </div>
 <div class="callout-body-container">
 <div id="def-running-time" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Running time)</strong></span> Fix, for an algorithm (<a href="https://morrison-lab.github.io/mds/expressions-algorithms.html#def-algorithm">Definition: Algorithm</a>), the size of an input and what one step is (<a href="#rem-size-step" class="quarto-xref">Remark&nbsp;3</a>). The <strong>running time</strong> <span class="citation" data-cites="wikipedia_time_complexity">(<a href="#ref-wikipedia_time_complexity" role="doc-biblioref">Wikipedia contributors 2026f</a>)</span> of the algorithm is the function <span class="math inline">\(T\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>) whose value <span class="math inline">\(T(n)\)</span> is the largest number of steps that the algorithm takes on any input of size <span class="math inline">\(n\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 4 (Running time)</strong></span> Fix, for an algorithm (<a href="../expressions-algorithms.html#def-algorithm">Definition: Algorithm</a>), the size of an input and what one step is (<a href="#rem-size-step" class="quarto-xref">Remark&nbsp;3</a>). The <strong>running time</strong> <span class="citation" data-cites="wikipedia_time_complexity">(<a href="#ref-wikipedia_time_complexity" role="doc-biblioref">Wikipedia contributors 2026f</a>)</span> of the algorithm is the function <span class="math inline">\(T\)</span> (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>) whose value <span class="math inline">\(T(n)\)</span> is the largest number of steps that the algorithm takes on any input of size <span class="math inline">\(n\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1334,12 +1548,12 @@ T(n) = \mathopen{}\left\lfloor n / 2\right\rfloor\mathclose{} + 1,
 </div>
 <div class="callout-body-container">
 <div id="thm-pal-running-time" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 3 (A closed form for the running time of <code>pal</code>)</strong></span> Let <span class="math inline">\(T(0) = T(1) = 1\)</span> and <span class="math inline">\(T(n) = T(n - 2) + 1\)</span> for every integer <span class="math inline">\(n \ge 2\)</span>, as in <a href="#exm-pal-running-time" class="quarto-xref">Example&nbsp;5</a>. Then <span class="math inline">\(T(n) = \mathopen{}\left\lfloor n / 2\right\rfloor\mathclose{} + 1\)</span> (<a href="../chapters/loop-invariants.html#def-floor">Definition: Floor</a>) for every non-negative integer (<a href="https://morrison-lab.github.io/mds/number-systems.html#def-nonnegative-integers">Definition: Non-negative integers</a>) <span class="math inline">\(n\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 3 (A closed form for the running time of <code>pal</code>)</strong></span> Let <span class="math inline">\(T(0) = T(1) = 1\)</span> and <span class="math inline">\(T(n) = T(n - 2) + 1\)</span> for every integer <span class="math inline">\(n \ge 2\)</span>, as in <a href="#exm-pal-running-time" class="quarto-xref">Example&nbsp;5</a>. Then <span class="math inline">\(T(n) = \mathopen{}\left\lfloor n / 2\right\rfloor\mathclose{} + 1\)</span> (<a href="../chapters/loop-invariants.html#def-floor">Definition: Floor</a>) for every non-negative integer (<a href="../number-systems.html#def-nonnegative-integers">Definition: Non-negative integers</a>) <span class="math inline">\(n\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -1391,13 +1605,13 @@ T(n)
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-twice-calls" class="quarto-xref">Solution&nbsp;5</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1427,12 +1641,12 @@ returns 3 + 3 - 1 = 5</code></pre>
 </div>
 <div class="callout-body-container">
 <div id="thm-twice-base-calls" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 4 (Two calls of size <span class="math inline">\(n - 1\)</span> give <span class="math inline">\(2^n\)</span> base cases)</strong></span> For every non-negative integer (<a href="https://morrison-lab.github.io/mds/number-systems.html#def-nonnegative-integers">Definition: Non-negative integers</a>) <span class="math inline">\(n\)</span>, the calls that <code>(dm n)</code> of <a href="#exr-twice-calls" class="quarto-xref">Exercise&nbsp;5</a> makes include exactly <span class="math inline">\(2^n\)</span> calls of <code>(dm 0)</code>, counting <code>(dm 0)</code> itself when <span class="math inline">\(n = 0\)</span>. So, counting each call as one step, the running time (<a href="#def-running-time" class="quarto-xref">Definition&nbsp;4</a>) of <code>dm</code> satisfies <span class="math inline">\(T(n) \ge 2^n\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 4 (Two calls of size <span class="math inline">\(n - 1\)</span> give <span class="math inline">\(2^n\)</span> base cases)</strong></span> For every non-negative integer (<a href="../number-systems.html#def-nonnegative-integers">Definition: Non-negative integers</a>) <span class="math inline">\(n\)</span>, the calls that <code>(dm n)</code> of <a href="#exr-twice-calls" class="quarto-xref">Exercise&nbsp;5</a> makes include exactly <span class="math inline">\(2^n\)</span> calls of <code>(dm 0)</code>, counting <code>(dm 0)</code> itself when <span class="math inline">\(n = 0\)</span>. So, counting each call as one step, the running time (<a href="#def-running-time" class="quarto-xref">Definition&nbsp;4</a>) of <code>dm</code> satisfies <span class="math inline">\(T(n) \ge 2^n\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -1492,13 +1706,13 @@ B(n) = 2 B(n - 1)
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-linear-quadratic" class="quarto-xref">Solution&nbsp;6</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1548,9 +1762,9 @@ B(n) = 2 B(n - 1)
 </div>
 <div class="callout-body-container">
 <div id="def-big-o" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Big-O)</strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be <a href="https://morrison-lab.github.io/mds/functions.html#def-function">functions</a> from the <a href="../chapters/sets.html#def-natural-numbers">natural numbers</a> to the <a href="../chapters/sets.html#def-real-numbers">real numbers</a>. Then <span class="math inline">\(f(n)\)</span> is <strong>big-O</strong> of <span class="math inline">\(g(n)\)</span> <span class="citation" data-cites="wikipedia_big_o_notation">(<a href="#ref-wikipedia_big_o_notation" role="doc-biblioref">Wikipedia contributors 2026a</a>)</span>, written <span class="math inline">\(f(n) = O(g(n))\)</span>, when there exist a <a href="../chapters/sets.html#def-real-numbers">real number</a> <span class="math inline">\(c &gt; 0\)</span> and a <a href="../chapters/sets.html#def-natural-numbers">natural number</a> <span class="math inline">\(N\)</span> such that, for every natural number <span class="math inline">\(n \ge N\)</span>, <span class="math display">\[
+<p><span class="theorem-title"><strong>Definition 5 (Big-O)</strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be <a href="../chapters/functional-programming.html#def-function">functions</a> from the <a href="../chapters/sets.html#def-natural-numbers">natural numbers</a> to the <a href="../chapters/sets.html#def-real-numbers">real numbers</a>. Then <span class="math inline">\(f(n)\)</span> is <strong>big-O</strong> of <span class="math inline">\(g(n)\)</span> <span class="citation" data-cites="wikipedia_big_o_notation">(<a href="#ref-wikipedia_big_o_notation" role="doc-biblioref">Wikipedia contributors 2026a</a>)</span>, written <span class="math inline">\(f(n) = O(g(n))\)</span>, when there exist a <a href="../chapters/sets.html#def-real-numbers">real number</a> <span class="math inline">\(c &gt; 0\)</span> and a <a href="../chapters/sets.html#def-natural-numbers">natural number</a> <span class="math inline">\(N\)</span> such that, for every natural number <span class="math inline">\(n \ge N\)</span>, <span class="math display">\[
 |f(n)| \le c \, |g(n)|.
-\]</span> In words, from some point <span class="math inline">\(N\)</span> on, the <a href="https://morrison-lab.github.io/mds/algebra-basics.html#def-absolute-value">absolute value</a> of <span class="math inline">\(f(n)\)</span> is at most a fixed multiple <span class="math inline">\(c\)</span> of the absolute value of <span class="math inline">\(g(n)\)</span>. The “there exist” is an <a href="../chapters/predicates-quantifiers.html#def-existential-quantifier">existential quantifier</a>, and the “for every” is a <a href="../chapters/predicates-quantifiers.html#def-universal-quantifier">universal quantifier</a>.</p>
+\]</span> In words, from some point <span class="math inline">\(N\)</span> on, the <a href="https://morrison-lab.github.io/mds/algebra.html#def-absolute-value">absolute value</a> of <span class="math inline">\(f(n)\)</span> is at most a fixed multiple <span class="math inline">\(c\)</span> of the absolute value of <span class="math inline">\(g(n)\)</span>. The “there exist” is an <a href="../chapters/predicates-quantifiers.html#def-existential-quantifier">existential quantifier</a>, and the “for every” is a <a href="../chapters/predicates-quantifiers.html#def-universal-quantifier">universal quantifier</a>.</p>
 </div>
 </div>
 </div>
@@ -1622,9 +1836,9 @@ B(n) = 2 B(n - 1)
 </div>
 <div class="callout-body-container">
 <div id="def-big-omega" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Big-Omega)</strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be <a href="https://morrison-lab.github.io/mds/functions.html#def-function">functions</a> from the <a href="../chapters/sets.html#def-natural-numbers">natural numbers</a> to the <a href="../chapters/sets.html#def-real-numbers">real numbers</a>. Then <span class="math inline">\(f(n)\)</span> is <strong>big-Omega</strong> of <span class="math inline">\(g(n)\)</span> <span class="citation" data-cites="wikipedia_big_o_notation">(<a href="#ref-wikipedia_big_o_notation" role="doc-biblioref">Wikipedia contributors 2026a</a>)</span>, written <span class="math inline">\(f(n) = \Omega(g(n))\)</span>, when there exist a <a href="../chapters/sets.html#def-real-numbers">real number</a> <span class="math inline">\(c &gt; 0\)</span> and a <a href="../chapters/sets.html#def-natural-numbers">natural number</a> <span class="math inline">\(N\)</span> such that, for every natural number <span class="math inline">\(n \ge N\)</span>, <span class="math display">\[
+<p><span class="theorem-title"><strong>Definition 7 (Big-Omega)</strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be <a href="../chapters/functional-programming.html#def-function">functions</a> from the <a href="../chapters/sets.html#def-natural-numbers">natural numbers</a> to the <a href="../chapters/sets.html#def-real-numbers">real numbers</a>. Then <span class="math inline">\(f(n)\)</span> is <strong>big-Omega</strong> of <span class="math inline">\(g(n)\)</span> <span class="citation" data-cites="wikipedia_big_o_notation">(<a href="#ref-wikipedia_big_o_notation" role="doc-biblioref">Wikipedia contributors 2026a</a>)</span>, written <span class="math inline">\(f(n) = \Omega(g(n))\)</span>, when there exist a <a href="../chapters/sets.html#def-real-numbers">real number</a> <span class="math inline">\(c &gt; 0\)</span> and a <a href="../chapters/sets.html#def-natural-numbers">natural number</a> <span class="math inline">\(N\)</span> such that, for every natural number <span class="math inline">\(n \ge N\)</span>, <span class="math display">\[
 |f(n)| \ge c \, |g(n)|.
-\]</span> In words, from some point <span class="math inline">\(N\)</span> on, the <a href="https://morrison-lab.github.io/mds/algebra-basics.html#def-absolute-value">absolute value</a> of <span class="math inline">\(f(n)\)</span> is at least a fixed positive multiple <span class="math inline">\(c\)</span> of the absolute value of <span class="math inline">\(g(n)\)</span>. Dividing by <span class="math inline">\(c\)</span> shows that <span class="math inline">\(f(n) = \Omega(g(n))\)</span> exactly when <span class="math inline">\(g(n) = O(f(n))\)</span> in the sense of <a href="#def-big-o" class="quarto-xref">Definition&nbsp;5</a>.</p>
+\]</span> In words, from some point <span class="math inline">\(N\)</span> on, the <a href="https://morrison-lab.github.io/mds/algebra.html#def-absolute-value">absolute value</a> of <span class="math inline">\(f(n)\)</span> is at least a fixed positive multiple <span class="math inline">\(c\)</span> of the absolute value of <span class="math inline">\(g(n)\)</span>. Dividing by <span class="math inline">\(c\)</span> shows that <span class="math inline">\(f(n) = \Omega(g(n))\)</span> exactly when <span class="math inline">\(g(n) = O(f(n))\)</span> in the sense of <a href="#def-big-o" class="quarto-xref">Definition&nbsp;5</a>.</p>
 </div>
 </div>
 </div>
@@ -1659,7 +1873,7 @@ B(n) = 2 B(n - 1)
 </div>
 <div class="callout-body-container">
 <div id="def-big-theta" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Big-Theta)</strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be <a href="https://morrison-lab.github.io/mds/functions.html#def-function">functions</a> from the <a href="../chapters/sets.html#def-natural-numbers">natural numbers</a> to the <a href="../chapters/sets.html#def-real-numbers">real numbers</a>. Then <span class="math inline">\(f(n)\)</span> is <strong>big-Theta</strong> of <span class="math inline">\(g(n)\)</span> <span class="citation" data-cites="wikipedia_big_o_notation">(<a href="#ref-wikipedia_big_o_notation" role="doc-biblioref">Wikipedia contributors 2026a</a>)</span>, written <span class="math inline">\(f(n) = \Theta(g(n))\)</span>, when both <span class="math inline">\(f(n) = O(g(n))\)</span> (<a href="#def-big-o">big-O</a>) and <span class="math inline">\(f(n) = \Omega(g(n))\)</span> (<a href="#def-big-omega">big-Omega</a>). In words, <span class="math inline">\(f(n)\)</span> and <span class="math inline">\(g(n)\)</span> are within fixed multiples of each other, from some point on.</p>
+<p><span class="theorem-title"><strong>Definition 8 (Big-Theta)</strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be <a href="../chapters/functional-programming.html#def-function">functions</a> from the <a href="../chapters/sets.html#def-natural-numbers">natural numbers</a> to the <a href="../chapters/sets.html#def-real-numbers">real numbers</a>. Then <span class="math inline">\(f(n)\)</span> is <strong>big-Theta</strong> of <span class="math inline">\(g(n)\)</span> <span class="citation" data-cites="wikipedia_big_o_notation">(<a href="#ref-wikipedia_big_o_notation" role="doc-biblioref">Wikipedia contributors 2026a</a>)</span>, written <span class="math inline">\(f(n) = \Theta(g(n))\)</span>, when both <span class="math inline">\(f(n) = O(g(n))\)</span> (<a href="#def-big-o">big-O</a>) and <span class="math inline">\(f(n) = \Omega(g(n))\)</span> (<a href="#def-big-omega">big-Omega</a>). In words, <span class="math inline">\(f(n)\)</span> and <span class="math inline">\(g(n)\)</span> are within fixed multiples of each other, from some point on.</p>
 </div>
 </div>
 </div>
@@ -1683,12 +1897,12 @@ B(n) = 2 B(n - 1)
 </div>
 <div class="callout-body-container">
 <div id="thm-sum-rule" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 5 (Sums of big-O functions)</strong></span> Let <span class="math inline">\(f\)</span>, <span class="math inline">\(g\)</span> and <span class="math inline">\(h\)</span> be functions (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>) from the natural numbers (<a href="../chapters/sets.html#def-natural-numbers">Definition: Natural numbers (our convention)</a>) to the real numbers (<a href="../chapters/sets.html#def-real-numbers">Definition: Real numbers</a>). If <span class="math inline">\(f(n) = O(h(n))\)</span> and <span class="math inline">\(g(n) = O(h(n))\)</span> (<a href="#def-big-o" class="quarto-xref">Definition&nbsp;5</a>), then <span class="math inline">\(f(n) + g(n) = O(h(n))\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 5 (Sums of big-O functions)</strong></span> Let <span class="math inline">\(f\)</span>, <span class="math inline">\(g\)</span> and <span class="math inline">\(h\)</span> be functions (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>) from the natural numbers (<a href="../chapters/sets.html#def-natural-numbers">Definition: Natural numbers (our convention)</a>) to the real numbers (<a href="../chapters/sets.html#def-real-numbers">Definition: Real numbers</a>). If <span class="math inline">\(f(n) = O(h(n))\)</span> and <span class="math inline">\(g(n) = O(h(n))\)</span> (<a href="#def-big-o" class="quarto-xref">Definition&nbsp;5</a>), then <span class="math inline">\(f(n) + g(n) = O(h(n))\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -1732,13 +1946,13 @@ B(n) = 2 B(n - 1)
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-not-big-o" class="quarto-xref">Solution&nbsp;7</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1788,13 +2002,13 @@ B(n) = 2 B(n - 1)
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-sixteen" class="quarto-xref">Solution&nbsp;8</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1881,7 +2095,7 @@ B(n) = 2 B(n - 1)
 </div>
 <div class="callout-body-container">
 <div id="def-factorial" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Factorial)</strong></span> For a natural number (<a href="../chapters/sets.html#def-natural-numbers">Definition: Natural numbers (our convention)</a>) <span class="math inline">\(n\)</span>, the <strong>factorial</strong> of <span class="math inline">\(n\)</span> <span class="citation" data-cites="wikipedia_factorial">(<a href="#ref-wikipedia_factorial" role="doc-biblioref">Wikipedia contributors 2026c</a>)</span>, written <span class="math inline">\(n!\)</span>, is the product <span class="math inline">\(1 \cdot 2 \cdots n\)</span> of the natural numbers from 1 to <span class="math inline">\(n\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 10 (Factorial)</strong></span> For a <a href="../number-systems.html#def-nonnegative-integers">non-negative integer</a> <span class="math inline">\(n\)</span>, the <strong>factorial</strong> of <span class="math inline">\(n\)</span> <span class="citation" data-cites="wikipedia_factorial">(<a href="#ref-wikipedia_factorial" role="doc-biblioref">Wikipedia contributors 2026c</a>)</span>, written <span class="math inline">\({{n}!}\)</span>, is <span class="math inline">\(1 \cdot 2 \cdots n\)</span>, the <a href="../chapters/sets.html#def-natural-numbers">natural numbers</a> from 1 to <span class="math inline">\(n\)</span> multiplied together. For <span class="math inline">\(n = 0\)</span> there is nothing to multiply, and <span class="math inline">\({{0}!} = 1\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1914,7 +2128,7 @@ B(n) = 2 B(n - 1)
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -1999,13 +2213,13 @@ B(n) = 2 B(n - 1)
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-table-loops" class="quarto-xref">Solution&nbsp;9</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2094,6 +2308,21 @@ B(n) = 2 B(n - 1)
 </div>
 </div>
 </div>
+</section>
+<section id="def-list-section" class="level1 unnumbered">
+<h1 class="unnumbered">Definitions on this page</h1>
+<ul>
+<li><a href="#def-recurrence-relation"><span class="quarto-xref">Definition&nbsp;1</span> (Recurrence relation)</a></li>
+<li><a href="#def-closed-form"><span class="quarto-xref">Definition&nbsp;2</span> (Closed form)</a></li>
+<li><a href="#def-iteration"><span class="quarto-xref">Definition&nbsp;3</span> (Iteration (unrolling))</a></li>
+<li><a href="#def-running-time"><span class="quarto-xref">Definition&nbsp;4</span> (Running time)</a></li>
+<li><a href="#def-big-o"><span class="quarto-xref">Definition&nbsp;5</span> (Big-O)</a></li>
+<li><a href="#def-witness"><span class="quarto-xref">Definition&nbsp;6</span> (Witnesses)</a></li>
+<li><a href="#def-big-omega"><span class="quarto-xref">Definition&nbsp;7</span> (Big-Omega)</a></li>
+<li><a href="#def-big-theta"><span class="quarto-xref">Definition&nbsp;8</span> (Big-Theta)</a></li>
+<li><a href="#def-logarithm"><span class="quarto-xref">Definition&nbsp;9</span> (Logarithm)</a></li>
+<li><a href="#def-factorial"><span class="quarto-xref">Definition&nbsp;10</span> (Factorial)</a></li>
+</ul>
 </section>
 <section id="references" class="level1 unnumbered">
 <h1 class="unnumbered">References</h1>
@@ -2379,6 +2608,51 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script>
+// Put each folded code cell inside the tab it belongs to.
+// Quarto hoists the `details.code-fold` of a cross-referenced figure out of the figure,
+// so an R and a Python tab end up with their folds stacked above the whole figure.
+// For every language tabset, take the run of folds immediately before it (or before the figure
+// that holds it), match each fold to a tab by language, and move it to the top of that tab.
+// The selectors cover both the website tabsets (Bootstrap) and the slide tabsets (tabby).
+document.querySelectorAll("div.panel-tabset").forEach(function (tabset) {
+  var anchor = tabset.closest("div.quarto-float") || tabset;
+  var panes = Array.prototype.slice.call(tabset.querySelectorAll(":scope > .tab-content > div"));
+  var tabs = Array.prototype.slice.call(tabset.querySelectorAll(":scope > ul > li > a"));
+  var folds = [];
+  var node = anchor.previousElementSibling;
+  while (node && node.matches("details.code-fold")) {
+    folds.unshift(node);
+    node = node.previousElementSibling;
+  }
+  if (folds.length === 0 || folds.length !== panes.length || tabs.length !== panes.length) {
+    return;
+  }
+  var language = function (fold) {
+    var code = fold.querySelector("pre.sourceCode");
+    var found = code && Array.prototype.find.call(code.classList, function (name) {
+      return name !== "sourceCode" && name !== "downlit" && name !== "code-with-copy";
+    });
+    return found ? found.toLowerCase() : "";
+  };
+  var used = {};
+  var unused = function () {
+    return tabs.findIndex(function (tab, j) {
+      return !used[j];
+    });
+  };
+  folds.forEach(function (fold) {
+    var index = tabs.findIndex(function (tab, j) {
+      return !used[j] && tab.textContent.trim().toLowerCase() === language(fold);
+    });
+    if (index < 0) {
+      index = unused();
+    }
+    used[index] = true;
+    panes[index].insertBefore(fold, panes[index].firstChild);
+  });
+});
+</script>
 <!--
 Page-navigation helpers for the HTML format, included after the body of every
 page by `include-after-body: page-navigation.html` under `format.html` in
@@ -2646,15 +2920,50 @@ document.addEventListener("DOMContentLoaded", function () {
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
     if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle dark mode");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
       const i = window.document.createElement("i");
       i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle dark mode");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
     }
     setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
@@ -2784,7 +3093,8 @@ document.addEventListener("DOMContentLoaded", function () {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
       // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
       for (var i=0; i<links.length; i++) {
         const link = links[i];
         if (!isInternal(link.href)) {
@@ -2793,10 +3103,71 @@ document.addEventListener("DOMContentLoaded", function () {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+          if (!link.classList.contains('no-external-icon')) {
             // default icon
             link.classList.add("external");
+          }
         }
       }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
       const config = {
         allowHTML: true,
@@ -2810,6 +3181,7 @@ document.addEventListener("DOMContentLoaded", function () {
         interactiveBorder: 10,
         theme: 'quarto',
         placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
       };
       if (contentFn) {
         config.content = contentFn;
@@ -2972,44 +3344,54 @@ document.addEventListener("DOMContentLoaded", function () {
           const lineIds = lines.map((line) => {
             return targetCell + "-" + line;
           })
-          let top = null;
-          let height = null;
-          let parent = null;
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
           if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
             }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
             }
+            placeBand(gutterDiv, el, lastEl);
             selectedAnnoteEl = annoteEl;
           }
         };
@@ -3108,7 +3490,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
   </script>
-<nav class="page-navigation">
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
   <div class="nav-page nav-page-previous">
       <a href="../chapters/recursion.html" class="pagination-link" aria-label="Recursion">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Recursion</span>
@@ -3266,7 +3651,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb8-144"><a href="#cb8-144" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-145"><a href="#cb8-145" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb8-146"><a href="#cb8-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-147"><a href="#cb8-147" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../mds/_subfiles/growth-rates/_def-big-o.qmd &gt;}}</span>
+<span id="cb8-147"><a href="#cb8-147" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/growth-rates/_big-o_def.qmd &gt;}}</span>
 <span id="cb8-148"><a href="#cb8-148" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-149"><a href="#cb8-149" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb8-150"><a href="#cb8-150" aria-hidden="true" tabindex="-1"></a></span>
@@ -3282,7 +3667,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb8-160"><a href="#cb8-160" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-161"><a href="#cb8-161" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb8-162"><a href="#cb8-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-163"><a href="#cb8-163" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../mds/_subfiles/growth-rates/_def-big-omega.qmd &gt;}}</span>
+<span id="cb8-163"><a href="#cb8-163" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/growth-rates/_big-omega_def.qmd &gt;}}</span>
 <span id="cb8-164"><a href="#cb8-164" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-165"><a href="#cb8-165" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb8-166"><a href="#cb8-166" aria-hidden="true" tabindex="-1"></a></span>
@@ -3290,7 +3675,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb8-168"><a href="#cb8-168" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-169"><a href="#cb8-169" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb8-170"><a href="#cb8-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-171"><a href="#cb8-171" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../mds/_subfiles/growth-rates/_def-big-theta.qmd &gt;}}</span>
+<span id="cb8-171"><a href="#cb8-171" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/growth-rates/_big-theta_def.qmd &gt;}}</span>
 <span id="cb8-172"><a href="#cb8-172" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-173"><a href="#cb8-173" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb8-174"><a href="#cb8-174" aria-hidden="true" tabindex="-1"></a></span>
@@ -3334,7 +3719,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <span id="cb8-212"><a href="#cb8-212" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-213"><a href="#cb8-213" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb8-214"><a href="#cb8-214" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-215"><a href="#cb8-215" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/recurrences-growth/_factorial_def.qmd &gt;}}</span>
+<span id="cb8-215"><a href="#cb8-215" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/number-systems/_factorial_def.qmd &gt;}}</span>
 <span id="cb8-216"><a href="#cb8-216" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-217"><a href="#cb8-217" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
 <span id="cb8-218"><a href="#cb8-218" aria-hidden="true" tabindex="-1"></a></span>
@@ -3381,13 +3766,23 @@ document.addEventListener("DOMContentLoaded", function () {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      &nbsp;
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ Douglas Ezra Morrison, adapting materials by Kameron Decker Harris, Scott Wehrwein, and others as acknowledged throughout
+  </li>  
+</ul>
     </div>   
     <div class="nav-footer-center">
-<p>Built with <a href="https://quarto.org/">Quarto</a></p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Morrison-Lab/mcs/edit/main/chapters/recurrences-growth.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mcs/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mcs/blob/main/chapters/recurrences-growth.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
-    <div class="nav-footer-right">
       &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Morrison-Lab/mcs/edit/main/chapters/recurrences-growth.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mcs/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mcs/blob/main/chapters/recurrences-growth.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/Morrison-Lab/mcs/issues/new/choose">
+<p>Found a typo or error, or have a request or suggestion? Open an issue.</p>
+</a>
+  </li>  
+</ul>
     </div>
   </div>
 </footer>

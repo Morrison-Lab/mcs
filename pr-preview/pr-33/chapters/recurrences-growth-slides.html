@@ -6,14 +6,14 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.10.19">
+  <meta name="generator" content="quarto-1.11.9">
 
   <title>Math for Computer Science – Recurrence Relations and Growth Rates</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
@@ -120,7 +120,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-3a7eae3b872f08785a56513611f0329a.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-2f864dea3a88ad6a30a035ab8c618cbd.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -331,7 +331,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-26 21:49:29 (PDT)</p>
+  <p class="date">Last modified: 2026-11-09 08:20:30 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -358,7 +358,7 @@
 <section class="slide level2">
 
 <div id="exr-double-plus-power-terms" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1 (Double and add a power of 2)</strong></span> A sequence (<a href="https://morrison-lab.github.io/mds/functions.html#def-sequence">Definition: Sequence</a>) starts with <span class="math inline">\(b_0 = 0\)</span>, and for every integer (<a href="../chapters/direct-proof.html#def-integers">Definition: Integers</a>) <span class="math inline">\(n \ge 1\)</span> the term <span class="math inline">\(b_n\)</span> is twice the term before it, plus <span class="math inline">\(2^n\)</span>. Find <span class="math inline">\(b_1\)</span>, <span class="math inline">\(b_2\)</span>, <span class="math inline">\(b_3\)</span>, <span class="math inline">\(b_4\)</span> and <span class="math inline">\(b_5\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercise 1 (Double and add a power of 2)</strong></span> A sequence (<a href="../functions.html#def-sequence">Definition: Sequence</a>) starts with <span class="math inline">\(b_0 = 0\)</span>, and for every integer (<a href="../chapters/direct-proof.html#def-integers">Definition: Integers</a>) <span class="math inline">\(n \ge 1\)</span> the term <span class="math inline">\(b_n\)</span> is twice the term before it, plus <span class="math inline">\(2^n\)</span>. Find <span class="math inline">\(b_1\)</span>, <span class="math inline">\(b_2\)</span>, <span class="math inline">\(b_3\)</span>, <span class="math inline">\(b_4\)</span> and <span class="math inline">\(b_5\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -401,7 +401,7 @@ b_n = 2 b_{n-1} + 2^n
 <section class="slide level2">
 
 <div id="def-closed-form" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Closed form)</strong></span> A <strong>closed form</strong> <span class="citation" data-cites="wikipedia_closed_form_expression">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026b</a>)</span> for a sequence <span class="math inline">\(a_{n_0}, a_{n_0 + 1}, \ldots\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-sequence">Definition: Sequence</a>) is a formula for <span class="math inline">\(a_n\)</span> that uses only <span class="math inline">\(n\)</span> and fixed numbers, combined by a fixed number of operations such as addition, multiplication, powers and floors (<a href="../chapters/loop-invariants.html#def-floor">Definition: Floor</a>), and that uses no other term of the sequence.</p>
+<p><span class="theorem-title"><strong>Definition 2 (Closed form)</strong></span> A <strong>closed form</strong> <span class="citation" data-cites="wikipedia_closed_form_expression">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026b</a>)</span> for a sequence <span class="math inline">\(a_{n_0}, a_{n_0 + 1}, \ldots\)</span> (<a href="../functions.html#def-sequence">Definition: Sequence</a>) is a formula for <span class="math inline">\(a_n\)</span> that uses only <span class="math inline">\(n\)</span> and fixed numbers, combined by a fixed number of operations such as addition, multiplication, powers and floors (<a href="../chapters/loop-invariants.html#def-floor">Definition: Floor</a>), and that uses no other term of the sequence.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -555,13 +555,13 @@ e_n = 3 e_{n-1} + 2^n
 <section class="slide level2">
 
 <div id="thm-double-plus-power-closed" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 1 (A closed form for <span class="math inline">\(b_n = 2 b_{n-1} + 2^n\)</span>)</strong></span> Let <span class="math inline">\(b_0, b_1, \ldots\)</span> be the sequence with <span class="math inline">\(b_0 = 0\)</span> and <span class="math inline">\(b_n = 2 b_{n-1} + 2^n\)</span> for every integer <span class="math inline">\(n \ge 1\)</span> (<a href="#/exm-double-plus-power-sequence" class="quarto-xref">Example&nbsp;1</a>). Then <span class="math inline">\(b_n = n \cdot 2^n\)</span> for every non-negative integer (<a href="https://morrison-lab.github.io/mds/number-systems.html#def-nonnegative-integers">Definition: Non-negative integers</a>) <span class="math inline">\(n\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 1 (A closed form for <span class="math inline">\(b_n = 2 b_{n-1} + 2^n\)</span>)</strong></span> Let <span class="math inline">\(b_0, b_1, \ldots\)</span> be the sequence with <span class="math inline">\(b_0 = 0\)</span> and <span class="math inline">\(b_n = 2 b_{n-1} + 2^n\)</span> for every integer <span class="math inline">\(n \ge 1\)</span> (<a href="#/exm-double-plus-power-sequence" class="quarto-xref">Example&nbsp;1</a>). Then <span class="math inline">\(b_n = n \cdot 2^n\)</span> for every non-negative integer (<a href="../number-systems.html#def-nonnegative-integers">Definition: Non-negative integers</a>) <span class="math inline">\(n\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="thm-triple-plus-power-closed" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 2 (A closed form for <span class="math inline">\(e_n = 3 e_{n-1} + 2^n\)</span>)</strong></span> Let <span class="math inline">\(e_0, e_1, \ldots\)</span> be the sequence with <span class="math inline">\(e_0 = 1\)</span> and <span class="math inline">\(e_n = 3 e_{n-1} + 2^n\)</span> for every integer <span class="math inline">\(n \ge 1\)</span>. Then <span class="math inline">\(e_n = 3^{n+1} - 2^{n+1}\)</span>, as guessed in <a href="#/exr-triple-plus-power-check" class="quarto-xref">Exercise&nbsp;3</a>, for every non-negative integer (<a href="https://morrison-lab.github.io/mds/number-systems.html#def-nonnegative-integers">Definition: Non-negative integers</a>) <span class="math inline">\(n\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 2 (A closed form for <span class="math inline">\(e_n = 3 e_{n-1} + 2^n\)</span>)</strong></span> Let <span class="math inline">\(e_0, e_1, \ldots\)</span> be the sequence with <span class="math inline">\(e_0 = 1\)</span> and <span class="math inline">\(e_n = 3 e_{n-1} + 2^n\)</span> for every integer <span class="math inline">\(n \ge 1\)</span>. Then <span class="math inline">\(e_n = 3^{n+1} - 2^{n+1}\)</span>, as guessed in <a href="#/exr-triple-plus-power-check" class="quarto-xref">Exercise&nbsp;3</a>, for every non-negative integer (<a href="../number-systems.html#def-nonnegative-integers">Definition: Non-negative integers</a>) <span class="math inline">\(n\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -605,7 +605,7 @@ e_{k + 1}
 <section class="slide level2">
 
 <div id="rem-size-step" class="proof remark">
-<p><span class="proof-title"><em>Remark 3</em> (The size of an input and a step). </span>To count the work an algorithm (<a href="https://morrison-lab.github.io/mds/expressions-algorithms.html#def-algorithm">Definition: Algorithm</a>) does, we first fix two things:</p>
+<p><span class="proof-title"><em>Remark 3</em> (The size of an input and a step). </span>To count the work an algorithm (<a href="../expressions-algorithms.html#def-algorithm">Definition: Algorithm</a>) does, we first fix two things:</p>
 <ul>
 <li>the <em>size</em> of an input, such as the number of symbols in a string or the number of entries in an array;</li>
 <li>what one <em>step</em> is, such as one comparison, one arithmetic operation or one call of a function.</li>
@@ -615,7 +615,7 @@ e_{k + 1}
 <section class="slide level2">
 
 <div id="def-running-time" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Running time)</strong></span> Fix, for an algorithm (<a href="https://morrison-lab.github.io/mds/expressions-algorithms.html#def-algorithm">Definition: Algorithm</a>), the size of an input and what one step is (<a href="#/rem-size-step" class="quarto-xref">Remark&nbsp;3</a>). The <strong>running time</strong> <span class="citation" data-cites="wikipedia_time_complexity">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026f</a>)</span> of the algorithm is the function <span class="math inline">\(T\)</span> (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>) whose value <span class="math inline">\(T(n)\)</span> is the largest number of steps that the algorithm takes on any input of size <span class="math inline">\(n\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 4 (Running time)</strong></span> Fix, for an algorithm (<a href="../expressions-algorithms.html#def-algorithm">Definition: Algorithm</a>), the size of an input and what one step is (<a href="#/rem-size-step" class="quarto-xref">Remark&nbsp;3</a>). The <strong>running time</strong> <span class="citation" data-cites="wikipedia_time_complexity">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026f</a>)</span> of the algorithm is the function <span class="math inline">\(T\)</span> (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>) whose value <span class="math inline">\(T(n)\)</span> is the largest number of steps that the algorithm takes on any input of size <span class="math inline">\(n\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -645,7 +645,7 @@ T(n) = \mathopen{}\left\lfloor n / 2\right\rfloor\mathclose{} + 1,
 <section class="slide level2">
 
 <div id="thm-pal-running-time" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 3 (A closed form for the running time of <code>pal</code>)</strong></span> Let <span class="math inline">\(T(0) = T(1) = 1\)</span> and <span class="math inline">\(T(n) = T(n - 2) + 1\)</span> for every integer <span class="math inline">\(n \ge 2\)</span>, as in <a href="#/exm-pal-running-time" class="quarto-xref">Example&nbsp;5</a>. Then <span class="math inline">\(T(n) = \mathopen{}\left\lfloor n / 2\right\rfloor\mathclose{} + 1\)</span> (<a href="../chapters/loop-invariants.html#def-floor">Definition: Floor</a>) for every non-negative integer (<a href="https://morrison-lab.github.io/mds/number-systems.html#def-nonnegative-integers">Definition: Non-negative integers</a>) <span class="math inline">\(n\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 3 (A closed form for the running time of <code>pal</code>)</strong></span> Let <span class="math inline">\(T(0) = T(1) = 1\)</span> and <span class="math inline">\(T(n) = T(n - 2) + 1\)</span> for every integer <span class="math inline">\(n \ge 2\)</span>, as in <a href="#/exm-pal-running-time" class="quarto-xref">Example&nbsp;5</a>. Then <span class="math inline">\(T(n) = \mathopen{}\left\lfloor n / 2\right\rfloor\mathclose{} + 1\)</span> (<a href="../chapters/loop-invariants.html#def-floor">Definition: Floor</a>) for every non-negative integer (<a href="../number-systems.html#def-nonnegative-integers">Definition: Non-negative integers</a>) <span class="math inline">\(n\)</span>.</p>
 </div>
 </section></section>
 <section>
@@ -684,7 +684,7 @@ T(n) = \mathopen{}\left\lfloor n / 2\right\rfloor\mathclose{} + 1,
 <section class="slide level2">
 
 <div id="thm-twice-base-calls" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 4 (Two calls of size <span class="math inline">\(n - 1\)</span> give <span class="math inline">\(2^n\)</span> base cases)</strong></span> For every non-negative integer (<a href="https://morrison-lab.github.io/mds/number-systems.html#def-nonnegative-integers">Definition: Non-negative integers</a>) <span class="math inline">\(n\)</span>, the calls that <code>(dm n)</code> of <a href="#/exr-twice-calls" class="quarto-xref">Exercise&nbsp;5</a> makes include exactly <span class="math inline">\(2^n\)</span> calls of <code>(dm 0)</code>, counting <code>(dm 0)</code> itself when <span class="math inline">\(n = 0\)</span>. So, counting each call as one step, the running time (<a href="#/def-running-time" class="quarto-xref">Definition&nbsp;4</a>) of <code>dm</code> satisfies <span class="math inline">\(T(n) \ge 2^n\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 4 (Two calls of size <span class="math inline">\(n - 1\)</span> give <span class="math inline">\(2^n\)</span> base cases)</strong></span> For every non-negative integer (<a href="../number-systems.html#def-nonnegative-integers">Definition: Non-negative integers</a>) <span class="math inline">\(n\)</span>, the calls that <code>(dm n)</code> of <a href="#/exr-twice-calls" class="quarto-xref">Exercise&nbsp;5</a> makes include exactly <span class="math inline">\(2^n\)</span> calls of <code>(dm 0)</code>, counting <code>(dm 0)</code> itself when <span class="math inline">\(n = 0\)</span>. So, counting each call as one step, the running time (<a href="#/def-running-time" class="quarto-xref">Definition&nbsp;4</a>) of <code>dm</code> satisfies <span class="math inline">\(T(n) \ge 2^n\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -749,9 +749,9 @@ T(n) = \mathopen{}\left\lfloor n / 2\right\rfloor\mathclose{} + 1,
 <section class="slide level2">
 
 <div id="def-big-o" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Big-O)</strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be <a href="https://morrison-lab.github.io/mds/functions.html#def-function">functions</a> from the <a href="../chapters/sets.html#def-natural-numbers">natural numbers</a> to the <a href="../chapters/sets.html#def-real-numbers">real numbers</a>. Then <span class="math inline">\(f(n)\)</span> is <strong>big-O</strong> of <span class="math inline">\(g(n)\)</span> <span class="citation" data-cites="wikipedia_big_o_notation">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026a</a>)</span>, written <span class="math inline">\(f(n) = O(g(n))\)</span>, when there exist a <a href="../chapters/sets.html#def-real-numbers">real number</a> <span class="math inline">\(c &gt; 0\)</span> and a <a href="../chapters/sets.html#def-natural-numbers">natural number</a> <span class="math inline">\(N\)</span> such that, for every natural number <span class="math inline">\(n \ge N\)</span>, <span class="math display">\[
+<p><span class="theorem-title"><strong>Definition 5 (Big-O)</strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be <a href="../chapters/functional-programming.html#def-function">functions</a> from the <a href="../chapters/sets.html#def-natural-numbers">natural numbers</a> to the <a href="../chapters/sets.html#def-real-numbers">real numbers</a>. Then <span class="math inline">\(f(n)\)</span> is <strong>big-O</strong> of <span class="math inline">\(g(n)\)</span> <span class="citation" data-cites="wikipedia_big_o_notation">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026a</a>)</span>, written <span class="math inline">\(f(n) = O(g(n))\)</span>, when there exist a <a href="../chapters/sets.html#def-real-numbers">real number</a> <span class="math inline">\(c &gt; 0\)</span> and a <a href="../chapters/sets.html#def-natural-numbers">natural number</a> <span class="math inline">\(N\)</span> such that, for every natural number <span class="math inline">\(n \ge N\)</span>, <span class="math display">\[
 |f(n)| \le c \, |g(n)|.
-\]</span> In words, from some point <span class="math inline">\(N\)</span> on, the <a href="https://morrison-lab.github.io/mds/algebra-basics.html#def-absolute-value">absolute value</a> of <span class="math inline">\(f(n)\)</span> is at most a fixed multiple <span class="math inline">\(c\)</span> of the absolute value of <span class="math inline">\(g(n)\)</span>. The “there exist” is an <a href="../chapters/predicates-quantifiers.html#def-existential-quantifier">existential quantifier</a>, and the “for every” is a <a href="../chapters/predicates-quantifiers.html#def-universal-quantifier">universal quantifier</a>.</p>
+\]</span> In words, from some point <span class="math inline">\(N\)</span> on, the <a href="https://morrison-lab.github.io/mds/algebra.html#def-absolute-value">absolute value</a> of <span class="math inline">\(f(n)\)</span> is at most a fixed multiple <span class="math inline">\(c\)</span> of the absolute value of <span class="math inline">\(g(n)\)</span>. The “there exist” is an <a href="../chapters/predicates-quantifiers.html#def-existential-quantifier">existential quantifier</a>, and the “for every” is a <a href="../chapters/predicates-quantifiers.html#def-universal-quantifier">universal quantifier</a>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -799,9 +799,9 @@ T(n) = \mathopen{}\left\lfloor n / 2\right\rfloor\mathclose{} + 1,
 <section class="slide level2">
 
 <div id="def-big-omega" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Big-Omega)</strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be <a href="https://morrison-lab.github.io/mds/functions.html#def-function">functions</a> from the <a href="../chapters/sets.html#def-natural-numbers">natural numbers</a> to the <a href="../chapters/sets.html#def-real-numbers">real numbers</a>. Then <span class="math inline">\(f(n)\)</span> is <strong>big-Omega</strong> of <span class="math inline">\(g(n)\)</span> <span class="citation" data-cites="wikipedia_big_o_notation">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026a</a>)</span>, written <span class="math inline">\(f(n) = \Omega(g(n))\)</span>, when there exist a <a href="../chapters/sets.html#def-real-numbers">real number</a> <span class="math inline">\(c &gt; 0\)</span> and a <a href="../chapters/sets.html#def-natural-numbers">natural number</a> <span class="math inline">\(N\)</span> such that, for every natural number <span class="math inline">\(n \ge N\)</span>, <span class="math display">\[
+<p><span class="theorem-title"><strong>Definition 7 (Big-Omega)</strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be <a href="../chapters/functional-programming.html#def-function">functions</a> from the <a href="../chapters/sets.html#def-natural-numbers">natural numbers</a> to the <a href="../chapters/sets.html#def-real-numbers">real numbers</a>. Then <span class="math inline">\(f(n)\)</span> is <strong>big-Omega</strong> of <span class="math inline">\(g(n)\)</span> <span class="citation" data-cites="wikipedia_big_o_notation">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026a</a>)</span>, written <span class="math inline">\(f(n) = \Omega(g(n))\)</span>, when there exist a <a href="../chapters/sets.html#def-real-numbers">real number</a> <span class="math inline">\(c &gt; 0\)</span> and a <a href="../chapters/sets.html#def-natural-numbers">natural number</a> <span class="math inline">\(N\)</span> such that, for every natural number <span class="math inline">\(n \ge N\)</span>, <span class="math display">\[
 |f(n)| \ge c \, |g(n)|.
-\]</span> In words, from some point <span class="math inline">\(N\)</span> on, the <a href="https://morrison-lab.github.io/mds/algebra-basics.html#def-absolute-value">absolute value</a> of <span class="math inline">\(f(n)\)</span> is at least a fixed positive multiple <span class="math inline">\(c\)</span> of the absolute value of <span class="math inline">\(g(n)\)</span>. Dividing by <span class="math inline">\(c\)</span> shows that <span class="math inline">\(f(n) = \Omega(g(n))\)</span> exactly when <span class="math inline">\(g(n) = O(f(n))\)</span> in the sense of <a href="#/def-big-o" class="quarto-xref">Definition&nbsp;5</a>.</p>
+\]</span> In words, from some point <span class="math inline">\(N\)</span> on, the <a href="https://morrison-lab.github.io/mds/algebra.html#def-absolute-value">absolute value</a> of <span class="math inline">\(f(n)\)</span> is at least a fixed positive multiple <span class="math inline">\(c\)</span> of the absolute value of <span class="math inline">\(g(n)\)</span>. Dividing by <span class="math inline">\(c\)</span> shows that <span class="math inline">\(f(n) = \Omega(g(n))\)</span> exactly when <span class="math inline">\(g(n) = O(f(n))\)</span> in the sense of <a href="#/def-big-o" class="quarto-xref">Definition&nbsp;5</a>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -824,7 +824,7 @@ T(n) = \mathopen{}\left\lfloor n / 2\right\rfloor\mathclose{} + 1,
 <section class="slide level2">
 
 <div id="def-big-theta" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Big-Theta)</strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be <a href="https://morrison-lab.github.io/mds/functions.html#def-function">functions</a> from the <a href="../chapters/sets.html#def-natural-numbers">natural numbers</a> to the <a href="../chapters/sets.html#def-real-numbers">real numbers</a>. Then <span class="math inline">\(f(n)\)</span> is <strong>big-Theta</strong> of <span class="math inline">\(g(n)\)</span> <span class="citation" data-cites="wikipedia_big_o_notation">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026a</a>)</span>, written <span class="math inline">\(f(n) = \Theta(g(n))\)</span>, when both <span class="math inline">\(f(n) = O(g(n))\)</span> (<a href="#/def-big-o">big-O</a>) and <span class="math inline">\(f(n) = \Omega(g(n))\)</span> (<a href="#/def-big-omega">big-Omega</a>). In words, <span class="math inline">\(f(n)\)</span> and <span class="math inline">\(g(n)\)</span> are within fixed multiples of each other, from some point on.</p>
+<p><span class="theorem-title"><strong>Definition 8 (Big-Theta)</strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be <a href="../chapters/functional-programming.html#def-function">functions</a> from the <a href="../chapters/sets.html#def-natural-numbers">natural numbers</a> to the <a href="../chapters/sets.html#def-real-numbers">real numbers</a>. Then <span class="math inline">\(f(n)\)</span> is <strong>big-Theta</strong> of <span class="math inline">\(g(n)\)</span> <span class="citation" data-cites="wikipedia_big_o_notation">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026a</a>)</span>, written <span class="math inline">\(f(n) = \Theta(g(n))\)</span>, when both <span class="math inline">\(f(n) = O(g(n))\)</span> (<a href="#/def-big-o">big-O</a>) and <span class="math inline">\(f(n) = \Omega(g(n))\)</span> (<a href="#/def-big-omega">big-Omega</a>). In words, <span class="math inline">\(f(n)\)</span> and <span class="math inline">\(g(n)\)</span> are within fixed multiples of each other, from some point on.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -836,7 +836,7 @@ T(n) = \mathopen{}\left\lfloor n / 2\right\rfloor\mathclose{} + 1,
 <section class="slide level2">
 
 <div id="thm-sum-rule" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 5 (Sums of big-O functions)</strong></span> Let <span class="math inline">\(f\)</span>, <span class="math inline">\(g\)</span> and <span class="math inline">\(h\)</span> be functions (<a href="https://morrison-lab.github.io/mds/functions.html#def-function">Definition: Function (map, mapping, transformation)</a>) from the natural numbers (<a href="../chapters/sets.html#def-natural-numbers">Definition: Natural numbers (our convention)</a>) to the real numbers (<a href="../chapters/sets.html#def-real-numbers">Definition: Real numbers</a>). If <span class="math inline">\(f(n) = O(h(n))\)</span> and <span class="math inline">\(g(n) = O(h(n))\)</span> (<a href="#/def-big-o" class="quarto-xref">Definition&nbsp;5</a>), then <span class="math inline">\(f(n) + g(n) = O(h(n))\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 5 (Sums of big-O functions)</strong></span> Let <span class="math inline">\(f\)</span>, <span class="math inline">\(g\)</span> and <span class="math inline">\(h\)</span> be functions (<a href="../chapters/functional-programming.html#def-function">Definition: Function, map, mapping, transformation</a>) from the natural numbers (<a href="../chapters/sets.html#def-natural-numbers">Definition: Natural numbers (our convention)</a>) to the real numbers (<a href="../chapters/sets.html#def-real-numbers">Definition: Real numbers</a>). If <span class="math inline">\(f(n) = O(h(n))\)</span> and <span class="math inline">\(g(n) = O(h(n))\)</span> (<a href="#/def-big-o" class="quarto-xref">Definition&nbsp;5</a>), then <span class="math inline">\(f(n) + g(n) = O(h(n))\)</span>.</p>
 </div>
 </section></section>
 <section>
@@ -943,7 +943,7 @@ T(n) = \mathopen{}\left\lfloor n / 2\right\rfloor\mathclose{} + 1,
 <section class="slide level2">
 
 <div id="def-factorial" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Factorial)</strong></span> For a natural number (<a href="../chapters/sets.html#def-natural-numbers">Definition: Natural numbers (our convention)</a>) <span class="math inline">\(n\)</span>, the <strong>factorial</strong> of <span class="math inline">\(n\)</span> <span class="citation" data-cites="wikipedia_factorial">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026c</a>)</span>, written <span class="math inline">\(n!\)</span>, is the product <span class="math inline">\(1 \cdot 2 \cdots n\)</span> of the natural numbers from 1 to <span class="math inline">\(n\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 10 (Factorial)</strong></span> For a <a href="../number-systems.html#def-nonnegative-integers">non-negative integer</a> <span class="math inline">\(n\)</span>, the <strong>factorial</strong> of <span class="math inline">\(n\)</span> <span class="citation" data-cites="wikipedia_factorial">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026c</a>)</span>, written <span class="math inline">\({{n}!}\)</span>, is <span class="math inline">\(1 \cdot 2 \cdots n\)</span>, the <a href="../chapters/sets.html#def-natural-numbers">natural numbers</a> from 1 to <span class="math inline">\(n\)</span> multiplied together. For <span class="math inline">\(n = 0\)</span> there is nothing to multiply, and <span class="math inline">\({{0}!} = 1\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1312,7 +1312,7 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"\u003ci class=\"fas fa-gear\">\u003c/i>","content":"\u003cul class=\"slide-menu-items\">\n\u003cli class=\"slide-tool-item active\" data-item=\"0\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\">\u003ckbd>f\u003c/kbd> Fullscreen\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"1\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\">\u003ckbd>s\u003c/kbd> Speaker View\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"2\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\">\u003ckbd>o\u003c/kbd> Slide Overview\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"3\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\">\u003ckbd>e\u003c/kbd> PDF Export Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"4\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\">\u003ckbd>r\u003c/kbd> Scroll View Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"5\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\">\u003ckbd>?\u003c/kbd> Keyboard Help\u003c/a>\u003c/li>\n\u003c/ul>"}],"openButton":true,"openButtonLabel":"Slide menu"},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -1492,6 +1492,51 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
         ]
       });
     </script>
+    <script>
+    // Put each folded code cell inside the tab it belongs to.
+    // Quarto hoists the `details.code-fold` of a cross-referenced figure out of the figure,
+    // so an R and a Python tab end up with their folds stacked above the whole figure.
+    // For every language tabset, take the run of folds immediately before it (or before the figure
+    // that holds it), match each fold to a tab by language, and move it to the top of that tab.
+    // The selectors cover both the website tabsets (Bootstrap) and the slide tabsets (tabby).
+    document.querySelectorAll("div.panel-tabset").forEach(function (tabset) {
+      var anchor = tabset.closest("div.quarto-float") || tabset;
+      var panes = Array.prototype.slice.call(tabset.querySelectorAll(":scope > .tab-content > div"));
+      var tabs = Array.prototype.slice.call(tabset.querySelectorAll(":scope > ul > li > a"));
+      var folds = [];
+      var node = anchor.previousElementSibling;
+      while (node && node.matches("details.code-fold")) {
+        folds.unshift(node);
+        node = node.previousElementSibling;
+      }
+      if (folds.length === 0 || folds.length !== panes.length || tabs.length !== panes.length) {
+        return;
+      }
+      var language = function (fold) {
+        var code = fold.querySelector("pre.sourceCode");
+        var found = code && Array.prototype.find.call(code.classList, function (name) {
+          return name !== "sourceCode" && name !== "downlit" && name !== "code-with-copy";
+        });
+        return found ? found.toLowerCase() : "";
+      };
+      var used = {};
+      var unused = function () {
+        return tabs.findIndex(function (tab, j) {
+          return !used[j];
+        });
+      };
+      folds.forEach(function (fold) {
+        var index = tabs.findIndex(function (tab, j) {
+          return !used[j] && tab.textContent.trim().toLowerCase() === language(fold);
+        });
+        if (index < 0) {
+          index = unused();
+        }
+        used[index] = true;
+        panes[index].insertBefore(fold, panes[index].firstChild);
+      });
+    });
+    </script>
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
@@ -1567,7 +1612,8 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
           // Inspect non-navigation links and adorn them if external
-         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          window.quartoDecorateExternalLinks = function (root) {
+         var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
           for (var i=0; i<links.length; i++) {
             const link = links[i];
             if (!isInternal(link.href)) {
@@ -1576,8 +1622,69 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
               if (link.dataset.originalHref !== undefined) {
                 link.href = link.dataset.originalHref;
               }
+              if (!link.classList.contains('no-external-icon')) {
+              }
             }
           }
+          };
+          window.quartoDecorateExternalLinks(window.document);
+        // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+        // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+        const hideOnEscAndFocusOut = {
+          name: 'hideOnEscAndFocusOut',
+          defaultValue: true,
+          fn(instance) {
+            const dismiss = () => {
+              // A show scheduled by the trigger delay would otherwise reopen it
+              instance.clearDelayTimeouts();
+              instance.hide();
+            };
+            const onKeyDown = (event) => {
+              if (event.key !== 'Escape') {
+                return;
+              }
+              // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+              // except an open reveal.js slide menu, which Esc should close too.
+              // The menu handles keys only when its keyboard option is on.
+              const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+                window.Reveal.getConfig().menu?.keyboard !== false;
+              if (!menuHandlesEsc) {
+                event.stopPropagation();
+              }
+              if (instance.popper.contains(window.document.activeElement)) {
+                // Disabled while refocusing so the focus trigger does not reopen it
+                instance.disable();
+                instance.reference.focus();
+                instance.enable();
+              }
+              dismiss();
+            };
+            const onFocusOut = (event) => {
+              const target = event.relatedTarget;
+              if (target && !instance.reference.contains(target) &&
+                  !instance.popper.contains(target)) {
+                dismiss();
+              }
+            };
+            // On the trigger too: a click trigger (code-annotations: select) has no
+            // blur handling. Attached for the instance's lifetime so leaving the
+            // trigger also cancels a show still pending on the trigger delay.
+            instance.reference.addEventListener('focusout', onFocusOut);
+            return {
+              onShow() {
+                window.document.addEventListener('keydown', onKeyDown, true);
+                instance.popper.addEventListener('focusout', onFocusOut);
+              },
+              onHide() {
+                window.document.removeEventListener('keydown', onKeyDown, true);
+                instance.popper.removeEventListener('focusout', onFocusOut);
+              },
+              onDestroy() {
+                instance.reference.removeEventListener('focusout', onFocusOut);
+              },
+            };
+          },
+        };
         function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
           const config = {
             allowHTML: true,
@@ -1591,6 +1698,7 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
             interactiveBorder: 10,
             theme: 'light-border',
             placement: 'bottom-start',
+            plugins: [hideOnEscAndFocusOut],
           };
           if (contentFn) {
             config.content = contentFn;
