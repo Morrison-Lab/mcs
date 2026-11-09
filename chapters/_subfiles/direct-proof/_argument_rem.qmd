@@ -3,7 +3,7 @@
 
 The premise and conclusion of a conditional $P \Rightarrow Q$ (@rem-implies-terms)
 are its parts $P$ and $Q$.
-The premises and conclusion of an argument (@def-argument) are whole propositions:
+The premises and conclusion of an [argument](#def-logical-argument) are whole propositions:
 in argument 1 of @exr-valid-arguments,
 the premises are $P \Rightarrow Q$ and $P$, and the conclusion is $Q$.
 

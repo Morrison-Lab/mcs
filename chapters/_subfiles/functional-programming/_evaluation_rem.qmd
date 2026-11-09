@@ -1,0 +1,19 @@
+::: {#rem-evaluation}
+#### How Racket evaluates an application
+
+To **evaluate** an application `(f e1 ... en)` (@def-racket-expression),
+Racket evaluates each operand `e1`, ..., `en` to a value,
+then applies `f` to those values.
+In part 1 of @exr-evaluate-nested:
+
+```text
+(* (+ 1 2) (- 10 4))
+= (* 3 (- 10 4))
+= (* 3 6)
+= 18
+```
+
+Each `=` replaces one application by its value,
+and the evaluation ends with a value, which cannot be simplified further.
+
+:::

@@ -1,0 +1,17 @@
+:::{#def-direct-proof}
+#### Direct proof
+
+A **direct proof**
+[@wikipedia_direct_proof]
+of a [proposition](#def-proposition) $Q$
+starts from the assumptions that $Q$ is stated under, if any,
+and reaches $Q$ through a chain of steps,
+each of which applies a definition,
+a previously proved [result](#def-result),
+or one rule of logic or algebra
+to the assumptions or to earlier steps.
+A direct proof never assumes that $Q$ is false;
+compare [proof by contradiction](#def-proof-by-contradiction),
+which does.
+
+:::

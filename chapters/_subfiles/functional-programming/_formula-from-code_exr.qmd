@@ -1,0 +1,15 @@
+::: {#exr-formula-from-code}
+#### Reading a definition
+
+This Racket code defines a function named `h`:
+
+```racket
+(define (h x)
+  (- (* x x) (* 2 x)))
+```
+
+1. Write $h(x)$ as a formula in ordinary mathematical notation.
+2. What does `(h 5)` return?
+3. What does `(h (h 3))` return?
+
+:::

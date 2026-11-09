@@ -1,0 +1,22 @@
+:::{#def-disjoint-sets}
+#### Disjoint sets
+
+Two [sets](#def-set) $A$ and $B$ are **disjoint**
+if their [intersection](#def-intersection) is the [empty set](#def-empty-set):
+
+$$A \cap B = \emptyset$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-disjoint-sets}
+#### Two disjoint sets of die rolls
+
+For the die rolls $D = \set{1, 2, 3, 4, 5, 6}$ ([sets of die rolls](#exm-set)),
+the sets $\set{1, 2}$ and $\set{5, 6}$ are disjoint:
+no roll is in both.
+The sets $\set{2, 4, 6}$ and $\set{1, 2}$ are not,
+because $2$ is in both.
+
+:::

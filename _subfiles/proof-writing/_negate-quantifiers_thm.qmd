@@ -1,0 +1,33 @@
+:::{#thm-negate-quantifiers}
+#### De Morgan's laws for quantifiers
+
+For a [set](#def-set) $S$ and a [predicate](#def-predicate) $P(x)$
+whose [domain of discourse](#def-domain-of-discourse) is $S$:
+
+$$
+\ba
+\neg (\forall x \in S, P(x)) &\equiv \exists x \in S, \neg P(x) \\
+\neg (\exists x \in S, P(x)) &\equiv \forall x \in S, \neg P(x)
+\ea
+$$
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+::: proof
+
+1. By the definition of the [universal quantifier](#def-universal-quantifier),
+   $\forall x \in S, P(x)$ is false
+   exactly when $P(x)$ is false for at least one $x$ in $S$.
+   By the definition of the [existential quantifier](#def-existential-quantifier),
+   that is exactly when $\exists x \in S, \neg P(x)$ is true.
+2. By the definition of the existential quantifier,
+   $\exists x \in S, P(x)$ is false
+   exactly when $P(x)$ is false for every $x$ in $S$.
+   By the definition of the universal quantifier,
+   that is exactly when $\forall x \in S, \neg P(x)$ is true.
+
+:::
+
+:::

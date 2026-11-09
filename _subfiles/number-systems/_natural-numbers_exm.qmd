@@ -1,0 +1,10 @@
+:::{#exm-natural-numbers}
+#### Natural numbers in a data analysis
+
+- Observation indices start at $1$,
+  so we write $i \in \cb{1, \ldots, n}$ with $n \in \Nat$.
+- A count outcome, such as the number of hospital visits in a year,
+  can be $0$,
+  so the set of values it can take is $\Nat_0$, not $\Nat$.
+
+:::

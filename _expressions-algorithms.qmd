@@ -1,0 +1,112 @@
+{{< include latex-macros/macros.qmd >}}
+
+::: remark
+
+A function can be written down as an expression and computed by an algorithm.
+This page defines expressions, which write down the [functions](functions.qmd)
+in the Morrison Lab's probability and statistics notes,
+the parse trees of expressions, and algorithms, which compute those functions.
+
+:::
+
+# Expressions
+
+{{< include _subfiles/expressions-algorithms/_expression_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/expressions-algorithms/_denotes_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/expressions-algorithms/_expression_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/expressions-algorithms/_closed-form-expression_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/expressions-algorithms/_closed-form-expression_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/expressions-algorithms/_closed-form-solution_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/expressions-algorithms/_closed-form-solution_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/expressions-algorithms/_parse-tree_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/expressions-algorithms/_parse-tree_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/expressions-algorithms/_parse-trees_fig.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/expressions-algorithms/_expression-parse-tree_rem.qmd >}}
+
+# Algorithms
+
+{{< include _subfiles/expressions-algorithms/_algorithm_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/expressions-algorithms/_computes_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/expressions-algorithms/_algorithm_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/expressions-algorithms/_algorithm-scope_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/expressions-algorithms/_function-expression-algorithm_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/expressions-algorithms/_no-known-algorithm_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/expressions-algorithms/_no-known-algorithm_exm.qmd >}}
+
+# Exercises
+
+{{< include _subfiles/expressions-algorithms/_expression-or-algorithm_exr.qmd >}}
+
+{{< include _subfiles/expressions-algorithms/_expression-or-algorithm_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/expressions-algorithms/_expression-or-algorithm-part2_exr.qmd >}}
+
+{{< include _subfiles/expressions-algorithms/_expression-or-algorithm-part2_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/expressions-algorithms/_expression-or-algorithm-part3_exr.qmd >}}
+
+{{< include _subfiles/expressions-algorithms/_expression-or-algorithm-part3_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/expressions-algorithms/_expression-or-algorithm-part4_exr.qmd >}}
+
+{{< include _subfiles/expressions-algorithms/_expression-or-algorithm-part4_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/expressions-algorithms/_expression-or-algorithm-part5_exr.qmd >}}
+
+{{< include _subfiles/expressions-algorithms/_expression-or-algorithm-part5_sol.qmd >}}

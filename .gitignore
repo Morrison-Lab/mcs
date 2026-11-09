@@ -3,12 +3,15 @@
 /_site/
 /_freeze/
 *.pdf
+# The printable ABCD card the syllabus links; images/abcd-card.py draws it.
+!images/abcd-card.pdf
 *.docx
 *.epub
 *.html
 # Source HTML partials we intentionally track (not build output).
 !qwt-reveal-toggle.html
 !theme-picker.html
+!tabset-code-in-tabs.html
 !page-navigation.html
 !anchor-landing.html
 *_files/

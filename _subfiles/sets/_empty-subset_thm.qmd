@@ -1,0 +1,15 @@
+:::{#thm-empty-subset}
+#### The empty set is a subset of every set
+
+For every set $A$, $\emptyset \subseteq A$.
+
+:::
+
+::: proof
+
+By @def-subset, $\emptyset \subseteq A$ fails only if
+some element of $\emptyset$ is not in $A$.
+The [empty set](#def-empty-set) has no elements,
+so no such element exists.
+
+:::

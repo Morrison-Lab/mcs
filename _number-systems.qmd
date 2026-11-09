@@ -1,0 +1,117 @@
+{{< include latex-macros/macros.qmd >}}
+
+::: remark
+
+Probability and statistics count with the integers and natural numbers
+and measure with the real numbers.
+This page defines those number systems.
+It also defines the words that sort their members:
+even and odd integers, and rational and irrational real numbers.
+Finally, it defines divisibility, [primes](#def-prime) and congruence,
+and the [factorial](#def-factorial) of a [non-negative integer](#def-nonnegative-integers).
+
+:::
+
+# Natural numbers {#sec-notation-naturals}
+
+{{< include _subfiles/number-systems/_naturals-below-three_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_naturals-below-three_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_integers_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_integers_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_even-odd_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_even-odd_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_natural-numbers_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_nonnegative-integers_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_natural-numbers_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_natural-numbers-other-conventions_note.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_factorial_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_factorial_exm.qmd >}}
+
+# Divisibility, primes and congruence {#sec-number-systems-divisibility}
+
+{{< include _subfiles/number-systems/_divides_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_divides_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_prime_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_prime_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_congruence_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_congruence_exm.qmd >}}
+
+# Rational, real, and irrational numbers {#sec-notation-reals}
+
+{{< include _subfiles/number-systems/_rational-numbers_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_rational-numbers_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_real-numbers_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_real-numbers_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_floor_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_floor_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_irrational-numbers_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_irrational-numbers_exm.qmd >}}

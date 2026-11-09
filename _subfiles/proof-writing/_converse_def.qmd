@@ -1,0 +1,9 @@
+:::{#def-converse}
+#### Converse
+
+The **converse**
+[@wikipedia_converse_logic]
+of the proposition "if $P$, then $Q$"
+is the proposition "if $Q$, then $P$".
+
+:::

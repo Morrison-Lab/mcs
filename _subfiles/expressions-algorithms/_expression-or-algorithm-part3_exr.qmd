@@ -1,0 +1,9 @@
+::: {#exr-expression-or-algorithm-part3}
+
+#### Is an expression an algorithm? (part 3)
+
+Use the setup of @exr-expression-or-algorithm.
+
+Does the [expression](#def-expression) $a x^2 + b x + c$ tell you which arithmetic steps to carry out?
+
+:::

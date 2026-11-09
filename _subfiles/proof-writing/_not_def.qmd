@@ -1,0 +1,10 @@
+:::{#def-not}
+#### Not
+
+The logical connective (@def-logical-connective) **not**
+[@wikipedia_negation]
+is written $\neg P$ ("not $P$");
+it is true when $P$ is false,
+and false when $P$ is true.
+
+:::

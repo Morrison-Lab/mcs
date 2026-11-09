@@ -1,0 +1,21 @@
+:::{#thm-simplification}
+#### Simplification
+
+For [propositions](#def-proposition) $P$ and $Q$,
+this is a [rule of inference](#def-rule-of-inference):
+
+$$
+\frac{P \land Q}{P}
+$$
+
+:::
+
+::: proof
+
+Suppose the [premise](#def-premise) is true.
+By the definition of [and](#def-and),
+$P \land Q$ is true
+only if $P$ and $Q$ are both true.
+So the [conclusion](#def-conclusion) $P$ is true.
+
+:::

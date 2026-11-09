@@ -1,0 +1,8 @@
+:::{#def-conclusion}
+#### Conclusion
+
+The **conclusion** of a [logical argument](#def-logical-argument)
+$P_1, \ldots, P_n \therefore Q$
+is the [proposition](#def-proposition) $Q$.
+
+:::

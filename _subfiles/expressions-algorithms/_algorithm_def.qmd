@@ -1,0 +1,9 @@
+:::{#def-algorithm}
+#### Algorithm
+
+An **algorithm**
+[@wikipedia_algorithm]
+is a finite list of unambiguous steps that,
+applied to any valid input, halts and returns an output.
+
+:::

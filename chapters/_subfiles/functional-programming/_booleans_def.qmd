@@ -1,0 +1,9 @@
+::: {#def-booleans}
+#### True and false in Racket
+
+Racket writes the two truth values as `#t` (true) and `#f` (false).
+A comparison such as `(< 4 5)` or `(= 3 7)` returns one of them,
+and `and`, `or` and `not` combine them:
+`(and (< 1 2) (< 3 2))` returns `#f`.
+
+:::

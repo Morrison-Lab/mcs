@@ -1,0 +1,69 @@
+::: {#fig-composition}
+
+```{r}
+#| label: composition-alt
+#| include: false
+fig_alt <- paste(
+  "Two parabolas over x from -3 to 3.",
+  "The curve for f of g of x has its lowest point, 0, at x = -1.",
+  "The curve for g of f of x has its lowest point, 1, at x = 0.",
+  "The two curves cross at x = 0, where both equal 1.",
+  "At x = 2 the first curve is at 9 and the second is at 5,",
+  "and both points are marked."
+)
+```
+
+```{r}
+#| label: composition-plot
+#| fig-alt: !expr fig_alt
+x_grid <- seq(-3, 3, length.out = 241)
+fg_label <- "f(g(x)) = (x + 1)^2"
+gf_label <- "g(f(x)) = x^2 + 1"
+compositions <- data.frame(
+  x = rep(x_grid, 2),
+  composition = rep(c(fg_label, gf_label), each = length(x_grid)),
+  value = c((x_grid + 1)^2, x_grid^2 + 1)
+)
+at_two <- data.frame(
+  x = 2,
+  composition = c(fg_label, gf_label),
+  value = c(9, 5)
+)
+
+composition_plot <- ggplot2::ggplot() +
+  ggplot2::geom_line(
+    data = compositions,
+    ggplot2::aes(x = x, y = value, colour = composition)
+  ) +
+  ggplot2::geom_point(
+    data = at_two,
+    ggplot2::aes(x = x, y = value, colour = composition),
+    size = 3
+  ) +
+  ggplot2::geom_text(
+    data = at_two,
+    ggplot2::aes(x = x, y = value, label = value),
+    nudge_x = -0.3,
+    nudge_y = 0.5
+  ) +
+  ggplot2::scale_colour_manual(values = c("#0072B2", "#D55E00")) +
+  ggplot2::labs(x = "Input, x", y = "Output, value", colour = NULL) +
+  ggplot2::theme_minimal() +
+  ggplot2::theme(legend.position = "bottom")
+
+if (knitr::is_html_output()) {
+  htmltools::div(
+    role = "img",
+    `aria-label` = fig_alt,
+    plotly::ggplotly(composition_plot) |>
+      plotly::layout(legend = list(orientation = "h", y = -0.2))
+  )
+} else {
+  composition_plot
+}
+```
+
+The [compositions](#def-composition) $f \circ g$ and $g \circ f$ of @exm-composition are different [functions](#def-function).
+At $x = 2$ they take the [values](#def-value) $9$ and $5$.
+
+:::

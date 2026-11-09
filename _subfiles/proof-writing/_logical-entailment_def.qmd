@@ -1,0 +1,15 @@
+:::{#def-logical-entailment}
+#### Logical entailment, logical consequence, deductive consequence
+
+Propositions or predicates $\dsn{P}$
+(@def-proposition, @def-predicate)
+**logically entail**
+[@wikipedia_logical_consequence]
+a proposition or predicate $Q$
+when every choice of values for their variables
+that makes all of $\dsn{P}$ true
+also makes $Q$ true.
+Then $Q$ is a **logical consequence**, or **deductive consequence**,
+of $\dsn{P}$.
+
+:::

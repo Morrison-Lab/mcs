@@ -1,0 +1,25 @@
+:::{#exm-derivation}
+#### A derivation with equalities and inequalities
+
+For every real number $x$:
+
+$$
+\ba
+(x + 1)^2
+&= x^2 + 2x + 1
+&& \text{(square of a sum)}
+\\
+&\ge 2x + 1
+&& \text{(} x^2 \ge 0 \text{)}
+\\
+&> 2x
+&& \text{(} 1 > 0 \text{)}
+\ea
+$$
+
+The first step uses the [square of a sum](algebra.qmd#thm-square-of-a-sum).
+The steps are $=$, $\ge$, and $>$,
+so the derivation shows $(x + 1)^2 > 2x$.
+For example, with $x = 3$: $(3 + 1)^2 = 16$, and $16 > 6 = 2 \cd 3$.
+
+:::

@@ -1,0 +1,230 @@
+{{< include latex-macros/macros.qmd >}}
+
+::: remark
+
+Random variables, densities, and measures are functions.
+This page collects the definitions of functions, sequences, and countable sets
+that the Morrison Lab's probability and statistics notes build on.
+The functions here go between the sets defined on the [Sets](sets.qmd) page.
+
+:::
+
+[]{#functions}
+
+{{< include _subfiles/functions/_function_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_function_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_argument_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_argument_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_value_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_value_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_relation_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_domain_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_codomain_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_image_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_preimage_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_preimage_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_preimage_fig.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_range_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_range_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_image-range_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_domain-codomain-image_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_graph_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_graph_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_graph-three-points_fig.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_doubling-die_fig.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_graph-real-function_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_graph-real-function_fig.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_function-as-set-of-pairs_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_composition_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_composition_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_composition_fig.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_inverse-function_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_inverse-function_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_inverse-function_fig.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_not-invertible_fig.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_elementwise-function_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_elementwise-function_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_elementwise-function-notation_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_operator_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_operator_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_operator_rem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_functional_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_functional_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_sequence_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_sequence_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_sequences_fig.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_finite-sequence_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_closed-under_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_closed-under_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_logistic-function_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_logistic-function_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_logistic-function_fig.qmd >}}
+
+# Countable sets
+
+{{< include _subfiles/functions/_finite-set_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_finite-set_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_infinite-set_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_countable-set_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_countably-infinite_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_countable-set_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functions/_interval-uncountable_thm.qmd >}}

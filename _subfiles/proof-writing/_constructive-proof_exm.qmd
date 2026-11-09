@@ -1,0 +1,13 @@
+:::{#exm-constructive-proof}
+#### A constructive proof
+
+Claim: there are [integers](number-systems.qmd#def-integers) $m$ and $n$
+with $m + n = 1$.
+
+Proof: take $m = 0$ and $n = 1$.
+Then $m + n = 0 + 1 = 1$.
+
+This [proof](#def-proof) is a [constructive proof](#def-constructive-proof),
+since it names an [integer](number-systems.qmd#def-integers) for each of the two [existential quantifiers](#def-existential-quantifier).
+
+:::

@@ -24,10 +24,11 @@ the template for a direct proof,
 and the ideas of proof by cases and "without loss of generality" come from those notes;
 the exercises are new.
 
-The definitions of logical entailment, the integers, even and odd integers,
-and proof are included from the
-[mathematics prerequisites](https://morrison-lab.github.io/mds/) notes,
-so they read the same in both places.
+The definitions of logical entailment and proof are on the
+[proof writing](../proof-writing.qmd) page,
+and those of the integers and of even and odd integers are on the
+[number systems](../number-systems.qmd) page.
+The other data science notes link to both pages.
 :::
 
 # Rules of inference {#sec-inference}
@@ -40,7 +41,7 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/direct-proof/_argument_def.qmd >}}
+{{< include ../_subfiles/proof-writing/_logical-argument_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -48,7 +49,7 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/proof-writing/_def-logical-entailment.qmd >}}
+{{< include ../_subfiles/proof-writing/_logical-entailment_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -56,7 +57,7 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/direct-proof/_rule-of-inference_def.qmd >}}
+{{< include ../_subfiles/proof-writing/_rule-of-inference_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -84,19 +85,19 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/number-systems/_def-integers.qmd >}}
+{{< include ../_subfiles/number-systems/_integers_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/number-systems/_exm-integers.qmd >}}
+{{< include ../_subfiles/number-systems/_integers_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/number-systems/_def-even-odd.qmd >}}
+{{< include ../_subfiles/number-systems/_even-odd_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/number-systems/_exm-even-odd.qmd >}}
+{{< include ../_subfiles/number-systems/_even-odd_exm.qmd >}}
 
 {{< slidebreak >}}
 
@@ -108,7 +109,7 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/direct-proof/_divides_def.qmd >}}
+{{< include ../_subfiles/number-systems/_divides_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -128,7 +129,7 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/proof-writing/_def-proof.qmd >}}
+{{< include ../_subfiles/proof-writing/_proof_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -136,7 +137,7 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/direct-proof/_direct-proof_def.qmd >}}
+{{< include ../_subfiles/proof-writing/_direct-proof_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -164,7 +165,7 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/direct-proof/_proof-by-cases_def.qmd >}}
+{{< include ../_subfiles/proof-writing/_proof-by-cases_def.qmd >}}
 
 {{< slidebreak >}}
 

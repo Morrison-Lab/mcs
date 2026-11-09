@@ -1,0 +1,11 @@
+:::{#exm-double-negation}
+#### Removing a double negation
+<!-- no-figure: a one-line rewording; nothing to plot -->
+
+Let $P$ be the [proposition](#def-proposition) "$7$ is [odd](number-systems.qmd#def-odd)".
+Then $\neg \neg P$ is "it is not the case that $7$ is not odd".
+By [double negation](#thm-double-negation),
+$\neg \neg P$ says the same thing as $P$:
+$7$ is odd.
+
+:::

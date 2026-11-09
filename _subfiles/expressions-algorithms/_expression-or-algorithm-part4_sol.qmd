@@ -1,0 +1,8 @@
+::: {#sol-expression-or-algorithm-part4}
+
+Precedence resolves how the symbols group:
+$a x^2 + b x + c$ groups into three parts added together, with $x^2$ evaluated before the multiplication by $a$,
+and that grouping is a [tree](#def-parse-tree).
+Precedence is a rule for reading the [expression](#def-expression), not a step in an [algorithm](#def-algorithm) that evaluates it.
+
+:::

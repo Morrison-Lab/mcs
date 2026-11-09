@@ -1,0 +1,18 @@
+::: {#exm-substitution}
+#### Replacing a parameter by its argument
+
+With `h` from @exr-formula-from-code, @def-racket-define evaluates `(h 5)` in four steps:
+
+```text
+(h 5)
+= (- (* 5 5) (* 2 5))
+= (- 25 (* 2 5))
+= (- 25 10)
+= 15
+```
+
+The first step replaces `x` by 5 in the body of `h`,
+just as computing $h(5)$ replaces $x$ by 5 in $x^2 - 2x$.
+Each later step replaces one application by its value (@rem-evaluation).
+
+:::

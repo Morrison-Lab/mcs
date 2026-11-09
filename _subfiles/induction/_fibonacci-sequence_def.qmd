@@ -1,0 +1,10 @@
+:::{#def-fibonacci-sequence}
+#### Fibonacci sequence
+
+The **Fibonacci sequence** $F_1, F_2, \ldots$
+[@wikipedia_fibonacci_sequence]
+is the [recursively defined sequence](#def-recursive-sequence) with $m = 2$,
+initial [terms](functions.qmd#def-sequence-term) $F_1 = 1$ and $F_2 = 1$,
+and recurrence $F_n = F_{n-1} + F_{n-2}$ for every [integer](number-systems.qmd#def-integers) $n \ge 3$.
+
+:::

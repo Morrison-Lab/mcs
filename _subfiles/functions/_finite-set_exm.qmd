@@ -1,0 +1,13 @@
+:::{#exm-finite-set}
+#### Finite and infinite sets
+
+- $\set{2, 4, 6}$ is finite, with $\abs{\set{2, 4, 6}} = 3$.
+- $\set{1, 1, 2} = \set{1, 2}$, so $\abs{\set{1, 1, 2}} = 2$:
+  a repeated listing does not count twice.
+- $\emptyset$ is finite, with $\abs{\emptyset} = 0$.
+- The natural numbers $\Nat = \set{1, 2, 3, \ldots}$ are infinite:
+  for any $n$, a list $\dsn{a}$ of natural numbers
+  misses the natural number $a_1 + \cdots + a_n + 1$,
+  which is larger than every number in the list.
+
+:::

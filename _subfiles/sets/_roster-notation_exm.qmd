@@ -1,0 +1,14 @@
+:::{#exm-roster-notation}
+#### Rosters of vowels and odd integers
+<!-- no-figure: a few written sets; nothing to plot -->
+
+In [roster notation](#def-roster-notation),
+the vowels of English are $\set{a, e, i, o, u}$,
+and the [odd integers](number-systems.qmd#def-odd) from $1$ to $99$
+are $\set{1, 3, 5, \ldots, 99}$,
+where the ellipsis stands for the odd integers from $7$ to $97$.
+Listing an element twice does not add an element:
+$\set{a, a, e}$ and $\set{a, e}$ are the same [set](#def-set),
+since they have the same elements.
+
+:::

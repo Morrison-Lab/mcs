@@ -1,0 +1,7 @@
+:::{#def-disproof}
+#### Disproof
+
+A **disproof** of a [proposition](#def-proposition) $P$
+is a [proof](#def-proof) of its [negation](#def-not), $\neg P$.
+
+:::

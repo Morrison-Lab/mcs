@@ -1,0 +1,11 @@
+::: {#rem-running-racket}
+#### Running Racket
+
+This course writes its programs in [Racket](https://racket-lang.org/),
+a programming language that grew out of Scheme, a dialect of Lisp.
+Racket comes with DrRacket, the program you use to write and run Racket code,
+and Lab 1 walks through using it.
+Each Racket file in this course starts with the line `#lang racket`.
+The [Racket Guide](https://docs.racket-lang.org/guide/) is the reference for anything these notes do not cover.
+
+:::

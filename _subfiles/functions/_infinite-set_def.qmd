@@ -1,0 +1,7 @@
+:::{#def-infinite-set}
+#### Infinite set
+
+A set that is not finite (@def-finite-set) is **infinite**
+[@wikipedia_infinite_set].
+
+:::

@@ -1,0 +1,12 @@
+::: {#exm-process-notation}
+
+#### Reading $X_t(\omega)$
+
+Let $X_t$ be the position of a particle at time $t \ge 0$.
+Then $X_3$ is the random position at time 3,
+and $X_3(\omega)$ is its value when the experiment's [outcome](https://morrison-lab.github.io/pds/probability-basics.html#def-experiment-outcome) is $\omega$.
+Holding $\omega$ fixed and letting $t$ vary gives the particle's whole path for that outcome.
+A source that writes $X(t, \omega)$ means the same thing,
+with both arguments in parentheses.
+
+:::

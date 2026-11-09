@@ -1,0 +1,21 @@
+:::{#def-strict-superset}
+#### Strict superset
+
+A set $B$ is a **strict superset** of a set $A$,
+written $B \supsetneq A$,
+if $B$ is a [superset](#def-superset) of $A$
+and $B \neq A$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-strict-superset-subset}
+#### Strict superset and strict subset
+
+$B \supsetneq A$ means the same thing as $A \subsetneq B$
+([strict subset](#def-strict-subset)).
+For example, $\set{1, 2, 3} \supsetneq \set{1, 3}$,
+because $\set{1, 2, 3}$ contains $2$ and $\set{1, 3}$ does not.
+
+:::

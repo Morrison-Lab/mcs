@@ -1,0 +1,19 @@
+::: {#def-racket-define}
+#### Defining a function in Racket
+
+The Racket definition
+
+```racket
+(define (f x1 ... xn)
+  body)
+```
+
+defines a function named `f` with **parameters** `x1`, ..., `xn`:
+names that stand for its arguments (@def-argument).
+To evaluate an application `(f a1 ... an)`,
+Racket evaluates the arguments `a1`, ..., `an`,
+replaces each parameter in `body` by the value of its argument,
+and evaluates the result.
+The value of the application is the value (@def-value) of `f` at those arguments.
+
+:::

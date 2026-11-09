@@ -1,0 +1,13 @@
+:::{#exm-propositional-logic}
+#### $P$ and $P \Rightarrow Q$ entail $Q$
+
+Suppose $P$ is true and $P \Rightarrow Q$ is true.
+If $Q$ were false,
+then $P \Rightarrow Q$ would have a true $P$ and a false $Q$,
+so $P \Rightarrow Q$ would be false,
+which contradicts the assumption.
+So $Q$ is true.
+This holds whatever $P$ and $Q$ say,
+so $P$ and $P \Rightarrow Q$ [logically entail](#def-logical-entailment) $Q$.
+
+:::

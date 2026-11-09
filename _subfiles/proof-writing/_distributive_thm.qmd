@@ -1,0 +1,51 @@
+:::{#thm-distributive}
+#### Distributive laws for propositions
+
+For [propositions](#def-proposition) $A$, $B$ and $C$:
+
+$$
+\ba
+A \land (B \lor C) &\equiv (A \land B) \lor (A \land C) \\
+A \lor (B \land C) &\equiv (A \lor B) \land (A \lor C)
+\ea
+$$
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+::: proof
+
+By the definitions of [and](#def-and) and [or](#def-or),
+the [truth table](#def-truth-table) for the first law is:
+
+| $A$ | $B$ | $C$ | $A \land (B \lor C)$ | $(A \land B) \lor (A \land C)$ |
+|:---:|:---:|:---:|:---:|:---:|
+| T | T | T | T | T |
+| T | T | F | T | T |
+| T | F | T | T | T |
+| T | F | F | F | F |
+| F | T | T | F | F |
+| F | T | F | F | F |
+| F | F | T | F | F |
+| F | F | F | F | F |
+
+and for the second law:
+
+| $A$ | $B$ | $C$ | $A \lor (B \land C)$ | $(A \lor B) \land (A \lor C)$ |
+|:---:|:---:|:---:|:---:|:---:|
+| T | T | T | T | T |
+| T | T | F | T | T |
+| T | F | T | T | T |
+| T | F | F | T | T |
+| F | T | T | T | T |
+| F | T | F | F | F |
+| F | F | T | F | F |
+| F | F | F | F | F |
+
+In each table the last two columns match in every row,
+so each law is a [logical equivalence](#def-logically-equivalent).
+
+:::
+
+:::

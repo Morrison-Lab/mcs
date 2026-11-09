@@ -1,0 +1,24 @@
+:::{#def-empty-set}
+#### Empty set
+
+The **empty set**
+[@wikipedia_empty_set], denoted $\emptyset$,
+is the set that has no elements.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-empty-set-notation}
+#### Other notation for the empty set
+
+Other sources write $\set{}$ for $\emptyset$
+[@wikipedia_empty_set].
+Some sources call it the **null set**,
+but in measure theory a "null set" usually means a set of [measure zero](measures.qmd#def-measure-zero),
+which need not be empty.
+For example, the interval $[0, 0] = \set{0}$ has length $0 - 0 = 0$,
+so it is a null set in that sense,
+but it is not empty, because $0 \in \set{0}$.
+
+:::

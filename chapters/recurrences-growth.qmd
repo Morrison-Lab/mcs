@@ -144,7 +144,7 @@ The algorithms `pal` and `root` come from earlier chapters of these notes.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/growth-rates/_def-big-o.qmd >}}
+{{< include ../_subfiles/growth-rates/_big-o_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -160,7 +160,7 @@ The algorithms `pal` and `root` come from earlier chapters of these notes.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/growth-rates/_def-big-omega.qmd >}}
+{{< include ../_subfiles/growth-rates/_big-omega_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -168,7 +168,7 @@ The algorithms `pal` and `root` come from earlier chapters of these notes.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/growth-rates/_def-big-theta.qmd >}}
+{{< include ../_subfiles/growth-rates/_big-theta_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -212,7 +212,7 @@ The algorithms `pal` and `root` come from earlier chapters of these notes.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/recurrences-growth/_factorial_def.qmd >}}
+{{< include ../_subfiles/number-systems/_factorial_def.qmd >}}
 
 {{< slidebreak >}}
 

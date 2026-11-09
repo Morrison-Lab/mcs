@@ -1,0 +1,20 @@
+::: {#exr-next-id}
+#### Same call, different answer
+
+This Python code hands out ID numbers:
+
+```python
+count = 0
+
+def next_id():
+    global count
+    count = count + 1
+    return count
+```
+
+1. The program calls `next_id()` twice in a row.
+   What does each call return?
+2. Is there a mathematical function $f$ (@def-function) with no arguments
+   whose value is what `next_id()` returns every time it is called?
+
+:::

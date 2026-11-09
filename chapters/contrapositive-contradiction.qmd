@@ -33,13 +33,15 @@ These come from those notes:
 
 The exercises are new.
 
-The definitions of the contrapositive, proof by contrapositive, proof by contradiction,
-and rational and irrational numbers,
-their examples of a proof by contradiction and of rational and irrational numbers,
+The definitions of the contrapositive, proof by contrapositive and proof by contradiction,
+their example of a proof by contradiction,
 and the theorem that a conditional is equivalent to its contrapositive,
-are included from the
-[mathematics prerequisites](https://morrison-lab.github.io/mds/) notes,
-so they read the same in both places.
+are on the
+[proof writing](../proof-writing.qmd) page,
+and the definitions of rational and irrational numbers, with their examples,
+are on the
+[number systems](../number-systems.qmd) page.
+The other data science notes link to both pages.
 :::
 
 # Congruence modulo $n$ {#sec-congruence}
@@ -52,7 +54,7 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/contrapositive-contradiction/_congruence_def.qmd >}}
+{{< include ../_subfiles/number-systems/_congruence_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -72,7 +74,7 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/proof-writing/_def-contrapositive.qmd >}}
+{{< include ../_subfiles/proof-writing/_contrapositive_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -80,7 +82,7 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/proof-writing/_thm-contrapositive.qmd >}}
+{{< include ../_subfiles/proof-writing/_contrapositive_thm.qmd >}}
 
 {{< slidebreak >}}
 
@@ -88,7 +90,7 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/proof-writing/_def-proof-by-contrapositive.qmd >}}
+{{< include ../_subfiles/proof-writing/_proof-by-contrapositive_def.qmd >}}
 
 {{< slidebreak >}}
 
@@ -116,15 +118,15 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/proof-writing/_def-proof-by-contradiction.qmd >}}
+{{< include ../_subfiles/proof-writing/_proof-by-contradiction_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/proof-writing/_exm-proof-by-contradiction.qmd >}}
+{{< include ../_subfiles/proof-writing/_proof-by-contradiction_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include _subfiles/contrapositive-contradiction/_contradiction_thm.qmd >}}
+{{< include ../_subfiles/proof-writing/_contradiction-works_thm.qmd >}}
 
 {{< slidebreak >}}
 
@@ -160,19 +162,19 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/number-systems/_def-rational-numbers.qmd >}}
+{{< include ../_subfiles/number-systems/_rational-numbers_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/number-systems/_exm-rational-numbers.qmd >}}
+{{< include ../_subfiles/number-systems/_rational-numbers_exm.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/number-systems/_def-irrational-numbers.qmd >}}
+{{< include ../_subfiles/number-systems/_irrational-numbers_def.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include ../mds/_subfiles/number-systems/_exm-irrational-numbers.qmd >}}
+{{< include ../_subfiles/number-systems/_irrational-numbers_exm.qmd >}}
 
 {{< slidebreak >}}
 
@@ -196,7 +198,7 @@ so they read the same in both places.
 
 {{< slidebreak >}}
 
-{{< include _subfiles/contrapositive-contradiction/_prime_def.qmd >}}
+{{< include ../_subfiles/number-systems/_prime_def.qmd >}}
 
 {{< slidebreak >}}
 

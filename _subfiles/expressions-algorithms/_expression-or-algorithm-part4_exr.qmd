@@ -1,0 +1,9 @@
+::: {#exr-expression-or-algorithm-part4}
+
+#### Is an expression an algorithm? (part 4)
+
+Use the setup of @exr-expression-or-algorithm.
+
+What do the rules of precedence (PEMDAS) contribute to the [expression](#def-expression) $a x^2 + b x + c$?
+
+:::

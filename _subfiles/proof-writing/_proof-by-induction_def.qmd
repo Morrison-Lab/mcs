@@ -1,0 +1,21 @@
+:::{#def-proof-by-induction}
+#### Proof by induction
+
+Let $n_0$ be an [integer](number-systems.qmd#def-integers),
+and let $P(n)$ be a [predicate](proof-writing.qmd#def-predicate)
+about the integers $n \ge n_0$.
+A **proof by induction**
+[@wikipedia_mathematical_induction]
+on $n$
+shows that $P(n)$ holds for every integer $n \ge n_0$
+by showing two things:
+
+1. **Base case:** $P(n_0)$ holds.
+2. **Inductive step:** for every integer $n > n_0$,
+   if $P(n - 1)$ holds, then $P(n)$ holds.
+
+In the inductive step,
+the assumption that $P(n - 1)$ holds
+is called the **induction hypothesis**.
+
+:::

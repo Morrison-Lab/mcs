@@ -1,0 +1,26 @@
+:::{#exm-equivalent-cycle}
+#### Three equivalent statements
+<!-- no-figure: a short chain of implications; nothing to plot -->
+
+Let $n$ be an [integer](number-systems.qmd#def-integers),
+and let:
+
+- $P_1$ be "$n$ is [even](number-systems.qmd#def-even-odd)";
+- $P_2$ be "$n + 1$ is [odd](number-systems.qmd#def-odd)";
+- $P_3$ be "$n + 2$ is even".
+
+If $n = 2m$,
+then $n + 1 = 2m + 1$,
+so $P_1 \Rightarrow P_2$.
+If $n + 1 = 2m + 1$,
+then $n + 2 = 2(m + 1)$,
+so $P_2 \Rightarrow P_3$.
+If $n + 2 = 2m$,
+then $n = 2(m - 1)$,
+so $P_3 \Rightarrow P_1$.
+By [a cycle of conditionals](#thm-equivalent-cycle),
+the three [propositions](#def-proposition) are all true or all false.
+Three conditionals were enough,
+where checking each pair both ways would take six.
+
+:::

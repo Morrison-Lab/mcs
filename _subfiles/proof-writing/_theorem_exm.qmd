@@ -1,0 +1,24 @@
+:::{#exm-theorem}
+#### A corollary of a result
+
+@exm-proof proves the result
+"the sum of two even integers is even".
+A corollary follows with little extra work:
+the sum of three even integers $a$, $b$, and $c$ is even,
+because $a + b + c = (a + b) + c$,
+$a + b$ is even by that result,
+and applying the result again to the even integers $a + b$ and $c$
+shows that $(a + b) + c$ is even.
+For example,
+
+$$
+\begin{aligned}
+2 + 4 + 6 &= (2 + 4) + 6 \\
+&= 6 + 6 \\
+&= 12,
+\end{aligned}
+$$
+
+which is even.
+
+:::

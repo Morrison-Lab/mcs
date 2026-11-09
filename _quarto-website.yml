@@ -19,59 +19,105 @@ project:
 website:
   title: "Math for Computer Science"
   site-url: https://morrison-lab.github.io/mcs/
-  description: "Lecture notes for CSCI 201, math for computer science"
+  description: "Lecture notes for CSCI 201: Discrete Math and Functional Programming, as taught by Douglas Ezra Morrison at Western Washington University, Winter 2027"
   # https://quarto.org/docs/websites/website-llms.html --- use `llms-txt:`, not `llms:` (schema error)
   llms-txt: true
   page-footer:
-    center: "Built with [Quarto](https://quarto.org/)"
+    left:
+      - text: "Douglas Ezra Morrison, adapting materials by Kameron Decker Harris, Scott Wehrwein, and others as acknowledged throughout"
+    right:
+      - text: "Found a typo or error, or have a request or suggestion? Open an issue."
+        href: https://github.com/Morrison-Lab/mcs/issues/new/choose
   back-to-top-navigation: true
   # Previous/next links at the foot of each page follow the sidebar's order,
   # so page-navigation does nothing without the sidebar below.
   # https://quarto.org/docs/websites/website-navigation.html#page-navigation
   page-navigation: true
   reader-mode: true
+  # Quarto opens search on a bare "f" or "s" keyup, which also fires after
+  # Ctrl/Cmd-F (find in page) and Ctrl/Cmd-S (save). Keep only "/".
+  search:
+    keyboard-shortcut: ["/"]
   repo-url: https://github.com/Morrison-Lab/mcs
   repo-actions: [edit, issue, source]
   navbar:
     left:
       - text: "Home"
         href: index.qmd
-      - text: "Calendar"
-        href: chapters/calendar.qmd
-      - text: "Syllabus"
-        href: chapters/syllabus.qmd
-      - text: "Propositional Logic"
-        href: chapters/propositional-logic.qmd
-      - text: "Predicates and Quantifiers"
-        href: chapters/predicates-quantifiers.qmd
-      - text: "Logical Equivalence and Negation"
-        href: chapters/equivalence-negation.qmd
-      - text: "Inference and Direct Proof"
-        href: chapters/direct-proof.qmd
-      - text: "Contrapositive and Contradiction"
-        href: chapters/contrapositive-contradiction.qmd
-      - text: "Proving Non-Conditional Statements"
-        href: chapters/iff-existence-disproof.qmd
+      # Menus group the chapters by topic, as on the lab's public notes sites
+      # (rme, mds, sds); keep them in the sidebar's order and grouping.
+      - text: "Course Logistics"
+        menu:
+          - text: "Calendar (on the csci201 site)"
+            href: chapters/calendar.qmd
+          - text: "Syllabus (on the csci201 site)"
+            href: chapters/syllabus.qmd
+      - text: "Functional Programming"
+        href: chapters/functional-programming.qmd
+      - text: "Logic"
+        menu:
+          - text: "Propositional Logic"
+            href: chapters/propositional-logic.qmd
+          - text: "Predicates and Quantifiers"
+            href: chapters/predicates-quantifiers.qmd
+          - text: "Logical Equivalence and Negation"
+            href: chapters/equivalence-negation.qmd
+      - text: "Proofs"
+        menu:
+          - text: "Inference and Direct Proof"
+            href: chapters/direct-proof.qmd
+          - text: "Contrapositive and Contradiction"
+            href: chapters/contrapositive-contradiction.qmd
+          - text: "Proving Non-Conditional Statements"
+            href: chapters/iff-existence-disproof.qmd
       - text: "Sets"
-        href: chapters/sets.qmd
-      - text: "Proofs with Sets"
-        href: chapters/set-proofs.qmd
-      - text: "Induction"
-        href: chapters/induction.qmd
-      - text: "Loop Invariants"
-        href: chapters/loop-invariants.qmd
-      - text: "Recursion"
-        href: chapters/recursion.qmd
-      - text: "Recurrences and Growth"
-        href: chapters/recurrences-growth.qmd
-      - text: "Relations"
-        href: chapters/relations.qmd
-      - text: "Graphs"
-        href: chapters/graphs.qmd
-      - text: "Automata"
-        href: chapters/automata.qmd
-      - text: "Trees"
-        href: chapters/trees.qmd
+        menu:
+          - text: "Sets"
+            href: chapters/sets.qmd
+          - text: "Proofs with Sets"
+            href: chapters/set-proofs.qmd
+      - text: "Induction and Recursion"
+        menu:
+          - text: "Induction"
+            href: chapters/induction.qmd
+          - text: "Loop Invariants"
+            href: chapters/loop-invariants.qmd
+          - text: "Recursion"
+            href: chapters/recursion.qmd
+          - text: "Recurrences and Growth"
+            href: chapters/recurrences-growth.qmd
+      - text: "Discrete Structures"
+        menu:
+          - text: "Relations"
+            href: chapters/relations.qmd
+          - text: "Graphs"
+            href: chapters/graphs.qmd
+          - text: "Automata"
+            href: chapters/automata.qmd
+          - text: "Trees"
+            href: chapters/trees.qmd
+      # Reference pages for the shared math basics, which other sites link to
+      # (Morrison-Lab/mcs#60); keep them in the sidebar's order.
+      - text: "Math Reference"
+        menu:
+          - text: "Growth Rates"
+            href: growth-rates.qmd
+          - text: "Induction"
+            href: induction.qmd
+          - text: "Notation"
+            href: notation.qmd
+          - text: "Relations"
+            href: relations.qmd
+          - text: "Number Systems"
+            href: number-systems.qmd
+          - text: "Sets"
+            href: sets.qmd
+          - text: "Functions"
+            href: functions.qmd
+          - text: "Expressions and Algorithms"
+            href: expressions-algorithms.qmd
+          - text: "Proof Writing"
+            href: proof-writing.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mcs
@@ -86,28 +132,57 @@ website:
   # corrects that.
   sidebar:
     style: docked
+    # sections start folded, as in mds, pds and sds; the current page's section
+    # stays open (collapse-level 1 folds every depth, default 2 opens depth 1)
+    collapse-level: 1
     search: false # the navbar already has search
     contents:
       - text: "Home"
         href: index.qmd
-      - chapters/calendar.qmd
-      - chapters/syllabus.qmd
-      - chapters/propositional-logic.qmd
-      - chapters/predicates-quantifiers.qmd
-      - chapters/equivalence-negation.qmd
-      - chapters/direct-proof.qmd
-      - chapters/contrapositive-contradiction.qmd
-      - chapters/iff-existence-disproof.qmd
-      - chapters/sets.qmd
-      - chapters/set-proofs.qmd
-      - chapters/induction.qmd
-      - chapters/loop-invariants.qmd
-      - chapters/recursion.qmd
-      - chapters/recurrences-growth.qmd
-      - chapters/relations.qmd
-      - chapters/graphs.qmd
-      - chapters/automata.qmd
-      - chapters/trees.qmd
+      - section: "Course Logistics"
+        contents:
+          - text: "Calendar (on the csci201 site)"
+            href: chapters/calendar.qmd
+          - text: "Syllabus (on the csci201 site)"
+            href: chapters/syllabus.qmd
+      - chapters/functional-programming.qmd
+      - section: "Logic"
+        contents:
+          - chapters/propositional-logic.qmd
+          - chapters/predicates-quantifiers.qmd
+          - chapters/equivalence-negation.qmd
+      - section: "Proofs"
+        contents:
+          - chapters/direct-proof.qmd
+          - chapters/contrapositive-contradiction.qmd
+          - chapters/iff-existence-disproof.qmd
+      - section: "Sets"
+        contents:
+          - chapters/sets.qmd
+          - chapters/set-proofs.qmd
+      - section: "Induction and Recursion"
+        contents:
+          - chapters/induction.qmd
+          - chapters/loop-invariants.qmd
+          - chapters/recursion.qmd
+          - chapters/recurrences-growth.qmd
+      - section: "Discrete Structures"
+        contents:
+          - chapters/relations.qmd
+          - chapters/graphs.qmd
+          - chapters/automata.qmd
+          - chapters/trees.qmd
+      - section: "Math Reference"
+        contents:
+          - growth-rates.qmd
+          - induction.qmd
+          - notation.qmd
+          - relations.qmd
+          - number-systems.qmd
+          - sets.qmd
+          - functions.qmd
+          - expressions-algorithms.qmd
+          - proof-writing.qmd
 
 callouty-theorem:
   thm:
@@ -203,7 +278,7 @@ custom-callout:
 format:
   html:
     filters:
-      - sun123zxy/callouty-theorem
+      - Morrison-Lab/callouty-theorem
       - coatless-quarto/custom-callout
     theme:
       light: [cosmo, offwhite.scss]
@@ -214,6 +289,7 @@ format:
     # highlighting for the current page (needed because Home is in the
     # sidebar).
     include-after-body:
+      - tabset-code-in-tabs.html
       - page-navigation.html
       - anchor-landing.html
     css: styles.css
@@ -224,7 +300,7 @@ format:
     code-fold: true
     code-tools: true
     code-link: true
-    code-summary: "Show R code"
+    code-summary: "Show code"
     highlight-style: arrow
     lightbox: true
     link-external-icon: true
@@ -234,6 +310,9 @@ format:
     number-sections: true
     number-depth: 3
     df-print: paged
+    # Each page ends with a linked list of its #def- divs (def-list.lua, bundled
+    # with callouty-theorem 1.5.0). HTML only: decks and handouts are unchanged.
+    def-list: true
   docx:
     number-sections: true
     number-depth: 3
@@ -243,6 +322,7 @@ format:
     output-file: "{stem}-slides.html"
     theme: [simple, styles-reveal.scss]
     include-in-header: qwt-reveal-toggle.html
+    include-after-body: tabset-code-in-tabs.html
     slide-number: true
     chalkboard: false
     preview-links: auto
@@ -264,7 +344,7 @@ format:
     margin: 0.0
     code-fold: true
     code-link: true
-    code-summary: "[R code]"
+    code-summary: "[Code]"
     auto-stretch: true
     fig-height: 5
     fig-width: 7

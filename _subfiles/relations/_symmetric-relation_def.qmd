@@ -1,0 +1,11 @@
+:::{#def-symmetric-relation}
+#### Symmetric relation
+
+Let $\sim$ be a [relation](functions.qmd#def-relation) on a [set](sets.qmd#def-set) $S$.
+The relation $\sim$ is **symmetric**
+[@wikipedia_symmetric_relation]
+if,
+[for all](proof-writing.qmd#def-universal-quantifier) $a, b \in S$,
+$a \sim b$ [implies](proof-writing.qmd#def-implies) $b \sim a$.
+
+:::

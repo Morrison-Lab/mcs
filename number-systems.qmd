@@ -1,0 +1,18 @@
+---
+title: "Number Systems"
+format:
+  html: default
+  revealjs:
+    output-file: number-systems-slides.html
+  pdf:
+    output-file: number-systems-handout.pdf
+  docx:
+    output-file: number-systems.docx
+---
+
+{{< include _number-systems.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

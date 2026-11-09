@@ -1,0 +1,13 @@
+:::{#def-proof-by-cases}
+#### Proof by cases, proof by exhaustion
+
+A **proof by cases**
+[@wikipedia_proof_by_exhaustion],
+also called a **proof by exhaustion**,
+of a [proposition](#def-proposition) $Q$
+lists [propositions](#def-proposition) $C_1, \ldots, C_k$,
+the *cases*,
+shows that at least one of them is true,
+and proves $C_i \Rightarrow Q$ for each $i$.
+
+:::

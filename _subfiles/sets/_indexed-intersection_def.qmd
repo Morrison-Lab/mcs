@@ -1,0 +1,13 @@
+:::{#def-indexed-intersection}
+#### Intersection of a family of sets
+
+Let $I$ be a nonempty set of indices,
+such as $\cb{1, \ldots, n}$ or $\cb{1, 2, 3, \ldots}$,
+and let $A_i$ be a set for each $i \in I$.
+The **intersection** of the sets $A_i$,
+written $\bigcap_{i \in I} A_i$,
+is the set of elements that are in every $A_i$.
+For $I = \cb{1, \ldots, n}$, it is also written $\bigcap_{i=1}^{n} A_i$ or $A_1 \cap \cdots \cap A_n$,
+and for $I = \cb{1, 2, 3, \ldots}$, it is written $\bigcap_{i=1}^{\infty} A_i$.
+
+:::

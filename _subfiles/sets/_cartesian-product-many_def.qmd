@@ -1,0 +1,14 @@
+:::{#def-cartesian-product-many}
+#### Cartesian product of several sets
+
+For a [natural number](number-systems.qmd#def-natural-numbers) $n$
+and [sets](#def-set) $A_1, A_2, \ldots, A_n$,
+the **Cartesian product**
+[@wikipedia_cartesian_product]
+$A_1 \times A_2 \times \cdots \times A_n$
+is the [set](#def-set) of $n$-[tuples](#def-tuple)
+whose $i$th entry is in $A_i$ for each $i$:
+
+$$A_1 \times \cdots \times A_n \eqdef \set{(a_1, \ldots, a_n) : a_i \in A_i \text{ for each } i}$$
+
+:::

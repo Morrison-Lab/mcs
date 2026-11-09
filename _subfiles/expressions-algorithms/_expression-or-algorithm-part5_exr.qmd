@@ -1,0 +1,10 @@
+::: {#exr-expression-or-algorithm-part5}
+
+#### Is an expression an algorithm? (part 5)
+
+Use the setup of @exr-expression-or-algorithm.
+
+Write a second [expression](#def-expression) that [denotes](#def-denotes) the same [function](functions.qmd#def-function) as $a x^2 + b x + c$
+and needs fewer multiplications.
+
+:::

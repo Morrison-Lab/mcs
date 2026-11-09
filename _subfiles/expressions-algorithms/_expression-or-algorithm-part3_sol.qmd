@@ -1,0 +1,8 @@
+::: {#sol-expression-or-algorithm-part3}
+
+Not by itself.
+The [expression](#def-expression) says *what* to compute, not *how* to compute it.
+Once $a$, $b$, $c$ and $x$ are known,
+evaluating its [parse tree](#def-parse-tree) from the leaves up is an [algorithm](#def-algorithm).
+
+:::

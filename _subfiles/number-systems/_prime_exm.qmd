@@ -1,0 +1,15 @@
+:::{#exm-prime}
+#### Primes and non-primes
+
+- $7$ is [prime](#def-prime):
+  none of $2$, $3$, $4$, $5$ and $6$ [divides](#def-divides) $7$,
+  and no [integer](#def-integers) above $7$ does,
+  so its only positive divisors are $1$ and $7$.
+- $9$ is not prime,
+  because $3$ divides $9$.
+- $1$ is not prime,
+  because the definition requires $n \ge 2$.
+
+<!-- no-figure: three single numbers -->
+
+:::

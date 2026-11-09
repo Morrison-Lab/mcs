@@ -1,0 +1,23 @@
+---
+title: "Induction and Recursion"
+format:
+  html: default
+  revealjs:
+    output-file: induction-slides.html
+  pdf:
+    output-file: induction-handout.pdf
+  docx:
+    output-file: induction.docx
+---
+
+{{< include _induction.qmd >}}
+
+# Further reading {#sec-further-reading}
+
+- @velleman2019prove
+  is a structured introduction to proof techniques, including [proof by induction](proof-writing.qmd#def-proof-by-induction).
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

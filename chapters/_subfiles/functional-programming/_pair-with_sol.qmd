@@ -1,0 +1,12 @@
+::: {#sol-pair-with}
+
+`(lambda (x) (* x x))` is the function that squares its argument,
+written in place without a name.
+
+1. Applying it to 7 returns 49.
+2. `map` (@exm-map-filter) applies the doubling function to each element, and returns `'(2 4 6)`.
+3. In the body of `pair-with`, `y` is `"a"`,
+   so `map` applies the function $x \mapsto (x, \text{"a"})$ to each element,
+   and returns `'((1 "a") (2 "a") (3 "a"))`.
+
+:::

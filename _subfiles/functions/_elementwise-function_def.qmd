@@ -1,0 +1,17 @@
+:::{#def-elementwise-function}
+#### Elementwise application of a function to a vector
+
+Let $f : A \to B$ be a function ([definition](#def-function)),
+and let $\vx = \pt{x_1, x_2, \ldots, x_n}$ be a vector whose entries all lie in $A$.
+The **elementwise application** of $f$ to $\vx$,
+written $f^{\odot}(\vx)$,
+is the vector of the values of $f$ at the entries of $\vx$:
+
+$$
+f^{\odot}(\vx) = \pt{f(x_1), f(x_2), \ldots, f(x_n)}.
+$$
+
+It is a function $f^{\odot} : A^n \to B^n$,
+where $A^n$ is the $n$-fold Cartesian product of $A$ with itself ([definition](sets.qmd#def-cartesian-product)).
+
+:::

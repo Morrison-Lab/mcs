@@ -1,0 +1,8 @@
+::: {#def-functional-programming}
+#### Functional programming
+
+**Functional programming** [@wikipedia_functional_programming] is a style of programming
+in which a program is built by defining and applying pure functions (@def-pure-function),
+rather than by running statements that change variables.
+
+:::

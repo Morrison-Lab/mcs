@@ -1,0 +1,19 @@
+:::{#exm-indexed-union-intersection}
+#### Unions and intersections of many sets
+
+- $$
+  \begin{aligned}
+  \bigcup_{i=1}^{3} \set{i, i + 1} &= \set{1, 2} \cup \set{2, 3} \cup \set{3, 4} \\
+  &= \set{1, 2, 3, 4}.
+  \end{aligned}
+  $$
+
+- $\bigcup_{i=1}^{\infty} \set{i} = \Nat$:
+  each natural number $n$ is in the set $\set{n}$,
+  and each set $\set{i}$ contains only the natural number $i$.
+- $\bigcap_{i=1}^{\infty} [0, 1/i] = \set{0}$:
+  $0$ is in every interval $[0, 1/i]$;
+  a number $x > 0$ is not in $[0, 1/i]$ once $i > 1/x$;
+  and a number $x < 0$ is in none of them.
+
+:::

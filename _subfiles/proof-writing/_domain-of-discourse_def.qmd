@@ -1,0 +1,10 @@
+:::{#def-domain-of-discourse}
+#### Domain of discourse, universe of discourse
+
+The **domain of discourse**
+(or **universe of discourse**)
+of a [predicate](#def-predicate) $P(x)$
+is the [set](#def-set) of values its variable $x$ may take. <!-- check-term-links: allow -->
+A predicate in several variables has a domain of discourse for each variable.
+
+:::

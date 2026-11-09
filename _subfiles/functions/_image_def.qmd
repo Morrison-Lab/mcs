@@ -1,0 +1,14 @@
+:::{#def-image}
+#### Image
+
+The **image**
+[@wikipedia_image_mathematics]
+of a [function](#def-function) $f : A \to B$
+is the set of values that $f$ actually takes:
+
+$$f(A) \eqdef \set{f(a) : a \in A}$$
+
+For a single element $a \in A$,
+the value $f(a)$ is also called the **image of** $a$ under $f$.
+
+:::

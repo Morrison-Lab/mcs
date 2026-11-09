@@ -1,0 +1,33 @@
+{{< include latex-macros/macros.qmd >}}
+
+::: remark
+
+The running time of an [algorithm](expressions-algorithms.qmd#def-algorithm) is a [function](functions.qmd#def-function) of the size $n$ of its [input](functions.qmd#def-argument).
+To compare running times, we ignore fixed factors and small inputs.
+This page defines the notation for that comparison.
+
+:::
+
+# Upper bounds
+
+{{< include _subfiles/growth-rates/_big-o_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/growth-rates/_big-o_exm.qmd >}}
+
+# Lower bounds
+
+{{< include _subfiles/growth-rates/_big-omega_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/growth-rates/_big-omega_exm.qmd >}}
+
+# Matching bounds
+
+{{< include _subfiles/growth-rates/_big-theta_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/growth-rates/_big-theta_exm.qmd >}}

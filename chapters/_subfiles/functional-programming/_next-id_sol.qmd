@@ -1,0 +1,11 @@
+::: {#sol-next-id}
+
+1. The first call changes `count` from 0 to 1 and returns 1.
+   The second call changes `count` from 1 to 2 and returns 2.
+2. No.
+   A function with no arguments has exactly one value,
+   but `next_id()` returned 1 and then 2.
+   What it returns depends on the variable `count`,
+   which is not an argument and which each call changes.
+
+:::

@@ -1,0 +1,33 @@
+:::{#thm-equivalent-cycle}
+#### A cycle of conditionals
+
+Let $P_1, P_2, \ldots, P_k$ be [propositions](#def-proposition).
+If $P_1 \Rightarrow P_2$, $P_2 \Rightarrow P_3$, $\ldots$, $P_{k-1} \Rightarrow P_k$ and $P_k \Rightarrow P_1$ are all true,
+then $P_1, \ldots, P_k$ all have the same truth value. <!-- check-term-links: allow -->
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+::: proof
+
+There are two cases.
+
+- None of $P_1, \ldots, P_k$ is true.
+  Then all of them are false,
+  so they all have the same truth value. <!-- check-term-links: allow -->
+- Some $P_i$ is true.
+  By the definition of [implies](#def-implies),
+  for any $P$ and $Q$,
+  if $P \Rightarrow Q$ and $P$ are both true,
+  then $Q$ is true.
+  So $P_i \Rightarrow P_{i+1}$ makes $P_{i+1}$ true,
+  then $P_{i+1} \Rightarrow P_{i+2}$ makes $P_{i+2}$ true,
+  and so on around the cycle,
+  with $P_k \Rightarrow P_1$ carrying the truth of $P_k$ back to $P_1$.
+  After at most $k - 1$ steps,
+  every [proposition](#def-proposition) in the list is true.
+
+:::
+
+:::

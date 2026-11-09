@@ -1,0 +1,24 @@
+::: {#exm-absolute-value}
+#### Absolute value with `if`
+
+The absolute value
+$$
+\abs{x} =
+\begin{cases}
+-x & \text{if } x < 0, \\
+x & \text{otherwise}
+\end{cases}
+$$
+has two cases, so one `if` (@def-if-cond) is enough:
+
+```racket
+(define (absolute x)
+  (if (< x 0)
+      (- x)
+      x))
+```
+
+`(absolute -7)` returns 7, and `(absolute 2)` returns 2.
+Racket already has this function, under the name `abs`.
+
+:::

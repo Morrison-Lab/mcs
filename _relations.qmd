@@ -1,0 +1,41 @@
+{{< include latex-macros/macros.qmd >}}
+
+::: remark
+
+A [relation](functions.qmd#def-relation) says which pairs of elements of a [set](sets.qmd#def-set) are related.
+This page defines the properties that make a relation behave like equality,
+and the groups of elements that such a relation puts together.
+
+:::
+
+# Properties of relations
+
+{{< include _subfiles/relations/_reflexive_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_reflexive_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_symmetric-relation_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_symmetric-relation_exm.qmd >}}
+
+# Equivalence relations
+
+{{< include _subfiles/relations/_equivalence-relation_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_equivalence-relation_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_equivalence-class_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/relations/_equivalence-class_exm.qmd >}}

@@ -1,0 +1,8 @@
+:::{#rem-image-range}
+#### Image and range
+
+Many sources call the [image](#def-image) the "range",
+but others use "range" for the [codomain](#def-codomain).
+@def-range gives the two meanings and the terms these notes use instead.
+
+:::

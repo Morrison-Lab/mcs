@@ -8,6 +8,8 @@ The same conventions apply to GitHub Copilot --- see [`.github/copilot-instructi
 `mcs` holds the lecture notes for CSCI 201, math for computer science, as a [Quarto](https://quarto.org/) website.
 It was created from the [`Morrison-Lab/qwt`](https://github.com/Morrison-Lab/qwt) template, and general mathematics lives in [`Morrison-Lab/mds`](https://github.com/Morrison-Lab/mds), which these notes include (from the `mds/` submodule, with `{{< include ../mds/_subfiles/... >}}`) or link to, rather than duplicate.
 Assessments, solutions and labs belong in the private `Morrison-Lab/mcsg` repository, never here.
+The CSCI 201 syllabus, calendar and Canvas sync belong in `Morrison-Lab/csci201`, the course-logistics shell ([mcs#94](https://github.com/Morrison-Lab/mcs/issues/94)).
+`chapters/syllabus.qmd` and `chapters/calendar.qmd` here are link-out pages to that site, so edit the originals there.
 
 Authoritative style guides:
 
@@ -28,6 +30,11 @@ Authoritative style guides:
   excluded from the render (`!mds/`), with `mds/references.bib` in the bibliography
 - `chapters/<topic>.qmd` --- one chapter per topic, a spine of headings, slide breaks and includes;
   its units live in `chapters/_subfiles/<topic>/`, one div per file named `_<stem>_<type>.qmd`
+- `_subfiles/<topic>/` --- the shared basics being moved here from `mds` (Morrison-Lab/mcs#60):
+  logic and proof writing, sets, functions, relations, induction, growth rates and the rest.
+  They are named `_<stem>_<type>.qmd`, like the chapter subfiles (`_big-o_def.qmd`).
+  They began as verbatim copies of the `mds` files, which are named `_<type>-<stem>.qmd`;
+  the rename changed no content, so every `#id` survives
 - `cross-page-refs.lua` --- turns a cross-reference to a div on another page (`@def-predicate`, cited by an mds definition) into a link to that page;
   Quarto resolves `@id` only within a page, so without it the reference renders as "?@def-predicate".
   It also repoints the links mds text carries (`[text](#def-foo)`, `[text](number-systems.qmd#def-foo)`) at the page here that defines the id,

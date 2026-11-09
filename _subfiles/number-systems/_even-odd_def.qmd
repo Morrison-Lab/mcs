@@ -1,0 +1,19 @@
+:::{#def-even-odd}
+#### Even integer
+
+An integer (@def-integers) $n$ is **even**
+[@wikipedia_parity_mathematics]
+if $n = 2k$ for some integer $k$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-odd}
+#### Odd integer
+
+An integer (@def-integers) $n$ is **odd**
+[@wikipedia_parity_mathematics]
+if $n = 2k + 1$ for some integer $k$.
+
+:::

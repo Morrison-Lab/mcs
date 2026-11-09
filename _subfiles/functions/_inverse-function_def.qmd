@@ -1,0 +1,28 @@
+:::{#def-inverse-function}
+#### Inverse function
+
+Let $f : A \to B$ be a [function](#def-function).
+A function $g : B \to A$ is the **inverse function**
+[@wikipedia_inverse_function]
+of $f$,
+written $f^{-1}$, if both
+
+- $g(f(a)) = a$ for every $a \in A$, and
+- $f(g(b)) = b$ for every $b \in B$.
+
+A function that has an inverse function is **invertible**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-inverse-not-reciprocal}
+#### $f^{-1}$ is not $1/f$
+
+The $-1$ in $f^{-1}$ does not mean a reciprocal:
+$f^{-1}(b)$ is the input that $f$ maps to $b$,
+not $\frac{1}{f(b)}$.
+For example, with $f(x) = 2x$ on $\reals$,
+$f^{-1}(4) = 2$, but $\frac{1}{f(4)} = \frac{1}{8}$.
+
+:::

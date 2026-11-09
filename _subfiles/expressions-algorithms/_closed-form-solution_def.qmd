@@ -1,0 +1,8 @@
+:::{#def-closed-form-solution}
+#### Closed-form solution
+
+A **closed-form solution** of a problem,
+such as solving an equation or minimizing a [function](functions.qmd#def-function),
+is a [closed-form expression](#def-closed-form-expression) for the answer.
+
+:::

@@ -1,0 +1,12 @@
+:::{#def-set-difference}
+#### Set difference
+
+The **set difference**
+[@wikipedia_complement_set_theory]
+of sets $A$ and $B$,
+written $A \setminus B$,
+is the set of elements of $A$ that are not in $B$:
+
+$$A \setminus B \eqdef \set{x \in A : x \notin B}$$
+
+:::

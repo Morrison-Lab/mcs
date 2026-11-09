@@ -12,6 +12,9 @@ permissions: read-all
 jobs:
   lint-project:
     runs-on: ubuntu-latest
+    # A normal run takes under 6 minutes. Without a limit, a hung setup step
+    # holds the check, and the PR it gates, for GitHub's default of 6 hours.
+    timeout-minutes: 15
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
@@ -19,7 +22,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - uses: r-lib/actions/setup-r@v2
+      - uses: r-lib/actions/setup-r@f9a764fea8d5c63df6ef9a5c7795bf7deb5d7e05 # v2.14.0
         with:
           use-public-rspm: true
 

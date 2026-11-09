@@ -1,6 +1,6 @@
 # Contributing to the CSCI 201 notes
 
-These are the lecture notes for CSCI 201, math for computer science.
+These are the lecture notes for CSCI 201, discrete math and functional programming, as taught by Ezra Morrison at Western Washington University.
 Style and conventions live in [CLAUDE.md](CLAUDE.md) and [`.github/copilot-instructions.md`](.github/copilot-instructions.md);
 this file covers the workflow.
 

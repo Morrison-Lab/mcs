@@ -1,0 +1,14 @@
+:::{#exm-equivalence-class}
+#### Equivalence classes of integers with an even difference
+
+Let $\sim$ be the [equivalence relation](#def-equivalence-relation) of @exm-equivalence-relation
+on the [integers](number-systems.qmd#def-integers).
+The [equivalence class](#def-equivalence-class) $[0]$ holds the integers $b$ with $b - 0$ even,
+which are the [even integers](number-systems.qmd#def-even-odd):
+$[0] = \cb{\ldots, -4, -2, 0, 2, 4, \ldots}$.
+The class $[1]$ holds the integers $b$ with $b - 1$ even,
+which are the [odd integers](number-systems.qmd#def-odd):
+$[1] = \cb{\ldots, -3, -1, 1, 3, 5, \ldots}$.
+The class $[2]$ is the same [set](sets.qmd#def-set) as $[0]$, since $2 \sim 0$.
+
+:::

@@ -1,0 +1,9 @@
+:::{#exm-necessary-condition}
+#### A necessary condition
+
+For an integer $n$, "if $n$ is a multiple of $6$, then $n$ is a multiple of $3$" is true,
+because $6k = 3 \cd (2k)$ for every integer $k$.
+So being a multiple of $3$ is a necessary condition for being a multiple of $6$:
+$12 = 6 \cd 2$ is a multiple of $6$, and it is also a multiple of $3$, since $12 = 3 \cd 4$.
+
+:::

@@ -1,0 +1,41 @@
+:::{#exm-derivation-chain}
+#### Checking a derivation line by line
+
+The derivation in @exm-derivation has the steps $=$, $\ge$ and $>$,
+so by @thm-derivation-chain it shows $(x + 1)^2 > 2x$.
+The code evaluates the four lines of that derivation at several values of $x$,
+and checks each step and the comparison of the first line with the last.
+
+```{r}
+#| label: derivation-chain
+#| code-fold: false
+x <- c(-3, -1, 0, 2, 3)
+lines <- data.frame(
+  x = x,
+  line_0 = (x + 1)^2,
+  line_1 = x^2 + 2 * x + 1,
+  line_2 = 2 * x + 1,
+  line_3 = 2 * x
+)
+steps <- with(
+  lines,
+  data.frame(
+    x = x,
+    step_1_equal = line_0 == line_1,
+    step_2_geq = line_1 >= line_2,
+    step_3_greater = line_2 > line_3,
+    first_greater_than_last = line_0 > line_3
+  )
+)
+lines
+steps
+```
+
+At all `{r} nrow(steps)` values of $x$,
+the three steps hold in `{r} sum(steps$step_1_equal)`, `{r} sum(steps$step_2_geq)`
+and `{r} sum(steps$step_3_greater)` cases,
+and the first line exceeds the last in `{r} sum(steps$first_greater_than_last)` cases,
+as @thm-derivation-chain says.
+At $x = `{r} x[3]`$, for example, the first line is `{r} lines$line_0[3]` and the last is `{r} lines$line_3[3]`.
+
+:::

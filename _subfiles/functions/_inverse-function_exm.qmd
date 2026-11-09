@@ -1,0 +1,20 @@
+:::{#exm-inverse-function}
+#### An invertible function, and one that is not
+
+- Let $f : \reals \to \reals$ with $f(x) = 2x + 1$.
+  Its inverse function is $f^{-1}(y) = \frac{y - 1}{2}$.
+  For example, $f(3) = 7$ and
+
+  $$
+  \begin{aligned}
+  f^{-1}(7) &= \frac{7 - 1}{2} \\
+  &= 3.
+  \end{aligned}
+  $$
+
+- Let $h : \reals \to \reals$ with $h(x) = x^2$.
+  Then $h(-2) = 4$ and $h(2) = 4$,
+  so an inverse function would need $h^{-1}(4)$ to equal both $-2$ and $2$.
+  So $h$ is not invertible.
+
+:::

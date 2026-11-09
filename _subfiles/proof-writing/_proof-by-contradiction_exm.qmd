@@ -1,0 +1,30 @@
+:::{#exm-proof-by-contradiction}
+#### No integer is both even and odd
+
+Suppose, for contradiction, that some integer $n$ is both even and odd ([definition](number-systems.qmd#def-even-odd)).
+Then $n = 2j$ and $n = 2k + 1$ for some integers $j$ and $k$, and
+
+$$
+\ba
+2j &= 2k + 1
+&& \text{(both equal } n \text{)}
+\\
+2j - 2k &= 1
+&& \text{(subtract } 2k \text{ from both sides)}
+\\
+2(j - k) &= 1
+&& \text{(distributive law)}
+\\
+j - k &= \tfrac{1}{2}
+&& \text{(divide both sides by } 2 \text{)}
+\ea
+$$
+
+The third line uses the [distributive law](algebra.qmd#def-distributive).
+But $j - k$ is an integer, and $\frac{1}{2}$ is not,
+so the last line is false.
+So no integer is both even and odd.
+For example, $6 = 2 \cd 3$ is even,
+and $6 = 2k + 1$ would need $k = 2.5$, which is not an integer.
+
+:::

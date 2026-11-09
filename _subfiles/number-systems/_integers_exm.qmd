@@ -1,0 +1,8 @@
+:::{#exm-integers}
+#### Integers and non-integers
+
+- $-7$, $0$, and $12$ are integers.
+- $\frac{1}{2}$ and $-2.5$ are not integers.
+- $\frac{6}{3}$ is an integer, because $\frac{6}{3} = 2$.
+
+:::

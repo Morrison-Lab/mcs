@@ -1,0 +1,9 @@
+:::{#def-expression}
+#### Expression
+
+An **expression**
+[@wikipedia_expression_mathematics]
+is a string of symbols, built from constants, variables,
+operations and function names according to the rules of the notation.
+
+:::

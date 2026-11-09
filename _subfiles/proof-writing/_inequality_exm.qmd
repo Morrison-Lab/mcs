@@ -1,0 +1,10 @@
+:::{#exm-inequality}
+#### Inequalities
+
+- "$3 < 5$" is an inequality, and it is true.
+- "$5 \le 3$" is an inequality, and it is false.
+- "$x \ge 2$" is an inequality and a predicate:
+  it is true when $x = 2$ and false when $x = 1$.
+- "$x = 2$" is not an inequality: it is an equality.
+
+:::

@@ -1,0 +1,27 @@
+:::{#thm-substitution-logic}
+#### Replacing a part by an equivalent part
+
+Let $A$ and $B$ be [logically equivalent](#def-logically-equivalent) [propositions](#def-proposition).
+Let $F$ be a [proposition](#def-proposition) built from $A$ and other propositions
+with [logical connectives](#def-logical-connective),
+and let $F'$ be $F$ with $A$ replaced by $B$.
+Then $F \equiv F'$.
+
+:::
+
+::: {.content-hidden when-format="revealjs"}
+
+::: proof
+
+The truth value of $F$ in a row of its [truth table](#def-truth-table) <!-- check-term-links: allow -->
+is computed from the truth values of its parts in that row, <!-- check-term-links: allow -->
+using the truth table of each connective.
+$F'$ is computed the same way,
+except that $B$ takes the place of $A$.
+$A$ and $B$ have the same truth value in every row, <!-- check-term-links: allow -->
+so each step of the computation gives the same value for $F'$ as for $F$.
+So $F$ and $F'$ have the same truth value in every row. <!-- check-term-links: allow -->
+
+:::
+
+:::

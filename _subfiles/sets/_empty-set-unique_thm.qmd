@@ -1,0 +1,16 @@
+:::{#thm-empty-set-unique}
+#### There is only one empty set
+
+If $E_1$ and $E_2$ are sets with no elements,
+then $E_1 = E_2$.
+
+:::
+
+::: proof
+
+Neither set has any elements,
+so every element of $E_1$ is an element of $E_2$ and vice versa,
+[vacuously](#def-vacuous-truth).
+Sets with the same elements are equal (@def-set).
+
+:::

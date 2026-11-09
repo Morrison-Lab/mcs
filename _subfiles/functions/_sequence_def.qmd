@@ -1,0 +1,20 @@
+:::{#def-sequence}
+#### Sequence
+
+A **sequence** in a set $S$
+[@wikipedia_sequence]
+is a [function](#def-function) $a : \Nat \to S$
+from the [natural numbers](number-systems.qmd#def-natural-numbers) to $S$.
+Its value $a(n)$ is written $a_n$,
+and the sequence is written $(a_n)$ or $a_1, a_2, a_3, \ldots$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-sequence-term}
+#### Term of a sequence
+
+The value $a_n$ of a sequence $(a_n)$ (@def-sequence) is called its $n$th **term**.
+
+:::

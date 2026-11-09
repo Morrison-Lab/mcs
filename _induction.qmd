@@ -1,0 +1,34 @@
+{{< include latex-macros/macros.qmd >}}
+
+::: remark
+
+A [proof by induction](proof-writing.qmd#def-proof-by-induction) proves a [proposition](proof-writing.qmd#def-proposition) about every [integer](number-systems.qmd#def-integers) from some starting integer on.
+A [sequence](functions.qmd#def-sequence) defined by a rule on its earlier [terms](functions.qmd#def-sequence-term) is the usual place to use it.
+This page defines such [sequences](functions.qmd#def-sequence),
+then adds the stronger form, [strong induction](induction.qmd#def-strong-induction), that they often need.
+
+:::
+
+# Recursively defined sequences
+
+{{< include _subfiles/induction/_recursive-sequence_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/induction/_recursive-sequence_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/induction/_fibonacci-sequence_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/induction/_fibonacci-sequence_exm.qmd >}}
+
+# Strong induction
+
+{{< include _subfiles/induction/_strong-induction_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/induction/_strong-induction_exm.qmd >}}

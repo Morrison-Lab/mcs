@@ -1,0 +1,19 @@
+::: {#exm-adder}
+#### A function that returns a function
+
+The function `adder` takes a number `d` and returns a function:
+
+```racket
+(define (adder d)
+  (lambda (x) (+ x d)))
+```
+
+`(adder 3)` returns the function $x \mapsto x + 3$,
+which still knows that `d` is 3 after `adder` has returned.
+So `adder` is a higher-order function (@def-higher-order), and its value can be used anywhere a function can:
+
+- `((adder 3) 4)` returns 7.
+- `(twice (adder 3) 10)`, with `twice` from @exr-twice, returns 16.
+- `(map (adder 1) (list 5 7 9))` returns `'(6 8 10)`.
+
+:::
