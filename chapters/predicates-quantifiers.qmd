@@ -20,9 +20,9 @@ The convention that a conditional about a variable means "for all"
 comes from those notes;
 the exercises are new.
 
-The definitions are included from the
-[mathematics prerequisites](https://morrison-lab.github.io/mds/proof-writing.html#sec-proof-definitions)
-notes, so they read the same in both places.
+The definitions are on the
+[proof writing](../proof-writing.qmd#sec-proof-definitions) page,
+which the other data science notes link to.
 :::
 
 # Predicates {#sec-predicates}
