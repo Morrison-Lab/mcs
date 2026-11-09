@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Install the third-party Quarto extensions that this repository does not vendor.
 
 `coatless-quarto/custom-callout` publishes no license, so a copy of it is not
@@ -65,12 +66,18 @@ def main():
             install(target, repository, commit, source)
             fix_font_path(target)
         except subprocess.CalledProcessError as err:
+            shutil.rmtree(target, ignore_errors=True)
             print(
                 f"install-extensions: could not fetch {repository} at {commit}: "
                 f"{err.stderr.strip()}",
                 file=sys.stderr,
             )
             sys.exit(1)
+        except BaseException:
+            # A half-finished install must not satisfy the `exists()` check
+            # on the next run, so a failed patch removes the copy.
+            shutil.rmtree(target, ignore_errors=True)
+            raise
         print(f"install-extensions: installed {path} from {repository}@{commit[:8]}")
 
 

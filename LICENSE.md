@@ -14,7 +14,8 @@ Not covered by either license, and not ours to license:
 - **Submodules**: `mds/` and `latex-macros/` carry their own licenses.
 - **Vendored extensions** in `_extensions/` carry their own licenses where they include one.
   `_extensions/code-language-labels` and `_extensions/Morrison-Lab/callouty-theorem` have their own MIT `LICENSE` files.
-  `_extensions/coatless-quarto/custom-callout`, by James Joseph Balamuta, publishes no license, so no license here covers it.
+  `coatless-quarto/custom-callout`, by James Joseph Balamuta, publishes no license, so no license here covers it.
+  It is not committed here: `tools/install-extensions.py` fetches it into `_extensions/` when the site renders.
   The other extensions (`div-anchors`, `equation-anchors` and `slidebreak`) came with the [`Morrison-Lab/qwt`](https://github.com/Morrison-Lab/qwt) template
   and are under the MIT License below, with the template's copyright line.
 
