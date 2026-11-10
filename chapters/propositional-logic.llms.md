@@ -16,7 +16,7 @@ Propositions, connectives, and conditionals
 
 Published
 
-Last modified: 2026-11-09 17:32:27 (PST)
+Last modified: 2026-11-09 20:59:13 (PST)
 
 > **NOTE:**
 >
