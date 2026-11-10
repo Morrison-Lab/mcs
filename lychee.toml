@@ -31,9 +31,4 @@ exclude = [
   # 403 Forbidden (checked by hand 2026-10-23).
   "https://www.acm.org/code-of-ethics",
   "https://www.wwu.edu/dean-students",
-  # web.stanford.edu serves a certificate chain CI's link checker cannot
-  # verify ("SSL certificate not trusted"), so every Stanford course page
-  # fails there although it loads in a browser (2026-11-03, mcs#57).
-  # Remove this once Stanford fixes its chain (#58).
-  "https://web.stanford.edu/.*",
 ]
