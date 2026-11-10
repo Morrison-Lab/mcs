@@ -82,3 +82,6 @@ renv/staging/
 # Lychee link checker
 .lycheecache/
 lychee-output/
+
+# Fetched at render time by tools/install-extensions.py, not vendored
+/_extensions/coatless-quarto/
