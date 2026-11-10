@@ -37,7 +37,7 @@ The proofs of the handshake theorem, of the even number of vertices of odd degre
 The examples, the exercises, the Racket functions and the other proofs are new.
 :::
 
-# Graphs {#sec-graphs}
+# Vertices and edges {#sec-graphs}
 
 {{< include _subfiles/graphs/_office-cables_exr.qmd >}}
 

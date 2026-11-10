@@ -37,7 +37,7 @@ and the definitions of an antisymmetric relation, the composition of relations a
 The exercises, the other examples, the Racket functions and all the proofs are new.
 :::
 
-# Relations {#sec-relations}
+# Binary relations {#sec-relations}
 
 {{< include _subfiles/relations/_word-letters_exr.qmd >}}
 
