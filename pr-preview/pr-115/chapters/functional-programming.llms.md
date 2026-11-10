@@ -6,7 +6,7 @@ Expressions, functions and cases in Racket
 
 Published
 
-Last modified: 2026-11-09 15:26:08 (PST)
+Last modified: 2026-11-10 11:53:20 (PST)
 
 > **NOTE:**
 >
@@ -434,6 +434,8 @@ Last modified: 2026-11-09 15:26:08 (PST)
 > - Jerry Cain’s CS 107 handouts on Scheme, on the [course page](https://see.stanford.edu/Course/CS107), work many more examples, among them flattening nested lists and listing permutations; his lectures 19 to 23 ([Cain 2008](#ref-cain2008cs107videos)) cover the same ground.
 > - Will Crichton’s CS 242 notes on [functional basics](https://stanford-cs242.github.io/f19/lectures/03-1-functional-basics) and [algebraic data types](https://stanford-cs242.github.io/f19/lectures/03-2-algebraic-data-types) build functional programs on types, in the language OCaml ([Crichton 2019](#ref-crichton2019cs242)).
 > - Stanford’s [CS 99](https://web.stanford.edu/class/cs99/) teaches Lean 4, a functional programming language in which a computer checks proofs about the programs ([Aniva and Mohamed 2025](#ref-aniva2025cs99)).
+> - The textbook [*How to Design Programs*](https://htdp.org/) teaches a step-by-step method for writing functional programs.
+> - Thomas Mailund’s [*Functional Programming in R 4*](https://link.springer.com/book/10.1007/978-1-4842-9487-1) (Apress) applies functional programming to statistical programming in R.
 
 # Definitions on this page
 

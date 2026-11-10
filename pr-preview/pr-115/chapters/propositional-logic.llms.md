@@ -2,11 +2,21 @@
 
 Code
 
+- [Show All Code](javascript:void(0))
+
+- [Hide All Code](javascript:void(0))
+
+- 
+
+  ------------------------------------------------------------------------
+
+- [View Source](javascript:void(0))
+
 Propositions, connectives, and conditionals
 
 Published
 
-Last modified: 2026-11-09 15:26:08 (PST)
+Last modified: 2026-11-10 11:53:20 (PST)
 
 > **NOTE:**
 >
@@ -58,7 +68,37 @@ Last modified: 2026-11-09 15:26:08 (PST)
 
 > **NOTE:**
 >
-> **Example 1 (A proposition whose truth value nobody knows)** Start with a positive integer $n$. If $n$ is even, replace it with $n / 2$; if $n$ is odd, replace it with $3n + 1$. Repeat. Starting from $n = 6$ gives $6, 3, 10, 5, 16, 8, 4, 2, 1$.
+> **Example 1 (A proposition whose truth value nobody knows)** Start with a positive integer $n$. If $n$ is even, replace it with $n / 2$; if $n$ is odd, replace it with $3n + 1$. Repeat. Starting from $n = 6$ gives $6, 3, 10, 5, 16, 8, 4, 2, 1$. The graph plots each value against its step number.
+>
+> Show code
+>
+> ``` r
+> collatz_step <- function(n) {
+>   if (n %% 2 == 0) n / 2 else 3 * n + 1
+> }
+>
+> # apply the rule until the sequence reaches 1
+> current <- 6
+> values <- current
+> while (current != 1) {
+>   current <- collatz_step(current)
+>   values <- c(values, current)
+> }
+>
+> steps <- seq_along(values) - 1
+> collatz_seq <- tibble::tibble(step = steps, value = values)
+>
+> collatz_plot <- ggplot2::ggplot(collatz_seq) +
+>   ggplot2::aes(x = step, y = value) +
+>   ggplot2::geom_line() +
+>   ggplot2::geom_point(size = 2) +
+>   ggplot2::scale_x_continuous(breaks = steps) +
+>   ggplot2::labs(x = "step", y = "value")
+>
+> collatz_plot
+> ```
+>
+> [![The Collatz sequence starting at 6, plotted as points joined by line segments. The value is 6 at step 0, falls to 3, jumps to 10 and then to 5, rises to a peak of 16 at step 4, and then falls through 8, 4 and 2 to reach 1 at step 8.](propositional-logic_files/figure-html/unnamed-chunk-1-1.png)](propositional-logic_files/figure-html/unnamed-chunk-1-1.png)
 >
 > The *Collatz conjecture* ([Wikipedia contributors 2026a](#ref-wikipedia_collatz_conjecture)) is the sentence “starting from any positive integer, the process reaches 1 after finitely many steps”. It is a proposition, because it is either true or false, but nobody has yet proved which. A proposition needs a definite truth value, not a known one.
 
