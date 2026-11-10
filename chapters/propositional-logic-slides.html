@@ -224,7 +224,8 @@
     reads those vars so it stays legible in every palette. Light is the
     default variable set, Off-white and Parchment are a data-palette attribute
     on <html>, and Dark is the body.qwt-dark class. The choice is saved under
-    "mln-theme", the key the website's theme dropdown (theme-picker.html) uses,
+    "lds-theme", the key the website's theme dropdown (theme-picker.html) and
+    lds use (a choice saved under the older "mln-theme" key is still read),
     so it carries across the site and the decks. First-time visitors get
     Dark if their system prefers it, and Off-white otherwise.
   -->
@@ -260,7 +261,8 @@
   <script>
   (function () {
     "use strict";
-    var KEY = "mln-theme";
+    var KEY = "lds-theme";
+    var LEGACY_KEY = "mln-theme";
     var DARK_CLASS = "qwt-dark";
     var OPTIONS = [["light", "Light"], ["offwhite", "Off-white"], ["parchment", "Parchment"], ["dark", "Dark"]];
     var root = document.documentElement;
@@ -270,7 +272,7 @@
     }
 
     function stored() {
-      try { return localStorage.getItem(KEY); } catch (e) { return null; }
+      try { return localStorage.getItem(KEY) || localStorage.getItem(LEGACY_KEY); } catch (e) { return null; }
     }
 
     function initialTheme() {
@@ -336,7 +338,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-10 07:00:02 (PST)</p>
+  <p class="date">Last modified: 2026-11-10 11:36:07 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -588,9 +590,6 @@
 </section>
 <section id="sec-evaluating" class="slide level2" data-number="2.1">
 <h2><span class="header-section-number">2.1</span> Evaluating compound propositions</h2>
-</section>
-<section class="slide level2">
-
 <div id="exr-evaluate-or-and" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 3 (Evaluate a compound proposition)</strong></span> Suppose <span class="math inline">\(P\)</span> is true, <span class="math inline">\(Q\)</span> is false, and <span class="math inline">\(R\)</span> is false. Is <span class="math inline">\((\neg P \lor Q) \land \neg R\)</span> true or false?</p>
 </div>
@@ -634,9 +633,6 @@
 </section>
 <section id="sec-truth-tables" class="slide level2" data-number="2.2">
 <h2><span class="header-section-number">2.2</span> Truth tables</h2>
-</section>
-<section class="slide level2">
-
 <div id="exr-truth-table-rows" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 5 (How many cases?)</strong></span> <a href="#/exr-evaluate-not-and" class="quarto-xref">Exercise&nbsp;4</a> found the truth value of <span class="math inline">\(\neg (P \land Q) \lor R\)</span> for one choice of truth values of <span class="math inline">\(P\)</span>, <span class="math inline">\(Q\)</span> and <span class="math inline">\(R\)</span>. How many different choices are there?</p>
 </div>
@@ -863,9 +859,6 @@
 </section>
 <section id="sec-converse" class="slide level2" data-number="3.1">
 <h2><span class="header-section-number">3.1</span> The converse</h2>
-</section>
-<section class="slide level2">
-
 <div id="exr-converse" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 9 (Reverse an implication)</strong></span> For all real numbers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, “if <span class="math inline">\(x = y\)</span>, then <span class="math inline">\(x^2 = y^2\)</span>” is true. Is “if <span class="math inline">\(x^2 = y^2\)</span>, then <span class="math inline">\(x = y\)</span>” also true for all real numbers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>?</p>
 </div>
@@ -885,9 +878,6 @@
 </section>
 <section id="sec-conditionals-english" class="slide level2" data-number="3.2">
 <h2><span class="header-section-number">3.2</span> Conditionals in English</h2>
-</section>
-<section class="slide level2">
-
 <div id="exr-only-if" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 10 (“Only if”)</strong></span> Rewrite “I go to class only if I am healthy” in the form “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>”.</p>
 </div>

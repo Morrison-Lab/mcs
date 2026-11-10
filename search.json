@@ -93,7 +93,7 @@
     "href": "index-slides.html#license",
     "title": "Math for Computer Science",
     "section": "0.1 License",
-    "text": "0.1 License"
+    "text": "0.1 License\nThe notes are released under the Creative Commons Attribution 4.0 International license (CC BY 4.0), and their code under the MIT License; the LICENSE.md file in the repository says which covers what."
   },
   {
     "objectID": "index-slides.html#references",
@@ -403,28 +403,28 @@
     "href": "chapters/propositional-logic-slides.html#sec-evaluating",
     "title": "Propositional Logic",
     "section": "2.1 Evaluating compound propositions",
-    "text": "2.1 Evaluating compound propositions"
+    "text": "2.1 Evaluating compound propositions\n\nExercise 3 (Evaluate a compound proposition) Suppose \\(P\\) is true, \\(Q\\) is false, and \\(R\\) is false. Is \\((\\neg P \\lor Q) \\land \\neg R\\) true or false?"
   },
   {
     "objectID": "chapters/propositional-logic-slides.html#sec-truth-tables",
     "href": "chapters/propositional-logic-slides.html#sec-truth-tables",
     "title": "Propositional Logic",
     "section": "2.2 Truth tables",
-    "text": "2.2 Truth tables"
+    "text": "2.2 Truth tables\n\nExercise 5 (How many cases?) Exercise 4 found the truth value of \\(\\neg (P \\land Q) \\lor R\\) for one choice of truth values of \\(P\\), \\(Q\\) and \\(R\\). How many different choices are there?"
   },
   {
     "objectID": "chapters/propositional-logic-slides.html#sec-converse",
     "href": "chapters/propositional-logic-slides.html#sec-converse",
     "title": "Propositional Logic",
     "section": "3.1 The converse",
-    "text": "3.1 The converse"
+    "text": "3.1 The converse\n\nExercise 9 (Reverse an implication) For all real numbers \\(x\\) and \\(y\\), “if \\(x = y\\), then \\(x^2 = y^2\\)” is true. Is “if \\(x^2 = y^2\\), then \\(x = y\\)” also true for all real numbers \\(x\\) and \\(y\\)?"
   },
   {
     "objectID": "chapters/propositional-logic-slides.html#sec-conditionals-english",
     "href": "chapters/propositional-logic-slides.html#sec-conditionals-english",
     "title": "Propositional Logic",
     "section": "3.2 Conditionals in English",
-    "text": "3.2 Conditionals in English"
+    "text": "3.2 Conditionals in English\n\nExercise 10 (“Only if”) Rewrite “I go to class only if I am healthy” in the form “if \\(P\\), then \\(Q\\)”."
   },
   {
     "objectID": "chapters/propositional-logic-slides.html#references",
