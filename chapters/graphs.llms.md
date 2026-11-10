@@ -6,7 +6,7 @@ Vertices and edges, degrees, walks and connectedness, Euler circuits, Hamiltonia
 
 Published
 
-Last modified: 2026-11-10 11:36:07 (PST)
+Last modified: 2026-11-10 13:28:40 (PST)
 
 > **NOTE:**
 >
@@ -23,7 +23,7 @@ Last modified: 2026-11-10 11:36:07 (PST)
 >
 > The pseudocode for breadth-first and depth-first search, and the use of a queue and of recursion in them, follow the course’s handout on graph extensions. Euler circuits and trails and Hamiltonian cycles follow the course calendar, with the definitions cited with them. Incident edges, neighborhoods and weakly connected directed graphs are added here. The proofs of the handshake theorem, of the even number of vertices of odd degree and of counting walks follow the lecture notes. The examples, the exercises, the Racket functions and the other proofs are new.
 
-# 1 Graphs
+# 1 Vertices and edges
 
 > **NOTE:**
 >

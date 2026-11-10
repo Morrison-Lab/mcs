@@ -6,7 +6,7 @@ Relations between sets, their properties, equivalence relations, partitions and 
 
 Published
 
-Last modified: 2026-11-10 11:36:07 (PST)
+Last modified: 2026-11-10 13:28:40 (PST)
 
 > **NOTE:**
 >
@@ -25,7 +25,7 @@ Last modified: 2026-11-10 11:36:07 (PST)
 >
 > The definitions of a relation, a function and the terms about them are on the [relations](../relations.llms.md) and [functions](../functions.llms.md) pages, which the other data science notes link to, and the definitions of an antisymmetric relation, the composition of relations and a partition follow the standard ones cited with them. The exercises, the other examples, the Racket functions and all the proofs are new.
 
-# 1 Relations
+# 1 Binary relations
 
 > **NOTE:**
 >
