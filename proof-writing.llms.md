@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-10 01:41:45 (PST)
+Last modified: 2026-11-10 03:53:55 (PST)
 
 This page collects general advice on how to write [proofs](#def-proof) and [derivations](#def-derivation). The goal of a proof is not just to convince yourself that a [result](#def-result) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for [logical entailment](#def-logical-entailment) are listed under [Definitions for proofs](#sec-proof-definitions) below.
 
