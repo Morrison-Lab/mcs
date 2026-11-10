@@ -1,6 +1,10 @@
 project:
   type: website
   output-dir: _site
+  # A third-party extension with no license is fetched, not vendored.
+  # See tools/install-extensions.py.
+  pre-render:
+    - tools/install-extensions.py
   render:
     - "*.qmd"
     - "chapters/*.qmd"
@@ -279,7 +283,11 @@ format:
   html:
     filters:
       - Morrison-Lab/callouty-theorem
-      - coatless-quarto/custom-callout
+      # custom-callout is listed by path, not as an extension name: Quarto looks
+      # extensions up before a `pre-render` script runs, so the copy that
+      # tools/install-extensions.py fetches would not be found by name.
+      - _extensions/coatless-quarto/custom-callout/customcallout.lua
+      - _extensions/coatless-quarto/custom-callout/fa.lua
     theme:
       light: [cosmo, offwhite.scss]
       dark: darkly

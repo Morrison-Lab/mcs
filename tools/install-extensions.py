@@ -1,0 +1,85 @@
+#!/usr/bin/env python3
+"""Install the third-party Quarto extensions that this repository does not vendor.
+
+`coatless-quarto/custom-callout` publishes no license, so a copy of it is not
+committed here; this script fetches it at a pinned commit instead.
+Run as a Quarto `pre-render` script, before any other, so the extension is in
+`_extensions/` by the time a page's filters are resolved.
+An extension that is already installed is left alone.
+To change a pin, edit EXTENSIONS and nothing else.
+"""
+
+import shutil
+import subprocess
+import sys
+import tempfile
+from pathlib import Path
+
+# Each entry: (installed path under `_extensions/`, upstream repository,
+# commit, path of the extension inside that repository).
+EXTENSIONS = [
+    (
+        "coatless-quarto/custom-callout",
+        "https://github.com/coatless-quarto/custom-callout",
+        "dca63b4f7178f7b544c10196202665029adca1a7",
+        "_extensions/custom-callout",
+    ),
+]
+
+
+def run(*args, cwd=None):
+    subprocess.run(args, cwd=cwd, check=True, capture_output=True, text=True)
+
+
+def install(target, repository, commit, source):
+    with tempfile.TemporaryDirectory() as scratch:
+        run("git", "init", "--quiet", scratch)
+        run("git", "fetch", "--quiet", "--depth", "1", repository, commit, cwd=scratch)
+        run("git", "checkout", "--quiet", "FETCH_HEAD", cwd=scratch)
+        shutil.copytree(Path(scratch) / source, target)
+
+
+def fix_font_path(target):
+    """Point custom-callout's stylesheet at the web font's real location.
+
+    Upstream's `assets/css/fontawesome.css` names `fa-solid-900.woff2` next to
+    itself, but the font is in `assets/webfonts/`, so the icons do not load.
+    The copy this repository used to vendor carried this one-line fix.
+    """
+    css = target / "assets" / "css" / "fontawesome.css"
+    text = css.read_text()
+    broken = "url('fa-solid-900.woff2')"
+    fixed = "url('../webfonts/fa-solid-900.woff2')"
+    if broken not in text:
+        raise SystemExit(f"install-extensions: {css} no longer has {broken}")
+    css.write_text(text.replace(broken, fixed))
+
+
+def main():
+    root = Path(__file__).resolve().parent.parent / "_extensions"
+    for path, repository, commit, source in EXTENSIONS:
+        target = root / path
+        if target.exists():
+            continue
+        target.parent.mkdir(parents=True, exist_ok=True)
+        try:
+            install(target, repository, commit, source)
+            fix_font_path(target)
+        except subprocess.CalledProcessError as err:
+            shutil.rmtree(target, ignore_errors=True)
+            print(
+                f"install-extensions: could not fetch {repository} at {commit}: "
+                f"{err.stderr.strip()}",
+                file=sys.stderr,
+            )
+            sys.exit(1)
+        except BaseException:
+            # A half-finished install must not satisfy the `exists()` check
+            # on the next run, so a failed patch removes the copy.
+            shutil.rmtree(target, ignore_errors=True)
+            raise
+        print(f"install-extensions: installed {path} from {repository}@{commit[:8]}")
+
+
+if __name__ == "__main__":
+    main()

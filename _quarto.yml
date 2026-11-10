@@ -35,7 +35,9 @@ format:
   pdf:
     filters:
       - Morrison-Lab/callouty-theorem
-      - coatless-quarto/custom-callout
+      # Listed by path: see tools/install-extensions.py.
+      - _extensions/coatless-quarto/custom-callout/customcallout.lua
+      - _extensions/coatless-quarto/custom-callout/fa.lua
     include-in-header:
       text: |
         \usepackage{needspace}
