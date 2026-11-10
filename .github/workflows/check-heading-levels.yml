@@ -1,0 +1,16 @@
+# Flags a page whose first heading repeats its title, or whose body
+# starts below level 1, when a PR adds or changes a line of the page.
+name: Check heading levels
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    permissions:
+      contents: read
+    uses: Morrison-Lab/gha/.github/workflows/check-heading-levels.yml@v3
