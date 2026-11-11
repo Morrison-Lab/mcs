@@ -28,3 +28,9 @@ exclusions <- list(
     pipe_consistency_linter = Inf
   )
 )
+
+# `{racket}` chunks run under the knitr engine in tools/racket-engine.R
+# (mcs#131). lintr skips a chunk whose engine knitr knows and lints every
+# other chunk as R, so register the engine's name here for lintr alone;
+# the setup chunk of each page registers the real engine.
+knitr::knit_engines$set(racket = function(options) NULL)
