@@ -57,7 +57,20 @@
                    (with-handlers ([exn:fail? void])
                      (eval-form form)))))
 
+;; Start a new line unless the output is already at the start of one,
+;; so that output from `display` cannot run into the next marker.
+(port-count-lines! (current-output-port))
+(define (end-line)
+  (define-values (line col pos) (port-next-location (current-output-port)))
+  (unless (eqv? col 0)
+    (newline)))
+
 ;; This chunk: run and print, stopping at the first error.
+;; Before each form, print a marker line: the ASCII unit separator character
+;; (U+001F) and the position of the form's last character in CHUNK-FILE,
+;; counted in characters from 1. The engine uses the markers to show each
+;; form's output right after the form.
+(define marker (string (integer->char #x1F)))
 (with-handlers ([exn:fail?
                  (lambda (e)
                    (flush-output)
@@ -65,5 +78,8 @@
                    (exit 1))])
   (for-each-form chunk-file
                  (lambda (form)
-                   (print-values (eval-form form))))
+                   (printf "~a~a\n" marker
+                           (+ (syntax-position form) (syntax-span form) -1))
+                   (print-values (eval-form form))
+                   (end-line)))
   (flush-output))
