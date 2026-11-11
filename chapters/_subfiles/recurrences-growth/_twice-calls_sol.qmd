@@ -19,4 +19,11 @@ That is 7 calls, counting `(dm 2)` itself, and 4 of them are calls of `(dm 0)`.
 `(dm 2)` returns 5, which is $a_2$.
 The two calls of `(dm 1)` do exactly the same work.
 
+Racket returns the same value:
+
+```{racket}
+#| code-fold: false
+(dm 2)
+```
+
 :::
