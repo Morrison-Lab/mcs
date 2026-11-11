@@ -11,12 +11,11 @@ The function `adder` takes a number `d` and returns a function:
 
 `(adder 3)` returns the function $x \mapsto x + 3$,
 which still knows that `d` is 3 after `adder` has returned.
-So `adder` is a higher-order function (@def-higher-order), and its value can be used anywhere a function can.
-The three calls below use it in three ways:
+So `adder` is a higher-order function (@def-higher-order), and its value can be used anywhere a function can:
 
 - applied to an argument;
 - passed to `twice` from @exr-twice;
-- passed to `map` (@exm-map-filter).
+- passed to [`map`](#exm-map-filter).
 
 ```{racket}
 #| code-fold: false
