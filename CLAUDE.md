@@ -39,6 +39,8 @@ Authoritative style guides:
   Quarto resolves `@id` only within a page, so without it the reference renders as "?@def-predicate".
   It also repoints the links mds text carries (`[text](#def-foo)`, `[text](number-systems.qmd#def-foo)`) at the page here that defines the id,
   and sends an id no page here defines to the published mds page, so an mds subfile with such links can be included
+- `label-first.lua` --- PDF only, after Quarto's own filters: moves the `\label` of each remark and solution from the end of its environment to just after its title,
+  because a callout box split at the foot of a page can drop a trailing label, and the handout then prints "Remark ??"
 - `R/`, `man/`, `DESCRIPTION`, `NAMESPACE` --- the project is also a small R package
 - `references.bib` --- BibTeX bibliography
 - `offwhite.scss`, `theme-picker.html` --- the website's Light / Off-white / Parchment / Dark theme dropdown (`theme-picker.html` builds it, `offwhite.scss` styles the two tinted palettes);
