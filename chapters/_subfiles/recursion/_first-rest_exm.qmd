@@ -2,13 +2,25 @@
 #### Taking a list apart
 
 Let `L` be the list `'(7 2 9)` (@def-list), which @sol-cons-list builds as `(cons 7 (cons 2 (cons 9 empty)))`.
-Then
+Then `first` and `rest` take it apart:
 
-- `(first L)` is `7`, and `(rest L)` is `'(2 9)`;
-- `(first (rest L))` is `2`;
-- `(rest (rest (rest L)))` is `empty`.
+```{racket}
+#| code-fold: false
+(define L (cons 7 (cons 2 (cons 9 empty))))
+(first L)
+(rest L)
+(first (rest L))
+(rest (rest (rest L)))
+```
 
+The last value, `'()`, is how Racket prints `empty`.
 `(first empty)` raises an error,
-since the empty list is not built by `cons` and has no first element.
+since the empty list is not built by `cons` and has no first element:
+
+```{racket}
+#| code-fold: false
+#| error: true
+(first empty)
+```
 
 :::

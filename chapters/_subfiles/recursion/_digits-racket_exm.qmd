@@ -3,7 +3,8 @@
 
 The recursive definition of $d$ in @exm-digit-count becomes a Racket function line by line:
 
-```racket
+```{racket}
+#| code-fold: false
 (define (digits n)
   (if (< n 10)
       1
@@ -16,7 +17,11 @@ Following @rem-racket-recursion:
 - the recursive call is `(digits (quotient n 10))`, on $\floor{n / 10}$, which is less than $n$;
 - the combination adds 1 to the result of the recursive call.
 
-`(digits 2026)` calls `(digits 202)`, `(digits 20)` and `(digits 2)` in turn, as in @exm-digit-count,
-and returns 4.
+`(digits 2026)` calls `(digits 202)`, `(digits 20)` and `(digits 2)` in turn, as in @exm-digit-count:
+
+```{racket}
+#| code-fold: false
+(digits 2026)
+```
 
 :::
