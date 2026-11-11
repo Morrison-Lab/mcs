@@ -51,6 +51,7 @@ jobs:
     with:
       pr-number: ${{ inputs.pr_number }}
       checkout-submodules: true  # latex-macros/ so the reviewer can read it, not report it "not initialized"
+      apt-packages: racket  # so the reviewer can run {racket} chunks (mcs#131) and check their output
       # `claude` is included because a remote Claude session pushing a
       # commit directly to a PR fires `synchronize` with `claude` as the
       # actor, and a dispatched review's actor is `github-actions[bot]`
