@@ -5,4 +5,13 @@ It returns `'r`.
 Its second element is its left subtree, `'(r (p () ()) ())`,
 and the first element of that is its label, `'r`.
 
+Racket returns the same values:
+
+```{racket}
+#| code-fold: false
+(third B)
+(second (third B))
+(first (second (third B)))
+```
+
 :::
