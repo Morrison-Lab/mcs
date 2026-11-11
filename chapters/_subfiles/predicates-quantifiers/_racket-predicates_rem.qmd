@@ -5,11 +5,17 @@ A Racket procedure that returns `#t` or `#f` is also called a predicate,
 and by convention its name ends in `?`, as in `even?` and `string?`.
 The predicate $L(s)$ from @exr-predicate-values is
 
-```racket
+```{racket}
+#| code-fold: false
 (define (long? s)
   (> (string-length s) 3))
 ```
 
-and `(long? "logic")` returns `#t`.
+and it is true of `"logic"`:
+
+```{racket}
+#| code-fold: false
+(long? "logic")
+```
 
 :::
