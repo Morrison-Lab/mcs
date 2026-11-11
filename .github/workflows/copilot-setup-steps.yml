@@ -86,6 +86,7 @@ jobs:
       # - OCR tools (tesseract-ocr) for optical character recognition tasks
       # - A computer algebra system (maxima) for symbolic math computations
       # - Python pip for additional tooling
+      # - Racket, which the racket chunks run under (tools/racket-engine.R)
       - name: Install system dependencies
         if: steps.check_label.outputs.skip != 'true'
         run: |
@@ -106,7 +107,8 @@ jobs:
             tesseract-ocr \
             tesseract-ocr-eng \
             maxima \
-            python3-pip
+            python3-pip \
+            racket
 
       
       # Set up pandoc for documentation
@@ -154,6 +156,7 @@ jobs:
           echo "=== Quarto Status ==="
           quarto --version
           quarto list tools
+          racket --version
           
           echo ""
           echo "Development environment setup complete!"
