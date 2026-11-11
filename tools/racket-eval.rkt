@@ -1,27 +1,31 @@
 #lang racket/base
 ;; Evaluate one knitr `racket` chunk, as DrRacket's interactions window would.
 ;;
-;; Usage: racket racket-eval.rkt PRIOR-FILE CHUNK-FILE
+;; Usage: racket racket-eval.rkt CHUNK-FILE [PRIOR-FILE ...]
 ;;
-;; PRIOR-FILE holds the code of the page's earlier `racket` chunks.
-;; It is evaluated first, with its output discarded, so a chunk can use what
-;; an earlier one defined. CHUNK-FILE is the chunk itself: each top-level form
-;; is evaluated in turn, and every value that is not void is printed the way
-;; the REPL prints it (`'(1 2 3)`, `"text"`, `#t`).
+;; Each PRIOR-FILE holds the code of one of the page's earlier `racket`
+;; chunks, in page order. They are evaluated first, with their output
+;; discarded, so a chunk can use what an earlier one defined. CHUNK-FILE is
+;; the chunk itself: each top-level form is evaluated in turn, and every
+;; value that is not void is printed the way the REPL prints it
+;; (`'(1 2 3)`, `"text"`, `#t`).
 ;;
-;; An error in the chunk prints Racket's message on standard output and exits
-;; with status 1, so the knitr engine (tools/racket-engine.R) can stop the
-;; render, or show the message when the chunk sets `error: true`.
-;; An error in PRIOR-FILE is skipped: the chunk that raised it has already
-;; been shown or has already stopped the render.
+;; An error in the chunk, while reading or evaluating, prints Racket's
+;; message on standard output and exits with status 1, so the knitr engine
+;; (tools/racket-engine.R) can stop the render, or show the message when the
+;; chunk sets `error: true`.
+;; An error in a PRIOR-FILE stops that file where the error is, as it stopped
+;; the chunk when the chunk itself ran, and replay goes on with the next
+;; file: that chunk has already been shown or has already stopped the render.
 
 (require racket/port)
 
-(define args (current-command-line-arguments))
-(unless (= (vector-length args) 2)
-  (raise-user-error 'racket-eval "usage: racket racket-eval.rkt PRIOR-FILE CHUNK-FILE"))
-(define prior-file (vector-ref args 0))
-(define chunk-file (vector-ref args 1))
+(define args (vector->list (current-command-line-arguments)))
+(when (null? args)
+  (raise-user-error 'racket-eval
+                    "usage: racket racket-eval.rkt CHUNK-FILE [PRIOR-FILE ...]"))
+(define chunk-file (car args))
+(define prior-files (cdr args))
 
 ;; The chunks are written in `#lang racket`, so evaluate them there.
 (define ns (make-base-empty-namespace))
@@ -49,13 +53,13 @@
       (unless (void? v)
         ((current-print) v)))))
 
-;; Earlier chunks: run for their definitions, silently.
+;; Earlier chunks: run for their definitions, silently,
+;; each one up to its first error.
 (parameterize ([current-output-port (open-output-nowhere)]
                [current-error-port (open-output-nowhere)])
-  (for-each-form prior-file
-                 (lambda (form)
-                   (with-handlers ([exn:fail? void])
-                     (eval-form form)))))
+  (for ([file (in-list prior-files)])
+    (with-handlers ([exn:fail? void])
+      (for-each-form file eval-form))))
 
 ;; Start a new line unless the output is already at the start of one,
 ;; so that output from `display` cannot run into the next marker.
@@ -74,6 +78,7 @@
 (with-handlers ([exn:fail?
                  (lambda (e)
                    (flush-output)
+                   (end-line)
                    (printf "~a\n" (exn-message e))
                    (exit 1))])
   (for-each-form chunk-file
