@@ -4,4 +4,12 @@ It returns `'(d b e f)`,
 the element of `office` that starts with `d`.
 Its rest, `'(b e f)`, lists the neighbors of $d$ (@def-adjacent).
 
+Racket returns the same values:
+
+```{racket}
+#| code-fold: false
+(assoc 'd office)
+(rest (assoc 'd office))
+```
+
 :::

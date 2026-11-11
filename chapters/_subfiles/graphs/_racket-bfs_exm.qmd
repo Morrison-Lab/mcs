@@ -6,7 +6,8 @@ one for each marked vertex $u$ with label $d$,
 so a vertex is marked when `assoc` (@exr-racket-assoc) finds it in that list.
 It uses `neighbors` from @exm-racket-neighbors.
 
-```racket
+```{racket}
+#| code-fold: false
 (define (unmarked vs dist)
   (if (empty? vs)
       empty
@@ -40,7 +41,11 @@ It uses `neighbors` from @exm-racket-neighbors.
   so `(append (rest queue) new)` removes the front of the queue and adds the new vertices at the back.
 
 Each call of `bfs-loop` is one pass through the loop of @def-bfs.
-`(bfs office 'a)` returns `'((a 0) (b 1) (c 1) (d 2) (e 2) (f 3))`,
-the marks and labels of @exm-bfs-trace.
+From $a$, it returns the marks and labels of @exm-bfs-trace:
+
+```{racket}
+#| code-fold: false
+(bfs office 'a)
+```
 
 :::

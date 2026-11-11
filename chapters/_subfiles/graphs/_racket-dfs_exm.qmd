@@ -8,7 +8,8 @@ and `dfs-each` goes through a list `vs` of vertices,
 calling `dfs-from` on each one that is not marked yet.
 It uses `neighbors` from @exm-racket-neighbors.
 
-```racket
+```{racket}
+#| code-fold: false
 (define (dfs-from G v marked)
   (dfs-each G (neighbors G v) (append marked (list v))))
 
@@ -25,7 +26,8 @@ It uses `neighbors` from @exm-racket-neighbors.
 
 With the graph $T$ of @fig-triangles stored as
 
-```racket
+```{racket}
+#| code-fold: false
 (define triangles
   '((1 2 3)
     (2 1 3)
@@ -36,7 +38,13 @@ With the graph $T$ of @fig-triangles stored as
     (7 5 6)))
 ```
 
-`(dfs triangles 3)` returns `'(3 1 2 4 5 6 7)`, the order of @exm-dfs-trace,
-and `(dfs office 'a)` returns `'(a b c e d f)`, the order of @sol-follow-first.
+`(dfs triangles 3)` returns the order of @exm-dfs-trace,
+and `(dfs office 'a)` returns the order of @sol-follow-first:
+
+```{racket}
+#| code-fold: false
+(dfs triangles 3)
+(dfs office 'a)
+```
 
 :::
