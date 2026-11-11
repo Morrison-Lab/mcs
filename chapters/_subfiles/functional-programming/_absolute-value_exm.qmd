@@ -11,14 +11,22 @@ x & \text{otherwise}
 $$
 has two cases, so one `if` (@def-if-cond) is enough:
 
-```racket
+```{racket}
+#| code-fold: false
 (define (absolute x)
   (if (< x 0)
       (- x)
       x))
 ```
 
-`(absolute -7)` returns 7, and `(absolute 2)` returns 2.
+Applied to $-7$ and to 2, it returns their absolute values:
+
+```{racket}
+#| code-fold: false
+(absolute -7)
+(absolute 2)
+```
+
 Racket already has this function, under the name `abs`.
 
 :::

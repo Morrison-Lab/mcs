@@ -3,7 +3,8 @@
 
 The function `twice` takes a function `f` and a value `x`:
 
-```racket
+```{racket}
+#| code-fold: false
 (define (twice f x)
   (f (f x)))
 

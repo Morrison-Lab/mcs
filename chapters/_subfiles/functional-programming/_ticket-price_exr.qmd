@@ -3,7 +3,8 @@
 
 A museum sets its ticket price, in dollars, by age:
 
-```racket
+```{racket}
+#| code-fold: false
 (define (ticket-price age)
   (cond [(< age 5) 0]
         [(< age 18) 8]

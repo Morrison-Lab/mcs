@@ -3,7 +3,8 @@
 
 This Racket code defines a function named `h`:
 
-```racket
+```{racket}
+#| code-fold: false
 (define (h x)
   (- (* x x) (* 2 x)))
 ```
