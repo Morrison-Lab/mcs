@@ -12,9 +12,9 @@ The same holds with $\ge$ and $>$ in place of $\le$ and $<$.
 
 :::
 
-{{< slidebreak >}}
-
 ::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
 
 ::: proof
 

@@ -6,9 +6,9 @@ If $\neg P \Rightarrow Q$ is true and $Q$ is false, then $P$ is true.
 
 :::
 
-{{< slidebreak >}}
-
 ::: {.content-hidden when-format="revealjs"}
+
+{{< slidebreak >}}
 
 ::: proof
 
