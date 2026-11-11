@@ -9,4 +9,13 @@ written in place without a name.
    so `map` applies the function $x \mapsto (x, \text{"a"})$ to each element,
    and returns `'((1 "a") (2 "a") (3 "a"))`.
 
+Racket returns the same values:
+
+```{racket}
+#| code-fold: false
+((lambda (x) (* x x)) 7)
+(map (lambda (x) (* 2 x)) (list 1 2 3))
+(pair-with (list 1 2 3) "a")
+```
+
 :::

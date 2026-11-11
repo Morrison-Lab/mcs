@@ -2,7 +2,13 @@
 #### Applying a function to a list
 
 `(apply f L)` applies the function `f` to the elements of the list `L` as its arguments,
-so `(apply + (list 2 7 6))` is the same as `(+ 2 7 6)`, which returns 15.
+so `(apply + (list 2 7 6))` is the same as `(+ 2 7 6)`:
+
+```{racket}
+#| code-fold: false
+(apply + (list 2 7 6))
+(+ 2 7 6)
+```
 
 1. Guess what `(apply max (list 3 9 2))` returns.
 2. Use `apply`, `max` and `min` to define `(spread L)`,

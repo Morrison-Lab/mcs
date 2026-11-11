@@ -3,7 +3,8 @@
 1. `(apply max (list 3 9 2))` is `(max 3 9 2)`, which returns 9.
 2. One answer:
 
-   ```racket
+   ```{racket}
+   #| code-fold: false
    (define (spread L)
      (- (apply max L) (apply min L)))
    ```
@@ -11,5 +12,13 @@
 3. The largest element is 7 and the smallest is $-1$, so `(spread (list 4 -1 7 2))` returns $7 - (-1) = 8$.
 
 `spread` needs no recursion: `max` and `min` already take any number of arguments, and `apply` hands each of them the whole list.
+
+Racket returns the same values:
+
+```{racket}
+#| code-fold: false
+(apply max (list 3 9 2))
+(spread (list 4 -1 7 2))
+```
 
 :::

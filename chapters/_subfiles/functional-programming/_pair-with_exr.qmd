@@ -3,7 +3,8 @@
 
 The function `pair-with` takes a list `L` and a value `y`:
 
-```racket
+```{racket}
+#| code-fold: false
 (define (pair-with L y)
   (map (lambda (x) (list x y)) L))
 ```
