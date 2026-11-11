@@ -334,7 +334,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-11 02:01:44 (PST)</p>
+  <p class="date">Last modified: 2026-11-11 10:13:25 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -1128,6 +1128,25 @@ a + b
 </section>
 <section class="slide level2">
 
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>First, a fact about two steps in a row. For numbers <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span>, if <span class="math inline">\(a \mathrel{R} b\)</span> and <span class="math inline">\(b \mathrel{S} c\)</span>, where <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are each one of <span class="math inline">\(=\)</span>, <span class="math inline">\(\le\)</span> and <span class="math inline">\(&lt;\)</span>, then <span class="math inline">\(a \mathrel{T} c\)</span>, where <span class="math inline">\(T\)</span> is</p>
+<ul>
+<li><span class="math inline">\(&lt;\)</span> if <span class="math inline">\(R\)</span> or <span class="math inline">\(S\)</span> is <span class="math inline">\(&lt;\)</span>;</li>
+<li>otherwise <span class="math inline">\(\le\)</span> if <span class="math inline">\(R\)</span> or <span class="math inline">\(S\)</span> is <span class="math inline">\(\le\)</span>;</li>
+<li>otherwise <span class="math inline">\(=\)</span>.</li>
+</ul>
+<p>This holds in each case:</p>
+<ul>
+<li>If <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are both <span class="math inline">\(=\)</span>, then <span class="math inline">\(a = c\)</span> (<a href="https://morrison-lab.github.io/mds/algebra.html#thm-equal-trans">equalities are transitive</a>).</li>
+<li>If exactly one of <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> is <span class="math inline">\(=\)</span>, replace <span class="math inline">\(b\)</span> by the equal expression in the other relation (<a href="https://morrison-lab.github.io/mds/algebra.html#thm-substitution">substitution</a>). This gives the other relation between <span class="math inline">\(a\)</span> and <span class="math inline">\(c\)</span>.</li>
+<li>If neither is <span class="math inline">\(=\)</span>, then each of <span class="math inline">\(a \mathrel{R} b\)</span> and <span class="math inline">\(b \mathrel{S} c\)</span> is <span class="math inline">\(\le\)</span> or <span class="math inline">\(&lt;\)</span>, and <span class="math inline">\(\le\)</span> means <span class="math inline">\(&lt;\)</span> or <span class="math inline">\(=\)</span> (<a href="https://morrison-lab.github.io/mds/algebra.html#def-strict-inequality">strict</a> and <a href="https://morrison-lab.github.io/mds/algebra.html#def-non-strict-inequality">non-strict inequalities</a>). A case with an <span class="math inline">\(=\)</span> is covered by the previous bullet, and the remaining case is <span class="math inline">\(a &lt; b\)</span> and <span class="math inline">\(b &lt; c\)</span>, which gives <span class="math inline">\(a &lt; c\)</span> because <span class="math inline">\(&lt;\)</span> is transitive on the real numbers. So two steps that are each <span class="math inline">\(\le\)</span> or <span class="math inline">\(&lt;\)</span> give <span class="math inline">\(&lt;\)</span> if either is <span class="math inline">\(&lt;\)</span>, and otherwise <span class="math inline">\(\le\)</span>.</li>
+</ul>
+<p>Now let <span class="math inline">\(T_j\)</span> be the relation named by the same rule applied to the first <span class="math inline">\(j\)</span> steps of the chain, with <span class="math inline">\(T_0\)</span> being <span class="math inline">\(=\)</span>. We show <span class="math inline">\(E_0 \mathrel{T_j} E_j\)</span> by induction on <span class="math inline">\(j\)</span>. For <span class="math inline">\(j = 0\)</span>, <span class="math inline">\(E_0 = E_0\)</span>. If <span class="math inline">\(E_0 \mathrel{T_j} E_j\)</span>, then the step from <span class="math inline">\(E_j\)</span> to <span class="math inline">\(E_{j+1}\)</span> and the fact above give <span class="math inline">\(E_0 \mathrel{T_{j+1}} E_{j+1}\)</span>. At <span class="math inline">\(j = n\)</span>, <span class="math inline">\(T_n\)</span> is <span class="math inline">\(=\)</span> when every step is <span class="math inline">\(=\)</span>, which is part 1. It is <span class="math inline">\(\le\)</span> or <span class="math inline">\(=\)</span> when every step is <span class="math inline">\(=\)</span> or <span class="math inline">\(\le\)</span>, and <span class="math inline">\(=\)</span> implies <span class="math inline">\(\le\)</span>, which is part 2. It is <span class="math inline">\(&lt;\)</span> when some step is <span class="math inline">\(&lt;\)</span>, which is part 3.</p>
+<p>The argument for <span class="math inline">\(\ge\)</span> and <span class="math inline">\(&gt;\)</span> is the same with the inequalities reversed.</p>
+</div>
+</section>
+<section class="slide level2">
+
 <div id="exm-derivation-chain" class="theorem example">
 <p><span class="theorem-title"><strong>Example 29 (Checking a derivation line by line)</strong></span> The derivation in <a href="#/exm-derivation" class="quarto-xref">Example&nbsp;28</a> has the steps <span class="math inline">\(=\)</span>, <span class="math inline">\(\ge\)</span> and <span class="math inline">\(&gt;\)</span>, so by <a href="#/thm-derivation-chain" class="quarto-xref">Theorem&nbsp;13</a> it shows <span class="math inline">\((x + 1)^2 &gt; 2x\)</span>. The code evaluates the four lines of that derivation at several values of <span class="math inline">\(x\)</span>, and checks each step and the comparison of the first line with the last.</p>
 <div class="cell">
@@ -1413,6 +1432,12 @@ j - k &amp;= \tfrac{1}{2}
 
 <div id="thm-proof-by-contradiction" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 15 (A proof by contradiction proves its proposition)</strong></span> Let <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> be propositions (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>). If <span class="math inline">\(\neg P \Rightarrow Q\)</span> is true and <span class="math inline">\(Q\)</span> is false, then <span class="math inline">\(P\)</span> is true.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>By <a href="#/def-implies" class="quarto-xref">Definition&nbsp;8</a>, <span class="math inline">\(\neg P \Rightarrow Q\)</span> is false only when <span class="math inline">\(\neg P\)</span> is true and <span class="math inline">\(Q\)</span> is false. Here <span class="math inline">\(Q\)</span> is false, and <span class="math inline">\(\neg P \Rightarrow Q\)</span> is true, so <span class="math inline">\(\neg P\)</span> is not true. Then <span class="math inline">\(\neg P\)</span> is false. Since <span class="math inline">\(\neg P\)</span> is true whenever <span class="math inline">\(P\)</span> is false, <span class="math inline">\(P\)</span> must be true.</p>
 </div>
 </section>
 <section class="slide level2">
