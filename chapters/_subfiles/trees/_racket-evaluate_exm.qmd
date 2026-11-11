@@ -26,7 +26,7 @@ These functions compute its value, working from the leaves up:
 
 `evaluate` computes the value of the tree.
 Without the quote, `(* (- 7 2) (+ 3 (* 4 2)))` is itself Racket code, and it has the same value,
-because Racket writes each arithmetic operation in prefix form (@def-prefix-form), with a pair of parentheses around each operation:
+because Racket writes each arithmetic operation in [prefix form](#def-prefix-form), with a pair of parentheses around each operation:
 
 ```{racket}
 #| code-fold: false
