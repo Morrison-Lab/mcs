@@ -14,57 +14,13 @@
 # unless it sets `#| error: true`, in which case the page shows Racket's
 # message.
 
-# The marker that tools/racket-eval.rkt prints before each form's output.
-racket_form_marker <- "\x1f"
-
-# Split the evaluator's output into knitr's alternating source and output
-# pieces: each marker line gives the position of a form's last character in
-# `code`, and the lines after it, up to the next marker, are its output.
-racket_pieces <- function(code, out) {
-  is_marker <- startsWith(out, racket_form_marker)
-  marker_lines <- out[is_marker]
-  end_text <- substring(marker_lines, 2L)
-  ends <- as.integer(end_text)
-  group <- cumsum(is_marker)
-  output_group <- factor(group[!is_marker], levels = seq_along(ends))
-  outputs <- split(out[!is_marker], output_group)
-  # Text before the first marker is a message from Racket itself.
-  preamble <- out[group == 0]
-
-  # Any text after the last form, such as a trailing comment, goes with it.
-  if (length(ends) > 0) ends[length(ends)] <- nchar(code)
-  pieces <- list()
-  if (length(preamble) > 0) {
-    preamble_text <- paste0(preamble, "\n", collapse = "")
-    pieces <- list(preamble_text)
-  }
-  # Consecutive forms with no output, such as definitions, stay one piece of
-  # source, so the blank lines between them survive.
-  start <- 1L
-  for (i in seq_along(ends)) {
-    has_output <- length(outputs[[i]]) > 0
-    if (!has_output && i < length(ends)) next
-    src <- substr(code, start, ends[i])
-    src <- sub("^\n+", "", src)
-    src <- sub("\n+$", "", src)
-    source_piece <- structure(list(src = src), class = "source")
-    pieces <- c(pieces, list(source_piece))
-    if (has_output) {
-      output_text <- paste0(outputs[[i]], "\n", collapse = "")
-      pieces <- c(pieces, list(output_text))
-    }
-    start <- ends[i] + 1L
-  }
-  # A chunk of comments alone has no forms, and is shown as written.
-  if (length(ends) == 0) {
-    source_piece <- structure(list(src = code), class = "source")
-    pieces <- c(pieces, list(source_piece))
-  }
-  pieces
-}
-
 register_racket_engine <- function(evaluator) {
   evaluator <- normalizePath(evaluator, mustWork = TRUE)
+  # racket_pieces() and racket_form_marker live beside the evaluator.
+  tools_dir <- dirname(evaluator)
+  pieces_file <- file.path(tools_dir, "racket-pieces.R")
+  helpers <- new.env()
+  sys.source(pieces_file, envir = helpers)
   racket <- Sys.which("racket")
   if (!nzchar(racket)) {
     stop(
@@ -73,7 +29,8 @@ register_racket_engine <- function(evaluator) {
       "pages with racket chunks."
     )
   }
-  # The code of the chunks evaluated so far, keyed by the document being knit.
+  # The code of each chunk evaluated so far, one string per chunk,
+  # keyed by the document being knit.
   history <- new.env(parent = emptyenv())
 
   engine <- function(options) {
@@ -84,17 +41,22 @@ register_racket_engine <- function(evaluator) {
     }
     doc <- knitr::current_input(dir = TRUE)
     if (is.null(doc)) doc <- ""
-    prior <- history[[doc]]
+    prior <- get0(doc, envir = history, inherits = FALSE)
     if (is.null(prior)) prior <- character()
 
-    prior_file <- tempfile(fileext = ".rkt")
+    # Each earlier chunk goes in its own file, so that replay can stop a
+    # chunk at its first error, as the chunk stopped when it ran.
+    new_prior_file <- function(i) tempfile("prior", fileext = ".rkt")
+    prior_files <- vapply(seq_along(prior), new_prior_file, character(1))
     chunk_file <- tempfile(fileext = ".rkt")
-    on.exit(unlink(c(prior_file, chunk_file)), add = TRUE)
-    writeLines(prior, prior_file)
+    on.exit(unlink(c(prior_files, chunk_file)), add = TRUE)
+    for (i in seq_along(prior)) {
+      writeChar(prior[i], prior_files[i], eos = NULL)
+    }
     # No trailing newline, so positions match `code` exactly.
-    writeChar(code, chunk_file, eos = NULL, useBytes = FALSE)
+    writeChar(code, chunk_file, eos = NULL)
 
-    args <- shQuote(c(evaluator, prior_file, chunk_file))
+    args <- shQuote(c(evaluator, chunk_file, prior_files))
     # system2() warns on a non-zero exit status; the status is checked below.
     out <- suppressWarnings(
       system2(racket, args, stdout = TRUE, stderr = TRUE)
@@ -102,7 +64,7 @@ register_racket_engine <- function(evaluator) {
     status <- attr(out, "status")
     failed <- !is.null(status) && status != 0
     if (failed && !isTRUE(options$error)) {
-      shown <- out[!startsWith(out, racket_form_marker)]
+      shown <- out[!startsWith(out, helpers$racket_form_marker)]
       message_text <- paste(shown, collapse = "\n")
       stop(
         "racket chunk '", options$label, "' failed:\n", message_text,
@@ -110,13 +72,13 @@ register_racket_engine <- function(evaluator) {
       )
     }
     attr(out, "status") <- NULL
-    history[[doc]] <- c(prior, code)
+    assign(doc, c(prior, code), envir = history)
     # The project's `comment: "#>"` suits R, where `#` starts a comment.
     # In Racket `#>` is not a comment, so prefix output with `;` instead,
     # and a reader who copies a collapsed chunk can still run it.
     if (identical(options$comment, "#>")) options$comment <- ";"
 
-    pieces <- racket_pieces(code, out)
+    pieces <- helpers$racket_pieces(code, out)
     if (isFALSE(options$echo)) {
       is_source <- vapply(pieces, inherits, logical(1), what = "source")
       pieces <- pieces[!is_source]
