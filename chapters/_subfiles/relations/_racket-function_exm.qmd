@@ -7,7 +7,8 @@ With a finite relation stored as a list of pairs, as in @exr-racket-member,
 `count-outputs` uses it to count the pairs whose first entry is `a`,
 and `function?` uses `for/and` (@exm-racket-properties) to check the condition of @thm-function-relation for each element of the list `A`:
 
-```racket
+```{racket}
+#| code-fold: false
 (define (count-outputs R a)
   (for/sum ([p R])
     (if (equal? (first p) a) 1 0)))
@@ -17,7 +18,15 @@ and `function?` uses `for/and` (@exm-racket-properties) to check the condition o
     (= (count-outputs R a) 1)))
 ```
 
-`(function? (list 'rock 'paper 'scissors) beats)` returns `#t`, as @exm-function-or-not found,
-since `(count-outputs beats a)` is 1 for each of the three elements.
+`(count-outputs beats a)` is 1 for each of the three elements,
+so `function?` returns `#t`, as @exm-function-or-not found:
+
+```{racket}
+#| code-fold: false
+(count-outputs beats 'rock)
+(count-outputs beats 'paper)
+(count-outputs beats 'scissors)
+(function? (list 'rock 'paper 'scissors) beats)
+```
 
 :::
