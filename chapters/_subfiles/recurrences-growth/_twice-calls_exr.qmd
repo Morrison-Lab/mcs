@@ -4,7 +4,8 @@
 This Racket function computes the double-minus-one sequence of @exm-doubling-sequence,
 but it finds $2 a_{n-1}$ as $a_{n-1} + a_{n-1}$, with two recursive calls:
 
-```racket
+```{racket}
+#| code-fold: false
 (define (dm n)
   (if (= n 0)
       2
