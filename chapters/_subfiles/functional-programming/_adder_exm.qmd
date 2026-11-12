@@ -15,7 +15,7 @@ So `adder` is a higher-order function (@def-higher-order), and its value can be 
 
 - applied to an argument;
 - passed to `twice` from @exr-twice;
-- passed to [`map`](#exm-map-filter).
+- passed to `map` from @exm-map-filter.
 
 ```{racket}
 #| code-fold: false
