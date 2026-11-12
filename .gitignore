@@ -85,3 +85,6 @@ lychee-output/
 
 # Fetched at render time by tools/install-extensions.py, not vendored
 /_extensions/coatless-quarto/
+
+# Built before each render by tools/build_dependency_graph.py
+/dependency-graph.json

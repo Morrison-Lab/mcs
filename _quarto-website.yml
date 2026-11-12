@@ -3,8 +3,14 @@ project:
   output-dir: _site
   # A third-party extension with no license is fetched, not vendored.
   # See tools/install-extensions.py.
+  # Then writes dependency-graph.json: the prerequisite graph of the
+  # definitions and results on the Math Reference pages (the top-level pages).
   pre-render:
     - tools/install-extensions.py
+    - python3 tools/build_dependency_graph.py --pages . --site mcs --out dependency-graph.json
+  resources:
+    - dependency-graph.js
+    - dependency-graph.json
   render:
     - "*.qmd"
     - "chapters/*.qmd"
@@ -122,6 +128,8 @@ website:
             href: expressions-algorithms.qmd
           - text: "Proof Writing"
             href: proof-writing.qmd
+          - text: "Dependency Tree"
+            href: dependency-tree.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mcs
@@ -187,6 +195,7 @@ website:
           - functions.qmd
           - expressions-algorithms.qmd
           - proof-writing.qmd
+          - dependency-tree.qmd
 
 callouty-theorem:
   thm:
