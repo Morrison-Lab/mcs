@@ -3,7 +3,8 @@
 
 The function `adder` takes a number `d` and returns a function:
 
-```racket
+```{racket}
+#| code-fold: false
 (define (adder d)
   (lambda (x) (+ x d)))
 ```
@@ -12,8 +13,15 @@ The function `adder` takes a number `d` and returns a function:
 which still knows that `d` is 3 after `adder` has returned.
 So `adder` is a higher-order function (@def-higher-order), and its value can be used anywhere a function can:
 
-- `((adder 3) 4)` returns 7.
-- `(twice (adder 3) 10)`, with `twice` from @exr-twice, returns 16.
-- `(map (adder 1) (list 5 7 9))` returns `'(6 8 10)`.
+- applied to an argument;
+- passed to `twice` from @exr-twice;
+- passed to `map` from @exm-map-filter.
+
+```{racket}
+#| code-fold: false
+((adder 3) 4)
+(twice (adder 3) 10)
+(map (adder 1) (list 5 7 9))
+```
 
 :::
