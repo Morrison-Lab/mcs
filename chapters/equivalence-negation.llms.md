@@ -6,7 +6,7 @@ When two propositions say the same thing, and how to say the opposite
 
 Published
 
-Last modified: 2026-11-11 18:57:41 (PST)
+Last modified: 2026-11-11 19:12:06 (PST)
 
 > **NOTE:**
 >
@@ -239,29 +239,45 @@ Last modified: 2026-11-11 18:57:41 (PST)
 
 > **NOTE:**
 >
-> **Theorem 5 (De Morgan’s laws for propositions)** For any [propositions](../chapters/propositional-logic.llms.md#def-proposition) $P$ and $Q$ ([Wikipedia contributors 2026a](#ref-wikipedia_de_morgans_laws)):
+> **Theorem 5 (De Morgan’s law for a conjunction)** For any [propositions](../chapters/propositional-logic.llms.md#def-proposition) $P$ and $Q$ ([Wikipedia contributors 2026a](#ref-wikipedia_de_morgans_laws)):
 >
-> $$\begin{aligned}
-> \neg (P \land Q) &\equiv \neg P \lor \neg Q \\
-> \neg (P \lor Q) &\equiv \neg P \land \neg Q
-> \end{aligned}$$
+> $$\neg (P \land Q) \equiv \neg P \lor \neg Q$$
 
 > **NOTE:**
 >
-> *Proof*. Each side of each law is built from $P$ and $Q$, so by [Definition 1](#def-logically-equivalent) it is enough to compare the two sides in each of the four rows of a [truth table](../chapters/propositional-logic.llms.md#def-truth-table):
+> *Proof*. Each side is built from $P$ and $Q$, so by [Definition 1](#def-logically-equivalent) it is enough to compare the two sides in each of the four rows of a [truth table](../chapters/propositional-logic.llms.md#def-truth-table):
 >
-> | $P$ | $Q$ | $\neg (P \land Q)$ | $\neg P \lor \neg Q$ | $\neg (P \lor Q)$ | $\neg P \land \neg Q$ |
-> |:--:|:--:|:--:|:--:|:--:|:--:|
-> | T | T | F | F | F | F |
-> | T | F | T | T | F | F |
-> | F | T | T | T | F | F |
-> | F | F | T | T | T | T |
+> | $P$ | $Q$ | $\neg (P \land Q)$ | $\neg P \lor \neg Q$ |
+> |:---:|:---:|:------------------:|:--------------------:|
+> |  T  |  T  |         F          |          F           |
+> |  T  |  F  |         T          |          T           |
+> |  F  |  T  |         T          |          T           |
+> |  F  |  F  |         T          |          T           |
 >
-> The third and fourth columns agree in every row, which proves the first law, and the fifth and sixth columns agree in every row, which proves the second.
+> The third and fourth columns agree in every row.
 
 > **NOTE:**
 >
-> **Example 9 (Neither coordinate positive)** For real numbers $x$ and $y$, by the second of [De Morgan’s laws](#thm-de-morgan-logic), “not ($x > 0$ or $y > 0$)” is logically equivalent to “$x \le 0$ and $y \le 0$”.
+> **Theorem 6 (De Morgan’s law for a disjunction)** For any [propositions](../chapters/propositional-logic.llms.md#def-proposition) $P$ and $Q$ ([Wikipedia contributors 2026a](#ref-wikipedia_de_morgans_laws)):
+>
+> $$\neg (P \lor Q) \equiv \neg P \land \neg Q$$
+
+> **NOTE:**
+>
+> *Proof*. Each side is built from $P$ and $Q$, so by [Definition 1](#def-logically-equivalent) it is enough to compare the two sides in each of the four rows of a [truth table](../chapters/propositional-logic.llms.md#def-truth-table):
+>
+> | $P$ | $Q$ | $\neg (P \lor Q)$ | $\neg P \land \neg Q$ |
+> |:---:|:---:|:-----------------:|:---------------------:|
+> |  T  |  T  |         F         |           F           |
+> |  T  |  F  |         F         |           F           |
+> |  F  |  T  |         F         |           F           |
+> |  F  |  F  |         T         |           T           |
+>
+> The third and fourth columns agree in every row.
+
+> **NOTE:**
+>
+> **Example 9 (Neither coordinate positive)** For real numbers $x$ and $y$, by [De Morgan’s law for a disjunction](#thm-de-morgan-disjunction), “not ($x > 0$ or $y > 0$)” is logically equivalent to “$x \le 0$ and $y \le 0$”.
 
 > **NOTE:**
 >
@@ -277,7 +293,7 @@ Last modified: 2026-11-11 18:57:41 (PST)
 
 > **NOTE:**
 >
-> **Theorem 6 (Negating a conditional)** For [propositions](../chapters/propositional-logic.llms.md#def-proposition) $P$ and $Q$,
+> **Theorem 7 (Negating a conditional)** For [propositions](../chapters/propositional-logic.llms.md#def-proposition) $P$ and $Q$,
 >
 > $$\neg (P \Rightarrow Q) \equiv P \land \neg Q.$$
 
@@ -287,7 +303,7 @@ Last modified: 2026-11-11 18:57:41 (PST)
 
 > **NOTE:**
 >
-> **Example 10 (When a search claim fails)** The negation of “if the list is sorted, then binary search finds the key” is “the list is sorted and binary search does not find the key” ([Theorem 6](#thm-negate-conditional)).
+> **Example 10 (When a search claim fails)** The negation of “if the list is sorted, then binary search finds the key” is “the list is sorted and binary search does not find the key” ([Theorem 7](#thm-negate-conditional)).
 
 > **NOTE:**
 >
@@ -324,7 +340,7 @@ Last modified: 2026-11-11 18:57:41 (PST)
 
 > **NOTE:**
 >
-> **Theorem 7 (De Morgan’s laws for quantifiers)** For a [set](../chapters/sets.llms.md#def-set) $S$ and a [predicate](../chapters/propositional-logic.llms.md#def-predicate) $P(x)$ whose [domain of discourse](../chapters/predicates-quantifiers.llms.md#def-domain-of-discourse) is $S$:
+> **Theorem 8 (De Morgan’s laws for quantifiers)** For a [set](../chapters/sets.llms.md#def-set) $S$ and a [predicate](../chapters/propositional-logic.llms.md#def-predicate) $P(x)$ whose [domain of discourse](../chapters/predicates-quantifiers.llms.md#def-domain-of-discourse) is $S$:
 >
 > $$\begin{aligned}
 > \neg (\forall x \in S, P(x)) &\equiv \exists x \in S, \neg P(x) \\
@@ -340,13 +356,13 @@ Last modified: 2026-11-11 18:57:41 (PST)
 
 > **NOTE:**
 >
-> **Example 12 (No natural square root of 2)** By part 2 of [Theorem 7](#thm-negate-quantifiers), $\neg (\exists n \in \mathbb{N}, n^2 = 2)$ has the same truth value as $\forall n \in \mathbb{N}, n^2 \ne 2$.
+> **Example 12 (No natural square root of 2)** By part 2 of [Theorem 8](#thm-negate-quantifiers), $\neg (\exists n \in \mathbb{N}, n^2 = 2)$ has the same truth value as $\forall n \in \mathbb{N}, n^2 \ne 2$.
 
 > **NOTE:**
 >
-> *Remark 4* (De Morgan’s laws for quantifiers). [Theorem 7](#thm-negate-quantifiers) is often written $\neg \forall x, P(x) \equiv \exists x, \neg P(x)$ and $\neg \exists x, P(x) \equiv \forall x, \neg P(x)$. These notes say “has the same truth value” instead, because $P(x)$ is a predicate, not a proposition, so [Definition 1](#def-logically-equivalent), which compares truth tables, does not apply.
+> *Remark 4* (De Morgan’s laws for quantifiers). [Theorem 8](#thm-negate-quantifiers) is often written $\neg \forall x, P(x) \equiv \exists x, \neg P(x)$ and $\neg \exists x, P(x) \equiv \forall x, \neg P(x)$. These notes say “has the same truth value” instead, because $P(x)$ is a predicate, not a proposition, so [Definition 1](#def-logically-equivalent), which compares truth tables, does not apply.
 >
-> On a finite set $S = \{a, b\}$, $\forall x \in S, P(x)$ has the same truth value as $P(a) \land P(b)$, and $\exists x \in S, P(x)$ has the same truth value as $P(a) \lor P(b)$, so [Theorem 7](#thm-negate-quantifiers) is De Morgan’s laws ([Theorem 5](#thm-de-morgan-logic)) applied to $P(a)$ and $P(b)$.
+> On a finite set $S = \{a, b\}$, $\forall x \in S, P(x)$ has the same truth value as $P(a) \land P(b)$, and $\exists x \in S, P(x)$ has the same truth value as $P(a) \lor P(b)$, so [Theorem 8](#thm-negate-quantifiers) is De Morgan’s laws ([Theorem 5](#thm-de-morgan-logic), [Theorem 6](#thm-de-morgan-disjunction)) applied to $P(a)$ and $P(b)$.
 >
 > Racket shows the same pattern on a list: `(not (andmap even? (list 2 4 5)))` and `(ormap odd? (list 2 4 5))` both return `#t`.
 
@@ -354,9 +370,9 @@ Last modified: 2026-11-11 18:57:41 (PST)
 >
 > *Remark 5* (Pushing a negation inward). To negate a proposition built with $\neg$, $\land$, $\lor$, $\Rightarrow$ and quantifiers, move the $\neg$ inward one step at a time:
 >
-> - across a quantifier, with [Theorem 7](#thm-negate-quantifiers), which swaps $\forall$ and $\exists$;
-> - across $\land$ or $\lor$, with De Morgan’s laws ([Theorem 5](#thm-de-morgan-logic));
-> - across $\Rightarrow$, with [Theorem 6](#thm-negate-conditional);
+> - across a quantifier, with [Theorem 8](#thm-negate-quantifiers), which swaps $\forall$ and $\exists$;
+> - across $\land$ or $\lor$, with De Morgan’s laws ([Theorem 5](#thm-de-morgan-logic), [Theorem 6](#thm-de-morgan-disjunction));
+> - across $\Rightarrow$, with [Theorem 7](#thm-negate-conditional);
 > - across another $\neg$, with double negation ([Theorem 3](#thm-double-negation)).
 >
 > Stop when every $\neg$ sits in front of a proposition with no connective or quantifier inside it. The result is easier to read and to check than a $\neg$ in front of the whole proposition.
@@ -369,7 +385,7 @@ Last modified: 2026-11-11 18:57:41 (PST)
 
 > **NOTE:**
 >
-> *Solution 7*. Apply [Theorem 7](#thm-negate-quantifiers) twice, from the outside in. First, the negation has the truth value of $$\exists s \in W,\ \neg (\exists t \in W,\ s t \text{ is a palindrome}).$$ For each word $s$, [Theorem 7](#thm-negate-quantifiers) says that $\neg (\exists t \in W,\ s t \text{ is a palindrome})$ has the truth value of $\forall t \in W,\ s t \text{ is not a palindrome}$. These have the same truth value for every $s$, so the $\exists s$ propositions built from them do too ([Definition: Existential quantifier](../chapters/predicates-quantifiers.llms.md#def-existential-quantifier)), and the negation has the truth value of $$\exists s \in W,\ \forall t \in W,\ s t \text{ is not a palindrome}.$$ In English: some word cannot be made into a palindrome by adding letters at its end.
+> *Solution 7*. Apply [Theorem 8](#thm-negate-quantifiers) twice, from the outside in. First, the negation has the truth value of $$\exists s \in W,\ \neg (\exists t \in W,\ s t \text{ is a palindrome}).$$ For each word $s$, [Theorem 8](#thm-negate-quantifiers) says that $\neg (\exists t \in W,\ s t \text{ is a palindrome})$ has the truth value of $\forall t \in W,\ s t \text{ is not a palindrome}$. These have the same truth value for every $s$, so the $\exists s$ propositions built from them do too ([Definition: Existential quantifier](../chapters/predicates-quantifiers.llms.md#def-existential-quantifier)), and the negation has the truth value of $$\exists s \in W,\ \forall t \in W,\ s t \text{ is not a palindrome}.$$ In English: some word cannot be made into a palindrome by adding letters at its end.
 
 > **NOTE:**
 >
