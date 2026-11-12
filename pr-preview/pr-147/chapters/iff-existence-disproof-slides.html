@@ -267,7 +267,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-11 02:27:44 (PST)</p>
+  <p class="date">Last modified: 2026-11-12 00:48:53 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -488,7 +488,7 @@ x^y
 
 <div id="exm-disproof" class="theorem example">
 <p><span class="theorem-title"><strong>Example 5 (No integer squares to two)</strong></span> Claim to disprove: there is an integer <span class="math inline">\(n\)</span> with <span class="math inline">\(n^2 = 2\)</span>.</p>
-<p>By <a href="../chapters/equivalence-negation.html#thm-negate-quantifiers">Theorem: De Morgan’s laws for quantifiers</a>, its negation is “for every integer <span class="math inline">\(n\)</span>, <span class="math inline">\(n^2 \ne 2\)</span>”. We prove the negation by cases (<a href="../chapters/direct-proof.html#def-proof-by-cases">Definition: Proof by cases, proof by exhaustion</a>). Let <span class="math inline">\(n\)</span> be an integer.</p>
+<p>By <a href="../chapters/equivalence-negation.html#thm-negate-existential">Theorem: De Morgan’s law for an existential quantifier</a>, its negation is “for every integer <span class="math inline">\(n\)</span>, <span class="math inline">\(n^2 \ne 2\)</span>”. We prove the negation by cases (<a href="../chapters/direct-proof.html#def-proof-by-cases">Definition: Proof by cases, proof by exhaustion</a>). Let <span class="math inline">\(n\)</span> be an integer.</p>
 <ul>
 <li>If <span class="math inline">\(n\)</span> is <span class="math inline">\(-1\)</span>, <span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span>, then <span class="math inline">\(n^2\)</span> is <span class="math inline">\(1\)</span>, <span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span>, which is not <span class="math inline">\(2\)</span>.</li>
 <li>Otherwise <span class="math inline">\(n \le -2\)</span> or <span class="math inline">\(n \ge 2\)</span>, so <span class="math inline">\(\mathopen{}\left|n\right|\mathclose{} \ge 2\)</span>, and <span class="math inline">\(n^2 = \mathopen{}\left|n\right|\mathclose{}^2 \ge 2^2 = 4\)</span>, so <span class="math inline">\(n^2 \ne 2\)</span>.</li>
@@ -516,7 +516,7 @@ x^y
 <section class="slide level2">
 
 <div id="sol-six-four-three" class="proof solution">
-<p><span class="proof-title"><em>Solution 5</em>. </span>The proposition is false. Applying <a href="../chapters/equivalence-negation.html#thm-negate-quantifiers">Theorem: De Morgan’s laws for quantifiers</a> to each of its two quantifiers in turn, its negation is “for all integers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span>, <span class="math inline">\(6m + 4n \ne 3\)</span>”, and we prove that. Let <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> be integers. Then <span class="math inline">\(6m + 4n = 2(3m + 2n)\)</span>, and <span class="math inline">\(3m + 2n\)</span> is an integer (<a href="../chapters/direct-proof.html#rem-integer-closure">Remark: Facts about integers used without proof</a>), so <span class="math inline">\(6m + 4n\)</span> is even (<a href="../chapters/direct-proof.html#def-even-odd">Definition: Even integer</a>). But <span class="math inline">\(3 = 2 \cdot 1 + 1\)</span> is odd (<a href="../chapters/direct-proof.html#def-odd">Definition: Odd integer</a>), and no integer is both even and odd (<a href="../chapters/direct-proof.html#rem-integer-closure">Remark: Facts about integers used without proof</a>), so <span class="math inline">\(6m + 4n \ne 3\)</span>.</p>
+<p><span class="proof-title"><em>Solution 5</em>. </span>The proposition is false. Applying <a href="../chapters/equivalence-negation.html#thm-negate-existential">Theorem: De Morgan’s law for an existential quantifier</a> to each of its two quantifiers in turn, its negation is “for all integers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span>, <span class="math inline">\(6m + 4n \ne 3\)</span>”, and we prove that. Let <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> be integers. Then <span class="math inline">\(6m + 4n = 2(3m + 2n)\)</span>, and <span class="math inline">\(3m + 2n\)</span> is an integer (<a href="../chapters/direct-proof.html#rem-integer-closure">Remark: Facts about integers used without proof</a>), so <span class="math inline">\(6m + 4n\)</span> is even (<a href="../chapters/direct-proof.html#def-even-odd">Definition: Even integer</a>). But <span class="math inline">\(3 = 2 \cdot 1 + 1\)</span> is odd (<a href="../chapters/direct-proof.html#def-odd">Definition: Odd integer</a>), and no integer is both even and odd (<a href="../chapters/direct-proof.html#rem-integer-closure">Remark: Facts about integers used without proof</a>), so <span class="math inline">\(6m + 4n \ne 3\)</span>.</p>
 </div>
 </section></section>
 <section>
