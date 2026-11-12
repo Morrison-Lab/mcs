@@ -19,7 +19,7 @@ has two cases, so one `if` (@def-if-cond) is enough:
       x))
 ```
 
-Applied to $-7$ and to 2, it returns their absolute values:
+Applied to $-7$ and to $2$, it returns their absolute values:
 
 ```{racket}
 #| code-fold: false
