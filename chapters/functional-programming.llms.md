@@ -6,7 +6,7 @@ Expressions, functions and cases in Racket
 
 Published
 
-Last modified: 2026-11-12 01:20:34 (PST)
+Last modified: 2026-11-12 01:33:01 (PST)
 
 > **NOTE:**
 >
@@ -39,6 +39,19 @@ Last modified: 2026-11-12 01:20:34 (PST)
 > 3.  `+` can take any number of operands, and adds them all, so the expression returns 10.
 >
 > The expression $(2 + 3) \cdot 4 - 1$ subtracts 1 from the product of $2 + 3$ and 4, so in Racket it is `(- (* (+ 2 3) 4) 1)`, which returns 19.
+>
+> Racket returns the same values:
+>
+> ``` racket
+> (* (+ 1 2) (- 10 4))
+> ; 18
+> (- 20 (* 3 (+ 1 1)))
+> ; 14
+> (+ 1 2 3 4)
+> ; 10
+> (- (* (+ 2 3) 4) 1)
+> ; 19
+> ```
 
 > **NOTE:**
 >
@@ -99,6 +112,15 @@ Last modified: 2026-11-12 01:20:34 (PST)
 > 1.  $h(x) = x^2 - 2x$, since `(* x x)` is $x^2$ and `(* 2 x)` is $2x$.
 > 2.  $h(5) = 25 - 10 = 15$, so `(h 5)` returns 15.
 > 3.  Racket first evaluates the argument `(h 3)`, which is $9 - 6 = 3$, and then applies `h` to it, so `(h (h 3))` is `(h 3)` again and returns 3.
+>
+> Racket returns the same values:
+>
+> ``` racket
+> (h 5)
+> ; 15
+> (h (h 3))
+> ; 3
+> ```
 
 > **NOTE:**
 >
@@ -170,6 +192,19 @@ Last modified: 2026-11-12 01:20:34 (PST)
 >     8 & \text{if } 5 \le a < 18, \\
 >     12 & \text{if } a \ge 18.
 >     \end{cases}$$
+>
+> Racket returns the same values:
+>
+> ``` racket
+> (ticket-price 4)
+> ; 0
+> (ticket-price 5)
+> ; 8
+> (ticket-price 17)
+> ; 8
+> (ticket-price 70)
+> ; 12
+> ```
 
 > **NOTE:**
 >
@@ -207,7 +242,16 @@ Last modified: 2026-11-12 01:20:34 (PST)
 >       x))
 > ```
 >
-> `(absolute -7)` returns 7, and `(absolute 2)` returns 2. Racket already has this function, under the name `abs`.
+> Applied to $-7$ and to $2$, it returns their absolute values:
+>
+> ``` racket
+> (absolute -7)
+> ; 7
+> (absolute 2)
+> ; 2
+> ```
+>
+> Racket already has this function, under the name `abs`.
 
 # 4 Pure functions
 
@@ -284,6 +328,17 @@ Last modified: 2026-11-12 01:20:34 (PST)
 > 1.  `(twice add-three 10)` is `(add-three (add-three 10))`, which is `(add-three 13)`, which returns 16.
 > 2.  `(twice h 4)` is `(h (h 4))`. Since $h(4) = 16 - 8 = 8$ and $h(8) = 64 - 16 = 48$, it returns 48.
 > 3.  The argument `(twice add-three 0)` returns 6, so the whole expression is `(twice add-three 6)`, which returns 12.
+>
+> Racket returns the same values:
+>
+> ``` racket
+> (twice add-three 10)
+> ; 16
+> (twice h 4)
+> ; 48
+> (twice add-three (twice add-three 0))
+> ; 12
+> ```
 
 > **NOTE:**
 >
@@ -291,16 +346,39 @@ Last modified: 2026-11-12 01:20:34 (PST)
 
 > **NOTE:**
 >
-> **Example 3 (`map` and `filter`)** Racket’s `(list 5 7 9)` makes the list of 5, 7 and 9, which Racket prints as `'(5 7 9)`. Two built-in higher-order functions ([Definition 13](#def-higher-order)) work on lists:
+> **Example 3 (`map` and `filter`)** Racket’s `(list 5 7 9)` makes the list of 5, 7 and 9, which Racket prints with a quote mark in front:
 >
-> - `(map f L)` applies `f` to each element of the list `L`, and returns the list of results. With `add-three` from [Exercise 5](#exr-twice), `(map add-three (list 5 7 9))` returns `'(8 10 12)`.
-> - `(filter p L)` returns the list of the elements `x` of `L` for which `(p x)` is true. `(filter even? (list 5 6 7 8))` returns `'(6 8)`.
+> ``` racket
+> (list 5 7 9)
+> ; '(5 7 9)
+> ```
+>
+> Two built-in higher-order functions ([Definition 13](#def-higher-order)) work on lists:
+>
+> - `(map f L)` applies `f` to each element of the list `L`, and returns the list of results.
+> - `(filter p L)` returns the list of the elements `x` of `L` for which `(p x)` is true.
+>
+> Applied to `add-three` from [Exercise 5](#exr-twice) and to Racket’s test `even?`, they return:
+>
+> ``` racket
+> (map add-three (list 5 7 9))
+> ; '(8 10 12)
+> (filter even? (list 5 6 7 8))
+> ; '(6 8)
+> ```
 >
 > Neither one changes `L`; each returns a new list.
 
 > **NOTE:**
 >
-> **Exercise 6 (Applying a function to a list)** `(apply f L)` applies the function `f` to the elements of the list `L` as its arguments, so `(apply + (list 2 7 6))` is the same as `(+ 2 7 6)`, which returns 15.
+> **Exercise 6 (Applying a function to a list)** `(apply f L)` applies the function `f` to the elements of the list `L` as its arguments, so `(apply + (list 2 7 6))` is the same as `(+ 2 7 6)`:
+>
+> ``` racket
+> (apply + (list 2 7 6))
+> ; 15
+> (+ 2 7 6)
+> ; 15
+> ```
 >
 > 1.  Guess what `(apply max (list 3 9 2))` returns.
 > 2.  Use `apply`, `max` and `min` to define `(spread L)`, which returns the largest element of a nonempty list of numbers minus its smallest element.
@@ -322,6 +400,15 @@ Last modified: 2026-11-12 01:20:34 (PST)
 > 3.  The largest element is 7 and the smallest is $-1$, so `(spread (list 4 -1 7 2))` returns $7 - (-1) = 8$.
 >
 > `spread` needs no recursion: `max` and `min` already take any number of arguments, and `apply` hands each of them the whole list.
+>
+> Racket returns the same values:
+>
+> ``` racket
+> (apply max (list 3 9 2))
+> ; 9
+> (spread (list 4 -1 7 2))
+> ; 8
+> ```
 
 # 6 Anonymous functions and local names
 
@@ -347,6 +434,17 @@ Last modified: 2026-11-12 01:20:34 (PST)
 > 1.  Applying it to 7 returns 49.
 > 2.  `map` ([Example 3](#exm-map-filter)) applies the doubling function to each element, and returns `'(2 4 6)`.
 > 3.  In the body of `pair-with`, `y` is `"a"`, so `map` applies the function $x \mapsto (x, \text{"a"})$ to each element, and returns `'((1 "a") (2 "a") (3 "a"))`.
+>
+> Racket returns the same values:
+>
+> ``` racket
+> ((lambda (x) (* x x)) 7)
+> ; 49
+> (map (lambda (x) (* 2 x)) (list 1 2 3))
+> ; '(2 4 6)
+> (pair-with (list 1 2 3) "a")
+> ; '((1 "a") (2 "a") (3 "a"))
+> ```
 
 > **NOTE:**
 >
@@ -380,9 +478,18 @@ Last modified: 2026-11-12 01:20:34 (PST)
 >
 > `(adder 3)` returns the function $x \mapsto x + 3$, which still knows that `d` is 3 after `adder` has returned. So `adder` is a higher-order function ([Definition 13](#def-higher-order)), and its value can be used anywhere a function can:
 >
-> - `((adder 3) 4)` returns 7.
-> - `(twice (adder 3) 10)`, with `twice` from [Exercise 5](#exr-twice), returns 16.
-> - `(map (adder 1) (list 5 7 9))` returns `'(6 8 10)`.
+> - applied to an argument;
+> - passed to `twice` from [Exercise 5](#exr-twice);
+> - passed to `map` from [Example 3](#exm-map-filter).
+>
+> ``` racket
+> ((adder 3) 4)
+> ; 7
+> (twice (adder 3) 10)
+> ; 16
+> (map (adder 1) (list 5 7 9))
+> ; '(6 8 10)
+> ```
 
 > **NOTE:**
 >
@@ -412,7 +519,12 @@ Last modified: 2026-11-12 01:20:34 (PST)
 >           (/ (- (- b) s) (* 2 a)))))
 > ```
 >
-> `(roots 1 -3 2)` returns `'(2 1)`, since $x^2 - 3x + 2 = (x - 1)(x - 2)$.
+> Since $x^2 - 3x + 2 = (x - 1)(x - 2)$, the roots of $x^2 - 3x + 2$ are 2 and 1:
+>
+> ``` racket
+> (roots 1 -3 2)
+> ; '(2 1)
+> ```
 >
 > `let` does not change a variable: inside the body, `s` stands for one value, as a name does in algebra. So `roots` is a pure function ([Definition 11](#def-pure-function)).
 
