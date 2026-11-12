@@ -6,7 +6,7 @@ Membership, subsets and set equality
 
 Published
 
-Last modified: 2026-11-11 21:10:52 (PST)
+Last modified: 2026-11-11 21:24:09 (PST)
 
 > **NOTE:**
 >
@@ -206,25 +206,25 @@ Last modified: 2026-11-11 21:10:52 (PST)
 
 > **NOTE:**
 >
-> **Exercise 4 (Regrouping differences)** Show that the claim “for all sets $A$, $B$ and $C$, $A - (B - C) = (A - B) - C$” is false ([Definition: Set difference](../chapters/sets.llms.md#def-set-difference)).
+> **Exercise 4 (Regrouping differences)** Show that the claim “for all sets $A$, $B$ and $C$, ${A \setminus \mathopen{}\left({B \setminus C}\right)\mathclose{}} = {\mathopen{}\left({A \setminus B}\right)\mathclose{} \setminus C}$” is false ([Definition: Set difference](../chapters/sets.llms.md#def-set-difference)).
 
 > **NOTE:**
 >
 > *Solution 4*. A counterexample ([Definition: Counterexample](../chapters/predicates-quantifiers.llms.md#def-counterexample)) is one choice of $A$, $B$ and $C$ for which the two sides differ. Let $A = B = C = {\mathopen{}\left\{1\right\}\mathclose{}}$. Then
 >
 > $$\begin{aligned}
-> A - (B - C)
-> &= {\mathopen{}\left\{1\right\}\mathclose{}} - ({\mathopen{}\left\{1\right\}\mathclose{}} - {\mathopen{}\left\{1\right\}\mathclose{}})
-> \\&= {\mathopen{}\left\{1\right\}\mathclose{}} - \emptyset
+> {A \setminus \mathopen{}\left({B \setminus C}\right)\mathclose{}}
+> &= {{\mathopen{}\left\{1\right\}\mathclose{}} \setminus \mathopen{}\left({{\mathopen{}\left\{1\right\}\mathclose{}} \setminus {\mathopen{}\left\{1\right\}\mathclose{}}}\right)\mathclose{}}
+> \\&= {{\mathopen{}\left\{1\right\}\mathclose{}} \setminus \emptyset}
 > \\&= {\mathopen{}\left\{1\right\}\mathclose{}},
 > \end{aligned}$$
 >
 > while
 >
 > $$\begin{aligned}
-> (A - B) - C
-> &= ({\mathopen{}\left\{1\right\}\mathclose{}} - {\mathopen{}\left\{1\right\}\mathclose{}}) - {\mathopen{}\left\{1\right\}\mathclose{}}
-> \\&= \emptyset - {\mathopen{}\left\{1\right\}\mathclose{}}
+> {\mathopen{}\left({A \setminus B}\right)\mathclose{} \setminus C}
+> &= {\mathopen{}\left({{\mathopen{}\left\{1\right\}\mathclose{}} \setminus {\mathopen{}\left\{1\right\}\mathclose{}}}\right)\mathclose{} \setminus {\mathopen{}\left\{1\right\}\mathclose{}}}
+> \\&= {\emptyset \setminus {\mathopen{}\left\{1\right\}\mathclose{}}}
 > \\&= \emptyset.
 > \end{aligned}$$
 >
