@@ -7,7 +7,10 @@
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet"><meta charset="utf-8">
+<link href="../site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.11.9">
 
   <title>Math for Computer Science – Logical Equivalence and Negation</title>
@@ -321,6 +324,8 @@
     }
   })();
   </script>
+  <link href="../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+  <script src="../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -333,7 +338,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-11 02:27:45 (PST)</p>
+  <p class="date">Last modified: 2026-11-12 00:49:22 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -789,19 +794,144 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 <section class="slide level2">
 
 <div id="thm-de-morgan-logic" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 5 (De Morgan’s laws for propositions)</strong></span> For any <a href="../chapters/propositional-logic.html#def-proposition">propositions</a> <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> <span class="citation" data-cites="wikipedia_de_morgans_laws">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026a</a>)</span>:</p>
+<p><span class="theorem-title"><strong>Theorem 5 (De Morgan’s law for a conjunction)</strong></span> For any <a href="../chapters/propositional-logic.html#def-proposition">propositions</a> <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> <span class="citation" data-cites="wikipedia_de_morgans_laws">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026a</a>)</span>:</p>
 <p><span class="math display">\[
-\begin{aligned}
-\neg (P \land Q) &amp;\equiv \neg P \lor \neg Q \\
-\neg (P \lor Q) &amp;\equiv \neg P \land \neg Q
-\end{aligned}
+\neg (P \land Q) \equiv \neg P \lor \neg Q
 \]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Each side is built from <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>, so by <a href="#/def-logically-equivalent" class="quarto-xref">Definition&nbsp;1</a> it is enough to compare the two sides in each of the four rows of a <a href="../chapters/propositional-logic.html#def-truth-table">truth table</a>:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(P\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\neg (P \land Q)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\neg P \lor \neg Q\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+</tr>
+</tbody>
+</table>
+<p>The third and fourth columns agree in every row.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-de-morgan-conjunction" class="theorem example">
+<p><span class="theorem-title"><strong>Example 9 (Not both coordinates positive)</strong></span> For real numbers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, by <a href="#/thm-de-morgan-logic">De Morgan’s law for a conjunction</a>, “not (<span class="math inline">\(x &gt; 0\)</span> and <span class="math inline">\(y &gt; 0\)</span>)” is logically equivalent to “<span class="math inline">\(x \le 0\)</span> or <span class="math inline">\(y \le 0\)</span>”. The plot that follows shades the points <span class="math inline">\((x, y)\)</span> where both sentences are true: every point except those with both coordinates positive.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>[Code]</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a><span class="co"># the region x &lt;= 0 or y &lt;= 0, as two rectangles:</span></span>
+<span id="cb2-2"><a aria-label="2"></a><span class="co"># the left half, and the bottom right quarter</span></span>
+<span id="cb2-3"><a aria-label="3"></a>regions <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
+<span id="cb2-4"><a aria-label="4"></a>  <span class="at">xmin =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">0</span>),</span>
+<span id="cb2-5"><a aria-label="5"></a>  <span class="at">xmax =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">2</span>),</span>
+<span id="cb2-6"><a aria-label="6"></a>  <span class="at">ymin =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="sc">-</span><span class="dv">2</span>),</span>
+<span id="cb2-7"><a aria-label="7"></a>  <span class="at">ymax =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">0</span>)</span>
+<span id="cb2-8"><a aria-label="8"></a>)</span>
+<span id="cb2-9"><a aria-label="9"></a></span>
+<span id="cb2-10"><a aria-label="10"></a>region_plot <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(regions) <span class="sc">+</span></span>
+<span id="cb2-11"><a aria-label="11"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_rect</span>(</span>
+<span id="cb2-12"><a aria-label="12"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">xmin =</span> xmin, <span class="at">xmax =</span> xmax, <span class="at">ymin =</span> ymin, <span class="at">ymax =</span> ymax),</span>
+<span id="cb2-13"><a aria-label="13"></a>    <span class="at">fill =</span> <span class="st">"steelblue"</span>,</span>
+<span id="cb2-14"><a aria-label="14"></a>    <span class="at">alpha =</span> <span class="fl">0.4</span></span>
+<span id="cb2-15"><a aria-label="15"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-16"><a aria-label="16"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb2-17"><a aria-label="17"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb2-18"><a aria-label="18"></a>  ggplot2<span class="sc">::</span><span class="fu">coord_equal</span>() <span class="sc">+</span></span>
+<span id="cb2-19"><a aria-label="19"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x"</span>, <span class="at">y =</span> <span class="st">"y"</span>)</span>
+<span id="cb2-20"><a aria-label="20"></a></span>
+<span id="cb2-21"><a aria-label="21"></a>region_plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><a href="equivalence-negation_files/figure-html/unnamed-chunk-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="equivalence-negation_files/figure-html/unnamed-chunk-1-1.png" alt="The square from -2 to 2 on both axes, with the axes drawn through the origin. The left half (x at most 0) and the bottom half (y at most 0) are shaded; only the upper right quadrant, where x and y are both positive, is left blank." width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-de-morgan-disjunction" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 6 (De Morgan’s law for a disjunction)</strong></span> For any <a href="../chapters/propositional-logic.html#def-proposition">propositions</a> <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> <span class="citation" data-cites="wikipedia_de_morgans_laws">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026a</a>)</span>:</p>
+<p><span class="math display">\[
+\neg (P \lor Q) \equiv \neg P \land \neg Q
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Each side is built from <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>, so by <a href="#/def-logically-equivalent" class="quarto-xref">Definition&nbsp;1</a> it is enough to compare the two sides in each of the four rows of a <a href="../chapters/propositional-logic.html#def-truth-table">truth table</a>:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(P\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\neg (P \lor Q)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\neg P \land \neg Q\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+</tr>
+</tbody>
+</table>
+<p>The third and fourth columns agree in every row.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-de-morgan-logic" class="theorem example">
-<p><span class="theorem-title"><strong>Example 9 (Neither coordinate positive)</strong></span> For real numbers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, by the second of <a href="#/thm-de-morgan-logic">De Morgan’s laws</a>, “not (<span class="math inline">\(x &gt; 0\)</span> or <span class="math inline">\(y &gt; 0\)</span>)” is logically equivalent to “<span class="math inline">\(x \le 0\)</span> and <span class="math inline">\(y \le 0\)</span>”.</p>
+<p><span class="theorem-title"><strong>Example 10 (Neither coordinate positive)</strong></span> For real numbers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, by <a href="#/thm-de-morgan-disjunction">De Morgan’s law for a disjunction</a>, “not (<span class="math inline">\(x &gt; 0\)</span> or <span class="math inline">\(y &gt; 0\)</span>)” is logically equivalent to “<span class="math inline">\(x \le 0\)</span> and <span class="math inline">\(y \le 0\)</span>”.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -821,7 +951,7 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 <section class="slide level2">
 
 <div id="thm-negate-conditional" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 6 (Negating a conditional)</strong></span> For <a href="../chapters/propositional-logic.html#def-proposition">propositions</a> <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>,</p>
+<p><span class="theorem-title"><strong>Theorem 7 (Negating a conditional)</strong></span> For <a href="../chapters/propositional-logic.html#def-proposition">propositions</a> <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>,</p>
 <p><span class="math display">\[
 \neg (P \Rightarrow Q) \equiv P \land \neg Q.
 \]</span></p>
@@ -830,10 +960,10 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 <section class="slide level2">
 
 <div id="exm-negate-conditional" class="theorem example">
-<p><span class="theorem-title"><strong>Example 10 (When a search claim fails)</strong></span> The negation of “if the list is sorted, then binary search finds the key” is “the list is sorted and binary search does not find the key” (<a href="#/thm-negate-conditional" class="quarto-xref">Theorem&nbsp;6</a>).</p>
+<p><span class="theorem-title"><strong>Example 11 (When a search claim fails)</strong></span> The negation of “if the list is sorted, then binary search finds the key” is “the list is sorted and binary search does not find the key” (<a href="#/thm-negate-conditional" class="quarto-xref">Theorem&nbsp;7</a>).</p>
 </div>
 </section>
-<section class="slide level2">
+<section class="slide level2 scrollable">
 
 <div id="cor-conditional-as-or" class="theorem corollary">
 <p><span class="theorem-title"><strong>Corollary 1 (A conditional without the arrow)</strong></span> For <a href="../chapters/propositional-logic.html#def-proposition">propositions</a> <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>,</p>
@@ -841,11 +971,20 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 (P \Rightarrow Q) \equiv (\neg P \lor Q).
 \]</span></p>
 </div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span></p>
+<ol type="1">
+<li>By <a href="#/thm-double-negation">double negation</a>, <span class="math inline">\(P \Rightarrow Q \equiv \neg \neg (P \Rightarrow Q)\)</span>.</li>
+<li>By <a href="#/thm-negate-conditional">negating a conditional</a> and <a href="#/thm-substitution-logic">replacing a part by an equivalent part</a>, <span class="math inline">\(\neg \neg (P \Rightarrow Q) \equiv \neg (P \land \neg Q)\)</span>.</li>
+<li>By <a href="#/thm-de-morgan-logic">De Morgan’s law for a conjunction</a>, <span class="math inline">\(\neg (P \land \neg Q) \equiv \neg P \lor \neg \neg Q\)</span>.</li>
+<li>By double negation and replacing a part by an equivalent part again, <span class="math inline">\(\neg P \lor \neg \neg Q \equiv \neg P \lor Q\)</span>.</li>
+</ol>
+</div>
 </section>
 <section class="slide level2">
 
 <div id="exm-conditional-as-or" class="theorem example">
-<p><span class="theorem-title"><strong>Example 11 (A rule as an “or”)</strong></span> By <a href="#/cor-conditional-as-or" class="quarto-xref">Corollary&nbsp;1</a>, “if the tests pass, then the build is deployed” is logically equivalent to “the tests fail or the build is deployed”.</p>
+<p><span class="theorem-title"><strong>Example 12 (A rule as an “or”)</strong></span> By <a href="#/cor-conditional-as-or" class="quarto-xref">Corollary&nbsp;1</a>, “if the tests pass, then the build is deployed” is logically equivalent to “the tests fail or the build is deployed”.</p>
 </div>
 </section></section>
 <section>
@@ -870,26 +1009,38 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 <section class="slide level2">
 
 <div id="thm-negate-quantifiers" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 7 (De Morgan’s laws for quantifiers)</strong></span> For a <a href="../chapters/sets.html#def-set">set</a> <span class="math inline">\(S\)</span> and a <a href="../chapters/propositional-logic.html#def-predicate">predicate</a> <span class="math inline">\(P(x)\)</span> whose <a href="../chapters/predicates-quantifiers.html#def-domain-of-discourse">domain of discourse</a> is <span class="math inline">\(S\)</span>:</p>
+<p><span class="theorem-title"><strong>Theorem 8 (De Morgan’s law for a universal quantifier)</strong></span> For a <a href="../chapters/sets.html#def-set">set</a> <span class="math inline">\(S\)</span> and a <a href="../chapters/propositional-logic.html#def-predicate">predicate</a> <span class="math inline">\(P(x)\)</span> whose <a href="../chapters/predicates-quantifiers.html#def-domain-of-discourse">domain of discourse</a> is <span class="math inline">\(S\)</span>:</p>
 <p><span class="math display">\[
-\begin{aligned}
-\neg (\forall x \in S, P(x)) &amp;\equiv \exists x \in S, \neg P(x) \\
-\neg (\exists x \in S, P(x)) &amp;\equiv \forall x \in S, \neg P(x)
-\end{aligned}
+\neg (\forall x \in S, P(x)) \equiv \exists x \in S, \neg P(x)
 \]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>By the definition of the <a href="../chapters/predicates-quantifiers.html#def-universal-quantifier">universal quantifier</a>, <span class="math inline">\(\forall x \in S, P(x)\)</span> is false exactly when <span class="math inline">\(P(x)\)</span> is false for at least one <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span>. By the definition of the <a href="../chapters/predicates-quantifiers.html#def-existential-quantifier">existential quantifier</a>, that is exactly when <span class="math inline">\(\exists x \in S, \neg P(x)\)</span> is true.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-negate-existential" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 9 (De Morgan’s law for an existential quantifier)</strong></span> For a <a href="../chapters/sets.html#def-set">set</a> <span class="math inline">\(S\)</span> and a <a href="../chapters/propositional-logic.html#def-predicate">predicate</a> <span class="math inline">\(P(x)\)</span> whose <a href="../chapters/predicates-quantifiers.html#def-domain-of-discourse">domain of discourse</a> is <span class="math inline">\(S\)</span>:</p>
+<p><span class="math display">\[
+\neg (\exists x \in S, P(x)) \equiv \forall x \in S, \neg P(x)
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>By the definition of the <a href="../chapters/predicates-quantifiers.html#def-existential-quantifier">existential quantifier</a>, <span class="math inline">\(\exists x \in S, P(x)\)</span> is false exactly when <span class="math inline">\(P(x)\)</span> is false for every <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span>. By the definition of the <a href="../chapters/predicates-quantifiers.html#def-universal-quantifier">universal quantifier</a>, that is exactly when <span class="math inline">\(\forall x \in S, \neg P(x)\)</span> is true.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-negate-quantifiers" class="theorem example">
-<p><span class="theorem-title"><strong>Example 12 (No natural square root of 2)</strong></span> By part 2 of <a href="#/thm-negate-quantifiers" class="quarto-xref">Theorem&nbsp;7</a>, <span class="math inline">\(\neg (\exists n \in \mathbb{N}, n^2 = 2)\)</span> has the same truth value as <span class="math inline">\(\forall n \in \mathbb{N}, n^2 \ne 2\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 13 (No natural square root of 2)</strong></span> By <a href="#/thm-negate-existential" class="quarto-xref">Theorem&nbsp;9</a>, <span class="math inline">\(\neg (\exists n \in \mathbb{N}, n^2 = 2)\)</span> has the same truth value as <span class="math inline">\(\forall n \in \mathbb{N}, n^2 \ne 2\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="rem-quantifier-de-morgan" class="proof remark">
-<p><span class="proof-title"><em>Remark 4</em> (De Morgan’s laws for quantifiers). </span><a href="#/thm-negate-quantifiers" class="quarto-xref">Theorem&nbsp;7</a> is often written <span class="math inline">\(\neg \forall x, P(x) \equiv \exists x, \neg P(x)\)</span> and <span class="math inline">\(\neg \exists x, P(x) \equiv \forall x, \neg P(x)\)</span>. These notes say “has the same truth value” instead, because <span class="math inline">\(P(x)\)</span> is a predicate, not a proposition, so <a href="#/def-logically-equivalent" class="quarto-xref">Definition&nbsp;1</a>, which compares truth tables, does not apply.</p>
-<p>On a finite set <span class="math inline">\(S = \{a, b\}\)</span>, <span class="math inline">\(\forall x \in S, P(x)\)</span> has the same truth value as <span class="math inline">\(P(a) \land P(b)\)</span>, and <span class="math inline">\(\exists x \in S, P(x)\)</span> has the same truth value as <span class="math inline">\(P(a) \lor P(b)\)</span>, so <a href="#/thm-negate-quantifiers" class="quarto-xref">Theorem&nbsp;7</a> is De Morgan’s laws (<a href="#/thm-de-morgan-logic" class="quarto-xref">Theorem&nbsp;5</a>) applied to <span class="math inline">\(P(a)\)</span> and <span class="math inline">\(P(b)\)</span>.</p>
+<p><span class="proof-title"><em>Remark 4</em> (De Morgan’s laws for quantifiers). </span><a href="#/thm-negate-quantifiers" class="quarto-xref">Theorem&nbsp;8</a> and <a href="#/thm-negate-existential" class="quarto-xref">Theorem&nbsp;9</a> are often written <span class="math inline">\(\neg \forall x, P(x) \equiv \exists x, \neg P(x)\)</span> and <span class="math inline">\(\neg \exists x, P(x) \equiv \forall x, \neg P(x)\)</span>. These notes say “has the same truth value” instead, because <span class="math inline">\(P(x)\)</span> is a predicate, not a proposition, so <a href="#/def-logically-equivalent" class="quarto-xref">Definition&nbsp;1</a>, which compares truth tables, does not apply.</p>
+<p>On a finite set <span class="math inline">\(S = \{a, b\}\)</span>, <span class="math inline">\(\forall x \in S, P(x)\)</span> has the same truth value as <span class="math inline">\(P(a) \land P(b)\)</span>, and <span class="math inline">\(\exists x \in S, P(x)\)</span> has the same truth value as <span class="math inline">\(P(a) \lor P(b)\)</span>, so these two theorems are De Morgan’s laws for a conjunction and a disjunction (<a href="#/thm-de-morgan-logic" class="quarto-xref">Theorem&nbsp;5</a>, <a href="#/thm-de-morgan-disjunction" class="quarto-xref">Theorem&nbsp;6</a>) applied to <span class="math inline">\(P(a)\)</span> and <span class="math inline">\(P(b)\)</span>.</p>
 <p>Racket shows the same pattern on a list: <code>(not (andmap even? (list 2 4 5)))</code> and <code>(ormap odd? (list 2 4 5))</code> both return <code>#t</code>.</p>
 </div>
 </section>
@@ -898,9 +1049,9 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 <div id="rem-negation-procedure" class="proof remark">
 <p><span class="proof-title"><em>Remark 5</em> (Pushing a negation inward). </span>To negate a proposition built with <span class="math inline">\(\neg\)</span>, <span class="math inline">\(\land\)</span>, <span class="math inline">\(\lor\)</span>, <span class="math inline">\(\Rightarrow\)</span> and quantifiers, move the <span class="math inline">\(\neg\)</span> inward one step at a time:</p>
 <ul>
-<li>across a quantifier, with <a href="#/thm-negate-quantifiers" class="quarto-xref">Theorem&nbsp;7</a>, which swaps <span class="math inline">\(\forall\)</span> and <span class="math inline">\(\exists\)</span>;</li>
-<li>across <span class="math inline">\(\land\)</span> or <span class="math inline">\(\lor\)</span>, with De Morgan’s laws (<a href="#/thm-de-morgan-logic" class="quarto-xref">Theorem&nbsp;5</a>);</li>
-<li>across <span class="math inline">\(\Rightarrow\)</span>, with <a href="#/thm-negate-conditional" class="quarto-xref">Theorem&nbsp;6</a>;</li>
+<li>across a quantifier, with <a href="#/thm-negate-quantifiers" class="quarto-xref">Theorem&nbsp;8</a> or <a href="#/thm-negate-existential" class="quarto-xref">Theorem&nbsp;9</a>, which swap <span class="math inline">\(\forall\)</span> and <span class="math inline">\(\exists\)</span>;</li>
+<li>across <span class="math inline">\(\land\)</span> or <span class="math inline">\(\lor\)</span>, with De Morgan’s laws (<a href="#/thm-de-morgan-logic" class="quarto-xref">Theorem&nbsp;5</a>, <a href="#/thm-de-morgan-disjunction" class="quarto-xref">Theorem&nbsp;6</a>);</li>
+<li>across <span class="math inline">\(\Rightarrow\)</span>, with <a href="#/thm-negate-conditional" class="quarto-xref">Theorem&nbsp;7</a>;</li>
 <li>across another <span class="math inline">\(\neg\)</span>, with double negation (<a href="#/thm-double-negation" class="quarto-xref">Theorem&nbsp;3</a>).</li>
 </ul>
 <p>Stop when every <span class="math inline">\(\neg\)</span> sits in front of a proposition with no connective or quantifier inside it. The result is easier to read and to check than a <span class="math inline">\(\neg\)</span> in front of the whole proposition.</p>
@@ -918,9 +1069,9 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 <section class="slide level2">
 
 <div id="sol-palindrome" class="proof solution">
-<p><span class="proof-title"><em>Solution 7</em>. </span>Apply <a href="#/thm-negate-quantifiers" class="quarto-xref">Theorem&nbsp;7</a> twice, from the outside in. First, the negation has the truth value of <span class="math display">\[
+<p><span class="proof-title"><em>Solution 7</em>. </span>Push the negation inward, from the outside in. First, by <a href="#/thm-negate-quantifiers" class="quarto-xref">Theorem&nbsp;8</a>, the negation has the truth value of <span class="math display">\[
 \exists s \in W,\ \neg (\exists t \in W,\ s t \text{ is a palindrome}).
-\]</span> For each word <span class="math inline">\(s\)</span>, <a href="#/thm-negate-quantifiers" class="quarto-xref">Theorem&nbsp;7</a> says that <span class="math inline">\(\neg (\exists t \in W,\ s t \text{ is a palindrome})\)</span> has the truth value of <span class="math inline">\(\forall t \in W,\ s t \text{ is not a palindrome}\)</span>. These have the same truth value for every <span class="math inline">\(s\)</span>, so the <span class="math inline">\(\exists s\)</span> propositions built from them do too (<a href="../chapters/predicates-quantifiers.html#def-existential-quantifier">Definition: Existential quantifier</a>), and the negation has the truth value of <span class="math display">\[
+\]</span> For each word <span class="math inline">\(s\)</span>, <a href="#/thm-negate-existential" class="quarto-xref">Theorem&nbsp;9</a> says that <span class="math inline">\(\neg (\exists t \in W,\ s t \text{ is a palindrome})\)</span> has the truth value of <span class="math inline">\(\forall t \in W,\ s t \text{ is not a palindrome}\)</span>. These have the same truth value for every <span class="math inline">\(s\)</span>, so the <span class="math inline">\(\exists s\)</span> propositions built from them do too (<a href="../chapters/predicates-quantifiers.html#def-existential-quantifier">Definition: Existential quantifier</a>), and the negation has the truth value of <span class="math display">\[
 \exists s \in W,\ \forall t \in W,\ s t \text{ is not a palindrome}.
 \]</span> In English: some word cannot be made into a palindrome by adding letters at its end.</p>
 </div>
@@ -1636,6 +1787,38 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
         }
       });
       </script>
+    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
     
 
 </body></html>
