@@ -6,7 +6,7 @@ Expressions, functions and cases in Racket
 
 Published
 
-Last modified: 2026-11-12 00:48:36 (PST)
+Last modified: 2026-11-12 01:10:12 (PST)
 
 > **NOTE:**
 >
@@ -242,7 +242,7 @@ Last modified: 2026-11-12 00:48:36 (PST)
 >       x))
 > ```
 >
-> Applied to $-7$ and to 2, it returns their absolute values:
+> Applied to $-7$ and to $2$, it returns their absolute values:
 >
 > ``` racket
 > (absolute -7)
