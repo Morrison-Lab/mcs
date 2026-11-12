@@ -46,6 +46,8 @@ Authoritative style guides:
   the page then shows the value of each top-level form as the Racket REPL prints it, prefixed with `;`.
   A chunk that raises an error stops the render unless it sets `#| error: true`;
   `.lintr.R` registers the engine name too, because lintr lints a chunk with an engine knitr does not know as R
+- `label-first.lua` --- PDF only, after Quarto's own filters: moves the `\label` of each remark and solution from the end of its environment to just after its title,
+  because a callout box split at the foot of a page can drop a trailing label, and the handout then prints "Remark ??"
 - `R/`, `man/`, `DESCRIPTION`, `NAMESPACE` --- the project is also a small R package
 - `references.bib` --- BibTeX bibliography
 - `offwhite.scss`, `theme-picker.html` --- the website's Light / Off-white / Parchment / Dark theme dropdown (`theme-picker.html` builds it, `offwhite.scss` styles the two tinted palettes);
