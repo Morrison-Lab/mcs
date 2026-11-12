@@ -41,7 +41,7 @@ Authoritative style guides:
   and sends an id no page here defines to the published mds page, so an mds subfile with such links can be included
 - `tools/build_dependency_graph.py`, `dependency-graph.js`, `dependency-tree.qmd` --- the prerequisite graph of the definitions and results on the Math Reference (top-level) pages.
   A `pre-render` step writes `dependency-graph.json` (git-ignored), and only `dependency-tree.qmd` loads the script, because the `chapters/` pages reuse some of the same ids.
-  The builder and script are copies of the lds ones (lds `tools/` and `chapters/`), shared with mds, pds and sds: change them there and copy them back ([lds#2412](https://github.com/Morrison-Lab/lds/issues/2412))
+  The builder and script are copies of the lds ones (lds `tools/` and `chapters/`), shared with mds, pds and sds: change them there and copy them back (Morrison-Lab/lds#2412, a private repository the link checker cannot reach)
 - `tools/racket-engine.R`, `tools/racket-pieces.R`, `tools/racket-eval.rkt` --- the knitr engine that runs `{racket}` chunks ([mcs#131](https://github.com/Morrison-Lab/mcs/issues/131)).
   knitr and Quarto have no Racket engine, so a chapter with racket chunks includes `_subfiles/_racket-setup.qmd` once, after the macros include, to register it.
   Each chunk runs in a fresh `racket` process that first replays the page's earlier racket chunks silently,
