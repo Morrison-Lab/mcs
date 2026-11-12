@@ -110,6 +110,9 @@ div.csl-indent {
 <link href="../site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.js"></script>
 <link href="../site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -202,25 +205,15 @@ div.csl-indent {
 <link href="../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 <style>
-div.callout-proof.callout {
-  border-left-color: #37474F;
+div.callout-def.callout {
+  border-left-color: #1B5E20;
 }
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
 }
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-prp.callout {
-  border-left-color: #827717;
-}
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
-}
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-lem.callout {
   border-left-color: #1565C0;
@@ -231,46 +224,6 @@ div.callout-lem.callout-style-default .callout-header {
 div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-def.callout {
-  border-left-color: #1B5E20;
-}
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
-}
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-cor.callout {
   border-left-color: #00838F;
@@ -292,6 +245,36 @@ div.callout-solution .callout-toggle::before {  background-image: url('data:imag
 div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-proof.callout {
+  border-left-color: #37474F;
+}
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
+}
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-exm.callout {
   border-left-color: #6A1B9A;
 }
@@ -301,6 +284,26 @@ div.callout-exm.callout-style-default .callout-header {
 div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-prp.callout {
+  border-left-color: #827717;
+}
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
+}
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-remark.callout {
+  border-left-color: #AD1457;
+}
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
+}
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -1007,7 +1010,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/propositional-logic.html">Logic</a></li><li class="breadcrumb-item"><a href="../chapters/equivalence-negation.html">Logical Equivalence and Negation</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Logical Equivalence and Negation</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Logical Equivalence and Negation</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 <p class="subtitle lead">When two propositions say the same thing, and how to say the opposite</p>
 </div>
 
@@ -1019,7 +1022,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-11-11 02:27:44 (PST)</p>
+      <p class="date">Last modified: 2026-11-12 00:49:00 (PST)</p>
     </div>
   </div>
   
@@ -1924,12 +1927,9 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 </div>
 <div class="callout-body-container">
 <div id="thm-de-morgan-logic" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 5 (De Morgan’s laws for propositions)</strong></span> For any <a href="../chapters/propositional-logic.html#def-proposition">propositions</a> <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> <span class="citation" data-cites="wikipedia_de_morgans_laws">(<a href="#ref-wikipedia_de_morgans_laws" role="doc-biblioref">Wikipedia contributors 2026a</a>)</span>:</p>
+<p><span class="theorem-title"><strong>Theorem 5 (De Morgan’s law for a conjunction)</strong></span> For any <a href="../chapters/propositional-logic.html#def-proposition">propositions</a> <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> <span class="citation" data-cites="wikipedia_de_morgans_laws">(<a href="#ref-wikipedia_de_morgans_laws" role="doc-biblioref">Wikipedia contributors 2026a</a>)</span>:</p>
 <p><span class="math display">\[
-\begin{aligned}
-\neg (P \land Q) &amp;\equiv \neg P \lor \neg Q \\
-\neg (P \lor Q) &amp;\equiv \neg P \land \neg Q
-\end{aligned}
+\neg (P \land Q) \equiv \neg P \lor \neg Q
 \]</span></p>
 </div>
 </div>
@@ -1948,22 +1948,127 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 <div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Each side of each law is built from <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>, so by <a href="#def-logically-equivalent" class="quarto-xref">Definition&nbsp;1</a> it is enough to compare the two sides in each of the four rows of a <a href="../chapters/propositional-logic.html#def-truth-table">truth table</a>:</p>
+<p><span class="proof-title"><em>Proof</em>. </span>Each side is built from <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>, so by <a href="#def-logically-equivalent" class="quarto-xref">Definition&nbsp;1</a> it is enough to compare the two sides in each of the four rows of a <a href="../chapters/propositional-logic.html#def-truth-table">truth table</a>:</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 21%">
-<col style="width: 23%">
-<col style="width: 20%">
-<col style="width: 24%">
-</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: center;"><span class="math inline">\(P\)</span></th>
 <th style="text-align: center;"><span class="math inline">\(Q\)</span></th>
 <th style="text-align: center;"><span class="math inline">\(\neg (P \land Q)\)</span></th>
 <th style="text-align: center;"><span class="math inline">\(\neg P \lor \neg Q\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+</tr>
+</tbody>
+</table>
+<p>The third and fourth columns agree in every row.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-de-morgan-conjunction" class="theorem example">
+<p><span class="theorem-title"><strong>Example 9 (Not both coordinates positive)</strong></span> For real numbers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, by <a href="#thm-de-morgan-logic">De Morgan’s law for a conjunction</a>, “not (<span class="math inline">\(x &gt; 0\)</span> and <span class="math inline">\(y &gt; 0\)</span>)” is logically equivalent to “<span class="math inline">\(x \le 0\)</span> or <span class="math inline">\(y \le 0\)</span>”. The plot that follows shades the points <span class="math inline">\((x, y)\)</span> where both sentences are true: every point except those with both coordinates positive.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># the region x &lt;= 0 or y &lt;= 0, as two rectangles:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># the left half, and the bottom right quarter</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>regions <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">xmin =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">0</span>),</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">xmax =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">2</span>),</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">ymin =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="sc">-</span><span class="dv">2</span>),</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">ymax =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">0</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>region_plot <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(regions) <span class="sc">+</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_rect</span>(</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">xmin =</span> xmin, <span class="at">xmax =</span> xmax, <span class="at">ymin =</span> ymin, <span class="at">ymax =</span> ymax),</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"steelblue"</span>,</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha =</span> <span class="fl">0.4</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">coord_equal</span>() <span class="sc">+</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x"</span>, <span class="at">y =</span> <span class="st">"y"</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>region_plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="equivalence-negation_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="equivalence-negation_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" alt="The square from -2 to 2 on both axes, with the axes drawn through the origin. The left half (x at most 0) and the bottom half (y at most 0) are shaded; only the upper right quadrant, where x and y are both positive, is left blank." width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-de-morgan-disjunction" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 6 (De Morgan’s law for a disjunction)</strong></span> For any <a href="../chapters/propositional-logic.html#def-proposition">propositions</a> <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> <span class="citation" data-cites="wikipedia_de_morgans_laws">(<a href="#ref-wikipedia_de_morgans_laws" role="doc-biblioref">Wikipedia contributors 2026a</a>)</span>:</p>
+<p><span class="math display">\[
+\neg (P \lor Q) \equiv \neg P \land \neg Q
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Each side is built from <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>, so by <a href="#def-logically-equivalent" class="quarto-xref">Definition&nbsp;1</a> it is enough to compare the two sides in each of the four rows of a <a href="../chapters/propositional-logic.html#def-truth-table">truth table</a>:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(P\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Q\)</span></th>
 <th style="text-align: center;"><span class="math inline">\(\neg (P \lor Q)\)</span></th>
 <th style="text-align: center;"><span class="math inline">\(\neg P \land \neg Q\)</span></th>
 </tr>
@@ -1974,22 +2079,16 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 <td style="text-align: center;">T</td>
 <td style="text-align: center;">F</td>
 <td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">T</td>
 <td style="text-align: center;">F</td>
-<td style="text-align: center;">T</td>
-<td style="text-align: center;">T</td>
 <td style="text-align: center;">F</td>
 <td style="text-align: center;">F</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">F</td>
 <td style="text-align: center;">T</td>
-<td style="text-align: center;">T</td>
-<td style="text-align: center;">T</td>
 <td style="text-align: center;">F</td>
 <td style="text-align: center;">F</td>
 </tr>
@@ -1998,12 +2097,10 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 <td style="text-align: center;">F</td>
 <td style="text-align: center;">T</td>
 <td style="text-align: center;">T</td>
-<td style="text-align: center;">T</td>
-<td style="text-align: center;">T</td>
 </tr>
 </tbody>
 </table>
-<p>The third and fourth columns agree in every row, which proves the first law, and the fifth and sixth columns agree in every row, which proves the second.</p>
+<p>The third and fourth columns agree in every row.</p>
 </div>
 </div>
 </div>
@@ -2015,7 +2112,7 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 </div>
 <div class="callout-body-container">
 <div id="exm-de-morgan-logic" class="theorem example">
-<p><span class="theorem-title"><strong>Example 9 (Neither coordinate positive)</strong></span> For real numbers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, by the second of <a href="#thm-de-morgan-logic">De Morgan’s laws</a>, “not (<span class="math inline">\(x &gt; 0\)</span> or <span class="math inline">\(y &gt; 0\)</span>)” is logically equivalent to “<span class="math inline">\(x \le 0\)</span> and <span class="math inline">\(y \le 0\)</span>”.</p>
+<p><span class="theorem-title"><strong>Example 10 (Neither coordinate positive)</strong></span> For real numbers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, by <a href="#thm-de-morgan-disjunction">De Morgan’s law for a disjunction</a>, “not (<span class="math inline">\(x &gt; 0\)</span> or <span class="math inline">\(y &gt; 0\)</span>)” is logically equivalent to “<span class="math inline">\(x \le 0\)</span> and <span class="math inline">\(y \le 0\)</span>”.</p>
 </div>
 </div>
 </div>
@@ -2034,7 +2131,7 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -2043,7 +2140,7 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-negate-conditional" class="proof solution">
 <p><span class="proof-title"><em>Solution 5</em>. </span>The rule is broken on a day when the tests pass and the build is not deployed: <span class="math inline">\(P \land \neg Q\)</span>. On a day when the tests fail, the rule is not broken, whether or not the build is deployed.</p>
@@ -2059,7 +2156,7 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 </div>
 <div class="callout-body-container">
 <div id="thm-negate-conditional" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 6 (Negating a conditional)</strong></span> For <a href="../chapters/propositional-logic.html#def-proposition">propositions</a> <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>,</p>
+<p><span class="theorem-title"><strong>Theorem 7 (Negating a conditional)</strong></span> For <a href="../chapters/propositional-logic.html#def-proposition">propositions</a> <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>,</p>
 <p><span class="math display">\[
 \neg (P \Rightarrow Q) \equiv P \land \neg Q.
 \]</span></p>
@@ -2068,7 +2165,7 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2077,7 +2174,7 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>By the definition of <a href="../chapters/propositional-logic.html#def-implies">implies</a>, <span class="math inline">\(P \Rightarrow Q\)</span> is false exactly when <span class="math inline">\(P\)</span> is true and <span class="math inline">\(Q\)</span> is false. So <span class="math inline">\(\neg (P \Rightarrow Q)\)</span> is true exactly in that row of the <a href="../chapters/propositional-logic.html#def-truth-table">truth table</a>. By the definition of <a href="../chapters/propositional-logic.html#def-and">and</a>, <span class="math inline">\(P \land \neg Q\)</span> is true exactly when <span class="math inline">\(P\)</span> is true and <span class="math inline">\(\neg Q\)</span> is true. That is the same row.</p>
@@ -2092,7 +2189,7 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 </div>
 <div class="callout-body-container">
 <div id="exm-negate-conditional" class="theorem example">
-<p><span class="theorem-title"><strong>Example 10 (When a search claim fails)</strong></span> The negation of “if the list is sorted, then binary search finds the key” is “the list is sorted and binary search does not find the key” (<a href="#thm-negate-conditional" class="quarto-xref">Theorem&nbsp;6</a>).</p>
+<p><span class="theorem-title"><strong>Example 11 (When a search claim fails)</strong></span> The negation of “if the list is sorted, then binary search finds the key” is “the list is sorted and binary search does not find the key” (<a href="#thm-negate-conditional" class="quarto-xref">Theorem&nbsp;7</a>).</p>
 </div>
 </div>
 </div>
@@ -2113,7 +2210,7 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2122,14 +2219,14 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span></p>
 <ol type="1">
 <li>By <a href="#thm-double-negation">double negation</a>, <span class="math inline">\(P \Rightarrow Q \equiv \neg \neg (P \Rightarrow Q)\)</span>.</li>
 <li>By <a href="#thm-negate-conditional">negating a conditional</a> and <a href="#thm-substitution-logic">replacing a part by an equivalent part</a>, <span class="math inline">\(\neg \neg (P \Rightarrow Q) \equiv \neg (P \land \neg Q)\)</span>.</li>
-<li>By the first of <a href="#thm-de-morgan-logic">De Morgan’s laws</a>, <span class="math inline">\(\neg (P \land \neg Q) \equiv \neg P \lor \neg \neg Q\)</span>.</li>
+<li>By <a href="#thm-de-morgan-logic">De Morgan’s law for a conjunction</a>, <span class="math inline">\(\neg (P \land \neg Q) \equiv \neg P \lor \neg \neg Q\)</span>.</li>
 <li>By double negation and replacing a part by an equivalent part again, <span class="math inline">\(\neg P \lor \neg \neg Q \equiv \neg P \lor Q\)</span>.</li>
 </ol>
 </div>
@@ -2143,7 +2240,7 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 </div>
 <div class="callout-body-container">
 <div id="exm-conditional-as-or" class="theorem example">
-<p><span class="theorem-title"><strong>Example 11 (A rule as an “or”)</strong></span> By <a href="#cor-conditional-as-or" class="quarto-xref">Corollary&nbsp;1</a>, “if the tests pass, then the build is deployed” is logically equivalent to “the tests fail or the build is deployed”.</p>
+<p><span class="theorem-title"><strong>Example 12 (A rule as an “or”)</strong></span> By <a href="#cor-conditional-as-or" class="quarto-xref">Corollary&nbsp;1</a>, “if the tests pass, then the build is deployed” is logically equivalent to “the tests fail or the build is deployed”.</p>
 </div>
 </div>
 </div>
@@ -2165,7 +2262,7 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -2174,7 +2271,7 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-negate-forall" class="proof solution">
 <p><span class="proof-title"><em>Solution 6</em>. </span>“Some test fails”: <span class="math inline">\(\exists t \in T, \neg P(t)\)</span>. “Every test passes” is false exactly when at least one test does not pass.</p>
@@ -2190,19 +2287,16 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 </div>
 <div class="callout-body-container">
 <div id="thm-negate-quantifiers" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 7 (De Morgan’s laws for quantifiers)</strong></span> For a <a href="../chapters/sets.html#def-set">set</a> <span class="math inline">\(S\)</span> and a <a href="../chapters/propositional-logic.html#def-predicate">predicate</a> <span class="math inline">\(P(x)\)</span> whose <a href="../chapters/predicates-quantifiers.html#def-domain-of-discourse">domain of discourse</a> is <span class="math inline">\(S\)</span>:</p>
+<p><span class="theorem-title"><strong>Theorem 8 (De Morgan’s law for a universal quantifier)</strong></span> For a <a href="../chapters/sets.html#def-set">set</a> <span class="math inline">\(S\)</span> and a <a href="../chapters/propositional-logic.html#def-predicate">predicate</a> <span class="math inline">\(P(x)\)</span> whose <a href="../chapters/predicates-quantifiers.html#def-domain-of-discourse">domain of discourse</a> is <span class="math inline">\(S\)</span>:</p>
 <p><span class="math display">\[
-\begin{aligned}
-\neg (\forall x \in S, P(x)) &amp;\equiv \exists x \in S, \neg P(x) \\
-\neg (\exists x \in S, P(x)) &amp;\equiv \forall x \in S, \neg P(x)
-\end{aligned}
+\neg (\forall x \in S, P(x)) \equiv \exists x \in S, \neg P(x)
 \]</span></p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2211,14 +2305,43 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span></p>
-<ol type="1">
-<li>By the definition of the <a href="../chapters/predicates-quantifiers.html#def-universal-quantifier">universal quantifier</a>, <span class="math inline">\(\forall x \in S, P(x)\)</span> is false exactly when <span class="math inline">\(P(x)\)</span> is false for at least one <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span>. By the definition of the <a href="../chapters/predicates-quantifiers.html#def-existential-quantifier">existential quantifier</a>, that is exactly when <span class="math inline">\(\exists x \in S, \neg P(x)\)</span> is true.</li>
-<li>By the definition of the existential quantifier, <span class="math inline">\(\exists x \in S, P(x)\)</span> is false exactly when <span class="math inline">\(P(x)\)</span> is false for every <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span>. By the definition of the universal quantifier, that is exactly when <span class="math inline">\(\forall x \in S, \neg P(x)\)</span> is true.</li>
-</ol>
+<p><span class="proof-title"><em>Proof</em>. </span>By the definition of the <a href="../chapters/predicates-quantifiers.html#def-universal-quantifier">universal quantifier</a>, <span class="math inline">\(\forall x \in S, P(x)\)</span> is false exactly when <span class="math inline">\(P(x)\)</span> is false for at least one <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span>. By the definition of the <a href="../chapters/predicates-quantifiers.html#def-existential-quantifier">existential quantifier</a>, that is exactly when <span class="math inline">\(\exists x \in S, \neg P(x)\)</span> is true.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-negate-existential" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 9 (De Morgan’s law for an existential quantifier)</strong></span> For a <a href="../chapters/sets.html#def-set">set</a> <span class="math inline">\(S\)</span> and a <a href="../chapters/propositional-logic.html#def-predicate">predicate</a> <span class="math inline">\(P(x)\)</span> whose <a href="../chapters/predicates-quantifiers.html#def-domain-of-discourse">domain of discourse</a> is <span class="math inline">\(S\)</span>:</p>
+<p><span class="math display">\[
+\neg (\exists x \in S, P(x)) \equiv \forall x \in S, \neg P(x)
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>By the definition of the <a href="../chapters/predicates-quantifiers.html#def-existential-quantifier">existential quantifier</a>, <span class="math inline">\(\exists x \in S, P(x)\)</span> is false exactly when <span class="math inline">\(P(x)\)</span> is false for every <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span>. By the definition of the <a href="../chapters/predicates-quantifiers.html#def-universal-quantifier">universal quantifier</a>, that is exactly when <span class="math inline">\(\forall x \in S, \neg P(x)\)</span> is true.</p>
 </div>
 </div>
 </div>
@@ -2230,7 +2353,7 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 </div>
 <div class="callout-body-container">
 <div id="exm-negate-quantifiers" class="theorem example">
-<p><span class="theorem-title"><strong>Example 12 (No natural square root of 2)</strong></span> By part 2 of <a href="#thm-negate-quantifiers" class="quarto-xref">Theorem&nbsp;7</a>, <span class="math inline">\(\neg (\exists n \in \mathbb{N}, n^2 = 2)\)</span> has the same truth value as <span class="math inline">\(\forall n \in \mathbb{N}, n^2 \ne 2\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 13 (No natural square root of 2)</strong></span> By <a href="#thm-negate-existential" class="quarto-xref">Theorem&nbsp;9</a>, <span class="math inline">\(\neg (\exists n \in \mathbb{N}, n^2 = 2)\)</span> has the same truth value as <span class="math inline">\(\forall n \in \mathbb{N}, n^2 \ne 2\)</span>.</p>
 </div>
 </div>
 </div>
@@ -2242,8 +2365,8 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 </div>
 <div class="callout-body-container">
 <div id="rem-quantifier-de-morgan" class="proof remark">
-<p><span class="proof-title"><em>Remark 4</em> (De Morgan’s laws for quantifiers). </span><a href="#thm-negate-quantifiers" class="quarto-xref">Theorem&nbsp;7</a> is often written <span class="math inline">\(\neg \forall x, P(x) \equiv \exists x, \neg P(x)\)</span> and <span class="math inline">\(\neg \exists x, P(x) \equiv \forall x, \neg P(x)\)</span>. These notes say “has the same truth value” instead, because <span class="math inline">\(P(x)\)</span> is a predicate, not a proposition, so <a href="#def-logically-equivalent" class="quarto-xref">Definition&nbsp;1</a>, which compares truth tables, does not apply.</p>
-<p>On a finite set <span class="math inline">\(S = \{a, b\}\)</span>, <span class="math inline">\(\forall x \in S, P(x)\)</span> has the same truth value as <span class="math inline">\(P(a) \land P(b)\)</span>, and <span class="math inline">\(\exists x \in S, P(x)\)</span> has the same truth value as <span class="math inline">\(P(a) \lor P(b)\)</span>, so <a href="#thm-negate-quantifiers" class="quarto-xref">Theorem&nbsp;7</a> is De Morgan’s laws (<a href="#thm-de-morgan-logic" class="quarto-xref">Theorem&nbsp;5</a>) applied to <span class="math inline">\(P(a)\)</span> and <span class="math inline">\(P(b)\)</span>.</p>
+<p><span class="proof-title"><em>Remark 4</em> (De Morgan’s laws for quantifiers). </span><a href="#thm-negate-quantifiers" class="quarto-xref">Theorem&nbsp;8</a> and <a href="#thm-negate-existential" class="quarto-xref">Theorem&nbsp;9</a> are often written <span class="math inline">\(\neg \forall x, P(x) \equiv \exists x, \neg P(x)\)</span> and <span class="math inline">\(\neg \exists x, P(x) \equiv \forall x, \neg P(x)\)</span>. These notes say “has the same truth value” instead, because <span class="math inline">\(P(x)\)</span> is a predicate, not a proposition, so <a href="#def-logically-equivalent" class="quarto-xref">Definition&nbsp;1</a>, which compares truth tables, does not apply.</p>
+<p>On a finite set <span class="math inline">\(S = \{a, b\}\)</span>, <span class="math inline">\(\forall x \in S, P(x)\)</span> has the same truth value as <span class="math inline">\(P(a) \land P(b)\)</span>, and <span class="math inline">\(\exists x \in S, P(x)\)</span> has the same truth value as <span class="math inline">\(P(a) \lor P(b)\)</span>, so these two theorems are De Morgan’s laws for a conjunction and a disjunction (<a href="#thm-de-morgan-logic" class="quarto-xref">Theorem&nbsp;5</a>, <a href="#thm-de-morgan-disjunction" class="quarto-xref">Theorem&nbsp;6</a>) applied to <span class="math inline">\(P(a)\)</span> and <span class="math inline">\(P(b)\)</span>.</p>
 <p>Racket shows the same pattern on a list: <code>(not (andmap even? (list 2 4 5)))</code> and <code>(ormap odd? (list 2 4 5))</code> both return <code>#t</code>.</p>
 </div>
 </div>
@@ -2258,9 +2381,9 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 <div id="rem-negation-procedure" class="proof remark">
 <p><span class="proof-title"><em>Remark 5</em> (Pushing a negation inward). </span>To negate a proposition built with <span class="math inline">\(\neg\)</span>, <span class="math inline">\(\land\)</span>, <span class="math inline">\(\lor\)</span>, <span class="math inline">\(\Rightarrow\)</span> and quantifiers, move the <span class="math inline">\(\neg\)</span> inward one step at a time:</p>
 <ul>
-<li>across a quantifier, with <a href="#thm-negate-quantifiers" class="quarto-xref">Theorem&nbsp;7</a>, which swaps <span class="math inline">\(\forall\)</span> and <span class="math inline">\(\exists\)</span>;</li>
-<li>across <span class="math inline">\(\land\)</span> or <span class="math inline">\(\lor\)</span>, with De Morgan’s laws (<a href="#thm-de-morgan-logic" class="quarto-xref">Theorem&nbsp;5</a>);</li>
-<li>across <span class="math inline">\(\Rightarrow\)</span>, with <a href="#thm-negate-conditional" class="quarto-xref">Theorem&nbsp;6</a>;</li>
+<li>across a quantifier, with <a href="#thm-negate-quantifiers" class="quarto-xref">Theorem&nbsp;8</a> or <a href="#thm-negate-existential" class="quarto-xref">Theorem&nbsp;9</a>, which swap <span class="math inline">\(\forall\)</span> and <span class="math inline">\(\exists\)</span>;</li>
+<li>across <span class="math inline">\(\land\)</span> or <span class="math inline">\(\lor\)</span>, with De Morgan’s laws (<a href="#thm-de-morgan-logic" class="quarto-xref">Theorem&nbsp;5</a>, <a href="#thm-de-morgan-disjunction" class="quarto-xref">Theorem&nbsp;6</a>);</li>
+<li>across <span class="math inline">\(\Rightarrow\)</span>, with <a href="#thm-negate-conditional" class="quarto-xref">Theorem&nbsp;7</a>;</li>
 <li>across another <span class="math inline">\(\neg\)</span>, with double negation (<a href="#thm-double-negation" class="quarto-xref">Theorem&nbsp;3</a>).</li>
 </ul>
 <p>Stop when every <span class="math inline">\(\neg\)</span> sits in front of a proposition with no connective or quantifier inside it. The result is easier to read and to check than a <span class="math inline">\(\neg\)</span> in front of the whole proposition.</p>
@@ -2284,7 +2407,7 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -2293,12 +2416,12 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-palindrome" class="proof solution">
-<p><span class="proof-title"><em>Solution 7</em>. </span>Apply <a href="#thm-negate-quantifiers" class="quarto-xref">Theorem&nbsp;7</a> twice, from the outside in. First, the negation has the truth value of <span class="math display">\[
+<p><span class="proof-title"><em>Solution 7</em>. </span>Push the negation inward, from the outside in. First, by <a href="#thm-negate-quantifiers" class="quarto-xref">Theorem&nbsp;8</a>, the negation has the truth value of <span class="math display">\[
 \exists s \in W,\ \neg (\exists t \in W,\ s t \text{ is a palindrome}).
-\]</span> For each word <span class="math inline">\(s\)</span>, <a href="#thm-negate-quantifiers" class="quarto-xref">Theorem&nbsp;7</a> says that <span class="math inline">\(\neg (\exists t \in W,\ s t \text{ is a palindrome})\)</span> has the truth value of <span class="math inline">\(\forall t \in W,\ s t \text{ is not a palindrome}\)</span>. These have the same truth value for every <span class="math inline">\(s\)</span>, so the <span class="math inline">\(\exists s\)</span> propositions built from them do too (<a href="../chapters/predicates-quantifiers.html#def-existential-quantifier">Definition: Existential quantifier</a>), and the negation has the truth value of <span class="math display">\[
+\]</span> For each word <span class="math inline">\(s\)</span>, <a href="#thm-negate-existential" class="quarto-xref">Theorem&nbsp;9</a> says that <span class="math inline">\(\neg (\exists t \in W,\ s t \text{ is a palindrome})\)</span> has the truth value of <span class="math inline">\(\forall t \in W,\ s t \text{ is not a palindrome}\)</span>. These have the same truth value for every <span class="math inline">\(s\)</span>, so the <span class="math inline">\(\exists s\)</span> propositions built from them do too (<a href="../chapters/predicates-quantifiers.html#def-existential-quantifier">Definition: Existential quantifier</a>), and the negation has the truth value of <span class="math display">\[
 \exists s \in W,\ \forall t \in W,\ s t \text{ is not a palindrome}.
 \]</span> In English: some word cannot be made into a palindrome by adding letters at its end.</p>
 </div>
@@ -2318,7 +2441,7 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -2327,7 +2450,7 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-palindrome-truth" class="proof solution">
 <p><span class="proof-title"><em>Solution 8</em>. </span>The original is true, so its negation is false. For any word <span class="math inline">\(s\)</span>, let <span class="math inline">\(t\)</span> be <span class="math inline">\(s\)</span> written backwards; then <span class="math inline">\(s t\)</span> reads the same backwards. For example, for <span class="math inline">\(s = \text{aab}\)</span>, <span class="math inline">\(t = \text{baa}\)</span> and <span class="math inline">\(s t = \text{aabbaa}\)</span>.</p>
@@ -3510,212 +3633,224 @@ document.addEventListener("DOMContentLoaded", function () {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Logical Equivalence and Negation"</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "When two propositions say the same thing, and how to say the opposite"</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: equivalence-negation-slides.html</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">  pdf:</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: equivalence-negation-handout.pdf</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">  docx:</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: equivalence-negation.docx</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../latex-macros/macros.qmd &gt;}}</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/_racket-setup.qmd &gt;}}</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance='simple' collapse=true}</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Source</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>Adapted from Kameron Decker Harris's Fall 2026 lecture notes "Logic 3",</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>which are typed transcriptions of Scott Wehrwein's Spring 2025 handwritten lecture notes.</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>The truth table for the distributive law of "and" over "or" comes from those notes;</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>the exercises are new.</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="fu"># Logical equivalence {#sec-logical-equivalence}</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_absorption_exr.qmd &gt;}}</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_absorption_sol.qmd &gt;}}</span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_logically-equivalent_def.qmd &gt;}}</span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_logical-equivalence_exm.qmd &gt;}}</span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_equivalence-notation_rem.qmd &gt;}}</span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_not-and_exr.qmd &gt;}}</span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_not-and_sol.qmd &gt;}}</span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_tautology_def.qmd &gt;}}</span>
-<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_tautology_exm.qmd &gt;}}</span>
-<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_contradiction_def.qmd &gt;}}</span>
-<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_contradiction_exm.qmd &gt;}}</span>
-<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_contradiction-names_rem.qmd &gt;}}</span>
-<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_equivalence-iff_thm.qmd &gt;}}</span>
-<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_equivalence-iff_exm.qmd &gt;}}</span>
-<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_or-distributes_exr.qmd &gt;}}</span>
-<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_or-distributes_sol.qmd &gt;}}</span>
-<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_distributive_thm.qmd &gt;}}</span>
-<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_distributive_exm.qmd &gt;}}</span>
-<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_racket-equivalence_rem.qmd &gt;}}</span>
-<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a><span class="fu"># Negation {#sec-negation}</span></span>
-<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_badge-check_exr.qmd &gt;}}</span>
-<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_badge-check_sol.qmd &gt;}}</span>
-<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_double-negation_thm.qmd &gt;}}</span>
-<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_double-negation_exm.qmd &gt;}}</span>
-<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_substitution-logic_thm.qmd &gt;}}</span>
-<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_substitution_exm.qmd &gt;}}</span>
-<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_substitution-logic_exm.qmd &gt;}}</span>
-<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_de-morgan-logic_thm.qmd &gt;}}</span>
-<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_de-morgan_exm.qmd &gt;}}</span>
-<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_negate-conditional_exr.qmd &gt;}}</span>
-<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_negate-conditional_sol.qmd &gt;}}</span>
-<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_negate-conditional_thm.qmd &gt;}}</span>
-<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_negate-conditional_exm.qmd &gt;}}</span>
-<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-157"><a href="#cb3-157" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_conditional-as-or_cor.qmd &gt;}}</span>
-<span id="cb3-158"><a href="#cb3-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-159"><a href="#cb3-159" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-160"><a href="#cb3-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-161"><a href="#cb3-161" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_conditional-as-or_exm.qmd &gt;}}</span>
-<span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a><span class="fu"># Negating quantified propositions {#sec-negating-quantifiers}</span></span>
-<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-165"><a href="#cb3-165" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_negate-forall_exr.qmd &gt;}}</span>
-<span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-167"><a href="#cb3-167" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-169"><a href="#cb3-169" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_negate-forall_sol.qmd &gt;}}</span>
-<span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_negate-quantifiers_thm.qmd &gt;}}</span>
-<span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-175"><a href="#cb3-175" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_negate-quantifiers_exm.qmd &gt;}}</span>
-<span id="cb3-178"><a href="#cb3-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_quantifier-de-morgan_rem.qmd &gt;}}</span>
-<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_negation-procedure_rem.qmd &gt;}}</span>
-<span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-187"><a href="#cb3-187" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-188"><a href="#cb3-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_palindrome_exr.qmd &gt;}}</span>
-<span id="cb3-190"><a href="#cb3-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_palindrome_sol.qmd &gt;}}</span>
-<span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-197"><a href="#cb3-197" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_palindrome-truth_exr.qmd &gt;}}</span>
-<span id="cb3-198"><a href="#cb3-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-199"><a href="#cb3-199" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
-<span id="cb3-200"><a href="#cb3-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-201"><a href="#cb3-201" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_palindrome-truth_sol.qmd &gt;}}</span>
-<span id="cb3-202"><a href="#cb3-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-203"><a href="#cb3-203" aria-hidden="true" tabindex="-1"></a><span class="fu"># References {.unnumbered}</span></span>
-<span id="cb3-204"><a href="#cb3-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-205"><a href="#cb3-205" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
-<span id="cb3-206"><a href="#cb3-206" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Logical Equivalence and Negation"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "When two propositions say the same thing, and how to say the opposite"</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: equivalence-negation-slides.html</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">  pdf:</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: equivalence-negation-handout.pdf</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">  docx:</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: equivalence-negation.docx</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../latex-macros/macros.qmd &gt;}}</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/_racket-setup.qmd &gt;}}</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance='simple' collapse=true}</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Source</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>Adapted from Kameron Decker Harris's Fall 2026 lecture notes "Logic 3",</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>which are typed transcriptions of Scott Wehrwein's Spring 2025 handwritten lecture notes.</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>The truth table for the distributive law of "and" over "or" comes from those notes;</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>the exercises are new.</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="fu"># Logical equivalence {#sec-logical-equivalence}</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_absorption_exr.qmd &gt;}}</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_absorption_sol.qmd &gt;}}</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_logically-equivalent_def.qmd &gt;}}</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_logical-equivalence_exm.qmd &gt;}}</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_equivalence-notation_rem.qmd &gt;}}</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_not-and_exr.qmd &gt;}}</span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_not-and_sol.qmd &gt;}}</span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_tautology_def.qmd &gt;}}</span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_tautology_exm.qmd &gt;}}</span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_contradiction_def.qmd &gt;}}</span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_contradiction_exm.qmd &gt;}}</span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_contradiction-names_rem.qmd &gt;}}</span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_equivalence-iff_thm.qmd &gt;}}</span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_equivalence-iff_exm.qmd &gt;}}</span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_or-distributes_exr.qmd &gt;}}</span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_or-distributes_sol.qmd &gt;}}</span>
+<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_distributive_thm.qmd &gt;}}</span>
+<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_distributive_exm.qmd &gt;}}</span>
+<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_racket-equivalence_rem.qmd &gt;}}</span>
+<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a><span class="fu"># Negation {#sec-negation}</span></span>
+<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_badge-check_exr.qmd &gt;}}</span>
+<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_badge-check_sol.qmd &gt;}}</span>
+<span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-111"><a href="#cb4-111" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-112"><a href="#cb4-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-113"><a href="#cb4-113" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_double-negation_thm.qmd &gt;}}</span>
+<span id="cb4-114"><a href="#cb4-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-115"><a href="#cb4-115" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-116"><a href="#cb4-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-117"><a href="#cb4-117" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_double-negation_exm.qmd &gt;}}</span>
+<span id="cb4-118"><a href="#cb4-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-119"><a href="#cb4-119" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-120"><a href="#cb4-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-121"><a href="#cb4-121" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_substitution-logic_thm.qmd &gt;}}</span>
+<span id="cb4-122"><a href="#cb4-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-123"><a href="#cb4-123" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-124"><a href="#cb4-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-125"><a href="#cb4-125" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_substitution_exm.qmd &gt;}}</span>
+<span id="cb4-126"><a href="#cb4-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-127"><a href="#cb4-127" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-128"><a href="#cb4-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-129"><a href="#cb4-129" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_substitution-logic_exm.qmd &gt;}}</span>
+<span id="cb4-130"><a href="#cb4-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-131"><a href="#cb4-131" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-132"><a href="#cb4-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-133"><a href="#cb4-133" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_de-morgan-logic_thm.qmd &gt;}}</span>
+<span id="cb4-134"><a href="#cb4-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-135"><a href="#cb4-135" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-136"><a href="#cb4-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-137"><a href="#cb4-137" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_de-morgan-conjunction_exm.qmd &gt;}}</span>
+<span id="cb4-138"><a href="#cb4-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-139"><a href="#cb4-139" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-140"><a href="#cb4-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-141"><a href="#cb4-141" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_de-morgan-disjunction_thm.qmd &gt;}}</span>
+<span id="cb4-142"><a href="#cb4-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-143"><a href="#cb4-143" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-144"><a href="#cb4-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-145"><a href="#cb4-145" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_de-morgan_exm.qmd &gt;}}</span>
+<span id="cb4-146"><a href="#cb4-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-147"><a href="#cb4-147" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-148"><a href="#cb4-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-149"><a href="#cb4-149" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_negate-conditional_exr.qmd &gt;}}</span>
+<span id="cb4-150"><a href="#cb4-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-151"><a href="#cb4-151" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-152"><a href="#cb4-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-153"><a href="#cb4-153" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_negate-conditional_sol.qmd &gt;}}</span>
+<span id="cb4-154"><a href="#cb4-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-155"><a href="#cb4-155" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-156"><a href="#cb4-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-157"><a href="#cb4-157" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_negate-conditional_thm.qmd &gt;}}</span>
+<span id="cb4-158"><a href="#cb4-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-159"><a href="#cb4-159" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-160"><a href="#cb4-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-161"><a href="#cb4-161" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_negate-conditional_exm.qmd &gt;}}</span>
+<span id="cb4-162"><a href="#cb4-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-163"><a href="#cb4-163" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-164"><a href="#cb4-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-165"><a href="#cb4-165" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_conditional-as-or_cor.qmd &gt;}}</span>
+<span id="cb4-166"><a href="#cb4-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-167"><a href="#cb4-167" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-168"><a href="#cb4-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-169"><a href="#cb4-169" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_conditional-as-or_exm.qmd &gt;}}</span>
+<span id="cb4-170"><a href="#cb4-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-171"><a href="#cb4-171" aria-hidden="true" tabindex="-1"></a><span class="fu"># Negating quantified propositions {#sec-negating-quantifiers}</span></span>
+<span id="cb4-172"><a href="#cb4-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-173"><a href="#cb4-173" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_negate-forall_exr.qmd &gt;}}</span>
+<span id="cb4-174"><a href="#cb4-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-175"><a href="#cb4-175" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-176"><a href="#cb4-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-177"><a href="#cb4-177" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_negate-forall_sol.qmd &gt;}}</span>
+<span id="cb4-178"><a href="#cb4-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-179"><a href="#cb4-179" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-180"><a href="#cb4-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-181"><a href="#cb4-181" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_negate-quantifiers_thm.qmd &gt;}}</span>
+<span id="cb4-182"><a href="#cb4-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-183"><a href="#cb4-183" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-184"><a href="#cb4-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-185"><a href="#cb4-185" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_subfiles/proof-writing/_negate-existential_thm.qmd &gt;}}</span>
+<span id="cb4-186"><a href="#cb4-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-187"><a href="#cb4-187" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-188"><a href="#cb4-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-189"><a href="#cb4-189" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_negate-quantifiers_exm.qmd &gt;}}</span>
+<span id="cb4-190"><a href="#cb4-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-191"><a href="#cb4-191" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-192"><a href="#cb4-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-193"><a href="#cb4-193" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_quantifier-de-morgan_rem.qmd &gt;}}</span>
+<span id="cb4-194"><a href="#cb4-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-195"><a href="#cb4-195" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-196"><a href="#cb4-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-197"><a href="#cb4-197" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_negation-procedure_rem.qmd &gt;}}</span>
+<span id="cb4-198"><a href="#cb4-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-199"><a href="#cb4-199" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-200"><a href="#cb4-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-201"><a href="#cb4-201" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_palindrome_exr.qmd &gt;}}</span>
+<span id="cb4-202"><a href="#cb4-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-203"><a href="#cb4-203" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-204"><a href="#cb4-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-205"><a href="#cb4-205" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_palindrome_sol.qmd &gt;}}</span>
+<span id="cb4-206"><a href="#cb4-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-207"><a href="#cb4-207" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-208"><a href="#cb4-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-209"><a href="#cb4-209" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_palindrome-truth_exr.qmd &gt;}}</span>
+<span id="cb4-210"><a href="#cb4-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-211"><a href="#cb4-211" aria-hidden="true" tabindex="-1"></a>{{&lt; slidebreak &gt;}}</span>
+<span id="cb4-212"><a href="#cb4-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-213"><a href="#cb4-213" aria-hidden="true" tabindex="-1"></a>{{&lt; include _subfiles/equivalence-negation/_palindrome-truth_sol.qmd &gt;}}</span>
+<span id="cb4-214"><a href="#cb4-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-215"><a href="#cb4-215" aria-hidden="true" tabindex="-1"></a><span class="fu"># References {.unnumbered}</span></span>
+<span id="cb4-216"><a href="#cb4-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-217"><a href="#cb4-217" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb4-218"><a href="#cb4-218" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
@@ -3741,6 +3876,38 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

@@ -6,7 +6,7 @@ Membership, subsets and set equality
 
 Published
 
-Last modified: 2026-11-11 02:27:44 (PST)
+Last modified: 2026-11-12 00:49:00 (PST)
 
 > **NOTE:**
 >
@@ -96,7 +96,7 @@ Last modified: 2026-11-11 02:27:44 (PST)
 >
 > **Example 2 (A subset proof by contrapositive)** Claim: ${\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x + y > 2\right\}\mathclose{}} \subseteq {\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x > 1 \text{ or } y > 1\right\}\mathclose{}}$. If two numbers add up to more than 2, at least one of them is more than 1.
 >
-> We use the contrapositive outline of [Remark 2](#rem-subset-template). Suppose $p \notin {\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x > 1 \text{ or } y > 1\right\}\mathclose{}}$. If $p$ is not a pair of real numbers, then $p$ is not in the left-hand set either, since every element of that set is a pair of real numbers. Otherwise $p = (a, b)$ with $a$ and $b$ real, and “$a > 1$ or $b > 1$” is false. By De Morgan’s laws ([Theorem: De Morgan’s laws for propositions](../chapters/equivalence-negation.llms.md#thm-de-morgan-logic)), $a > 1$ is false and $b > 1$ is false, that is, $a \le 1$ and $b \le 1$, so $a + b \le 1 + 1 = 2$. So $p \notin {\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x + y > 2\right\}\mathclose{}}$. So the left-hand set is a subset of the right-hand set.
+> We use the contrapositive outline of [Remark 2](#rem-subset-template). Suppose $p \notin {\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x > 1 \text{ or } y > 1\right\}\mathclose{}}$. If $p$ is not a pair of real numbers, then $p$ is not in the left-hand set either, since every element of that set is a pair of real numbers. Otherwise $p = (a, b)$ with $a$ and $b$ real, and “$a > 1$ or $b > 1$” is false. By [Theorem: De Morgan’s law for a disjunction](../chapters/equivalence-negation.llms.md#thm-de-morgan-disjunction), $a > 1$ is false and $b > 1$ is false, that is, $a \le 1$ and $b \le 1$, so $a + b \le 1 + 1 = 2$. So $p \notin {\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x + y > 2\right\}\mathclose{}}$. So the left-hand set is a subset of the right-hand set.
 >
 > The contrapositive turns the conclusion “$x > 1$ or $y > 1$”, which does not say which number is large, into the hypothesis “$a \le 1$ and $b \le 1$”, which says something about both.
 
@@ -206,25 +206,25 @@ Last modified: 2026-11-11 02:27:44 (PST)
 
 > **NOTE:**
 >
-> **Exercise 4 (Regrouping differences)** Show that the claim “for all sets $A$, $B$ and $C$, $A - (B - C) = (A - B) - C$” is false ([Definition: Set difference](../chapters/sets.llms.md#def-set-difference)).
+> **Exercise 4 (Regrouping differences)** Show that the claim “for all sets $A$, $B$ and $C$, ${A \setminus \mathopen{}\left({B \setminus C}\right)\mathclose{}} = {\mathopen{}\left({A \setminus B}\right)\mathclose{} \setminus C}$” is false ([Definition: Set difference](../chapters/sets.llms.md#def-set-difference)).
 
 > **NOTE:**
 >
 > *Solution 4*. A counterexample ([Definition: Counterexample](../chapters/predicates-quantifiers.llms.md#def-counterexample)) is one choice of $A$, $B$ and $C$ for which the two sides differ. Let $A = B = C = {\mathopen{}\left\{1\right\}\mathclose{}}$. Then
 >
 > $$\begin{aligned}
-> A - (B - C)
-> &= {\mathopen{}\left\{1\right\}\mathclose{}} - ({\mathopen{}\left\{1\right\}\mathclose{}} - {\mathopen{}\left\{1\right\}\mathclose{}})
-> \\&= {\mathopen{}\left\{1\right\}\mathclose{}} - \emptyset
+> {A \setminus \mathopen{}\left({B \setminus C}\right)\mathclose{}}
+> &= {{\mathopen{}\left\{1\right\}\mathclose{}} \setminus \mathopen{}\left({{\mathopen{}\left\{1\right\}\mathclose{}} \setminus {\mathopen{}\left\{1\right\}\mathclose{}}}\right)\mathclose{}}
+> \\&= {{\mathopen{}\left\{1\right\}\mathclose{}} \setminus \emptyset}
 > \\&= {\mathopen{}\left\{1\right\}\mathclose{}},
 > \end{aligned}$$
 >
 > while
 >
 > $$\begin{aligned}
-> (A - B) - C
-> &= ({\mathopen{}\left\{1\right\}\mathclose{}} - {\mathopen{}\left\{1\right\}\mathclose{}}) - {\mathopen{}\left\{1\right\}\mathclose{}}
-> \\&= \emptyset - {\mathopen{}\left\{1\right\}\mathclose{}}
+> {\mathopen{}\left({A \setminus B}\right)\mathclose{} \setminus C}
+> &= {\mathopen{}\left({{\mathopen{}\left\{1\right\}\mathclose{}} \setminus {\mathopen{}\left\{1\right\}\mathclose{}}}\right)\mathclose{} \setminus {\mathopen{}\left\{1\right\}\mathclose{}}}
+> \\&= {\emptyset \setminus {\mathopen{}\left\{1\right\}\mathclose{}}}
 > \\&= \emptyset.
 > \end{aligned}$$
 >

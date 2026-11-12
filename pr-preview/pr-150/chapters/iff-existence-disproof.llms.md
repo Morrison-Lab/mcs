@@ -6,7 +6,7 @@ If and only if, existence, and disproof
 
 Published
 
-Last modified: 2026-11-11 02:27:44 (PST)
+Last modified: 2026-11-12 00:49:00 (PST)
 
 > **NOTE:**
 >
@@ -199,7 +199,7 @@ Last modified: 2026-11-11 02:27:44 (PST)
 >
 > **Example 5 (No integer squares to two)** Claim to disprove: there is an integer $n$ with $n^2 = 2$.
 >
-> By [Theorem: De Morgan’s laws for quantifiers](../chapters/equivalence-negation.llms.md#thm-negate-quantifiers), its negation is “for every integer $n$, $n^2 \ne 2$”. We prove the negation by cases ([Definition: Proof by cases, proof by exhaustion](../chapters/direct-proof.llms.md#def-proof-by-cases)). Let $n$ be an integer.
+> By [Theorem: De Morgan’s law for an existential quantifier](../chapters/equivalence-negation.llms.md#thm-negate-existential), its negation is “for every integer $n$, $n^2 \ne 2$”. We prove the negation by cases ([Definition: Proof by cases, proof by exhaustion](../chapters/direct-proof.llms.md#def-proof-by-cases)). Let $n$ be an integer.
 >
 > - If $n$ is $-1$, $0$ or $1$, then $n^2$ is $1$, $0$ or $1$, which is not $2$.
 > - Otherwise $n \le -2$ or $n \ge 2$, so $\mathopen{}\left|n\right|\mathclose{} \ge 2$, and $n^2 = \mathopen{}\left|n\right|\mathclose{}^2 \ge 2^2 = 4$, so $n^2 \ne 2$.
@@ -218,7 +218,7 @@ Last modified: 2026-11-11 02:27:44 (PST)
 
 > **NOTE:**
 >
-> *Solution 5*. The proposition is false. Applying [Theorem: De Morgan’s laws for quantifiers](../chapters/equivalence-negation.llms.md#thm-negate-quantifiers) to each of its two quantifiers in turn, its negation is “for all integers $m$ and $n$, $6m + 4n \ne 3$”, and we prove that. Let $m$ and $n$ be integers. Then $6m + 4n = 2(3m + 2n)$, and $3m + 2n$ is an integer ([Remark: Facts about integers used without proof](../chapters/direct-proof.llms.md#rem-integer-closure)), so $6m + 4n$ is even ([Definition: Even integer](../chapters/direct-proof.llms.md#def-even-odd)). But $3 = 2 \cdot 1 + 1$ is odd ([Definition: Odd integer](../chapters/direct-proof.llms.md#def-odd)), and no integer is both even and odd ([Remark: Facts about integers used without proof](../chapters/direct-proof.llms.md#rem-integer-closure)), so $6m + 4n \ne 3$.
+> *Solution 5*. The proposition is false. Applying [Theorem: De Morgan’s law for an existential quantifier](../chapters/equivalence-negation.llms.md#thm-negate-existential) to each of its two quantifiers in turn, its negation is “for all integers $m$ and $n$, $6m + 4n \ne 3$”, and we prove that. Let $m$ and $n$ be integers. Then $6m + 4n = 2(3m + 2n)$, and $3m + 2n$ is an integer ([Remark: Facts about integers used without proof](../chapters/direct-proof.llms.md#rem-integer-closure)), so $6m + 4n$ is even ([Definition: Even integer](../chapters/direct-proof.llms.md#def-even-odd)). But $3 = 2 \cdot 1 + 1$ is odd ([Definition: Odd integer](../chapters/direct-proof.llms.md#def-odd)), and no integer is both even and odd ([Remark: Facts about integers used without proof](../chapters/direct-proof.llms.md#rem-integer-closure)), so $6m + 4n \ne 3$.
 
 # Definitions on this page
 
