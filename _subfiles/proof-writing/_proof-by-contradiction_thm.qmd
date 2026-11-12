@@ -8,8 +8,6 @@ If $\neg P \Rightarrow Q$ is true and $Q$ is false, then $P$ is true.
 
 {{< slidebreak >}}
 
-::: {.content-hidden when-format="revealjs"}
-
 ::: proof
 
 By @def-implies, $\neg P \Rightarrow Q$ is false only when $\neg P$ is true and $Q$ is false.
@@ -18,7 +16,5 @@ so $\neg P$ is not true.
 Then $\neg P$ is false.
 Since $\neg P$ is true whenever $P$ is false,
 $P$ must be true.
-
-:::
 
 :::
