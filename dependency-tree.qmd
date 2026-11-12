@@ -2,16 +2,12 @@
 title: "Dependency Tree"
 format:
   html:
-    # Only this page loads the script: the chapters/ pages reuse some of the
-    # same ids, so a per-div graph there would point at the wrong page.
+    # The tree is drawn in the browser, so the page is HTML only,
+    # as lds's all-notes tree is.
+    # Only this page loads the script: the chapters/ pages reuse some of
+    # the same ids, so a per-div graph there would point at the wrong page.
     include-after-body:
       - text: '<script src="dependency-graph.js" defer></script>'
-  revealjs:
-    output-file: dependency-tree-slides.html
-  pdf:
-    output-file: dependency-tree-handout.pdf
-  docx:
-    output-file: dependency-tree.docx
 ---
 
 # How to read the tree {.unnumbered}
