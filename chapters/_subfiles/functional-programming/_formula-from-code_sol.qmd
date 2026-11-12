@@ -5,4 +5,12 @@
 3. Racket first evaluates the argument `(h 3)`, which is $9 - 6 = 3$,
    and then applies `h` to it, so `(h (h 3))` is `(h 3)` again and returns 3.
 
+Racket returns the same values:
+
+```{racket}
+#| code-fold: false
+(h 5)
+(h (h 3))
+```
+
 :::

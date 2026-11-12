@@ -19,4 +19,14 @@
    \end{cases}
    $$
 
+Racket returns the same values:
+
+```{racket}
+#| code-fold: false
+(ticket-price 4)
+(ticket-price 5)
+(ticket-price 17)
+(ticket-price 70)
+```
+
 :::

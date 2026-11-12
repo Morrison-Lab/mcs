@@ -8,4 +8,13 @@ Replace `f` and `x` in the body `(f (f x))` (@def-racket-define):
 3. The argument `(twice add-three 0)` returns 6,
    so the whole expression is `(twice add-three 6)`, which returns 12.
 
+Racket returns the same values:
+
+```{racket}
+#| code-fold: false
+(twice add-three 10)
+(twice h 4)
+(twice add-three (twice add-three 0))
+```
+
 :::

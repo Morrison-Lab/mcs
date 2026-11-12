@@ -9,4 +9,14 @@ Work from the innermost parentheses outward.
 The expression $(2 + 3) \cdot 4 - 1$ subtracts 1 from the product of $2 + 3$ and 4,
 so in Racket it is `(- (* (+ 2 3) 4) 1)`, which returns 19.
 
+Racket returns the same values:
+
+```{racket}
+#| code-fold: false
+(* (+ 1 2) (- 10 4))
+(- 20 (* 3 (+ 1 1)))
+(+ 1 2 3 4)
+(- (* (+ 2 3) 4) 1)
+```
+
 :::
