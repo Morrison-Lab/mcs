@@ -8,4 +8,11 @@ Build the list from its last element forward:
 
 So `'(7 2 9)` is `(cons 7 (cons 2 (cons 9 empty)))`.
 
+Racket prints it the same way:
+
+```{racket}
+#| code-fold: false
+(cons 7 (cons 2 (cons 9 empty)))
+```
+
 :::

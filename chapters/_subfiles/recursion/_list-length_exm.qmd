@@ -3,7 +3,8 @@
 
 In Racket, the definition of length (@def-list-length) is
 
-```racket
+```{racket}
+#| code-fold: false
 (define (len L)
   (if (empty? L)
       0
@@ -22,6 +23,12 @@ Replacing each call with the recursive rule:
 = 3
 ```
 
-Racket's built-in `length` gives the same values.
+Racket's built-in `length` gives the same values:
+
+```{racket}
+#| code-fold: false
+(len '(7 2 9))
+(length '(7 2 9))
+```
 
 :::
