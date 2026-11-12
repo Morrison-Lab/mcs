@@ -2,7 +2,7 @@
 #### Regrouping differences
 
 Show that the claim
-"for all sets $A$, $B$ and $C$, $A - (B - C) = (A - B) - C$"
+"for all sets $A$, $B$ and $C$, $\setdiff{A}{\paren{\setdiff{B}{C}}} = \setdiff{\paren{\setdiff{A}{B}}}{C}$"
 is false (@def-set-difference).
 
 :::
