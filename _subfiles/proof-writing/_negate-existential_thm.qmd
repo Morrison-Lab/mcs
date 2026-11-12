@@ -1,0 +1,21 @@
+:::{#thm-negate-existential}
+#### De Morgan's law for an existential quantifier
+
+For a [set](#def-set) $S$ and a [predicate](#def-predicate) $P(x)$
+whose [domain of discourse](#def-domain-of-discourse) is $S$:
+
+$$
+\neg (\exists x \in S, P(x)) \equiv \forall x \in S, \neg P(x)
+$$
+
+:::
+
+::: proof
+
+By the definition of the [existential quantifier](#def-existential-quantifier),
+$\exists x \in S, P(x)$ is false
+exactly when $P(x)$ is false for every $x$ in $S$.
+By the definition of the [universal quantifier](#def-universal-quantifier),
+that is exactly when $\forall x \in S, \neg P(x)$ is true.
+
+:::

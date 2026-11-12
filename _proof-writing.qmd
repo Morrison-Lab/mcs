@@ -180,6 +180,10 @@ The symbols for [logical entailment](#def-logical-entailment) are listed under
 
 {{< slidebreak >}}
 
+{{< include _subfiles/proof-writing/_negate-existential_thm.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include _subfiles/proof-writing/_negate-quantifiers_rem.qmd >}}
 
 {{< slidebreak >}}
