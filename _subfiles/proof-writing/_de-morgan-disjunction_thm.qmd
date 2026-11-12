@@ -1,0 +1,28 @@
+:::{#thm-de-morgan-disjunction}
+#### De Morgan's law for a disjunction
+
+For any [propositions](#def-proposition) $P$ and $Q$
+[@wikipedia_de_morgans_laws]:
+
+$$
+\neg (P \lor Q) \equiv \neg P \land \neg Q
+$$
+
+:::
+
+::: proof
+
+Each side is built from $P$ and $Q$,
+so by @def-logically-equivalent
+it is enough to compare the two sides in each of the four rows of a [truth table](#def-truth-table):
+
+| $P$ | $Q$ | $\neg (P \lor Q)$ | $\neg P \land \neg Q$ |
+|:---:|:---:|:-----------------:|:---------------------:|
+| T   | T   | F                 | F                     |
+| T   | F   | F                 | F                     |
+| F   | T   | F                 | F                     |
+| F   | F   | T                 | T                     |
+
+The third and fourth columns agree in every row.
+
+:::
