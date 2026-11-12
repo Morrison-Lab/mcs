@@ -324,6 +324,8 @@
     }
   })();
   </script>
+  <link href="../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+  <script src="../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -336,10 +338,13 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-12 01:33:01 (PST)</p>
+  <p class="date">Last modified: 2026-11-12 01:45:11 (PST)</p>
 </section>
 <section class="slide level2">
 
+<!-- Registers the knitr engine for `racket` chunks (tools/racket-engine.R).
+Include it once, near the top of a chapter, before its first racket chunk.
+The paths are relative to chapters/, where knitr runs a chapter's chunks. -->
 <div class="callout callout-note callout-titled callout-style-simple">
 <div class="callout-body">
 <div class="callout-title">
@@ -700,45 +705,65 @@ Figure&nbsp;3: The directed graph of the relation “shares a letter with” on 
 
 <div id="exr-racket-member" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 4 (Looking up a pair)</strong></span> In Racket, the relation <span class="math inline">\(B\)</span> of <a href="#/exm-beats" class="quarto-xref">Example&nbsp;4</a> can be stored as a list of two-element lists:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb1-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> beats</span></span>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb1-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> beats</span></span>
 <span id="cb1-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">list</span> <span class="op">(</span><span class="kw">list</span> 'rock 'scissors<span class="op">)</span></span>
 <span id="cb1-3"><a aria-label="3"></a>        <span class="op">(</span><span class="kw">list</span> 'scissors 'paper<span class="op">)</span></span>
 <span id="cb1-4"><a aria-label="4"></a>        <span class="op">(</span><span class="kw">list</span> 'paper 'rock<span class="op">)))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p><code>(member x L)</code> returns <code>#f</code> when <code>x</code> is not an element of the list <code>L</code>. Does <code>(member (list 'rock 'paper) beats)</code> return <code>#f</code>?</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="sol-racket-member" class="proof solution">
-<p><span class="proof-title"><em>Solution 4</em>. </span>Yes. The list <code>(list 'rock 'paper)</code> is not an element of <code>beats</code>, since rock does not beat paper (<a href="#/sol-beats-transitive" class="quarto-xref">Solution&nbsp;3</a>), so <code>member</code> returns <code>#f</code>. When <code>x</code> is an element of <code>L</code>, <code>member</code> returns the part of <code>L</code> that starts at <code>x</code>, which is not <code>#f</code>: <code>(member (list 'paper 'rock) beats)</code> returns <code>'((paper rock))</code>.</p>
+<p><span class="proof-title"><em>Solution 4</em>. </span>Yes. The list <code>(list 'rock 'paper)</code> is not an element of <code>beats</code>, since rock does not beat paper (<a href="#/sol-beats-transitive" class="quarto-xref">Solution&nbsp;3</a>), so <code>member</code> returns <code>#f</code>. When <code>x</code> is an element of <code>L</code>, <code>member</code> returns the part of <code>L</code> that starts at <code>x</code>, which is not <code>#f</code>, as the second of these two calls shows:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb2-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">member</span> <span class="op">(</span><span class="kw">list</span> 'rock 'paper<span class="op">)</span> beats<span class="op">)</span></span>
+<span id="cb2-2"><a aria-label="2"></a><span class="co">; #f</span></span>
+<span id="cb2-3"><a aria-label="3"></a><span class="op">(</span><span class="kw">member</span> <span class="op">(</span><span class="kw">list</span> 'paper 'rock<span class="op">)</span> beats<span class="op">)</span></span>
+<span id="cb2-4"><a aria-label="4"></a><span class="co">; '((paper rock))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-racket-properties" class="theorem example">
 <p><span class="theorem-title"><strong>Example 13 (Checking properties in Racket)</strong></span> The predicate <code>related?</code> turns the answer of <code>member</code> into <code>#t</code> or <code>#f</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb2-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>related? R a b<span class="op">)</span></span>
-<span id="cb2-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span><span class="kw">member</span> <span class="op">(</span><span class="kw">list</span> a b<span class="op">)</span> R<span class="op">)</span> <span class="dv">#t</span> <span class="dv">#f</span><span class="op">))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb3-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>related? R a b<span class="op">)</span></span>
+<span id="cb3-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span><span class="kw">member</span> <span class="op">(</span><span class="kw">list</span> a b<span class="op">)</span> R<span class="op">)</span> <span class="dv">#t</span> <span class="dv">#f</span><span class="op">))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p><code>(for/and ([x L]) body)</code> evaluates <code>body</code> once for each element <code>x</code> of the list <code>L</code>, and returns <code>#f</code> as soon as <code>body</code> returns <code>#f</code>, and <code>#t</code> if it never does. <code>for*/and</code>, which <a href="../chapters/equivalence-negation.html#rem-racket-equivalence">Remark: Checking an equivalence in Racket</a> uses to go through the rows of a truth table, does the same for every combination of values of its variables, here every two pairs of a relation:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb3-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>reflexive? S R<span class="op">)</span></span>
-<span id="cb3-2"><a aria-label="2"></a>  <span class="op">(</span>for/and <span class="op">([</span>a S<span class="op">])</span></span>
-<span id="cb3-3"><a aria-label="3"></a>    <span class="op">(</span>related? R a a<span class="op">)))</span></span>
-<span id="cb3-4"><a aria-label="4"></a></span>
-<span id="cb3-5"><a aria-label="5"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>symmetric? R<span class="op">)</span></span>
-<span id="cb3-6"><a aria-label="6"></a>  <span class="op">(</span>for/and <span class="op">([</span>p R<span class="op">])</span></span>
-<span id="cb3-7"><a aria-label="7"></a>    <span class="op">(</span>related? R <span class="op">(</span>second p<span class="op">)</span> <span class="op">(</span>first p<span class="op">))))</span></span>
-<span id="cb3-8"><a aria-label="8"></a></span>
-<span id="cb3-9"><a aria-label="9"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>transitive? R<span class="op">)</span></span>
-<span id="cb3-10"><a aria-label="10"></a>  <span class="op">(</span>for*/and <span class="op">([</span>p R<span class="op">]</span></span>
-<span id="cb3-11"><a aria-label="11"></a>             <span class="op">[</span>q R<span class="op">])</span></span>
-<span id="cb3-12"><a aria-label="12"></a>    <span class="op">(</span><span class="kw">or</span> <span class="op">(</span><span class="kw">not</span> <span class="op">(</span><span class="kw">equal?</span> <span class="op">(</span>second p<span class="op">)</span> <span class="op">(</span>first q<span class="op">)))</span></span>
-<span id="cb3-13"><a aria-label="13"></a>        <span class="op">(</span>related? R <span class="op">(</span>first p<span class="op">)</span> <span class="op">(</span>second q<span class="op">)))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb4-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>reflexive? S R<span class="op">)</span></span>
+<span id="cb4-2"><a aria-label="2"></a>  <span class="op">(</span>for/and <span class="op">([</span>a S<span class="op">])</span></span>
+<span id="cb4-3"><a aria-label="3"></a>    <span class="op">(</span>related? R a a<span class="op">)))</span></span>
+<span id="cb4-4"><a aria-label="4"></a></span>
+<span id="cb4-5"><a aria-label="5"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>symmetric? R<span class="op">)</span></span>
+<span id="cb4-6"><a aria-label="6"></a>  <span class="op">(</span>for/and <span class="op">([</span>p R<span class="op">])</span></span>
+<span id="cb4-7"><a aria-label="7"></a>    <span class="op">(</span>related? R <span class="op">(</span>second p<span class="op">)</span> <span class="op">(</span>first p<span class="op">))))</span></span>
+<span id="cb4-8"><a aria-label="8"></a></span>
+<span id="cb4-9"><a aria-label="9"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>transitive? R<span class="op">)</span></span>
+<span id="cb4-10"><a aria-label="10"></a>  <span class="op">(</span>for*/and <span class="op">([</span>p R<span class="op">]</span></span>
+<span id="cb4-11"><a aria-label="11"></a>             <span class="op">[</span>q R<span class="op">])</span></span>
+<span id="cb4-12"><a aria-label="12"></a>    <span class="op">(</span><span class="kw">or</span> <span class="op">(</span><span class="kw">not</span> <span class="op">(</span><span class="kw">equal?</span> <span class="op">(</span>second p<span class="op">)</span> <span class="op">(</span>first q<span class="op">)))</span></span>
+<span id="cb4-13"><a aria-label="13"></a>        <span class="op">(</span>related? R <span class="op">(</span>first p<span class="op">)</span> <span class="op">(</span>second q<span class="op">)))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <ul>
 <li><code>reflexive?</code> checks <span class="math inline">\(a \mathrel{R} a\)</span> for each element <span class="math inline">\(a\)</span> of the set <code>S</code> (<a href="#/def-reflexive" class="quarto-xref">Definition&nbsp;6</a>). It needs <code>S</code>, because the list <code>R</code> says nothing about an element that is in no pair.</li>
 <li><code>symmetric?</code> checks, for each pair <span class="math inline">\((a, b)\)</span> in <code>R</code>, that <span class="math inline">\((b, a)\)</span> is in <code>R</code> too (<a href="#/def-symmetric-relation" class="quarto-xref">Definition&nbsp;7</a>).</li>
 <li><code>transitive?</code> checks, for every two pairs <span class="math inline">\((a, b)\)</span> and <span class="math inline">\((b', c)\)</span> of <code>R</code>, the conditional “if <span class="math inline">\(b = b'\)</span>, then <span class="math inline">\(a \mathrel{R} c\)</span>” (<a href="#/def-transitive" class="quarto-xref">Definition&nbsp;9</a>), written as an <code>or</code> by <a href="../chapters/equivalence-negation.html#cor-conditional-as-or">Corollary: A conditional without the arrow</a>.</li>
 </ul>
-<p>All three of <code>(reflexive? (list 'rock 'paper 'scissors) beats)</code>, <code>(symmetric? beats)</code> and <code>(transitive? beats)</code> return <code>#f</code>, as <a href="#/exm-reflexive-or-not" class="quarto-xref">Example&nbsp;9</a>, <a href="#/exm-symmetric-or-not" class="quarto-xref">Example&nbsp;10</a> and <a href="#/exm-transitive-or-not" class="quarto-xref">Example&nbsp;12</a> found.</p>
+<p>All three return <code>#f</code> for <code>beats</code>, as <a href="#/exm-reflexive-or-not" class="quarto-xref">Example&nbsp;9</a>, <a href="#/exm-symmetric-or-not" class="quarto-xref">Example&nbsp;10</a> and <a href="#/exm-transitive-or-not" class="quarto-xref">Example&nbsp;12</a> found:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb5-1"><a aria-label="1"></a><span class="op">(</span>reflexive? <span class="op">(</span><span class="kw">list</span> 'rock 'paper 'scissors<span class="op">)</span> beats<span class="op">)</span></span>
+<span id="cb5-2"><a aria-label="2"></a><span class="co">; #f</span></span>
+<span id="cb5-3"><a aria-label="3"></a><span class="op">(</span>symmetric? beats<span class="op">)</span></span>
+<span id="cb5-4"><a aria-label="4"></a><span class="co">; #f</span></span>
+<span id="cb5-5"><a aria-label="5"></a><span class="op">(</span>transitive? beats<span class="op">)</span></span>
+<span id="cb5-6"><a aria-label="6"></a><span class="co">; #f</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 </section></section>
 <section>
@@ -1120,14 +1145,26 @@ x - z
 
 <div id="exm-racket-function" class="theorem example">
 <p><span class="theorem-title"><strong>Example 25 (Checking for one output per input in Racket)</strong></span> <code>(for/sum ([x L]) body)</code> evaluates <code>body</code> once for each element <code>x</code> of the list <code>L</code>, and returns the sum of the values. With a finite relation stored as a list of pairs, as in <a href="#/exr-racket-member" class="quarto-xref">Exercise&nbsp;4</a>, <code>count-outputs</code> uses it to count the pairs whose first entry is <code>a</code>, and <code>function?</code> uses <code>for/and</code> (<a href="#/exm-racket-properties" class="quarto-xref">Example&nbsp;13</a>) to check the condition of <a href="#/thm-function-relation" class="quarto-xref">Theorem&nbsp;7</a> for each element of the list <code>A</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb4-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>count-outputs R a<span class="op">)</span></span>
-<span id="cb4-2"><a aria-label="2"></a>  <span class="op">(</span>for/sum <span class="op">([</span>p R<span class="op">])</span></span>
-<span id="cb4-3"><a aria-label="3"></a>    <span class="op">(</span><span class="kw">if</span> <span class="op">(</span><span class="kw">equal?</span> <span class="op">(</span>first p<span class="op">)</span> a<span class="op">)</span> <span class="dv">1</span> <span class="dv">0</span><span class="op">)))</span></span>
-<span id="cb4-4"><a aria-label="4"></a></span>
-<span id="cb4-5"><a aria-label="5"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>function? A R<span class="op">)</span></span>
-<span id="cb4-6"><a aria-label="6"></a>  <span class="op">(</span>for/and <span class="op">([</span>a A<span class="op">])</span></span>
-<span id="cb4-7"><a aria-label="7"></a>    <span class="op">(=</span> <span class="op">(</span>count-outputs R a<span class="op">)</span> <span class="dv">1</span><span class="op">)))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>(function? (list 'rock 'paper 'scissors) beats)</code> returns <code>#t</code>, as <a href="#/exm-function-or-not" class="quarto-xref">Example&nbsp;24</a> found, since <code>(count-outputs beats a)</code> is 1 for each of the three elements.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb6-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>count-outputs R a<span class="op">)</span></span>
+<span id="cb6-2"><a aria-label="2"></a>  <span class="op">(</span>for/sum <span class="op">([</span>p R<span class="op">])</span></span>
+<span id="cb6-3"><a aria-label="3"></a>    <span class="op">(</span><span class="kw">if</span> <span class="op">(</span><span class="kw">equal?</span> <span class="op">(</span>first p<span class="op">)</span> a<span class="op">)</span> <span class="dv">1</span> <span class="dv">0</span><span class="op">)))</span></span>
+<span id="cb6-4"><a aria-label="4"></a></span>
+<span id="cb6-5"><a aria-label="5"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>function? A R<span class="op">)</span></span>
+<span id="cb6-6"><a aria-label="6"></a>  <span class="op">(</span>for/and <span class="op">([</span>a A<span class="op">])</span></span>
+<span id="cb6-7"><a aria-label="7"></a>    <span class="op">(=</span> <span class="op">(</span>count-outputs R a<span class="op">)</span> <span class="dv">1</span><span class="op">)))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><code>(count-outputs beats a)</code> is 1 for each of the three elements, so <code>function?</code> returns <code>#t</code>, as <a href="#/exm-function-or-not" class="quarto-xref">Example&nbsp;24</a> found:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb7-1"><a aria-label="1"></a><span class="op">(</span>count-outputs beats 'rock<span class="op">)</span></span>
+<span id="cb7-2"><a aria-label="2"></a><span class="co">; 1</span></span>
+<span id="cb7-3"><a aria-label="3"></a><span class="op">(</span>count-outputs beats 'paper<span class="op">)</span></span>
+<span id="cb7-4"><a aria-label="4"></a><span class="co">; 1</span></span>
+<span id="cb7-5"><a aria-label="5"></a><span class="op">(</span>count-outputs beats 'scissors<span class="op">)</span></span>
+<span id="cb7-6"><a aria-label="6"></a><span class="co">; 1</span></span>
+<span id="cb7-7"><a aria-label="7"></a><span class="op">(</span>function? <span class="op">(</span><span class="kw">list</span> 'rock 'paper 'scissors<span class="op">)</span> beats<span class="op">)</span></span>
+<span id="cb7-8"><a aria-label="8"></a><span class="co">; #t</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 </section>
 <section class="slide level2">

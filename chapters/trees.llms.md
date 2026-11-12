@@ -6,7 +6,7 @@ Trees and forests, rooted trees, binary trees, preorder, inorder, postorder and 
 
 Published
 
-Last modified: 2026-11-12 01:33:01 (PST)
+Last modified: 2026-11-12 01:45:11 (PST)
 
 > **NOTE:**
 >
@@ -650,6 +650,17 @@ Last modified: 2026-11-12 01:33:01 (PST)
 > **NOTE:**
 >
 > *Solution 7*. It returns `'r`. `(third B)` is the right subtree of $B$, `'(t (r (p () ()) ()) (w () ()))`. Its second element is its left subtree, `'(r (p () ()) ())`, and the first element of that is its label, `'r`.
+>
+> Racket returns the same values:
+>
+> ``` racket
+> (third B)
+> ; '(t (r (p () ()) ()) (w () ()))
+> (second (third B))
+> ; '(r (p () ()) ())
+> (first (second (third B)))
+> ; 'r
+> ```
 
 > **NOTE:**
 >
@@ -676,11 +687,16 @@ Last modified: 2026-11-12 01:33:01 (PST)
 >               (list (first T)))))
 > ```
 >
-> `(append L M N)` is the list of the elements of `L`, then `M`, then `N`.
+> `(append L M N)` is the list of the elements of `L`, then `M`, then `N`. The three traversals of `B` are:
 >
-> - `(preorder B)` returns `'(m f c h j t r p w)`.
-> - `(inorder B)` returns `'(c f h j m p r t w)`.
-> - `(postorder B)` returns `'(c j h f p r w t m)`.
+> ``` racket
+> (preorder B)
+> ; '(m f c h j t r p w)
+> (inorder B)
+> ; '(c f h j m p r t w)
+> (postorder B)
+> ; '(c j h f p r w t m)
+> ```
 
 > **NOTE:**
 >
@@ -700,7 +716,16 @@ Last modified: 2026-11-12 01:33:01 (PST)
 >
 > Here `(max a b)` returns the larger of the numbers `a` and `b`.
 >
-> With `B` as in [Exercise 7](#exr-racket-tree), `(size B)` returns 9 and `(height B)` returns 3, and `(height '())` returns -1.
+> With `B` as in [Exercise 7](#exr-racket-tree), these calls give the size and the height of $B$, and the height of the empty tree:
+>
+> ``` racket
+> (size B)
+> ; 9
+> (height B)
+> ; 3
+> (height '())
+> ; -1
+> ```
 
 > **NOTE:**
 >
@@ -724,7 +749,14 @@ Last modified: 2026-11-12 01:33:01 (PST)
 > - `(let ([name value]) body)` gives `name` the value `value`, and then returns the value of `body`. Here it names the front of the queue `T`.
 > - `(append xs ys)` is the list of the elements of `xs` followed by those of `ys`, so the two subtrees go to the back of the queue.
 >
-> With `B` as in [Exercise 7](#exr-racket-tree), `(level-order B)` returns `'(m f t c h r w j p)`, the level order of [Example 23](#exm-level-order). Each subtree that is not empty enters the queue when its parent’s subtree is removed, just as `bfs` marks a child when it removes the parent.
+> With `B` as in [Exercise 7](#exr-racket-tree), `level-order` returns the level order of [Example 23](#exm-level-order):
+>
+> ``` racket
+> (level-order B)
+> ; '(m f t c h r w j p)
+> ```
+>
+> Each subtree that is not empty enters the queue when its parent’s subtree is removed, just as `bfs` marks a child when it removes the parent.
 
 # 8 Expression trees
 
@@ -834,7 +866,14 @@ Last modified: 2026-11-12 01:33:01 (PST)
 > - `(eq? x y)` is true when `x` and `y` are the same symbol.
 > - `(number? e)` is true when `e` is a number.
 >
-> `(evaluate '(* (- 7 2) (+ 3 (* 4 2))))` returns 55. Without the quote, `(* (- 7 2) (+ 3 (* 4 2)))` is itself Racket code, and it also returns 55: Racket writes each arithmetic operation in prefix form ([Definition 20](#def-prefix-form)), with a pair of parentheses around each operation.
+> `evaluate` computes the value of the tree. Without the quote, `(* (- 7 2) (+ 3 (* 4 2)))` is itself Racket code, and it has the same value, because Racket writes each arithmetic operation in [prefix form](#def-prefix-form), with a pair of parentheses around each operation:
+>
+> ``` racket
+> (evaluate '(* (- 7 2) (+ 3 (* 4 2))))
+> ; 55
+> (* (- 7 2) (+ 3 (* 4 2)))
+> ; 55
+> ```
 
 > **NOTE:**
 >
@@ -856,7 +895,12 @@ Last modified: 2026-11-12 01:33:01 (PST)
 >   (postfix-loop symbols empty))
 > ```
 >
-> In the last clause, `(first stack)` is the number $b$ popped first and `(second stack)` is the number $a$ under it. `(evaluate-postfix '(7 2 - 3 4 2 * + *))` returns 55.
+> In the last clause, `(first stack)` is the number $b$ popped first and `(second stack)` is the number $a$ under it. The postfix form of the tree of [Figure 8](#fig-expression) has the same value as the tree:
+>
+> ``` racket
+> (evaluate-postfix '(7 2 - 3 4 2 * + *))
+> ; 55
+> ```
 
 # 9 Spanning trees
 

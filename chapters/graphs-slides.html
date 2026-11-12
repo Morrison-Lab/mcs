@@ -324,6 +324,8 @@
     }
   })();
   </script>
+  <link href="../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+  <script src="../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -336,10 +338,13 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-12 01:33:01 (PST)</p>
+  <p class="date">Last modified: 2026-11-12 01:45:11 (PST)</p>
 </section>
 <section class="slide level2">
 
+<!-- Registers the knitr engine for `racket` chunks (tools/racket-engine.R).
+Include it once, near the top of a chapter, before its first racket chunk.
+The paths are relative to chapters/, where knitr runs a chapter's chunks. -->
 <div class="callout callout-note callout-titled callout-style-simple">
 <div class="callout-body">
 <div class="callout-title">
@@ -1008,13 +1013,15 @@ A_G =
 
 <div id="exr-racket-assoc" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 5 (Looking up a vertex)</strong></span> In Racket, the adjacency list of the office graph (<a href="#/exm-adjacency-list" class="quarto-xref">Example&nbsp;17</a>) can be stored as a list with one list for each vertex, which starts with the vertex and goes on with its neighbors:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb1-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> office</span></span>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb1-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> office</span></span>
 <span id="cb1-2"><a aria-label="2"></a>  '<span class="op">((</span>a b c<span class="op">)</span></span>
 <span id="cb1-3"><a aria-label="3"></a>    <span class="op">(</span>b a c d<span class="op">)</span></span>
 <span id="cb1-4"><a aria-label="4"></a>    <span class="op">(</span>c a b e<span class="op">)</span></span>
 <span id="cb1-5"><a aria-label="5"></a>    <span class="op">(</span>d b e f<span class="op">)</span></span>
 <span id="cb1-6"><a aria-label="6"></a>    <span class="op">(</span>e c d f<span class="op">)</span></span>
 <span id="cb1-7"><a aria-label="7"></a>    <span class="op">(</span>f d e<span class="op">)))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>The quote <code>'</code> makes Racket read what follows as data, so <code>'(a b c)</code> is the same list as <code>(list 'a 'b 'c)</code>. <code>(assoc x L)</code> returns the first element of the list <code>L</code> whose first element is <code>x</code>, and <code>#f</code> if there is none. What does <code>(assoc 'd office)</code> return?</p>
 </div>
 </section>
@@ -1022,21 +1029,39 @@ A_G =
 
 <div id="sol-racket-assoc" class="proof solution">
 <p><span class="proof-title"><em>Solution 5</em>. </span>It returns <code>'(d b e f)</code>, the element of <code>office</code> that starts with <code>d</code>. Its rest, <code>'(b e f)</code>, lists the neighbors of <span class="math inline">\(d\)</span> (<a href="#/def-adjacent" class="quarto-xref">Definition&nbsp;6</a>).</p>
+<p>Racket returns the same values:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb2-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">assoc</span> 'd office<span class="op">)</span></span>
+<span id="cb2-2"><a aria-label="2"></a><span class="co">; '(d b e f)</span></span>
+<span id="cb2-3"><a aria-label="3"></a><span class="op">(</span>rest <span class="op">(</span><span class="kw">assoc</span> 'd office<span class="op">))</span></span>
+<span id="cb2-4"><a aria-label="4"></a><span class="co">; '(b e f)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-racket-neighbors" class="theorem example">
 <p><span class="theorem-title"><strong>Example 21 (Neighbors and degrees in Racket)</strong></span> With <code>office</code> as in <a href="#/exr-racket-assoc" class="quarto-xref">Exercise&nbsp;5</a>, these functions return the neighbors (<a href="#/def-adjacent" class="quarto-xref">Definition&nbsp;6</a>) and the degree (<a href="#/def-degree" class="quarto-xref">Definition&nbsp;9</a>) of a vertex of a graph with no loops or parallel edges:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb2-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>neighbors G v<span class="op">)</span></span>
-<span id="cb2-2"><a aria-label="2"></a>  <span class="op">(</span>rest <span class="op">(</span><span class="kw">assoc</span> v G<span class="op">)))</span></span>
-<span id="cb2-3"><a aria-label="3"></a></span>
-<span id="cb2-4"><a aria-label="4"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>degree G v<span class="op">)</span></span>
-<span id="cb2-5"><a aria-label="5"></a>  <span class="op">(</span><span class="kw">length</span> <span class="op">(</span>neighbors G v<span class="op">)))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>(neighbors office 'b)</code> returns <code>'(a c d)</code>, and <code>(degree office 'b)</code> returns 3. <code>(for/sum ([x L]) body)</code> adds up the values of <code>body</code> for each element <code>x</code> of the list <code>L</code>, so</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb3-1"><a aria-label="1"></a><span class="op">(</span>for/sum <span class="op">([</span>row office<span class="op">])</span></span>
-<span id="cb3-2"><a aria-label="2"></a>  <span class="op">(</span>degree office <span class="op">(</span>first row<span class="op">)))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>adds up the degrees of the six vertices and returns 16, which is <span class="math inline">\(2 {\mathopen{}\left|E\right|\mathclose{}}\)</span>, as <a href="#/thm-handshake" class="quarto-xref">Theorem&nbsp;1</a> says.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb3-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>neighbors G v<span class="op">)</span></span>
+<span id="cb3-2"><a aria-label="2"></a>  <span class="op">(</span>rest <span class="op">(</span><span class="kw">assoc</span> v G<span class="op">)))</span></span>
+<span id="cb3-3"><a aria-label="3"></a></span>
+<span id="cb3-4"><a aria-label="4"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>degree G v<span class="op">)</span></span>
+<span id="cb3-5"><a aria-label="5"></a>  <span class="op">(</span><span class="kw">length</span> <span class="op">(</span>neighbors G v<span class="op">)))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>For the vertex <span class="math inline">\(b\)</span>:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb4-1"><a aria-label="1"></a><span class="op">(</span>neighbors office 'b<span class="op">)</span></span>
+<span id="cb4-2"><a aria-label="2"></a><span class="co">; '(a c d)</span></span>
+<span id="cb4-3"><a aria-label="3"></a><span class="op">(</span>degree office 'b<span class="op">)</span></span>
+<span id="cb4-4"><a aria-label="4"></a><span class="co">; 3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><code>(for/sum ([x L]) body)</code> adds up the values of <code>body</code> for each element <code>x</code> of the list <code>L</code>, so this chunk adds up the degrees of the six vertices. By <a href="#/thm-handshake" class="quarto-xref">Theorem&nbsp;1</a>, that sum is <span class="math inline">\(2 {\mathopen{}\left|E\right|\mathclose{}}\)</span>:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb5-1"><a aria-label="1"></a><span class="op">(</span>for/sum <span class="op">([</span>row office<span class="op">])</span></span>
+<span id="cb5-2"><a aria-label="2"></a>  <span class="op">(</span>degree office <span class="op">(</span>first row<span class="op">)))</span></span>
+<span id="cb5-3"><a aria-label="3"></a><span class="co">; 16</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 </section></section>
 <section>
@@ -1466,15 +1491,15 @@ Figure&nbsp;9: The office graph, with its vertices in columns by their distance 
 
 <div id="def-bfs" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 32 (Breadth-first search)</strong></span> Let <span class="math inline">\(G\)</span> be a graph (<a href="#/def-graph-vertices-edges" class="quarto-xref">Definition&nbsp;1</a>) or a directed graph (<a href="#/def-directed-graph" class="quarto-xref">Definition&nbsp;5</a>) with no parallel edges (<a href="#/def-parallel-edges" class="quarto-xref">Definition&nbsp;3</a>), given by an adjacency list (<a href="#/def-adjacency-list" class="quarto-xref">Definition&nbsp;16</a>), and let <span class="math inline">\(s\)</span> be a vertex of <span class="math inline">\(G\)</span>. <strong>Breadth-first search</strong> <span class="citation" data-cites="wikipedia_breadth_first_search">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span> from <span class="math inline">\(s\)</span> is the algorithm (<a href="../expressions-algorithms.html#def-algorithm">Definition: Algorithm</a>) <code>bfs</code>, written in the pseudocode of <a href="../chapters/loop-invariants.html#rem-pseudocode">Remark: How to read the pseudocode in this chapter</a>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a aria-label="1"></a>procedure bfs(G, s)</span>
-<span id="cb4-2"><a aria-label="2"></a>    mark s, and set dist[s] := 0</span>
-<span id="cb4-3"><a aria-label="3"></a>    Q := a queue containing only s</span>
-<span id="cb4-4"><a aria-label="4"></a>    while Q is not empty</span>
-<span id="cb4-5"><a aria-label="5"></a>        v := remove the front of Q</span>
-<span id="cb4-6"><a aria-label="6"></a>        for each vertex u in the list of v, in order</span>
-<span id="cb4-7"><a aria-label="7"></a>            if u is not marked</span>
-<span id="cb4-8"><a aria-label="8"></a>                mark u, and set dist[u] := dist[v] + 1</span>
-<span id="cb4-9"><a aria-label="9"></a>                add u to the back of Q</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a aria-label="1"></a>procedure bfs(G, s)</span>
+<span id="cb6-2"><a aria-label="2"></a>    mark s, and set dist[s] := 0</span>
+<span id="cb6-3"><a aria-label="3"></a>    Q := a queue containing only s</span>
+<span id="cb6-4"><a aria-label="4"></a>    while Q is not empty</span>
+<span id="cb6-5"><a aria-label="5"></a>        v := remove the front of Q</span>
+<span id="cb6-6"><a aria-label="6"></a>        for each vertex u in the list of v, in order</span>
+<span id="cb6-7"><a aria-label="7"></a>            if u is not marked</span>
+<span id="cb6-8"><a aria-label="8"></a>                mark u, and set dist[u] := dist[v] + 1</span>
+<span id="cb6-9"><a aria-label="9"></a>                add u to the back of Q</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Here <span class="math inline">\(Q\)</span> is a queue (<a href="#/def-queue" class="quarto-xref">Definition&nbsp;31</a>), and <code>dist[u]</code> is a label that the algorithm gives to <span class="math inline">\(u\)</span> when it marks <span class="math inline">\(u\)</span>.</p>
 </div>
 </section>
@@ -1536,37 +1561,43 @@ Figure&nbsp;9: The office graph, with its vertices in columns by their distance 
 
 <div id="exm-racket-bfs" class="theorem example">
 <p><span class="theorem-title"><strong>Example 36 (Breadth-first search in Racket)</strong></span> This Racket version of <code>bfs</code> (<a href="#/def-bfs" class="quarto-xref">Definition&nbsp;32</a>) keeps the labels in a list of pairs <code>(list u d)</code>, one for each marked vertex <span class="math inline">\(u\)</span> with label <span class="math inline">\(d\)</span>, so a vertex is marked when <code>assoc</code> (<a href="#/exr-racket-assoc" class="quarto-xref">Exercise&nbsp;5</a>) finds it in that list. It uses <code>neighbors</code> from <a href="#/exm-racket-neighbors" class="quarto-xref">Example&nbsp;21</a>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb5-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>unmarked vs dist<span class="op">)</span></span>
-<span id="cb5-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span>empty? vs<span class="op">)</span></span>
-<span id="cb5-3"><a aria-label="3"></a>      empty</span>
-<span id="cb5-4"><a aria-label="4"></a>      <span class="op">(</span><span class="kw">if</span> <span class="op">(</span><span class="kw">assoc</span> <span class="op">(</span>first vs<span class="op">)</span> dist<span class="op">)</span></span>
-<span id="cb5-5"><a aria-label="5"></a>          <span class="op">(</span>unmarked <span class="op">(</span>rest vs<span class="op">)</span> dist<span class="op">)</span></span>
-<span id="cb5-6"><a aria-label="6"></a>          <span class="op">(</span><span class="kw">cons</span> <span class="op">(</span>first vs<span class="op">)</span> <span class="op">(</span>unmarked <span class="op">(</span>rest vs<span class="op">)</span> dist<span class="op">)))))</span></span>
-<span id="cb5-7"><a aria-label="7"></a></span>
-<span id="cb5-8"><a aria-label="8"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>label vs d<span class="op">)</span></span>
-<span id="cb5-9"><a aria-label="9"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span>empty? vs<span class="op">)</span></span>
-<span id="cb5-10"><a aria-label="10"></a>      empty</span>
-<span id="cb5-11"><a aria-label="11"></a>      <span class="op">(</span><span class="kw">cons</span> <span class="op">(</span><span class="kw">list</span> <span class="op">(</span>first vs<span class="op">)</span> d<span class="op">)</span> <span class="op">(</span>label <span class="op">(</span>rest vs<span class="op">)</span> d<span class="op">))))</span></span>
-<span id="cb5-12"><a aria-label="12"></a></span>
-<span id="cb5-13"><a aria-label="13"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>bfs-loop G queue dist<span class="op">)</span></span>
-<span id="cb5-14"><a aria-label="14"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span>empty? queue<span class="op">)</span></span>
-<span id="cb5-15"><a aria-label="15"></a>      dist</span>
-<span id="cb5-16"><a aria-label="16"></a>      <span class="op">(</span><span class="kw">let*</span> <span class="op">([</span>v <span class="op">(</span>first queue<span class="op">)]</span></span>
-<span id="cb5-17"><a aria-label="17"></a>             <span class="op">[</span>new <span class="op">(</span>unmarked <span class="op">(</span>neighbors G v<span class="op">)</span> dist<span class="op">)]</span></span>
-<span id="cb5-18"><a aria-label="18"></a>             <span class="op">[</span>d <span class="op">(+</span> <span class="dv">1</span> <span class="op">(</span>second <span class="op">(</span><span class="kw">assoc</span> v dist<span class="op">)))])</span></span>
-<span id="cb5-19"><a aria-label="19"></a>        <span class="op">(</span>bfs-loop G</span>
-<span id="cb5-20"><a aria-label="20"></a>                  <span class="op">(</span><span class="kw">append</span> <span class="op">(</span>rest queue<span class="op">)</span> new<span class="op">)</span></span>
-<span id="cb5-21"><a aria-label="21"></a>                  <span class="op">(</span><span class="kw">append</span> dist <span class="op">(</span>label new d<span class="op">))))))</span></span>
-<span id="cb5-22"><a aria-label="22"></a></span>
-<span id="cb5-23"><a aria-label="23"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>bfs G s<span class="op">)</span></span>
-<span id="cb5-24"><a aria-label="24"></a>  <span class="op">(</span>bfs-loop G <span class="op">(</span><span class="kw">list</span> s<span class="op">)</span> <span class="op">(</span><span class="kw">list</span> <span class="op">(</span><span class="kw">list</span> s <span class="dv">0</span><span class="op">))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb7-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>unmarked vs dist<span class="op">)</span></span>
+<span id="cb7-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span>empty? vs<span class="op">)</span></span>
+<span id="cb7-3"><a aria-label="3"></a>      empty</span>
+<span id="cb7-4"><a aria-label="4"></a>      <span class="op">(</span><span class="kw">if</span> <span class="op">(</span><span class="kw">assoc</span> <span class="op">(</span>first vs<span class="op">)</span> dist<span class="op">)</span></span>
+<span id="cb7-5"><a aria-label="5"></a>          <span class="op">(</span>unmarked <span class="op">(</span>rest vs<span class="op">)</span> dist<span class="op">)</span></span>
+<span id="cb7-6"><a aria-label="6"></a>          <span class="op">(</span><span class="kw">cons</span> <span class="op">(</span>first vs<span class="op">)</span> <span class="op">(</span>unmarked <span class="op">(</span>rest vs<span class="op">)</span> dist<span class="op">)))))</span></span>
+<span id="cb7-7"><a aria-label="7"></a></span>
+<span id="cb7-8"><a aria-label="8"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>label vs d<span class="op">)</span></span>
+<span id="cb7-9"><a aria-label="9"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span>empty? vs<span class="op">)</span></span>
+<span id="cb7-10"><a aria-label="10"></a>      empty</span>
+<span id="cb7-11"><a aria-label="11"></a>      <span class="op">(</span><span class="kw">cons</span> <span class="op">(</span><span class="kw">list</span> <span class="op">(</span>first vs<span class="op">)</span> d<span class="op">)</span> <span class="op">(</span>label <span class="op">(</span>rest vs<span class="op">)</span> d<span class="op">))))</span></span>
+<span id="cb7-12"><a aria-label="12"></a></span>
+<span id="cb7-13"><a aria-label="13"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>bfs-loop G queue dist<span class="op">)</span></span>
+<span id="cb7-14"><a aria-label="14"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span>empty? queue<span class="op">)</span></span>
+<span id="cb7-15"><a aria-label="15"></a>      dist</span>
+<span id="cb7-16"><a aria-label="16"></a>      <span class="op">(</span><span class="kw">let*</span> <span class="op">([</span>v <span class="op">(</span>first queue<span class="op">)]</span></span>
+<span id="cb7-17"><a aria-label="17"></a>             <span class="op">[</span>new <span class="op">(</span>unmarked <span class="op">(</span>neighbors G v<span class="op">)</span> dist<span class="op">)]</span></span>
+<span id="cb7-18"><a aria-label="18"></a>             <span class="op">[</span>d <span class="op">(+</span> <span class="dv">1</span> <span class="op">(</span>second <span class="op">(</span><span class="kw">assoc</span> v dist<span class="op">)))])</span></span>
+<span id="cb7-19"><a aria-label="19"></a>        <span class="op">(</span>bfs-loop G</span>
+<span id="cb7-20"><a aria-label="20"></a>                  <span class="op">(</span><span class="kw">append</span> <span class="op">(</span>rest queue<span class="op">)</span> new<span class="op">)</span></span>
+<span id="cb7-21"><a aria-label="21"></a>                  <span class="op">(</span><span class="kw">append</span> dist <span class="op">(</span>label new d<span class="op">))))))</span></span>
+<span id="cb7-22"><a aria-label="22"></a></span>
+<span id="cb7-23"><a aria-label="23"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>bfs G s<span class="op">)</span></span>
+<span id="cb7-24"><a aria-label="24"></a>  <span class="op">(</span>bfs-loop G <span class="op">(</span><span class="kw">list</span> s<span class="op">)</span> <span class="op">(</span><span class="kw">list</span> <span class="op">(</span><span class="kw">list</span> s <span class="dv">0</span><span class="op">))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <ul>
 <li><code>(unmarked vs dist)</code> keeps the vertices of the list <code>vs</code> that have no label yet.</li>
 <li><code>(label vs d)</code> pairs each vertex of <code>vs</code> with the label <code>d</code>.</li>
 <li><code>(let* ([x e] ...) body)</code> evaluates <code>e</code>, calls its value <code>x</code> inside the rest of the <code>let*</code>, and then evaluates <code>body</code>.</li>
 <li><code>(append L M)</code> is the list of the elements of <code>L</code> followed by those of <code>M</code>, so <code>(append (rest queue) new)</code> removes the front of the queue and adds the new vertices at the back.</li>
 </ul>
-<p>Each call of <code>bfs-loop</code> is one pass through the loop of <a href="#/def-bfs" class="quarto-xref">Definition&nbsp;32</a>. <code>(bfs office 'a)</code> returns <code>'((a 0) (b 1) (c 1) (d 2) (e 2) (f 3))</code>, the marks and labels of <a href="#/exm-bfs-trace" class="quarto-xref">Example&nbsp;35</a>.</p>
+<p>Each call of <code>bfs-loop</code> is one pass through the loop of <a href="#/def-bfs" class="quarto-xref">Definition&nbsp;32</a>. From <span class="math inline">\(a\)</span>, <code>bfs</code> returns the marks and labels of <a href="#/exm-bfs-trace" class="quarto-xref">Example&nbsp;35</a>:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb8-1"><a aria-label="1"></a><span class="op">(</span>bfs office 'a<span class="op">)</span></span>
+<span id="cb8-2"><a aria-label="2"></a><span class="co">; '((a 0) (b 1) (c 1) (d 2) (e 2) (f 3))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 </section></section>
 <section>
@@ -1595,11 +1626,11 @@ Figure&nbsp;9: The office graph, with its vertices in columns by their distance 
 
 <div id="def-dfs" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 33 (Depth-first search)</strong></span> Let <span class="math inline">\(G\)</span> be a graph (<a href="#/def-graph-vertices-edges" class="quarto-xref">Definition&nbsp;1</a>) or a directed graph (<a href="#/def-directed-graph" class="quarto-xref">Definition&nbsp;5</a>) with no parallel edges (<a href="#/def-parallel-edges" class="quarto-xref">Definition&nbsp;3</a>), given by an adjacency list (<a href="#/def-adjacency-list" class="quarto-xref">Definition&nbsp;16</a>), and let <span class="math inline">\(s\)</span> be a vertex of <span class="math inline">\(G\)</span>. <strong>Depth-first search</strong> <span class="citation" data-cites="wikipedia_depth_first_search">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026k</a>)</span> from <span class="math inline">\(s\)</span> is the recursive algorithm (<a href="../chapters/recursion.html#def-recursive-algorithm">Definition: Recursive algorithm</a>) <code>dfs</code>, called as <code>dfs(G, s)</code> with no vertex marked:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a aria-label="1"></a>procedure dfs(G, v)</span>
-<span id="cb6-2"><a aria-label="2"></a>    mark v</span>
-<span id="cb6-3"><a aria-label="3"></a>    for each vertex u in the list of v, in order</span>
-<span id="cb6-4"><a aria-label="4"></a>        if u is not marked</span>
-<span id="cb6-5"><a aria-label="5"></a>            dfs(G, u)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a aria-label="1"></a>procedure dfs(G, v)</span>
+<span id="cb9-2"><a aria-label="2"></a>    mark v</span>
+<span id="cb9-3"><a aria-label="3"></a>    for each vertex u in the list of v, in order</span>
+<span id="cb9-4"><a aria-label="4"></a>        if u is not marked</span>
+<span id="cb9-5"><a aria-label="5"></a>            dfs(G, u)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>All the calls share the same marks.</p>
 </div>
 </section>
@@ -1607,15 +1638,15 @@ Figure&nbsp;9: The office graph, with its vertices in columns by their distance 
 
 <div id="exm-dfs-trace" class="theorem example">
 <p><span class="theorem-title"><strong>Example 37 (Depth-first search in three triangles)</strong></span> Run <code>dfs</code> (<a href="#/def-dfs" class="quarto-xref">Definition&nbsp;33</a>) on the graph <span class="math inline">\(T\)</span> of <a href="#/fig-triangles" class="quarto-xref">Figure&nbsp;6</a> from 3, with each list of neighbors in increasing order. Each call is indented under the call that made it:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a aria-label="1"></a>dfs(T, 3)         marks 3; its list is 1, 2, 4, 5</span>
-<span id="cb7-2"><a aria-label="2"></a>  dfs(T, 1)       marks 1; its list is 2, 3</span>
-<span id="cb7-3"><a aria-label="3"></a>    dfs(T, 2)     marks 2; 1 and 3 are marked, so it returns</span>
-<span id="cb7-4"><a aria-label="4"></a>                  back in dfs(T, 1): 3 is marked, so it returns</span>
-<span id="cb7-5"><a aria-label="5"></a>                  back in dfs(T, 3): 2 is marked, so it goes on to 4</span>
-<span id="cb7-6"><a aria-label="6"></a>  dfs(T, 4)       marks 4; its list is 3, 5</span>
-<span id="cb7-7"><a aria-label="7"></a>    dfs(T, 5)     marks 5; its list is 3, 4, 6, 7</span>
-<span id="cb7-8"><a aria-label="8"></a>      dfs(T, 6)   marks 6; its list is 5, 7</span>
-<span id="cb7-9"><a aria-label="9"></a>        dfs(T, 7) marks 7; 5 and 6 are marked, so it returns</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a aria-label="1"></a>dfs(T, 3)         marks 3; its list is 1, 2, 4, 5</span>
+<span id="cb10-2"><a aria-label="2"></a>  dfs(T, 1)       marks 1; its list is 2, 3</span>
+<span id="cb10-3"><a aria-label="3"></a>    dfs(T, 2)     marks 2; 1 and 3 are marked, so it returns</span>
+<span id="cb10-4"><a aria-label="4"></a>                  back in dfs(T, 1): 3 is marked, so it returns</span>
+<span id="cb10-5"><a aria-label="5"></a>                  back in dfs(T, 3): 2 is marked, so it goes on to 4</span>
+<span id="cb10-6"><a aria-label="6"></a>  dfs(T, 4)       marks 4; its list is 3, 5</span>
+<span id="cb10-7"><a aria-label="7"></a>    dfs(T, 5)     marks 5; its list is 3, 4, 6, 7</span>
+<span id="cb10-8"><a aria-label="8"></a>      dfs(T, 6)   marks 6; its list is 5, 7</span>
+<span id="cb10-9"><a aria-label="9"></a>        dfs(T, 7) marks 7; 5 and 6 are marked, so it returns</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>After <code>dfs(T, 7)</code> returns, every remaining vertex in every list is marked, so each call returns in turn. The vertices are marked in the order <span class="math inline">\(3, 1, 2, 4, 5, 6, 7\)</span>. After it marks 2, the search goes back up to 3 before it goes on to 4, unlike the exploration of the office graph in <a href="#/sol-follow-first" class="quarto-xref">Solution&nbsp;11</a>.</p>
 </div>
 </section>
@@ -1641,28 +1672,38 @@ Figure&nbsp;9: The office graph, with its vertices in columns by their distance 
 
 <div id="exm-racket-dfs" class="theorem example">
 <p><span class="theorem-title"><strong>Example 39 (Depth-first search in Racket)</strong></span> In Racket, <code>dfs</code> (<a href="#/def-dfs" class="quarto-xref">Definition&nbsp;33</a>) can return the list of marked vertices, in the order in which they were marked. Two functions call each other: <code>dfs-from</code> marks <code>v</code> and goes through its neighbors, and <code>dfs-each</code> goes through a list <code>vs</code> of vertices, calling <code>dfs-from</code> on each one that is not marked yet. It uses <code>neighbors</code> from <a href="#/exm-racket-neighbors" class="quarto-xref">Example&nbsp;21</a>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb8-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>dfs-from G v marked<span class="op">)</span></span>
-<span id="cb8-2"><a aria-label="2"></a>  <span class="op">(</span>dfs-each G <span class="op">(</span>neighbors G v<span class="op">)</span> <span class="op">(</span><span class="kw">append</span> marked <span class="op">(</span><span class="kw">list</span> v<span class="op">))))</span></span>
-<span id="cb8-3"><a aria-label="3"></a></span>
-<span id="cb8-4"><a aria-label="4"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>dfs-each G vs marked<span class="op">)</span></span>
-<span id="cb8-5"><a aria-label="5"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span>empty? vs<span class="op">)</span></span>
-<span id="cb8-6"><a aria-label="6"></a>      marked</span>
-<span id="cb8-7"><a aria-label="7"></a>      <span class="op">(</span><span class="kw">if</span> <span class="op">(</span><span class="kw">member</span> <span class="op">(</span>first vs<span class="op">)</span> marked<span class="op">)</span></span>
-<span id="cb8-8"><a aria-label="8"></a>          <span class="op">(</span>dfs-each G <span class="op">(</span>rest vs<span class="op">)</span> marked<span class="op">)</span></span>
-<span id="cb8-9"><a aria-label="9"></a>          <span class="op">(</span>dfs-each G <span class="op">(</span>rest vs<span class="op">)</span> <span class="op">(</span>dfs-from G <span class="op">(</span>first vs<span class="op">)</span> marked<span class="op">)))))</span></span>
-<span id="cb8-10"><a aria-label="10"></a></span>
-<span id="cb8-11"><a aria-label="11"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>dfs G s<span class="op">)</span></span>
-<span id="cb8-12"><a aria-label="12"></a>  <span class="op">(</span>dfs-from G s empty<span class="op">))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb11-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>dfs-from G v marked<span class="op">)</span></span>
+<span id="cb11-2"><a aria-label="2"></a>  <span class="op">(</span>dfs-each G <span class="op">(</span>neighbors G v<span class="op">)</span> <span class="op">(</span><span class="kw">append</span> marked <span class="op">(</span><span class="kw">list</span> v<span class="op">))))</span></span>
+<span id="cb11-3"><a aria-label="3"></a></span>
+<span id="cb11-4"><a aria-label="4"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>dfs-each G vs marked<span class="op">)</span></span>
+<span id="cb11-5"><a aria-label="5"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span>empty? vs<span class="op">)</span></span>
+<span id="cb11-6"><a aria-label="6"></a>      marked</span>
+<span id="cb11-7"><a aria-label="7"></a>      <span class="op">(</span><span class="kw">if</span> <span class="op">(</span><span class="kw">member</span> <span class="op">(</span>first vs<span class="op">)</span> marked<span class="op">)</span></span>
+<span id="cb11-8"><a aria-label="8"></a>          <span class="op">(</span>dfs-each G <span class="op">(</span>rest vs<span class="op">)</span> marked<span class="op">)</span></span>
+<span id="cb11-9"><a aria-label="9"></a>          <span class="op">(</span>dfs-each G <span class="op">(</span>rest vs<span class="op">)</span> <span class="op">(</span>dfs-from G <span class="op">(</span>first vs<span class="op">)</span> marked<span class="op">)))))</span></span>
+<span id="cb11-10"><a aria-label="10"></a></span>
+<span id="cb11-11"><a aria-label="11"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>dfs G s<span class="op">)</span></span>
+<span id="cb11-12"><a aria-label="12"></a>  <span class="op">(</span>dfs-from G s empty<span class="op">))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>With the graph <span class="math inline">\(T\)</span> of <a href="#/fig-triangles" class="quarto-xref">Figure&nbsp;6</a> stored as</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb9-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> triangles</span></span>
-<span id="cb9-2"><a aria-label="2"></a>  '<span class="op">((</span><span class="dv">1</span> <span class="dv">2</span> <span class="dv">3</span><span class="op">)</span></span>
-<span id="cb9-3"><a aria-label="3"></a>    <span class="op">(</span><span class="dv">2</span> <span class="dv">1</span> <span class="dv">3</span><span class="op">)</span></span>
-<span id="cb9-4"><a aria-label="4"></a>    <span class="op">(</span><span class="dv">3</span> <span class="dv">1</span> <span class="dv">2</span> <span class="dv">4</span> <span class="dv">5</span><span class="op">)</span></span>
-<span id="cb9-5"><a aria-label="5"></a>    <span class="op">(</span><span class="dv">4</span> <span class="dv">3</span> <span class="dv">5</span><span class="op">)</span></span>
-<span id="cb9-6"><a aria-label="6"></a>    <span class="op">(</span><span class="dv">5</span> <span class="dv">3</span> <span class="dv">4</span> <span class="dv">6</span> <span class="dv">7</span><span class="op">)</span></span>
-<span id="cb9-7"><a aria-label="7"></a>    <span class="op">(</span><span class="dv">6</span> <span class="dv">5</span> <span class="dv">7</span><span class="op">)</span></span>
-<span id="cb9-8"><a aria-label="8"></a>    <span class="op">(</span><span class="dv">7</span> <span class="dv">5</span> <span class="dv">6</span><span class="op">)))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>(dfs triangles 3)</code> returns <code>'(3 1 2 4 5 6 7)</code>, the order of <a href="#/exm-dfs-trace" class="quarto-xref">Example&nbsp;37</a>, and <code>(dfs office 'a)</code> returns <code>'(a b c e d f)</code>, the order of <a href="#/sol-follow-first" class="quarto-xref">Solution&nbsp;11</a>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb12-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> triangles</span></span>
+<span id="cb12-2"><a aria-label="2"></a>  '<span class="op">((</span><span class="dv">1</span> <span class="dv">2</span> <span class="dv">3</span><span class="op">)</span></span>
+<span id="cb12-3"><a aria-label="3"></a>    <span class="op">(</span><span class="dv">2</span> <span class="dv">1</span> <span class="dv">3</span><span class="op">)</span></span>
+<span id="cb12-4"><a aria-label="4"></a>    <span class="op">(</span><span class="dv">3</span> <span class="dv">1</span> <span class="dv">2</span> <span class="dv">4</span> <span class="dv">5</span><span class="op">)</span></span>
+<span id="cb12-5"><a aria-label="5"></a>    <span class="op">(</span><span class="dv">4</span> <span class="dv">3</span> <span class="dv">5</span><span class="op">)</span></span>
+<span id="cb12-6"><a aria-label="6"></a>    <span class="op">(</span><span class="dv">5</span> <span class="dv">3</span> <span class="dv">4</span> <span class="dv">6</span> <span class="dv">7</span><span class="op">)</span></span>
+<span id="cb12-7"><a aria-label="7"></a>    <span class="op">(</span><span class="dv">6</span> <span class="dv">5</span> <span class="dv">7</span><span class="op">)</span></span>
+<span id="cb12-8"><a aria-label="8"></a>    <span class="op">(</span><span class="dv">7</span> <span class="dv">5</span> <span class="dv">6</span><span class="op">)))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><code>(dfs triangles 3)</code> returns the order of <a href="#/exm-dfs-trace" class="quarto-xref">Example&nbsp;37</a>, and <code>(dfs office 'a)</code> returns the order of <a href="#/sol-follow-first" class="quarto-xref">Solution&nbsp;11</a>:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb13-1"><a aria-label="1"></a><span class="op">(</span>dfs triangles <span class="dv">3</span><span class="op">)</span></span>
+<span id="cb13-2"><a aria-label="2"></a><span class="co">; '(3 1 2 4 5 6 7)</span></span>
+<span id="cb13-3"><a aria-label="3"></a><span class="op">(</span>dfs office 'a<span class="op">)</span></span>
+<span id="cb13-4"><a aria-label="4"></a><span class="co">; '(a b c e d f)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 </section></section>
 <section>

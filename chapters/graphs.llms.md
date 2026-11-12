@@ -6,7 +6,7 @@ Vertices and edges, degrees, walks and connectedness, Euler circuits, Hamiltonia
 
 Published
 
-Last modified: 2026-11-12 01:33:01 (PST)
+Last modified: 2026-11-12 01:45:11 (PST)
 
 > **NOTE:**
 >
@@ -468,6 +468,15 @@ Last modified: 2026-11-12 01:33:01 (PST)
 > **NOTE:**
 >
 > *Solution 5*. It returns `'(d b e f)`, the element of `office` that starts with `d`. Its rest, `'(b e f)`, lists the neighbors of $d$ ([Definition 6](#def-adjacent)).
+>
+> Racket returns the same values:
+>
+> ``` racket
+> (assoc 'd office)
+> ; '(d b e f)
+> (rest (assoc 'd office))
+> ; '(b e f)
+> ```
 
 > **NOTE:**
 >
@@ -481,14 +490,22 @@ Last modified: 2026-11-12 01:33:01 (PST)
 >   (length (neighbors G v)))
 > ```
 >
-> `(neighbors office 'b)` returns `'(a c d)`, and `(degree office 'b)` returns 3. `(for/sum ([x L]) body)` adds up the values of `body` for each element `x` of the list `L`, so
+> For the vertex $b$:
+>
+> ``` racket
+> (neighbors office 'b)
+> ; '(a c d)
+> (degree office 'b)
+> ; 3
+> ```
+>
+> `(for/sum ([x L]) body)` adds up the values of `body` for each element `x` of the list `L`, so this chunk adds up the degrees of the six vertices. By [Theorem 1](#thm-handshake), that sum is $2 {\mathopen{}\left|E\right|\mathclose{}}$:
 >
 > ``` racket
 > (for/sum ([row office])
 >   (degree office (first row)))
+> ; 16
 > ```
->
-> adds up the degrees of the six vertices and returns 16, which is $2 {\mathopen{}\left|E\right|\mathclose{}}$, as [Theorem 1](#thm-handshake) says.
 
 # 6 Walks, trails and paths
 
@@ -933,7 +950,12 @@ Last modified: 2026-11-12 01:33:01 (PST)
 > - `(let* ([x e] ...) body)` evaluates `e`, calls its value `x` inside the rest of the `let*`, and then evaluates `body`.
 > - `(append L M)` is the list of the elements of `L` followed by those of `M`, so `(append (rest queue) new)` removes the front of the queue and adds the new vertices at the back.
 >
-> Each call of `bfs-loop` is one pass through the loop of [Definition 32](#def-bfs). `(bfs office 'a)` returns `'((a 0) (b 1) (c 1) (d 2) (e 2) (f 3))`, the marks and labels of [Example 35](#exm-bfs-trace).
+> Each call of `bfs-loop` is one pass through the loop of [Definition 32](#def-bfs). From $a$, `bfs` returns the marks and labels of [Example 35](#exm-bfs-trace):
+>
+> ``` racket
+> (bfs office 'a)
+> ; '((a 0) (b 1) (c 1) (d 2) (e 2) (f 3))
+> ```
 
 # 11 Depth-first search
 
@@ -1040,7 +1062,14 @@ Last modified: 2026-11-12 01:33:01 (PST)
 >     (7 5 6)))
 > ```
 >
-> `(dfs triangles 3)` returns `'(3 1 2 4 5 6 7)`, the order of [Example 37](#exm-dfs-trace), and `(dfs office 'a)` returns `'(a b c e d f)`, the order of [Solution 11](#sol-follow-first).
+> `(dfs triangles 3)` returns the order of [Example 37](#exm-dfs-trace), and `(dfs office 'a)` returns the order of [Solution 11](#sol-follow-first):
+>
+> ``` racket
+> (dfs triangles 3)
+> ; '(3 1 2 4 5 6 7)
+> (dfs office 'a)
+> ; '(a b c e d f)
+> ```
 
 # Definitions on this page
 

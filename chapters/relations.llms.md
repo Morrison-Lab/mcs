@@ -6,7 +6,7 @@ Relations between sets, their properties, equivalence relations, partitions and 
 
 Published
 
-Last modified: 2026-11-12 01:33:01 (PST)
+Last modified: 2026-11-12 01:45:11 (PST)
 
 > **NOTE:**
 >
@@ -278,7 +278,14 @@ Last modified: 2026-11-12 01:33:01 (PST)
 
 > **NOTE:**
 >
-> *Solution 4*. Yes. The list `(list 'rock 'paper)` is not an element of `beats`, since rock does not beat paper ([Solution 3](#sol-beats-transitive)), so `member` returns `#f`. When `x` is an element of `L`, `member` returns the part of `L` that starts at `x`, which is not `#f`: `(member (list 'paper 'rock) beats)` returns `'((paper rock))`.
+> *Solution 4*. Yes. The list `(list 'rock 'paper)` is not an element of `beats`, since rock does not beat paper ([Solution 3](#sol-beats-transitive)), so `member` returns `#f`. When `x` is an element of `L`, `member` returns the part of `L` that starts at `x`, which is not `#f`, as the second of these two calls shows:
+>
+> ``` racket
+> (member (list 'rock 'paper) beats)
+> ; #f
+> (member (list 'paper 'rock) beats)
+> ; '((paper rock))
+> ```
 
 > **NOTE:**
 >
@@ -311,7 +318,16 @@ Last modified: 2026-11-12 01:33:01 (PST)
 > - `symmetric?` checks, for each pair $(a, b)$ in `R`, that $(b, a)$ is in `R` too ([Definition 7](#def-symmetric-relation)).
 > - `transitive?` checks, for every two pairs $(a, b)$ and $(b', c)$ of `R`, the conditional “if $b = b'$, then $a \mathrel{R} c$” ([Definition 9](#def-transitive)), written as an `or` by [Corollary: A conditional without the arrow](../chapters/equivalence-negation.llms.md#cor-conditional-as-or).
 >
-> All three of `(reflexive? (list 'rock 'paper 'scissors) beats)`, `(symmetric? beats)` and `(transitive? beats)` return `#f`, as [Example 9](#exm-reflexive-or-not), [Example 10](#exm-symmetric-or-not) and [Example 12](#exm-transitive-or-not) found.
+> All three return `#f` for `beats`, as [Example 9](#exm-reflexive-or-not), [Example 10](#exm-symmetric-or-not) and [Example 12](#exm-transitive-or-not) found:
+>
+> ``` racket
+> (reflexive? (list 'rock 'paper 'scissors) beats)
+> ; #f
+> (symmetric? beats)
+> ; #f
+> (transitive? beats)
+> ; #f
+> ```
 
 # 5 Inverses and composition
 
@@ -682,7 +698,18 @@ Last modified: 2026-11-12 01:33:01 (PST)
 >     (= (count-outputs R a) 1)))
 > ```
 >
-> `(function? (list 'rock 'paper 'scissors) beats)` returns `#t`, as [Example 24](#exm-function-or-not) found, since `(count-outputs beats a)` is 1 for each of the three elements.
+> `(count-outputs beats a)` is 1 for each of the three elements, so `function?` returns `#t`, as [Example 24](#exm-function-or-not) found:
+>
+> ``` racket
+> (count-outputs beats 'rock)
+> ; 1
+> (count-outputs beats 'paper)
+> ; 1
+> (count-outputs beats 'scissors)
+> ; 1
+> (function? (list 'rock 'paper 'scissors) beats)
+> ; #t
+> ```
 
 > **NOTE:**
 >

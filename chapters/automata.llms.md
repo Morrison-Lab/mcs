@@ -6,7 +6,7 @@ State machines and their state diagrams, runs, deterministic finite automata and
 
 Published
 
-Last modified: 2026-11-12 01:33:01 (PST)
+Last modified: 2026-11-12 01:45:11 (PST)
 
 > **NOTE:**
 >
@@ -549,6 +549,17 @@ Last modified: 2026-11-12 01:33:01 (PST)
 > **NOTE:**
 >
 > *Solution 6*. `(assoc 'q1 pairs-table)` is the row `'(q1 (#\a q2) (#\b q0))`, and its rest is `'((#\a q2) (#\b q0))`. `(assoc #\b ...)` finds `'(#\b q0)` in that list, and its second element is `'q0`. So `(step pairs-table 'q1 #\b)` returns `'q0`, which is $\delta(q_1, \mathtt{b})$ ([Example 5](#exm-pairs-dfa)).
+>
+> Racket returns the same values:
+>
+> ``` racket
+> (assoc 'q1 pairs-table)
+> ; '(q1 (#\a q2) (#\b q0))
+> (rest (assoc 'q1 pairs-table))
+> ; '((#\a q2) (#\b q0))
+> (step pairs-table 'q1 #\b)
+> ; 'q0
+> ```
 
 > **NOTE:**
 >
@@ -570,7 +581,27 @@ Last modified: 2026-11-12 01:33:01 (PST)
 > - `(member x L)` is `#f` if `x` is not in the list `L`, and a list that is not `#f` if it is.
 > - `(string->list w)` is the list of the characters of the string `w`.
 >
-> `(run pairs-table 'q0 (string->list "abab"))` returns `'(q0 q1 q0 q1 q0)`, and `(run pairs-table 'q0 (string->list "aab"))` returns `'(q0 q1 q2 q2)`, the runs of [Example 6](#exm-pairs-accept). `(accepts? pairs-table 'q0 '(q0) (string->list "abab"))` returns `#t`, `(accepts? pairs-table 'q0 '(q0) (string->list "ba"))` returns `#f`, and `(accepts? pairs-table 'q0 '(q0) (string->list ""))` returns `#t`, since $A$ accepts $\lambda$. Let $w$ be the string whose symbols are the elements of `xs`, in order. `run` reads the first symbol of $w$ first, as [Definition 3](#def-run) does, so by [Theorem 1](#thm-run-last) the last state of `(run table s xs)` is $\delta^*(s, w)$.
+> `run` returns the runs of [Example 6](#exm-pairs-accept) on `"abab"` and `"aab"`:
+>
+> ``` racket
+> (run pairs-table 'q0 (string->list "abab"))
+> ; '(q0 q1 q0 q1 q0)
+> (run pairs-table 'q0 (string->list "aab"))
+> ; '(q0 q1 q2 q2)
+> ```
+>
+> $A$ accepts `"abab"` and the empty string $\lambda$, but not `"ba"`:
+>
+> ``` racket
+> (accepts? pairs-table 'q0 '(q0) (string->list "abab"))
+> ; #t
+> (accepts? pairs-table 'q0 '(q0) (string->list ""))
+> ; #t
+> (accepts? pairs-table 'q0 '(q0) (string->list "ba"))
+> ; #f
+> ```
+>
+> Let $w$ be the string whose symbols are the elements of `xs`, in order. `run` reads the first symbol of $w$ first, as [Definition 3](#def-run) does, so by [Theorem 1](#thm-run-last) the last state of `(run table s xs)` is $\delta^*(s, w)$.
 
 > **NOTE:**
 >
@@ -604,13 +635,14 @@ Last modified: 2026-11-12 01:33:01 (PST)
 > - `(map f L)` applies `f` to each element of the list `L`.
 > - `(and p q)` is `#f` if `p` is `#f`, and is `q` otherwise.
 >
-> A character that is neither a digit nor a point is classified `'other`, which is not an input of the DFA, so `numeral?` returns `#f` for any text that contains one, without running the DFA. Then
+> A character that is neither a digit nor a point is classified `'other`, which is not an input of the DFA, so `numeral?` returns `#f` for any text that contains one, without running the DFA. Applied to eight strings, `numeral?` returns:
 >
 > ``` racket
 > (map numeral? '("3.14" "2026" "7." ".5" "1.2.3" "d.d" "-3" "\u00BD"))
+> ; '(#t #t #f #f #f #f #f #f)
 > ```
 >
-> returns `'(#t #t #f #f #f #f #f #f)`: `"3.14"` and `"2026"` are numerals, and the others are not. The letter d in `"d.d"` is classified `'other`, not `'digit`, and so is the one character of `"\u00BD"`, the fraction one half, even though Racket’s `char-numeric?` counts it as numeric.
+> `"3.14"` and `"2026"` are numerals, and the others are not. The letter d in `"d.d"` is classified `'other`, not `'digit`, and so is the one character of `"\u00BD"`, the fraction one half, even though Racket’s `char-numeric?` counts it as numeric.
 
 # Definitions on this page
 

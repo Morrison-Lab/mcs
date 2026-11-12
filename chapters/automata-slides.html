@@ -324,6 +324,8 @@
     }
   })();
   </script>
+  <link href="../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+  <script src="../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -336,10 +338,13 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-12 01:33:01 (PST)</p>
+  <p class="date">Last modified: 2026-11-12 01:45:11 (PST)</p>
 </section>
 <section class="slide level2">
 
+<!-- Registers the knitr engine for `racket` chunks (tools/racket-engine.R).
+Include it once, near the top of a chapter, before its first racket chunk.
+The paths are relative to chapters/, where knitr runs a chapter's chunks. -->
 <div class="callout callout-note callout-titled callout-style-simple">
 <div class="callout-body">
 <div class="callout-title">
@@ -1105,13 +1110,15 @@ Figure&nbsp;7: The DFA <span class="math inline">\(W\)</span>, which accepts the
 
 <div id="exr-racket-step" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 6 (One step in Racket)</strong></span> In Racket, the table of the DFA <span class="math inline">\(A\)</span> (<a href="#/exm-pairs-table" class="quarto-xref">Example&nbsp;13</a>) can be stored as a list with one list for each state, which starts with the state and goes on with a list <code>(x t)</code> for each input <code>x</code>, where <code>t</code> is the state that <code>x</code> leads to:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb1-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> pairs-table</span></span>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb1-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> pairs-table</span></span>
 <span id="cb1-2"><a aria-label="2"></a>  '<span class="op">((</span>q0 <span class="op">(</span><span class="ch">#\a</span> q1<span class="op">)</span> <span class="op">(</span><span class="ch">#\b</span> q0<span class="op">))</span></span>
 <span id="cb1-3"><a aria-label="3"></a>    <span class="op">(</span>q1 <span class="op">(</span><span class="ch">#\a</span> q2<span class="op">)</span> <span class="op">(</span><span class="ch">#\b</span> q0<span class="op">))</span></span>
 <span id="cb1-4"><a aria-label="4"></a>    <span class="op">(</span>q2 <span class="op">(</span><span class="ch">#\a</span> q2<span class="op">)</span> <span class="op">(</span><span class="ch">#\b</span> q2<span class="op">))))</span></span>
 <span id="cb1-5"><a aria-label="5"></a></span>
 <span id="cb1-6"><a aria-label="6"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>step table s x<span class="op">)</span></span>
 <span id="cb1-7"><a aria-label="7"></a>  <span class="op">(</span>second <span class="op">(</span><span class="kw">assoc</span> x <span class="op">(</span>rest <span class="op">(</span><span class="kw">assoc</span> s table<span class="op">)))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>Here <code>#\a</code> is the character a, and <code>assoc</code> is as in <a href="../chapters/graphs.html#exr-racket-assoc">Exercise: Looking up a vertex</a>. What does <code>(step pairs-table 'q1 #\b)</code> return?</p>
 </div>
 </section>
@@ -1119,58 +1126,92 @@ Figure&nbsp;7: The DFA <span class="math inline">\(W\)</span>, which accepts the
 
 <div id="sol-racket-step" class="proof solution">
 <p><span class="proof-title"><em>Solution 6</em>. </span><code>(assoc 'q1 pairs-table)</code> is the row <code>'(q1 (#\a q2) (#\b q0))</code>, and its rest is <code>'((#\a q2) (#\b q0))</code>. <code>(assoc #\b ...)</code> finds <code>'(#\b q0)</code> in that list, and its second element is <code>'q0</code>. So <code>(step pairs-table 'q1 #\b)</code> returns <code>'q0</code>, which is <span class="math inline">\(\delta(q_1, \mathtt{b})\)</span> (<a href="#/exm-pairs-dfa" class="quarto-xref">Example&nbsp;5</a>).</p>
+<p>Racket returns the same values:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb2-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">assoc</span> 'q1 pairs-table<span class="op">)</span></span>
+<span id="cb2-2"><a aria-label="2"></a><span class="co">; '(q1 (#\a q2) (#\b q0))</span></span>
+<span id="cb2-3"><a aria-label="3"></a><span class="op">(</span>rest <span class="op">(</span><span class="kw">assoc</span> 'q1 pairs-table<span class="op">))</span></span>
+<span id="cb2-4"><a aria-label="4"></a><span class="co">; '((#\a q2) (#\b q0))</span></span>
+<span id="cb2-5"><a aria-label="5"></a><span class="op">(</span>step pairs-table 'q1 <span class="ch">#\b</span><span class="op">)</span></span>
+<span id="cb2-6"><a aria-label="6"></a><span class="co">; 'q0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-racket-run" class="theorem example">
 <p><span class="theorem-title"><strong>Example 16 (Running a DFA in Racket)</strong></span> With <code>step</code> as in <a href="#/exr-racket-step" class="quarto-xref">Exercise&nbsp;6</a>, <code>run</code> returns the run (<a href="#/def-run" class="quarto-xref">Definition&nbsp;3</a>) from a state <code>s</code> on a list <code>xs</code> of inputs, and <code>accepts?</code> says whether a DFA accepts (<a href="#/def-accept" class="quarto-xref">Definition&nbsp;6</a>) the string whose inputs are the list <code>xs</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb2-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>run table s xs<span class="op">)</span></span>
-<span id="cb2-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span>empty? xs<span class="op">)</span></span>
-<span id="cb2-3"><a aria-label="3"></a>      <span class="op">(</span><span class="kw">list</span> s<span class="op">)</span></span>
-<span id="cb2-4"><a aria-label="4"></a>      <span class="op">(</span><span class="kw">cons</span> s <span class="op">(</span>run table <span class="op">(</span>step table s <span class="op">(</span>first xs<span class="op">))</span> <span class="op">(</span>rest xs<span class="op">)))))</span></span>
-<span id="cb2-5"><a aria-label="5"></a></span>
-<span id="cb2-6"><a aria-label="6"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>accepts? table start accepting xs<span class="op">)</span></span>
-<span id="cb2-7"><a aria-label="7"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span><span class="kw">member</span> <span class="op">(</span>last <span class="op">(</span>run table start xs<span class="op">))</span> accepting<span class="op">)</span></span>
-<span id="cb2-8"><a aria-label="8"></a>      <span class="dv">#t</span></span>
-<span id="cb2-9"><a aria-label="9"></a>      <span class="dv">#f</span><span class="op">))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb3-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>run table s xs<span class="op">)</span></span>
+<span id="cb3-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span>empty? xs<span class="op">)</span></span>
+<span id="cb3-3"><a aria-label="3"></a>      <span class="op">(</span><span class="kw">list</span> s<span class="op">)</span></span>
+<span id="cb3-4"><a aria-label="4"></a>      <span class="op">(</span><span class="kw">cons</span> s <span class="op">(</span>run table <span class="op">(</span>step table s <span class="op">(</span>first xs<span class="op">))</span> <span class="op">(</span>rest xs<span class="op">)))))</span></span>
+<span id="cb3-5"><a aria-label="5"></a></span>
+<span id="cb3-6"><a aria-label="6"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>accepts? table start accepting xs<span class="op">)</span></span>
+<span id="cb3-7"><a aria-label="7"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span><span class="kw">member</span> <span class="op">(</span>last <span class="op">(</span>run table start xs<span class="op">))</span> accepting<span class="op">)</span></span>
+<span id="cb3-8"><a aria-label="8"></a>      <span class="dv">#t</span></span>
+<span id="cb3-9"><a aria-label="9"></a>      <span class="dv">#f</span><span class="op">))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <ul>
 <li><code>(last L)</code> is the last element of the list <code>L</code>.</li>
 <li><code>(member x L)</code> is <code>#f</code> if <code>x</code> is not in the list <code>L</code>, and a list that is not <code>#f</code> if it is.</li>
 <li><code>(string-&gt;list w)</code> is the list of the characters of the string <code>w</code>.</li>
 </ul>
-<p><code>(run pairs-table 'q0 (string-&gt;list "abab"))</code> returns <code>'(q0 q1 q0 q1 q0)</code>, and <code>(run pairs-table 'q0 (string-&gt;list "aab"))</code> returns <code>'(q0 q1 q2 q2)</code>, the runs of <a href="#/exm-pairs-accept" class="quarto-xref">Example&nbsp;6</a>. <code>(accepts? pairs-table 'q0 '(q0) (string-&gt;list "abab"))</code> returns <code>#t</code>, <code>(accepts? pairs-table 'q0 '(q0) (string-&gt;list "ba"))</code> returns <code>#f</code>, and <code>(accepts? pairs-table 'q0 '(q0) (string-&gt;list ""))</code> returns <code>#t</code>, since <span class="math inline">\(A\)</span> accepts <span class="math inline">\(\lambda\)</span>. Let <span class="math inline">\(w\)</span> be the string whose symbols are the elements of <code>xs</code>, in order. <code>run</code> reads the first symbol of <span class="math inline">\(w\)</span> first, as <a href="#/def-run" class="quarto-xref">Definition&nbsp;3</a> does, so by <a href="#/thm-run-last" class="quarto-xref">Theorem&nbsp;1</a> the last state of <code>(run table s xs)</code> is <span class="math inline">\(\delta^*(s, w)\)</span>.</p>
+<p><code>run</code> returns the runs of <a href="#/exm-pairs-accept" class="quarto-xref">Example&nbsp;6</a> on <code>"abab"</code> and <code>"aab"</code>:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb4-1"><a aria-label="1"></a><span class="op">(</span>run pairs-table 'q0 <span class="op">(</span><span class="kw">string-&gt;list</span> <span class="st">"abab"</span><span class="op">))</span></span>
+<span id="cb4-2"><a aria-label="2"></a><span class="co">; '(q0 q1 q0 q1 q0)</span></span>
+<span id="cb4-3"><a aria-label="3"></a><span class="op">(</span>run pairs-table 'q0 <span class="op">(</span><span class="kw">string-&gt;list</span> <span class="st">"aab"</span><span class="op">))</span></span>
+<span id="cb4-4"><a aria-label="4"></a><span class="co">; '(q0 q1 q2 q2)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><span class="math inline">\(A\)</span> accepts <code>"abab"</code> and the empty string <span class="math inline">\(\lambda\)</span>, but not <code>"ba"</code>:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb5-1"><a aria-label="1"></a><span class="op">(</span>accepts? pairs-table 'q0 '<span class="op">(</span>q0<span class="op">)</span> <span class="op">(</span><span class="kw">string-&gt;list</span> <span class="st">"abab"</span><span class="op">))</span></span>
+<span id="cb5-2"><a aria-label="2"></a><span class="co">; #t</span></span>
+<span id="cb5-3"><a aria-label="3"></a><span class="op">(</span>accepts? pairs-table 'q0 '<span class="op">(</span>q0<span class="op">)</span> <span class="op">(</span><span class="kw">string-&gt;list</span> <span class="st">""</span><span class="op">))</span></span>
+<span id="cb5-4"><a aria-label="4"></a><span class="co">; #t</span></span>
+<span id="cb5-5"><a aria-label="5"></a><span class="op">(</span>accepts? pairs-table 'q0 '<span class="op">(</span>q0<span class="op">)</span> <span class="op">(</span><span class="kw">string-&gt;list</span> <span class="st">"ba"</span><span class="op">))</span></span>
+<span id="cb5-6"><a aria-label="6"></a><span class="co">; #f</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Let <span class="math inline">\(w\)</span> be the string whose symbols are the elements of <code>xs</code>, in order. <code>run</code> reads the first symbol of <span class="math inline">\(w\)</span> first, as <a href="#/def-run" class="quarto-xref">Definition&nbsp;3</a> does, so by <a href="#/thm-run-last" class="quarto-xref">Theorem&nbsp;1</a> the last state of <code>(run table s xs)</code> is <span class="math inline">\(\delta^*(s, w)\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-racket-numeral" class="theorem example">
 <p><span class="theorem-title"><strong>Example 17 (Checking numerals in Racket)</strong></span> In the form of <a href="#/exr-racket-step" class="quarto-xref">Exercise&nbsp;6</a>, the DFA of <a href="#/sol-decimal-numeral" class="quarto-xref">Solution&nbsp;4</a> is the table below, with the symbol <code>'digit</code> for the input <span class="math inline">\(\mathtt{d}\)</span> and the symbol <code>'point</code> for the input <span class="math inline">\(\mathtt{.}\)</span>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb3-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> numeral-table</span></span>
-<span id="cb3-2"><a aria-label="2"></a>  '<span class="op">((</span>n0 <span class="op">(</span>digit n1<span class="op">)</span> <span class="op">(</span>point n4<span class="op">))</span></span>
-<span id="cb3-3"><a aria-label="3"></a>    <span class="op">(</span>n1 <span class="op">(</span>digit n1<span class="op">)</span> <span class="op">(</span>point n2<span class="op">))</span></span>
-<span id="cb3-4"><a aria-label="4"></a>    <span class="op">(</span>n2 <span class="op">(</span>digit n3<span class="op">)</span> <span class="op">(</span>point n4<span class="op">))</span></span>
-<span id="cb3-5"><a aria-label="5"></a>    <span class="op">(</span>n3 <span class="op">(</span>digit n3<span class="op">)</span> <span class="op">(</span>point n4<span class="op">))</span></span>
-<span id="cb3-6"><a aria-label="6"></a>    <span class="op">(</span>n4 <span class="op">(</span>digit n4<span class="op">)</span> <span class="op">(</span>point n4<span class="op">))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb6-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> numeral-table</span></span>
+<span id="cb6-2"><a aria-label="2"></a>  '<span class="op">((</span>n0 <span class="op">(</span>digit n1<span class="op">)</span> <span class="op">(</span>point n4<span class="op">))</span></span>
+<span id="cb6-3"><a aria-label="3"></a>    <span class="op">(</span>n1 <span class="op">(</span>digit n1<span class="op">)</span> <span class="op">(</span>point n2<span class="op">))</span></span>
+<span id="cb6-4"><a aria-label="4"></a>    <span class="op">(</span>n2 <span class="op">(</span>digit n3<span class="op">)</span> <span class="op">(</span>point n4<span class="op">))</span></span>
+<span id="cb6-5"><a aria-label="5"></a>    <span class="op">(</span>n3 <span class="op">(</span>digit n3<span class="op">)</span> <span class="op">(</span>point n4<span class="op">))</span></span>
+<span id="cb6-6"><a aria-label="6"></a>    <span class="op">(</span>n4 <span class="op">(</span>digit n4<span class="op">)</span> <span class="op">(</span>point n4<span class="op">))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>To check real text, <code>classify</code> turns each character into an input, and <code>numeral?</code> runs the DFA with <code>accepts?</code> from <a href="#/exm-racket-run" class="quarto-xref">Example&nbsp;16</a>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb4-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>classify c<span class="op">)</span></span>
-<span id="cb4-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">cond</span> <span class="op">[(</span><span class="kw">char&lt;=?</span> <span class="ch">#\0</span> c <span class="ch">#\9</span><span class="op">)</span> 'digit<span class="op">]</span></span>
-<span id="cb4-3"><a aria-label="3"></a>        <span class="op">[(</span><span class="kw">char=?</span> c <span class="ch">#\.</span><span class="op">)</span> 'point<span class="op">]</span></span>
-<span id="cb4-4"><a aria-label="4"></a>        <span class="op">[</span><span class="kw">else</span> 'other<span class="op">]))</span></span>
-<span id="cb4-5"><a aria-label="5"></a></span>
-<span id="cb4-6"><a aria-label="6"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>numeral? text<span class="op">)</span></span>
-<span id="cb4-7"><a aria-label="7"></a>  <span class="op">(</span><span class="kw">let</span> <span class="op">([</span>xs <span class="op">(</span><span class="kw">map</span> classify <span class="op">(</span><span class="kw">string-&gt;list</span> text<span class="op">))])</span></span>
-<span id="cb4-8"><a aria-label="8"></a>    <span class="op">(</span><span class="kw">and</span> <span class="op">(</span><span class="kw">not</span> <span class="op">(</span><span class="kw">member</span> 'other xs<span class="op">))</span></span>
-<span id="cb4-9"><a aria-label="9"></a>         <span class="op">(</span>accepts? numeral-table 'n0 '<span class="op">(</span>n1 n3<span class="op">)</span> xs<span class="op">))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb7-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>classify c<span class="op">)</span></span>
+<span id="cb7-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">cond</span> <span class="op">[(</span><span class="kw">char&lt;=?</span> <span class="ch">#\0</span> c <span class="ch">#\9</span><span class="op">)</span> 'digit<span class="op">]</span></span>
+<span id="cb7-3"><a aria-label="3"></a>        <span class="op">[(</span><span class="kw">char=?</span> c <span class="ch">#\.</span><span class="op">)</span> 'point<span class="op">]</span></span>
+<span id="cb7-4"><a aria-label="4"></a>        <span class="op">[</span><span class="kw">else</span> 'other<span class="op">]))</span></span>
+<span id="cb7-5"><a aria-label="5"></a></span>
+<span id="cb7-6"><a aria-label="6"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>numeral? text<span class="op">)</span></span>
+<span id="cb7-7"><a aria-label="7"></a>  <span class="op">(</span><span class="kw">let</span> <span class="op">([</span>xs <span class="op">(</span><span class="kw">map</span> classify <span class="op">(</span><span class="kw">string-&gt;list</span> text<span class="op">))])</span></span>
+<span id="cb7-8"><a aria-label="8"></a>    <span class="op">(</span><span class="kw">and</span> <span class="op">(</span><span class="kw">not</span> <span class="op">(</span><span class="kw">member</span> 'other xs<span class="op">))</span></span>
+<span id="cb7-9"><a aria-label="9"></a>         <span class="op">(</span>accepts? numeral-table 'n0 '<span class="op">(</span>n1 n3<span class="op">)</span> xs<span class="op">))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <ul>
 <li><code>(char&lt;=? #\0 c #\9)</code> is true when the character <code>c</code> is one of the ten digits 0 to 9.</li>
 <li><code>(cond [test1 a] [test2 b] [else c])</code> returns <code>a</code> if <code>test1</code> is true, otherwise <code>b</code> if <code>test2</code> is true, and otherwise <code>c</code>.</li>
 <li><code>(map f L)</code> applies <code>f</code> to each element of the list <code>L</code>.</li>
 <li><code>(and p q)</code> is <code>#f</code> if <code>p</code> is <code>#f</code>, and is <code>q</code> otherwise.</li>
 </ul>
-<p>A character that is neither a digit nor a point is classified <code>'other</code>, which is not an input of the DFA, so <code>numeral?</code> returns <code>#f</code> for any text that contains one, without running the DFA. Then</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb5-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">map</span> numeral? '<span class="op">(</span><span class="st">"3.14"</span> <span class="st">"2026"</span> <span class="st">"7."</span> <span class="st">".5"</span> <span class="st">"1.2.3"</span> <span class="st">"d.d"</span> <span class="st">"-3"</span> <span class="st">"</span><span class="ch">\u</span><span class="st">00BD"</span><span class="op">))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>returns <code>'(#t #t #f #f #f #f #f #f)</code>: <code>"3.14"</code> and <code>"2026"</code> are numerals, and the others are not. The letter d in <code>"d.d"</code> is classified <code>'other</code>, not <code>'digit</code>, and so is the one character of <code>"\u00BD"</code>, the fraction one half, even though Racket’s <code>char-numeric?</code> counts it as numeric.</p>
+<p>A character that is neither a digit nor a point is classified <code>'other</code>, which is not an input of the DFA, so <code>numeral?</code> returns <code>#f</code> for any text that contains one, without running the DFA. Applied to eight strings, <code>numeral?</code> returns:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb8-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">map</span> numeral? '<span class="op">(</span><span class="st">"3.14"</span> <span class="st">"2026"</span> <span class="st">"7."</span> <span class="st">".5"</span> <span class="st">"1.2.3"</span> <span class="st">"d.d"</span> <span class="st">"-3"</span> <span class="st">"</span><span class="ch">\u</span><span class="st">00BD"</span><span class="op">))</span></span>
+<span id="cb8-2"><a aria-label="2"></a><span class="co">; '(#t #t #f #f #f #f #f #f)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><code>"3.14"</code> and <code>"2026"</code> are numerals, and the others are not. The letter d in <code>"d.d"</code> is classified <code>'other</code>, not <code>'digit</code>, and so is the one character of <code>"\u00BD"</code>, the fraction one half, even though Racket’s <code>char-numeric?</code> counts it as numeric.</p>
 </div>
 </section></section>
 <section>
