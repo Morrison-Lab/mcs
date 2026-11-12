@@ -22,16 +22,21 @@ and `accepts?` says whether a DFA accepts (@def-accept) the string whose inputs 
 - `(member x L)` is `#f` if `x` is not in the list `L`, and a list that is not `#f` if it is.
 - `(string->list w)` is the list of the characters of the string `w`.
 
-`run` returns the runs of @exm-pairs-accept on `"abab"` and `"aab"`.
-$A$ accepts `"abab"` and the empty string $\lambda$, but not `"ba"`:
+`run` returns the runs of @exm-pairs-accept on `"abab"` and `"aab"`:
 
 ```{racket}
 #| code-fold: false
 (run pairs-table 'q0 (string->list "abab"))
 (run pairs-table 'q0 (string->list "aab"))
+```
+
+$A$ accepts `"abab"` and the empty string $\lambda$, but not `"ba"`:
+
+```{racket}
+#| code-fold: false
 (accepts? pairs-table 'q0 '(q0) (string->list "abab"))
-(accepts? pairs-table 'q0 '(q0) (string->list "ba"))
 (accepts? pairs-table 'q0 '(q0) (string->list ""))
+(accepts? pairs-table 'q0 '(q0) (string->list "ba"))
 ```
 
 Let $w$ be the string whose symbols are the elements of `xs`, in order.
