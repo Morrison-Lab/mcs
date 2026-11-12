@@ -3,7 +3,7 @@
 
 Claim to disprove: there is an integer $n$ with $n^2 = 2$.
 
-By @thm-negate-quantifiers, its negation is "for every integer $n$, $n^2 \ne 2$".
+By @thm-negate-existential, its negation is "for every integer $n$, $n^2 \ne 2$".
 We prove the negation by cases (@def-proof-by-cases).
 Let $n$ be an integer.
 
