@@ -5,7 +5,7 @@ The two laws in [De Morgan's laws for quantifiers](#thm-negate-quantifiers)
 are one rule seen from each side:
 negating a [quantifier](#def-quantifier) swaps $\forall$ and $\exists$
 and moves the [negation](#def-not) onto the [predicate](#def-predicate).
-De Morgan's laws for a [conjunction](#thm-de-morgan-logic) and a [disjunction](#thm-de-morgan-disjunction) of two propositions pair up the same way,
+[De Morgan's laws for propositions](#thm-de-morgan-logic) pair their two laws the same way,
 and these laws extend them from two propositions to a whole [set](#def-set) of them.
 
 :::
