@@ -18,7 +18,8 @@ The recursive formulas of @rem-size-height become
 
 Here `(max a b)` returns the larger of the numbers `a` and `b`.
 
-With `B` as in @exr-racket-tree, and with the empty tree:
+With `B` as in @exr-racket-tree,
+these calls give the size and the height of $B$, and the height of the empty tree:
 
 ```{racket}
 #| code-fold: false
