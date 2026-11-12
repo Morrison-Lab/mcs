@@ -321,6 +321,8 @@
     }
   })();
   </script>
+  <link href="../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+  <script src="../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -333,10 +335,13 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-12 00:48:52 (PST)</p>
+  <p class="date">Last modified: 2026-11-12 01:18:19 (PST)</p>
 </section>
 <section class="slide level2">
 
+<!-- Registers the knitr engine for `racket` chunks (tools/racket-engine.R).
+Include it once, near the top of a chapter, before its first racket chunk.
+The paths are relative to chapters/, where knitr runs a chapter's chunks. -->
 <div class="callout callout-note callout-titled callout-style-simple">
 <div class="callout-body">
 <div class="callout-title">
@@ -542,11 +547,13 @@ d(2026)
 
 <div id="exr-binary-trace" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 3 (Tracing a recursive Racket function)</strong></span> The Racket function <code>binary</code> takes a non-negative integer (<a href="../number-systems.html#def-nonnegative-integers">Definition: Non-negative integers</a>) <code>n</code> and returns a string:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb1-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>binary n<span class="op">)</span></span>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb1-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>binary n<span class="op">)</span></span>
 <span id="cb1-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(&lt;</span> n <span class="dv">2</span><span class="op">)</span></span>
 <span id="cb1-3"><a aria-label="3"></a>      <span class="op">(</span><span class="kw">number-&gt;string</span> n<span class="op">)</span></span>
 <span id="cb1-4"><a aria-label="4"></a>      <span class="op">(</span><span class="kw">string-append</span> <span class="op">(</span>binary <span class="op">(</span><span class="kw">quotient</span> n <span class="dv">2</span><span class="op">))</span></span>
 <span id="cb1-5"><a aria-label="5"></a>                     <span class="op">(</span><span class="kw">number-&gt;string</span> <span class="op">(</span><span class="kw">remainder</span> n <span class="dv">2</span><span class="op">)))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>Here</p>
 <ul>
 <li><code>(if test a b)</code> returns <code>a</code> when <code>test</code> is true and <code>b</code> when it is false;</li>
@@ -569,6 +576,15 @@ d(2026)
 <span id="cb2-5"><a aria-label="5"></a>= (string-append "11" "0")</span>
 <span id="cb2-6"><a aria-label="6"></a>= "110"</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>So <code>(binary 1)</code> returns <code>"1"</code>, <code>(binary 3)</code> returns <code>"11"</code>, and <code>(binary 6)</code> returns <code>"110"</code>. That is 6 written in base 2, since <span class="math inline">\(1 \cdot 4 + 1 \cdot 2 + 0 \cdot 1 = 6\)</span>.</p>
+<p>Racket returns the same values:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb3-1"><a aria-label="1"></a><span class="op">(</span>binary <span class="dv">1</span><span class="op">)</span></span>
+<span id="cb3-2"><a aria-label="2"></a><span class="co">; "1"</span></span>
+<span id="cb3-3"><a aria-label="3"></a><span class="op">(</span>binary <span class="dv">3</span><span class="op">)</span></span>
+<span id="cb3-4"><a aria-label="4"></a><span class="co">; "11"</span></span>
+<span id="cb3-5"><a aria-label="5"></a><span class="op">(</span>binary <span class="dv">6</span><span class="op">)</span></span>
+<span id="cb3-6"><a aria-label="6"></a><span class="co">; "110"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -587,17 +603,23 @@ d(2026)
 
 <div id="exm-digits-racket" class="theorem example">
 <p><span class="theorem-title"><strong>Example 8 (Counting digits in Racket)</strong></span> The recursive definition of <span class="math inline">\(d\)</span> in <a href="#/exm-digit-count" class="quarto-xref">Example&nbsp;3</a> becomes a Racket function line by line:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb3-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>digits n<span class="op">)</span></span>
-<span id="cb3-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(&lt;</span> n <span class="dv">10</span><span class="op">)</span></span>
-<span id="cb3-3"><a aria-label="3"></a>      <span class="dv">1</span></span>
-<span id="cb3-4"><a aria-label="4"></a>      <span class="op">(+</span> <span class="dv">1</span> <span class="op">(</span>digits <span class="op">(</span><span class="kw">quotient</span> n <span class="dv">10</span><span class="op">)))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb4-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>digits n<span class="op">)</span></span>
+<span id="cb4-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(&lt;</span> n <span class="dv">10</span><span class="op">)</span></span>
+<span id="cb4-3"><a aria-label="3"></a>      <span class="dv">1</span></span>
+<span id="cb4-4"><a aria-label="4"></a>      <span class="op">(+</span> <span class="dv">1</span> <span class="op">(</span>digits <span class="op">(</span><span class="kw">quotient</span> n <span class="dv">10</span><span class="op">)))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>Following <a href="#/rem-racket-recursion" class="quarto-xref">Remark&nbsp;1</a>:</p>
 <ul>
 <li>the base case answers 1 for every input less than 10;</li>
 <li>the recursive call is <code>(digits (quotient n 10))</code>, on <span class="math inline">\(\mathopen{}\left\lfloor n / 10\right\rfloor\mathclose{}\)</span>, which is less than <span class="math inline">\(n\)</span>;</li>
 <li>the combination adds 1 to the result of the recursive call.</li>
 </ul>
-<p><code>(digits 2026)</code> calls <code>(digits 202)</code>, <code>(digits 20)</code> and <code>(digits 2)</code> in turn, as in <a href="#/exm-digit-count" class="quarto-xref">Example&nbsp;3</a>, and returns 4.</p>
+<p><code>(digits 2026)</code> calls <code>(digits 202)</code>, <code>(digits 20)</code> and <code>(digits 2)</code> in turn, as in <a href="#/exm-digit-count" class="quarto-xref">Example&nbsp;3</a>:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb5-1"><a aria-label="1"></a><span class="op">(</span>digits <span class="dv">2026</span><span class="op">)</span></span>
+<span id="cb5-2"><a aria-label="2"></a><span class="co">; 4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 </section></section>
 <section>
@@ -621,6 +643,11 @@ d(2026)
 <li><code>(cons 7 (cons 2 (cons 9 empty)))</code> is <code>'(7 2 9)</code>.</li>
 </ul>
 <p>So <code>'(7 2 9)</code> is <code>(cons 7 (cons 2 (cons 9 empty)))</code>.</p>
+<p>Racket prints it the same way:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb6-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">cons</span> <span class="dv">7</span> <span class="op">(</span><span class="kw">cons</span> <span class="dv">2</span> <span class="op">(</span><span class="kw">cons</span> <span class="dv">9</span> empty<span class="op">)))</span></span>
+<span id="cb6-2"><a aria-label="2"></a><span class="co">; '(7 2 9)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -637,13 +664,25 @@ d(2026)
 <section class="slide level2">
 
 <div id="exm-first-rest" class="theorem example">
-<p><span class="theorem-title"><strong>Example 9 (Taking a list apart)</strong></span> Let <code>L</code> be the list <code>'(7 2 9)</code> (<a href="#/def-list" class="quarto-xref">Definition&nbsp;6</a>), which <a href="#/sol-cons-list" class="quarto-xref">Solution&nbsp;4</a> builds as <code>(cons 7 (cons 2 (cons 9 empty)))</code>. Then</p>
-<ul>
-<li><code>(first L)</code> is <code>7</code>, and <code>(rest L)</code> is <code>'(2 9)</code>;</li>
-<li><code>(first (rest L))</code> is <code>2</code>;</li>
-<li><code>(rest (rest (rest L)))</code> is <code>empty</code>.</li>
-</ul>
-<p><code>(first empty)</code> raises an error, since the empty list is not built by <code>cons</code> and has no first element.</p>
+<p><span class="theorem-title"><strong>Example 9 (Taking a list apart)</strong></span> Let <code>L</code> be the list <code>'(7 2 9)</code> (<a href="#/def-list" class="quarto-xref">Definition&nbsp;6</a>), which <a href="#/sol-cons-list" class="quarto-xref">Solution&nbsp;4</a> builds as <code>(cons 7 (cons 2 (cons 9 empty)))</code>. Then <code>first</code> and <code>rest</code> take it apart:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb7-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> L </span><span class="op">(</span><span class="kw">cons</span> <span class="dv">7</span> <span class="op">(</span><span class="kw">cons</span> <span class="dv">2</span> <span class="op">(</span><span class="kw">cons</span> <span class="dv">9</span> empty<span class="op">))))</span></span>
+<span id="cb7-2"><a aria-label="2"></a><span class="op">(</span>first L<span class="op">)</span></span>
+<span id="cb7-3"><a aria-label="3"></a><span class="co">; 7</span></span>
+<span id="cb7-4"><a aria-label="4"></a><span class="op">(</span>rest L<span class="op">)</span></span>
+<span id="cb7-5"><a aria-label="5"></a><span class="co">; '(2 9)</span></span>
+<span id="cb7-6"><a aria-label="6"></a><span class="op">(</span>first <span class="op">(</span>rest L<span class="op">))</span></span>
+<span id="cb7-7"><a aria-label="7"></a><span class="co">; 2</span></span>
+<span id="cb7-8"><a aria-label="8"></a><span class="op">(</span>rest <span class="op">(</span>rest <span class="op">(</span>rest L<span class="op">)))</span></span>
+<span id="cb7-9"><a aria-label="9"></a><span class="co">; '()</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>The last value, <code>'()</code>, is how Racket prints <code>empty</code>. <code>(first empty)</code> raises an error, since the empty list is not built by <code>cons</code> and has no first element:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb8-1"><a aria-label="1"></a><span class="op">(</span>first empty<span class="op">)</span></span>
+<span id="cb8-2"><a aria-label="2"></a><span class="co">; first: contract violation</span></span>
+<span id="cb8-3"><a aria-label="3"></a><span class="co">;   expected: (and/c list? (not/c empty?))</span></span>
+<span id="cb8-4"><a aria-label="4"></a><span class="co">;   given: '()</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -662,18 +701,26 @@ d(2026)
 
 <div id="exm-list-length" class="theorem example">
 <p><span class="theorem-title"><strong>Example 10 (The length of <code>'(7 2 9)</code>)</strong></span> In Racket, the definition of length (<a href="#/def-list-length" class="quarto-xref">Definition&nbsp;7</a>) is</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb4-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>len L<span class="op">)</span></span>
-<span id="cb4-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span>empty? L<span class="op">)</span></span>
-<span id="cb4-3"><a aria-label="3"></a>      <span class="dv">0</span></span>
-<span id="cb4-4"><a aria-label="4"></a>      <span class="op">(+</span> <span class="dv">1</span> <span class="op">(</span>len <span class="op">(</span>rest L<span class="op">)))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb9-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>len L<span class="op">)</span></span>
+<span id="cb9-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span>empty? L<span class="op">)</span></span>
+<span id="cb9-3"><a aria-label="3"></a>      <span class="dv">0</span></span>
+<span id="cb9-4"><a aria-label="4"></a>      <span class="op">(+</span> <span class="dv">1</span> <span class="op">(</span>len <span class="op">(</span>rest L<span class="op">)))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>where <code>(empty? L)</code> tests whether <code>L</code> is the empty list. Replacing each call with the recursive rule:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a aria-label="1"></a>(len '(7 2 9))</span>
-<span id="cb5-2"><a aria-label="2"></a>= (+ 1 (len '(2 9)))</span>
-<span id="cb5-3"><a aria-label="3"></a>= (+ 1 (+ 1 (len '(9))))</span>
-<span id="cb5-4"><a aria-label="4"></a>= (+ 1 (+ 1 (+ 1 (len '()))))</span>
-<span id="cb5-5"><a aria-label="5"></a>= (+ 1 (+ 1 (+ 1 0)))</span>
-<span id="cb5-6"><a aria-label="6"></a>= 3</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Racket’s built-in <code>length</code> gives the same values.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a aria-label="1"></a>(len '(7 2 9))</span>
+<span id="cb10-2"><a aria-label="2"></a>= (+ 1 (len '(2 9)))</span>
+<span id="cb10-3"><a aria-label="3"></a>= (+ 1 (+ 1 (len '(9))))</span>
+<span id="cb10-4"><a aria-label="4"></a>= (+ 1 (+ 1 (+ 1 (len '()))))</span>
+<span id="cb10-5"><a aria-label="5"></a>= (+ 1 (+ 1 (+ 1 0)))</span>
+<span id="cb10-6"><a aria-label="6"></a>= 3</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Racket’s built-in <code>length</code> gives the same values:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb11-1"><a aria-label="1"></a><span class="op">(</span>len '<span class="op">(</span><span class="dv">7</span> <span class="dv">2</span> <span class="dv">9</span><span class="op">))</span></span>
+<span id="cb11-2"><a aria-label="2"></a><span class="co">; 3</span></span>
+<span id="cb11-3"><a aria-label="3"></a><span class="op">(</span><span class="kw">length</span> '<span class="op">(</span><span class="dv">7</span> <span class="dv">2</span> <span class="dv">9</span><span class="op">))</span></span>
+<span id="cb11-4"><a aria-label="4"></a><span class="co">; 3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -692,17 +739,25 @@ d(2026)
 
 <div id="exm-append" class="theorem example">
 <p><span class="theorem-title"><strong>Example 11 (Appending <code>'(1 2)</code> and <code>'(3)</code>)</strong></span> In Racket, the definition of append (<a href="#/def-append" class="quarto-xref">Definition&nbsp;8</a>) is</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb6-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>app L M<span class="op">)</span></span>
-<span id="cb6-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span>empty? L<span class="op">)</span></span>
-<span id="cb6-3"><a aria-label="3"></a>      M</span>
-<span id="cb6-4"><a aria-label="4"></a>      <span class="op">(</span><span class="kw">cons</span> <span class="op">(</span>first L<span class="op">)</span> <span class="op">(</span>app <span class="op">(</span>rest L<span class="op">)</span> M<span class="op">))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb12-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>app L M<span class="op">)</span></span>
+<span id="cb12-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">if</span> <span class="op">(</span>empty? L<span class="op">)</span></span>
+<span id="cb12-3"><a aria-label="3"></a>      M</span>
+<span id="cb12-4"><a aria-label="4"></a>      <span class="op">(</span><span class="kw">cons</span> <span class="op">(</span>first L<span class="op">)</span> <span class="op">(</span>app <span class="op">(</span>rest L<span class="op">)</span> M<span class="op">))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>The recursion takes <code>L</code> apart and leaves <code>M</code> alone:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a aria-label="1"></a>(app '(1 2) '(3))</span>
-<span id="cb7-2"><a aria-label="2"></a>= (cons 1 (app '(2) '(3)))</span>
-<span id="cb7-3"><a aria-label="3"></a>= (cons 1 (cons 2 (app '() '(3))))</span>
-<span id="cb7-4"><a aria-label="4"></a>= (cons 1 (cons 2 '(3)))</span>
-<span id="cb7-5"><a aria-label="5"></a>= '(1 2 3)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Racket’s built-in <code>append</code> gives the same values.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb13-1"><a aria-label="1"></a>(app '(1 2) '(3))</span>
+<span id="cb13-2"><a aria-label="2"></a>= (cons 1 (app '(2) '(3)))</span>
+<span id="cb13-3"><a aria-label="3"></a>= (cons 1 (cons 2 (app '() '(3))))</span>
+<span id="cb13-4"><a aria-label="4"></a>= (cons 1 (cons 2 '(3)))</span>
+<span id="cb13-5"><a aria-label="5"></a>= '(1 2 3)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Racket’s built-in <code>append</code> gives the same values:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb14-1"><a aria-label="1"></a><span class="op">(</span>app '<span class="op">(</span><span class="dv">1</span> <span class="dv">2</span><span class="op">)</span> '<span class="op">(</span><span class="dv">3</span><span class="op">))</span></span>
+<span id="cb14-2"><a aria-label="2"></a><span class="co">; '(1 2 3)</span></span>
+<span id="cb14-3"><a aria-label="3"></a><span class="op">(</span><span class="kw">append</span> '<span class="op">(</span><span class="dv">1</span> <span class="dv">2</span><span class="op">)</span> '<span class="op">(</span><span class="dv">3</span><span class="op">))</span></span>
+<span id="cb14-4"><a aria-label="4"></a><span class="co">; '(1 2 3)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 </section></section>
 <section>
@@ -714,12 +769,12 @@ d(2026)
 
 <div id="exr-palindrome-trace" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 5 (Is it a palindrome?)</strong></span> The algorithm <code>pal</code>, in the pseudocode of <a href="../chapters/loop-invariants.html#rem-pseudocode">Remark: How to read the pseudocode in this chapter</a>, tests whether a string is a palindrome (<a href="#/def-palindrome" class="quarto-xref">Definition&nbsp;5</a>):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a aria-label="1"></a>procedure pal(s)        // s is a string s[1] s[2] ... s[n] of n symbols</span>
-<span id="cb8-2"><a aria-label="2"></a>    if n &lt;= 1</span>
-<span id="cb8-3"><a aria-label="3"></a>        return true</span>
-<span id="cb8-4"><a aria-label="4"></a>    if s[1] != s[n]</span>
-<span id="cb8-5"><a aria-label="5"></a>        return false</span>
-<span id="cb8-6"><a aria-label="6"></a>    return pal(s[2..n-1])   // s without its first and last symbols</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a aria-label="1"></a>procedure pal(s)        // s is a string s[1] s[2] ... s[n] of n symbols</span>
+<span id="cb15-2"><a aria-label="2"></a>    if n &lt;= 1</span>
+<span id="cb15-3"><a aria-label="3"></a>        return true</span>
+<span id="cb15-4"><a aria-label="4"></a>    if s[1] != s[n]</span>
+<span id="cb15-5"><a aria-label="5"></a>        return false</span>
+<span id="cb15-6"><a aria-label="6"></a>    return pal(s[2..n-1])   // s without its first and last symbols</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Here <code>!=</code> means <span class="math inline">\(\ne\)</span>, and <code>s[2..n-1]</code> is the string of the symbols <code>s[2]</code> through <code>s[n-1]</code>, which is the empty string when <span class="math inline">\(n = 2\)</span>, since the range <code>2..1</code> is empty. Run <code>pal(level)</code> by hand: write down each call of <code>pal</code> that it makes, and what each call returns.</p>
 </div>
 </section>

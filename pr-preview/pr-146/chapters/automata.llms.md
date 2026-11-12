@@ -6,7 +6,7 @@ State machines and their state diagrams, runs, deterministic finite automata and
 
 Published
 
-Last modified: 2026-11-12 00:48:52 (PST)
+Last modified: 2026-11-12 01:18:19 (PST)
 
 > **NOTE:**
 >
@@ -581,19 +581,24 @@ Last modified: 2026-11-12 00:48:52 (PST)
 > - `(member x L)` is `#f` if `x` is not in the list `L`, and a list that is not `#f` if it is.
 > - `(string->list w)` is the list of the characters of the string `w`.
 >
-> `run` returns the runs of [Example 6](#exm-pairs-accept) on `"abab"` and `"aab"`. $A$ accepts `"abab"` and the empty string $\lambda$, but not `"ba"`:
+> `run` returns the runs of [Example 6](#exm-pairs-accept) on `"abab"` and `"aab"`:
 >
 > ``` racket
 > (run pairs-table 'q0 (string->list "abab"))
 > ; '(q0 q1 q0 q1 q0)
 > (run pairs-table 'q0 (string->list "aab"))
 > ; '(q0 q1 q2 q2)
+> ```
+>
+> $A$ accepts `"abab"` and the empty string $\lambda$, but not `"ba"`:
+>
+> ``` racket
 > (accepts? pairs-table 'q0 '(q0) (string->list "abab"))
+> ; #t
+> (accepts? pairs-table 'q0 '(q0) (string->list ""))
 > ; #t
 > (accepts? pairs-table 'q0 '(q0) (string->list "ba"))
 > ; #f
-> (accepts? pairs-table 'q0 '(q0) (string->list ""))
-> ; #t
 > ```
 >
 > Let $w$ be the string whose symbols are the elements of `xs`, in order. `run` reads the first symbol of $w$ first, as [Definition 3](#def-run) does, so by [Theorem 1](#thm-run-last) the last state of `(run table s xs)` is $\delta^*(s, w)$.
