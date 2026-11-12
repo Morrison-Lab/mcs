@@ -6,14 +6,23 @@ so a program can check an equivalence.
 In Racket, `for*/and` runs its body for every combination of `p` and `q`,
 and returns `#f` as soon as the body returns `#f`, and `#t` if it never does:
 
-```racket
+```{racket}
+#| code-fold: false
 (for*/and ([p '(#t #f)]
            [q '(#t #f)])
   (equal? (or p (and p q)) p))
 ```
 
-This returns `#t`, as @exr-absorption found.
-Replacing the body with `(equal? (not (and p q)) (and (not p) (not q)))`
-returns `#f`, as @exr-not-and found.
+The result agrees with @exr-absorption.
+With a new body, the same loop checks whether the two statements of @exr-not-and are equivalent:
+
+```{racket}
+#| code-fold: false
+(for*/and ([p '(#t #f)]
+           [q '(#t #f)])
+  (equal? (not (and p q)) (and (not p) (not q))))
+```
+
+This result agrees with @exr-not-and.
 
 :::
