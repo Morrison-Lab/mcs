@@ -6,7 +6,7 @@ Expressions, functions and cases in Racket
 
 Published
 
-Last modified: 2026-11-12 00:49:22 (PST)
+Last modified: 2026-11-12 01:11:06 (PST)
 
 > **NOTE:**
 >
@@ -242,7 +242,7 @@ Last modified: 2026-11-12 00:49:22 (PST)
 >       x))
 > ```
 >
-> Applied to $-7$ and to 2, it returns their absolute values:
+> Applied to $-7$ and to $2$, it returns their absolute values:
 >
 > ``` racket
 > (absolute -7)
@@ -480,7 +480,7 @@ Last modified: 2026-11-12 00:49:22 (PST)
 >
 > - applied to an argument;
 > - passed to `twice` from [Exercise 5](#exr-twice);
-> - passed to [`map`](#exm-map-filter).
+> - passed to `map` from [Example 3](#exm-map-filter).
 >
 > ``` racket
 > ((adder 3) 4)
