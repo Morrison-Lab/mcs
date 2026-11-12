@@ -33,5 +33,6 @@ exclude = [
   "https://www.wwu.edu/dean-students",
   # catalog.wwu.edu serves an expired TLS certificate (2026-11-11);
   # remove this entry once WWU renews it (mcs#157).
-  "https://catalog.wwu.edu/.*",
+  # A literal string, so the backslashes reach the regex unchanged.
+  '^https?://catalog\.wwu\.edu(/|$)',
 ]
