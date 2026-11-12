@@ -6,7 +6,7 @@ Trees and forests, rooted trees, binary trees, preorder, inorder, postorder and 
 
 Published
 
-Last modified: 2026-11-12 00:48:39 (PST)
+Last modified: 2026-11-12 01:15:49 (PST)
 
 > **NOTE:**
 >
@@ -716,7 +716,7 @@ Last modified: 2026-11-12 00:48:39 (PST)
 >
 > Here `(max a b)` returns the larger of the numbers `a` and `b`.
 >
-> With `B` as in [Exercise 7](#exr-racket-tree), and with the empty tree:
+> With `B` as in [Exercise 7](#exr-racket-tree), these calls give the size and the height of $B$, and the height of the empty tree:
 >
 > ``` racket
 > (size B)

@@ -321,6 +321,8 @@
     }
   })();
   </script>
+  <link href="../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+  <script src="../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -333,10 +335,13 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-12 00:48:39 (PST)</p>
+  <p class="date">Last modified: 2026-11-12 01:15:49 (PST)</p>
 </section>
 <section class="slide level2">
 
+<!-- Registers the knitr engine for `racket` chunks (tools/racket-engine.R).
+Include it once, near the top of a chapter, before its first racket chunk.
+The paths are relative to chapters/, where knitr runs a chapter's chunks. -->
 <div class="callout callout-note callout-titled callout-style-simple">
 <div class="callout-body">
 <div class="callout-title">
@@ -398,9 +403,15 @@
 
 <div id="rem-racket-predicates" class="proof remark">
 <p><span class="proof-title"><em>Remark 2</em> (Predicates in Racket). </span>A Racket procedure that returns <code>#t</code> or <code>#f</code> is also called a predicate, and by convention its name ends in <code>?</code>, as in <code>even?</code> and <code>string?</code>. The predicate <span class="math inline">\(L(s)\)</span> from <a href="#/exr-predicate-values" class="quarto-xref">Exercise&nbsp;1</a> is</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb1-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>long? s<span class="op">)</span></span>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb1-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>long? s<span class="op">)</span></span>
 <span id="cb1-2"><a aria-label="2"></a>  <span class="op">(&gt;</span> <span class="op">(</span><span class="kw">string-length</span> s<span class="op">)</span> <span class="dv">3</span><span class="op">))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>and <code>(long? "logic")</code> returns <code>#t</code>.</p>
+</div>
+<p>and it is true of <code>"logic"</code>:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb2-1"><a aria-label="1"></a><span class="op">(</span>long? <span class="st">"logic"</span><span class="op">)</span></span>
+<span id="cb2-2"><a aria-label="2"></a><span class="co">; #t</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 </section></section>
 <section>
@@ -464,7 +475,13 @@
 <section class="slide level2">
 
 <div id="rem-racket-quantifiers" class="proof remark">
-<p><span class="proof-title"><em>Remark 4</em> (Quantifiers in Racket). </span>On a finite list, Racket computes the two quantifiers with <code>andmap</code> and <code>ormap</code>. <code>(andmap odd? (list 2 3 5 7))</code> returns <code>#f</code>, as in part 2 of <a href="#/exr-finite-quantifiers" class="quarto-xref">Exercise&nbsp;2</a>, and <code>(ormap even? (list 2 3 5 7))</code> returns <code>#t</code>, as in part 3.</p>
+<p><span class="proof-title"><em>Remark 4</em> (Quantifiers in Racket). </span>On a finite list, Racket computes the two quantifiers with <code>andmap</code> and <code>ormap</code>. Here they give the answers to parts 2 and 3 of <a href="#/exr-finite-quantifiers" class="quarto-xref">Exercise&nbsp;2</a>:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb3-1"><a aria-label="1"></a><span class="op">(</span>andmap <span class="kw">odd?</span> <span class="op">(</span><span class="kw">list</span> <span class="dv">2</span> <span class="dv">3</span> <span class="dv">5</span> <span class="dv">7</span><span class="op">))</span></span>
+<span id="cb3-2"><a aria-label="2"></a><span class="co">; #f</span></span>
+<span id="cb3-3"><a aria-label="3"></a><span class="op">(</span>ormap <span class="kw">even?</span> <span class="op">(</span><span class="kw">list</span> <span class="dv">2</span> <span class="dv">3</span> <span class="dv">5</span> <span class="dv">7</span><span class="op">))</span></span>
+<span id="cb3-4"><a aria-label="4"></a><span class="co">; #t</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 </section>
 <section class="slide level2">
