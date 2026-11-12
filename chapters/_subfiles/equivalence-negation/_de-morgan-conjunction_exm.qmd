@@ -1,0 +1,10 @@
+::: {#exm-de-morgan-conjunction}
+#### Not both coordinates positive
+
+For real numbers $x$ and $y$,
+by [De Morgan's law for a conjunction](#thm-de-morgan-logic),
+"not ($x > 0$ and $y > 0$)"
+is logically equivalent to
+"$x \le 0$ or $y \le 0$".
+
+:::
