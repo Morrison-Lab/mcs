@@ -5,7 +5,7 @@ The list `(list 'rock 'paper)` is not an element of `beats`,
 since rock does not beat paper (@sol-beats-transitive),
 so `member` returns `#f`.
 When `x` is an element of `L`, `member` returns the part of `L` that starts at `x`, which is not `#f`,
-as the second call shows:
+as the second of these two calls shows:
 
 ```{racket}
 #| code-fold: false
