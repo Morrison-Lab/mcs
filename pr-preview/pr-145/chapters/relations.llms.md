@@ -6,7 +6,7 @@ Relations between sets, their properties, equivalence relations, partitions and 
 
 Published
 
-Last modified: 2026-11-12 00:48:48 (PST)
+Last modified: 2026-11-12 01:17:36 (PST)
 
 > **NOTE:**
 >
@@ -278,7 +278,7 @@ Last modified: 2026-11-12 00:48:48 (PST)
 
 > **NOTE:**
 >
-> *Solution 4*. Yes. The list `(list 'rock 'paper)` is not an element of `beats`, since rock does not beat paper ([Solution 3](#sol-beats-transitive)), so `member` returns `#f`. When `x` is an element of `L`, `member` returns the part of `L` that starts at `x`, which is not `#f`, as the second call shows:
+> *Solution 4*. Yes. The list `(list 'rock 'paper)` is not an element of `beats`, since rock does not beat paper ([Solution 3](#sol-beats-transitive)), so `member` returns `#f`. When `x` is an element of `L`, `member` returns the part of `L` that starts at `x`, which is not `#f`, as the second of these two calls shows:
 >
 > ``` racket
 > (member (list 'rock 'paper) beats)

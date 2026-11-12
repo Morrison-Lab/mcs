@@ -338,7 +338,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-12 00:48:48 (PST)</p>
+  <p class="date">Last modified: 2026-11-12 01:17:36 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -717,7 +717,7 @@ Figure&nbsp;3: The directed graph of the relation “shares a letter with” on 
 <section class="slide level2">
 
 <div id="sol-racket-member" class="proof solution">
-<p><span class="proof-title"><em>Solution 4</em>. </span>Yes. The list <code>(list 'rock 'paper)</code> is not an element of <code>beats</code>, since rock does not beat paper (<a href="#/sol-beats-transitive" class="quarto-xref">Solution&nbsp;3</a>), so <code>member</code> returns <code>#f</code>. When <code>x</code> is an element of <code>L</code>, <code>member</code> returns the part of <code>L</code> that starts at <code>x</code>, which is not <code>#f</code>, as the second call shows:</p>
+<p><span class="proof-title"><em>Solution 4</em>. </span>Yes. The list <code>(list 'rock 'paper)</code> is not an element of <code>beats</code>, since rock does not beat paper (<a href="#/sol-beats-transitive" class="quarto-xref">Solution&nbsp;3</a>), so <code>member</code> returns <code>#f</code>. When <code>x</code> is an element of <code>L</code>, <code>member</code> returns the part of <code>L</code> that starts at <code>x</code>, which is not <code>#f</code>, as the second of these two calls shows:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb2-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">member</span> <span class="op">(</span><span class="kw">list</span> 'rock 'paper<span class="op">)</span> beats<span class="op">)</span></span>
 <span id="cb2-2"><a aria-label="2"></a><span class="co">; #f</span></span>
