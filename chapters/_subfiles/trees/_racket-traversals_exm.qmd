@@ -4,7 +4,8 @@
 These functions follow the definitions of preorder (@def-preorder), inorder (@def-inorder) and postorder (@def-postorder),
 with `B` as in @exr-racket-tree:
 
-```racket
+```{racket}
+#| code-fold: false
 (define (preorder T)
   (if (empty? T)
       empty
@@ -26,9 +27,13 @@ with `B` as in @exr-racket-tree:
 ```
 
 `(append L M N)` is the list of the elements of `L`, then `M`, then `N`.
+The three traversals of `B` are:
 
-- `(preorder B)` returns `'(m f c h j t r p w)`.
-- `(inorder B)` returns `'(c f h j m p r t w)`.
-- `(postorder B)` returns `'(c j h f p r w t m)`.
+```{racket}
+#| code-fold: false
+(preorder B)
+(inorder B)
+(postorder B)
+```
 
 :::

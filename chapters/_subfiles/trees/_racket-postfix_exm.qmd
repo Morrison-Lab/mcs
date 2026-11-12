@@ -5,7 +5,8 @@ The method of @exm-postfix-stack uses a list as the stack (@def-stack):
 `cons` pushes, and `first` and `rest` pop.
 With `apply-op` from @exm-racket-evaluate,
 
-```racket
+```{racket}
+#| code-fold: false
 (define (postfix-loop symbols stack)
   (cond [(empty? symbols) (first stack)]
         [(number? (first symbols))
@@ -22,6 +23,11 @@ With `apply-op` from @exm-racket-evaluate,
 ```
 
 In the last clause, `(first stack)` is the number $b$ popped first and `(second stack)` is the number $a$ under it.
-`(evaluate-postfix '(7 2 - 3 4 2 * + *))` returns 55.
+The postfix form of the tree of @fig-expression has the same value as the tree:
+
+```{racket}
+#| code-fold: false
+(evaluate-postfix '(7 2 - 3 4 2 * + *))
+```
 
 :::

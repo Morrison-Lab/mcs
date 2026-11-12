@@ -3,7 +3,8 @@
 
 The recursive formulas of @rem-size-height become
 
-```racket
+```{racket}
+#| code-fold: false
 (define (size T)
   (if (empty? T)
       0
@@ -17,7 +18,14 @@ The recursive formulas of @rem-size-height become
 
 Here `(max a b)` returns the larger of the numbers `a` and `b`.
 
-With `B` as in @exr-racket-tree, `(size B)` returns 9 and `(height B)` returns 3,
-and `(height '())` returns -1.
+With `B` as in @exr-racket-tree,
+these calls give the size and the height of $B$, and the height of the empty tree:
+
+```{racket}
+#| code-fold: false
+(size B)
+(height B)
+(height '())
+```
 
 :::

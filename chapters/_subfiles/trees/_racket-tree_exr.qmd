@@ -5,7 +5,8 @@ In Racket, store the empty tree (@def-binary-tree) as `'()`,
 and $\operatorname{node}(x, L, R)$ as the list `(list x L R)` of its label and its two subtrees.
 The binary tree $B$ of @exm-binary-tree is then
 
-```racket
+```{racket}
+#| code-fold: false
 (define B
   '(m (f (c () ())
          (h () (j () ())))
