@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-11 23:35:36 (PST)
+Last modified: 2026-11-11 23:58:00 (PST)
 
 > **NOTE:**
 >
@@ -298,18 +298,15 @@ Last modified: 2026-11-11 23:35:36 (PST)
 
 > **NOTE:**
 >
-> **Theorem 4 (De Morgan’s laws)** Let $S$ be a set, let $I$ be a nonempty set of indices, and let $A_i$ be a [subset](#def-subset) of $S$ for each $i \in I$. Then the complement of a union is the intersection of the complements, ([Wikipedia contributors 2026c](#ref-wikipedia_de_morgans_laws)) and the complement of an intersection is the union of the complements:
+> **Theorem 4 (De Morgan’s law for a union)** Let $S$ be a set, let $I$ be a nonempty set of indices, and let $A_i$ be a [subset](#def-subset) of $S$ for each $i \in I$. Then the complement of a union is the intersection of the complements ([Wikipedia contributors 2026c](#ref-wikipedia_de_morgans_laws)):
 >
-> $$\begin{aligned}
-> S \setminus \bigcup_{i \in I} A_i &= \bigcap_{i \in I} (S \setminus A_i) \\
-> S \setminus \bigcap_{i \in I} A_i &= \bigcup_{i \in I} (S \setminus A_i)
-> \end{aligned}$$
+> $$S \setminus \bigcup_{i \in I} A_i = \bigcap_{i \in I} (S \setminus A_i)$$
 >
-> With the complement notation of [Definition 27](#def-complement), these read $\mathopen{}\left(\bigcup_{i \in I} A_i\right)\mathclose{}^c = \bigcap_{i \in I} A_i^c$ and $\mathopen{}\left(\bigcap_{i \in I} A_i\right)\mathclose{}^c = \bigcup_{i \in I} A_i^c$.
+> With the complement notation of [Definition 27](#def-complement), this reads $\mathopen{}\left(\bigcup_{i \in I} A_i\right)\mathclose{}^c = \bigcap_{i \in I} A_i^c$.
 
 > **NOTE:**
 >
-> *Proof*. Two sets are equal when they have the same elements ([Definition 1](#def-set)), so it is enough to show that an element $x$ is in the left-hand side [if and only if](proof-writing.llms.md#def-necessary-sufficient) ($\iff$) it is in the right-hand side. Each step applies the definition named at its right: set difference ([Definition 26](#def-set-difference)), union ([Definition 22](#def-union)) or intersection ([Definition 24](#def-intersection)). For the first law:
+> *Proof*. Two sets are equal when they have the same elements ([Definition 1](#def-set)), so it is enough to show that an element $x$ is in the left-hand side [if and only if](proof-writing.llms.md#def-necessary-sufficient) ($\iff$) it is in the right-hand side. Each step applies the definition named at its right: set difference ([Definition 26](#def-set-difference)), union ([Definition 22](#def-union)) or intersection ([Definition 24](#def-intersection)).
 >
 > $$\begin{aligned}
 > x \in S \setminus \bigcup_{i \in I} A_i
@@ -322,8 +319,38 @@ Last modified: 2026-11-11 23:35:36 (PST)
 > &\iff x \in \bigcap_{i \in I} (S \setminus A_i)
 > && \text{(intersection)}
 > \end{aligned}$$
+
+> **NOTE:**
 >
-> For the second law:
+> **Example 18 (De Morgan’s law for a union of die rolls)**  
+>
+> In $S = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}$, let $A = {\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}$ and $B = {\mathopen{}\left\{1, 2, 3\right\}\mathclose{}}$, as in [Example 16](#exm-set-operations), so $A^c = {\mathopen{}\left\{1, 3, 5\right\}\mathclose{}}$ and $B^c = {\mathopen{}\left\{4, 5, 6\right\}\mathclose{}}$. Then
+>
+> $$\begin{aligned}
+> (A \cup B)^c &= {\mathopen{}\left\{1, 2, 3, 4, 6\right\}\mathclose{}}^c \\
+> &= {\mathopen{}\left\{5\right\}\mathclose{}},
+> \end{aligned}$$
+>
+> and
+>
+> $$\begin{aligned}
+> A^c \cap B^c &= {\mathopen{}\left\{1, 3, 5\right\}\mathclose{}} \cap {\mathopen{}\left\{4, 5, 6\right\}\mathclose{}} \\
+> &= {\mathopen{}\left\{5\right\}\mathclose{}},
+> \end{aligned}$$
+>
+> as [De Morgan’s law for a union](#thm-de-morgan) says.
+
+> **NOTE:**
+>
+> **Theorem 5 (De Morgan’s law for an intersection)** Let $S$ be a set, let $I$ be a nonempty set of indices, and let $A_i$ be a [subset](#def-subset) of $S$ for each $i \in I$. Then the complement of an intersection is the union of the complements ([Wikipedia contributors 2026c](#ref-wikipedia_de_morgans_laws)):
+>
+> $$S \setminus \bigcap_{i \in I} A_i = \bigcup_{i \in I} (S \setminus A_i)$$
+>
+> With the complement notation of [Definition 27](#def-complement), this reads $\mathopen{}\left(\bigcap_{i \in I} A_i\right)\mathclose{}^c = \bigcup_{i \in I} A_i^c$.
+
+> **NOTE:**
+>
+> *Proof*. As in the proof of [De Morgan’s law for a union](#thm-de-morgan), it is enough to show that an element $x$ is in the left-hand side [if and only if](proof-writing.llms.md#def-necessary-sufficient) ($\iff$) it is in the right-hand side. Each step applies the definition named at its right: set difference ([Definition 26](#def-set-difference)), intersection ([Definition 24](#def-intersection)) or union ([Definition 22](#def-union)).
 >
 > $$\begin{aligned}
 > x \in S \setminus \bigcap_{i \in I} A_i
@@ -339,31 +366,23 @@ Last modified: 2026-11-11 23:35:36 (PST)
 
 > **NOTE:**
 >
-> **Example 18 (De Morgan’s laws for die rolls)** In $S = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}$, let $A = {\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}$ and $B = {\mathopen{}\left\{1, 2, 3\right\}\mathclose{}}$, as in [Example 16](#exm-set-operations), so $A^c = {\mathopen{}\left\{1, 3, 5\right\}\mathclose{}}$ and $B^c = {\mathopen{}\left\{4, 5, 6\right\}\mathclose{}}$.
+> **Example 19 (De Morgan’s law for an intersection of die rolls)**  
 >
-> - $$\begin{aligned}
->   (A \cup B)^c &= {\mathopen{}\left\{1, 2, 3, 4, 6\right\}\mathclose{}}^c \\
->   &= {\mathopen{}\left\{5\right\}\mathclose{}},
->   \end{aligned}$$
+> With $S$, $A$ and $B$ as in [Example 18](#exm-de-morgan),
 >
->   and
+> $$\begin{aligned}
+> (A \cap B)^c &= {\mathopen{}\left\{2\right\}\mathclose{}}^c \\
+> &= {\mathopen{}\left\{1, 3, 4, 5, 6\right\}\mathclose{}},
+> \end{aligned}$$
 >
->   $$\begin{aligned}
->   A^c \cap B^c &= {\mathopen{}\left\{1, 3, 5\right\}\mathclose{}} \cap {\mathopen{}\left\{4, 5, 6\right\}\mathclose{}} \\
->   &= {\mathopen{}\left\{5\right\}\mathclose{}}.
->   \end{aligned}$$
+> and
 >
-> - $$\begin{aligned}
->   (A \cap B)^c &= {\mathopen{}\left\{2\right\}\mathclose{}}^c \\
->   &= {\mathopen{}\left\{1, 3, 4, 5, 6\right\}\mathclose{}},
->   \end{aligned}$$
+> $$\begin{aligned}
+> A^c \cup B^c &= {\mathopen{}\left\{1, 3, 5\right\}\mathclose{}} \cup {\mathopen{}\left\{4, 5, 6\right\}\mathclose{}} \\
+> &= {\mathopen{}\left\{1, 3, 4, 5, 6\right\}\mathclose{}},
+> \end{aligned}$$
 >
->   and
->
->   $$\begin{aligned}
->   A^c \cup B^c &= {\mathopen{}\left\{1, 3, 5\right\}\mathclose{}} \cup {\mathopen{}\left\{4, 5, 6\right\}\mathclose{}} \\
->   &= {\mathopen{}\left\{1, 3, 4, 5, 6\right\}\mathclose{}}.
->   \end{aligned}$$
+> as [De Morgan’s law for an intersection](#thm-de-morgan-intersection) says.
 
 > **NOTE:**
 >
@@ -373,7 +392,7 @@ Last modified: 2026-11-11 23:35:36 (PST)
 
 > **NOTE:**
 >
-> **Example 19 (Two disjoint sets of die rolls)** For the die rolls $D = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}$ ([sets of die rolls](#exm-set)), the sets ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$ and ${\mathopen{}\left\{5, 6\right\}\mathclose{}}$ are disjoint: no roll is in both. The sets ${\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}$ and ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$ are not, because $2$ is in both.
+> **Example 20 (Two disjoint sets of die rolls)** For the die rolls $D = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}$ ([sets of die rolls](#exm-set)), the sets ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$ and ${\mathopen{}\left\{5, 6\right\}\mathclose{}}$ are disjoint: no roll is in both. The sets ${\mathopen{}\left\{2, 4, 6\right\}\mathclose{}}$ and ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$ are not, because $2$ is in both.
 
 > **NOTE:**
 >
@@ -383,7 +402,7 @@ Last modified: 2026-11-11 23:35:36 (PST)
 
 > **NOTE:**
 >
-> **Example 20 (Low, middle and high die rolls)** For the die rolls $D = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}$ ([sets of die rolls](#exm-set)), the sets ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$, ${\mathopen{}\left\{3, 4\right\}\mathclose{}}$ and ${\mathopen{}\left\{5, 6\right\}\mathclose{}}$ are [pairwise disjoint](#def-pairwise-disjoint): no roll is in more than one of them. The sets ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$, ${\mathopen{}\left\{3, 4\right\}\mathclose{}}$ and ${\mathopen{}\left\{2, 5\right\}\mathclose{}}$ are not, because $2$ is in both the first and the third.
+> **Example 21 (Low, middle and high die rolls)** For the die rolls $D = {\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}}$ ([sets of die rolls](#exm-set)), the sets ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$, ${\mathopen{}\left\{3, 4\right\}\mathclose{}}$ and ${\mathopen{}\left\{5, 6\right\}\mathclose{}}$ are [pairwise disjoint](#def-pairwise-disjoint): no roll is in more than one of them. The sets ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$, ${\mathopen{}\left\{3, 4\right\}\mathclose{}}$ and ${\mathopen{}\left\{2, 5\right\}\mathclose{}}$ are not, because $2$ is in both the first and the third.
 
 > **NOTE:**
 >
@@ -397,7 +416,7 @@ Last modified: 2026-11-11 23:35:36 (PST)
 
 > **NOTE:**
 >
-> **Example 21 (Cartesian products)**  
+> **Example 22 (Cartesian products)**  
 >
 > - ${\mathopen{}\left\{1, 2\right\}\mathclose{}} \times {\mathopen{}\left\{5, 6\right\}\mathclose{}} = {\mathopen{}\left\{(1, 5), (1, 6), (2, 5), (2, 6)\right\}\mathclose{}}$. The pair $(5, 1)$ is not in it, because its first entry, $5$, is not in ${\mathopen{}\left\{1, 2\right\}\mathclose{}}$; so $(1, 5) \ne (5, 1)$.
 > - The results of rolling a die twice form ${\mathopen{}\left\{1, \ldots, 6\right\}\mathclose{}} \times {\mathopen{}\left\{1, \ldots, 6\right\}\mathclose{}}$, which has $6 \cdot 6 = 36$ elements, such as $(3, 5)$: a 3 on the first roll and a 5 on the second.
@@ -409,7 +428,7 @@ Last modified: 2026-11-11 23:35:36 (PST)
 
 > **NOTE:**
 >
-> **Example 22 (Dates as tuples)**  
+> **Example 23 (Dates as tuples)**  
 >
 > A calendar date can be written as a $3$-[tuple](#def-tuple) (year, month, day), such as $(2027, 1, 4)$ for 4 January 2027. The $3$-tuples $(2027, 1, 4)$ and $(2027, 4, 1)$ are not the same, because their second entries differ, and they name different days. An [ordered pair](#def-ordered-pair) is a $2$-tuple.
 
@@ -421,7 +440,7 @@ Last modified: 2026-11-11 23:35:36 (PST)
 
 > **NOTE:**
 >
-> **Example 23 (Three coin flips)**  
+> **Example 24 (Three coin flips)**  
 >
 > Let $C = {\mathopen{}\left\{H, T\right\}\mathclose{}}$ be the faces of a coin. The ways three flips can come out form the [Cartesian product](#def-cartesian-product-many) $C \times C \times C$, whose elements are the eight $3$-[tuples](#def-tuple)
 >
@@ -452,7 +471,7 @@ Last modified: 2026-11-11 23:35:36 (PST)
 
 > **NOTE:**
 >
-> **Example 24 (Adding with** $\infty$) In $[0, \infty]$, $2 + 3 = 5$ as usual, while $2 + \infty = \infty$ and $\infty + \infty = \infty$.
+> **Example 25 (Adding with** $\infty$) In $[0, \infty]$, $2 + 3 = 5$ as usual, while $2 + \infty = \infty$ and $\infty + \infty = \infty$.
 
 # 3 Further reading
 
