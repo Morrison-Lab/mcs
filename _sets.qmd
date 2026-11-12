@@ -193,6 +193,14 @@ the expressions that write functions down and the algorithms that compute them.
 
 {{< slidebreak >}}
 
+{{< include _subfiles/sets/_de-morgan-intersection_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_de-morgan-intersection_exm.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include _subfiles/sets/_disjoint-sets_def.qmd >}}
 
 {{< slidebreak >}}
