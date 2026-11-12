@@ -4,7 +4,8 @@
 In Racket, the adjacency list of the office graph (@exm-adjacency-list) can be stored as a list with one list for each vertex,
 which starts with the vertex and goes on with its neighbors:
 
-```racket
+```{racket}
+#| code-fold: false
 (define office
   '((a b c)
     (b a c d)

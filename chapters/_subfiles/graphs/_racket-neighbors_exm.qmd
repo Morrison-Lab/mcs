@@ -4,7 +4,8 @@
 With `office` as in @exr-racket-assoc,
 these functions return the neighbors (@def-adjacent) and the degree (@def-degree) of a vertex of a graph with no loops or parallel edges:
 
-```racket
+```{racket}
+#| code-fold: false
 (define (neighbors G v)
   (rest (assoc v G)))
 
@@ -12,15 +13,22 @@ these functions return the neighbors (@def-adjacent) and the degree (@def-degree
   (length (neighbors G v)))
 ```
 
-`(neighbors office 'b)` returns `'(a c d)`, and `(degree office 'b)` returns 3.
-`(for/sum ([x L]) body)` adds up the values of `body` for each element `x` of the list `L`,
-so
+For the vertex $b$:
 
-```racket
+```{racket}
+#| code-fold: false
+(neighbors office 'b)
+(degree office 'b)
+```
+
+`(for/sum ([x L]) body)` adds up the values of `body` for each element `x` of the list `L`,
+so this chunk adds up the degrees of the six vertices.
+By @thm-handshake, that sum is $2 \card{E}$:
+
+```{racket}
+#| code-fold: false
 (for/sum ([row office])
   (degree office (first row)))
 ```
-
-adds up the degrees of the six vertices and returns 16, which is $2 \card{E}$, as @thm-handshake says.
 
 :::
