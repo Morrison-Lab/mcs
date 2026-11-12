@@ -1,22 +1,17 @@
 :::{#thm-de-morgan}
-#### De Morgan's laws
+#### De Morgan's law for a union
 
 Let $S$ be a set, let $I$ be a nonempty set of indices,
 and let $A_i$ be a [subset](#def-subset) of $S$ for each $i \in I$.
-Then the complement of a union is the intersection of the complements,
-[@wikipedia_de_morgans_laws]
-and the complement of an intersection is the union of the complements:
+Then the complement of a union is the intersection of the complements
+[@wikipedia_de_morgans_laws]:
 
 $$
-\ba
-S \setminus \bigcup_{i \in I} A_i &= \bigcap_{i \in I} (S \setminus A_i) \\
-S \setminus \bigcap_{i \in I} A_i &= \bigcup_{i \in I} (S \setminus A_i)
-\ea
+S \setminus \bigcup_{i \in I} A_i = \bigcap_{i \in I} (S \setminus A_i)
 $$
 
 With the complement notation of @def-complement,
-these read $\paren{\bigcup_{i \in I} A_i}^c = \bigcap_{i \in I} A_i^c$
-and $\paren{\bigcap_{i \in I} A_i}^c = \bigcup_{i \in I} A_i^c$.
+this reads $\paren{\bigcup_{i \in I} A_i}^c = \bigcap_{i \in I} A_i^c$.
 
 :::
 
@@ -28,7 +23,6 @@ so it is enough to show that an element $x$ is in the left-hand side
 it is in the right-hand side.
 Each step applies the definition named at its right:
 set difference (@def-set-difference), union (@def-union) or intersection (@def-intersection).
-For the first law:
 
 $$
 \ba
@@ -41,22 +35,6 @@ x \in S \setminus \bigcup_{i \in I} A_i
 && \text{(set difference)} \\
 &\iff x \in \bigcap_{i \in I} (S \setminus A_i)
 && \text{(intersection)}
-\ea
-$$
-
-For the second law:
-
-$$
-\ba
-x \in S \setminus \bigcap_{i \in I} A_i
-&\iff x \in S \text{ and } x \notin \bigcap_{i \in I} A_i
-&& \text{(set difference)} \\
-&\iff x \in S \text{ and } x \notin A_i \text{ for some } i \in I
-&& \text{(intersection)} \\
-&\iff x \in S \setminus A_i \text{ for some } i \in I
-&& \text{(set difference)} \\
-&\iff x \in \bigcup_{i \in I} (S \setminus A_i)
-&& \text{(union)}
 \ea
 $$
 
