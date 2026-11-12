@@ -134,6 +134,14 @@ the exercises are new.
 
 {{< slidebreak >}}
 
+{{< include _subfiles/equivalence-negation/_de-morgan-conjunction_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../_subfiles/proof-writing/_de-morgan-disjunction_thm.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include _subfiles/equivalence-negation/_de-morgan_exm.qmd >}}
 
 {{< slidebreak >}}
@@ -171,6 +179,10 @@ the exercises are new.
 {{< slidebreak >}}
 
 {{< include ../_subfiles/proof-writing/_negate-quantifiers_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../_subfiles/proof-writing/_negate-existential_thm.qmd >}}
 
 {{< slidebreak >}}
 

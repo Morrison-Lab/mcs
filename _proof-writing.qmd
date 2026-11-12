@@ -116,6 +116,10 @@ The symbols for [logical entailment](#def-logical-entailment) are listed under
 
 {{< slidebreak >}}
 
+{{< include _subfiles/proof-writing/_de-morgan-disjunction_thm.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include _subfiles/proof-writing/_tautology_def.qmd >}}
 
 {{< slidebreak >}}
@@ -173,6 +177,10 @@ The symbols for [logical entailment](#def-logical-entailment) are listed under
 {{< slidebreak >}}
 
 {{< include _subfiles/proof-writing/_negate-quantifiers_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/proof-writing/_negate-existential_thm.qmd >}}
 
 {{< slidebreak >}}
 

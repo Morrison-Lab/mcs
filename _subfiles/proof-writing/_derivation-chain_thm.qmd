@@ -14,8 +14,6 @@ The same holds with $\ge$ and $>$ in place of $\le$ and $<$.
 
 {{< slidebreak >}}
 
-::: {.content-hidden when-format="revealjs"}
-
 ::: proof
 
 First, a fact about two steps in a row.
@@ -49,7 +47,5 @@ It is $\le$ or $=$ when every step is $=$ or $\le$, and $=$ implies $\le$, which
 It is $<$ when some step is $<$, which is part 3.
 
 The argument for $\ge$ and $>$ is the same with the inequalities reversed.
-
-:::
 
 :::
