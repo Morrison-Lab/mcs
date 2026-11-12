@@ -11,6 +11,8 @@ format:
     output-file: predicates-quantifiers.docx
 ---
 
+{{< include _subfiles/_racket-setup.qmd >}}
+
 ::: {.callout-note appearance='simple' collapse=true}
 ## Source
 
