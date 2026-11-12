@@ -6,9 +6,9 @@ Then
 
 $$
 \ba
-A - (B - C)
-&= \set{1} - (\set{1} - \set{1})
-\\&= \set{1} - \emptyset
+\setdiff{A}{\paren{\setdiff{B}{C}}}
+&= \setdiff{\set{1}}{\paren{\setdiff{\set{1}}{\set{1}}}}
+\\&= \setdiff{\set{1}}{\emptyset}
 \\&= \set{1},
 \ea
 $$
@@ -17,9 +17,9 @@ while
 
 $$
 \ba
-(A - B) - C
-&= (\set{1} - \set{1}) - \set{1}
-\\&= \emptyset - \set{1}
+\setdiff{\paren{\setdiff{A}{B}}}{C}
+&= \setdiff{\paren{\setdiff{\set{1}}{\set{1}}}}{\set{1}}
+\\&= \setdiff{\emptyset}{\set{1}}
 \\&= \emptyset.
 \ea
 $$
