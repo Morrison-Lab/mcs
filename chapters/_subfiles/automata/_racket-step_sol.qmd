@@ -5,4 +5,13 @@ and its rest is `'((#\a q2) (#\b q0))`.
 `(assoc #\b ...)` finds `'(#\b q0)` in that list, and its second element is `'q0`.
 So `(step pairs-table 'q1 #\b)` returns `'q0`, which is $\delta(q_1, \mathtt{b})$ (@exm-pairs-dfa).
 
+Racket returns the same values:
+
+```{racket}
+#| code-fold: false
+(assoc 'q1 pairs-table)
+(rest (assoc 'q1 pairs-table))
+(step pairs-table 'q1 #\b)
+```
+
 :::
