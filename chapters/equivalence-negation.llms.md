@@ -2,11 +2,21 @@
 
 Code
 
+- [Show All Code](javascript:void(0))
+
+- [Hide All Code](javascript:void(0))
+
+- 
+
+  ------------------------------------------------------------------------
+
+- [View Source](javascript:void(0))
+
 When two propositions say the same thing, and how to say the opposite
 
 Published
 
-Last modified: 2026-11-11 21:24:09 (PST)
+Last modified: 2026-11-11 23:09:57 (PST)
 
 > **NOTE:**
 >
@@ -258,6 +268,38 @@ Last modified: 2026-11-11 21:24:09 (PST)
 
 > **NOTE:**
 >
+> **Example 9 (Not both coordinates positive)** For real numbers $x$ and $y$, by [De Morgan’s law for a conjunction](#thm-de-morgan-logic), “not ($x > 0$ and $y > 0$)” is logically equivalent to “$x \le 0$ or $y \le 0$”. The plot that follows shades the points $(x, y)$ where both sentences are true: every point except those with both coordinates positive.
+>
+> Show code
+>
+> ``` r
+> # the region x <= 0 or y <= 0, as two rectangles:
+> # the left half, and the bottom right quarter
+> regions <- tibble::tibble(
+>   xmin = c(-2, 0),
+>   xmax = c(0, 2),
+>   ymin = c(-2, -2),
+>   ymax = c(2, 0)
+> )
+>
+> region_plot <- ggplot2::ggplot(regions) +
+>   ggplot2::geom_rect(
+>     ggplot2::aes(xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax),
+>     fill = "steelblue",
+>     alpha = 0.4
+>   ) +
+>   ggplot2::geom_hline(yintercept = 0) +
+>   ggplot2::geom_vline(xintercept = 0) +
+>   ggplot2::coord_equal() +
+>   ggplot2::labs(x = "x", y = "y")
+>
+> region_plot
+> ```
+>
+> [![The square from -2 to 2 on both axes, with the axes drawn through the origin. The left half (x at most 0) and the bottom half (y at most 0) are shaded; only the upper right quadrant, where x and y are both positive, is left blank.](equivalence-negation_files/figure-html/unnamed-chunk-1-1.png)](equivalence-negation_files/figure-html/unnamed-chunk-1-1.png)
+
+> **NOTE:**
+>
 > **Theorem 6 (De Morgan’s law for a disjunction)** For any [propositions](../chapters/propositional-logic.llms.md#def-proposition) $P$ and $Q$ ([Wikipedia contributors 2026a](#ref-wikipedia_de_morgans_laws)):
 >
 > $$\neg (P \lor Q) \equiv \neg P \land \neg Q$$
@@ -277,7 +319,7 @@ Last modified: 2026-11-11 21:24:09 (PST)
 
 > **NOTE:**
 >
-> **Example 9 (Neither coordinate positive)** For real numbers $x$ and $y$, by [De Morgan’s law for a disjunction](#thm-de-morgan-disjunction), “not ($x > 0$ or $y > 0$)” is logically equivalent to “$x \le 0$ and $y \le 0$”.
+> **Example 10 (Neither coordinate positive)** For real numbers $x$ and $y$, by [De Morgan’s law for a disjunction](#thm-de-morgan-disjunction), “not ($x > 0$ or $y > 0$)” is logically equivalent to “$x \le 0$ and $y \le 0$”.
 
 > **NOTE:**
 >
@@ -303,7 +345,7 @@ Last modified: 2026-11-11 21:24:09 (PST)
 
 > **NOTE:**
 >
-> **Example 10 (When a search claim fails)** The negation of “if the list is sorted, then binary search finds the key” is “the list is sorted and binary search does not find the key” ([Theorem 7](#thm-negate-conditional)).
+> **Example 11 (When a search claim fails)** The negation of “if the list is sorted, then binary search finds the key” is “the list is sorted and binary search does not find the key” ([Theorem 7](#thm-negate-conditional)).
 
 > **NOTE:**
 >
@@ -317,12 +359,12 @@ Last modified: 2026-11-11 21:24:09 (PST)
 >
 > 1.  By [double negation](#thm-double-negation), $P \Rightarrow Q \equiv \neg \neg (P \Rightarrow Q)$.
 > 2.  By [negating a conditional](#thm-negate-conditional) and [replacing a part by an equivalent part](#thm-substitution-logic), $\neg \neg (P \Rightarrow Q) \equiv \neg (P \land \neg Q)$.
-> 3.  By the first of [De Morgan’s laws](#thm-de-morgan-logic), $\neg (P \land \neg Q) \equiv \neg P \lor \neg \neg Q$.
+> 3.  By [De Morgan’s law for a conjunction](#thm-de-morgan-logic), $\neg (P \land \neg Q) \equiv \neg P \lor \neg \neg Q$.
 > 4.  By double negation and replacing a part by an equivalent part again, $\neg P \lor \neg \neg Q \equiv \neg P \lor Q$.
 
 > **NOTE:**
 >
-> **Example 11 (A rule as an “or”)** By [Corollary 1](#cor-conditional-as-or), “if the tests pass, then the build is deployed” is logically equivalent to “the tests fail or the build is deployed”.
+> **Example 12 (A rule as an “or”)** By [Corollary 1](#cor-conditional-as-or), “if the tests pass, then the build is deployed” is logically equivalent to “the tests fail or the build is deployed”.
 
 # 3 Negating quantified propositions
 
@@ -356,7 +398,7 @@ Last modified: 2026-11-11 21:24:09 (PST)
 
 > **NOTE:**
 >
-> **Example 12 (No natural square root of 2)** By part 2 of [Theorem 8](#thm-negate-quantifiers), $\neg (\exists n \in \mathbb{N}, n^2 = 2)$ has the same truth value as $\forall n \in \mathbb{N}, n^2 \ne 2$.
+> **Example 13 (No natural square root of 2)** By part 2 of [Theorem 8](#thm-negate-quantifiers), $\neg (\exists n \in \mathbb{N}, n^2 = 2)$ has the same truth value as $\forall n \in \mathbb{N}, n^2 \ne 2$.
 
 > **NOTE:**
 >
