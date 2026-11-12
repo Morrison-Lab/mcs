@@ -7,7 +7,7 @@ If $5 \nmid xy$, then $5 \nmid x$ and $5 \nmid y$.
 A direct proof would start from $5 \nmid xy$,
 which says only that $xy$ is not $5$ times an integer,
 and gives no equation to work with.
-By De Morgan's laws (@thm-de-morgan-logic),
+By [De Morgan's law for a conjunction](#thm-de-morgan-logic),
 the negation of "$5 \nmid x$ and $5 \nmid y$" is "$5 \mid x$ or $5 \mid y$",
 so the contrapositive (@def-contrapositive) is
 "if $5 \mid x$ or $5 \mid y$, then $5 \mid xy$".

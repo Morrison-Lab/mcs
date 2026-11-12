@@ -132,6 +132,10 @@ the exercises are new.
 
 {{< slidebreak >}}
 
+{{< include ../_subfiles/proof-writing/_de-morgan-disjunction_thm.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include _subfiles/equivalence-negation/_de-morgan_exm.qmd >}}
 
 {{< slidebreak >}}
