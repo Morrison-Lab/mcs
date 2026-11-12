@@ -3,7 +3,8 @@
 
 The predicate `related?` turns the answer of `member` into `#t` or `#f`:
 
-```racket
+```{racket}
+#| code-fold: false
 (define (related? R a b)
   (if (member (list a b) R) #t #f))
 ```
@@ -14,7 +15,8 @@ and returns `#f` as soon as `body` returns `#f`, and `#t` if it never does.
 does the same for every combination of values of its variables,
 here every two pairs of a relation:
 
-```racket
+```{racket}
+#| code-fold: false
 (define (reflexive? S R)
   (for/and ([a S])
     (related? R a a)))
@@ -37,7 +39,14 @@ here every two pairs of a relation:
   "if $b = b'$, then $a \mathrel{R} c$" (@def-transitive),
   written as an `or` by @cor-conditional-as-or.
 
-All three of `(reflexive? (list 'rock 'paper 'scissors) beats)`, `(symmetric? beats)` and `(transitive? beats)` return `#f`,
-as @exm-reflexive-or-not, @exm-symmetric-or-not and @exm-transitive-or-not found.
+All three return `#f` for `beats`,
+as @exm-reflexive-or-not, @exm-symmetric-or-not and @exm-transitive-or-not found:
+
+```{racket}
+#| code-fold: false
+(reflexive? (list 'rock 'paper 'scissors) beats)
+(symmetric? beats)
+(transitive? beats)
+```
 
 :::
