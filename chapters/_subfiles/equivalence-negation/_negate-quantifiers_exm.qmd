@@ -1,7 +1,7 @@
 ::: {#exm-negate-quantifiers}
 #### No natural square root of 2
 
-By part 2 of @thm-negate-quantifiers,
+By @thm-negate-existential,
 $\neg (\exists n \in \mathbb{N}, n^2 = 2)$
 has the same truth value as
 $\forall n \in \mathbb{N}, n^2 \ne 2$.

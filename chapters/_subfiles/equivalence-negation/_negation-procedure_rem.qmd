@@ -4,7 +4,7 @@
 To negate a proposition built with $\neg$, $\land$, $\lor$, $\Rightarrow$ and quantifiers,
 move the $\neg$ inward one step at a time:
 
-- across a quantifier, with @thm-negate-quantifiers, which swaps $\forall$ and $\exists$;
+- across a quantifier, with @thm-negate-quantifiers or @thm-negate-existential, which swap $\forall$ and $\exists$;
 - across $\land$ or $\lor$, with De Morgan's laws (@thm-de-morgan-logic, @thm-de-morgan-disjunction);
 - across $\Rightarrow$, with @thm-negate-conditional;
 - across another $\neg$, with double negation (@thm-double-negation).

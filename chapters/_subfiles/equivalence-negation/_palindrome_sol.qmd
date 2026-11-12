@@ -1,11 +1,11 @@
 ::: {#sol-palindrome}
 
-Apply @thm-negate-quantifiers twice, from the outside in.
-First, the negation has the truth value of
+Push the negation inward, from the outside in.
+First, by @thm-negate-quantifiers, the negation has the truth value of
 $$
 \exists s \in W,\ \neg (\exists t \in W,\ s t \text{ is a palindrome}).
 $$
-For each word $s$, @thm-negate-quantifiers says that
+For each word $s$, @thm-negate-existential says that
 $\neg (\exists t \in W,\ s t \text{ is a palindrome})$
 has the truth value of
 $\forall t \in W,\ s t \text{ is not a palindrome}$.

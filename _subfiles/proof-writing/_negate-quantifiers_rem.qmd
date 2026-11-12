@@ -1,11 +1,11 @@
 :::{#rem-negate-quantifiers}
-#### Why the two laws share a theorem
+#### How the two quantifier laws relate
 
-The two laws in [De Morgan's laws for quantifiers](#thm-negate-quantifiers)
+De Morgan's laws for a [universal quantifier](#thm-negate-quantifiers) and an [existential quantifier](#thm-negate-existential)
 are one rule seen from each side:
 negating a [quantifier](#def-quantifier) swaps $\forall$ and $\exists$
 and moves the [negation](#def-not) onto the [predicate](#def-predicate).
 De Morgan's laws for a [conjunction](#thm-de-morgan-logic) and a [disjunction](#thm-de-morgan-disjunction) of two propositions pair up the same way,
-and these laws extend them from two propositions to a whole [set](#def-set) of them.
+and the quantifier laws extend them from two propositions to a whole [set](#def-set) of them.
 
 :::
