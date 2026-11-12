@@ -31,4 +31,7 @@ exclude = [
   # 403 Forbidden (checked by hand 2026-10-23).
   "https://www.acm.org/code-of-ethics",
   "https://www.wwu.edu/dean-students",
+  # catalog.wwu.edu serves an expired TLS certificate (2026-11-11);
+  # remove this entry once WWU renews it (mcs#157).
+  "https://catalog.wwu.edu/.*",
 ]
