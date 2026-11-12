@@ -267,7 +267,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-11 02:26:38 (PST)</p>
+  <p class="date">Last modified: 2026-11-11 23:43:35 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -388,7 +388,7 @@ So <span class="math inline">\(A \subseteq B\)</span>.</div>
 
 <div id="exm-subset-contrapositive" class="theorem example">
 <p><span class="theorem-title"><strong>Example 2 (A subset proof by contrapositive)</strong></span> Claim: <span class="math inline">\({\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x + y &gt; 2\right\}\mathclose{}} \subseteq {\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x &gt; 1 \text{ or } y &gt; 1\right\}\mathclose{}}\)</span>. If two numbers add up to more than 2, at least one of them is more than 1.</p>
-<p>We use the contrapositive outline of <a href="#/rem-subset-template" class="quarto-xref">Remark&nbsp;2</a>. Suppose <span class="math inline">\(p \notin {\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x &gt; 1 \text{ or } y &gt; 1\right\}\mathclose{}}\)</span>. If <span class="math inline">\(p\)</span> is not a pair of real numbers, then <span class="math inline">\(p\)</span> is not in the left-hand set either, since every element of that set is a pair of real numbers. Otherwise <span class="math inline">\(p = (a, b)\)</span> with <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> real, and “<span class="math inline">\(a &gt; 1\)</span> or <span class="math inline">\(b &gt; 1\)</span>” is false. By De Morgan’s laws (<a href="../chapters/equivalence-negation.html#thm-de-morgan-logic">Theorem: De Morgan’s laws for propositions</a>), <span class="math inline">\(a &gt; 1\)</span> is false and <span class="math inline">\(b &gt; 1\)</span> is false, that is, <span class="math inline">\(a \le 1\)</span> and <span class="math inline">\(b \le 1\)</span>, so <span class="math inline">\(a + b \le 1 + 1 = 2\)</span>. So <span class="math inline">\(p \notin {\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x + y &gt; 2\right\}\mathclose{}}\)</span>. So the left-hand set is a subset of the right-hand set.</p>
+<p>We use the contrapositive outline of <a href="#/rem-subset-template" class="quarto-xref">Remark&nbsp;2</a>. Suppose <span class="math inline">\(p \notin {\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x &gt; 1 \text{ or } y &gt; 1\right\}\mathclose{}}\)</span>. If <span class="math inline">\(p\)</span> is not a pair of real numbers, then <span class="math inline">\(p\)</span> is not in the left-hand set either, since every element of that set is a pair of real numbers. Otherwise <span class="math inline">\(p = (a, b)\)</span> with <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> real, and “<span class="math inline">\(a &gt; 1\)</span> or <span class="math inline">\(b &gt; 1\)</span>” is false. By <a href="../chapters/equivalence-negation.html#thm-de-morgan-disjunction">Theorem: De Morgan’s law for a disjunction</a>, <span class="math inline">\(a &gt; 1\)</span> is false and <span class="math inline">\(b &gt; 1\)</span> is false, that is, <span class="math inline">\(a \le 1\)</span> and <span class="math inline">\(b \le 1\)</span>, so <span class="math inline">\(a + b \le 1 + 1 = 2\)</span>. So <span class="math inline">\(p \notin {\mathopen{}\left\{(x, y) \in \mathbb{R}\times \mathbb{R}: x + y &gt; 2\right\}\mathclose{}}\)</span>. So the left-hand set is a subset of the right-hand set.</p>
 <p>The contrapositive turns the conclusion “<span class="math inline">\(x &gt; 1\)</span> or <span class="math inline">\(y &gt; 1\)</span>”, which does not say which number is large, into the hypothesis “<span class="math inline">\(a \le 1\)</span> and <span class="math inline">\(b \le 1\)</span>”, which says something about both.</p>
 </div>
 </section>
@@ -498,7 +498,7 @@ So <span class="math inline">\(A = B\)</span>.</div>
 <section class="slide level2">
 
 <div id="exr-difference-regroup" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 4 (Regrouping differences)</strong></span> Show that the claim “for all sets <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span>, <span class="math inline">\(A - (B - C) = (A - B) - C\)</span>” is false (<a href="../chapters/sets.html#def-set-difference">Definition: Set difference</a>).</p>
+<p><span class="theorem-title"><strong>Exercise 4 (Regrouping differences)</strong></span> Show that the claim “for all sets <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span>, <span class="math inline">\({A \setminus \mathopen{}\left({B \setminus C}\right)\mathclose{}} = {\mathopen{}\left({A \setminus B}\right)\mathclose{} \setminus C}\)</span>” is false (<a href="../chapters/sets.html#def-set-difference">Definition: Set difference</a>).</p>
 </div>
 </section>
 <section class="slide level2">
@@ -507,18 +507,18 @@ So <span class="math inline">\(A = B\)</span>.</div>
 <p><span class="proof-title"><em>Solution 4</em>. </span>A counterexample (<a href="../chapters/predicates-quantifiers.html#def-counterexample">Definition: Counterexample</a>) is one choice of <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> for which the two sides differ. Let <span class="math inline">\(A = B = C = {\mathopen{}\left\{1\right\}\mathclose{}}\)</span>. Then</p>
 <p><span class="math display">\[
 \begin{aligned}
-A - (B - C)
-&amp;= {\mathopen{}\left\{1\right\}\mathclose{}} - ({\mathopen{}\left\{1\right\}\mathclose{}} - {\mathopen{}\left\{1\right\}\mathclose{}})
-\\&amp;= {\mathopen{}\left\{1\right\}\mathclose{}} - \emptyset
+{A \setminus \mathopen{}\left({B \setminus C}\right)\mathclose{}}
+&amp;= {{\mathopen{}\left\{1\right\}\mathclose{}} \setminus \mathopen{}\left({{\mathopen{}\left\{1\right\}\mathclose{}} \setminus {\mathopen{}\left\{1\right\}\mathclose{}}}\right)\mathclose{}}
+\\&amp;= {{\mathopen{}\left\{1\right\}\mathclose{}} \setminus \emptyset}
 \\&amp;= {\mathopen{}\left\{1\right\}\mathclose{}},
 \end{aligned}
 \]</span></p>
 <p>while</p>
 <p><span class="math display">\[
 \begin{aligned}
-(A - B) - C
-&amp;= ({\mathopen{}\left\{1\right\}\mathclose{}} - {\mathopen{}\left\{1\right\}\mathclose{}}) - {\mathopen{}\left\{1\right\}\mathclose{}}
-\\&amp;= \emptyset - {\mathopen{}\left\{1\right\}\mathclose{}}
+{\mathopen{}\left({A \setminus B}\right)\mathclose{} \setminus C}
+&amp;= {\mathopen{}\left({{\mathopen{}\left\{1\right\}\mathclose{}} \setminus {\mathopen{}\left\{1\right\}\mathclose{}}}\right)\mathclose{} \setminus {\mathopen{}\left\{1\right\}\mathclose{}}}
+\\&amp;= {\emptyset \setminus {\mathopen{}\left\{1\right\}\mathclose{}}}
 \\&amp;= \emptyset.
 \end{aligned}
 \]</span></p>
