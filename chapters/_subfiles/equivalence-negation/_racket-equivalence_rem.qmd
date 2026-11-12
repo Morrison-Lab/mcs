@@ -14,8 +14,7 @@ and returns `#f` as soon as the body returns `#f`, and `#t` if it never does:
 ```
 
 The result agrees with @exr-absorption.
-Replacing the body with `(equal? (not (and p q)) (and (not p) (not q)))`
-asks the question of @exr-not-and, and the answer agrees with that exercise too:
+With a new body, the same loop checks whether the two statements of @exr-not-and are equivalent:
 
 ```{racket}
 #| code-fold: false
@@ -23,5 +22,7 @@ asks the question of @exr-not-and, and the answer agrees with that exercise too:
            [q '(#t #f)])
   (equal? (not (and p q)) (and (not p) (not q))))
 ```
+
+This result agrees with @exr-not-and.
 
 :::
