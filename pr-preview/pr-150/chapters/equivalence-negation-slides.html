@@ -338,7 +338,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-12 00:49:00 (PST)</p>
+  <p class="date">Last modified: 2026-11-12 01:23:00 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -738,13 +738,14 @@ A \lor (B \land C) &amp;\equiv (A \lor B) \land (A \lor C)
 <span id="cb1-3"><a aria-label="3"></a>  <span class="op">(</span><span class="kw">equal?</span> <span class="op">(</span><span class="kw">or</span> p <span class="op">(</span><span class="kw">and</span> p q<span class="op">))</span> p<span class="op">))</span></span>
 <span id="cb1-4"><a aria-label="4"></a><span class="co">; #t</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>The result agrees with <a href="#/exr-absorption" class="quarto-xref">Exercise&nbsp;1</a>. Replacing the body with <code>(equal? (not (and p q)) (and (not p) (not q)))</code> asks the question of <a href="#/exr-not-and" class="quarto-xref">Exercise&nbsp;2</a>, and the answer agrees with that exercise too:</p>
+<p>The result agrees with <a href="#/exr-absorption" class="quarto-xref">Exercise&nbsp;1</a>. With a new body, the same loop checks whether the two statements of <a href="#/exr-not-and" class="quarto-xref">Exercise&nbsp;2</a> are equivalent:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb2-1"><a aria-label="1"></a><span class="op">(</span>for*/and <span class="op">([</span>p '<span class="op">(</span><span class="dv">#t</span> <span class="dv">#f</span><span class="op">)]</span></span>
 <span id="cb2-2"><a aria-label="2"></a>           <span class="op">[</span>q '<span class="op">(</span><span class="dv">#t</span> <span class="dv">#f</span><span class="op">)])</span></span>
 <span id="cb2-3"><a aria-label="3"></a>  <span class="op">(</span><span class="kw">equal?</span> <span class="op">(</span><span class="kw">not</span> <span class="op">(</span><span class="kw">and</span> p q<span class="op">))</span> <span class="op">(</span><span class="kw">and</span> <span class="op">(</span><span class="kw">not</span> p<span class="op">)</span> <span class="op">(</span><span class="kw">not</span> q<span class="op">))))</span></span>
 <span id="cb2-4"><a aria-label="4"></a><span class="co">; #f</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<p>This result agrees with <a href="#/exr-not-and" class="quarto-xref">Exercise&nbsp;2</a>.</p>
 </div>
 </section></section>
 <section>

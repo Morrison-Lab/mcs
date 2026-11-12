@@ -16,7 +16,7 @@ When two propositions say the same thing, and how to say the opposite
 
 Published
 
-Last modified: 2026-11-12 00:49:00 (PST)
+Last modified: 2026-11-12 01:23:00 (PST)
 
 > **NOTE:**
 >
@@ -193,7 +193,7 @@ Last modified: 2026-11-12 00:49:00 (PST)
 > ; #t
 > ```
 >
-> The result agrees with [Exercise 1](#exr-absorption). Replacing the body with `(equal? (not (and p q)) (and (not p) (not q)))` asks the question of [Exercise 2](#exr-not-and), and the answer agrees with that exercise too:
+> The result agrees with [Exercise 1](#exr-absorption). With a new body, the same loop checks whether the two statements of [Exercise 2](#exr-not-and) are equivalent:
 >
 > ``` racket
 > (for*/and ([p '(#t #f)]
@@ -201,6 +201,8 @@ Last modified: 2026-11-12 00:49:00 (PST)
 >   (equal? (not (and p q)) (and (not p) (not q))))
 > ; #f
 > ```
+>
+> This result agrees with [Exercise 2](#exr-not-and).
 
 # 2 Negation
 
