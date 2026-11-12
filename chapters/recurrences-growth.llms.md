@@ -6,7 +6,7 @@ Solving recurrence relations, running times, and big-O notation
 
 Published
 
-Last modified: 2026-11-12 01:07:24 (PST)
+Last modified: 2026-11-12 01:20:34 (PST)
 
 > **NOTE:**
 >
@@ -52,7 +52,12 @@ Last modified: 2026-11-12 01:07:24 (PST)
 >       (+ (* 2 (b (- n 1))) (expt 2 n))))
 > ```
 >
-> `(b 5)` leads to calls of `(b 4)`, `(b 3)`, `(b 2)`, `(b 1)` and `(b 0)` in turn, and returns 160, as in [Solution 1](#sol-double-plus-power-terms).
+> `(b 5)` leads to calls of `(b 4)`, `(b 3)`, `(b 2)`, `(b 1)` and `(b 0)` in turn, and returns $b_5$, as in [Solution 1](#sol-double-plus-power-terms):
+>
+> ``` racket
+> (b 5)
+> ; 160
+> ```
 
 > **NOTE:**
 >
@@ -316,6 +321,13 @@ Last modified: 2026-11-12 01:07:24 (PST)
 > ```
 >
 > That is 7 calls, counting `(dm 2)` itself, and 4 of them are calls of `(dm 0)`. `(dm 2)` returns 5, which is $a_2$. The two calls of `(dm 1)` do exactly the same work.
+>
+> Racket returns the same value:
+>
+> ``` racket
+> (dm 2)
+> ; 5
+> ```
 
 > **NOTE:**
 >
@@ -349,7 +361,16 @@ Last modified: 2026-11-12 01:07:24 (PST)
 >       (- (* 2 (dm1 (- n 1))) 1)))
 > ```
 >
-> returns the same values, but each call of `dm1` makes only one recursive call, so its calls form a single chain instead of a tree that doubles at every level. By [Theorem 4](#thm-twice-base-calls), `(dm 30)` makes more than a billion calls, since $2^{30} = 1073741824$.
+> returns the same values, as the first six show:
+>
+> ``` racket
+> (map dm (range 6))
+> ; '(2 3 5 9 17 33)
+> (map dm1 (range 6))
+> ; '(2 3 5 9 17 33)
+> ```
+>
+> `(range 6)` is the list `'(0 1 2 3 4 5)`. Each call of `dm1` makes only one recursive call, so its calls form a single chain instead of a tree that doubles at every level. By [Theorem 4](#thm-twice-base-calls), `(dm 30)` makes more than a billion calls, since $2^{30} = 1073741824$.
 
 # 6 Asymptotic notation
 

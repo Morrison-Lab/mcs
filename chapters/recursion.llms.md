@@ -6,7 +6,7 @@ Recursive definitions, recursive programs and proofs about them
 
 Published
 
-Last modified: 2026-11-12 01:07:24 (PST)
+Last modified: 2026-11-12 01:20:34 (PST)
 
 > **NOTE:**
 >
@@ -193,6 +193,17 @@ Last modified: 2026-11-12 01:07:24 (PST)
 > ```
 >
 > So `(binary 1)` returns `"1"`, `(binary 3)` returns `"11"`, and `(binary 6)` returns `"110"`. That is 6 written in base 2, since $1 \cdot 4 + 1 \cdot 2 + 0 \cdot 1 = 6$.
+>
+> Racket returns the same values:
+>
+> ``` racket
+> (binary 1)
+> ; "1"
+> (binary 3)
+> ; "11"
+> (binary 6)
+> ; "110"
+> ```
 
 > **NOTE:**
 >
@@ -221,7 +232,12 @@ Last modified: 2026-11-12 01:07:24 (PST)
 > - the recursive call is `(digits (quotient n 10))`, on $\mathopen{}\left\lfloor n / 10\right\rfloor\mathclose{}$, which is less than $n$;
 > - the combination adds 1 to the result of the recursive call.
 >
-> `(digits 2026)` calls `(digits 202)`, `(digits 20)` and `(digits 2)` in turn, as in [Example 3](#exm-digit-count), and returns 4.
+> `(digits 2026)` calls `(digits 202)`, `(digits 20)` and `(digits 2)` in turn, as in [Example 3](#exm-digit-count):
+>
+> ``` racket
+> (digits 2026)
+> ; 4
+> ```
 
 # 4 Lists
 
@@ -238,6 +254,13 @@ Last modified: 2026-11-12 01:07:24 (PST)
 > - `(cons 7 (cons 2 (cons 9 empty)))` is `'(7 2 9)`.
 >
 > So `'(7 2 9)` is `(cons 7 (cons 2 (cons 9 empty)))`.
+>
+> Racket prints it the same way:
+>
+> ``` racket
+> (cons 7 (cons 2 (cons 9 empty)))
+> ; '(7 2 9)
+> ```
 
 > **NOTE:**
 >
@@ -250,13 +273,28 @@ Last modified: 2026-11-12 01:07:24 (PST)
 
 > **NOTE:**
 >
-> **Example 9 (Taking a list apart)** Let `L` be the list `'(7 2 9)` ([Definition 6](#def-list)), which [Solution 4](#sol-cons-list) builds as `(cons 7 (cons 2 (cons 9 empty)))`. Then
+> **Example 9 (Taking a list apart)** Let `L` be the list `'(7 2 9)` ([Definition 6](#def-list)), which [Solution 4](#sol-cons-list) builds as `(cons 7 (cons 2 (cons 9 empty)))`. Then `first` and `rest` take it apart:
 >
-> - `(first L)` is `7`, and `(rest L)` is `'(2 9)`;
-> - `(first (rest L))` is `2`;
-> - `(rest (rest (rest L)))` is `empty`.
+> ``` racket
+> (define L (cons 7 (cons 2 (cons 9 empty))))
+> (first L)
+> ; 7
+> (rest L)
+> ; '(2 9)
+> (first (rest L))
+> ; 2
+> (rest (rest (rest L)))
+> ; '()
+> ```
 >
-> `(first empty)` raises an error, since the empty list is not built by `cons` and has no first element.
+> The last value, `'()`, is how Racket prints `empty`. `(first empty)` raises an error, since the empty list is not built by `cons` and has no first element:
+>
+> ``` racket
+> (first empty)
+> ; first: contract violation
+> ;   expected: (and/c list? (not/c empty?))
+> ;   given: '()
+> ```
 
 > **NOTE:**
 >
@@ -289,7 +327,14 @@ Last modified: 2026-11-12 01:07:24 (PST)
 > = 3
 > ```
 >
-> Racket’s built-in `length` gives the same values.
+> Racket’s built-in `length` gives the same values:
+>
+> ``` racket
+> (len '(7 2 9))
+> ; 3
+> (length '(7 2 9))
+> ; 3
+> ```
 
 > **NOTE:**
 >
@@ -321,7 +366,14 @@ Last modified: 2026-11-12 01:07:24 (PST)
 > = '(1 2 3)
 > ```
 >
-> Racket’s built-in `append` gives the same values.
+> Racket’s built-in `append` gives the same values:
+>
+> ``` racket
+> (app '(1 2) '(3))
+> ; '(1 2 3)
+> (append '(1 2) '(3))
+> ; '(1 2 3)
+> ```
 
 # 5 Recursive algorithms
 
