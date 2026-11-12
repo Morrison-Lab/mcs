@@ -41,7 +41,7 @@ It uses `neighbors` from @exm-racket-neighbors.
   so `(append (rest queue) new)` removes the front of the queue and adds the new vertices at the back.
 
 Each call of `bfs-loop` is one pass through the loop of @def-bfs.
-From $a$, it returns the marks and labels of @exm-bfs-trace:
+From $a$, `bfs` returns the marks and labels of @exm-bfs-trace:
 
 ```{racket}
 #| code-fold: false

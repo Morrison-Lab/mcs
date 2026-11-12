@@ -22,7 +22,8 @@ For the vertex $b$:
 ```
 
 `(for/sum ([x L]) body)` adds up the values of `body` for each element `x` of the list `L`,
-so this sum of the degrees of the six vertices is $2 \card{E}$, as @thm-handshake says:
+so this chunk adds up the degrees of the six vertices.
+By @thm-handshake, that sum is $2 \card{E}$:
 
 ```{racket}
 #| code-fold: false
