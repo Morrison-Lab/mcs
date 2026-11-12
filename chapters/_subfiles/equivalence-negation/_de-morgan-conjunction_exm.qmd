@@ -1,0 +1,47 @@
+::: {#exm-de-morgan-conjunction}
+#### Not both coordinates positive
+
+For real numbers $x$ and $y$,
+by [De Morgan's law for a conjunction](#thm-de-morgan-logic),
+"not ($x > 0$ and $y > 0$)"
+is logically equivalent to
+"$x \le 0$ or $y \le 0$".
+The plot that follows shades the points $(x, y)$
+where both sentences are true:
+every point except those with both coordinates positive.
+
+```{r}
+#| code-fold: true
+#| echo: !expr knitr::is_html_output()
+#| message: false
+#| warning: false
+#| fig-alt: >-
+#|   The square from -2 to 2 on both axes, with the axes drawn through the
+#|   origin. The left half (x at most 0) and the bottom half (y at most 0)
+#|   are shaded; only the upper right quadrant, where x and y are both
+#|   positive, is left blank.
+
+# the region x <= 0 or y <= 0, as two rectangles:
+# the left half, and the bottom right quarter
+regions <- tibble::tibble(
+  xmin = c(-2, 0),
+  xmax = c(0, 2),
+  ymin = c(-2, -2),
+  ymax = c(2, 0)
+)
+
+region_plot <- ggplot2::ggplot(regions) +
+  ggplot2::geom_rect(
+    ggplot2::aes(xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax),
+    fill = "steelblue",
+    alpha = 0.4
+  ) +
+  ggplot2::geom_hline(yintercept = 0) +
+  ggplot2::geom_vline(xintercept = 0) +
+  ggplot2::coord_equal() +
+  ggplot2::labs(x = "x", y = "y")
+
+region_plot
+```
+
+:::
