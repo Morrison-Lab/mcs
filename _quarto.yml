@@ -38,6 +38,10 @@ format:
       # Listed by path: see tools/install-extensions.py.
       - _extensions/coatless-quarto/custom-callout/customcallout.lua
       - _extensions/coatless-quarto/custom-callout/fa.lua
+      # Keeps each remark's and solution's \label with its title, so a
+      # callout box split across pages cannot drop it (see the filter).
+      - path: label-first.lua
+        at: post-render
     include-in-header:
       text: |
         \usepackage{needspace}
