@@ -1,0 +1,10 @@
+<!-- Registers the knitr engine for `racket` chunks (tools/racket-engine.R).
+Include it once, near the top of a chapter, before its first racket chunk.
+The paths are relative to chapters/, where knitr runs a chapter's chunks. -->
+
+```{r}
+#| label: racket-setup
+#| include: false
+source("../tools/racket-engine.R")
+register_racket_engine("../tools/racket-eval.rkt")
+```

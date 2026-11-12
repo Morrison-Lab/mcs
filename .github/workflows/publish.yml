@@ -32,6 +32,8 @@ jobs:
         any::htmltools
         any::reticulate
       tinytex: true
+      # Racket runs the pages' racket chunks (tools/racket-engine.R, mcs#131).
+      apt-packages: racket
       # One bare `quarto render` of every declared format, as before.
       formats: ''
       timezone: America/Los_Angeles

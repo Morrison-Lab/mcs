@@ -39,6 +39,13 @@ Authoritative style guides:
   Quarto resolves `@id` only within a page, so without it the reference renders as "?@def-predicate".
   It also repoints the links mds text carries (`[text](#def-foo)`, `[text](number-systems.qmd#def-foo)`) at the page here that defines the id,
   and sends an id no page here defines to the published mds page, so an mds subfile with such links can be included
+- `tools/racket-engine.R`, `tools/racket-pieces.R`, `tools/racket-eval.rkt` --- the knitr engine that runs `{racket}` chunks ([mcs#131](https://github.com/Morrison-Lab/mcs/issues/131)).
+  knitr and Quarto have no Racket engine, so a chapter with racket chunks includes `_subfiles/_racket-setup.qmd` once, after the macros include, to register it.
+  Each chunk runs in a fresh `racket` process that first replays the page's earlier racket chunks silently,
+  so a chunk can use what an earlier one defined;
+  the page then shows the value of each top-level form as the Racket REPL prints it, prefixed with `;`.
+  A chunk that raises an error stops the render unless it sets `#| error: true`;
+  `.lintr.R` registers the engine name too, because lintr lints a chunk with an engine knitr does not know as R
 - `label-first.lua` --- PDF only, after Quarto's own filters: moves the `\label` of each remark and solution from the end of its environment to just after its title,
   because a callout box split at the foot of a page can drop a trailing label, and the handout then prints "Remark ??"
 - `R/`, `man/`, `DESCRIPTION`, `NAMESPACE` --- the project is also a small R package
@@ -82,6 +89,11 @@ Key points:
 - **Local preview**: `quarto preview` (live reload).
   Full build: `quarto render`.
   When verifying a single edited page, render just that page (`quarto render <file>.qmd --to html`) rather than the whole site --- the `/render` command is for the full build.
+- **Racket**: rendering a chapter with `{racket}` chunks needs `racket` on `PATH`
+  (Debian/Ubuntu: `apt-get install racket`; the preview, publish and Copilot setup workflows install it).
+  Write Racket code that a page shows as a `{racket}` chunk, not a plain `racket` fence,
+  and show what it returns through the chunk's output rather than typing the value in the prose.
+  A syntax template such as `(define (f x1 ... xn) body)` is not runnable and stays a plain fence.
 - **Submodules**: `latex-macros/` and `mds/` are the git submodules (see `.gitmodules`).
   Run `git submodule update --init --recursive` after cloning.
 - **Spell check**: words go in `inst/WORDLIST` (see `.github/workflows/check-spelling.yaml`).

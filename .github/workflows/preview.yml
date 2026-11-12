@@ -34,7 +34,8 @@ jobs:
       # This repo has a DESCRIPTION for lintr and tooling, but pages do not
       # call its functions, and the old workflow never installed it.
       install-package: false
-      apt-packages: ''
+      # Racket runs the pages' racket chunks (tools/racket-engine.R, mcs#131).
+      apt-packages: racket
       setup-chrome: false
       # PDF handouts are part of the default render below, so TinyTeX is always needed.
       tinytex: true
