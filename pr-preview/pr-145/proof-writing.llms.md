@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-11 02:27:42 (PST)
+Last modified: 2026-11-12 00:48:48 (PST)
 
 This page collects general advice on how to write [proofs](#def-proof) and [derivations](#def-derivation). The goal of a proof is not just to convince yourself that a [result](#def-result) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for [logical entailment](#def-logical-entailment) are listed under [Definitions for proofs](#sec-proof-definitions) below.
 
@@ -199,25 +199,41 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Theorem 3 (De Morgan’s laws for propositions)** For any [propositions](#def-proposition) $P$ and $Q$ ([Wikipedia contributors 2026f](#ref-wikipedia_de_morgans_laws)):
+> **Theorem 3 (De Morgan’s law for a conjunction)** For any [propositions](#def-proposition) $P$ and $Q$ ([Wikipedia contributors 2026f](#ref-wikipedia_de_morgans_laws)):
 >
-> $$\begin{aligned}
-> \neg (P \land Q) &\equiv \neg P \lor \neg Q \\
-> \neg (P \lor Q) &\equiv \neg P \land \neg Q
-> \end{aligned}$$
+> $$\neg (P \land Q) \equiv \neg P \lor \neg Q$$
 
 > **NOTE:**
 >
-> *Proof*. Each side of each law is built from $P$ and $Q$, so by [Definition 11](#def-logically-equivalent) it is enough to compare the two sides in each of the four rows of a [truth table](#def-truth-table):
+> *Proof*. Each side is built from $P$ and $Q$, so by [Definition 11](#def-logically-equivalent) it is enough to compare the two sides in each of the four rows of a [truth table](#def-truth-table):
 >
-> | $P$ | $Q$ | $\neg (P \land Q)$ | $\neg P \lor \neg Q$ | $\neg (P \lor Q)$ | $\neg P \land \neg Q$ |
-> |:--:|:--:|:--:|:--:|:--:|:--:|
-> | T | T | F | F | F | F |
-> | T | F | T | T | F | F |
-> | F | T | T | T | F | F |
-> | F | F | T | T | T | T |
+> | $P$ | $Q$ | $\neg (P \land Q)$ | $\neg P \lor \neg Q$ |
+> |:---:|:---:|:------------------:|:--------------------:|
+> |  T  |  T  |         F          |          F           |
+> |  T  |  F  |         T          |          T           |
+> |  F  |  T  |         T          |          T           |
+> |  F  |  F  |         T          |          T           |
 >
-> The third and fourth columns agree in every row, which proves the first law, and the fifth and sixth columns agree in every row, which proves the second.
+> The third and fourth columns agree in every row.
+
+> **NOTE:**
+>
+> **Theorem 4 (De Morgan’s law for a disjunction)** For any [propositions](#def-proposition) $P$ and $Q$ ([Wikipedia contributors 2026f](#ref-wikipedia_de_morgans_laws)):
+>
+> $$\neg (P \lor Q) \equiv \neg P \land \neg Q$$
+
+> **NOTE:**
+>
+> *Proof*. Each side is built from $P$ and $Q$, so by [Definition 11](#def-logically-equivalent) it is enough to compare the two sides in each of the four rows of a [truth table](#def-truth-table):
+>
+> | $P$ | $Q$ | $\neg (P \lor Q)$ | $\neg P \land \neg Q$ |
+> |:---:|:---:|:-----------------:|:---------------------:|
+> |  T  |  T  |         F         |           F           |
+> |  T  |  F  |         F         |           F           |
+> |  F  |  T  |         F         |           F           |
+> |  F  |  F  |         T         |           T           |
+>
+> The third and fourth columns agree in every row.
 
 > **NOTE:**
 >
@@ -255,7 +271,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Theorem 4 (Equivalence is a tautological biconditional)** For [propositions](#def-proposition) $A$ and $B$, $A$ and $B$ are [logically equivalent](#def-logically-equivalent) exactly when $A \Leftrightarrow B$ is a [tautology](#def-tautology).
+> **Theorem 5 (Equivalence is a tautological biconditional)** For [propositions](#def-proposition) $A$ and $B$, $A$ and $B$ are [logically equivalent](#def-logically-equivalent) exactly when $A \Leftrightarrow B$ is a [tautology](#def-tautology).
 
 > **NOTE:**
 >
@@ -278,7 +294,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Theorem 5 (Double negation)** For a [proposition](#def-proposition) $P$,
+> **Theorem 6 (Double negation)** For a [proposition](#def-proposition) $P$,
 >
 > $$\neg \neg P \equiv P.$$
 
@@ -335,29 +351,33 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Theorem 6 (De Morgan’s laws for quantifiers)** For a [set](chapters/sets.llms.md#def-set) $S$ and a [predicate](#def-predicate) $P(x)$ whose [domain of discourse](#def-domain-of-discourse) is $S$:
+> **Theorem 7 (De Morgan’s law for a universal quantifier)** For a [set](chapters/sets.llms.md#def-set) $S$ and a [predicate](#def-predicate) $P(x)$ whose [domain of discourse](#def-domain-of-discourse) is $S$:
 >
-> $$\begin{aligned}
-> \neg (\forall x \in S, P(x)) &\equiv \exists x \in S, \neg P(x) \\
-> \neg (\exists x \in S, P(x)) &\equiv \forall x \in S, \neg P(x)
-> \end{aligned}$$
+> $$\neg (\forall x \in S, P(x)) \equiv \exists x \in S, \neg P(x)$$
 
 > **NOTE:**
 >
-> *Proof*.
->
-> 1.  By the definition of the [universal quantifier](#def-universal-quantifier), $\forall x \in S, P(x)$ is false exactly when $P(x)$ is false for at least one $x$ in $S$. By the definition of the [existential quantifier](#def-existential-quantifier), that is exactly when $\exists x \in S, \neg P(x)$ is true.
-> 2.  By the definition of the existential quantifier, $\exists x \in S, P(x)$ is false exactly when $P(x)$ is false for every $x$ in $S$. By the definition of the universal quantifier, that is exactly when $\forall x \in S, \neg P(x)$ is true.
+> *Proof*. By the definition of the [universal quantifier](#def-universal-quantifier), $\forall x \in S, P(x)$ is false exactly when $P(x)$ is false for at least one $x$ in $S$. By the definition of the [existential quantifier](#def-existential-quantifier), that is exactly when $\exists x \in S, \neg P(x)$ is true.
 
 > **NOTE:**
 >
-> *Remark 1* (Why the two laws share a theorem). The two laws in [De Morgan’s laws for quantifiers](#thm-negate-quantifiers) are one rule seen from each side: negating a [quantifier](#def-quantifier) swaps $\forall$ and $\exists$ and moves the [negation](#def-not) onto the [predicate](#def-predicate). [De Morgan’s laws for propositions](#thm-de-morgan-logic) pair their two laws the same way, and these laws extend them from two propositions to a whole [set](chapters/sets.llms.md#def-set) of them.
+> **Theorem 8 (De Morgan’s law for an existential quantifier)** For a [set](chapters/sets.llms.md#def-set) $S$ and a [predicate](#def-predicate) $P(x)$ whose [domain of discourse](#def-domain-of-discourse) is $S$:
+>
+> $$\neg (\exists x \in S, P(x)) \equiv \forall x \in S, \neg P(x)$$
+
+> **NOTE:**
+>
+> *Proof*. By the definition of the [existential quantifier](#def-existential-quantifier), $\exists x \in S, P(x)$ is false exactly when $P(x)$ is false for every $x$ in $S$. By the definition of the [universal quantifier](#def-universal-quantifier), that is exactly when $\forall x \in S, \neg P(x)$ is true.
+
+> **NOTE:**
+>
+> *Remark 1* (How the two quantifier laws relate). De Morgan’s laws for a [universal quantifier](#thm-negate-quantifiers) and an [existential quantifier](#thm-negate-existential) are one rule seen from each side: negating a [quantifier](#def-quantifier) swaps $\forall$ and $\exists$ and moves the [negation](#def-not) onto the [predicate](#def-predicate). De Morgan’s laws for a [conjunction](#thm-de-morgan-logic) and a [disjunction](#thm-de-morgan-disjunction) of two propositions pair up the same way, and the quantifier laws extend them from two propositions to a whole [set](chapters/sets.llms.md#def-set) of them.
 
 > **NOTE:**
 >
 > **Example 21 (Negating “every integer is even”)**  
 >
-> Let $S$ be the [integers](number-systems.llms.md#def-integers), and let $P(x)$ be “$x$ is [even](number-systems.llms.md#def-even-odd)”. By the first of [De Morgan’s laws for quantifiers](#thm-negate-quantifiers), $\neg (\forall x \in S, P(x)) \equiv \exists x \in S, \neg P(x)$: the [negation](#def-not) of “every [integer](number-systems.llms.md#def-integers) is even” is “some integer is not even”. By the second law, $\neg (\exists x \in S, P(x)) \equiv \forall x \in S, \neg P(x)$: the negation of “some integer is even” is “no integer is even”.
+> Let $S$ be the [integers](number-systems.llms.md#def-integers), and let $P(x)$ be “$x$ is [even](number-systems.llms.md#def-even-odd)”. By [De Morgan’s law for a universal quantifier](#thm-negate-quantifiers), $\neg (\forall x \in S, P(x)) \equiv \exists x \in S, \neg P(x)$: the [negation](#def-not) of “every [integer](number-systems.llms.md#def-integers) is even” is “some integer is not even”. By [De Morgan’s law for an existential quantifier](#thm-negate-existential), $\neg (\exists x \in S, P(x)) \equiv \forall x \in S, \neg P(x)$: the negation of “some integer is even” is “no integer is even”.
 
 > **NOTE:**
 >
@@ -435,7 +455,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](https://morrison-la
 
 > **NOTE:**
 >
-> **Theorem 7 (Modus ponens)** For [propositions](#def-proposition) $P$ and $Q$, this is a [rule of inference](#def-rule-of-inference):
+> **Theorem 9 (Modus ponens)** For [propositions](#def-proposition) $P$ and $Q$, this is a [rule of inference](#def-rule-of-inference):
 >
 > $$\frac{P \Rightarrow Q, \quad P}{Q}$$
 
@@ -445,7 +465,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](https://morrison-la
 
 > **NOTE:**
 >
-> **Theorem 8 (Modus tollens)** For [propositions](#def-proposition) $P$ and $Q$, this is a [rule of inference](#def-rule-of-inference):
+> **Theorem 10 (Modus tollens)** For [propositions](#def-proposition) $P$ and $Q$, this is a [rule of inference](#def-rule-of-inference):
 >
 > $$\frac{P \Rightarrow Q, \quad \neg Q}{\neg P}$$
 
@@ -455,7 +475,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](https://morrison-la
 
 > **NOTE:**
 >
-> **Theorem 9 (Disjunctive syllogism)** For [propositions](#def-proposition) $P$ and $Q$, this is a [rule of inference](#def-rule-of-inference):
+> **Theorem 11 (Disjunctive syllogism)** For [propositions](#def-proposition) $P$ and $Q$, this is a [rule of inference](#def-rule-of-inference):
 >
 > $$\frac{P \lor Q, \quad \neg P}{Q}$$
 
@@ -465,7 +485,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](https://morrison-la
 
 > **NOTE:**
 >
-> **Theorem 10 (Addition)** For [propositions](#def-proposition) $P$ and $Q$, this is a [rule of inference](#def-rule-of-inference):
+> **Theorem 12 (Addition)** For [propositions](#def-proposition) $P$ and $Q$, this is a [rule of inference](#def-rule-of-inference):
 >
 > $$\frac{P}{P \lor Q}$$
 
@@ -475,7 +495,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](https://morrison-la
 
 > **NOTE:**
 >
-> **Theorem 11 (Simplification)** For [propositions](#def-proposition) $P$ and $Q$, this is a [rule of inference](#def-rule-of-inference):
+> **Theorem 13 (Simplification)** For [propositions](#def-proposition) $P$ and $Q$, this is a [rule of inference](#def-rule-of-inference):
 >
 > $$\frac{P \land Q}{P}$$
 
@@ -485,7 +505,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](https://morrison-la
 
 > **NOTE:**
 >
-> **Theorem 12 (Conjunction)** For [propositions](#def-proposition) $P$ and $Q$, this is a [rule of inference](#def-rule-of-inference):
+> **Theorem 14 (Conjunction)** For [propositions](#def-proposition) $P$ and $Q$, this is a [rule of inference](#def-rule-of-inference):
 >
 > $$\frac{P, \quad Q}{P \land Q}$$
 
@@ -559,7 +579,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](https://morrison-la
 
 > **NOTE:**
 >
-> **Theorem 13 (What a derivation shows)** Consider a derivation ([Definition 24](#def-derivation)) with expressions $E_0, E_1, \ldots, E_n$, where each line $E_j$ is joined to the line $E_{j-1}$ before it by $=$, $\le$ or $<$.
+> **Theorem 15 (What a derivation shows)** Consider a derivation ([Definition 24](#def-derivation)) with expressions $E_0, E_1, \ldots, E_n$, where each line $E_j$ is joined to the line $E_{j-1}$ before it by $=$, $\le$ or $<$.
 >
 > 1.  If every step is $=$, then $E_0 = E_n$.
 > 2.  If every step is $=$ or $\le$, then $E_0 \le E_n$.
@@ -587,7 +607,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](https://morrison-la
 
 > **NOTE:**
 >
-> **Example 29 (Checking a derivation line by line)** The derivation in [Example 28](#exm-derivation) has the steps $=$, $\ge$ and $>$, so by [Theorem 13](#thm-derivation-chain) it shows $(x + 1)^2 > 2x$. The code evaluates the four lines of that derivation at several values of $x$, and checks each step and the comparison of the first line with the last.
+> **Example 29 (Checking a derivation line by line)** The derivation in [Example 28](#exm-derivation) has the steps $=$, $\ge$ and $>$, so by [Theorem 15](#thm-derivation-chain) it shows $(x + 1)^2 > 2x$. The code evaluates the four lines of that derivation at several values of $x$, and checks each step and the comparison of the first line with the last.
 >
 > ``` r
 > x <- c(-3, -1, 0, 2, 3)
@@ -615,7 +635,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](https://morrison-la
 > steps
 > ```
 >
-> At all 5 values of $x$, the three steps hold in 5, 5 and 5 cases, and the first line exceeds the last in 5 cases, as [Theorem 13](#thm-derivation-chain) says. At $x = 0$, for example, the first line is 1 and the last is 0.
+> At all 5 values of $x$, the three steps hold in 5, 5 and 5 cases, and the first line exceeds the last in 5 cases, as [Theorem 15](#thm-derivation-chain) says. At $x = 0$, for example, the first line is 1 and the last is 0.
 
 > **NOTE:**
 >
@@ -736,7 +756,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](https://morrison-la
 
 > **NOTE:**
 >
-> **Theorem 14 (A conditional is equivalent to its contrapositive)** For any [propositions](#def-proposition) $P$ and $Q$,
+> **Theorem 16 (A conditional is equivalent to its contrapositive)** For any [propositions](#def-proposition) $P$ and $Q$,
 >
 > $$(P \Rightarrow Q) \equiv (\neg Q \Rightarrow \neg P).$$
 
@@ -749,7 +769,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](https://morrison-la
 > **Example 39 (The contrapositive versus the converse)** The [proposition](#def-proposition) “if $n$ is a multiple of $4$, then $n$ is even” from [Example 38](#exm-converse) has:
 >
 > - converse ([Definition 33](#def-converse)): “if $n$ is even, then $n$ is a multiple of $4$”, which is false;
-> - contrapositive ([Definition 34](#def-contrapositive)): “if $n$ is not even, then $n$ is not a multiple of $4$”, which is true, by [Theorem 14](#thm-contrapositive), because the original proposition is true.
+> - contrapositive ([Definition 34](#def-contrapositive)): “if $n$ is not even, then $n$ is not a multiple of $4$”, which is true, by [Theorem 16](#thm-contrapositive), because the original proposition is true.
 
 > **NOTE:**
 >
@@ -806,7 +826,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](https://morrison-la
 
 > **NOTE:**
 >
-> **Theorem 15 (A proof by contradiction proves its proposition)** Let $P$ and $Q$ be propositions ([Definition 1](#def-proposition)). If $\neg P \Rightarrow Q$ is true and $Q$ is false, then $P$ is true.
+> **Theorem 17 (A proof by contradiction proves its proposition)** Let $P$ and $Q$ be propositions ([Definition 1](#def-proposition)). If $\neg P \Rightarrow Q$ is true and $Q$ is false, then $P$ is true.
 
 > **NOTE:**
 >
@@ -814,7 +834,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](https://morrison-la
 
 > **NOTE:**
 >
-> **Theorem 16 (Why a proof by contradiction works)** For [propositions](#def-proposition) $P$ and $C$,
+> **Theorem 18 (Why a proof by contradiction works)** For [propositions](#def-proposition) $P$ and $C$,
 >
 > $$P \equiv \mathopen{}\left(\neg P \Rightarrow (C \land \neg C)\right)\mathclose{}.$$
 
@@ -842,7 +862,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](https://morrison-la
 > tt
 > ```
 >
-> The hypotheses of [Theorem 15](#thm-proof-by-contradiction) hold in 1 of the 4 rows, and in 1 of them $P$ is true. So whenever the hypotheses hold, $P$ is true.
+> The hypotheses of [Theorem 17](#thm-proof-by-contradiction) hold in 1 of the 4 rows, and in 1 of them $P$ is true. So whenever the hypotheses hold, $P$ is true.
 
 # 2 Don’t skip steps
 
@@ -929,7 +949,7 @@ The [Linear Algebra](https://morrison-lab.github.io/mds/linear-algebra.html#thm-
 
 > **NOTE:**
 >
-> **Definition 40 (Proof by contrapositive)** A **proof by contrapositive** ([Wikipedia contributors 2026b](#ref-wikipedia_contraposition)) of a [proposition](#def-proposition) “if $P$, then $Q$” is a [direct proof](#def-direct-proof) of its [contrapositive](#def-contrapositive), “if $\neg Q$, then $\neg P$”: it assumes that $Q$ is false and reaches the conclusion that $P$ is false. By [Theorem 14](#thm-contrapositive), proving the contrapositive proves the original proposition.
+> **Definition 40 (Proof by contrapositive)** A **proof by contrapositive** ([Wikipedia contributors 2026b](#ref-wikipedia_contraposition)) of a [proposition](#def-proposition) “if $P$, then $Q$” is a [direct proof](#def-direct-proof) of its [contrapositive](#def-contrapositive), “if $\neg Q$, then $\neg P$”: it assumes that $Q$ is false and reaches the conclusion that $P$ is false. By [Theorem 16](#thm-contrapositive), proving the contrapositive proves the original proposition.
 
 > **NOTE:**
 >
@@ -947,7 +967,7 @@ The [Linear Algebra](https://morrison-lab.github.io/mds/linear-algebra.html#thm-
 > && \text{(arithmetic)}
 > \end{aligned}$$
 >
-> That proves the contrapositive, so by [Theorem 14](#thm-contrapositive) the claim holds. For example, $x = -1$ gives $x^2 + 3x = 1 - 3 = -2 < 0$, and indeed $x < 0$.
+> That proves the contrapositive, so by [Theorem 16](#thm-contrapositive) the claim holds. For example, $x = -1$ gives $x^2 + 3x = 1 - 3 = -2 < 0$, and indeed $x < 0$.
 
 # 6 Proof by cases
 
