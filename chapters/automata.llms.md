@@ -6,7 +6,7 @@ State machines and their state diagrams, runs, deterministic finite automata and
 
 Published
 
-Last modified: 2026-11-11 23:58:00 (PST)
+Last modified: 2026-11-12 01:07:24 (PST)
 
 > **NOTE:**
 >
