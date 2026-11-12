@@ -16,7 +16,13 @@ racket_pieces <- function(code, out) {
   output_group <- factor(group[!is_marker], levels = seq_along(ends))
   outputs <- split(out[!is_marker], output_group)
   # Text before the first marker is a message from Racket itself.
+  # It is kept whether or not the chunk has forms, so no message is lost.
   preamble <- out[group == 0]
+  preamble_pieces <- list()
+  if (length(preamble) > 0) {
+    preamble_text <- paste0(preamble, "\n", collapse = "")
+    preamble_pieces <- list(preamble_text)
+  }
 
   # Any text after the last form, such as a trailing comment, goes with it.
   ends[length(ends)] <- nchar(code)
@@ -24,14 +30,12 @@ racket_pieces <- function(code, out) {
   # cannot read, is shown as written, followed by any message.
   if (length(ends) == 0) {
     source_piece <- structure(list(src = code), class = "source")
-    pieces <- list(source_piece)
-    if (length(preamble) > 0) {
-      preamble_text <- paste0(preamble, "\n", collapse = "")
-      pieces <- c(pieces, list(preamble_text))
-    }
+    pieces <- c(list(source_piece), preamble_pieces)
     return(pieces)
   }
-  pieces <- list()
+  # With forms, the message was printed before any of them ran,
+  # so it comes first.
+  pieces <- preamble_pieces
   # Consecutive forms with no output, such as definitions, stay one piece of
   # source, so the blank lines between them survive.
   start <- 1L

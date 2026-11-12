@@ -14,6 +14,7 @@ The graph plots each value against its step number.
 #| echo: !expr knitr::is_html_output()
 #| message: false
 #| warning: false
+#| fig-height: 3
 #| fig-alt: >-
 #|   The Collatz sequence starting at 6, plotted as points joined by line
 #|   segments. The value is 6 at step 0, falls to 3, jumps to 10 and then to
