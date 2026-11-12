@@ -6,7 +6,7 @@ For all, there exists, and the order they come in
 
 Published
 
-Last modified: 2026-11-12 00:48:46 (PST)
+Last modified: 2026-11-12 01:16:42 (PST)
 
 > **NOTE:**
 >
@@ -52,7 +52,12 @@ Last modified: 2026-11-12 00:48:46 (PST)
 >   (> (string-length s) 3))
 > ```
 >
-> and `(long? "logic")` returns `#t`.
+> and it is true of `"logic"`:
+>
+> ``` racket
+> (long? "logic")
+> ; #t
+> ```
 
 # 2 Quantifiers
 
@@ -97,7 +102,14 @@ Last modified: 2026-11-12 00:48:46 (PST)
 
 > **NOTE:**
 >
-> *Remark 4* (Quantifiers in Racket). On a finite list, Racket computes the two quantifiers with `andmap` and `ormap`. `(andmap odd? (list 2 3 5 7))` returns `#f`, as in part 2 of [Exercise 2](#exr-finite-quantifiers), and `(ormap even? (list 2 3 5 7))` returns `#t`, as in part 3.
+> *Remark 4* (Quantifiers in Racket). On a finite list, Racket computes the two quantifiers with `andmap` and `ormap`. Here they give the answers to parts 2 and 3 of [Exercise 2](#exr-finite-quantifiers):
+>
+> ``` racket
+> (andmap odd? (list 2 3 5 7))
+> ; #f
+> (ormap even? (list 2 3 5 7))
+> ; #t
+> ```
 
 > **NOTE:**
 >

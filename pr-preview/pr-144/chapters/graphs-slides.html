@@ -338,7 +338,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-12 00:48:46 (PST)</p>
+  <p class="date">Last modified: 2026-11-12 01:16:42 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -1056,7 +1056,7 @@ A_G =
 <span id="cb4-3"><a aria-label="3"></a><span class="op">(</span>degree office 'b<span class="op">)</span></span>
 <span id="cb4-4"><a aria-label="4"></a><span class="co">; 3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p><code>(for/sum ([x L]) body)</code> adds up the values of <code>body</code> for each element <code>x</code> of the list <code>L</code>, so this sum of the degrees of the six vertices is <span class="math inline">\(2 {\mathopen{}\left|E\right|\mathclose{}}\)</span>, as <a href="#/thm-handshake" class="quarto-xref">Theorem&nbsp;1</a> says:</p>
+<p><code>(for/sum ([x L]) body)</code> adds up the values of <code>body</code> for each element <code>x</code> of the list <code>L</code>, so this chunk adds up the degrees of the six vertices. By <a href="#/thm-handshake" class="quarto-xref">Theorem&nbsp;1</a>, that sum is <span class="math inline">\(2 {\mathopen{}\left|E\right|\mathclose{}}\)</span>:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb5-1"><a aria-label="1"></a><span class="op">(</span>for/sum <span class="op">([</span>row office<span class="op">])</span></span>
 <span id="cb5-2"><a aria-label="2"></a>  <span class="op">(</span>degree office <span class="op">(</span>first row<span class="op">)))</span></span>
@@ -1593,7 +1593,7 @@ Figure&nbsp;9: The office graph, with its vertices in columns by their distance 
 <li><code>(let* ([x e] ...) body)</code> evaluates <code>e</code>, calls its value <code>x</code> inside the rest of the <code>let*</code>, and then evaluates <code>body</code>.</li>
 <li><code>(append L M)</code> is the list of the elements of <code>L</code> followed by those of <code>M</code>, so <code>(append (rest queue) new)</code> removes the front of the queue and adds the new vertices at the back.</li>
 </ul>
-<p>Each call of <code>bfs-loop</code> is one pass through the loop of <a href="#/def-bfs" class="quarto-xref">Definition&nbsp;32</a>. From <span class="math inline">\(a\)</span>, it returns the marks and labels of <a href="#/exm-bfs-trace" class="quarto-xref">Example&nbsp;35</a>:</p>
+<p>Each call of <code>bfs-loop</code> is one pass through the loop of <a href="#/def-bfs" class="quarto-xref">Definition&nbsp;32</a>. From <span class="math inline">\(a\)</span>, <code>bfs</code> returns the marks and labels of <a href="#/exm-bfs-trace" class="quarto-xref">Example&nbsp;35</a>:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb8-1"><a aria-label="1"></a><span class="op">(</span>bfs office 'a<span class="op">)</span></span>
 <span id="cb8-2"><a aria-label="2"></a><span class="co">; '((a 0) (b 1) (c 1) (d 2) (e 2) (f 3))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>

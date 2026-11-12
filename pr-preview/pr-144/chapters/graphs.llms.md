@@ -6,7 +6,7 @@ Vertices and edges, degrees, walks and connectedness, Euler circuits, Hamiltonia
 
 Published
 
-Last modified: 2026-11-12 00:48:46 (PST)
+Last modified: 2026-11-12 01:16:42 (PST)
 
 > **NOTE:**
 >
@@ -499,7 +499,7 @@ Last modified: 2026-11-12 00:48:46 (PST)
 > ; 3
 > ```
 >
-> `(for/sum ([x L]) body)` adds up the values of `body` for each element `x` of the list `L`, so this sum of the degrees of the six vertices is $2 {\mathopen{}\left|E\right|\mathclose{}}$, as [Theorem 1](#thm-handshake) says:
+> `(for/sum ([x L]) body)` adds up the values of `body` for each element `x` of the list `L`, so this chunk adds up the degrees of the six vertices. By [Theorem 1](#thm-handshake), that sum is $2 {\mathopen{}\left|E\right|\mathclose{}}$:
 >
 > ``` racket
 > (for/sum ([row office])
@@ -950,7 +950,7 @@ Last modified: 2026-11-12 00:48:46 (PST)
 > - `(let* ([x e] ...) body)` evaluates `e`, calls its value `x` inside the rest of the `let*`, and then evaluates `body`.
 > - `(append L M)` is the list of the elements of `L` followed by those of `M`, so `(append (rest queue) new)` removes the front of the queue and adds the new vertices at the back.
 >
-> Each call of `bfs-loop` is one pass through the loop of [Definition 32](#def-bfs). From $a$, it returns the marks and labels of [Example 35](#exm-bfs-trace):
+> Each call of `bfs-loop` is one pass through the loop of [Definition 32](#def-bfs). From $a$, `bfs` returns the marks and labels of [Example 35](#exm-bfs-trace):
 >
 > ``` racket
 > (bfs office 'a)
