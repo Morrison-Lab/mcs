@@ -16,7 +16,7 @@ When two propositions say the same thing, and how to say the opposite
 
 Published
 
-Last modified: 2026-11-12 01:45:11 (PST)
+Last modified: 2026-11-12 11:28:26 (PST)
 
 > **NOTE:**
 >
@@ -190,9 +190,19 @@ Last modified: 2026-11-12 01:45:11 (PST)
 > (for*/and ([p '(#t #f)]
 >            [q '(#t #f)])
 >   (equal? (or p (and p q)) p))
+> ; #t
 > ```
 >
-> This returns `#t`, as [Exercise 1](#exr-absorption) found. Replacing the body with `(equal? (not (and p q)) (and (not p) (not q)))` returns `#f`, as [Exercise 2](#exr-not-and) found.
+> The result agrees with [Exercise 1](#exr-absorption). With a new body, the same loop checks whether the two statements of [Exercise 2](#exr-not-and) are equivalent:
+>
+> ``` racket
+> (for*/and ([p '(#t #f)]
+>            [q '(#t #f)])
+>   (equal? (not (and p q)) (and (not p) (not q))))
+> ; #f
+> ```
+>
+> This result agrees with [Exercise 2](#exr-not-and).
 
 # 2 Negation
 
@@ -296,7 +306,7 @@ Last modified: 2026-11-12 01:45:11 (PST)
 > region_plot
 > ```
 >
-> [![The square from -2 to 2 on both axes, with the axes drawn through the origin. The left half (x at most 0) and the bottom half (y at most 0) are shaded; only the upper right quadrant, where x and y are both positive, is left blank.](equivalence-negation_files/figure-html/unnamed-chunk-1-1.png)](equivalence-negation_files/figure-html/unnamed-chunk-1-1.png)
+> [![The square from -2 to 2 on both axes, with the axes drawn through the origin. The left half (x at most 0) and the bottom half (y at most 0) are shaded; only the upper right quadrant, where x and y are both positive, is left blank.](equivalence-negation_files/figure-html/unnamed-chunk-3-1.png)](equivalence-negation_files/figure-html/unnamed-chunk-3-1.png)
 
 > **NOTE:**
 >
