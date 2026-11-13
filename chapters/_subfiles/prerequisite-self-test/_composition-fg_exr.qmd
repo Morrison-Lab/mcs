@@ -1,0 +1,8 @@
+:::{#exr-prereq-composition-fg}
+#### Composing two functions
+
+Let $f(x) = 3x - 1$ and $g(x) = x^2$.
+
+Find $f(g(2))$.
+
+:::

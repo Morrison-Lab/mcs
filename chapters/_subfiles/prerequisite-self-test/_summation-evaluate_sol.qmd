@@ -1,0 +1,12 @@
+:::{#sol-prereq-summation-evaluate}
+
+The sum is 31.
+The terms for $i = 0, 1, 2, 3, 4$ are $1, 2, 4, 8, 16$,
+and their sum is 31.
+The index starts at 0,
+so the sum has five terms.
+
+To review,
+read @def-summation.
+
+:::

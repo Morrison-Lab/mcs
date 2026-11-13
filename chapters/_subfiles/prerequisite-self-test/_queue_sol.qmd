@@ -1,0 +1,11 @@
+:::{#sol-prereq-queue}
+
+The removes return 5, 8 and 2, in that order.
+A queue is first in, first out:
+each remove takes the value that has waited longest.
+After the three removes,
+the queue holds only 7.
+
+The course uses queues for breadth-first search on [Graphs](graphs.qmd).
+
+:::

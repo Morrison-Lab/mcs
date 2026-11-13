@@ -1,7 +1,0 @@
-:::{#exr-prereq-inequalities}
-#### Inequalities
-
-1. For which integers $n$ is $3n - 7 > n + 5$?
-2. True or false: for all real numbers $a$ and $b$, if $a < b$ then $-a < -b$.
-
-:::

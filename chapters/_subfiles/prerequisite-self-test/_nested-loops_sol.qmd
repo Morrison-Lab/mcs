@@ -2,13 +2,14 @@
 
 The value is 15.
 `range(5)` gives `i` the values 0, 1, 2, 3 and 4.
-For each `i`, `range(i, 5)` has $5 - i$ values,
-so the inner loop runs 5, 4, 3, 2 and 1 times,
-and `count` is $5 + 4 + 3 + 2 + 1 = 15$.
+For each `i`,
+`range(i, 5)` has $5 - i$ values,
+so the inner loop runs 5, 4, 3, 2 and 1 times.
+The total is $5 + 4 + 3 + 2 + 1 = 15$.
 
-If you got 10 or 20, check where each `range` starts and stops:
+An answer of 10 or 20 points to the ends of `range`:
 `range(a, b)` includes `a` and excludes `b`.
-Counting loop iterations with a sum like this one is the start of
-[Recurrences and Growth](recurrences-growth.qmd).
+Counting loop iterations with a sum like this one
+starts the chapter [Recurrences and Growth](recurrences-growth.qmd).
 
 :::

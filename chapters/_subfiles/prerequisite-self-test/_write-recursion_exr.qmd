@@ -1,11 +1,12 @@
 :::{#exr-prereq-write-recursion}
 #### Writing a recursive function
 
-Write a recursive Python function `total(xs)`
-that returns the sum of the numbers in the list `xs`.
-Do not use a loop or the built-in `sum`.
 You may use `xs == []` to test for the empty list,
-`xs[0]` for the first element
+`xs[0]` for the first element of a list `xs`
 and `xs[1:]` for the list without its first element.
+
+Write a recursive Python function `total(xs)`
+that returns the sum of the numbers in the list `xs`,
+without a loop or the built-in `sum`.
 
 :::

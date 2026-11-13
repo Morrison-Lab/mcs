@@ -1,0 +1,12 @@
+:::{#exr-prereq-queue}
+#### A queue
+
+Start with an empty queue and perform these operations in order,
+where "add" puts a value at the back
+and "remove" takes the value at the front:
+
+add 5, add 8, add 2, remove, add 7, remove, remove.
+
+Which values do the three removes return, in order?
+
+:::

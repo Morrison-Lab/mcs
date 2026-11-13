@@ -1,0 +1,8 @@
+:::{#exr-prereq-power-double}
+#### Doubling a power
+
+Let $n$ be an integer.
+
+Write $2^n + 2^n$ as a single power of 2.
+
+:::

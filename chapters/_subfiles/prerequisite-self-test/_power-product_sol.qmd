@@ -1,0 +1,11 @@
+:::{#sol-prereq-power-product}
+
+The product is $2^{13}$.
+Since $8 = 2^3$,
+$8^3 = 2^9$ by the rule for [a power of a power](#thm-double-exp).
+Then $2^9 \cdot 2^4 = 2^{9 + 4}$ by the rule for [a power of a sum](#thm-power-sum).
+
+To review powers,
+read @def-power-exponent.
+
+:::
