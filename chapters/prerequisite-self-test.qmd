@@ -22,7 +22,9 @@ It is not graded, and nobody sees your answers.
 
 Work each exercise on paper, without notes or a calculator,
 before you open its solution.
-The whole test takes about 40 minutes.
+The whole test takes about 45 minutes.
+Only your final answers need checking,
+but work that you can follow helps you find a mistake.
 Each solution explains the answer and names a page to review if you missed the exercise.
 The code is in Python.
 The course itself programs in Racket, which it teaches from the start.
