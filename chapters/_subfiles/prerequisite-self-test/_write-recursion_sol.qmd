@@ -7,7 +7,7 @@ def total(xs):
     return xs[0] + total(xs[1:])
 ```
 
-Check your answer for two things:
+Check your answer for two parts:
 
 - a base case: the sum of the empty list is 0;
 - a recursive case that adds the first element to `total` of the rest of the list.

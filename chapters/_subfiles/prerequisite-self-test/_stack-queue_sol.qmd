@@ -3,7 +3,7 @@
 1. The stack's pops return 2, 7 and 8, in that order,
    and the stack then holds only 5.
    A stack is last in, first out:
-   each pop removes the most recently pushed value still on it.
+   each pop removes the last value pushed that is still on it.
 2. The queue's pops return 5, 8 and 2, in that order,
    and the queue then holds only 7.
    A queue is first in, first out:
