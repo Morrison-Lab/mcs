@@ -1,0 +1,11 @@
+:::{#sol-prereq-exponents}
+
+1. $2^{13}$: since $8 = 2^3$, $8^3 = 2^9$, and $2^9 \cdot 2^4 = 2^{9 + 4}$.
+2. $2^4$: since $4 = 2^2$, $4^5 = 2^{10}$, and $2^{10} / 2^6 = 2^{10 - 6}$.
+3. $2^{12}$: a power of a power multiplies the exponents, $3 \cdot 4 = 12$.
+4. $2^{n+1}$: $2^n + 2^n = 2 \cdot 2^n = 2^{n+1}$.
+
+The last one is a step in many induction proofs.
+To review, read @def-power-exponent, @thm-power-sum and @thm-double-exp.
+
+:::

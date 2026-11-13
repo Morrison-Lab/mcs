@@ -1,0 +1,7 @@
+:::{#exr-prereq-summation}
+#### Summation notation
+
+1. Evaluate $\sum_{i=0}^{4} 2^i$.
+2. Write $3 + 6 + 9 + \cdots + 30$ in summation notation.
+
+:::

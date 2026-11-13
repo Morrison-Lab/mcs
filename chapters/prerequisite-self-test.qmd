@@ -1,0 +1,93 @@
+---
+title: "Prerequisite Self-Test"
+subtitle: "Check the background that CSCI 201 assumes, before the course starts"
+number-sections: false
+format:
+  html: default
+---
+
+{{< include ../latex-macros/macros.qmd >}}
+
+<!--
+Ungraded, so its answers are public (Morrison-Lab/mcs#167).
+Its items must stay different from the graded week-1 Quiz 0 in Morrison-Lab/mcsg
+(Quizzes/2027-winter-morrison/quiz0.qmd and exercises/prerequisites/),
+which covers the same topics, so that publishing these answers gives none of that quiz away.
+-->
+
+This self-test checks the background that CSCI 201 assumes from its first week:
+programming from CSCI 141 and 145,
+and the algebra from your math prerequisite.
+It is not graded, and nobody sees your answers.
+
+Work each exercise on paper, without notes or a calculator,
+before you open its solution.
+The whole test takes about 40 minutes.
+Each solution explains the answer and names a page to review if you missed the exercise.
+The code is in Python.
+The course itself programs in Racket, which it teaches from the start.
+
+Your results tell you what to do next:
+
+- If you got almost everything right, you are ready.
+- If you missed one or two exercises, read the review pages that their solutions name before the first week.
+- If you missed several exercises in one part,
+  send me a message through the Canvas inbox in the first week,
+  and we will plan how you can catch up.
+
+# Programming
+
+{{< include _subfiles/prerequisite-self-test/_boolean_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_boolean_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_div-mod_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_div-mod_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_nested-loops_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_nested-loops_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_trace-recursion_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_trace-recursion_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_write-recursion_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_write-recursion_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_stack-queue_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_stack-queue_sol.qmd >}}
+
+# Math
+
+{{< include _subfiles/prerequisite-self-test/_exponents_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_exponents_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_logarithms_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_logarithms_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_composition_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_composition_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_summation_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_summation_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_algebra_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_algebra_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_inequalities_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_inequalities_sol.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

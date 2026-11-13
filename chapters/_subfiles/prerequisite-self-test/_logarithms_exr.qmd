@@ -1,0 +1,12 @@
+:::{#exr-prereq-logarithms}
+#### Logarithms
+
+Evaluate each of these without a calculator.
+
+1. $\log_2 64$
+2. $\log_3 \paren{1/9}$
+3. $\log_2 \paren{8^5}$
+4. How many times can you halve 1024 before you reach 1?
+5. $\floor{\log_2 100}$, where $\floor{x}$ is the largest integer that is at most $x$
+
+:::

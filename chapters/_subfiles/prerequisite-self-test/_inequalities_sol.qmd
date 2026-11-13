@@ -1,0 +1,14 @@
+:::{#sol-prereq-inequalities}
+
+1. Every integer $n > 6$, that is, $n \ge 7$.
+   Subtract $n$ from both sides and add 7 to get $2n > 12$,
+   then divide both sides by 2.
+2. False.
+   Multiplying both sides of an inequality by a negative number reverses it,
+   so $a < b$ gives $-a > -b$.
+   For example, $1 < 2$ but $-1 > -2$.
+
+Proofs in the course often chain inequalities like these.
+To review, read @thm-neg-ineq and @thm-mult-ineq.
+
+:::

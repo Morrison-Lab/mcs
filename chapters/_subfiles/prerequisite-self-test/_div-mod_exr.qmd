@@ -1,0 +1,12 @@
+:::{#exr-prereq-div-mod}
+#### Integer division and remainders
+
+In Python, `//` is integer division and `%` is the remainder.
+Find the value of each expression.
+
+1. `47 // 5`
+2. `47 % 5`
+3. `2027 // 10`
+4. `2027 % 10`
+
+:::

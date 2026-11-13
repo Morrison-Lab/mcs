@@ -1,0 +1,14 @@
+:::{#exr-prereq-stack-queue}
+#### Stacks and queues
+
+1. Start with an empty stack and perform these operations in order:
+
+   push 5, push 8, push 2, pop, push 7, pop, pop.
+
+   List the values the three pops return, in order,
+   and say what is left on the stack.
+
+2. Do the same with an empty queue,
+   reading "push" as "add to the back" and "pop" as "remove from the front".
+
+:::

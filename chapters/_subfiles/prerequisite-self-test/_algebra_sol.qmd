@@ -1,0 +1,14 @@
+:::{#sol-prereq-algebra}
+
+1. $2n + 1$,
+   since $(n + 1)^2 = n^2 + 2n + 1$.
+2. $\dfrac{(n + 1)(n + 2)}{2}$.
+   Write $n + 1$ as $\dfrac{2(n + 1)}{2}$ and factor out $n + 1$:
+   $\dfrac{n(n + 1) + 2(n + 1)}{2} = \dfrac{(n + 1)(n + 2)}{2}$.
+3. $2 \cdot 3^n$,
+   since $3 \cdot 3^n - 1 \cdot 3^n = (3 - 1) \cdot 3^n$.
+
+Steps like these make up most of the algebra in [Induction](induction.qmd) proofs.
+To review, see the free textbook @abramson2021algebra.
+
+:::

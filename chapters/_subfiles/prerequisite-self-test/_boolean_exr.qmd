@@ -1,0 +1,13 @@
+:::{#exr-prereq-boolean}
+#### A Boolean expression
+
+Is this Python expression `True` or `False`
+when `x` holds 2?
+When `x` holds 6?
+When `x` holds 7?
+
+```python
+not (x % 3 == 0) and (x > 4 or x == 2)
+```
+
+:::

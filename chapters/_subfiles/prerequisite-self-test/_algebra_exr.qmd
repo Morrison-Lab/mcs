@@ -1,0 +1,10 @@
+:::{#exr-prereq-algebra}
+#### Algebra for induction steps
+
+Simplify each expression, for an integer $n$.
+
+1. $(n + 1)^2 - n^2$
+2. $\dfrac{n(n + 1)}{2} + (n + 1)$, written as one fraction in factored form
+3. $3 \cdot 3^n - 3^n$, written as a multiple of $3^n$
+
+:::

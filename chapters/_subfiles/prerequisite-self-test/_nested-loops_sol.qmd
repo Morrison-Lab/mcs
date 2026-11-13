@@ -1,0 +1,14 @@
+:::{#sol-prereq-nested-loops}
+
+The value is 15.
+`range(5)` gives `i` the values 0, 1, 2, 3 and 4.
+For each `i`, `range(i, 5)` has $5 - i$ values,
+so the inner loop runs 5, 4, 3, 2 and 1 times,
+and `count` is $5 + 4 + 3 + 2 + 1 = 15$.
+
+If you got 10 or 20, check where each `range` starts and stops:
+`range(a, b)` includes `a` and excludes `b`.
+Counting loop iterations with a sum like this one is the start of
+[Recurrences and Growth](recurrences-growth.qmd).
+
+:::

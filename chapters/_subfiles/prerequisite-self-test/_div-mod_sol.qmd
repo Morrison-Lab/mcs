@@ -1,0 +1,12 @@
+:::{#sol-prereq-div-mod}
+
+1. `47 // 5` is 9.
+2. `47 % 5` is 2, since $47 = 9 \cdot 5 + 2$.
+3. `2027 // 10` is 202: dividing by 10 drops the last decimal digit.
+4. `2027 % 10` is 7: the remainder after dividing by 10 is the last decimal digit.
+
+For nonnegative integers, `n // d` is the floor (@def-floor) of $n / d$,
+and `n % d` is what is left over, so `n == d * (n // d) + n % d`.
+To review, read @def-floor and @def-divides.
+
+:::

@@ -1,0 +1,15 @@
+:::{#sol-prereq-logarithms}
+
+1. 6, since $2^6 = 64$.
+2. $-2$, since $3^{-2} = 1/3^2 = 1/9$.
+3. 15, since $8^5 = \paren{2^3}^5 = 2^{15}$.
+4. 10 times: $1024 = 2^{10}$, and each halving lowers the exponent by 1.
+   This count is $\log_2 1024$.
+5. 6, since $2^6 = 64 \le 100 < 128 = 2^7$, so $\log_2 100$ is between 6 and 7.
+
+Parts 4 and 5 are why logarithms come up so often in computer science:
+$\log_2 n$ counts how many times $n$ can be halved,
+which is how many steps binary search takes.
+To review, read @def-logarithm, @thm-log-exp and @def-floor.
+
+:::

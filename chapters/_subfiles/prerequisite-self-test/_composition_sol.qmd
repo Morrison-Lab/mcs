@@ -1,0 +1,12 @@
+:::{#sol-prereq-composition}
+
+1. $f(g(2)) = 11$ and $g(f(2)) = 25$.
+   First, $g(2) = 4$, so $f(g(2)) = f(4) = 3 \cdot 4 - 1 = 11$.
+   Second, $f(2) = 5$, so $g(f(2)) = g(5) = 25$.
+   The two orders give different values.
+2. $f(g(x)) = f\paren{x^2} = 3x^2 - 1$.
+
+The course writes $f(g(x))$ as $(f \circ g)(x)$ and uses composition throughout.
+To review, read @def-composition.
+
+:::

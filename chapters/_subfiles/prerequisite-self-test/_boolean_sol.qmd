@@ -1,0 +1,17 @@
+:::{#sol-prereq-boolean}
+
+`True` when `x` is 2, `False` when `x` is 6, and `True` when `x` is 7.
+
+- When `x` is 2, `x % 3` is 2, so `not (x % 3 == 0)` is `True`;
+  `x == 2` is `True`, so `x > 4 or x == 2` is `True`;
+  and `True and True` is `True`.
+- When `x` is 6, `x % 3 == 0` is `True`, so `not (x % 3 == 0)` is `False`,
+  and `and` with a `False` operand is `False`, whatever the other operand is.
+- When `x` is 7, `x % 3` is 1, so `not (x % 3 == 0)` is `True`;
+  `x > 4` is `True`, so the right operand is `True` too.
+
+The course builds on this in its first weeks:
+@def-logical-connective and the [Propositional Logic](propositional-logic.qmd) chapter
+treat `and`, `or` and `not` as operations on truth values.
+
+:::
