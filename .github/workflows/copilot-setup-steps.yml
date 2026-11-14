@@ -130,7 +130,8 @@ jobs:
         if: steps.check_label.outputs.skip != 'true'
         run: |
           install.packages(
-            c("lintr", "rmarkdown", "knitr", "tibble", "ggplot2", "plotly", "htmltools", "reticulate")
+            c("lintr", "rmarkdown", "knitr", "tibble", "ggplot2", "plotly", "htmltools", "reticulate"),
+            repos = Sys.getenv("RSPM")
           )
         shell: Rscript {0}
       
