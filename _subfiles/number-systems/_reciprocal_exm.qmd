@@ -1,6 +1,6 @@
 :::{#exm-reciprocal}
 #### Reciprocals
-<!-- no-figure: the example lists three reciprocals as numbers -->
+<!-- no-figure: the example lists three reciprocals and one non-example as numbers -->
 
 - The [reciprocal](#def-reciprocal) of $5$ is $\frac{1}{5} = 0.2$,
   because $5 \cdot 0.2 = 1$.
