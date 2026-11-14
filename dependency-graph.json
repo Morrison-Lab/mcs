@@ -508,6 +508,15 @@
    "external": false
   },
   {
+   "id": "mcs/number-systems#def-reciprocal",
+   "site": "mcs",
+   "page": "number-systems",
+   "div": "def-reciprocal",
+   "kind": "def",
+   "title": "Reciprocal (multiplicative inverse)",
+   "external": false
+  },
+  {
    "id": "mcs/proof-writing#def-and",
    "site": "mcs",
    "page": "proof-writing",
@@ -1846,6 +1855,10 @@
   [
    "mcs/number-systems#def-rational-numbers",
    "mcs/number-systems#def-integers"
+  ],
+  [
+   "mcs/number-systems#def-reciprocal",
+   "mcs/number-systems#def-real-numbers"
   ],
   [
    "mcs/proof-writing#def-and",

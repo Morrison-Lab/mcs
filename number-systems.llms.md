@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-13 17:34:31 (PST)
+Last modified: 2026-11-14 11:43:28 (PST)
 
 > **NOTE:**
 >
@@ -61,11 +61,11 @@ Last modified: 2026-11-13 17:34:31 (PST)
 
 > **NOTE:**
 >
-> **Definition 4 (Even integer)** An integer ([Definition 1](#def-integers)) $n$ is **even** ([Wikipedia contributors 2026g](#ref-wikipedia_parity_mathematics)) if $n = 2k$ for some integer $k$.
+> **Definition 4 (Even integer)** An integer ([Definition 1](#def-integers)) $n$ is **even** ([Wikipedia contributors 2026h](#ref-wikipedia_parity_mathematics)) if $n = 2k$ for some integer $k$.
 
 > **NOTE:**
 >
-> **Definition 5 (Odd integer)** An integer ([Definition 1](#def-integers)) $n$ is **odd** ([Wikipedia contributors 2026g](#ref-wikipedia_parity_mathematics)) if $n = 2k + 1$ for some integer $k$.
+> **Definition 5 (Odd integer)** An integer ([Definition 1](#def-integers)) $n$ is **odd** ([Wikipedia contributors 2026h](#ref-wikipedia_parity_mathematics)) if $n = 2k + 1$ for some integer $k$.
 
 > **NOTE:**
 >
@@ -79,7 +79,7 @@ Last modified: 2026-11-13 17:34:31 (PST)
 
 > **NOTE:**
 >
-> **Definition 6 (Natural numbers (our convention))** In these notes, the **natural numbers** ([Wikipedia contributors 2026f](#ref-wikipedia_natural_number)) are the positive integers ([Definition 2](#def-positive-integer)):
+> **Definition 6 (Natural numbers (our convention))** In these notes, the **natural numbers** ([Wikipedia contributors 2026g](#ref-wikipedia_natural_number)) are the positive integers ([Definition 2](#def-positive-integer)):
 >
 > $$\mathbb{N}\stackrel{\text{def}}{=}\mathopen{}\left\{1, 2, 3, \ldots\right\}\mathclose{}$$
 
@@ -138,7 +138,7 @@ Last modified: 2026-11-13 17:34:31 (PST)
 
 > **NOTE:**
 >
-> **Definition 10 (Prime number)** An [integer](#def-integers) $n \ge 2$ is **prime** if no [positive integer](#def-positive-integer) other than $1$ and $n$ [divides](#def-divides) it ([Wikipedia contributors 2026h](#ref-wikipedia_prime_number)).
+> **Definition 10 (Prime number)** An [integer](#def-integers) $n \ge 2$ is **prime** if no [positive integer](#def-positive-integer) other than $1$ and $n$ [divides](#def-divides) it ([Wikipedia contributors 2026i](#ref-wikipedia_prime_number)).
 
 > **NOTE:**
 >
@@ -163,7 +163,7 @@ Last modified: 2026-11-13 17:34:31 (PST)
 
 > **NOTE:**
 >
-> **Definition 12 (Rational numbers)** A **rational number** ([Wikipedia contributors 2026j](#ref-wikipedia_rational_number)) is a number that can be written as a fraction $\frac{a}{b}$, where $a$ and $b$ are integers ([Definition 1](#def-integers)) and $b \ne 0$. The set of rational numbers is written $\mathbb{Q}$:
+> **Definition 12 (Rational numbers)** A **rational number** ([Wikipedia contributors 2026k](#ref-wikipedia_rational_number)) is a number that can be written as a fraction $\frac{a}{b}$, where $a$ and $b$ are integers ([Definition 1](#def-integers)) and $b \ne 0$. The set of rational numbers is written $\mathbb{Q}$:
 >
 > $$\mathbb{Q} \stackrel{\text{def}}{=}\mathopen{}\left\{\frac{a}{b} : a \in \mathbb{Z},\ b \in \mathbb{Z},\ b \ne 0\right\}\mathclose{}$$
 
@@ -178,7 +178,7 @@ Last modified: 2026-11-13 17:34:31 (PST)
 
 > **NOTE:**
 >
-> **Definition 13 (Real numbers)** A **real number** ([Wikipedia contributors 2026k](#ref-wikipedia_real_number)) is a number that can be written as a decimal expansion: an integer part, followed by a decimal point and a finite or infinite list of decimal places after it. Equivalently, the real numbers are the points on the number line. The set of real numbers is written $\mathbb{R}$.
+> **Definition 13 (Real numbers)** A **real number** ([Wikipedia contributors 2026l](#ref-wikipedia_real_number)) is a number that can be written as a decimal expansion: an integer part, followed by a decimal point and a finite or infinite list of decimal places after it. Equivalently, the real numbers are the points on the number line. The set of real numbers is written $\mathbb{R}$.
 
 > **NOTE:**
 >
@@ -194,11 +194,26 @@ Last modified: 2026-11-13 17:34:31 (PST)
 
 > **NOTE:**
 >
-> **Definition 14 (Floor)** The **floor** $\mathopen{}\left\lfloor x\right\rfloor\mathclose{}$ of a [real number](#def-real-numbers) $x$ ([Wikipedia contributors 2026b](#ref-wikipedia_floor_ceiling)) is the largest [integer](#def-integers) that is at most $x$.
+> **Definition 14 (Reciprocal (multiplicative inverse))** The **reciprocal** (also called the **multiplicative inverse**) ([Wikipedia contributors 2026f](#ref-wikipedia_multiplicative_inverse)) of a nonzero [real number](#def-real-numbers) $x$ is the real number $\frac{1}{x}$ whose product with $x$ is $1$:
+>
+> $$x \cdot \frac{1}{x} = 1$$
 
 > **NOTE:**
 >
-> **Example 10 (Floors)**  
+> **Example 10 (Reciprocals)**  
+>
+> - The [reciprocal](#def-reciprocal) of $5$ is $\frac{1}{5} = 0.2$, because $5 \cdot 0.2 = 1$.
+> - The reciprocal of $0.25$ is $4$, because $0.25 \cdot 4 = 1$.
+> - The reciprocal of the fraction $\frac{2}{3}$ is $\frac{3}{2}$, because $\frac{2}{3} \cdot \frac{3}{2} = 1$.
+> - $0$ has no reciprocal, because $0 \cdot y = 0$ for every real number $y$.
+
+> **NOTE:**
+>
+> **Definition 15 (Floor)** The **floor** $\mathopen{}\left\lfloor x\right\rfloor\mathclose{}$ of a [real number](#def-real-numbers) $x$ ([Wikipedia contributors 2026b](#ref-wikipedia_floor_ceiling)) is the largest [integer](#def-integers) that is at most $x$.
+
+> **NOTE:**
+>
+> **Example 11 (Floors)**  
 >
 > - $\mathopen{}\left\lfloor 2.7\right\rfloor\mathclose{} = 2$, by the [definition of the floor](#def-floor).
 > - $\mathopen{}\left\lfloor 3\right\rfloor\mathclose{} = 3$, because $3$ is already an [integer](#def-integers).
@@ -229,14 +244,14 @@ Last modified: 2026-11-13 17:34:31 (PST)
 
 > **NOTE:**
 >
-> **Definition 15 (Irrational numbers)** An **irrational number** ([Wikipedia contributors 2026d](#ref-wikipedia_irrational_number)) is a real number ([Definition 13](#def-real-numbers)) that is not rational ([Definition 12](#def-rational-numbers)).
+> **Definition 16 (Irrational numbers)** An **irrational number** ([Wikipedia contributors 2026d](#ref-wikipedia_irrational_number)) is a real number ([Definition 13](#def-real-numbers)) that is not rational ([Definition 12](#def-rational-numbers)).
 
 > **NOTE:**
 >
-> **Example 11 (Irrational numbers)**  
+> **Example 12 (Irrational numbers)**  
 >
-> - $\sqrt{2} = 1.41421\ldots$, the [square root](https://morrison-lab.github.io/mds/algebra.html#def-square-root) of $2$, is irrational: no fraction of integers $\frac{a}{b}$ squares to $2$ ([Wikipedia contributors 2026l](#ref-wikipedia_square_root_of_2)).
-> - $\pi = 3.14159\ldots$ is irrational ([Wikipedia contributors 2026i](#ref-wikipedia_proof_that_pi_is_irrational)).
+> - $\sqrt{2} = 1.41421\ldots$, the [square root](https://morrison-lab.github.io/mds/algebra.html#def-square-root) of $2$, is irrational: no fraction of integers $\frac{a}{b}$ squares to $2$ ([Wikipedia contributors 2026m](#ref-wikipedia_square_root_of_2)).
+> - $\pi = 3.14159\ldots$ is irrational ([Wikipedia contributors 2026j](#ref-wikipedia_proof_that_pi_is_irrational)).
 > - $1.5$ is not irrational, because $1.5 = \frac{3}{2}$ is rational.
 
 # Definitions on this page
@@ -254,8 +269,9 @@ Last modified: 2026-11-13 17:34:31 (PST)
 - [Definition 11 (Congruence modulo](#def-congruence) $n$)
 - [Definition 12 (Rational numbers)](#def-rational-numbers)
 - [Definition 13 (Real numbers)](#def-real-numbers)
-- [Definition 14 (Floor)](#def-floor)
-- [Definition 15 (Irrational numbers)](#def-irrational-numbers)
+- [Definition 14 (Reciprocal (multiplicative inverse))](#def-reciprocal)
+- [Definition 15 (Floor)](#def-floor)
+- [Definition 16 (Irrational numbers)](#def-irrational-numbers)
 
 # References
 
@@ -271,18 +287,20 @@ Wikipedia contributors. 2026d. *Irrational Number — Wikipedia, the Free Encycl
 
 Wikipedia contributors. 2026e. *Modular Arithmetic — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Modular_arithmetic>.
 
-Wikipedia contributors. 2026f. *Natural Number — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Natural_number>.
+Wikipedia contributors. 2026f. *Multiplicative Inverse — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Multiplicative_inverse>.
 
-Wikipedia contributors. 2026g. *Parity (Mathematics) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Parity_(mathematics)>.
+Wikipedia contributors. 2026g. *Natural Number — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Natural_number>.
 
-Wikipedia contributors. 2026h. *Prime Number — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Prime_number>.
+Wikipedia contributors. 2026h. *Parity (Mathematics) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Parity_(mathematics)>.
 
-Wikipedia contributors. 2026i. *Proof That Pi Is Irrational — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Proof_that_%CF%80_is_irrational>.
+Wikipedia contributors. 2026i. *Prime Number — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Prime_number>.
 
-Wikipedia contributors. 2026j. *Rational Number — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Rational_number>.
+Wikipedia contributors. 2026j. *Proof That Pi Is Irrational — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Proof_that_%CF%80_is_irrational>.
 
-Wikipedia contributors. 2026k. *Real Number — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Real_number>.
+Wikipedia contributors. 2026k. *Rational Number — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Rational_number>.
 
-Wikipedia contributors. 2026l. *Square Root of 2 — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Square_root_of_2>.
+Wikipedia contributors. 2026l. *Real Number — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Real_number>.
+
+Wikipedia contributors. 2026m. *Square Root of 2 — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Square_root_of_2>.
 
 Back to top
