@@ -6,7 +6,7 @@ Check the background that CSCI 201 assumes, before the course starts
 
 Published
 
-Last modified: 2026-11-13 17:03:18 (PST)
+Last modified: 2026-11-13 19:27:19 (PST)
 
 This self-test checks the background that CSCI 201 assumes from its first week: programming from CSCI 141 and 145, and the algebra from your math prerequisite. It is not graded, and nobody sees your answers.
 
