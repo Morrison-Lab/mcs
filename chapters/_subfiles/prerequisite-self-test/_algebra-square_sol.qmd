@@ -1,0 +1,10 @@
+:::{#sol-prereq-algebra-square}
+
+The expression simplifies to $2n + 1$,
+because $(n + 1)^2 = n^2 + 2n + 1$.
+
+Steps like this one make up most of the algebra in [Induction](induction.qmd) proofs.
+To review algebra,
+see the free textbook @abramson2021algebra.
+
+:::

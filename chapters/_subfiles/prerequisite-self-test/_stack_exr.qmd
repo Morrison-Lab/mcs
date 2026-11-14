@@ -1,0 +1,10 @@
+:::{#exr-prereq-stack}
+#### A stack
+
+Start with an empty stack and perform these operations in order:
+
+push 5, push 8, push 2, pop, push 7, pop, pop.
+
+Which values do the three pops return, in order?
+
+:::

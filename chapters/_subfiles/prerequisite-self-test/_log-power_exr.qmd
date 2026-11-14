@@ -1,0 +1,6 @@
+:::{#exr-prereq-log-power}
+#### A logarithm
+
+Evaluate $\log_2 \paren{8^5}$ without a calculator.
+
+:::

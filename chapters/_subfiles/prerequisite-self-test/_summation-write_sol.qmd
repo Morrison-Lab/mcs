@@ -1,0 +1,11 @@
+:::{#sol-prereq-summation-write}
+
+One answer is $\sum_{k=1}^{10} 3k$.
+Other correct forms are fine,
+such as $\sum_{k=0}^{9} 3(k + 1)$
+or $3 \sum_{k=1}^{10} k$.
+
+To review,
+read @def-summation.
+
+:::

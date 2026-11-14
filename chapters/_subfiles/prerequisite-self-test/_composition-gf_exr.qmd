@@ -1,0 +1,8 @@
+:::{#exr-prereq-composition-gf}
+#### Composing in the other order
+
+Let $f(x) = 3x - 1$ and $g(x) = x^2$.
+
+Find $g(f(2))$.
+
+:::

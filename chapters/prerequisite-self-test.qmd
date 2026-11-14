@@ -1,0 +1,139 @@
+---
+title: "Prerequisite Self-Test"
+subtitle: "Check the background that CSCI 201 assumes, before the course starts"
+number-sections: false
+format:
+  html: default
+---
+
+{{< include ../latex-macros/macros.qmd >}}
+
+<!--
+Ungraded, so its answers are public (Morrison-Lab/mcs#167).
+Its items must stay different from the graded week-1 Quiz 0 in Morrison-Lab/mcsg
+(Quizzes/2027-winter-morrison/quiz0.qmd and exercises/prerequisites/),
+which covers the same topics,
+so that publishing these answers gives none of that quiz away.
+-->
+
+This self-test checks the background that CSCI 201 assumes from its first week:
+programming from CSCI 141 and 145,
+and the algebra from your math prerequisite.
+It is not graded,
+and nobody sees your answers.
+
+Work each exercise on paper,
+without notes or a calculator,
+before you open its solution.
+The whole test takes about 45 minutes.
+Only your final answers need checking,
+but work that you can follow helps you find a mistake.
+Each solution explains the answer
+and names a page to review if you missed the exercise.
+The code is in Python.
+The course itself programs in Racket,
+which it teaches from the start.
+
+Your results tell you what to do next:
+
+- If you got almost everything right,
+  you are ready.
+- If you missed a few exercises,
+  read the review pages that their solutions name
+  before the first week.
+- If you missed several exercises in one part,
+  send me a message through the Canvas inbox in the first week,
+  and we will plan how you can catch up.
+
+# Programming
+
+{{< include _subfiles/prerequisite-self-test/_boolean_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_boolean_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_integer-division_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_integer-division_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_remainder_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_remainder_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_nested-loops_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_nested-loops_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_trace-recursion_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_trace-recursion_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_recursion-meaning_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_recursion-meaning_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_write-recursion_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_write-recursion_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_stack_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_stack_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_queue_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_queue_sol.qmd >}}
+
+# Math
+
+{{< include _subfiles/prerequisite-self-test/_power-product_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_power-product_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_power-double_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_power-double_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_log-power_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_log-power_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_log-floor_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_log-floor_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_composition-fg_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_composition-fg_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_composition-gf_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_composition-gf_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_summation-evaluate_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_summation-evaluate_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_summation-write_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_summation-write_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_algebra-square_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_algebra-square_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_algebra-fraction_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_algebra-fraction_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_inequality-solve_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_inequality-solve_sol.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_inequality-negate_exr.qmd >}}
+
+{{< include _subfiles/prerequisite-self-test/_inequality-negate_sol.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

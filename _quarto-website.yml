@@ -62,6 +62,8 @@ website:
             href: chapters/calendar.qmd
           - text: "Syllabus (on the csci201 site)"
             href: chapters/syllabus.qmd
+          - text: "Prerequisite Self-Test"
+            href: chapters/prerequisite-self-test.qmd
       - text: "Functional Programming"
         href: chapters/functional-programming.qmd
       - text: "Logic"
@@ -157,6 +159,7 @@ website:
             href: chapters/calendar.qmd
           - text: "Syllabus (on the csci201 site)"
             href: chapters/syllabus.qmd
+          - chapters/prerequisite-self-test.qmd
       - chapters/functional-programming.qmd
       - section: "Logic"
         contents:

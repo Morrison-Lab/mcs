@@ -1,0 +1,12 @@
+:::{#sol-prereq-composition-gf}
+
+The value is 25.
+First, $f(2) = 5$,
+so $g(f(2)) = g(5) = 25$.
+Composing in the other order gives $f(g(2)) = 11$ instead,
+so the order of a composition matters.
+
+To review,
+read @def-composition.
+
+:::

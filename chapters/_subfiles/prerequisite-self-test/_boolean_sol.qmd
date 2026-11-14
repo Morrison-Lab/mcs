@@ -1,0 +1,14 @@
+:::{#sol-prereq-boolean}
+
+The expression is `True`.
+Here `x % 3` is 2,
+so `not (x % 3 == 0)` is `True`.
+Also `x == 2` is `True`,
+so `x > 4 or x == 2` is `True`.
+Then `True and True` is `True`.
+
+The [Propositional Logic](propositional-logic.qmd) chapter
+treats `and`, `or` and `not` as operations on truth values,
+called [logical connectives](#def-logical-connective).
+
+:::

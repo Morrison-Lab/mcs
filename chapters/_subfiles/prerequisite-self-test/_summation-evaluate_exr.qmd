@@ -1,0 +1,6 @@
+:::{#exr-prereq-summation-evaluate}
+#### Evaluating a sum
+
+Evaluate $\sum_{i=0}^{4} 2^i$.
+
+:::
