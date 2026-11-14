@@ -102,6 +102,14 @@ and the [factorial](#def-factorial) of a [non-negative integer](#def-nonnegative
 
 {{< slidebreak >}}
 
+{{< include _subfiles/number-systems/_reciprocal_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/number-systems/_reciprocal_exm.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include _subfiles/number-systems/_floor_def.qmd >}}
 
 {{< slidebreak >}}

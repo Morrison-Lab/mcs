@@ -1,0 +1,14 @@
+:::{#exm-reciprocal}
+#### Reciprocals
+<!-- no-figure: the example lists three reciprocals as numbers -->
+
+- The [reciprocal](#def-reciprocal) of $5$ is $\frac{1}{5} = 0.2$,
+  because $5 \cdot 0.2 = 1$.
+- The reciprocal of $0.25$ is $4$,
+  because $0.25 \cdot 4 = 1$.
+- The reciprocal of the fraction $\frac{2}{3}$ is $\frac{3}{2}$,
+  because $\frac{2}{3} \cdot \frac{3}{2} = 1$.
+- $0$ has no reciprocal,
+  because $0 \cdot y = 0$ for every real number $y$.
+
+:::
