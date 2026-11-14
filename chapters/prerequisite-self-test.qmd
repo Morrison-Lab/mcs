@@ -10,8 +10,7 @@ format:
 
 <!--
 Ungraded, so its answers are public (Morrison-Lab/mcs#167).
-Its items must stay different from the graded week-1 Quiz 0 in Morrison-Lab/mcsg
-(Quizzes/2027-winter-morrison/quiz0.qmd and exercises/prerequisites/),
+Its items must stay different from the graded week-1 quiz,
 which covers the same topics,
 so that publishing these answers gives none of that quiz away.
 -->
