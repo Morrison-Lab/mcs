@@ -1,7 +1,10 @@
 ::: {#sol-twice}
 
-Replace `f` and `x` in the body `(f (f x))` (@def-racket-define):
-`(twice add-three 10)` is `(add-three (add-three 10))`, which is `(add-three 13)`, which returns 16.
+As @def-racket-define says,
+replacing `f` and `x` in the body `(f (f x))`
+turns `(twice add-three 10)` into `(add-three (add-three 10))`,
+which is `(add-three 13)`,
+which returns 16.
 
 Racket returns the same value:
 
