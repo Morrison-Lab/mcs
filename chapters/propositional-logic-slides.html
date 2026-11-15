@@ -338,7 +338,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-14 11:43:28 (PST)</p>
+  <p class="date">Last modified: 2026-11-15 05:57:08 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -830,20 +830,34 @@
 </ul>
 </div>
 </section>
-<section class="slide level2 scrollable">
+<section class="slide level2">
 
 <div id="exr-false-premise" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 8 (A false premise)</strong></span> Is each of these propositions true or false?</p>
-<ol type="1">
-<li>If <span class="math inline">\(7\)</span> is even, then <span class="math inline">\(7\)</span> is divisible by <span class="math inline">\(4\)</span>.</li>
-<li>If <span class="math inline">\(7\)</span> is even, then <span class="math inline">\(7\)</span> is odd.</li>
-</ol>
+<p><span class="theorem-title"><strong>Exercise 8 (A false premise)</strong></span> Is this proposition true or false?</p>
+<blockquote>
+<p>If <span class="math inline">\(7\)</span> is even, then <span class="math inline">\(7\)</span> is divisible by <span class="math inline">\(4\)</span>.</p>
+</blockquote>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="sol-false-premise" class="proof solution">
-<p><span class="proof-title"><em>Solution 8</em>. </span>Both are true. The premise “<span class="math inline">\(7\)</span> is even” is false, so each implication (<a href="#/def-implies" class="quarto-xref">Definition&nbsp;8</a>) is true whatever its conclusion says. The conclusion of the first is false and the conclusion of the second is true, and neither matters.</p>
+<p><span class="proof-title"><em>Solution 8</em>. </span>The proposition is true. The premise “<span class="math inline">\(7\)</span> is even” is false, so the <a href="#/def-implies">implication</a> is true whatever its conclusion says. Here the conclusion, “<span class="math inline">\(7\)</span> is divisible by <span class="math inline">\(4\)</span>”, is false too, and that does not matter.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-false-premise-true-conclusion" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 9 (A false premise with a true conclusion)</strong></span> Is this proposition true or false?</p>
+<blockquote>
+<p>If <span class="math inline">\(7\)</span> is even, then <span class="math inline">\(7\)</span> is odd.</p>
+</blockquote>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-false-premise-true-conclusion" class="proof solution">
+<p><span class="proof-title"><em>Solution 9</em>. </span>The proposition is true. The premise “<span class="math inline">\(7\)</span> is even” is false, so the <a href="#/def-implies">implication</a> is true whatever its conclusion says. Here the conclusion, “<span class="math inline">\(7\)</span> is odd”, is true, and that does not matter either: the answer is the same as in <a href="#/exr-false-premise" class="quarto-xref">Exercise&nbsp;8</a>, whose conclusion is false.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -860,13 +874,13 @@
 <section id="sec-converse" class="slide level2" data-number="3.1">
 <h2><span class="header-section-number">3.1</span> The converse</h2>
 <div id="exr-converse" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 9 (Reverse an implication)</strong></span> For all real numbers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, “if <span class="math inline">\(x = y\)</span>, then <span class="math inline">\(x^2 = y^2\)</span>” is true. Is “if <span class="math inline">\(x^2 = y^2\)</span>, then <span class="math inline">\(x = y\)</span>” also true for all real numbers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>?</p>
+<p><span class="theorem-title"><strong>Exercise 10 (Reverse an implication)</strong></span> For all real numbers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, “if <span class="math inline">\(x = y\)</span>, then <span class="math inline">\(x^2 = y^2\)</span>” is true. Is “if <span class="math inline">\(x^2 = y^2\)</span>, then <span class="math inline">\(x = y\)</span>” also true for all real numbers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>?</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="sol-converse" class="proof solution">
-<p><span class="proof-title"><em>Solution 9</em>. </span>No. Take <span class="math inline">\(x = 1\)</span> and <span class="math inline">\(y = -1\)</span>. Then <span class="math inline">\(x^2 = 1 = y^2\)</span>, so the premise is true, but <span class="math inline">\(x \ne y\)</span>, so the conclusion is false.</p>
+<p><span class="proof-title"><em>Solution 10</em>. </span>No. Take <span class="math inline">\(x = 1\)</span> and <span class="math inline">\(y = -1\)</span>. Then <span class="math inline">\(x^2 = 1 = y^2\)</span>, so the premise is true, but <span class="math inline">\(x \ne y\)</span>, so the conclusion is false.</p>
 <p>Swapping the premise and the conclusion of a true implication can give a false one.</p>
 </div>
 </section>
@@ -879,13 +893,13 @@
 <section id="sec-conditionals-english" class="slide level2" data-number="3.2">
 <h2><span class="header-section-number">3.2</span> Conditionals in English</h2>
 <div id="exr-only-if" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 10 (“Only if”)</strong></span> Rewrite “I go to class only if I am healthy” in the form “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>”.</p>
+<p><span class="theorem-title"><strong>Exercise 11 (“Only if”)</strong></span> Rewrite “I go to class only if I am healthy” in the form “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>”.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="sol-only-if" class="proof solution">
-<p><span class="proof-title"><em>Solution 10</em>. </span>“If I go to class, then I am healthy.”</p>
+<p><span class="proof-title"><em>Solution 11</em>. </span>“If I go to class, then I am healthy.”</p>
 <p>The sentence says that going to class requires being healthy, so whenever I go to class, I am healthy. It does not say “if I am healthy, then I go to class”; that is its converse (<a href="#/def-converse" class="quarto-xref">Definition&nbsp;9</a>), and a healthy person may still skip class.</p>
 <p>In general, “<span class="math inline">\(P\)</span> only if <span class="math inline">\(Q\)</span>” means <span class="math inline">\(P \Rightarrow Q\)</span>.</p>
 </div>
@@ -916,16 +930,16 @@
 <section class="slide level2">
 
 <div id="exr-if-and-only-if" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 11 (Split “if and only if”)</strong></span> “<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>” combines “<span class="math inline">\(P\)</span> if <span class="math inline">\(Q\)</span>” and “<span class="math inline">\(P\)</span> only if <span class="math inline">\(Q\)</span>”. Write each of the two halves as an implication.</p>
+<p><span class="theorem-title"><strong>Exercise 12 (Split “if and only if”)</strong></span> “<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>” combines “<span class="math inline">\(P\)</span> if <span class="math inline">\(Q\)</span>” and “<span class="math inline">\(P\)</span> only if <span class="math inline">\(Q\)</span>”. Write each of the two halves as an implication.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="sol-if-and-only-if" class="proof solution">
-<p><span class="proof-title"><em>Solution 11</em>. </span></p>
+<p><span class="proof-title"><em>Solution 12</em>. </span></p>
 <ul>
 <li>“<span class="math inline">\(P\)</span> if <span class="math inline">\(Q\)</span>” is <span class="math inline">\(Q \Rightarrow P\)</span> (<a href="#/rem-conditional-phrasings" class="quarto-xref">Remark&nbsp;5</a>).</li>
-<li>“<span class="math inline">\(P\)</span> only if <span class="math inline">\(Q\)</span>” is <span class="math inline">\(P \Rightarrow Q\)</span> (<a href="#/sol-only-if" class="quarto-xref">Solution&nbsp;10</a>).</li>
+<li>“<span class="math inline">\(P\)</span> only if <span class="math inline">\(Q\)</span>” is <span class="math inline">\(P \Rightarrow Q\)</span> (<a href="#/sol-only-if" class="quarto-xref">Solution&nbsp;11</a>).</li>
 </ul>
 <p>So “<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>” says that <span class="math inline">\(P \Rightarrow Q\)</span> and <span class="math inline">\(Q \Rightarrow P\)</span> are both true.</p>
 </div>
@@ -945,13 +959,13 @@
 <section class="slide level2">
 
 <div id="exr-iff-values" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 12 (Check a biconditional)</strong></span> Is “<span class="math inline">\(n\)</span> is even if and only if <span class="math inline">\(n\)</span> is divisible by <span class="math inline">\(3\)</span>” true or false when <span class="math inline">\(n = 6\)</span>? When <span class="math inline">\(n = 4\)</span>? When <span class="math inline">\(n = 5\)</span>?</p>
+<p><span class="theorem-title"><strong>Exercise 13 (Check a biconditional)</strong></span> Is “<span class="math inline">\(n\)</span> is even if and only if <span class="math inline">\(n\)</span> is divisible by <span class="math inline">\(3\)</span>” true or false when <span class="math inline">\(n = 6\)</span>? When <span class="math inline">\(n = 4\)</span>? When <span class="math inline">\(n = 5\)</span>?</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="sol-iff-values" class="proof solution">
-<p><span class="proof-title"><em>Solution 12</em>. </span></p>
+<p><span class="proof-title"><em>Solution 13</em>. </span></p>
 <table class="caption-top">
 <thead>
 <tr class="header">

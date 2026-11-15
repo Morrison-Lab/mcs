@@ -217,7 +217,7 @@
     "href": "chapters/propositional-logic.html#sec-converse",
     "title": "Propositional Logic",
     "section": "3.1 The converse",
-    "text": "3.1 The converse\n\n\n\n\n\n\n\nExercise 9 (Reverse an implication) For all real numbers \\(x\\) and \\(y\\), “if \\(x = y\\), then \\(x^2 = y^2\\)” is true. Is “if \\(x^2 = y^2\\), then \\(x = y\\)” also true for all real numbers \\(x\\) and \\(y\\)?\n\n\n\n\n\n\n\n\n\n\nSolutionSolution 9\n\n\n\n\n\n\nSolution 9. No. Take \\(x = 1\\) and \\(y = -1\\). Then \\(x^2 = 1 = y^2\\), so the premise is true, but \\(x \\ne y\\), so the conclusion is false.\nSwapping the premise and the conclusion of a true implication can give a false one.\n\n\n\n\n\n\n\n\n\n\n\nDefinition 9 (Converse) The converse (Wikipedia contributors 2026b) of the proposition “if \\(P\\), then \\(Q\\)” is the proposition “if \\(Q\\), then \\(P\\)”.",
+    "text": "3.1 The converse\n\n\n\n\n\n\n\nExercise 10 (Reverse an implication) For all real numbers \\(x\\) and \\(y\\), “if \\(x = y\\), then \\(x^2 = y^2\\)” is true. Is “if \\(x^2 = y^2\\), then \\(x = y\\)” also true for all real numbers \\(x\\) and \\(y\\)?\n\n\n\n\n\n\n\n\n\n\nSolutionSolution 10\n\n\n\n\n\n\nSolution 10. No. Take \\(x = 1\\) and \\(y = -1\\). Then \\(x^2 = 1 = y^2\\), so the premise is true, but \\(x \\ne y\\), so the conclusion is false.\nSwapping the premise and the conclusion of a true implication can give a false one.\n\n\n\n\n\n\n\n\n\n\n\nDefinition 9 (Converse) The converse (Wikipedia contributors 2026b) of the proposition “if \\(P\\), then \\(Q\\)” is the proposition “if \\(Q\\), then \\(P\\)”.",
     "crumbs": [
       "Home",
       "Logic",
@@ -229,7 +229,7 @@
     "href": "chapters/propositional-logic.html#sec-conditionals-english",
     "title": "Propositional Logic",
     "section": "3.2 Conditionals in English",
-    "text": "3.2 Conditionals in English\n\n\n\n\n\n\n\nExercise 10 (“Only if”) Rewrite “I go to class only if I am healthy” in the form “if \\(P\\), then \\(Q\\)”.\n\n\n\n\n\n\n\n\n\n\nSolutionSolution 10\n\n\n\n\n\n\nSolution 10. “If I go to class, then I am healthy.”\nThe sentence says that going to class requires being healthy, so whenever I go to class, I am healthy. It does not say “if I am healthy, then I go to class”; that is its converse (Definition 9), and a healthy person may still skip class.\nIn general, “\\(P\\) only if \\(Q\\)” means \\(P \\Rightarrow Q\\).\n\n\n\n\n\n\n\n\n\n\n\nRemark 5 (English phrasings of \\(P \\Rightarrow Q\\)). Each of these sentences means \\(P \\Rightarrow Q\\):\n\nIf \\(P\\), then \\(Q\\).\n\\(Q\\) if \\(P\\).\n\\(Q\\) whenever \\(P\\).\n\\(Q\\), provided that \\(P\\).\nWhenever \\(P\\), then also \\(Q\\).\n\\(P\\) is a sufficient condition for \\(Q\\).\nFor \\(Q\\), it is sufficient that \\(P\\).\n\\(Q\\) is a necessary condition for \\(P\\).\nFor \\(P\\), it is necessary that \\(Q\\).\n\\(P\\) only if \\(Q\\).",
+    "text": "3.2 Conditionals in English\n\n\n\n\n\n\n\nExercise 11 (“Only if”) Rewrite “I go to class only if I am healthy” in the form “if \\(P\\), then \\(Q\\)”.\n\n\n\n\n\n\n\n\n\n\nSolutionSolution 11\n\n\n\n\n\n\nSolution 11. “If I go to class, then I am healthy.”\nThe sentence says that going to class requires being healthy, so whenever I go to class, I am healthy. It does not say “if I am healthy, then I go to class”; that is its converse (Definition 9), and a healthy person may still skip class.\nIn general, “\\(P\\) only if \\(Q\\)” means \\(P \\Rightarrow Q\\).\n\n\n\n\n\n\n\n\n\n\n\nRemark 5 (English phrasings of \\(P \\Rightarrow Q\\)). Each of these sentences means \\(P \\Rightarrow Q\\):\n\nIf \\(P\\), then \\(Q\\).\n\\(Q\\) if \\(P\\).\n\\(Q\\) whenever \\(P\\).\n\\(Q\\), provided that \\(P\\).\nWhenever \\(P\\), then also \\(Q\\).\n\\(P\\) is a sufficient condition for \\(Q\\).\nFor \\(Q\\), it is sufficient that \\(P\\).\n\\(Q\\) is a necessary condition for \\(P\\).\nFor \\(P\\), it is necessary that \\(Q\\).\n\\(P\\) only if \\(Q\\).",
     "crumbs": [
       "Home",
       "Logic",
@@ -255,14 +255,14 @@
     "href": "chapters/propositional-logic-slides.html#sec-converse",
     "title": "Propositional Logic",
     "section": "3.1 The converse",
-    "text": "3.1 The converse\n\nExercise 9 (Reverse an implication) For all real numbers \\(x\\) and \\(y\\), “if \\(x = y\\), then \\(x^2 = y^2\\)” is true. Is “if \\(x^2 = y^2\\), then \\(x = y\\)” also true for all real numbers \\(x\\) and \\(y\\)?"
+    "text": "3.1 The converse\n\nExercise 10 (Reverse an implication) For all real numbers \\(x\\) and \\(y\\), “if \\(x = y\\), then \\(x^2 = y^2\\)” is true. Is “if \\(x^2 = y^2\\), then \\(x = y\\)” also true for all real numbers \\(x\\) and \\(y\\)?"
   },
   {
     "objectID": "chapters/propositional-logic-slides.html#sec-conditionals-english",
     "href": "chapters/propositional-logic-slides.html#sec-conditionals-english",
     "title": "Propositional Logic",
     "section": "3.2 Conditionals in English",
-    "text": "3.2 Conditionals in English\n\nExercise 10 (“Only if”) Rewrite “I go to class only if I am healthy” in the form “if \\(P\\), then \\(Q\\)”."
+    "text": "3.2 Conditionals in English\n\nExercise 11 (“Only if”) Rewrite “I go to class only if I am healthy” in the form “if \\(P\\), then \\(Q\\)”."
   },
   {
     "objectID": "chapters/propositional-logic-slides.html#references",

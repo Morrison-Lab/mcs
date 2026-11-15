@@ -16,7 +16,7 @@ Propositions, connectives, and conditionals
 
 Published
 
-Last modified: 2026-11-14 11:43:28 (PST)
+Last modified: 2026-11-15 05:57:08 (PST)
 
 > **NOTE:**
 >
@@ -273,14 +273,23 @@ Last modified: 2026-11-14 11:43:28 (PST)
 
 > **NOTE:**
 >
-> **Exercise 8 (A false premise)** Is each of these propositions true or false?
+> **Exercise 8 (A false premise)** Is this proposition true or false?
 >
-> 1.  If $7$ is even, then $7$ is divisible by $4$.
-> 2.  If $7$ is even, then $7$ is odd.
+> > If $7$ is even, then $7$ is divisible by $4$.
 
 > **NOTE:**
 >
-> *Solution 8*. Both are true. The premise “$7$ is even” is false, so each implication ([Definition 8](#def-implies)) is true whatever its conclusion says. The conclusion of the first is false and the conclusion of the second is true, and neither matters.
+> *Solution 8*. The proposition is true. The premise “$7$ is even” is false, so the [implication](#def-implies) is true whatever its conclusion says. Here the conclusion, “$7$ is divisible by $4$”, is false too, and that does not matter.
+
+> **NOTE:**
+>
+> **Exercise 9 (A false premise with a true conclusion)** Is this proposition true or false?
+>
+> > If $7$ is even, then $7$ is odd.
+
+> **NOTE:**
+>
+> *Solution 9*. The proposition is true. The premise “$7$ is even” is false, so the [implication](#def-implies) is true whatever its conclusion says. Here the conclusion, “$7$ is odd”, is true, and that does not matter either: the answer is the same as in [Exercise 8](#exr-false-premise), whose conclusion is false.
 
 > **NOTE:**
 >
@@ -294,11 +303,11 @@ Last modified: 2026-11-14 11:43:28 (PST)
 
 > **NOTE:**
 >
-> **Exercise 9 (Reverse an implication)** For all real numbers $x$ and $y$, “if $x = y$, then $x^2 = y^2$” is true. Is “if $x^2 = y^2$, then $x = y$” also true for all real numbers $x$ and $y$?
+> **Exercise 10 (Reverse an implication)** For all real numbers $x$ and $y$, “if $x = y$, then $x^2 = y^2$” is true. Is “if $x^2 = y^2$, then $x = y$” also true for all real numbers $x$ and $y$?
 
 > **NOTE:**
 >
-> *Solution 9*. No. Take $x = 1$ and $y = -1$. Then $x^2 = 1 = y^2$, so the premise is true, but $x \ne y$, so the conclusion is false.
+> *Solution 10*. No. Take $x = 1$ and $y = -1$. Then $x^2 = 1 = y^2$, so the premise is true, but $x \ne y$, so the conclusion is false.
 >
 > Swapping the premise and the conclusion of a true implication can give a false one.
 
@@ -310,11 +319,11 @@ Last modified: 2026-11-14 11:43:28 (PST)
 
 > **NOTE:**
 >
-> **Exercise 10 (“Only if”)** Rewrite “I go to class only if I am healthy” in the form “if $P$, then $Q$”.
+> **Exercise 11 (“Only if”)** Rewrite “I go to class only if I am healthy” in the form “if $P$, then $Q$”.
 
 > **NOTE:**
 >
-> *Solution 10*. “If I go to class, then I am healthy.”
+> *Solution 11*. “If I go to class, then I am healthy.”
 >
 > The sentence says that going to class requires being healthy, so whenever I go to class, I am healthy. It does not say “if I am healthy, then I go to class”; that is its converse ([Definition 9](#def-converse)), and a healthy person may still skip class.
 >
@@ -339,14 +348,14 @@ Last modified: 2026-11-14 11:43:28 (PST)
 
 > **NOTE:**
 >
-> **Exercise 11 (Split “if and only if”)** “$P$ if and only if $Q$” combines “$P$ if $Q$” and “$P$ only if $Q$”. Write each of the two halves as an implication.
+> **Exercise 12 (Split “if and only if”)** “$P$ if and only if $Q$” combines “$P$ if $Q$” and “$P$ only if $Q$”. Write each of the two halves as an implication.
 
 > **NOTE:**
 >
-> *Solution 11*.
+> *Solution 12*.
 >
 > - “$P$ if $Q$” is $Q \Rightarrow P$ ([Remark 5](#rem-conditional-phrasings)).
-> - “$P$ only if $Q$” is $P \Rightarrow Q$ ([Solution 10](#sol-only-if)).
+> - “$P$ only if $Q$” is $P \Rightarrow Q$ ([Solution 11](#sol-only-if)).
 >
 > So “$P$ if and only if $Q$” says that $P \Rightarrow Q$ and $Q \Rightarrow P$ are both true.
 
@@ -360,11 +369,11 @@ Last modified: 2026-11-14 11:43:28 (PST)
 
 > **NOTE:**
 >
-> **Exercise 12 (Check a biconditional)** Is “$n$ is even if and only if $n$ is divisible by $3$” true or false when $n = 6$? When $n = 4$? When $n = 5$?
+> **Exercise 13 (Check a biconditional)** Is “$n$ is even if and only if $n$ is divisible by $3$” true or false when $n = 6$? When $n = 4$? When $n = 5$?
 
 > **NOTE:**
 >
-> *Solution 12*.
+> *Solution 13*.
 >
 > | $n$ | $n$ is even | $n$ is divisible by $3$ | biconditional |
 > |:---:|:-----------:|:-----------------------:|:-------------:|
