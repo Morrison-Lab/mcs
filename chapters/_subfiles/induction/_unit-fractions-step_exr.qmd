@@ -1,0 +1,9 @@
+::: {#exr-unit-fractions-step}
+#### From one natural number to the next
+
+Continuing from @exr-unit-fractions,
+suppose the claim holds for some natural number $k$.
+Add the next term, $\frac{1}{(k + 1)(k + 2)}$, to both sides,
+and show that the claim then holds for $k + 1$.
+
+:::
