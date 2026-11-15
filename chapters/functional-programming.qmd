@@ -114,6 +114,14 @@ The other data science notes link to both pages.
 
 {{< slidebreak >}}
 
+{{< include _subfiles/functional-programming/_next-id-function_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_next-id-function_sol.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include _subfiles/functional-programming/_side-effect_def.qmd >}}
 
 {{< slidebreak >}}
