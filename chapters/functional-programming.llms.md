@@ -6,7 +6,7 @@ Expressions, functions and cases in Racket
 
 Published
 
-Last modified: 2026-11-15 11:08:02 (PST)
+Last modified: 2026-11-15 11:55:29 (PST)
 
 > **NOTE:**
 >
@@ -268,15 +268,19 @@ Last modified: 2026-11-15 11:08:02 (PST)
 >     return count
 > ```
 >
-> 1.  The program calls `next_id()` twice in a row. What does each call return?
-> 2.  Is there a mathematical function $f$ ([Definition 1](#def-function)) with no arguments whose value is what `next_id()` returns every time it is called?
+> The program calls `next_id()` twice in a row. What does each call return?
 
 > **NOTE:**
 >
-> *Solution 4*.
+> *Solution 4*. The first call changes `count` from 0 to 1 and returns 1. The second call changes `count` from 1 to 2 and returns 2.
+
+> **NOTE:**
 >
-> 1.  The first call changes `count` from 0 to 1 and returns 1. The second call changes `count` from 1 to 2 and returns 2.
-> 2.  No. A function with no arguments has exactly one value, but `next_id()` returned 1 and then 2. What it returns depends on the variable `count`, which is not an argument and which each call changes.
+> **Exercise 5 (Is the ID counter a function?)** Continuing from [Exercise 4](#exr-next-id), is there a mathematical [function](#def-function) $f$ with no arguments whose value is what `next_id()` returns every time it is called?
+
+> **NOTE:**
+>
+> *Solution 5*. No. A function with no arguments has exactly one value, but `next_id()` returned 1 and then 2 in [Solution 4](#sol-next-id). What it returns depends on the variable `count`, which is not an argument and which each call changes.
 
 > **NOTE:**
 >
@@ -305,7 +309,7 @@ Last modified: 2026-11-15 11:08:02 (PST)
 
 > **NOTE:**
 >
-> **Exercise 5 (A function as an argument)** The function `twice` takes a function `f` and a value `x`:
+> **Exercise 6 (A function as an argument)** The function `twice` takes a function `f` and a value `x`:
 >
 > ``` racket
 > (define (twice f x)
@@ -323,7 +327,7 @@ Last modified: 2026-11-15 11:08:02 (PST)
 
 > **NOTE:**
 >
-> *Solution 5*. Replace `f` and `x` in the body `(f (f x))` ([Definition 7](#def-racket-define)):
+> *Solution 6*. Replace `f` and `x` in the body `(f (f x))` ([Definition 7](#def-racket-define)):
 >
 > 1.  `(twice add-three 10)` is `(add-three (add-three 10))`, which is `(add-three 13)`, which returns 16.
 > 2.  `(twice h 4)` is `(h (h 4))`. Since $h(4) = 16 - 8 = 8$ and $h(8) = 64 - 16 = 48$, it returns 48.
@@ -342,7 +346,7 @@ Last modified: 2026-11-15 11:08:02 (PST)
 
 > **NOTE:**
 >
-> **Definition 13 (Higher-order function)** A **higher-order function** ([Wikipedia contributors 2026d](#ref-wikipedia_higher_order_function)) is a function that takes a function as an argument, or returns a function as its value. `twice` in [Exercise 5](#exr-twice) is a higher-order function.
+> **Definition 13 (Higher-order function)** A **higher-order function** ([Wikipedia contributors 2026d](#ref-wikipedia_higher_order_function)) is a function that takes a function as an argument, or returns a function as its value. `twice` in [Exercise 6](#exr-twice) is a higher-order function.
 
 > **NOTE:**
 >
@@ -358,7 +362,7 @@ Last modified: 2026-11-15 11:08:02 (PST)
 > - `(map f L)` applies `f` to each element of the list `L`, and returns the list of results.
 > - `(filter p L)` returns the list of the elements `x` of `L` for which `(p x)` is true.
 >
-> Applied to `add-three` from [Exercise 5](#exr-twice) and to Racket’s test `even?`, they return:
+> Applied to `add-three` from [Exercise 6](#exr-twice) and to Racket’s test `even?`, they return:
 >
 > ``` racket
 > (map add-three (list 5 7 9))
@@ -371,7 +375,7 @@ Last modified: 2026-11-15 11:08:02 (PST)
 
 > **NOTE:**
 >
-> **Exercise 6 (Applying a function to a list)** `(apply f L)` applies the function `f` to the elements of the list `L` as its arguments, so `(apply + (list 2 7 6))` is the same as `(+ 2 7 6)`:
+> **Exercise 7 (Applying a function to a list)** `(apply f L)` applies the function `f` to the elements of the list `L` as its arguments, so `(apply + (list 2 7 6))` is the same as `(+ 2 7 6)`:
 >
 > ``` racket
 > (apply + (list 2 7 6))
@@ -386,7 +390,7 @@ Last modified: 2026-11-15 11:08:02 (PST)
 
 > **NOTE:**
 >
-> *Solution 6*.
+> *Solution 7*.
 >
 > 1.  `(apply max (list 3 9 2))` is `(max 3 9 2)`, which returns 9.
 >
@@ -414,7 +418,7 @@ Last modified: 2026-11-15 11:08:02 (PST)
 
 > **NOTE:**
 >
-> **Exercise 7 (A function with no name)** The function `pair-with` takes a list `L` and a value `y`:
+> **Exercise 8 (A function with no name)** The function `pair-with` takes a list `L` and a value `y`:
 >
 > ``` racket
 > (define (pair-with L y)
@@ -429,7 +433,7 @@ Last modified: 2026-11-15 11:08:02 (PST)
 
 > **NOTE:**
 >
-> *Solution 7*. `(lambda (x) (* x x))` is the function that squares its argument, written in place without a name.
+> *Solution 8*. `(lambda (x) (* x x))` is the function that squares its argument, written in place without a name.
 >
 > 1.  Applying it to 7 returns 49.
 > 2.  `map` ([Example 3](#exm-map-filter)) applies the doubling function to each element, and returns `'(2 4 6)`.
@@ -455,7 +459,7 @@ Last modified: 2026-11-15 11:08:02 (PST)
 >   body)
 > ```
 >
-> is a **`lambda` expression**. Its value is the function with parameters `x1`, …, `xn` whose value at its arguments is the value of `body`, found as in [Definition 7](#def-racket-define). The function has no name. The body may use any name defined where the `lambda` expression appears, as the body of the `lambda` in `pair-with` ([Exercise 7](#exr-pair-with)) uses `y`.
+> is a **`lambda` expression**. Its value is the function with parameters `x1`, …, `xn` whose value at its arguments is the value of `body`, found as in [Definition 7](#def-racket-define). The function has no name. The body may use any name defined where the `lambda` expression appears, as the body of the `lambda` in `pair-with` ([Exercise 8](#exr-pair-with)) uses `y`.
 >
 > The definition `(define (f x) body)` is shorthand for `(define f (lambda (x) body))`: it gives the name `f` to the function the `lambda` expression makes.
 >
@@ -463,7 +467,7 @@ Last modified: 2026-11-15 11:08:02 (PST)
 
 > **NOTE:**
 >
-> *Remark 4* (Where the name comes from). The word `lambda` comes from the lambda calculus, a model of computation in which a function is written $\lambda x.\, e$, the function that takes $x$ to the value of the expression $e$. The lambda calculus has only three features: functions, applying a function to an argument, and variables. It has no numbers, strings or loops ([Crichton 2019](#ref-crichton2019cs242)). Applying $\lambda x.\, e$ to an argument replaces each $x$ in $e$ by that argument, as in evaluation by substitution ([Example 1](#exm-substitution)). The function in [Exercise 7](#exr-pair-with) that squares its argument is $\lambda x.\, x \cdot x$.
+> *Remark 4* (Where the name comes from). The word `lambda` comes from the lambda calculus, a model of computation in which a function is written $\lambda x.\, e$, the function that takes $x$ to the value of the expression $e$. The lambda calculus has only three features: functions, applying a function to an argument, and variables. It has no numbers, strings or loops ([Crichton 2019](#ref-crichton2019cs242)). Applying $\lambda x.\, e$ to an argument replaces each $x$ in $e$ by that argument, as in evaluation by substitution ([Example 1](#exm-substitution)). The function in [Exercise 8](#exr-pair-with) that squares its argument is $\lambda x.\, x \cdot x$.
 >
 > *Media:* Will Crichton’s [notes on the lambda calculus](https://stanford-cs242.github.io/f19/lectures/02-1-lambda-calculus), from Stanford’s CS 242, *Programming Languages*, go further ([Crichton 2019](#ref-crichton2019cs242)).
 
@@ -479,7 +483,7 @@ Last modified: 2026-11-15 11:08:02 (PST)
 > `(adder 3)` returns the function $x \mapsto x + 3$, which still knows that `d` is 3 after `adder` has returned. So `adder` is a higher-order function ([Definition 13](#def-higher-order)), and its value can be used anywhere a function can:
 >
 > - applied to an argument;
-> - passed to `twice` from [Exercise 5](#exr-twice);
+> - passed to `twice` from [Exercise 6](#exr-twice);
 > - passed to `map` from [Example 3](#exm-map-filter).
 >
 > ``` racket

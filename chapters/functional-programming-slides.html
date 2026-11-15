@@ -335,7 +335,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-15 11:08:02 (PST)</p>
+  <p class="date">Last modified: 2026-11-15 11:55:29 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -623,7 +623,7 @@ x &amp; \text{otherwise}
 <h1><span class="header-section-number">4</span> Pure functions</h1>
 
 </section>
-<section class="slide level2 scrollable">
+<section class="slide level2">
 
 <div id="exr-next-id" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 4 (Same call, different answer)</strong></span> This Python code hands out ID numbers:</p>
@@ -633,20 +633,25 @@ x &amp; \text{otherwise}
 <span id="cb12-4"><a aria-label="4"></a>    <span class="kw">global</span> count</span>
 <span id="cb12-5"><a aria-label="5"></a>    count <span class="op">=</span> count <span class="op">+</span> <span class="dv">1</span></span>
 <span id="cb12-6"><a aria-label="6"></a>    <span class="cf">return</span> count</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ol type="1">
-<li>The program calls <code>next_id()</code> twice in a row. What does each call return?</li>
-<li>Is there a mathematical function <span class="math inline">\(f\)</span> (<a href="#/def-function" class="quarto-xref">Definition&nbsp;1</a>) with no arguments whose value is what <code>next_id()</code> returns every time it is called?</li>
-</ol>
+<p>The program calls <code>next_id()</code> twice in a row. What does each call return?</p>
 </div>
 </section>
-<section class="slide level2 scrollable">
+<section class="slide level2">
 
 <div id="sol-next-id" class="proof solution">
-<p><span class="proof-title"><em>Solution 4</em>. </span></p>
-<ol type="1">
-<li>The first call changes <code>count</code> from 0 to 1 and returns 1. The second call changes <code>count</code> from 1 to 2 and returns 2.</li>
-<li>No. A function with no arguments has exactly one value, but <code>next_id()</code> returned 1 and then 2. What it returns depends on the variable <code>count</code>, which is not an argument and which each call changes.</li>
-</ol>
+<p><span class="proof-title"><em>Solution 4</em>. </span>The first call changes <code>count</code> from 0 to 1 and returns 1. The second call changes <code>count</code> from 1 to 2 and returns 2.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-next-id-function" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5 (Is the ID counter a function?)</strong></span> Continuing from <a href="#/exr-next-id" class="quarto-xref">Exercise&nbsp;4</a>, is there a mathematical <a href="#/def-function">function</a> <span class="math inline">\(f\)</span> with no arguments whose value is what <code>next_id()</code> returns every time it is called?</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-next-id-function" class="proof solution">
+<p><span class="proof-title"><em>Solution 5</em>. </span>No. A function with no arguments has exactly one value, but <code>next_id()</code> returned 1 and then 2 in <a href="#/sol-next-id" class="quarto-xref">Solution&nbsp;4</a>. What it returns depends on the variable <code>count</code>, which is not an argument and which each call changes.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -687,7 +692,7 @@ x &amp; \text{otherwise}
 <section class="slide level2 scrollable">
 
 <div id="exr-twice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 5 (A function as an argument)</strong></span> The function <code>twice</code> takes a function <code>f</code> and a value <code>x</code>:</p>
+<p><span class="theorem-title"><strong>Exercise 6 (A function as an argument)</strong></span> The function <code>twice</code> takes a function <code>f</code> and a value <code>x</code>:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb13-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>twice f x<span class="op">)</span></span>
 <span id="cb13-2"><a aria-label="2"></a>  <span class="op">(</span>f <span class="op">(</span>f x<span class="op">)))</span></span>
@@ -706,7 +711,7 @@ x &amp; \text{otherwise}
 <section class="slide level2 scrollable">
 
 <div id="sol-twice" class="proof solution">
-<p><span class="proof-title"><em>Solution 5</em>. </span>Replace <code>f</code> and <code>x</code> in the body <code>(f (f x))</code> (<a href="#/def-racket-define" class="quarto-xref">Definition&nbsp;7</a>):</p>
+<p><span class="proof-title"><em>Solution 6</em>. </span>Replace <code>f</code> and <code>x</code> in the body <code>(f (f x))</code> (<a href="#/def-racket-define" class="quarto-xref">Definition&nbsp;7</a>):</p>
 <ol type="1">
 <li><code>(twice add-three 10)</code> is <code>(add-three (add-three 10))</code>, which is <code>(add-three 13)</code>, which returns 16.</li>
 <li><code>(twice h 4)</code> is <code>(h (h 4))</code>. Since <span class="math inline">\(h(4) = 16 - 8 = 8\)</span> and <span class="math inline">\(h(8) = 64 - 16 = 48\)</span>, it returns 48.</li>
@@ -726,7 +731,7 @@ x &amp; \text{otherwise}
 <section class="slide level2">
 
 <div id="def-higher-order" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 13 (Higher-order function)</strong></span> A <strong>higher-order function</strong> <span class="citation" data-cites="wikipedia_higher_order_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span> is a function that takes a function as an argument, or returns a function as its value. <code>twice</code> in <a href="#/exr-twice" class="quarto-xref">Exercise&nbsp;5</a> is a higher-order function.</p>
+<p><span class="theorem-title"><strong>Definition 13 (Higher-order function)</strong></span> A <strong>higher-order function</strong> <span class="citation" data-cites="wikipedia_higher_order_function">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026d</a>)</span> is a function that takes a function as an argument, or returns a function as its value. <code>twice</code> in <a href="#/exr-twice" class="quarto-xref">Exercise&nbsp;6</a> is a higher-order function.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -742,7 +747,7 @@ x &amp; \text{otherwise}
 <li><code>(map f L)</code> applies <code>f</code> to each element of the list <code>L</code>, and returns the list of results.</li>
 <li><code>(filter p L)</code> returns the list of the elements <code>x</code> of <code>L</code> for which <code>(p x)</code> is true.</li>
 </ul>
-<p>Applied to <code>add-three</code> from <a href="#/exr-twice" class="quarto-xref">Exercise&nbsp;5</a> and to Racket’s test <code>even?</code>, they return:</p>
+<p>Applied to <code>add-three</code> from <a href="#/exr-twice" class="quarto-xref">Exercise&nbsp;6</a> and to Racket’s test <code>even?</code>, they return:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb16-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">map</span> add-three <span class="op">(</span><span class="kw">list</span> <span class="dv">5</span> <span class="dv">7</span> <span class="dv">9</span><span class="op">))</span></span>
 <span id="cb16-2"><a aria-label="2"></a><span class="co">; '(8 10 12)</span></span>
@@ -755,7 +760,7 @@ x &amp; \text{otherwise}
 <section class="slide level2 scrollable">
 
 <div id="exr-spread" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 6 (Applying a function to a list)</strong></span> <code>(apply f L)</code> applies the function <code>f</code> to the elements of the list <code>L</code> as its arguments, so <code>(apply + (list 2 7 6))</code> is the same as <code>(+ 2 7 6)</code>:</p>
+<p><span class="theorem-title"><strong>Exercise 7 (Applying a function to a list)</strong></span> <code>(apply f L)</code> applies the function <code>f</code> to the elements of the list <code>L</code> as its arguments, so <code>(apply + (list 2 7 6))</code> is the same as <code>(+ 2 7 6)</code>:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb17-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">apply</span> <span class="op">+</span> <span class="op">(</span><span class="kw">list</span> <span class="dv">2</span> <span class="dv">7</span> <span class="dv">6</span><span class="op">))</span></span>
 <span id="cb17-2"><a aria-label="2"></a><span class="co">; 15</span></span>
@@ -772,7 +777,7 @@ x &amp; \text{otherwise}
 <section class="slide level2 scrollable">
 
 <div id="sol-spread" class="proof solution">
-<p><span class="proof-title"><em>Solution 6</em>. </span></p>
+<p><span class="proof-title"><em>Solution 7</em>. </span></p>
 <ol type="1">
 <li><p><code>(apply max (list 3 9 2))</code> is <code>(max 3 9 2)</code>, which returns 9.</p></li>
 <li><p>One answer:</p>
@@ -800,7 +805,7 @@ x &amp; \text{otherwise}
 <section class="slide level2 scrollable">
 
 <div id="exr-pair-with" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7 (A function with no name)</strong></span> The function <code>pair-with</code> takes a list <code>L</code> and a value <code>y</code>:</p>
+<p><span class="theorem-title"><strong>Exercise 8 (A function with no name)</strong></span> The function <code>pair-with</code> takes a list <code>L</code> and a value <code>y</code>:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb20-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>pair-with L y<span class="op">)</span></span>
 <span id="cb20-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">map</span> <span class="op">(</span><span class="kw">lambda</span> <span class="op">(</span>x<span class="op">)</span> <span class="op">(</span><span class="kw">list</span> x y<span class="op">))</span> L<span class="op">))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -816,7 +821,7 @@ x &amp; \text{otherwise}
 <section class="slide level2 scrollable">
 
 <div id="sol-pair-with" class="proof solution">
-<p><span class="proof-title"><em>Solution 7</em>. </span><code>(lambda (x) (* x x))</code> is the function that squares its argument, written in place without a name.</p>
+<p><span class="proof-title"><em>Solution 8</em>. </span><code>(lambda (x) (* x x))</code> is the function that squares its argument, written in place without a name.</p>
 <ol type="1">
 <li>Applying it to 7 returns 49.</li>
 <li><code>map</code> (<a href="#/exm-map-filter" class="quarto-xref">Example&nbsp;3</a>) applies the doubling function to each element, and returns <code>'(2 4 6)</code>.</li>
@@ -839,7 +844,7 @@ x &amp; \text{otherwise}
 <p><span class="theorem-title"><strong>Definition 14 (<code>lambda</code>)</strong></span> The Racket expression</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb22-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">lambda</span> <span class="op">(</span>x1 ... xn<span class="op">)</span></span>
 <span id="cb22-2"><a aria-label="2"></a>  body<span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>is a <strong><code>lambda</code> expression</strong>. Its value is the function with parameters <code>x1</code>, …, <code>xn</code> whose value at its arguments is the value of <code>body</code>, found as in <a href="#/def-racket-define" class="quarto-xref">Definition&nbsp;7</a>. The function has no name. The body may use any name defined where the <code>lambda</code> expression appears, as the body of the <code>lambda</code> in <code>pair-with</code> (<a href="#/exr-pair-with" class="quarto-xref">Exercise&nbsp;7</a>) uses <code>y</code>.</p>
+<p>is a <strong><code>lambda</code> expression</strong>. Its value is the function with parameters <code>x1</code>, …, <code>xn</code> whose value at its arguments is the value of <code>body</code>, found as in <a href="#/def-racket-define" class="quarto-xref">Definition&nbsp;7</a>. The function has no name. The body may use any name defined where the <code>lambda</code> expression appears, as the body of the <code>lambda</code> in <code>pair-with</code> (<a href="#/exr-pair-with" class="quarto-xref">Exercise&nbsp;8</a>) uses <code>y</code>.</p>
 <p>The definition <code>(define (f x) body)</code> is shorthand for <code>(define f (lambda (x) body))</code>: it gives the name <code>f</code> to the function the <code>lambda</code> expression makes.</p>
 <p><em>Video:</em> Jerry Cain uses <code>lambda</code> with <code>map</code> in Scheme, the language Racket grew out of, in <a href="https://www.youtube.com/watch?v=3LeCydausnk">Stanford CS 107 Lecture 22</a> <span class="citation" data-cites="cain2008cs107videos">(<a href="#/references" role="doc-biblioref" onclick="">Cain 2008</a>)</span>.</p>
 </div>
@@ -847,7 +852,7 @@ x &amp; \text{otherwise}
 <section class="slide level2">
 
 <div id="rem-lambda-calculus" class="proof remark">
-<p><span class="proof-title"><em>Remark 4</em> (Where the name comes from). </span>The word <code>lambda</code> comes from the lambda calculus, a model of computation in which a function is written <span class="math inline">\(\lambda x.\, e\)</span>, the function that takes <span class="math inline">\(x\)</span> to the value of the expression <span class="math inline">\(e\)</span>. The lambda calculus has only three features: functions, applying a function to an argument, and variables. It has no numbers, strings or loops <span class="citation" data-cites="crichton2019cs242">(<a href="#/references" role="doc-biblioref" onclick="">Crichton 2019</a>)</span>. Applying <span class="math inline">\(\lambda x.\, e\)</span> to an argument replaces each <span class="math inline">\(x\)</span> in <span class="math inline">\(e\)</span> by that argument, as in evaluation by substitution (<a href="#/exm-substitution" class="quarto-xref">Example&nbsp;1</a>). The function in <a href="#/exr-pair-with" class="quarto-xref">Exercise&nbsp;7</a> that squares its argument is <span class="math inline">\(\lambda x.\, x \cdot x\)</span>.</p>
+<p><span class="proof-title"><em>Remark 4</em> (Where the name comes from). </span>The word <code>lambda</code> comes from the lambda calculus, a model of computation in which a function is written <span class="math inline">\(\lambda x.\, e\)</span>, the function that takes <span class="math inline">\(x\)</span> to the value of the expression <span class="math inline">\(e\)</span>. The lambda calculus has only three features: functions, applying a function to an argument, and variables. It has no numbers, strings or loops <span class="citation" data-cites="crichton2019cs242">(<a href="#/references" role="doc-biblioref" onclick="">Crichton 2019</a>)</span>. Applying <span class="math inline">\(\lambda x.\, e\)</span> to an argument replaces each <span class="math inline">\(x\)</span> in <span class="math inline">\(e\)</span> by that argument, as in evaluation by substitution (<a href="#/exm-substitution" class="quarto-xref">Example&nbsp;1</a>). The function in <a href="#/exr-pair-with" class="quarto-xref">Exercise&nbsp;8</a> that squares its argument is <span class="math inline">\(\lambda x.\, x \cdot x\)</span>.</p>
 <p><em>Media:</em> Will Crichton’s <a href="https://stanford-cs242.github.io/f19/lectures/02-1-lambda-calculus">notes on the lambda calculus</a>, from Stanford’s CS 242, <em>Programming Languages</em>, go further <span class="citation" data-cites="crichton2019cs242">(<a href="#/references" role="doc-biblioref" onclick="">Crichton 2019</a>)</span>.</p>
 </div>
 </section>
@@ -862,7 +867,7 @@ x &amp; \text{otherwise}
 <p><code>(adder 3)</code> returns the function <span class="math inline">\(x \mapsto x + 3\)</span>, which still knows that <code>d</code> is 3 after <code>adder</code> has returned. So <code>adder</code> is a higher-order function (<a href="#/def-higher-order" class="quarto-xref">Definition&nbsp;13</a>), and its value can be used anywhere a function can:</p>
 <ul>
 <li>applied to an argument;</li>
-<li>passed to <code>twice</code> from <a href="#/exr-twice" class="quarto-xref">Exercise&nbsp;5</a>;</li>
+<li>passed to <code>twice</code> from <a href="#/exr-twice" class="quarto-xref">Exercise&nbsp;6</a>;</li>
 <li>passed to <code>map</code> from <a href="#/exm-map-filter" class="quarto-xref">Example&nbsp;3</a>.</li>
 </ul>
 <div class="cell">
