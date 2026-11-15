@@ -12,9 +12,7 @@ def next_id():
     return count
 ```
 
-1. The program calls `next_id()` twice in a row.
-   What does each call return?
-2. Is there a mathematical function $f$ (@def-function) with no arguments
-   whose value is what `next_id()` returns every time it is called?
+The program calls `next_id()` twice in a row.
+What does each call return?
 
 :::
