@@ -1,0 +1,8 @@
+::: {#exr-false-premise-true-conclusion}
+#### A false premise with a true conclusion
+
+Is this proposition true or false?
+
+> If $7$ is even, then $7$ is odd.
+
+:::
