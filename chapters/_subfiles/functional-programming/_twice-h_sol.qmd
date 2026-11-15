@@ -1,0 +1,13 @@
+::: {#sol-twice-h}
+
+Replacing `f` with `h` and `x` with 4 in the body `(f (f x))` gives `(h (h 4))`.
+Since $h(4) = 16 - 8 = 8$ and $h(8) = 64 - 16 = 48$, it returns 48.
+
+Racket returns the same value:
+
+```{racket}
+#| code-fold: false
+(twice h 4)
+```
+
+:::

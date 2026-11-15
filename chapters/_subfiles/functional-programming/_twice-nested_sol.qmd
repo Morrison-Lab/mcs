@@ -1,0 +1,13 @@
+::: {#sol-twice-nested}
+
+In `(twice add-three (twice add-three 0))`, the inner call `(twice add-three 0)` returns 6,
+so the whole expression is `(twice add-three 6)`, which returns 12.
+
+Racket returns the same value:
+
+```{racket}
+#| code-fold: false
+(twice add-three (twice add-three 0))
+```
+
+:::
