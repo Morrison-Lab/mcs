@@ -1,0 +1,7 @@
+::: {#exr-twice-nested}
+#### A call to `twice` as an argument
+
+Continuing from @exr-twice,
+guess what `(twice add-three (twice add-three 0))` returns.
+
+:::
