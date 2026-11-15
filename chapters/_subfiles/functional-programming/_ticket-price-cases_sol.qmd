@@ -1,0 +1,18 @@
+::: {#sol-ticket-price-cases}
+
+In `ticket-price`, Racket reaches the second test only when the first test is false,
+so the condition for the second case is $5 \le a < 18$ rather than $a < 18$:
+
+$$
+p(a) =
+\begin{cases}
+0 & \text{if } a < 5, \\
+8 & \text{if } 5 \le a < 18, \\
+12 & \text{if } a \ge 18.
+\end{cases}
+$$
+
+The [function](#def-function) $p$ gives the values that Racket returns in @sol-ticket-price:
+$p(4) = 0$, $p(5) = 8$, $p(17) = 8$, and $p(70) = 12$.
+
+:::

@@ -12,8 +12,6 @@ A museum sets its ticket price, in dollars, by age:
 ```
 
 Each line in square brackets pairs a test with a value.
-
-1. Guess what `(ticket-price 4)`, `(ticket-price 5)`, `(ticket-price 17)` and `(ticket-price 70)` return.
-2. Write the function as a formula with cases, for a whole number of years $a \ge 0$.
+Guess what `(ticket-price 4)`, `(ticket-price 5)`, `(ticket-price 17)`, and `(ticket-price 70)` return.
 
 :::

@@ -94,6 +94,14 @@ The other data science notes link to both pages.
 
 {{< slidebreak >}}
 
+{{< include _subfiles/functional-programming/_ticket-price-cases_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/functional-programming/_ticket-price-cases_sol.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include _subfiles/functional-programming/_booleans_def.qmd >}}
 
 {{< slidebreak >}}
