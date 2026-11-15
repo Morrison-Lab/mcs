@@ -6,7 +6,7 @@ Expressions, functions and cases in Racket
 
 Published
 
-Last modified: 2026-11-15 14:48:46 (PST)
+Last modified: 2026-11-15 15:33:39 (PST)
 
 > **NOTE:**
 >
@@ -322,27 +322,45 @@ Last modified: 2026-11-15 14:48:46 (PST)
 >   (+ x 3))
 > ```
 >
-> Guess what each expression returns:
->
-> 1.  `(twice add-three 10)`
-> 2.  `(twice h 4)`, with `h` from [Exercise 2](#exr-formula-from-code)
-> 3.  `(twice add-three (twice add-three 0))`
+> Guess what `(twice add-three 10)` returns.
 
 > **NOTE:**
 >
-> *Solution 7*. Replace `f` and `x` in the body `(f (f x))` ([Definition 7](#def-racket-define)):
+> *Solution 7*. As [Definition 7](#def-racket-define) says, replacing `f` and `x` in the body `(f (f x))` turns `(twice add-three 10)` into `(add-three (add-three 10))`, which is `(add-three 13)`, which returns 16.
 >
-> 1.  `(twice add-three 10)` is `(add-three (add-three 10))`, which is `(add-three 13)`, which returns 16.
-> 2.  `(twice h 4)` is `(h (h 4))`. Since $h(4) = 16 - 8 = 8$ and $h(8) = 64 - 16 = 48$, it returns 48.
-> 3.  The argument `(twice add-three 0)` returns 6, so the whole expression is `(twice add-three 6)`, which returns 12.
->
-> Racket returns the same values:
+> Racket returns the same value:
 >
 > ``` racket
 > (twice add-three 10)
 > ; 16
+> ```
+
+> **NOTE:**
+>
+> **Exercise 8 (Applying a function twice)** Continuing from [Exercise 7](#exr-twice), guess what `(twice h 4)` returns, with `h` from [Exercise 2](#exr-formula-from-code).
+
+> **NOTE:**
+>
+> *Solution 8*. Replacing `f` with `h` and `x` with 4 in the body `(f (f x))` gives `(h (h 4))`. The [function](#def-function) `h` from [Exercise 2](#exr-formula-from-code) is $h(x) = x^2 - 2x$, so $h(4) = 16 - 8 = 8$ and $h(8) = 64 - 16 = 48$. So `(twice h 4)` returns 48.
+>
+> Racket returns the same value:
+>
+> ``` racket
 > (twice h 4)
 > ; 48
+> ```
+
+> **NOTE:**
+>
+> **Exercise 9 (A call to `twice` as an argument)** Continuing from [Exercise 7](#exr-twice), guess what `(twice add-three (twice add-three 0))` returns.
+
+> **NOTE:**
+>
+> *Solution 9*. In `(twice add-three (twice add-three 0))`, the inner call `(twice add-three 0)` returns 6, so the whole [expression](#def-racket-expression) is `(twice add-three 6)`, which returns 12.
+>
+> Racket returns the same value:
+>
+> ``` racket
 > (twice add-three (twice add-three 0))
 > ; 12
 > ```
@@ -378,7 +396,7 @@ Last modified: 2026-11-15 14:48:46 (PST)
 
 > **NOTE:**
 >
-> **Exercise 8 (Applying a function to a list)** `(apply f L)` applies the function `f` to the elements of the list `L` as its arguments, so `(apply + (list 2 7 6))` is the same as `(+ 2 7 6)`:
+> **Exercise 10 (Applying a function to a list)** `(apply f L)` applies the function `f` to the elements of the list `L` as its arguments, so `(apply + (list 2 7 6))` is the same as `(+ 2 7 6)`:
 >
 > ``` racket
 > (apply + (list 2 7 6))
@@ -393,7 +411,7 @@ Last modified: 2026-11-15 14:48:46 (PST)
 
 > **NOTE:**
 >
-> *Solution 8*.
+> *Solution 10*.
 >
 > 1.  `(apply max (list 3 9 2))` is `(max 3 9 2)`, which returns 9.
 >
@@ -421,7 +439,7 @@ Last modified: 2026-11-15 14:48:46 (PST)
 
 > **NOTE:**
 >
-> **Exercise 9 (A function with no name)** The function `pair-with` takes a list `L` and a value `y`:
+> **Exercise 11 (A function with no name)** The function `pair-with` takes a list `L` and a value `y`:
 >
 > ``` racket
 > (define (pair-with L y)
@@ -436,7 +454,7 @@ Last modified: 2026-11-15 14:48:46 (PST)
 
 > **NOTE:**
 >
-> *Solution 9*. `(lambda (x) (* x x))` is the function that squares its argument, written in place without a name.
+> *Solution 11*. `(lambda (x) (* x x))` is the function that squares its argument, written in place without a name.
 >
 > 1.  Applying it to 7 returns 49.
 > 2.  `map` ([Example 3](#exm-map-filter)) applies the doubling function to each element, and returns `'(2 4 6)`.
@@ -462,7 +480,7 @@ Last modified: 2026-11-15 14:48:46 (PST)
 >   body)
 > ```
 >
-> is a **`lambda` expression**. Its value is the function with parameters `x1`, …, `xn` whose value at its arguments is the value of `body`, found as in [Definition 7](#def-racket-define). The function has no name. The body may use any name defined where the `lambda` expression appears, as the body of the `lambda` in `pair-with` ([Exercise 9](#exr-pair-with)) uses `y`.
+> is a **`lambda` expression**. Its value is the function with parameters `x1`, …, `xn` whose value at its arguments is the value of `body`, found as in [Definition 7](#def-racket-define). The function has no name. The body may use any name defined where the `lambda` expression appears, as the body of the `lambda` in `pair-with` ([Exercise 11](#exr-pair-with)) uses `y`.
 >
 > The definition `(define (f x) body)` is shorthand for `(define f (lambda (x) body))`: it gives the name `f` to the function the `lambda` expression makes.
 >
@@ -470,7 +488,7 @@ Last modified: 2026-11-15 14:48:46 (PST)
 
 > **NOTE:**
 >
-> *Remark 4* (Where the name comes from). The word `lambda` comes from the lambda calculus, a model of computation in which a function is written $\lambda x.\, e$, the function that takes $x$ to the value of the expression $e$. The lambda calculus has only three features: functions, applying a function to an argument, and variables. It has no numbers, strings or loops ([Crichton 2019](#ref-crichton2019cs242)). Applying $\lambda x.\, e$ to an argument replaces each $x$ in $e$ by that argument, as in evaluation by substitution ([Example 1](#exm-substitution)). The function in [Exercise 9](#exr-pair-with) that squares its argument is $\lambda x.\, x \cdot x$.
+> *Remark 4* (Where the name comes from). The word `lambda` comes from the lambda calculus, a model of computation in which a function is written $\lambda x.\, e$, the function that takes $x$ to the value of the expression $e$. The lambda calculus has only three features: functions, applying a function to an argument, and variables. It has no numbers, strings or loops ([Crichton 2019](#ref-crichton2019cs242)). Applying $\lambda x.\, e$ to an argument replaces each $x$ in $e$ by that argument, as in evaluation by substitution ([Example 1](#exm-substitution)). The function in [Exercise 11](#exr-pair-with) that squares its argument is $\lambda x.\, x \cdot x$.
 >
 > *Media:* Will Crichton’s [notes on the lambda calculus](https://stanford-cs242.github.io/f19/lectures/02-1-lambda-calculus), from Stanford’s CS 242, *Programming Languages*, go further ([Crichton 2019](#ref-crichton2019cs242)).
 

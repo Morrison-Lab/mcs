@@ -335,7 +335,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-15 14:48:46 (PST)</p>
+  <p class="date">Last modified: 2026-11-15 15:33:39 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -694,7 +694,7 @@ x &amp; \text{otherwise}
 <h1><span class="header-section-number">5</span> Functions as values</h1>
 
 </section>
-<section class="slide level2 scrollable">
+<section class="slide level2">
 
 <div id="exr-twice" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 7 (A function as an argument)</strong></span> The function <code>twice</code> takes a function <code>f</code> and a value <code>x</code>:</p>
@@ -705,31 +705,51 @@ x &amp; \text{otherwise}
 <span id="cb13-4"><a aria-label="4"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>add-three x<span class="op">)</span></span>
 <span id="cb13-5"><a aria-label="5"></a>  <span class="op">(+</span> x <span class="dv">3</span><span class="op">))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Guess what each expression returns:</p>
-<ol type="1">
-<li><code>(twice add-three 10)</code></li>
-<li><code>(twice h 4)</code>, with <code>h</code> from <a href="#/exr-formula-from-code" class="quarto-xref">Exercise&nbsp;2</a></li>
-<li><code>(twice add-three (twice add-three 0))</code></li>
-</ol>
+<p>Guess what <code>(twice add-three 10)</code> returns.</p>
 </div>
 </section>
-<section class="slide level2 scrollable">
+<section class="slide level2">
 
 <div id="sol-twice" class="proof solution">
-<p><span class="proof-title"><em>Solution 7</em>. </span>Replace <code>f</code> and <code>x</code> in the body <code>(f (f x))</code> (<a href="#/def-racket-define" class="quarto-xref">Definition&nbsp;7</a>):</p>
-<ol type="1">
-<li><code>(twice add-three 10)</code> is <code>(add-three (add-three 10))</code>, which is <code>(add-three 13)</code>, which returns 16.</li>
-<li><code>(twice h 4)</code> is <code>(h (h 4))</code>. Since <span class="math inline">\(h(4) = 16 - 8 = 8\)</span> and <span class="math inline">\(h(8) = 64 - 16 = 48\)</span>, it returns 48.</li>
-<li>The argument <code>(twice add-three 0)</code> returns 6, so the whole expression is <code>(twice add-three 6)</code>, which returns 12.</li>
-</ol>
-<p>Racket returns the same values:</p>
+<p><span class="proof-title"><em>Solution 7</em>. </span>As <a href="#/def-racket-define" class="quarto-xref">Definition&nbsp;7</a> says, replacing <code>f</code> and <code>x</code> in the body <code>(f (f x))</code> turns <code>(twice add-three 10)</code> into <code>(add-three (add-three 10))</code>, which is <code>(add-three 13)</code>, which returns 16.</p>
+<p>Racket returns the same value:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb14-1"><a aria-label="1"></a><span class="op">(</span>twice add-three <span class="dv">10</span><span class="op">)</span></span>
-<span id="cb14-2"><a aria-label="2"></a><span class="co">; 16</span></span>
-<span id="cb14-3"><a aria-label="3"></a><span class="op">(</span>twice h <span class="dv">4</span><span class="op">)</span></span>
-<span id="cb14-4"><a aria-label="4"></a><span class="co">; 48</span></span>
-<span id="cb14-5"><a aria-label="5"></a><span class="op">(</span>twice add-three <span class="op">(</span>twice add-three <span class="dv">0</span><span class="op">))</span></span>
-<span id="cb14-6"><a aria-label="6"></a><span class="co">; 12</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb14-2"><a aria-label="2"></a><span class="co">; 16</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-twice-h" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 8 (Applying a function twice)</strong></span> Continuing from <a href="#/exr-twice" class="quarto-xref">Exercise&nbsp;7</a>, guess what <code>(twice h 4)</code> returns, with <code>h</code> from <a href="#/exr-formula-from-code" class="quarto-xref">Exercise&nbsp;2</a>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-twice-h" class="proof solution">
+<p><span class="proof-title"><em>Solution 8</em>. </span>Replacing <code>f</code> with <code>h</code> and <code>x</code> with 4 in the body <code>(f (f x))</code> gives <code>(h (h 4))</code>. The <a href="#/def-function">function</a> <code>h</code> from <a href="#/exr-formula-from-code" class="quarto-xref">Exercise&nbsp;2</a> is <span class="math inline">\(h(x) = x^2 - 2x\)</span>, so <span class="math inline">\(h(4) = 16 - 8 = 8\)</span> and <span class="math inline">\(h(8) = 64 - 16 = 48\)</span>. So <code>(twice h 4)</code> returns 48.</p>
+<p>Racket returns the same value:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb15-1"><a aria-label="1"></a><span class="op">(</span>twice h <span class="dv">4</span><span class="op">)</span></span>
+<span id="cb15-2"><a aria-label="2"></a><span class="co">; 48</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-twice-nested" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 9 (A call to <code>twice</code> as an argument)</strong></span> Continuing from <a href="#/exr-twice" class="quarto-xref">Exercise&nbsp;7</a>, guess what <code>(twice add-three (twice add-three 0))</code> returns.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-twice-nested" class="proof solution">
+<p><span class="proof-title"><em>Solution 9</em>. </span>In <code>(twice add-three (twice add-three 0))</code>, the inner call <code>(twice add-three 0)</code> returns 6, so the whole <a href="#/def-racket-expression">expression</a> is <code>(twice add-three 6)</code>, which returns 12.</p>
+<p>Racket returns the same value:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb16-1"><a aria-label="1"></a><span class="op">(</span>twice add-three <span class="op">(</span>twice add-three <span class="dv">0</span><span class="op">))</span></span>
+<span id="cb16-2"><a aria-label="2"></a><span class="co">; 12</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </section>
@@ -744,8 +764,8 @@ x &amp; \text{otherwise}
 <div id="exm-map-filter" class="theorem example">
 <p><span class="theorem-title"><strong>Example 3 (<code>map</code> and <code>filter</code>)</strong></span> Racket’s <code>(list 5 7 9)</code> makes the list of 5, 7 and 9, which Racket prints with a quote mark in front:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb15-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">list</span> <span class="dv">5</span> <span class="dv">7</span> <span class="dv">9</span><span class="op">)</span></span>
-<span id="cb15-2"><a aria-label="2"></a><span class="co">; '(5 7 9)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb17-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">list</span> <span class="dv">5</span> <span class="dv">7</span> <span class="dv">9</span><span class="op">)</span></span>
+<span id="cb17-2"><a aria-label="2"></a><span class="co">; '(5 7 9)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Two built-in higher-order functions (<a href="#/def-higher-order" class="quarto-xref">Definition&nbsp;13</a>) work on lists:</p>
 <ul>
@@ -754,10 +774,10 @@ x &amp; \text{otherwise}
 </ul>
 <p>Applied to <code>add-three</code> from <a href="#/exr-twice" class="quarto-xref">Exercise&nbsp;7</a> and to Racket’s test <code>even?</code>, they return:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb16-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">map</span> add-three <span class="op">(</span><span class="kw">list</span> <span class="dv">5</span> <span class="dv">7</span> <span class="dv">9</span><span class="op">))</span></span>
-<span id="cb16-2"><a aria-label="2"></a><span class="co">; '(8 10 12)</span></span>
-<span id="cb16-3"><a aria-label="3"></a><span class="op">(</span><span class="kw">filter</span> <span class="kw">even?</span> <span class="op">(</span><span class="kw">list</span> <span class="dv">5</span> <span class="dv">6</span> <span class="dv">7</span> <span class="dv">8</span><span class="op">))</span></span>
-<span id="cb16-4"><a aria-label="4"></a><span class="co">; '(6 8)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb18-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">map</span> add-three <span class="op">(</span><span class="kw">list</span> <span class="dv">5</span> <span class="dv">7</span> <span class="dv">9</span><span class="op">))</span></span>
+<span id="cb18-2"><a aria-label="2"></a><span class="co">; '(8 10 12)</span></span>
+<span id="cb18-3"><a aria-label="3"></a><span class="op">(</span><span class="kw">filter</span> <span class="kw">even?</span> <span class="op">(</span><span class="kw">list</span> <span class="dv">5</span> <span class="dv">6</span> <span class="dv">7</span> <span class="dv">8</span><span class="op">))</span></span>
+<span id="cb18-4"><a aria-label="4"></a><span class="co">; '(6 8)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Neither one changes <code>L</code>; each returns a new list.</p>
 </div>
@@ -765,12 +785,12 @@ x &amp; \text{otherwise}
 <section class="slide level2 scrollable">
 
 <div id="exr-spread" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 8 (Applying a function to a list)</strong></span> <code>(apply f L)</code> applies the function <code>f</code> to the elements of the list <code>L</code> as its arguments, so <code>(apply + (list 2 7 6))</code> is the same as <code>(+ 2 7 6)</code>:</p>
+<p><span class="theorem-title"><strong>Exercise 10 (Applying a function to a list)</strong></span> <code>(apply f L)</code> applies the function <code>f</code> to the elements of the list <code>L</code> as its arguments, so <code>(apply + (list 2 7 6))</code> is the same as <code>(+ 2 7 6)</code>:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb17-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">apply</span> <span class="op">+</span> <span class="op">(</span><span class="kw">list</span> <span class="dv">2</span> <span class="dv">7</span> <span class="dv">6</span><span class="op">))</span></span>
-<span id="cb17-2"><a aria-label="2"></a><span class="co">; 15</span></span>
-<span id="cb17-3"><a aria-label="3"></a><span class="op">(+</span> <span class="dv">2</span> <span class="dv">7</span> <span class="dv">6</span><span class="op">)</span></span>
-<span id="cb17-4"><a aria-label="4"></a><span class="co">; 15</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb19-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">apply</span> <span class="op">+</span> <span class="op">(</span><span class="kw">list</span> <span class="dv">2</span> <span class="dv">7</span> <span class="dv">6</span><span class="op">))</span></span>
+<span id="cb19-2"><a aria-label="2"></a><span class="co">; 15</span></span>
+<span id="cb19-3"><a aria-label="3"></a><span class="op">(+</span> <span class="dv">2</span> <span class="dv">7</span> <span class="dv">6</span><span class="op">)</span></span>
+<span id="cb19-4"><a aria-label="4"></a><span class="co">; 15</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ol type="1">
 <li>Guess what <code>(apply max (list 3 9 2))</code> returns.</li>
@@ -782,23 +802,23 @@ x &amp; \text{otherwise}
 <section class="slide level2 scrollable">
 
 <div id="sol-spread" class="proof solution">
-<p><span class="proof-title"><em>Solution 8</em>. </span></p>
+<p><span class="proof-title"><em>Solution 10</em>. </span></p>
 <ol type="1">
 <li><p><code>(apply max (list 3 9 2))</code> is <code>(max 3 9 2)</code>, which returns 9.</p></li>
 <li><p>One answer:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb18-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>spread L<span class="op">)</span></span>
-<span id="cb18-2"><a aria-label="2"></a>  <span class="op">(-</span> <span class="op">(</span><span class="kw">apply</span> <span class="kw">max</span> L<span class="op">)</span> <span class="op">(</span><span class="kw">apply</span> <span class="kw">min</span> L<span class="op">)))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb20-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>spread L<span class="op">)</span></span>
+<span id="cb20-2"><a aria-label="2"></a>  <span class="op">(-</span> <span class="op">(</span><span class="kw">apply</span> <span class="kw">max</span> L<span class="op">)</span> <span class="op">(</span><span class="kw">apply</span> <span class="kw">min</span> L<span class="op">)))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div></li>
 <li><p>The largest element is 7 and the smallest is <span class="math inline">\(-1\)</span>, so <code>(spread (list 4 -1 7 2))</code> returns <span class="math inline">\(7 - (-1) = 8\)</span>.</p></li>
 </ol>
 <p><code>spread</code> needs no recursion: <code>max</code> and <code>min</code> already take any number of arguments, and <code>apply</code> hands each of them the whole list.</p>
 <p>Racket returns the same values:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb19-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">apply</span> <span class="kw">max</span> <span class="op">(</span><span class="kw">list</span> <span class="dv">3</span> <span class="dv">9</span> <span class="dv">2</span><span class="op">))</span></span>
-<span id="cb19-2"><a aria-label="2"></a><span class="co">; 9</span></span>
-<span id="cb19-3"><a aria-label="3"></a><span class="op">(</span>spread <span class="op">(</span><span class="kw">list</span> <span class="dv">4</span> -<span class="dv">1</span> <span class="dv">7</span> <span class="dv">2</span><span class="op">))</span></span>
-<span id="cb19-4"><a aria-label="4"></a><span class="co">; 8</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb21-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">apply</span> <span class="kw">max</span> <span class="op">(</span><span class="kw">list</span> <span class="dv">3</span> <span class="dv">9</span> <span class="dv">2</span><span class="op">))</span></span>
+<span id="cb21-2"><a aria-label="2"></a><span class="co">; 9</span></span>
+<span id="cb21-3"><a aria-label="3"></a><span class="op">(</span>spread <span class="op">(</span><span class="kw">list</span> <span class="dv">4</span> -<span class="dv">1</span> <span class="dv">7</span> <span class="dv">2</span><span class="op">))</span></span>
+<span id="cb21-4"><a aria-label="4"></a><span class="co">; 8</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </section></section>
@@ -810,10 +830,10 @@ x &amp; \text{otherwise}
 <section class="slide level2 scrollable">
 
 <div id="exr-pair-with" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 9 (A function with no name)</strong></span> The function <code>pair-with</code> takes a list <code>L</code> and a value <code>y</code>:</p>
+<p><span class="theorem-title"><strong>Exercise 11 (A function with no name)</strong></span> The function <code>pair-with</code> takes a list <code>L</code> and a value <code>y</code>:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb20-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>pair-with L y<span class="op">)</span></span>
-<span id="cb20-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">map</span> <span class="op">(</span><span class="kw">lambda</span> <span class="op">(</span>x<span class="op">)</span> <span class="op">(</span><span class="kw">list</span> x y<span class="op">))</span> L<span class="op">))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb22-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>pair-with L y<span class="op">)</span></span>
+<span id="cb22-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">map</span> <span class="op">(</span><span class="kw">lambda</span> <span class="op">(</span>x<span class="op">)</span> <span class="op">(</span><span class="kw">list</span> x y<span class="op">))</span> L<span class="op">))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Guess what each expression returns:</p>
 <ol type="1">
@@ -826,7 +846,7 @@ x &amp; \text{otherwise}
 <section class="slide level2 scrollable">
 
 <div id="sol-pair-with" class="proof solution">
-<p><span class="proof-title"><em>Solution 9</em>. </span><code>(lambda (x) (* x x))</code> is the function that squares its argument, written in place without a name.</p>
+<p><span class="proof-title"><em>Solution 11</em>. </span><code>(lambda (x) (* x x))</code> is the function that squares its argument, written in place without a name.</p>
 <ol type="1">
 <li>Applying it to 7 returns 49.</li>
 <li><code>map</code> (<a href="#/exm-map-filter" class="quarto-xref">Example&nbsp;3</a>) applies the doubling function to each element, and returns <code>'(2 4 6)</code>.</li>
@@ -834,12 +854,12 @@ x &amp; \text{otherwise}
 </ol>
 <p>Racket returns the same values:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb21-1"><a aria-label="1"></a><span class="op">((</span><span class="kw">lambda</span> <span class="op">(</span>x<span class="op">)</span> <span class="op">(*</span> x x<span class="op">))</span> <span class="dv">7</span><span class="op">)</span></span>
-<span id="cb21-2"><a aria-label="2"></a><span class="co">; 49</span></span>
-<span id="cb21-3"><a aria-label="3"></a><span class="op">(</span><span class="kw">map</span> <span class="op">(</span><span class="kw">lambda</span> <span class="op">(</span>x<span class="op">)</span> <span class="op">(*</span> <span class="dv">2</span> x<span class="op">))</span> <span class="op">(</span><span class="kw">list</span> <span class="dv">1</span> <span class="dv">2</span> <span class="dv">3</span><span class="op">))</span></span>
-<span id="cb21-4"><a aria-label="4"></a><span class="co">; '(2 4 6)</span></span>
-<span id="cb21-5"><a aria-label="5"></a><span class="op">(</span>pair-with <span class="op">(</span><span class="kw">list</span> <span class="dv">1</span> <span class="dv">2</span> <span class="dv">3</span><span class="op">)</span> <span class="st">"a"</span><span class="op">)</span></span>
-<span id="cb21-6"><a aria-label="6"></a><span class="co">; '((1 "a") (2 "a") (3 "a"))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb23-1"><a aria-label="1"></a><span class="op">((</span><span class="kw">lambda</span> <span class="op">(</span>x<span class="op">)</span> <span class="op">(*</span> x x<span class="op">))</span> <span class="dv">7</span><span class="op">)</span></span>
+<span id="cb23-2"><a aria-label="2"></a><span class="co">; 49</span></span>
+<span id="cb23-3"><a aria-label="3"></a><span class="op">(</span><span class="kw">map</span> <span class="op">(</span><span class="kw">lambda</span> <span class="op">(</span>x<span class="op">)</span> <span class="op">(*</span> <span class="dv">2</span> x<span class="op">))</span> <span class="op">(</span><span class="kw">list</span> <span class="dv">1</span> <span class="dv">2</span> <span class="dv">3</span><span class="op">))</span></span>
+<span id="cb23-4"><a aria-label="4"></a><span class="co">; '(2 4 6)</span></span>
+<span id="cb23-5"><a aria-label="5"></a><span class="op">(</span>pair-with <span class="op">(</span><span class="kw">list</span> <span class="dv">1</span> <span class="dv">2</span> <span class="dv">3</span><span class="op">)</span> <span class="st">"a"</span><span class="op">)</span></span>
+<span id="cb23-6"><a aria-label="6"></a><span class="co">; '((1 "a") (2 "a") (3 "a"))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </section>
@@ -847,9 +867,9 @@ x &amp; \text{otherwise}
 
 <div id="def-lambda" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 14 (<code>lambda</code>)</strong></span> The Racket expression</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb22-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">lambda</span> <span class="op">(</span>x1 ... xn<span class="op">)</span></span>
-<span id="cb22-2"><a aria-label="2"></a>  body<span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>is a <strong><code>lambda</code> expression</strong>. Its value is the function with parameters <code>x1</code>, …, <code>xn</code> whose value at its arguments is the value of <code>body</code>, found as in <a href="#/def-racket-define" class="quarto-xref">Definition&nbsp;7</a>. The function has no name. The body may use any name defined where the <code>lambda</code> expression appears, as the body of the <code>lambda</code> in <code>pair-with</code> (<a href="#/exr-pair-with" class="quarto-xref">Exercise&nbsp;9</a>) uses <code>y</code>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb24-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">lambda</span> <span class="op">(</span>x1 ... xn<span class="op">)</span></span>
+<span id="cb24-2"><a aria-label="2"></a>  body<span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>is a <strong><code>lambda</code> expression</strong>. Its value is the function with parameters <code>x1</code>, …, <code>xn</code> whose value at its arguments is the value of <code>body</code>, found as in <a href="#/def-racket-define" class="quarto-xref">Definition&nbsp;7</a>. The function has no name. The body may use any name defined where the <code>lambda</code> expression appears, as the body of the <code>lambda</code> in <code>pair-with</code> (<a href="#/exr-pair-with" class="quarto-xref">Exercise&nbsp;11</a>) uses <code>y</code>.</p>
 <p>The definition <code>(define (f x) body)</code> is shorthand for <code>(define f (lambda (x) body))</code>: it gives the name <code>f</code> to the function the <code>lambda</code> expression makes.</p>
 <p><em>Video:</em> Jerry Cain uses <code>lambda</code> with <code>map</code> in Scheme, the language Racket grew out of, in <a href="https://www.youtube.com/watch?v=3LeCydausnk">Stanford CS 107 Lecture 22</a> <span class="citation" data-cites="cain2008cs107videos">(<a href="#/references" role="doc-biblioref" onclick="">Cain 2008</a>)</span>.</p>
 </div>
@@ -857,7 +877,7 @@ x &amp; \text{otherwise}
 <section class="slide level2">
 
 <div id="rem-lambda-calculus" class="proof remark">
-<p><span class="proof-title"><em>Remark 4</em> (Where the name comes from). </span>The word <code>lambda</code> comes from the lambda calculus, a model of computation in which a function is written <span class="math inline">\(\lambda x.\, e\)</span>, the function that takes <span class="math inline">\(x\)</span> to the value of the expression <span class="math inline">\(e\)</span>. The lambda calculus has only three features: functions, applying a function to an argument, and variables. It has no numbers, strings or loops <span class="citation" data-cites="crichton2019cs242">(<a href="#/references" role="doc-biblioref" onclick="">Crichton 2019</a>)</span>. Applying <span class="math inline">\(\lambda x.\, e\)</span> to an argument replaces each <span class="math inline">\(x\)</span> in <span class="math inline">\(e\)</span> by that argument, as in evaluation by substitution (<a href="#/exm-substitution" class="quarto-xref">Example&nbsp;1</a>). The function in <a href="#/exr-pair-with" class="quarto-xref">Exercise&nbsp;9</a> that squares its argument is <span class="math inline">\(\lambda x.\, x \cdot x\)</span>.</p>
+<p><span class="proof-title"><em>Remark 4</em> (Where the name comes from). </span>The word <code>lambda</code> comes from the lambda calculus, a model of computation in which a function is written <span class="math inline">\(\lambda x.\, e\)</span>, the function that takes <span class="math inline">\(x\)</span> to the value of the expression <span class="math inline">\(e\)</span>. The lambda calculus has only three features: functions, applying a function to an argument, and variables. It has no numbers, strings or loops <span class="citation" data-cites="crichton2019cs242">(<a href="#/references" role="doc-biblioref" onclick="">Crichton 2019</a>)</span>. Applying <span class="math inline">\(\lambda x.\, e\)</span> to an argument replaces each <span class="math inline">\(x\)</span> in <span class="math inline">\(e\)</span> by that argument, as in evaluation by substitution (<a href="#/exm-substitution" class="quarto-xref">Example&nbsp;1</a>). The function in <a href="#/exr-pair-with" class="quarto-xref">Exercise&nbsp;11</a> that squares its argument is <span class="math inline">\(\lambda x.\, x \cdot x\)</span>.</p>
 <p><em>Media:</em> Will Crichton’s <a href="https://stanford-cs242.github.io/f19/lectures/02-1-lambda-calculus">notes on the lambda calculus</a>, from Stanford’s CS 242, <em>Programming Languages</em>, go further <span class="citation" data-cites="crichton2019cs242">(<a href="#/references" role="doc-biblioref" onclick="">Crichton 2019</a>)</span>.</p>
 </div>
 </section>
@@ -866,8 +886,8 @@ x &amp; \text{otherwise}
 <div id="exm-adder" class="theorem example">
 <p><span class="theorem-title"><strong>Example 4 (A function that returns a function)</strong></span> The function <code>adder</code> takes a number <code>d</code> and returns a function:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb23-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>adder d<span class="op">)</span></span>
-<span id="cb23-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">lambda</span> <span class="op">(</span>x<span class="op">)</span> <span class="op">(+</span> x d<span class="op">)))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb25-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>adder d<span class="op">)</span></span>
+<span id="cb25-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">lambda</span> <span class="op">(</span>x<span class="op">)</span> <span class="op">(+</span> x d<span class="op">)))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><code>(adder 3)</code> returns the function <span class="math inline">\(x \mapsto x + 3\)</span>, which still knows that <code>d</code> is 3 after <code>adder</code> has returned. So <code>adder</code> is a higher-order function (<a href="#/def-higher-order" class="quarto-xref">Definition&nbsp;13</a>), and its value can be used anywhere a function can:</p>
 <ul>
@@ -876,12 +896,12 @@ x &amp; \text{otherwise}
 <li>passed to <code>map</code> from <a href="#/exm-map-filter" class="quarto-xref">Example&nbsp;3</a>.</li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb24-1"><a aria-label="1"></a><span class="op">((</span>adder <span class="dv">3</span><span class="op">)</span> <span class="dv">4</span><span class="op">)</span></span>
-<span id="cb24-2"><a aria-label="2"></a><span class="co">; 7</span></span>
-<span id="cb24-3"><a aria-label="3"></a><span class="op">(</span>twice <span class="op">(</span>adder <span class="dv">3</span><span class="op">)</span> <span class="dv">10</span><span class="op">)</span></span>
-<span id="cb24-4"><a aria-label="4"></a><span class="co">; 16</span></span>
-<span id="cb24-5"><a aria-label="5"></a><span class="op">(</span><span class="kw">map</span> <span class="op">(</span>adder <span class="dv">1</span><span class="op">)</span> <span class="op">(</span><span class="kw">list</span> <span class="dv">5</span> <span class="dv">7</span> <span class="dv">9</span><span class="op">))</span></span>
-<span id="cb24-6"><a aria-label="6"></a><span class="co">; '(6 8 10)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb26-1"><a aria-label="1"></a><span class="op">((</span>adder <span class="dv">3</span><span class="op">)</span> <span class="dv">4</span><span class="op">)</span></span>
+<span id="cb26-2"><a aria-label="2"></a><span class="co">; 7</span></span>
+<span id="cb26-3"><a aria-label="3"></a><span class="op">(</span>twice <span class="op">(</span>adder <span class="dv">3</span><span class="op">)</span> <span class="dv">10</span><span class="op">)</span></span>
+<span id="cb26-4"><a aria-label="4"></a><span class="co">; 16</span></span>
+<span id="cb26-5"><a aria-label="5"></a><span class="op">(</span><span class="kw">map</span> <span class="op">(</span>adder <span class="dv">1</span><span class="op">)</span> <span class="op">(</span><span class="kw">list</span> <span class="dv">5</span> <span class="dv">7</span> <span class="dv">9</span><span class="op">))</span></span>
+<span id="cb26-6"><a aria-label="6"></a><span class="co">; '(6 8 10)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </section>
@@ -889,10 +909,10 @@ x &amp; \text{otherwise}
 
 <div id="def-let" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 15 (<code>let</code>)</strong></span> The Racket expression</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb25-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">let</span> <span class="op">([</span>name1 e1<span class="op">]</span></span>
-<span id="cb25-2"><a aria-label="2"></a>      ...</span>
-<span id="cb25-3"><a aria-label="3"></a>      <span class="op">[</span>namen en<span class="op">])</span></span>
-<span id="cb25-4"><a aria-label="4"></a>  body<span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb27-1"><a aria-label="1"></a><span class="op">(</span><span class="kw">let</span> <span class="op">([</span>name1 e1<span class="op">]</span></span>
+<span id="cb27-2"><a aria-label="2"></a>      ...</span>
+<span id="cb27-3"><a aria-label="3"></a>      <span class="op">[</span>namen en<span class="op">])</span></span>
+<span id="cb27-4"><a aria-label="4"></a>  body<span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>evaluates <code>e1</code>, …, <code>en</code>, gives each value its name, and returns the value of <code>body</code>, which can use those names. The names last only inside <code>body</code>.</p>
 <p>A <code>let</code> expression is shorthand for applying a <code>lambda</code> expression (<a href="#/def-lambda" class="quarto-xref">Definition&nbsp;14</a>): it has the same value as <code>((lambda (name1 ... namen) body) e1 ... en)</code>. So <code>(let ([s (+ 1 2)]) (* s s))</code> and <code>((lambda (s) (* s s)) (+ 1 2))</code> both return 9.</p>
 <p><em>Video:</em> Cain uses <code>let</code> to save a result that would otherwise be computed twice, and shows how <code>let</code> becomes a <code>lambda</code>, in <a href="https://www.youtube.com/watch?v=3LeCydausnk">CS 107 Lecture 22</a> <span class="citation" data-cites="cain2008cs107videos">(<a href="#/references" role="doc-biblioref" onclick="">Cain 2008</a>)</span>.</p>
@@ -905,15 +925,15 @@ x &amp; \text{otherwise}
 x = \frac{-b \pm s}{2a}, \qquad \text{where } s = \sqrt{b^2 - 4ac}.
 \]</span> Both solutions use <span class="math inline">\(s\)</span>, so a <code>let</code> names it and computes it once:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb26-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>roots a b c<span class="op">)</span></span>
-<span id="cb26-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">let</span> <span class="op">([</span>s <span class="op">(</span><span class="kw">sqrt</span> <span class="op">(-</span> <span class="op">(*</span> b b<span class="op">)</span> <span class="op">(*</span> <span class="dv">4</span> a c<span class="op">)))])</span></span>
-<span id="cb26-3"><a aria-label="3"></a>    <span class="op">(</span><span class="kw">list</span> <span class="op">(/</span> <span class="op">(+</span> <span class="op">(-</span> b<span class="op">)</span> s<span class="op">)</span> <span class="op">(*</span> <span class="dv">2</span> a<span class="op">))</span></span>
-<span id="cb26-4"><a aria-label="4"></a>          <span class="op">(/</span> <span class="op">(-</span> <span class="op">(-</span> b<span class="op">)</span> s<span class="op">)</span> <span class="op">(*</span> <span class="dv">2</span> a<span class="op">)))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb28-1"><a aria-label="1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>roots a b c<span class="op">)</span></span>
+<span id="cb28-2"><a aria-label="2"></a>  <span class="op">(</span><span class="kw">let</span> <span class="op">([</span>s <span class="op">(</span><span class="kw">sqrt</span> <span class="op">(-</span> <span class="op">(*</span> b b<span class="op">)</span> <span class="op">(*</span> <span class="dv">4</span> a c<span class="op">)))])</span></span>
+<span id="cb28-3"><a aria-label="3"></a>    <span class="op">(</span><span class="kw">list</span> <span class="op">(/</span> <span class="op">(+</span> <span class="op">(-</span> b<span class="op">)</span> s<span class="op">)</span> <span class="op">(*</span> <span class="dv">2</span> a<span class="op">))</span></span>
+<span id="cb28-4"><a aria-label="4"></a>          <span class="op">(/</span> <span class="op">(-</span> <span class="op">(-</span> b<span class="op">)</span> s<span class="op">)</span> <span class="op">(*</span> <span class="dv">2</span> a<span class="op">)))))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Since <span class="math inline">\(x^2 - 3x + 2 = (x - 1)(x - 2)\)</span>, the roots of <span class="math inline">\(x^2 - 3x + 2\)</span> are 2 and 1:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb27-1"><a aria-label="1"></a><span class="op">(</span>roots <span class="dv">1</span> -<span class="dv">3</span> <span class="dv">2</span><span class="op">)</span></span>
-<span id="cb27-2"><a aria-label="2"></a><span class="co">; '(2 1)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource racket number-lines code-with-copy"><code class="sourceCode racket"><span id="cb29-1"><a aria-label="1"></a><span class="op">(</span>roots <span class="dv">1</span> -<span class="dv">3</span> <span class="dv">2</span><span class="op">)</span></span>
+<span id="cb29-2"><a aria-label="2"></a><span class="co">; '(2 1)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><code>let</code> does not change a variable: inside the body, <code>s</code> stands for one value, as a name does in algebra. So <code>roots</code> is a pure function (<a href="#/def-pure-function" class="quarto-xref">Definition&nbsp;11</a>).</p>
 </div>
