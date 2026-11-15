@@ -1,0 +1,2669 @@
+{
+ "site": "mcs",
+ "base": "https://morrison-lab.github.io/mcs/",
+ "meaning": "edge [A, B] means A uses B: B is a prerequisite of A, A a postrequisite of B",
+ "nodes": [
+  {
+   "id": "mcs/expressions-algorithms#def-algorithm",
+   "site": "mcs",
+   "page": "expressions-algorithms",
+   "div": "def-algorithm",
+   "kind": "def",
+   "title": "Algorithm",
+   "external": false
+  },
+  {
+   "id": "mcs/expressions-algorithms#def-closed-form-expression",
+   "site": "mcs",
+   "page": "expressions-algorithms",
+   "div": "def-closed-form-expression",
+   "kind": "def",
+   "title": "Closed-form expression (formula)",
+   "external": false
+  },
+  {
+   "id": "mcs/expressions-algorithms#def-closed-form-solution",
+   "site": "mcs",
+   "page": "expressions-algorithms",
+   "div": "def-closed-form-solution",
+   "kind": "def",
+   "title": "Closed-form solution",
+   "external": false
+  },
+  {
+   "id": "mcs/expressions-algorithms#def-computes",
+   "site": "mcs",
+   "page": "expressions-algorithms",
+   "div": "def-computes",
+   "kind": "def",
+   "title": "Computes",
+   "external": false
+  },
+  {
+   "id": "mcs/expressions-algorithms#def-denotes",
+   "site": "mcs",
+   "page": "expressions-algorithms",
+   "div": "def-denotes",
+   "kind": "def",
+   "title": "Denotes",
+   "external": false
+  },
+  {
+   "id": "mcs/expressions-algorithms#def-expression",
+   "site": "mcs",
+   "page": "expressions-algorithms",
+   "div": "def-expression",
+   "kind": "def",
+   "title": "Expression",
+   "external": false
+  },
+  {
+   "id": "mcs/expressions-algorithms#def-parse-tree",
+   "site": "mcs",
+   "page": "expressions-algorithms",
+   "div": "def-parse-tree",
+   "kind": "def",
+   "title": "Parse tree",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-argument",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-argument",
+   "kind": "def",
+   "title": "Argument, input",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-cardinality",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-cardinality",
+   "kind": "def",
+   "title": "Cardinality",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-closed-under",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-closed-under",
+   "kind": "def",
+   "title": "Closed under an operation",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-codomain",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-codomain",
+   "kind": "def",
+   "title": "Codomain",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-composition",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-composition",
+   "kind": "def",
+   "title": "Composition",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-countable-set",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-countable-set",
+   "kind": "def",
+   "title": "Countable set",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-countably-infinite",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-countably-infinite",
+   "kind": "def",
+   "title": "Countably infinite set",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-domain",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-domain",
+   "kind": "def",
+   "title": "Domain",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-elementwise-function",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-elementwise-function",
+   "kind": "def",
+   "title": "Elementwise application of a function to a vector",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-finite-sequence",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-finite-sequence",
+   "kind": "def",
+   "title": "Finite sequence",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-finite-set",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-finite-set",
+   "kind": "def",
+   "title": "Finite set",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-function",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-function",
+   "kind": "def",
+   "title": "Function, map, mapping, transformation",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-functional",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-functional",
+   "kind": "def",
+   "title": "Functional",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-graph",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-graph",
+   "kind": "def",
+   "title": "Graph of a function",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-image",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-image",
+   "kind": "def",
+   "title": "Image",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-infinite-set",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-infinite-set",
+   "kind": "def",
+   "title": "Infinite set",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-inner-function",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-inner-function",
+   "kind": "def",
+   "title": "Inner function",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-inverse-function",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-inverse-function",
+   "kind": "def",
+   "title": "Inverse function",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-logistic-function",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-logistic-function",
+   "kind": "def",
+   "title": "Logistic function, sigmoid, expit",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-operator",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-operator",
+   "kind": "def",
+   "title": "Operator",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-outer-function",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-outer-function",
+   "kind": "def",
+   "title": "Outer function",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-preimage",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-preimage",
+   "kind": "def",
+   "title": "Preimage, inverse image",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-range",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-range",
+   "kind": "def",
+   "title": "Range",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-relation",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-relation",
+   "kind": "def",
+   "title": "Relation",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-sequence",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-sequence",
+   "kind": "def",
+   "title": "Sequence",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-sequence-term",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-sequence-term",
+   "kind": "def",
+   "title": "Term of a sequence",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#def-value",
+   "site": "mcs",
+   "page": "functions",
+   "div": "def-value",
+   "kind": "def",
+   "title": "Value, output",
+   "external": false
+  },
+  {
+   "id": "mcs/functions#thm-interval-uncountable",
+   "site": "mcs",
+   "page": "functions",
+   "div": "thm-interval-uncountable",
+   "kind": "thm",
+   "title": "The unit interval is not countable",
+   "external": false
+  },
+  {
+   "id": "mcs/growth-rates#def-big-o",
+   "site": "mcs",
+   "page": "growth-rates",
+   "div": "def-big-o",
+   "kind": "def",
+   "title": "Big-O",
+   "external": false
+  },
+  {
+   "id": "mcs/growth-rates#def-big-omega",
+   "site": "mcs",
+   "page": "growth-rates",
+   "div": "def-big-omega",
+   "kind": "def",
+   "title": "Big-Omega",
+   "external": false
+  },
+  {
+   "id": "mcs/growth-rates#def-big-theta",
+   "site": "mcs",
+   "page": "growth-rates",
+   "div": "def-big-theta",
+   "kind": "def",
+   "title": "Big-Theta",
+   "external": false
+  },
+  {
+   "id": "mcs/induction#def-fibonacci-sequence",
+   "site": "mcs",
+   "page": "induction",
+   "div": "def-fibonacci-sequence",
+   "kind": "def",
+   "title": "Fibonacci sequence",
+   "external": false
+  },
+  {
+   "id": "mcs/induction#def-recursive-sequence",
+   "site": "mcs",
+   "page": "induction",
+   "div": "def-recursive-sequence",
+   "kind": "def",
+   "title": "Recursively defined sequence",
+   "external": false
+  },
+  {
+   "id": "mcs/induction#def-strong-induction",
+   "site": "mcs",
+   "page": "induction",
+   "div": "def-strong-induction",
+   "kind": "def",
+   "title": "Proof by strong induction",
+   "external": false
+  },
+  {
+   "id": "mcs/number-systems#def-congruence",
+   "site": "mcs",
+   "page": "number-systems",
+   "div": "def-congruence",
+   "kind": "def",
+   "title": "Congruence modulo $n$",
+   "external": false
+  },
+  {
+   "id": "mcs/number-systems#def-divides",
+   "site": "mcs",
+   "page": "number-systems",
+   "div": "def-divides",
+   "kind": "def",
+   "title": "Divides",
+   "external": false
+  },
+  {
+   "id": "mcs/number-systems#def-even-odd",
+   "site": "mcs",
+   "page": "number-systems",
+   "div": "def-even-odd",
+   "kind": "def",
+   "title": "Even integer",
+   "external": false
+  },
+  {
+   "id": "mcs/number-systems#def-factorial",
+   "site": "mcs",
+   "page": "number-systems",
+   "div": "def-factorial",
+   "kind": "def",
+   "title": "Factorial",
+   "external": false
+  },
+  {
+   "id": "mcs/number-systems#def-floor",
+   "site": "mcs",
+   "page": "number-systems",
+   "div": "def-floor",
+   "kind": "def",
+   "title": "Floor",
+   "external": false
+  },
+  {
+   "id": "mcs/number-systems#def-integers",
+   "site": "mcs",
+   "page": "number-systems",
+   "div": "def-integers",
+   "kind": "def",
+   "title": "Integers",
+   "external": false
+  },
+  {
+   "id": "mcs/number-systems#def-irrational-numbers",
+   "site": "mcs",
+   "page": "number-systems",
+   "div": "def-irrational-numbers",
+   "kind": "def",
+   "title": "Irrational numbers",
+   "external": false
+  },
+  {
+   "id": "mcs/number-systems#def-natural-numbers",
+   "site": "mcs",
+   "page": "number-systems",
+   "div": "def-natural-numbers",
+   "kind": "def",
+   "title": "Natural numbers (our convention)",
+   "external": false
+  },
+  {
+   "id": "mcs/number-systems#def-negative-integer",
+   "site": "mcs",
+   "page": "number-systems",
+   "div": "def-negative-integer",
+   "kind": "def",
+   "title": "Negative integers",
+   "external": false
+  },
+  {
+   "id": "mcs/number-systems#def-nonnegative-integers",
+   "site": "mcs",
+   "page": "number-systems",
+   "div": "def-nonnegative-integers",
+   "kind": "def",
+   "title": "Non-negative integers",
+   "external": false
+  },
+  {
+   "id": "mcs/number-systems#def-odd",
+   "site": "mcs",
+   "page": "number-systems",
+   "div": "def-odd",
+   "kind": "def",
+   "title": "Odd integer",
+   "external": false
+  },
+  {
+   "id": "mcs/number-systems#def-positive-integer",
+   "site": "mcs",
+   "page": "number-systems",
+   "div": "def-positive-integer",
+   "kind": "def",
+   "title": "Positive integers",
+   "external": false
+  },
+  {
+   "id": "mcs/number-systems#def-prime",
+   "site": "mcs",
+   "page": "number-systems",
+   "div": "def-prime",
+   "kind": "def",
+   "title": "Prime number",
+   "external": false
+  },
+  {
+   "id": "mcs/number-systems#def-rational-numbers",
+   "site": "mcs",
+   "page": "number-systems",
+   "div": "def-rational-numbers",
+   "kind": "def",
+   "title": "Rational numbers",
+   "external": false
+  },
+  {
+   "id": "mcs/number-systems#def-real-numbers",
+   "site": "mcs",
+   "page": "number-systems",
+   "div": "def-real-numbers",
+   "kind": "def",
+   "title": "Real numbers",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-and",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-and",
+   "kind": "def",
+   "title": "And",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-conclusion",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-conclusion",
+   "kind": "def",
+   "title": "Conclusion",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-constructive-proof",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-constructive-proof",
+   "kind": "def",
+   "title": "Constructive proof",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-contradiction",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-contradiction",
+   "kind": "def",
+   "title": "Contradiction",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-contrapositive",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-contrapositive",
+   "kind": "def",
+   "title": "Contrapositive",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-converse",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-converse",
+   "kind": "def",
+   "title": "Converse",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-corollary",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-corollary",
+   "kind": "def",
+   "title": "Corollary",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-counterexample",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-counterexample",
+   "kind": "def",
+   "title": "Counterexample",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-derivation",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-derivation",
+   "kind": "def",
+   "title": "Derivation",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-direct-proof",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-direct-proof",
+   "kind": "def",
+   "title": "Direct proof",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-disproof",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-disproof",
+   "kind": "def",
+   "title": "Disproof",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-domain-of-discourse",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-domain-of-discourse",
+   "kind": "def",
+   "title": "Domain of discourse, universe of discourse",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-existential-quantifier",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-existential-quantifier",
+   "kind": "def",
+   "title": "Existential quantifier",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-first-order-logic",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-first-order-logic",
+   "kind": "def",
+   "title": "First-order logic",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-formal-proof",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-formal-proof",
+   "kind": "def",
+   "title": "Formal proof",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-iff",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-iff",
+   "kind": "def",
+   "title": "If and only if",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-implies",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-implies",
+   "kind": "def",
+   "title": "Implies",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-inequality",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-inequality",
+   "kind": "def",
+   "title": "Inequality",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-lemma",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-lemma",
+   "kind": "def",
+   "title": "Lemma",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-logical-argument",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-logical-argument",
+   "kind": "def",
+   "title": "Logical argument",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-logical-connective",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-logical-connective",
+   "kind": "def",
+   "title": "Logical connective",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-logical-entailment",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-logical-entailment",
+   "kind": "def",
+   "title": "Logical entailment, logical consequence, deductive consequence",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-logically-equivalent",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-logically-equivalent",
+   "kind": "def",
+   "title": "Logically equivalent",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-necessary-condition",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-necessary-condition",
+   "kind": "def",
+   "title": "Necessary condition",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-necessary-sufficient",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-necessary-sufficient",
+   "kind": "def",
+   "title": "Necessary and sufficient condition",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-nonconstructive-proof",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-nonconstructive-proof",
+   "kind": "def",
+   "title": "Non-constructive proof",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-not",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-not",
+   "kind": "def",
+   "title": "Not",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-or",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-or",
+   "kind": "def",
+   "title": "Or",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-predicate",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-predicate",
+   "kind": "def",
+   "title": "Predicate",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-premise",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-premise",
+   "kind": "def",
+   "title": "Premise",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-proof",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-proof",
+   "kind": "def",
+   "title": "Proof",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-proof-by-cases",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-proof-by-cases",
+   "kind": "def",
+   "title": "Proof by cases, proof by exhaustion",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-proof-by-contradiction",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-proof-by-contradiction",
+   "kind": "def",
+   "title": "Proof by contradiction",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-proof-by-contrapositive",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-proof-by-contrapositive",
+   "kind": "def",
+   "title": "Proof by contrapositive",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-proof-by-induction",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-proof-by-induction",
+   "kind": "def",
+   "title": "Proof by induction",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-proposition",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-proposition",
+   "kind": "def",
+   "title": "Proposition, statement",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-propositional-logic",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-propositional-logic",
+   "kind": "def",
+   "title": "Propositional logic",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-quantifier",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-quantifier",
+   "kind": "def",
+   "title": "Quantifier",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-result",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-result",
+   "kind": "def",
+   "title": "Result",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-rule-of-inference",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-rule-of-inference",
+   "kind": "def",
+   "title": "Rule of inference",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-sufficient-condition",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-sufficient-condition",
+   "kind": "def",
+   "title": "Sufficient condition",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-tautology",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-tautology",
+   "kind": "def",
+   "title": "Tautology",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-theorem",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-theorem",
+   "kind": "def",
+   "title": "Theorem",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-truth-table",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-truth-table",
+   "kind": "def",
+   "title": "Truth table",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#def-universal-quantifier",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "def-universal-quantifier",
+   "kind": "def",
+   "title": "Universal quantifier",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#thm-addition-rule",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "thm-addition-rule",
+   "kind": "thm",
+   "title": "Addition",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#thm-biconditional-split",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "thm-biconditional-split",
+   "kind": "thm",
+   "title": "A biconditional is two conditionals",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#thm-conjunction-rule",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "thm-conjunction-rule",
+   "kind": "thm",
+   "title": "Conjunction",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#thm-contradiction-works",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "thm-contradiction-works",
+   "kind": "thm",
+   "title": "Why a proof by contradiction works",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#thm-contrapositive",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "thm-contrapositive",
+   "kind": "thm",
+   "title": "A conditional is equivalent to its contrapositive",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#thm-de-morgan-disjunction",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "thm-de-morgan-disjunction",
+   "kind": "thm",
+   "title": "De Morgan's law for a disjunction",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#thm-de-morgan-logic",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "thm-de-morgan-logic",
+   "kind": "thm",
+   "title": "De Morgan's law for a conjunction",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#thm-derivation-chain",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "thm-derivation-chain",
+   "kind": "thm",
+   "title": "What a derivation shows",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#thm-disjunctive-syllogism",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "thm-disjunctive-syllogism",
+   "kind": "thm",
+   "title": "Disjunctive syllogism",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#thm-double-negation",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "thm-double-negation",
+   "kind": "thm",
+   "title": "Double negation",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#thm-equivalence-iff",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "thm-equivalence-iff",
+   "kind": "thm",
+   "title": "Equivalence is a tautological biconditional",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#thm-equivalent-cycle",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "thm-equivalent-cycle",
+   "kind": "thm",
+   "title": "A cycle of conditionals",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#thm-modus-ponens",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "thm-modus-ponens",
+   "kind": "thm",
+   "title": "Modus ponens",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#thm-modus-tollens",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "thm-modus-tollens",
+   "kind": "thm",
+   "title": "Modus tollens",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#thm-negate-existential",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "thm-negate-existential",
+   "kind": "thm",
+   "title": "De Morgan's law for an existential quantifier",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#thm-negate-quantifiers",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "thm-negate-quantifiers",
+   "kind": "thm",
+   "title": "De Morgan's law for a universal quantifier",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#thm-proof-by-contradiction",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "thm-proof-by-contradiction",
+   "kind": "thm",
+   "title": "A proof by contradiction proves its proposition",
+   "external": false
+  },
+  {
+   "id": "mcs/proof-writing#thm-simplification",
+   "site": "mcs",
+   "page": "proof-writing",
+   "div": "thm-simplification",
+   "kind": "thm",
+   "title": "Simplification",
+   "external": false
+  },
+  {
+   "id": "mcs/relations#def-equivalence-class",
+   "site": "mcs",
+   "page": "relations",
+   "div": "def-equivalence-class",
+   "kind": "def",
+   "title": "Equivalence class",
+   "external": false
+  },
+  {
+   "id": "mcs/relations#def-equivalence-relation",
+   "site": "mcs",
+   "page": "relations",
+   "div": "def-equivalence-relation",
+   "kind": "def",
+   "title": "Equivalence relation",
+   "external": false
+  },
+  {
+   "id": "mcs/relations#def-reflexive",
+   "site": "mcs",
+   "page": "relations",
+   "div": "def-reflexive",
+   "kind": "def",
+   "title": "Reflexive relation",
+   "external": false
+  },
+  {
+   "id": "mcs/relations#def-symmetric-relation",
+   "site": "mcs",
+   "page": "relations",
+   "div": "def-symmetric-relation",
+   "kind": "def",
+   "title": "Symmetric relation",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-bound",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-bound",
+   "kind": "def",
+   "title": "Lower bound and upper bound",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-cartesian-product",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-cartesian-product",
+   "kind": "def",
+   "title": "Cartesian product",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-cartesian-product-many",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-cartesian-product-many",
+   "kind": "def",
+   "title": "Cartesian product of several sets",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-closed-interval",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-closed-interval",
+   "kind": "def",
+   "title": "Closed interval",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-collection",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-collection",
+   "kind": "def",
+   "title": "Collection of sets, family of sets",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-complement",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-complement",
+   "kind": "def",
+   "title": "Complement",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-disjoint-sets",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-disjoint-sets",
+   "kind": "def",
+   "title": "Disjoint sets",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-empty-set",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-empty-set",
+   "kind": "def",
+   "title": "Empty set",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-extended-nonneg-reals",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-extended-nonneg-reals",
+   "kind": "def",
+   "title": "Extended non-negative real numbers",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-half-open-interval",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-half-open-interval",
+   "kind": "def",
+   "title": "Half-open intervals",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-index-set",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-index-set",
+   "kind": "def",
+   "title": "Index set",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-indexed-family",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-indexed-family",
+   "kind": "def",
+   "title": "Indexed family",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-indexed-intersection",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-indexed-intersection",
+   "kind": "def",
+   "title": "Intersection of a family of sets",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-indexed-union",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-indexed-union",
+   "kind": "def",
+   "title": "Union of a family of sets",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-intersection",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-intersection",
+   "kind": "def",
+   "title": "Intersection",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-interval",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-interval",
+   "kind": "def",
+   "title": "Interval",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-label",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-label",
+   "kind": "def",
+   "title": "Label",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-open-interval",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-open-interval",
+   "kind": "def",
+   "title": "Open interval",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-ordered-pair",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-ordered-pair",
+   "kind": "def",
+   "title": "Ordered pair",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-pairwise-disjoint",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-pairwise-disjoint",
+   "kind": "def",
+   "title": "Pairwise disjoint sets, mutually disjoint sets",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-power-set",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-power-set",
+   "kind": "def",
+   "title": "Power set",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-roster-notation",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-roster-notation",
+   "kind": "def",
+   "title": "Roster notation",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-set",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-set",
+   "kind": "def",
+   "title": "Set",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-set-builder",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-set-builder",
+   "kind": "def",
+   "title": "Set-builder notation",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-set-builder-expression",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-set-builder-expression",
+   "kind": "def",
+   "title": "Set-builder notation with an expression",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-set-difference",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-set-difference",
+   "kind": "def",
+   "title": "Set difference",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-strict-subset",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-strict-subset",
+   "kind": "def",
+   "title": "Strict subset, proper subset",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-strict-superset",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-strict-superset",
+   "kind": "def",
+   "title": "Strict superset",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-subset",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-subset",
+   "kind": "def",
+   "title": "Subset",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-superset",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-superset",
+   "kind": "def",
+   "title": "Superset",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-tuple",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-tuple",
+   "kind": "def",
+   "title": "Tuple",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-unbounded-interval",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-unbounded-interval",
+   "kind": "def",
+   "title": "Unbounded intervals",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-union",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-union",
+   "kind": "def",
+   "title": "Union",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#def-vacuous-truth",
+   "site": "mcs",
+   "page": "sets",
+   "div": "def-vacuous-truth",
+   "kind": "def",
+   "title": "Vacuous truth",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#thm-de-morgan",
+   "site": "mcs",
+   "page": "sets",
+   "div": "thm-de-morgan",
+   "kind": "thm",
+   "title": "De Morgan's law for a union",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#thm-de-morgan-intersection",
+   "site": "mcs",
+   "page": "sets",
+   "div": "thm-de-morgan-intersection",
+   "kind": "thm",
+   "title": "De Morgan's law for an intersection",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#thm-empty-set-unique",
+   "site": "mcs",
+   "page": "sets",
+   "div": "thm-empty-set-unique",
+   "kind": "thm",
+   "title": "There is only one empty set",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#thm-empty-subset",
+   "site": "mcs",
+   "page": "sets",
+   "div": "thm-empty-subset",
+   "kind": "thm",
+   "title": "The empty set is a subset of every set",
+   "external": false
+  },
+  {
+   "id": "mcs/sets#thm-subset-reflexive",
+   "site": "mcs",
+   "page": "sets",
+   "div": "thm-subset-reflexive",
+   "kind": "thm",
+   "title": "Every set is a subset of itself",
+   "external": false
+  }
+ ],
+ "edges": [
+  [
+   "mcs/expressions-algorithms#def-closed-form-expression",
+   "mcs/expressions-algorithms#def-expression"
+  ],
+  [
+   "mcs/expressions-algorithms#def-closed-form-expression",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mcs/expressions-algorithms#def-closed-form-solution",
+   "mcs/expressions-algorithms#def-closed-form-expression"
+  ],
+  [
+   "mcs/expressions-algorithms#def-closed-form-solution",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mcs/expressions-algorithms#def-computes",
+   "mcs/expressions-algorithms#def-algorithm"
+  ],
+  [
+   "mcs/expressions-algorithms#def-computes",
+   "mcs/functions#def-argument"
+  ],
+  [
+   "mcs/expressions-algorithms#def-computes",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mcs/expressions-algorithms#def-computes",
+   "mcs/functions#def-value"
+  ],
+  [
+   "mcs/expressions-algorithms#def-denotes",
+   "mcs/expressions-algorithms#def-expression"
+  ],
+  [
+   "mcs/expressions-algorithms#def-denotes",
+   "mcs/functions#def-argument"
+  ],
+  [
+   "mcs/expressions-algorithms#def-denotes",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mcs/expressions-algorithms#def-denotes",
+   "mcs/functions#def-value"
+  ],
+  [
+   "mcs/expressions-algorithms#def-parse-tree",
+   "mcs/expressions-algorithms#def-expression"
+  ],
+  [
+   "mcs/functions#def-argument",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mcs/functions#def-cardinality",
+   "mcs/functions#def-finite-set"
+  ],
+  [
+   "mcs/functions#def-codomain",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mcs/functions#def-composition",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mcs/functions#def-countable-set",
+   "mcs/functions#def-finite-set"
+  ],
+  [
+   "mcs/functions#def-countable-set",
+   "mcs/functions#def-sequence"
+  ],
+  [
+   "mcs/functions#def-countably-infinite",
+   "mcs/functions#def-countable-set"
+  ],
+  [
+   "mcs/functions#def-domain",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mcs/functions#def-elementwise-function",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mcs/functions#def-elementwise-function",
+   "mcs/sets#def-cartesian-product"
+  ],
+  [
+   "mcs/functions#def-finite-set",
+   "mcs/functions#def-finite-sequence"
+  ],
+  [
+   "mcs/functions#def-functional",
+   "mcs/functions#def-argument"
+  ],
+  [
+   "mcs/functions#def-functional",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mcs/functions#def-functional",
+   "mcs/functions#def-value"
+  ],
+  [
+   "mcs/functions#def-graph",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mcs/functions#def-graph",
+   "mcs/sets#def-ordered-pair"
+  ],
+  [
+   "mcs/functions#def-image",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mcs/functions#def-infinite-set",
+   "mcs/functions#def-finite-set"
+  ],
+  [
+   "mcs/functions#def-inner-function",
+   "mcs/functions#def-composition"
+  ],
+  [
+   "mcs/functions#def-inverse-function",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mcs/functions#def-logistic-function",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mcs/functions#def-operator",
+   "mcs/functions#def-argument"
+  ],
+  [
+   "mcs/functions#def-operator",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mcs/functions#def-operator",
+   "mcs/functions#def-value"
+  ],
+  [
+   "mcs/functions#def-outer-function",
+   "mcs/functions#def-composition"
+  ],
+  [
+   "mcs/functions#def-preimage",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mcs/functions#def-preimage",
+   "mcs/functions#def-value"
+  ],
+  [
+   "mcs/functions#def-preimage",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mcs/functions#def-preimage",
+   "mcs/sets#def-subset"
+  ],
+  [
+   "mcs/functions#def-range",
+   "mcs/functions#def-codomain"
+  ],
+  [
+   "mcs/functions#def-range",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mcs/functions#def-range",
+   "mcs/functions#def-image"
+  ],
+  [
+   "mcs/functions#def-relation",
+   "mcs/sets#def-ordered-pair"
+  ],
+  [
+   "mcs/functions#def-sequence",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mcs/functions#def-sequence",
+   "mcs/number-systems#def-natural-numbers"
+  ],
+  [
+   "mcs/functions#def-sequence-term",
+   "mcs/functions#def-sequence"
+  ],
+  [
+   "mcs/functions#def-value",
+   "mcs/functions#def-argument"
+  ],
+  [
+   "mcs/functions#def-value",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mcs/functions#thm-interval-uncountable",
+   "mcs/functions#def-countable-set"
+  ],
+  [
+   "mcs/growth-rates#def-big-o",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mcs/growth-rates#def-big-o",
+   "mcs/number-systems#def-natural-numbers"
+  ],
+  [
+   "mcs/growth-rates#def-big-o",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mcs/growth-rates#def-big-o",
+   "mcs/proof-writing#def-existential-quantifier"
+  ],
+  [
+   "mcs/growth-rates#def-big-o",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mcs/growth-rates#def-big-omega",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mcs/growth-rates#def-big-omega",
+   "mcs/growth-rates#def-big-o"
+  ],
+  [
+   "mcs/growth-rates#def-big-omega",
+   "mcs/number-systems#def-natural-numbers"
+  ],
+  [
+   "mcs/growth-rates#def-big-omega",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mcs/growth-rates#def-big-theta",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mcs/growth-rates#def-big-theta",
+   "mcs/growth-rates#def-big-o"
+  ],
+  [
+   "mcs/growth-rates#def-big-theta",
+   "mcs/growth-rates#def-big-omega"
+  ],
+  [
+   "mcs/growth-rates#def-big-theta",
+   "mcs/number-systems#def-natural-numbers"
+  ],
+  [
+   "mcs/growth-rates#def-big-theta",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mcs/induction#def-fibonacci-sequence",
+   "mcs/functions#def-sequence-term"
+  ],
+  [
+   "mcs/induction#def-fibonacci-sequence",
+   "mcs/induction#def-recursive-sequence"
+  ],
+  [
+   "mcs/induction#def-fibonacci-sequence",
+   "mcs/number-systems#def-integers"
+  ],
+  [
+   "mcs/induction#def-recursive-sequence",
+   "mcs/functions#def-sequence"
+  ],
+  [
+   "mcs/induction#def-recursive-sequence",
+   "mcs/functions#def-sequence-term"
+  ],
+  [
+   "mcs/induction#def-recursive-sequence",
+   "mcs/functions#def-value"
+  ],
+  [
+   "mcs/induction#def-recursive-sequence",
+   "mcs/number-systems#def-integers"
+  ],
+  [
+   "mcs/induction#def-strong-induction",
+   "mcs/number-systems#def-integers"
+  ],
+  [
+   "mcs/induction#def-strong-induction",
+   "mcs/proof-writing#def-predicate"
+  ],
+  [
+   "mcs/induction#def-strong-induction",
+   "mcs/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mcs/number-systems#def-congruence",
+   "mcs/number-systems#def-divides"
+  ],
+  [
+   "mcs/number-systems#def-congruence",
+   "mcs/number-systems#def-integers"
+  ],
+  [
+   "mcs/number-systems#def-congruence",
+   "mcs/number-systems#def-positive-integer"
+  ],
+  [
+   "mcs/number-systems#def-divides",
+   "mcs/number-systems#def-integers"
+  ],
+  [
+   "mcs/number-systems#def-even-odd",
+   "mcs/number-systems#def-integers"
+  ],
+  [
+   "mcs/number-systems#def-factorial",
+   "mcs/number-systems#def-natural-numbers"
+  ],
+  [
+   "mcs/number-systems#def-factorial",
+   "mcs/number-systems#def-nonnegative-integers"
+  ],
+  [
+   "mcs/number-systems#def-floor",
+   "mcs/number-systems#def-integers"
+  ],
+  [
+   "mcs/number-systems#def-floor",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mcs/number-systems#def-irrational-numbers",
+   "mcs/number-systems#def-rational-numbers"
+  ],
+  [
+   "mcs/number-systems#def-irrational-numbers",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mcs/number-systems#def-natural-numbers",
+   "mcs/number-systems#def-positive-integer"
+  ],
+  [
+   "mcs/number-systems#def-negative-integer",
+   "mcs/number-systems#def-integers"
+  ],
+  [
+   "mcs/number-systems#def-nonnegative-integers",
+   "mcs/number-systems#def-natural-numbers"
+  ],
+  [
+   "mcs/number-systems#def-odd",
+   "mcs/number-systems#def-integers"
+  ],
+  [
+   "mcs/number-systems#def-positive-integer",
+   "mcs/number-systems#def-integers"
+  ],
+  [
+   "mcs/number-systems#def-prime",
+   "mcs/number-systems#def-divides"
+  ],
+  [
+   "mcs/number-systems#def-prime",
+   "mcs/number-systems#def-integers"
+  ],
+  [
+   "mcs/number-systems#def-prime",
+   "mcs/number-systems#def-positive-integer"
+  ],
+  [
+   "mcs/number-systems#def-rational-numbers",
+   "mcs/number-systems#def-integers"
+  ],
+  [
+   "mcs/proof-writing#def-and",
+   "mcs/proof-writing#def-logical-connective"
+  ],
+  [
+   "mcs/proof-writing#def-conclusion",
+   "mcs/proof-writing#def-logical-argument"
+  ],
+  [
+   "mcs/proof-writing#def-conclusion",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-constructive-proof",
+   "mcs/proof-writing#def-existential-quantifier"
+  ],
+  [
+   "mcs/proof-writing#def-constructive-proof",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-contradiction",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-contradiction",
+   "mcs/proof-writing#def-truth-table"
+  ],
+  [
+   "mcs/proof-writing#def-contrapositive",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-corollary",
+   "mcs/proof-writing#def-result"
+  ],
+  [
+   "mcs/proof-writing#def-counterexample",
+   "mcs/proof-writing#def-predicate"
+  ],
+  [
+   "mcs/proof-writing#def-derivation",
+   "mcs/proof-writing#def-inequality"
+  ],
+  [
+   "mcs/proof-writing#def-derivation",
+   "mcs/proof-writing#def-proof"
+  ],
+  [
+   "mcs/proof-writing#def-direct-proof",
+   "mcs/proof-writing#def-proof-by-contradiction"
+  ],
+  [
+   "mcs/proof-writing#def-direct-proof",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-direct-proof",
+   "mcs/proof-writing#def-result"
+  ],
+  [
+   "mcs/proof-writing#def-disproof",
+   "mcs/proof-writing#def-not"
+  ],
+  [
+   "mcs/proof-writing#def-disproof",
+   "mcs/proof-writing#def-proof"
+  ],
+  [
+   "mcs/proof-writing#def-disproof",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-domain-of-discourse",
+   "mcs/proof-writing#def-predicate"
+  ],
+  [
+   "mcs/proof-writing#def-existential-quantifier",
+   "mcs/proof-writing#def-quantifier"
+  ],
+  [
+   "mcs/proof-writing#def-first-order-logic",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mcs/proof-writing#def-first-order-logic",
+   "mcs/proof-writing#def-predicate"
+  ],
+  [
+   "mcs/proof-writing#def-first-order-logic",
+   "mcs/proof-writing#def-propositional-logic"
+  ],
+  [
+   "mcs/proof-writing#def-first-order-logic",
+   "mcs/proof-writing#def-quantifier"
+  ],
+  [
+   "mcs/proof-writing#def-first-order-logic",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mcs/proof-writing#def-formal-proof",
+   "mcs/proof-writing#def-first-order-logic"
+  ],
+  [
+   "mcs/proof-writing#def-formal-proof",
+   "mcs/proof-writing#def-proof"
+  ],
+  [
+   "mcs/proof-writing#def-formal-proof",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-formal-proof",
+   "mcs/proof-writing#def-propositional-logic"
+  ],
+  [
+   "mcs/proof-writing#def-iff",
+   "mcs/proof-writing#def-logical-connective"
+  ],
+  [
+   "mcs/proof-writing#def-implies",
+   "mcs/proof-writing#def-logical-connective"
+  ],
+  [
+   "mcs/proof-writing#def-inequality",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mcs/proof-writing#def-inequality",
+   "mcs/proof-writing#def-predicate"
+  ],
+  [
+   "mcs/proof-writing#def-inequality",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-lemma",
+   "mcs/proof-writing#def-result"
+  ],
+  [
+   "mcs/proof-writing#def-logical-argument",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-logical-connective",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-logical-entailment",
+   "mcs/proof-writing#def-predicate"
+  ],
+  [
+   "mcs/proof-writing#def-logical-entailment",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-logically-equivalent",
+   "mcs/proof-writing#def-logical-connective"
+  ],
+  [
+   "mcs/proof-writing#def-logically-equivalent",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-logically-equivalent",
+   "mcs/proof-writing#def-truth-table"
+  ],
+  [
+   "mcs/proof-writing#def-necessary-sufficient",
+   "mcs/proof-writing#def-converse"
+  ],
+  [
+   "mcs/proof-writing#def-necessary-sufficient",
+   "mcs/proof-writing#def-necessary-condition"
+  ],
+  [
+   "mcs/proof-writing#def-necessary-sufficient",
+   "mcs/proof-writing#def-sufficient-condition"
+  ],
+  [
+   "mcs/proof-writing#def-nonconstructive-proof",
+   "mcs/proof-writing#def-constructive-proof"
+  ],
+  [
+   "mcs/proof-writing#def-nonconstructive-proof",
+   "mcs/proof-writing#def-proof"
+  ],
+  [
+   "mcs/proof-writing#def-nonconstructive-proof",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-not",
+   "mcs/proof-writing#def-logical-connective"
+  ],
+  [
+   "mcs/proof-writing#def-or",
+   "mcs/proof-writing#def-logical-connective"
+  ],
+  [
+   "mcs/proof-writing#def-predicate",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-premise",
+   "mcs/proof-writing#def-logical-argument"
+  ],
+  [
+   "mcs/proof-writing#def-premise",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-proof",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-proof-by-cases",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-proof-by-contrapositive",
+   "mcs/proof-writing#def-contrapositive"
+  ],
+  [
+   "mcs/proof-writing#def-proof-by-contrapositive",
+   "mcs/proof-writing#def-direct-proof"
+  ],
+  [
+   "mcs/proof-writing#def-proof-by-contrapositive",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-proof-by-contrapositive",
+   "mcs/proof-writing#thm-contrapositive"
+  ],
+  [
+   "mcs/proof-writing#def-proof-by-induction",
+   "mcs/number-systems#def-integers"
+  ],
+  [
+   "mcs/proof-writing#def-proof-by-induction",
+   "mcs/proof-writing#def-predicate"
+  ],
+  [
+   "mcs/proof-writing#def-propositional-logic",
+   "mcs/proof-writing#def-logical-connective"
+  ],
+  [
+   "mcs/proof-writing#def-propositional-logic",
+   "mcs/proof-writing#def-logical-entailment"
+  ],
+  [
+   "mcs/proof-writing#def-propositional-logic",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-quantifier",
+   "mcs/proof-writing#def-predicate"
+  ],
+  [
+   "mcs/proof-writing#def-quantifier",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-result",
+   "mcs/proof-writing#def-proof"
+  ],
+  [
+   "mcs/proof-writing#def-result",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-rule-of-inference",
+   "mcs/proof-writing#def-conclusion"
+  ],
+  [
+   "mcs/proof-writing#def-rule-of-inference",
+   "mcs/proof-writing#def-logical-argument"
+  ],
+  [
+   "mcs/proof-writing#def-rule-of-inference",
+   "mcs/proof-writing#def-logical-entailment"
+  ],
+  [
+   "mcs/proof-writing#def-rule-of-inference",
+   "mcs/proof-writing#def-premise"
+  ],
+  [
+   "mcs/proof-writing#def-rule-of-inference",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-tautology",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-tautology",
+   "mcs/proof-writing#def-truth-table"
+  ],
+  [
+   "mcs/proof-writing#def-theorem",
+   "mcs/proof-writing#def-result"
+  ],
+  [
+   "mcs/proof-writing#def-truth-table",
+   "mcs/proof-writing#def-logical-connective"
+  ],
+  [
+   "mcs/proof-writing#def-truth-table",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#def-universal-quantifier",
+   "mcs/proof-writing#def-quantifier"
+  ],
+  [
+   "mcs/proof-writing#thm-addition-rule",
+   "mcs/proof-writing#def-conclusion"
+  ],
+  [
+   "mcs/proof-writing#thm-addition-rule",
+   "mcs/proof-writing#def-or"
+  ],
+  [
+   "mcs/proof-writing#thm-addition-rule",
+   "mcs/proof-writing#def-premise"
+  ],
+  [
+   "mcs/proof-writing#thm-addition-rule",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#thm-addition-rule",
+   "mcs/proof-writing#def-rule-of-inference"
+  ],
+  [
+   "mcs/proof-writing#thm-biconditional-split",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#thm-conjunction-rule",
+   "mcs/proof-writing#def-and"
+  ],
+  [
+   "mcs/proof-writing#thm-conjunction-rule",
+   "mcs/proof-writing#def-conclusion"
+  ],
+  [
+   "mcs/proof-writing#thm-conjunction-rule",
+   "mcs/proof-writing#def-premise"
+  ],
+  [
+   "mcs/proof-writing#thm-conjunction-rule",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#thm-conjunction-rule",
+   "mcs/proof-writing#def-rule-of-inference"
+  ],
+  [
+   "mcs/proof-writing#thm-contradiction-works",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#thm-contrapositive",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#thm-de-morgan-disjunction",
+   "mcs/proof-writing#def-logically-equivalent"
+  ],
+  [
+   "mcs/proof-writing#thm-de-morgan-disjunction",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#thm-de-morgan-disjunction",
+   "mcs/proof-writing#def-truth-table"
+  ],
+  [
+   "mcs/proof-writing#thm-de-morgan-logic",
+   "mcs/proof-writing#def-logically-equivalent"
+  ],
+  [
+   "mcs/proof-writing#thm-de-morgan-logic",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#thm-de-morgan-logic",
+   "mcs/proof-writing#def-truth-table"
+  ],
+  [
+   "mcs/proof-writing#thm-derivation-chain",
+   "mcs/proof-writing#def-derivation"
+  ],
+  [
+   "mcs/proof-writing#thm-disjunctive-syllogism",
+   "mcs/proof-writing#def-conclusion"
+  ],
+  [
+   "mcs/proof-writing#thm-disjunctive-syllogism",
+   "mcs/proof-writing#def-not"
+  ],
+  [
+   "mcs/proof-writing#thm-disjunctive-syllogism",
+   "mcs/proof-writing#def-or"
+  ],
+  [
+   "mcs/proof-writing#thm-disjunctive-syllogism",
+   "mcs/proof-writing#def-premise"
+  ],
+  [
+   "mcs/proof-writing#thm-disjunctive-syllogism",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#thm-disjunctive-syllogism",
+   "mcs/proof-writing#def-rule-of-inference"
+  ],
+  [
+   "mcs/proof-writing#thm-double-negation",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#thm-equivalence-iff",
+   "mcs/proof-writing#def-logically-equivalent"
+  ],
+  [
+   "mcs/proof-writing#thm-equivalence-iff",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#thm-equivalence-iff",
+   "mcs/proof-writing#def-tautology"
+  ],
+  [
+   "mcs/proof-writing#thm-equivalent-cycle",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#thm-modus-ponens",
+   "mcs/proof-writing#def-conclusion"
+  ],
+  [
+   "mcs/proof-writing#thm-modus-ponens",
+   "mcs/proof-writing#def-implies"
+  ],
+  [
+   "mcs/proof-writing#thm-modus-ponens",
+   "mcs/proof-writing#def-premise"
+  ],
+  [
+   "mcs/proof-writing#thm-modus-ponens",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#thm-modus-ponens",
+   "mcs/proof-writing#def-rule-of-inference"
+  ],
+  [
+   "mcs/proof-writing#thm-modus-tollens",
+   "mcs/proof-writing#def-conclusion"
+  ],
+  [
+   "mcs/proof-writing#thm-modus-tollens",
+   "mcs/proof-writing#def-implies"
+  ],
+  [
+   "mcs/proof-writing#thm-modus-tollens",
+   "mcs/proof-writing#def-not"
+  ],
+  [
+   "mcs/proof-writing#thm-modus-tollens",
+   "mcs/proof-writing#def-premise"
+  ],
+  [
+   "mcs/proof-writing#thm-modus-tollens",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#thm-modus-tollens",
+   "mcs/proof-writing#def-rule-of-inference"
+  ],
+  [
+   "mcs/proof-writing#thm-negate-existential",
+   "mcs/proof-writing#def-domain-of-discourse"
+  ],
+  [
+   "mcs/proof-writing#thm-negate-existential",
+   "mcs/proof-writing#def-existential-quantifier"
+  ],
+  [
+   "mcs/proof-writing#thm-negate-existential",
+   "mcs/proof-writing#def-predicate"
+  ],
+  [
+   "mcs/proof-writing#thm-negate-existential",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mcs/proof-writing#thm-negate-quantifiers",
+   "mcs/proof-writing#def-domain-of-discourse"
+  ],
+  [
+   "mcs/proof-writing#thm-negate-quantifiers",
+   "mcs/proof-writing#def-existential-quantifier"
+  ],
+  [
+   "mcs/proof-writing#thm-negate-quantifiers",
+   "mcs/proof-writing#def-predicate"
+  ],
+  [
+   "mcs/proof-writing#thm-negate-quantifiers",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mcs/proof-writing#thm-proof-by-contradiction",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#thm-simplification",
+   "mcs/proof-writing#def-and"
+  ],
+  [
+   "mcs/proof-writing#thm-simplification",
+   "mcs/proof-writing#def-conclusion"
+  ],
+  [
+   "mcs/proof-writing#thm-simplification",
+   "mcs/proof-writing#def-premise"
+  ],
+  [
+   "mcs/proof-writing#thm-simplification",
+   "mcs/proof-writing#def-proposition"
+  ],
+  [
+   "mcs/proof-writing#thm-simplification",
+   "mcs/proof-writing#def-rule-of-inference"
+  ],
+  [
+   "mcs/relations#def-equivalence-class",
+   "mcs/relations#def-equivalence-relation"
+  ],
+  [
+   "mcs/relations#def-equivalence-class",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mcs/relations#def-equivalence-relation",
+   "mcs/functions#def-relation"
+  ],
+  [
+   "mcs/relations#def-equivalence-relation",
+   "mcs/relations#def-reflexive"
+  ],
+  [
+   "mcs/relations#def-equivalence-relation",
+   "mcs/relations#def-symmetric-relation"
+  ],
+  [
+   "mcs/relations#def-equivalence-relation",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mcs/relations#def-reflexive",
+   "mcs/functions#def-relation"
+  ],
+  [
+   "mcs/relations#def-reflexive",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mcs/relations#def-symmetric-relation",
+   "mcs/functions#def-relation"
+  ],
+  [
+   "mcs/relations#def-symmetric-relation",
+   "mcs/proof-writing#def-implies"
+  ],
+  [
+   "mcs/relations#def-symmetric-relation",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mcs/relations#def-symmetric-relation",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mcs/sets#def-bound",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mcs/sets#def-bound",
+   "mcs/sets#def-subset"
+  ],
+  [
+   "mcs/sets#def-cartesian-product-many",
+   "mcs/number-systems#def-natural-numbers"
+  ],
+  [
+   "mcs/sets#def-cartesian-product-many",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mcs/sets#def-cartesian-product-many",
+   "mcs/sets#def-tuple"
+  ],
+  [
+   "mcs/sets#def-closed-interval",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mcs/sets#def-closed-interval",
+   "mcs/sets#def-bound"
+  ],
+  [
+   "mcs/sets#def-closed-interval",
+   "mcs/sets#def-interval"
+  ],
+  [
+   "mcs/sets#def-complement",
+   "mcs/sets#def-set-difference"
+  ],
+  [
+   "mcs/sets#def-complement",
+   "mcs/sets#def-subset"
+  ],
+  [
+   "mcs/sets#def-disjoint-sets",
+   "mcs/sets#def-empty-set"
+  ],
+  [
+   "mcs/sets#def-disjoint-sets",
+   "mcs/sets#def-intersection"
+  ],
+  [
+   "mcs/sets#def-disjoint-sets",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mcs/sets#def-half-open-interval",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mcs/sets#def-half-open-interval",
+   "mcs/sets#def-bound"
+  ],
+  [
+   "mcs/sets#def-half-open-interval",
+   "mcs/sets#def-interval"
+  ],
+  [
+   "mcs/sets#def-index-set",
+   "mcs/sets#def-label"
+  ],
+  [
+   "mcs/sets#def-indexed-family",
+   "mcs/sets#def-index-set"
+  ],
+  [
+   "mcs/sets#def-interval",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mcs/sets#def-interval",
+   "mcs/sets#def-bound"
+  ],
+  [
+   "mcs/sets#def-interval",
+   "mcs/sets#def-subset"
+  ],
+  [
+   "mcs/sets#def-open-interval",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mcs/sets#def-open-interval",
+   "mcs/sets#def-bound"
+  ],
+  [
+   "mcs/sets#def-open-interval",
+   "mcs/sets#def-interval"
+  ],
+  [
+   "mcs/sets#def-pairwise-disjoint",
+   "mcs/sets#def-disjoint-sets"
+  ],
+  [
+   "mcs/sets#def-pairwise-disjoint",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mcs/sets#def-power-set",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mcs/sets#def-power-set",
+   "mcs/sets#def-subset"
+  ],
+  [
+   "mcs/sets#def-roster-notation",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mcs/sets#def-set-builder-expression",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mcs/sets#def-strict-subset",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mcs/sets#def-strict-subset",
+   "mcs/sets#def-subset"
+  ],
+  [
+   "mcs/sets#def-strict-superset",
+   "mcs/sets#def-superset"
+  ],
+  [
+   "mcs/sets#def-tuple",
+   "mcs/number-systems#def-natural-numbers"
+  ],
+  [
+   "mcs/sets#def-unbounded-interval",
+   "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mcs/sets#def-unbounded-interval",
+   "mcs/sets#def-bound"
+  ],
+  [
+   "mcs/sets#def-unbounded-interval",
+   "mcs/sets#def-interval"
+  ],
+  [
+   "mcs/sets#def-vacuous-truth",
+   "mcs/sets#def-empty-set"
+  ],
+  [
+   "mcs/sets#thm-de-morgan",
+   "mcs/proof-writing#def-necessary-sufficient"
+  ],
+  [
+   "mcs/sets#thm-de-morgan",
+   "mcs/sets#def-complement"
+  ],
+  [
+   "mcs/sets#thm-de-morgan",
+   "mcs/sets#def-intersection"
+  ],
+  [
+   "mcs/sets#thm-de-morgan",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mcs/sets#thm-de-morgan",
+   "mcs/sets#def-set-difference"
+  ],
+  [
+   "mcs/sets#thm-de-morgan",
+   "mcs/sets#def-subset"
+  ],
+  [
+   "mcs/sets#thm-de-morgan",
+   "mcs/sets#def-union"
+  ],
+  [
+   "mcs/sets#thm-de-morgan-intersection",
+   "mcs/proof-writing#def-necessary-sufficient"
+  ],
+  [
+   "mcs/sets#thm-de-morgan-intersection",
+   "mcs/sets#def-complement"
+  ],
+  [
+   "mcs/sets#thm-de-morgan-intersection",
+   "mcs/sets#def-intersection"
+  ],
+  [
+   "mcs/sets#thm-de-morgan-intersection",
+   "mcs/sets#def-set-difference"
+  ],
+  [
+   "mcs/sets#thm-de-morgan-intersection",
+   "mcs/sets#def-subset"
+  ],
+  [
+   "mcs/sets#thm-de-morgan-intersection",
+   "mcs/sets#def-union"
+  ],
+  [
+   "mcs/sets#thm-de-morgan-intersection",
+   "mcs/sets#thm-de-morgan"
+  ],
+  [
+   "mcs/sets#thm-empty-set-unique",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mcs/sets#thm-empty-set-unique",
+   "mcs/sets#def-vacuous-truth"
+  ],
+  [
+   "mcs/sets#thm-empty-subset",
+   "mcs/sets#def-empty-set"
+  ],
+  [
+   "mcs/sets#thm-empty-subset",
+   "mcs/sets#def-subset"
+  ],
+  [
+   "mcs/sets#thm-subset-reflexive",
+   "mcs/sets#def-subset"
+  ]
+ ],
+ "cycles": [],
+ "forwardReferences": []
+}
