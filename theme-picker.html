@@ -1,9 +1,8 @@
 <script>
 // Theme dropdown: Light, Off-white, Parchment, Dark. Quarto's own toggle
 // handles light/dark and remembers it; the two tinted palettes are a
-// data-palette attribute on <html>. The choice is kept under "lds-theme", the
-// key lds uses; a choice saved under the older "mln-theme" key is still read.
-// Off-white is the default for a first visit.
+// data-palette attribute on <html>. The choice is kept under "lds-theme"
+// (falling back to "mln-theme"). Off-white is the default for a first visit.
 (function () {
   var KEY = "lds-theme";
   var LEGACY_KEY = "mln-theme";
