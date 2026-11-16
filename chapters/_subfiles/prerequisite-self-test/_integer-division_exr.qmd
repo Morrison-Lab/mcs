@@ -1,8 +1,0 @@
-:::{#exr-prereq-integer-division}
-#### Integer division
-
-In Python, `//` is integer division.
-
-What is the value of `2027 // 10`?
-
-:::
