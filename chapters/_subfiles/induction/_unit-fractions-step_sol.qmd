@@ -1,0 +1,27 @@
+::: {#sol-unit-fractions-step}
+
+Suppose $\frac{1}{1 \cdot 2} + \cdots + \frac{1}{k(k + 1)} = \frac{k}{k + 1}$.
+Then
+
+$$
+\ba
+& \frac{1}{1 \cdot 2} + \cdots + \frac{1}{k(k + 1)} + \frac{1}{(k + 1)(k + 2)}
+\\&= \frac{k}{k + 1} + \frac{1}{(k + 1)(k + 2)}
+&& \text{(the supposition)}
+\\&= \frac{k(k + 2) + 1}{(k + 1)(k + 2)}
+&& \text{(common denominator)}
+\\&= \frac{k^2 + 2k + 1}{(k + 1)(k + 2)}
+\\&= \frac{(k + 1)^2}{(k + 1)(k + 2)}
+&& \text{(} k^2 + 2k + 1 = (k + 1)^2 \text{)}
+\\&= \frac{k + 1}{k + 2},
+&& \text{(cancel } k + 1 \text{)}
+\ea
+$$
+
+which is the claim for $k + 1$.
+
+@sol-unit-fractions shows the claim for $n = 1$,
+and this step carries it from each natural number to the next,
+so it holds for $n = 2, 3, 4, \ldots$ in turn.
+
+:::

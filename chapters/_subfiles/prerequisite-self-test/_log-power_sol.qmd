@@ -1,0 +1,11 @@
+:::{#sol-prereq-log-power}
+
+The value is 15.
+Since $8 = 2^3$,
+$8^5 = \paren{2^3}^5 = 2^{15}$,
+and the logarithm to the base 2 of $2^{15}$ is 15.
+
+To review logarithms,
+read @def-logarithm and @thm-log-exp.
+
+:::

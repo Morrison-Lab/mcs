@@ -1,0 +1,8 @@
+:::{#exr-prereq-inequality-negate}
+#### Negating an inequality
+
+True or false:
+for all real numbers $a$ and $b$,
+if $a < b$ then $-a < -b$.
+
+:::

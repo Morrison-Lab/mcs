@@ -1,0 +1,12 @@
+:::{#sol-prereq-composition-fg}
+
+The value is 11.
+First, $g(2) = 4$,
+so $f(g(2)) = f(4) = 3 \cdot 4 - 1 = 11$.
+
+The course writes $f(g(x))$ as $(f \circ g)(x)$
+and uses composition throughout.
+To review,
+read @def-composition.
+
+:::

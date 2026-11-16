@@ -1,0 +1,11 @@
+:::{#sol-prereq-stack}
+
+The pops return 2, 7 and 8, in that order.
+A stack is last in, first out:
+each pop removes the last value pushed that is still on the stack.
+After the three pops,
+the stack holds only 5.
+
+The course uses stacks to explain how recursive calls run.
+
+:::

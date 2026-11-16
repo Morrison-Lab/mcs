@@ -1,0 +1,6 @@
+:::{#exr-prereq-inequality-solve}
+#### Solving an inequality
+
+For which integers $n$ is $3n - 7 > n + 5$?
+
+:::

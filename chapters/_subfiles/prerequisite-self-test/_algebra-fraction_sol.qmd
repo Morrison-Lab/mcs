@@ -1,0 +1,16 @@
+:::{#sol-prereq-algebra-fraction}
+
+The sum is $\dfrac{(n + 1)(n + 2)}{2}$.
+Write $n + 1$ as $\dfrac{2(n + 1)}{2}$,
+add the two fractions,
+and factor out $n + 1$:
+
+$$
+\frac{n(n + 1) + 2(n + 1)}{2} = \frac{(n + 1)(n + 2)}{2}.
+$$
+
+This step appears in the [Induction](induction.qmd) chapter.
+To review algebra,
+see the free textbook @abramson2021algebra.
+
+:::

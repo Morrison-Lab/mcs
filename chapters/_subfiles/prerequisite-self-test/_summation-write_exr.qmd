@@ -1,0 +1,6 @@
+:::{#exr-prereq-summation-write}
+#### Writing a sum
+
+Write $3 + 6 + 9 + \cdots + 30$ in summation notation.
+
+:::

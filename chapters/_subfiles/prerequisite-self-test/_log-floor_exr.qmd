@@ -1,0 +1,9 @@
+:::{#exr-prereq-log-floor}
+#### Rounding a logarithm down
+
+For a real number $x$,
+the floor $\floor{x}$ is the largest integer that is at most $x$.
+
+Find $\floor{\log_2 100}$ without a calculator.
+
+:::

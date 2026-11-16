@@ -1,0 +1,15 @@
+:::{#exr-prereq-nested-loops}
+#### Nested loops
+
+Consider this Python code:
+
+```python
+count = 0
+for i in range(5):
+    for j in range(i, 5):
+        count = count + 1
+```
+
+What is the value of `count` after the code runs?
+
+:::

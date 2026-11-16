@@ -1,0 +1,8 @@
+::: {#exr-next-id-function}
+#### Is the ID counter a function?
+
+Continuing from @exr-next-id,
+is there a mathematical [function](#def-function) $f$ with no arguments
+whose value is what `next_id()` returns every time it is called?
+
+:::

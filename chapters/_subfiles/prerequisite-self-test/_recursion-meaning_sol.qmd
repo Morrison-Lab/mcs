@@ -1,0 +1,13 @@
+:::{#sol-prereq-recursion-meaning}
+
+`p(b, n)` computes $b^n$,
+the `n`th power of `b`.
+Each call multiplies by `b` once,
+and the calls stop after `n` multiplications,
+when `n` reaches 0.
+
+If this exercise was hard,
+review recursion from CSCI 145
+before the course reaches [Recursion](recursion.qmd).
+
+:::

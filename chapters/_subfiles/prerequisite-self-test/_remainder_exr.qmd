@@ -1,0 +1,8 @@
+:::{#exr-prereq-remainder}
+#### A remainder
+
+In Python, `%` gives the remainder after integer division.
+
+What is the value of `2027 % 10`?
+
+:::

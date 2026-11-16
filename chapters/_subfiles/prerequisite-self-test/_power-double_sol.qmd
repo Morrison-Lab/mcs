@@ -1,0 +1,10 @@
+:::{#sol-prereq-power-double}
+
+The sum is $2^{n+1}$,
+because $2^n + 2^n = 2 \cdot 2^n = 2^{n+1}$.
+
+Steps like this one come up in many [Induction](induction.qmd) proofs.
+To review adding exponents,
+read @thm-power-sum.
+
+:::

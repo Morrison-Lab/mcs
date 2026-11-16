@@ -1,0 +1,11 @@
+:::{#def-reciprocal}
+#### Reciprocal (multiplicative inverse)
+
+The **reciprocal** (also called the **multiplicative inverse**)
+[@wikipedia_multiplicative_inverse]
+of a nonzero [real number](#def-real-numbers) $x$
+is the real number $\frac{1}{x}$ whose product with $x$ is $1$:
+
+$$x \cdot \frac{1}{x} = 1$$
+
+:::

@@ -1,0 +1,11 @@
+:::{#sol-prereq-remainder}
+
+The value is 7.
+The remainder after dividing a nonnegative integer by 10
+is its last decimal digit,
+because $2027 = 202 \cdot 10 + 7$.
+
+To review remainders and divisibility,
+read @def-divides.
+
+:::

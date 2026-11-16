@@ -12,10 +12,6 @@ The function `twice` takes a function `f` and a value `x`:
   (+ x 3))
 ```
 
-Guess what each expression returns:
-
-1. `(twice add-three 10)`
-2. `(twice h 4)`, with `h` from @exr-formula-from-code
-3. `(twice add-three (twice add-three 0))`
+Guess what `(twice add-three 10)` returns.
 
 :::

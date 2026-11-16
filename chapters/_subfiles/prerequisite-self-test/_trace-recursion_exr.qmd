@@ -1,0 +1,15 @@
+:::{#exr-prereq-trace-recursion}
+#### Tracing a recursive function
+
+Consider this Python function:
+
+```python
+def p(b, n):
+    if n == 0:
+        return 1
+    return b * p(b, n - 1)
+```
+
+What does `p(3, 4)` return?
+
+:::

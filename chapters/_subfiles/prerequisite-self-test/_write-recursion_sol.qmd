@@ -1,0 +1,21 @@
+:::{#sol-prereq-write-recursion}
+
+```python
+def total(xs):
+    if xs == []:
+        return 0
+    return xs[0] + total(xs[1:])
+```
+
+A correct answer has two parts:
+
+- a base case: the sum of the empty list is 0;
+- a recursive case that adds the first element to `total` of the rest of the list.
+
+Pseudocode or another language is fine,
+as long as the base case and the recursive call are clear.
+In Racket,
+`first` and `rest` play the parts of `xs[0]` and `xs[1:]`
+(see [Recursion](recursion.qmd)).
+
+:::

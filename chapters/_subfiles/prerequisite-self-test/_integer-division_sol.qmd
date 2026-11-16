@@ -1,0 +1,10 @@
+:::{#sol-prereq-integer-division}
+
+The value is 202.
+Dividing a nonnegative integer by 10 with `//`
+drops its last decimal digit.
+
+For nonnegative integers,
+`n // d` is the [floor](#def-floor) of $n / d$.
+
+:::

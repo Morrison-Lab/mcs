@@ -1,0 +1,11 @@
+:::{#sol-prereq-inequality-solve}
+
+The inequality holds for every integer $n > 6$,
+that is, for $n \ge 7$.
+Subtracting $n$ from both sides and adding 7 gives $2n > 12$,
+and dividing both sides by 2 gives $n > 6$.
+
+To review,
+read @thm-mult-ineq.
+
+:::

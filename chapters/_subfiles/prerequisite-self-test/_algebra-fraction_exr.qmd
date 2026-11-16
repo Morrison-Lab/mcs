@@ -1,0 +1,9 @@
+:::{#exr-prereq-algebra-fraction}
+#### Adding to a fraction
+
+Let $n$ be an integer.
+
+Write $\dfrac{n(n + 1)}{2} + (n + 1)$
+as one fraction whose numerator is factored.
+
+:::

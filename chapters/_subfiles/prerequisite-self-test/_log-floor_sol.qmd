@@ -1,0 +1,16 @@
+:::{#sol-prereq-log-floor}
+
+The value is 6.
+Since $2^6 = 64 \le 100 < 128 = 2^7$,
+$\log_2 100$ is between 6 and 7.
+
+The value is also the number of times
+that 100 can be halved before reaching 1,
+rounding down each time:
+100, 50, 25, 12, 6, 3, 1.
+That count is why logarithms come up so often in computer science,
+for example as the number of steps of binary search.
+To review,
+read @def-logarithm and @def-floor.
+
+:::
