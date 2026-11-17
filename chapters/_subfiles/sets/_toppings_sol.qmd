@@ -1,0 +1,21 @@
+::: {#sol-toppings}
+
+There are $15$ choices.
+
+Each choice is a set of one or two toppings,
+so count the choices of two different toppings and the choices of one topping separately.
+
+- **Two different toppings.**
+  There are $5$ choices for the first topping and $4$ for the second,
+  so there are $5 \cdot 4 = 20$ [ordered pairs](#def-ordered-pair) of different toppings.
+  The sets $\set{\text{sprinkles}, \text{fudge}}$ and $\set{\text{fudge}, \text{sprinkles}}$ are equal,
+  so each choice comes from exactly two ordered pairs.
+  That leaves $20 / 2 = 10$ choices.
+- **The same topping twice.**
+  The choice is a set with one element,
+  such as $\set{\text{nuts}}$,
+  and there are $5$ of these.
+
+In all, there are $10 + 5 = 15$ choices.
+
+:::

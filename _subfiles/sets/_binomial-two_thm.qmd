@@ -1,0 +1,26 @@
+:::{#thm-binomial-two}
+#### Choosing two elements
+
+For every integer $n \ge 0$,
+the [binomial coefficient](#def-binomial-coefficient) $\binomial{n}{2}$ is half of $n$ times $n - 1$:
+
+$$\binomial{n}{2} = \frac{n(n - 1)}{2}$$
+
+:::
+
+::: proof
+
+Let $A$ be a [finite set](#def-finite-set) with $n$ elements.
+Count the [ordered pairs](#def-ordered-pair) $(a, b)$ with $a \in A$, $b \in A$ and $a \neq b$.
+There are $n$ choices for $a$,
+and for each of them there are $n - 1$ choices for $b$,
+so there are $n(n - 1)$ such pairs.
+
+The [set](#def-set) $\set{a, b}$ is a [subset](#def-subset) of $A$ with $2$ elements,
+and it equals $\set{b, a}$.
+So each $2$-element subset of $A$ comes from exactly two of these ordered pairs,
+namely $(a, b)$ and $(b, a)$.
+Hence $n(n - 1) = 2 \binomial{n}{2}$,
+and dividing both sides by $2$ gives the claim.
+
+:::
