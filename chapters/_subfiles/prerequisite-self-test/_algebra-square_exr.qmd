@@ -1,8 +1,0 @@
-:::{#exr-prereq-algebra-square}
-#### Expanding a square
-
-Let $n$ be an integer.
-
-Simplify $(n + 1)^2 - n^2$.
-
-:::
