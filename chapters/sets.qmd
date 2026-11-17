@@ -299,7 +299,7 @@ The exercises are new.
 
 {{< slidebreak >}}
 
-{{< include ../_subfiles/sets/_binomial-two_exm.qmd >}}
+{{< include _subfiles/sets/_binomial-two_exm.qmd >}}
 
 {{< slidebreak >}}
 

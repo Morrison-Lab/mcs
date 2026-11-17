@@ -1,6 +1,7 @@
 ::: {#sol-pairs-with-repetition}
 
-There are $\frac{N(N + 1)}{2}$ choices, which is $\binomial{N + 1}{2}$.
+There are $\frac{N(N + 1)}{2}$ choices,
+which is $\binomial{N + 1}{2}$.
 
 As in @sol-toppings,
 each choice is a set $\set{a, b}$ with $a, b \in S$,

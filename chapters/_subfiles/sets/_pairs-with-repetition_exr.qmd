@@ -3,7 +3,8 @@
 
 Let $S$ be a set with $N$ elements.
 Choose two elements of $S$,
-where the same element may be chosen twice and the order does not matter.
+where the same element may be chosen twice
+and the order does not matter.
 The five-topping choices of @exr-toppings are the case $N = 5$,
 and the same count arises whenever two items are drawn from $N$ kinds with repeats allowed.
 
