@@ -6,7 +6,7 @@ Expressions, functions and cases in Racket
 
 Published
 
-Last modified: 2026-11-12 04:02:47 (PST)
+Last modified: 2026-11-17 06:44:05 (PST)
 
 > **NOTE:**
 >
@@ -168,30 +168,16 @@ Last modified: 2026-11-12 04:02:47 (PST)
 >         [else 12]))
 > ```
 >
-> Each line in square brackets pairs a test with a value.
->
-> 1.  Guess what `(ticket-price 4)`, `(ticket-price 5)`, `(ticket-price 17)` and `(ticket-price 70)` return.
-> 2.  Write the function as a formula with cases, for a whole number of years $a \ge 0$.
+> Each line in square brackets pairs a test with a value. Guess what `(ticket-price 4)`, `(ticket-price 5)`, `(ticket-price 17)`, and `(ticket-price 70)` return.
 
 > **NOTE:**
 >
-> *Solution 3*.
+> *Solution 3*. Racket tries the tests in order and returns the value beside the first true one:
 >
-> 1.  Racket tries the tests in order and returns the value beside the first true one:
->
->     - `(ticket-price 4)` returns 0, since $4 < 5$.
->     - `(ticket-price 5)` returns 8, since $5 < 5$ is false but $5 < 18$ is true.
->     - `(ticket-price 17)` returns 8, since $17 < 18$.
->     - `(ticket-price 70)` returns 12, since neither test is true, so the `else` line applies.
->
-> 2.  The second case holds only when the first test is false, so its condition is $5 \le a < 18$, not just $a < 18$:
->
->     $$p(a) =
->     \begin{cases}
->     0 & \text{if } a < 5, \\
->     8 & \text{if } 5 \le a < 18, \\
->     12 & \text{if } a \ge 18.
->     \end{cases}$$
+> - `(ticket-price 4)` returns 0, since $4 < 5$.
+> - `(ticket-price 5)` returns 8, since $5 < 5$ is false but $5 < 18$ is true.
+> - `(ticket-price 17)` returns 8, since $17 < 18$.
+> - `(ticket-price 70)` returns 12, since neither test is true, so the `else` line applies.
 >
 > Racket returns the same values:
 >
@@ -205,6 +191,23 @@ Last modified: 2026-11-12 04:02:47 (PST)
 > (ticket-price 70)
 > ; 12
 > ```
+
+> **NOTE:**
+>
+> **Exercise 4 (The ticket price by cases)** Continuing from [Exercise 3](#exr-ticket-price), write `ticket-price` as a mathematical [function](#def-function) $p$ defined by cases, for a whole number of years $a \ge 0$.
+
+> **NOTE:**
+>
+> *Solution 4*. In `ticket-price`, Racket reaches the second test only when the first test is false, so the condition for the second case is $5 \le a < 18$ rather than $a < 18$:
+>
+> $$p(a) =
+> \begin{cases}
+> 0 & \text{if } a < 5, \\
+> 8 & \text{if } 5 \le a < 18, \\
+> 12 & \text{if } a \ge 18.
+> \end{cases}$$
+>
+> The [function](#def-function) $p$ gives the values that Racket returns in [Solution 3](#sol-ticket-price): $p(4) = 0$, $p(5) = 8$, $p(17) = 8$, and $p(70) = 12$.
 
 > **NOTE:**
 >
@@ -257,7 +260,7 @@ Last modified: 2026-11-12 04:02:47 (PST)
 
 > **NOTE:**
 >
-> **Exercise 4 (Same call, different answer)** This Python code hands out ID numbers:
+> **Exercise 5 (Same call, different answer)** This Python code hands out ID numbers:
 >
 > ``` python
 > count = 0
@@ -268,19 +271,23 @@ Last modified: 2026-11-12 04:02:47 (PST)
 >     return count
 > ```
 >
-> 1.  The program calls `next_id()` twice in a row. What does each call return?
-> 2.  Is there a mathematical function $f$ ([Definition 1](#def-function)) with no arguments whose value is what `next_id()` returns every time it is called?
+> The program calls `next_id()` twice in a row. What does each call return?
 
 > **NOTE:**
 >
-> *Solution 4*.
->
-> 1.  The first call changes `count` from 0 to 1 and returns 1. The second call changes `count` from 1 to 2 and returns 2.
-> 2.  No. A function with no arguments has exactly one value, but `next_id()` returned 1 and then 2. What it returns depends on the variable `count`, which is not an argument and which each call changes.
+> *Solution 5*. The first call changes `count` from 0 to 1 and returns 1. The second call changes `count` from 1 to 2 and returns 2.
 
 > **NOTE:**
 >
-> **Definition 10 (Side effect)** A **side effect** of a piece of code is any change it makes besides returning a value, such as changing a variable, printing, or writing a file. `next_id` in [Exercise 4](#exr-next-id) has a side effect: it changes `count`.
+> **Exercise 6 (Is the ID counter a function?)** Continuing from [Exercise 5](#exr-next-id), is there a mathematical [function](#def-function) $f$ with no arguments whose value is what `next_id()` returns every time it is called?
+
+> **NOTE:**
+>
+> *Solution 6*. No. A function with no arguments has exactly one value, but `next_id()` returned 1 and then 2 in [Solution 5](#sol-next-id). What it returns depends on the variable `count`, which is not an argument and which each call changes.
+
+> **NOTE:**
+>
+> **Definition 10 (Side effect)** A **side effect** of a piece of code is any change it makes besides returning a value, such as changing a variable, printing, or writing a file. `next_id` in [Exercise 5](#exr-next-id) has a side effect: it changes `count`.
 
 > **NOTE:**
 >
@@ -299,13 +306,13 @@ Last modified: 2026-11-12 04:02:47 (PST)
 >
 > *Remark 3* (Why this course uses functional programming). In a program built from pure functions ([Definition 11](#def-pure-function)), an expression can be replaced by its value anywhere it appears without changing what the program does. That is what makes evaluation by substitution ([Example 1](#exm-substitution)) work, and it is also how algebra works: $h(5)$ can be replaced by 15 in any formula. So a pure function can be checked with the same reasoning as a formula, and this course proves facts about programs that way.
 >
-> `next_id` in [Exercise 4](#exr-next-id) is not pure, so `next_id() + next_id()` cannot be simplified to `2 * next_id()`. On a fresh start, `next_id() + next_id()` returns 3, from $1 + 2$, but `2 * next_id()` returns 2. Racket can change variables too, with `set!`, but this course does not use it.
+> `next_id` in [Exercise 5](#exr-next-id) is not pure, so `next_id() + next_id()` cannot be simplified to `2 * next_id()`. On a fresh start, `next_id() + next_id()` returns 3, from $1 + 2$, but `2 * next_id()` returns 2. Racket can change variables too, with `set!`, but this course does not use it.
 
 # 5 Functions as values
 
 > **NOTE:**
 >
-> **Exercise 5 (A function as an argument)** The function `twice` takes a function `f` and a value `x`:
+> **Exercise 7 (A function as an argument)** The function `twice` takes a function `f` and a value `x`:
 >
 > ``` racket
 > (define (twice f x)
@@ -315,34 +322,52 @@ Last modified: 2026-11-12 04:02:47 (PST)
 >   (+ x 3))
 > ```
 >
-> Guess what each expression returns:
->
-> 1.  `(twice add-three 10)`
-> 2.  `(twice h 4)`, with `h` from [Exercise 2](#exr-formula-from-code)
-> 3.  `(twice add-three (twice add-three 0))`
+> Guess what `(twice add-three 10)` returns.
 
 > **NOTE:**
 >
-> *Solution 5*. Replace `f` and `x` in the body `(f (f x))` ([Definition 7](#def-racket-define)):
+> *Solution 7*. As [Definition 7](#def-racket-define) says, replacing `f` and `x` in the body `(f (f x))` turns `(twice add-three 10)` into `(add-three (add-three 10))`, which is `(add-three 13)`, which returns 16.
 >
-> 1.  `(twice add-three 10)` is `(add-three (add-three 10))`, which is `(add-three 13)`, which returns 16.
-> 2.  `(twice h 4)` is `(h (h 4))`. Since $h(4) = 16 - 8 = 8$ and $h(8) = 64 - 16 = 48$, it returns 48.
-> 3.  The argument `(twice add-three 0)` returns 6, so the whole expression is `(twice add-three 6)`, which returns 12.
->
-> Racket returns the same values:
+> Racket returns the same value:
 >
 > ``` racket
 > (twice add-three 10)
 > ; 16
+> ```
+
+> **NOTE:**
+>
+> **Exercise 8 (Applying a function twice)** Continuing from [Exercise 7](#exr-twice), guess what `(twice h 4)` returns, with `h` from [Exercise 2](#exr-formula-from-code).
+
+> **NOTE:**
+>
+> *Solution 8*. Replacing `f` with `h` and `x` with 4 in the body `(f (f x))` gives `(h (h 4))`. The [function](#def-function) `h` from [Exercise 2](#exr-formula-from-code) is $h(x) = x^2 - 2x$, so $h(4) = 16 - 8 = 8$ and $h(8) = 64 - 16 = 48$. So `(twice h 4)` returns 48.
+>
+> Racket returns the same value:
+>
+> ``` racket
 > (twice h 4)
 > ; 48
+> ```
+
+> **NOTE:**
+>
+> **Exercise 9 (A call to `twice` as an argument)** Continuing from [Exercise 7](#exr-twice), guess what `(twice add-three (twice add-three 0))` returns.
+
+> **NOTE:**
+>
+> *Solution 9*. In `(twice add-three (twice add-three 0))`, the inner call `(twice add-three 0)` returns 6, so the whole [expression](#def-racket-expression) is `(twice add-three 6)`, which returns 12.
+>
+> Racket returns the same value:
+>
+> ``` racket
 > (twice add-three (twice add-three 0))
 > ; 12
 > ```
 
 > **NOTE:**
 >
-> **Definition 13 (Higher-order function)** A **higher-order function** ([Wikipedia contributors 2026d](#ref-wikipedia_higher_order_function)) is a function that takes a function as an argument, or returns a function as its value. `twice` in [Exercise 5](#exr-twice) is a higher-order function.
+> **Definition 13 (Higher-order function)** A **higher-order function** ([Wikipedia contributors 2026d](#ref-wikipedia_higher_order_function)) is a function that takes a function as an argument, or returns a function as its value. `twice` in [Exercise 7](#exr-twice) is a higher-order function.
 
 > **NOTE:**
 >
@@ -358,7 +383,7 @@ Last modified: 2026-11-12 04:02:47 (PST)
 > - `(map f L)` applies `f` to each element of the list `L`, and returns the list of results.
 > - `(filter p L)` returns the list of the elements `x` of `L` for which `(p x)` is true.
 >
-> Applied to `add-three` from [Exercise 5](#exr-twice) and to Racket’s test `even?`, they return:
+> Applied to `add-three` from [Exercise 7](#exr-twice) and to Racket’s test `even?`, they return:
 >
 > ``` racket
 > (map add-three (list 5 7 9))
@@ -371,7 +396,7 @@ Last modified: 2026-11-12 04:02:47 (PST)
 
 > **NOTE:**
 >
-> **Exercise 6 (Applying a function to a list)** `(apply f L)` applies the function `f` to the elements of the list `L` as its arguments, so `(apply + (list 2 7 6))` is the same as `(+ 2 7 6)`:
+> **Exercise 10 (Applying a function to a list)** `(apply f L)` applies the function `f` to the elements of the list `L` as its arguments, so `(apply + (list 2 7 6))` is the same as `(+ 2 7 6)`:
 >
 > ``` racket
 > (apply + (list 2 7 6))
@@ -386,7 +411,7 @@ Last modified: 2026-11-12 04:02:47 (PST)
 
 > **NOTE:**
 >
-> *Solution 6*.
+> *Solution 10*.
 >
 > 1.  `(apply max (list 3 9 2))` is `(max 3 9 2)`, which returns 9.
 >
@@ -414,7 +439,7 @@ Last modified: 2026-11-12 04:02:47 (PST)
 
 > **NOTE:**
 >
-> **Exercise 7 (A function with no name)** The function `pair-with` takes a list `L` and a value `y`:
+> **Exercise 11 (A function with no name)** The function `pair-with` takes a list `L` and a value `y`:
 >
 > ``` racket
 > (define (pair-with L y)
@@ -429,7 +454,7 @@ Last modified: 2026-11-12 04:02:47 (PST)
 
 > **NOTE:**
 >
-> *Solution 7*. `(lambda (x) (* x x))` is the function that squares its argument, written in place without a name.
+> *Solution 11*. `(lambda (x) (* x x))` is the function that squares its argument, written in place without a name.
 >
 > 1.  Applying it to 7 returns 49.
 > 2.  `map` ([Example 3](#exm-map-filter)) applies the doubling function to each element, and returns `'(2 4 6)`.
@@ -455,7 +480,7 @@ Last modified: 2026-11-12 04:02:47 (PST)
 >   body)
 > ```
 >
-> is a **`lambda` expression**. Its value is the function with parameters `x1`, …, `xn` whose value at its arguments is the value of `body`, found as in [Definition 7](#def-racket-define). The function has no name. The body may use any name defined where the `lambda` expression appears, as the body of the `lambda` in `pair-with` ([Exercise 7](#exr-pair-with)) uses `y`.
+> is a **`lambda` expression**. Its value is the function with parameters `x1`, …, `xn` whose value at its arguments is the value of `body`, found as in [Definition 7](#def-racket-define). The function has no name. The body may use any name defined where the `lambda` expression appears, as the body of the `lambda` in `pair-with` ([Exercise 11](#exr-pair-with)) uses `y`.
 >
 > The definition `(define (f x) body)` is shorthand for `(define f (lambda (x) body))`: it gives the name `f` to the function the `lambda` expression makes.
 >
@@ -463,7 +488,7 @@ Last modified: 2026-11-12 04:02:47 (PST)
 
 > **NOTE:**
 >
-> *Remark 4* (Where the name comes from). The word `lambda` comes from the lambda calculus, a model of computation in which a function is written $\lambda x.\, e$, the function that takes $x$ to the value of the expression $e$. The lambda calculus has only three features: functions, applying a function to an argument, and variables. It has no numbers, strings or loops ([Crichton 2019](#ref-crichton2019cs242)). Applying $\lambda x.\, e$ to an argument replaces each $x$ in $e$ by that argument, as in evaluation by substitution ([Example 1](#exm-substitution)). The function in [Exercise 7](#exr-pair-with) that squares its argument is $\lambda x.\, x \cdot x$.
+> *Remark 4* (Where the name comes from). The word `lambda` comes from the lambda calculus, a model of computation in which a function is written $\lambda x.\, e$, the function that takes $x$ to the value of the expression $e$. The lambda calculus has only three features: functions, applying a function to an argument, and variables. It has no numbers, strings or loops ([Crichton 2019](#ref-crichton2019cs242)). Applying $\lambda x.\, e$ to an argument replaces each $x$ in $e$ by that argument, as in evaluation by substitution ([Example 1](#exm-substitution)). The function in [Exercise 11](#exr-pair-with) that squares its argument is $\lambda x.\, x \cdot x$.
 >
 > *Media:* Will Crichton’s [notes on the lambda calculus](https://stanford-cs242.github.io/f19/lectures/02-1-lambda-calculus), from Stanford’s CS 242, *Programming Languages*, go further ([Crichton 2019](#ref-crichton2019cs242)).
 
@@ -479,7 +504,7 @@ Last modified: 2026-11-12 04:02:47 (PST)
 > `(adder 3)` returns the function $x \mapsto x + 3$, which still knows that `d` is 3 after `adder` has returned. So `adder` is a higher-order function ([Definition 13](#def-higher-order)), and its value can be used anywhere a function can:
 >
 > - applied to an argument;
-> - passed to `twice` from [Exercise 5](#exr-twice);
+> - passed to `twice` from [Exercise 7](#exr-twice);
 > - passed to `map` from [Example 3](#exm-map-filter).
 >
 > ``` racket

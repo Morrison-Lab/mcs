@@ -6,7 +6,7 @@ Ordinary and strong induction
 
 Published
 
-Last modified: 2026-11-12 04:02:47 (PST)
+Last modified: 2026-11-17 06:44:05 (PST)
 
 > **NOTE:**
 >
@@ -27,33 +27,36 @@ Last modified: 2026-11-12 04:02:47 (PST)
 >
 > $$\frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdots + \frac{1}{n(n + 1)} = \frac{n}{n + 1}.$$
 >
-> 1.  Check the claim for $n = 1$, $n = 2$ and $n = 3$.
-> 2.  Suppose the claim holds for some natural number $k$. Add the next term, $\frac{1}{(k + 1)(k + 2)}$, to both sides, and show that the claim then holds for $k + 1$.
+> Check the claim for $n = 1$, $n = 2$ and $n = 3$.
 
 > **NOTE:**
 >
-> *Solution 1*.
+> *Solution 1*. For $n = 1$, the left side is $\frac{1}{2}$ and the right side is $\frac{1}{2}$. For $n = 2$, the left side is $\frac{1}{2} + \frac{1}{6} = \frac{2}{3}$ and the right side is $\frac{2}{3}$. For $n = 3$, the left side is $\frac{2}{3} + \frac{1}{12} = \frac{3}{4}$ and the right side is $\frac{3}{4}$.
+
+> **NOTE:**
 >
-> 1.  For $n = 1$, the left side is $\frac{1}{2}$ and the right side is $\frac{1}{2}$. For $n = 2$, the left side is $\frac{1}{2} + \frac{1}{6} = \frac{2}{3}$ and the right side is $\frac{2}{3}$. For $n = 3$, the left side is $\frac{2}{3} + \frac{1}{12} = \frac{3}{4}$ and the right side is $\frac{3}{4}$.
+> **Exercise 2 (From one natural number to the next)** Continuing from [Exercise 1](#exr-unit-fractions), suppose the claim holds for some natural number $k$. Add the next term, $\frac{1}{(k + 1)(k + 2)}$, to both sides, and show that the claim then holds for $k + 1$.
+
+> **NOTE:**
 >
-> 2.  Suppose $\frac{1}{1 \cdot 2} + \cdots + \frac{1}{k(k + 1)} = \frac{k}{k + 1}$. Then
+> *Solution 2*. Suppose $\frac{1}{1 \cdot 2} + \cdots + \frac{1}{k(k + 1)} = \frac{k}{k + 1}$. Then
 >
->     $$\begin{aligned}
->     & \frac{1}{1 \cdot 2} + \cdots + \frac{1}{k(k + 1)} + \frac{1}{(k + 1)(k + 2)}
->     \\&= \frac{k}{k + 1} + \frac{1}{(k + 1)(k + 2)}
->     && \text{(the supposition)}
->     \\&= \frac{k(k + 2) + 1}{(k + 1)(k + 2)}
->     && \text{(common denominator)}
->     \\&= \frac{k^2 + 2k + 1}{(k + 1)(k + 2)}
->     \\&= \frac{(k + 1)^2}{(k + 1)(k + 2)}
->     && \text{(} k^2 + 2k + 1 = (k + 1)^2 \text{)}
->     \\&= \frac{k + 1}{k + 2},
->     && \text{(cancel } k + 1 \text{)}
->     \end{aligned}$$
+> $$\begin{aligned}
+> & \frac{1}{1 \cdot 2} + \cdots + \frac{1}{k(k + 1)} + \frac{1}{(k + 1)(k + 2)}
+> \\&= \frac{k}{k + 1} + \frac{1}{(k + 1)(k + 2)}
+> && \text{(the supposition)}
+> \\&= \frac{k(k + 2) + 1}{(k + 1)(k + 2)}
+> && \text{(common denominator)}
+> \\&= \frac{k^2 + 2k + 1}{(k + 1)(k + 2)}
+> \\&= \frac{(k + 1)^2}{(k + 1)(k + 2)}
+> && \text{(} k^2 + 2k + 1 = (k + 1)^2 \text{)}
+> \\&= \frac{k + 1}{k + 2},
+> && \text{(cancel } k + 1 \text{)}
+> \end{aligned}$$
 >
->     which is the claim for $k + 1$.
+> which is the claim for $k + 1$.
 >
-> Part 1 shows the claim for $n = 1$, and part 2 carries it from each natural number to the next, so it holds for $n = 2, 3, 4, \ldots$ in turn.
+> [Solution 1](#sol-unit-fractions) shows the claim for $n = 1$, and this step carries it from each natural number to the next, so it holds for $n = 2, 3, 4, \ldots$ in turn.
 
 > **NOTE:**
 >
@@ -66,7 +69,7 @@ Last modified: 2026-11-12 04:02:47 (PST)
 
 > **NOTE:**
 >
-> *Remark 1* (Stepping from $k$ to $k + 1$). [Definition 1](#def-proof-by-induction) states the inductive step as “if $P(n - 1)$, then $P(n)$, for every $n > n_0$”. Many sources, and part 2 of [Solution 1](#sol-unit-fractions), state it as “if $P(k)$, then $P(k + 1)$, for every $k \ge n_0$”. The two say the same thing, with $k = n - 1$, and the rest of this chapter uses the second form.
+> *Remark 1* (Stepping from $k$ to $k + 1$). [Definition 1](#def-proof-by-induction) states the inductive step as “if $P(n - 1)$, then $P(n)$, for every $n > n_0$”. Many sources, and [Solution 2](#sol-unit-fractions-step), state it as “if $P(k)$, then $P(k + 1)$, for every $k \ge n_0$”. The two say the same thing, with $k = n - 1$, and the rest of this chapter uses the second form.
 >
 > Writing the goal $P(k + 1)$ correctly is a common place to go wrong: replace *every* $n$ in $P(n)$ with $k + 1$, including in the last term of a sum and on the other side of the equation.
 
@@ -120,11 +123,11 @@ Last modified: 2026-11-12 04:02:47 (PST)
 
 > **NOTE:**
 >
-> **Exercise 2 (When does** $2^n$ catch up with $n^2$?) Compare $n^2$ with $2^n$ for $n = 1, 2, \ldots, 6$. Find the smallest natural number $n_0$ such that $n^2 \le 2^n$ holds for $n_0$ and for every $n$ you checked after it.
+> **Exercise 3 (When does** $2^n$ catch up with $n^2$?) Compare $n^2$ with $2^n$ for $n = 1, 2, \ldots, 6$. Find the smallest natural number $n_0$ such that $n^2 \le 2^n$ holds for $n_0$ and for every $n$ you checked after it.
 
 > **NOTE:**
 >
-> *Solution 2*.
+> *Solution 3*.
 >
 > |  $n$  |  1  |  2  |  3  |  4  |  5  |  6  |
 > |:-----:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -137,7 +140,7 @@ Last modified: 2026-11-12 04:02:47 (PST)
 >
 > **Example 2 (An induction that starts at 4)** Claim: $n^2 \le 2^n$ for every integer ([Definition: Integers](../chapters/direct-proof.llms.md#def-integers)) $n \ge 4$.
 >
-> Let $P(n)$ be the inequality $n^2 \le 2^n$ ([Definition: Inequality](../proof-writing.llms.md#def-inequality)), and follow [Remark 2](#rem-induction-template) with $n_0 = 4$. [Solution 2](#sol-squares-powers) shows that $n_0 = 1$ would not work, since $P(3)$ is false.
+> Let $P(n)$ be the inequality $n^2 \le 2^n$ ([Definition: Inequality](../proof-writing.llms.md#def-inequality)), and follow [Remark 2](#rem-induction-template) with $n_0 = 4$. [Solution 3](#sol-squares-powers) shows that $n_0 = 1$ would not work, since $P(3)$ is false.
 >
 > **Base case.** $4^2 = 16 \le 16 = 2^4$.
 >
@@ -160,11 +163,11 @@ Last modified: 2026-11-12 04:02:47 (PST)
 
 > **NOTE:**
 >
-> **Exercise 3 (Breaking a chocolate bar)** A chocolate bar is a row of $n$ squares. One break splits one piece into two pieces along a line between squares. How many breaks does it take to split a bar of 1, 2, 3 or 4 squares into single squares? Does the answer depend on where you break first?
+> **Exercise 4 (Breaking a chocolate bar)** A chocolate bar is a row of $n$ squares. One break splits one piece into two pieces along a line between squares. How many breaks does it take to split a bar of 1, 2, 3 or 4 squares into single squares? Does the answer depend on where you break first?
 
 > **NOTE:**
 >
-> *Solution 3*. A bar of 1 square takes 0 breaks, 2 squares take 1, 3 squares take 2, and 4 squares take 3. For 4 squares, breaking first in the middle gives two pieces of 2 squares, which take 1 break each, for $1 + 1 + 1 = 3$ breaks; breaking first at one end gives pieces of 1 and 3 squares, which take 0 and 2 breaks, for $1 + 0 + 2 = 3$ breaks. For these bars, the answer does not depend on where you break first.
+> *Solution 4*. A bar of 1 square takes 0 breaks, 2 squares take 1, 3 squares take 2, and 4 squares take 3. For 4 squares, breaking first in the middle gives two pieces of 2 squares, which take 1 break each, for $1 + 1 + 1 = 3$ breaks; breaking first at one end gives pieces of 1 and 3 squares, which take 0 and 2 breaks, for $1 + 0 + 2 = 3$ breaks. For these bars, the answer does not depend on where you break first.
 
 > **NOTE:**
 >

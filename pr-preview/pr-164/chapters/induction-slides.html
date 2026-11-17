@@ -267,7 +267,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-12 04:02:47 (PST)</p>
+  <p class="date">Last modified: 2026-11-17 06:44:05 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -297,26 +297,32 @@
 <h1><span class="header-section-number">1</span> Proof by induction</h1>
 
 </section>
-<section class="slide level2 scrollable">
+<section class="slide level2">
 
 <div id="exr-unit-fractions" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 1 (Adding unit fractions of neighbors)</strong></span> Consider the claim that for every natural number (<a href="../chapters/sets.html#def-natural-numbers">Definition: Natural numbers (our convention)</a>) <span class="math inline">\(n\)</span>,</p>
 <p><span class="math display">\[
 \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdots + \frac{1}{n(n + 1)} = \frac{n}{n + 1}.
 \]</span></p>
-<ol type="1">
-<li>Check the claim for <span class="math inline">\(n = 1\)</span>, <span class="math inline">\(n = 2\)</span> and <span class="math inline">\(n = 3\)</span>.</li>
-<li>Suppose the claim holds for some natural number <span class="math inline">\(k\)</span>. Add the next term, <span class="math inline">\(\frac{1}{(k + 1)(k + 2)}\)</span>, to both sides, and show that the claim then holds for <span class="math inline">\(k + 1\)</span>.</li>
-</ol>
+<p>Check the claim for <span class="math inline">\(n = 1\)</span>, <span class="math inline">\(n = 2\)</span> and <span class="math inline">\(n = 3\)</span>.</p>
 </div>
 </section>
-<section class="slide level2 scrollable">
+<section class="slide level2">
 
 <div id="sol-unit-fractions" class="proof solution">
-<p><span class="proof-title"><em>Solution 1</em>. </span></p>
-<ol type="1">
-<li><p>For <span class="math inline">\(n = 1\)</span>, the left side is <span class="math inline">\(\frac{1}{2}\)</span> and the right side is <span class="math inline">\(\frac{1}{2}\)</span>. For <span class="math inline">\(n = 2\)</span>, the left side is <span class="math inline">\(\frac{1}{2} + \frac{1}{6} = \frac{2}{3}\)</span> and the right side is <span class="math inline">\(\frac{2}{3}\)</span>. For <span class="math inline">\(n = 3\)</span>, the left side is <span class="math inline">\(\frac{2}{3} + \frac{1}{12} = \frac{3}{4}\)</span> and the right side is <span class="math inline">\(\frac{3}{4}\)</span>.</p></li>
-<li><p>Suppose <span class="math inline">\(\frac{1}{1 \cdot 2} + \cdots + \frac{1}{k(k + 1)} = \frac{k}{k + 1}\)</span>. Then</p>
+<p><span class="proof-title"><em>Solution 1</em>. </span>For <span class="math inline">\(n = 1\)</span>, the left side is <span class="math inline">\(\frac{1}{2}\)</span> and the right side is <span class="math inline">\(\frac{1}{2}\)</span>. For <span class="math inline">\(n = 2\)</span>, the left side is <span class="math inline">\(\frac{1}{2} + \frac{1}{6} = \frac{2}{3}\)</span> and the right side is <span class="math inline">\(\frac{2}{3}\)</span>. For <span class="math inline">\(n = 3\)</span>, the left side is <span class="math inline">\(\frac{2}{3} + \frac{1}{12} = \frac{3}{4}\)</span> and the right side is <span class="math inline">\(\frac{3}{4}\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-unit-fractions-step" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2 (From one natural number to the next)</strong></span> Continuing from <a href="#/exr-unit-fractions" class="quarto-xref">Exercise&nbsp;1</a>, suppose the claim holds for some natural number <span class="math inline">\(k\)</span>. Add the next term, <span class="math inline">\(\frac{1}{(k + 1)(k + 2)}\)</span>, to both sides, and show that the claim then holds for <span class="math inline">\(k + 1\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-unit-fractions-step" class="proof solution">
+<p><span class="proof-title"><em>Solution 2</em>. </span>Suppose <span class="math inline">\(\frac{1}{1 \cdot 2} + \cdots + \frac{1}{k(k + 1)} = \frac{k}{k + 1}\)</span>. Then</p>
 <p><span class="math display">\[
 \begin{aligned}
 &amp; \frac{1}{1 \cdot 2} + \cdots + \frac{1}{k(k + 1)} + \frac{1}{(k + 1)(k + 2)}
@@ -331,9 +337,8 @@
 &amp;&amp; \text{(cancel } k + 1 \text{)}
 \end{aligned}
 \]</span></p>
-<p>which is the claim for <span class="math inline">\(k + 1\)</span>.</p></li>
-</ol>
-<p>Part 1 shows the claim for <span class="math inline">\(n = 1\)</span>, and part 2 carries it from each natural number to the next, so it holds for <span class="math inline">\(n = 2, 3, 4, \ldots\)</span> in turn.</p>
+<p>which is the claim for <span class="math inline">\(k + 1\)</span>.</p>
+<p><a href="#/sol-unit-fractions" class="quarto-xref">Solution&nbsp;1</a> shows the claim for <span class="math inline">\(n = 1\)</span>, and this step carries it from each natural number to the next, so it holds for <span class="math inline">\(n = 2, 3, 4, \ldots\)</span> in turn.</p>
 </div>
 </section>
 <section class="slide level2 scrollable">
@@ -350,7 +355,7 @@
 <section class="slide level2">
 
 <div id="rem-step-forms" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (Stepping from <span class="math inline">\(k\)</span> to <span class="math inline">\(k + 1\)</span>). </span><a href="#/def-proof-by-induction" class="quarto-xref">Definition&nbsp;1</a> states the inductive step as “if <span class="math inline">\(P(n - 1)\)</span>, then <span class="math inline">\(P(n)\)</span>, for every <span class="math inline">\(n &gt; n_0\)</span>”. Many sources, and part 2 of <a href="#/sol-unit-fractions" class="quarto-xref">Solution&nbsp;1</a>, state it as “if <span class="math inline">\(P(k)\)</span>, then <span class="math inline">\(P(k + 1)\)</span>, for every <span class="math inline">\(k \ge n_0\)</span>”. The two say the same thing, with <span class="math inline">\(k = n - 1\)</span>, and the rest of this chapter uses the second form.</p>
+<p><span class="proof-title"><em>Remark 1</em> (Stepping from <span class="math inline">\(k\)</span> to <span class="math inline">\(k + 1\)</span>). </span><a href="#/def-proof-by-induction" class="quarto-xref">Definition&nbsp;1</a> states the inductive step as “if <span class="math inline">\(P(n - 1)\)</span>, then <span class="math inline">\(P(n)\)</span>, for every <span class="math inline">\(n &gt; n_0\)</span>”. Many sources, and <a href="#/sol-unit-fractions-step" class="quarto-xref">Solution&nbsp;2</a>, state it as “if <span class="math inline">\(P(k)\)</span>, then <span class="math inline">\(P(k + 1)\)</span>, for every <span class="math inline">\(k \ge n_0\)</span>”. The two say the same thing, with <span class="math inline">\(k = n - 1\)</span>, and the rest of this chapter uses the second form.</p>
 <p>Writing the goal <span class="math inline">\(P(k + 1)\)</span> correctly is a common place to go wrong: replace <em>every</em> <span class="math inline">\(n\)</span> in <span class="math inline">\(P(n)\)</span> with <span class="math inline">\(k + 1\)</span>, including in the last term of a sum and on the other side of the equation.</p>
 </div>
 </section>
@@ -410,13 +415,13 @@ So <span class="math inline">\(P(n)\)</span> holds for every integer <span class
 <section class="slide level2">
 
 <div id="exr-squares-powers" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 2 (When does <span class="math inline">\(2^n\)</span> catch up with <span class="math inline">\(n^2\)</span>?)</strong></span> Compare <span class="math inline">\(n^2\)</span> with <span class="math inline">\(2^n\)</span> for <span class="math inline">\(n = 1, 2, \ldots, 6\)</span>. Find the smallest natural number <span class="math inline">\(n_0\)</span> such that <span class="math inline">\(n^2 \le 2^n\)</span> holds for <span class="math inline">\(n_0\)</span> and for every <span class="math inline">\(n\)</span> you checked after it.</p>
+<p><span class="theorem-title"><strong>Exercise 3 (When does <span class="math inline">\(2^n\)</span> catch up with <span class="math inline">\(n^2\)</span>?)</strong></span> Compare <span class="math inline">\(n^2\)</span> with <span class="math inline">\(2^n\)</span> for <span class="math inline">\(n = 1, 2, \ldots, 6\)</span>. Find the smallest natural number <span class="math inline">\(n_0\)</span> such that <span class="math inline">\(n^2 \le 2^n\)</span> holds for <span class="math inline">\(n_0\)</span> and for every <span class="math inline">\(n\)</span> you checked after it.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="sol-squares-powers" class="proof solution">
-<p><span class="proof-title"><em>Solution 2</em>. </span></p>
+<p><span class="proof-title"><em>Solution 3</em>. </span></p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -457,7 +462,7 @@ So <span class="math inline">\(P(n)\)</span> holds for every integer <span class
 
 <div id="exm-squares-powers" class="theorem example">
 <p><span class="theorem-title"><strong>Example 2 (An induction that starts at 4)</strong></span> Claim: <span class="math inline">\(n^2 \le 2^n\)</span> for every integer (<a href="../chapters/direct-proof.html#def-integers">Definition: Integers</a>) <span class="math inline">\(n \ge 4\)</span>.</p>
-<p>Let <span class="math inline">\(P(n)\)</span> be the inequality <span class="math inline">\(n^2 \le 2^n\)</span> (<a href="../proof-writing.html#def-inequality">Definition: Inequality</a>), and follow <a href="#/rem-induction-template" class="quarto-xref">Remark&nbsp;2</a> with <span class="math inline">\(n_0 = 4\)</span>. <a href="#/sol-squares-powers" class="quarto-xref">Solution&nbsp;2</a> shows that <span class="math inline">\(n_0 = 1\)</span> would not work, since <span class="math inline">\(P(3)\)</span> is false.</p>
+<p>Let <span class="math inline">\(P(n)\)</span> be the inequality <span class="math inline">\(n^2 \le 2^n\)</span> (<a href="../proof-writing.html#def-inequality">Definition: Inequality</a>), and follow <a href="#/rem-induction-template" class="quarto-xref">Remark&nbsp;2</a> with <span class="math inline">\(n_0 = 4\)</span>. <a href="#/sol-squares-powers" class="quarto-xref">Solution&nbsp;3</a> shows that <span class="math inline">\(n_0 = 1\)</span> would not work, since <span class="math inline">\(P(3)\)</span> is false.</p>
 <p><strong>Base case.</strong> <span class="math inline">\(4^2 = 16 \le 16 = 2^4\)</span>.</p>
 <p><strong>Inductive step.</strong> Let <span class="math inline">\(k \ge 4\)</span>, and suppose <span class="math inline">\(k^2 \le 2^k\)</span>. The goal is <span class="math inline">\((k + 1)^2 \le 2^{k + 1}\)</span>. Since <span class="math inline">\(k \ge 4\)</span>, we have <span class="math inline">\(k^2 \ge 4k = 2k + 2k \ge 2k + 8 &gt; 2k + 1\)</span>. So</p>
 <p><span class="math display">\[
@@ -483,13 +488,13 @@ So <span class="math inline">\(P(n)\)</span> holds for every integer <span class
 <section class="slide level2">
 
 <div id="exr-chocolate-small" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 3 (Breaking a chocolate bar)</strong></span> A chocolate bar is a row of <span class="math inline">\(n\)</span> squares. One break splits one piece into two pieces along a line between squares. How many breaks does it take to split a bar of 1, 2, 3 or 4 squares into single squares? Does the answer depend on where you break first?</p>
+<p><span class="theorem-title"><strong>Exercise 4 (Breaking a chocolate bar)</strong></span> A chocolate bar is a row of <span class="math inline">\(n\)</span> squares. One break splits one piece into two pieces along a line between squares. How many breaks does it take to split a bar of 1, 2, 3 or 4 squares into single squares? Does the answer depend on where you break first?</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="sol-chocolate-small" class="proof solution">
-<p><span class="proof-title"><em>Solution 3</em>. </span>A bar of 1 square takes 0 breaks, 2 squares take 1, 3 squares take 2, and 4 squares take 3. For 4 squares, breaking first in the middle gives two pieces of 2 squares, which take 1 break each, for <span class="math inline">\(1 + 1 + 1 = 3\)</span> breaks; breaking first at one end gives pieces of 1 and 3 squares, which take 0 and 2 breaks, for <span class="math inline">\(1 + 0 + 2 = 3\)</span> breaks. For these bars, the answer does not depend on where you break first.</p>
+<p><span class="proof-title"><em>Solution 4</em>. </span>A bar of 1 square takes 0 breaks, 2 squares take 1, 3 squares take 2, and 4 squares take 3. For 4 squares, breaking first in the middle gives two pieces of 2 squares, which take 1 break each, for <span class="math inline">\(1 + 1 + 1 = 3\)</span> breaks; breaking first at one end gives pieces of 1 and 3 squares, which take 0 and 2 breaks, for <span class="math inline">\(1 + 0 + 2 = 3\)</span> breaks. For these bars, the answer does not depend on where you break first.</p>
 </div>
 </section>
 <section class="slide level2">
