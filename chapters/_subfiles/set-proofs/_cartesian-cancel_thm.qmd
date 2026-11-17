@@ -1,5 +1,5 @@
 ::: {#thm-cartesian-cancel}
-#### Cancelling a factor of a Cartesian product
+#### Canceling a factor of a Cartesian product
 
 Let $A$, $B$ and $C$ be sets with $C \ne \emptyset$.
 If $A \times C = B \times C$, then $A = B$ (@def-cartesian-product).
