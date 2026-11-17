@@ -1,0 +1,21 @@
+::: {#exr-pairs-with-repetition}
+#### Choosing two elements with repeats allowed
+
+Let $S$ be a set with $N$ elements.
+Choose two elements of $S$,
+where the same element may be chosen twice and the order does not matter.
+The five-topping choices of @exr-toppings are the case $N = 5$,
+and the same count arises whenever two items are drawn from $N$ kinds with repeats allowed.
+
+::: {.callout-tip title="Hint"}
+
+Split the choices by whether the two elements differ,
+as in @sol-toppings,
+and count the first kind with the [binomial coefficient](#def-binomial-coefficient)
+and @thm-binomial-two.
+
+:::
+
+Compute the number of different choices as a formula in $N$.
+
+:::

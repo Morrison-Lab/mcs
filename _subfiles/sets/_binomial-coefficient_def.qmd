@@ -1,0 +1,11 @@
+:::{#def-binomial-coefficient}
+#### Binomial coefficient
+
+For a [finite set](#def-finite-set) $A$ with $n$ elements and a nonnegative integer $k$,
+the **binomial coefficient** $\binomial{n}{k}$,
+read "$n$ choose $k$",
+is the number of [subsets](#def-subset) of $A$ that have exactly $k$ elements:
+
+$$\binomial{n}{k} \eqdef \card{\set{S : S \subseteq A \text{ and } \card{S} = k}}$$
+
+:::

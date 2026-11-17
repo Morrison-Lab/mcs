@@ -1,0 +1,11 @@
+:::{#exm-binomial-two}
+#### Pairs from three and from five elements
+<!-- no-figure: arithmetic on two small cases; nothing to plot -->
+
+By @thm-binomial-two,
+$\binomial{3}{2} = \frac{3 \cdot 2}{2} = 3$,
+which matches the three subsets listed in @exm-binomial-coefficient.
+Likewise $\binomial{5}{2} = \frac{5 \cdot 4}{2} = 10$,
+the number of ways to pick two different toppings from five in @sol-toppings.
+
+:::

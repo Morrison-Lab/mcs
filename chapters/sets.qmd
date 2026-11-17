@@ -273,6 +273,42 @@ The exercises are new.
 
 {{< include _subfiles/sets/_venn-diagram_exm.qmd >}}
 
+# Counting subsets {#sec-counting-subsets}
+
+{{< include _subfiles/sets/_toppings_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_toppings_sol.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../_subfiles/sets/_binomial-coefficient_def.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../_subfiles/sets/_binomial-coefficient_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../_subfiles/sets/_binomial-coefficient_not_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../_subfiles/sets/_binomial-two_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include ../_subfiles/sets/_binomial-two_exm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_pairs-with-repetition_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/sets/_pairs-with-repetition_sol.qmd >}}
+
 # References {.unnumbered}
 
 ::: {#refs}

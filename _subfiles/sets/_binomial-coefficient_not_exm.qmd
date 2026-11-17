@@ -1,0 +1,12 @@
+:::{#exm-binomial-coefficient-not}
+#### Ordered pairs are not subsets
+<!-- no-figure: a short list of pairs; nothing to plot -->
+
+The [set](#def-set) $\set{a, b, c}$ has $6$ [ordered pairs](#def-ordered-pair) of different elements:
+$(a, b)$, $(b, a)$, $(a, c)$, $(c, a)$, $(b, c)$ and $(c, b)$.
+That count is not $\binomial{3}{2}$,
+because $(a, b)$ and $(b, a)$ are different pairs but give the same [subset](#def-subset) $\set{a, b}$.
+The [binomial coefficient](#def-binomial-coefficient) $\binomial{3}{2} = 3$ counts subsets,
+which ignore order (@exm-binomial-coefficient).
+
+:::

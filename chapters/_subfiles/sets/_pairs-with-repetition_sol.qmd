@@ -1,0 +1,39 @@
+::: {#sol-pairs-with-repetition}
+
+There are $\frac{N(N + 1)}{2}$ choices, which is $\binomial{N + 1}{2}$.
+
+As in @sol-toppings,
+each choice is a set $\set{a, b}$ with $a, b \in S$,
+and the set has one of two forms.
+
+- **Two different elements.**
+  These are the $2$-element subsets of $S$,
+  and there are $\binomial{N}{2} = \frac{N(N - 1)}{2}$ of them by @thm-binomial-two.
+- **The same element twice.**
+  These are the sets $\set{a}$ with $a \in S$,
+  and there are $N$ of them.
+
+Adding the two counts, one operation per line:
+
+$$
+\begin{aligned}
+\frac{N(N - 1)}{2} + N
+&= \frac{N(N - 1)}{2} + \frac{2N}{2}
+&& \text{writing } N = \tfrac{2N}{2} \\
+&= \frac{N(N - 1) + 2N}{2}
+&& \text{adding fractions with the same denominator} \\
+&= \frac{N^2 - N + 2N}{2}
+&& \text{distributing } N \\
+&= \frac{N^2 + N}{2}
+&& \text{combining } -N + 2N \\
+&= \frac{N(N + 1)}{2}
+&& \text{factoring out } N \\
+&= \binomial{N + 1}{2}
+&& \text{taking } n = N + 1 \text{ in the theorem}
+\end{aligned}
+$$
+
+The last line applies @thm-binomial-two with $n = N + 1$.
+For the five toppings, $N = 5$ gives $\frac{5 \cdot 6}{2} = 15$ choices, as in @sol-toppings.
+
+:::

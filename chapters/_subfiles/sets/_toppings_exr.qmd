@@ -1,0 +1,22 @@
+::: {#exr-toppings}
+#### Frozen yogurt toppings
+
+A frozen yogurt shop has five toppings:
+sprinkles, fudge, granola, berries and nuts.
+A customer picks two toppings and may pick the same topping twice.
+The order does not matter:
+sprinkles then fudge is the same choice as fudge then sprinkles.
+Counting such choices is a first step toward counting the subsets of a set.
+
+::: {.callout-tip title="Hint"}
+
+Write each choice as a [set](#def-set) in [roster notation](#def-roster-notation),
+such as $\set{\text{sprinkles}, \text{fudge}}$.
+Listing an element twice does not add an element (@exm-roster-notation).
+An [ordered pair](#def-ordered-pair) of toppings keeps the order of the picks.
+
+:::
+
+Compute the number of different choices.
+
+:::
