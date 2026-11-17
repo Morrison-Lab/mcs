@@ -6,7 +6,7 @@ Check the background that CSCI 201 assumes, before the course starts
 
 Published
 
-Last modified: 2026-11-16 22:50:01 (PST)
+Last modified: 2026-11-16 23:18:38 (PST)
 
 The prerequisite self-test now lives with the rest of the CSCI 201 course logistics. Take it at the [CSCI 201 prerequisite self-test](https://morrison-lab.github.io/csci201/chapters/prerequisite-self-test.html), or download the [exercises as a PDF](https://morrison-lab.github.io/csci201/chapters/prerequisite-self-test-exercises.pdf), which leaves out the solutions.
 
