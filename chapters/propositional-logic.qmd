@@ -144,6 +144,14 @@ which the other data science notes link to.
 
 {{< slidebreak >}}
 
+{{< include _subfiles/propositional-logic/_false-premise-true-conclusion_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/propositional-logic/_false-premise-true-conclusion_sol.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include _subfiles/propositional-logic/_reading-implies_rem.qmd >}}
 
 ## The converse {#sec-converse}

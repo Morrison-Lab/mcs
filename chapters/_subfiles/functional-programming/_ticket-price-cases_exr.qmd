@@ -1,0 +1,8 @@
+::: {#exr-ticket-price-cases}
+#### The ticket price by cases
+
+Continuing from @exr-ticket-price,
+write `ticket-price` as a mathematical [function](#def-function) $p$ defined by cases,
+for a whole number of years $a \ge 0$.
+
+:::

@@ -38,6 +38,14 @@ The exercises, the other examples and the text of the false proof are new.
 
 {{< slidebreak >}}
 
+{{< include _subfiles/induction/_unit-fractions-step_exr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include _subfiles/induction/_unit-fractions-step_sol.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include ../_subfiles/proof-writing/_proof-by-induction_def.qmd >}}
 
 {{< slidebreak >}}

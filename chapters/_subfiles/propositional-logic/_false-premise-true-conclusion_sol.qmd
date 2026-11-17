@@ -1,0 +1,11 @@
+::: {#sol-false-premise-true-conclusion}
+
+The proposition is true.
+The premise "$7$ is even" is false,
+so the [implication](#def-implies) is true whatever its conclusion says.
+Here the conclusion, "$7$ is odd", is true,
+and that does not matter either:
+the answer is the same as in @exr-false-premise,
+whose conclusion is false.
+
+:::

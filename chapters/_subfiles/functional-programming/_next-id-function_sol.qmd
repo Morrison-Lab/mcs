@@ -1,0 +1,9 @@
+::: {#sol-next-id-function}
+
+No.
+A function with no arguments has exactly one value,
+but `next_id()` returned 1 and then 2 in @sol-next-id.
+What it returns depends on the variable `count`,
+which is not an argument and which each call changes.
+
+:::

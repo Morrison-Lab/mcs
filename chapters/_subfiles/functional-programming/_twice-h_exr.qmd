@@ -1,0 +1,7 @@
+::: {#exr-twice-h}
+#### Applying a function twice
+
+Continuing from @exr-twice,
+guess what `(twice h 4)` returns, with `h` from @exr-formula-from-code.
+
+:::

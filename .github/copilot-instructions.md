@@ -54,6 +54,28 @@ Always put a blank line before the start of a bullet-point list in markdown (`.m
 - Use bullet lists when the items are important and deserve emphasis
 - Technical lists (commands, file names, features) typically benefit from bullet format
 
+## Derivations: exercise, solution, theorem, proof
+
+The canonical rule is psw's [Writing for teaching](https://morrison-lab.github.io/psw/chapters/teaching.html) (Ezra, 2026-10-29).
+Review a derivation against it, not against the forward-reference rule.
+
+- Pose every calculation, derivation or proof as an exercise (`#exr-`), and put the worked steps in its solution (`#sol-`) right after it.
+  The exercise comes before the theorem that records the result.
+  An exercise that asks for a result the next theorem div states is not a forward reference:
+  asking the question before stating the answer is the intended order.
+- Restate every result that a solution first derives in its own theorem-type div (`#thm-`, `#lem-`, `#cor-` or `#prp-`) after the exercise and its solution.
+  The solution shows the working, and the theorem div states the result by itself, so a reader can find and cite it.
+- A restated theorem passes review when:
+  - **The proof stands alone.**
+    It derives the result step by step, or cites earlier results,
+    and does not only point back at the solution that first derived it.
+    It may also cite the exercise.
+  - **The statement uses only defined symbols.**
+    Every symbol is defined in the statement itself or in an earlier div.
+  - **The first use of each term is linked** to the div that defines it.
+  - **Each source line holds one clause.**
+- A later argument cites the result div, never the solution.
+
 ## Code Chunks
 
 ### Code Folding
