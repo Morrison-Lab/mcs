@@ -6,7 +6,7 @@ Elements, subsets, products and operations
 
 Published
 
-Last modified: 2026-11-17 13:14:48 (PST)
+Last modified: 2026-11-17 15:58:01 (PST)
 
 > **NOTE:**
 >
@@ -406,6 +406,104 @@ Last modified: 2026-11-17 13:14:48 (PST)
 > - Everything inside either circle is $L \cup M = {\mathopen{}\left\{\text{L}, \text{O}, \text{G}, \text{I}, \text{C}, \text{M}, \text{A}\right\}\mathclose{}}$.
 > - Everything in the rectangle outside circle $L$ is $L^c$, the 21 letters not in LOGIC.
 
+# 7 Counting subsets
+
+> **NOTE:**
+>
+> **Exercise 7 (Frozen yogurt toppings)** A frozen yogurt shop has five toppings: sprinkles, fudge, granola, berries and nuts. A customer picks two toppings and may pick the same topping twice. The order does not matter: sprinkles then fudge is the same choice as fudge then sprinkles. Counting such choices is a first step toward counting the subsets of a set.
+>
+> > **TIP:**
+> >
+> > Write each choice as a [set](#def-set) in [roster notation](#def-roster-notation), such as ${\mathopen{}\left\{\text{sprinkles}, \text{fudge}\right\}\mathclose{}}$. Listing an element twice does not add an element ([Example 2](#exm-roster-notation)). An [ordered pair](#def-ordered-pair) of toppings keeps the order of the picks.
+>
+> Compute the number of different choices.
+
+> **NOTE:**
+>
+> *Solution 7*. There are $15$ choices.
+>
+> Each choice is a set of one or two toppings, so count the choices of two different toppings and the choices of one topping separately.
+>
+> - **Two different toppings.** There are $5$ choices for the first topping and $4$ for the second, so there are $5 \cdot 4 = 20$ [ordered pairs](#def-ordered-pair) of different toppings. The sets ${\mathopen{}\left\{\text{sprinkles}, \text{fudge}\right\}\mathclose{}}$ and ${\mathopen{}\left\{\text{fudge}, \text{sprinkles}\right\}\mathclose{}}$ are equal, so each choice comes from exactly two ordered pairs. That leaves $20 / 2 = 10$ choices.
+> - **The same topping twice.** The choice is a set with one element, such as ${\mathopen{}\left\{\text{nuts}\right\}\mathclose{}}$, and there are $5$ of these.
+>
+> In all, there are $10 + 5 = 15$ choices.
+
+> **NOTE:**
+>
+> **Definition 25 (Binomial coefficient)** For a [finite set](#def-finite-set) $A$ with $n$ elements and a nonnegative integer $k$, the **binomial coefficient** ${\binom{n}{k}}$, read “$n$ choose $k$”, is the number of [subsets](#def-subset) of $A$ that have exactly $k$ elements:
+>
+> $${\binom{n}{k}} \stackrel{\text{def}}{=}{\mathopen{}\left|{\mathopen{}\left\{S : S \subseteq A \text{ and } {\mathopen{}\left|S\right|\mathclose{}} = k\right\}\mathclose{}}\right|\mathclose{}}$$
+
+> **NOTE:**
+>
+> **Example 17 (Subsets of** ${\mathopen{}\left\{a, b, c\right\}\mathclose{}}$ by size)  
+>
+> The [set](#def-set) ${\mathopen{}\left\{a, b, c\right\}\mathclose{}}$ has $3$ elements. Its subsets with exactly $2$ elements are ${\mathopen{}\left\{a, b\right\}\mathclose{}}$, ${\mathopen{}\left\{a, c\right\}\mathclose{}}$ and ${\mathopen{}\left\{b, c\right\}\mathclose{}}$, so ${\binom{3}{2}} = 3$. Its only subset with $0$ elements is the [empty set](#def-empty-set), so ${\binom{3}{0}} = 1$, and its only subset with $3$ elements is ${\mathopen{}\left\{a, b, c\right\}\mathclose{}}$ itself, so ${\binom{3}{3}} = 1$.
+
+> **NOTE:**
+>
+> **Example 18 (Ordered pairs are not subsets)**  
+>
+> The [set](#def-set) ${\mathopen{}\left\{a, b, c\right\}\mathclose{}}$ has $6$ [ordered pairs](#def-ordered-pair) of different elements: $(a, b)$, $(b, a)$, $(a, c)$, $(c, a)$, $(b, c)$ and $(c, b)$. That count is not ${\binom{3}{2}}$, because $(a, b)$ and $(b, a)$ are different pairs but give the same [subset](#def-subset) ${\mathopen{}\left\{a, b\right\}\mathclose{}}$. The [binomial coefficient](#def-binomial-coefficient) ${\binom{3}{2}} = 3$ counts subsets, which ignore order ([Example 17](#exm-binomial-coefficient)).
+
+> **NOTE:**
+>
+> **Theorem 4 (Choosing two elements)** For every integer $n \ge 0$, the [binomial coefficient](#def-binomial-coefficient) ${\binom{n}{2}}$ is half of $n$ times $n - 1$:
+>
+> $${\binom{n}{2}} = \frac{n(n - 1)}{2}$$
+
+> **NOTE:**
+>
+> *Proof*. Let $A$ be a [finite set](#def-finite-set) with $n$ elements. Count the [ordered pairs](#def-ordered-pair) $(a, b)$ with $a \in A$, $b \in A$ and $a \neq b$. There are $n$ choices for $a$, and for each of them there are $n - 1$ choices for $b$, so there are $n(n - 1)$ such pairs.
+>
+> The [set](#def-set) ${\mathopen{}\left\{a, b\right\}\mathclose{}}$ is a [subset](#def-subset) of $A$ with $2$ elements, and it equals ${\mathopen{}\left\{b, a\right\}\mathclose{}}$. So each $2$-element subset of $A$ comes from exactly two of these ordered pairs, namely $(a, b)$ and $(b, a)$. Hence $n(n - 1) = 2 {\binom{n}{2}}$, and dividing both sides by $2$ gives the claim.
+
+> **NOTE:**
+>
+> **Example 19 (Pairs from three and from five elements)**  
+>
+> By [Theorem 4](#thm-binomial-two), ${\binom{3}{2}} = \frac{3 \cdot 2}{2} = 3$, which matches the three subsets listed in [Example 17](#exm-binomial-coefficient). Likewise ${\binom{5}{2}} = \frac{5 \cdot 4}{2} = 10$, the number of ways to pick two different toppings from five in [Solution 7](#sol-toppings).
+
+> **NOTE:**
+>
+> **Exercise 8 (Choosing two elements with repeats allowed)** Let $S$ be a set with $N$ elements. Choose two elements of $S$, where the same element may be chosen twice and the order does not matter. The five-topping choices of [Exercise 7](#exr-toppings) are the case $N = 5$, and the same count arises whenever two items are drawn from $N$ kinds with repeats allowed.
+>
+> > **TIP:**
+> >
+> > Split the choices by whether the two elements differ, as in [Solution 7](#sol-toppings), and count the first kind with the [binomial coefficient](#def-binomial-coefficient) and [Theorem 4](#thm-binomial-two).
+>
+> Compute the number of different choices as a formula in $N$.
+
+> **NOTE:**
+>
+> *Solution 8*. There are $\frac{N(N + 1)}{2}$ choices, which is ${\binom{N + 1}{2}}$.
+>
+> As in [Solution 7](#sol-toppings), each choice is a set ${\mathopen{}\left\{a, b\right\}\mathclose{}}$ with $a, b \in S$, and the set has one of two forms.
+>
+> - **Two different elements.** These are the $2$-element subsets of $S$, and there are ${\binom{N}{2}} = \frac{N(N - 1)}{2}$ of them by [Theorem 4](#thm-binomial-two).
+> - **The same element twice.** These are the sets ${\mathopen{}\left\{a\right\}\mathclose{}}$ with $a \in S$, and there are $N$ of them.
+>
+> Adding the two counts, one operation per line:
+>
+> $$\begin{aligned}
+> \frac{N(N - 1)}{2} + N
+> &= \frac{N(N - 1)}{2} + \frac{2N}{2}
+> && \text{writing } N = \tfrac{2N}{2} \\
+> &= \frac{N(N - 1) + 2N}{2}
+> && \text{adding fractions with the same denominator} \\
+> &= \frac{N^2 - N + 2N}{2}
+> && \text{distributing } N \\
+> &= \frac{N^2 + N}{2}
+> && \text{combining } -N + 2N \\
+> &= \frac{N(N + 1)}{2}
+> && \text{factoring out } N \\
+> &= {\binom{N + 1}{2}}
+> && \text{taking } n = N + 1 \text{ in the theorem}
+> \end{aligned}$$
+>
+> The last line applies [Theorem 4](#thm-binomial-two) with $n = N + 1$. For the five toppings, $N = 5$ gives $\frac{5 \cdot 6}{2} = 15$ choices, as in [Solution 7](#sol-toppings).
+
 # Definitions on this page
 
 - [Definition 1 (Set)](#def-set)
@@ -432,6 +530,7 @@ Last modified: 2026-11-17 13:14:48 (PST)
 - [Definition 22 (Set difference)](#def-set-difference)
 - [Definition 23 (Complement)](#def-complement)
 - [Definition 24 (Venn diagram)](#def-venn-diagram)
+- [Definition 25 (Binomial coefficient)](#def-binomial-coefficient)
 
 # References
 
