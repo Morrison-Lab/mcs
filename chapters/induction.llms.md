@@ -6,7 +6,7 @@ Ordinary and strong induction
 
 Published
 
-Last modified: 2026-11-19 01:19:19 (PST)
+Last modified: 2026-11-19 15:22:13 (PST)
 
 > **NOTE:**
 >
