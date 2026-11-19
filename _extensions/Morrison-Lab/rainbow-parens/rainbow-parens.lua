@@ -102,7 +102,8 @@ local function extension_version()
   end
   local text = "\n" .. file:read("a")
   file:close()
-  local version = text:match("\nversion:%s*([%w.+-]+)")
+  -- The version may be quoted: version: "0.1.0".
+  local version = text:match("\nversion:%s*[\"']?([%w.+-]+)")
   if not version then
     fail("no version in " .. path)
   end

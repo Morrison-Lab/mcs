@@ -24,11 +24,13 @@
 }
 
 /*
- * Quarto's dark website theme (body.quarto-dark), and the dark slide theme of
- * the lab's qwt template (body.qwt-dark).
+ * Quarto's dark website theme (body.quarto-dark), the dark slide theme of
+ * the lab's qwt template (body.qwt-dark), and any page whose background the
+ * script finds dark (body.rp-dark), such as one with a single dark theme.
  */
 body.quarto-dark,
-body.qwt-dark {
+body.qwt-dark,
+body.rp-dark {
   --rp-1: #5e99fd; /* blue */
   --rp-2: #ebb678; /* sand */
   --rp-3: #ff609c; /* pink */
