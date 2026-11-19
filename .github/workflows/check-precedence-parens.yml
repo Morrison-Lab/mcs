@@ -1,0 +1,25 @@
+# Thin caller of Morrison-Lab/gha's reusable precedence check.
+#
+# Flags math on lines a PR adds that leaves a logical connective's precedence
+# implicit, such as `x \in A \lor x \in B` (write `(x \in A) \lor (x \in B)`)
+# or `P \land Q \lor R`. It is diff-scoped, so it never reflags older text.
+# Blocking.
+#
+# Why it exists: Ezra, 2026-11-19, "let's make a habit of using parentheses to
+# clarify operator precedence" (Morrison-Lab/gha#2119; rule in Morrison-Lab/psw,
+# notation chapter).
+
+name: Check that math parenthesizes around logical connectives
+
+on:
+  pull_request:
+
+jobs:
+  check:
+    permissions:
+      contents: read
+    uses: Morrison-Lab/gha/.github/workflows/check-precedence-parens.yml@v3
+    with:
+      # Vendored Quarto extensions are not ours to edit.
+      paths-ignore: '_extensions/**'
+      fail: true
