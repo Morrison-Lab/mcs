@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-19 14:21:14 (PST)
+Last modified: 2026-11-19 15:22:50 (PST)
 
 This page collects general advice on how to write [proofs](#def-proof) and [derivations](#def-derivation). The goal of a proof is not just to convince yourself that a [result](#def-result) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for [logical entailment](#def-logical-entailment) are listed under [Definitions for proofs](#sec-proof-definitions) below.
 
@@ -1141,7 +1141,7 @@ The following example uses [summation notation](https://morrison-lab.github.io/m
 Free course materials on formal logic:
 
 - Thomas Icard’s [Phil 150/250, Mathematical Logic course notes](https://web.stanford.edu/~icard/phil150) (Stanford) review sets, relations and functions, then cover propositional, modal and first-order logic.
-- John Wilcox’s [logic handouts](https://www.johnwilcox.org/logic.html) supplement the same Stanford course, with a handout per week on the syntax and semantics of propositional and first-order logic, natural deduction and metalogic.
+- John Wilcox’s [logic handouts (archived copy)](http://web.archive.org/web/20260919135840/https://www.johnwilcox.org/logic.html) supplement the same Stanford course, with a handout per week on the syntax and semantics of propositional and first-order logic, natural deduction and metalogic.
 - Eric Pacuit’s [Phil 151: First Order Logic](https://cs.stanford.edu/~epacuit/classes/phil151winter09.html) (Stanford, Winter 2009) posts a syllabus, a modal logic study guide and problem sets.
 
 # Definitions on this page
