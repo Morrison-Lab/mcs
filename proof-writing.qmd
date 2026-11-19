@@ -29,7 +29,7 @@ Free course materials on formal logic:
 - Thomas Icard's [Phil 150/250, Mathematical Logic course notes](https://web.stanford.edu/~icard/phil150)
   (Stanford) review sets, relations and functions,
   then cover propositional, modal and first-order logic.
-- John Wilcox's [logic handouts](https://www.johnwilcox.org/logic.html)
+- John Wilcox's [logic handouts (archived copy)](http://web.archive.org/web/20260919135840/https://www.johnwilcox.org/logic.html)
   supplement the same Stanford course,
   with a handout per week on the syntax and semantics of propositional and first-order logic, natural deduction and metalogic.
 - Eric Pacuit's [Phil 151: First Order Logic](https://cs.stanford.edu/~epacuit/classes/phil151winter09.html)
