@@ -1,0 +1,46 @@
+/*
+ * rainbow-parens colours, one palette per page theme.
+ *
+ * Each palette was checked with the dataviz skill's validate_palette.js
+ * (all pairs, not only neighbours): every pair stays apart under
+ * protanopia and deuteranopia (OKLab delta E x 100 of at least 8) and under
+ * normal vision (at least 15), and every colour has WCAG text contrast of at
+ * least 4.5:1 on each background it is meant for.
+ *
+ * Light (white, off-white #f5f2ea, parchment #f1e8d0, and their code
+ * backgrounds): worst CVD delta E 10.6, worst normal 19.5,
+ * contrast 4.57-7.04.
+ * Dark (Bootstrap darkly #222222, its code background #303030, and the
+ * qwt slides' #1c1e20): worst CVD delta E 9.7, worst normal 19.1,
+ * contrast 4.65-9.21.
+ *
+ * Override any --rp-N variable to change a colour.
+ */
+:root {
+  --rp-1: #2757a8; /* blue */
+  --rp-2: #84550f; /* brown */
+  --rp-3: #aa0970; /* magenta */
+  --rp-4: #8e2dee; /* violet */
+}
+
+/*
+ * Quarto's dark website theme (body.quarto-dark), and the dark slide theme of
+ * the lab's qwt template (body.qwt-dark).
+ */
+body.quarto-dark,
+body.qwt-dark {
+  --rp-1: #5e99fd; /* blue */
+  --rp-2: #ebb678; /* sand */
+  --rp-3: #ff609c; /* pink */
+  --rp-4: #4cd9d2; /* aqua */
+}
+
+.rp-d1 { color: var(--rp-1) !important; }
+.rp-d2 { color: var(--rp-2) !important; }
+.rp-d3 { color: var(--rp-3) !important; }
+.rp-d4 { color: var(--rp-4) !important; }
+
+/* High-contrast and print modes keep the text colour. */
+@media (forced-colors: active), print {
+  .rp-d1, .rp-d2, .rp-d3, .rp-d4 { color: inherit !important; }
+}
