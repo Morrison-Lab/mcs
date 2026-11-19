@@ -1,16 +1,16 @@
 /*
- * rainbow-parens: colour matching brackets by nesting depth.
+ * rainbow-parens: color matching brackets by nesting depth.
  *
  * Depth 1 gets class rp-d1, depth 2 rp-d2, and so on, cycling after
- * rainbow-parens.css's last colour (four). An opener and its closer share
+ * rainbow-parens.css's last color (four). An opener and its closer share
  * a depth, whatever their shapes, so the half-open interval [0, 1) pairs
- * its [ with its ). A closer with no opener before it keeps the text colour.
+ * its [ with its ). A closer with no opener before it keeps the text color.
  *
  * Math: a MathJax render action, run after MathJax compiles the TeX into its
  * internal MathML and before it builds the output, adds the class to each
  * bracket <mo>. MathJax copies a MathML class onto the element it draws, so
- * the stylesheet can switch colours with the page theme. Brackets inside an
- * explicit \color{...} keep the author's colour.
+ * the stylesheet can switch colors with the page theme. Brackets inside an
+ * explicit \color{...} keep the author's color.
  *
  * Code: in highlighted code blocks (every language by default, or the
  * configured ones), each bracket outside a string, comment or character
@@ -46,24 +46,24 @@
     node.attributes.set("class", old ? old + " " + cls : cls);
   }
 
-  function colourMath(root) {
+  function colorMath(root) {
     var stack = [];
-    function walk(node, coloured) {
+    function walk(node, colored) {
       if (!node) {
         return;
       }
       var own = node.attributes && node.attributes.getExplicit &&
         node.attributes.getExplicit("mathcolor");
-      var inColour = coloured || Boolean(own);
+      var inColor = colored || Boolean(own);
       if (node.isKind && node.isKind("mo") && node.getText) {
         var text = node.getText();
         if (OPEN[text]) {
           stack.push(text);
-          if (!inColour) {
+          if (!inColor) {
             addClass(node, levelClass(stack.length));
           }
         } else if (CLOSE[text] && stack.length) {
-          if (!inColour) {
+          if (!inColor) {
             addClass(node, levelClass(stack.length));
           }
           stack.pop();
@@ -72,7 +72,7 @@
       }
       var kids = node.childNodes || [];
       for (var i = 0; i < kids.length; i++) {
-        walk(kids[i], inColour);
+        walk(kids[i], inColor);
       }
     }
     walk(root, false);
@@ -96,13 +96,13 @@
         }
         for (var item of doc.math) {
           if (item.root) {
-            colourMath(item.root);
+            colorMath(item.root);
           }
         }
       },
       function (math) {
         if (settings().math && math.root) {
-          colourMath(math.root);
+          colorMath(math.root);
         }
       },
     ];
@@ -123,7 +123,7 @@
     return false;
   }
 
-  function colourCode(code) {
+  function colorCode(code) {
     var walker = document.createTreeWalker(code, NodeFilter.SHOW_TEXT);
     var texts = [];
     while (walker.nextNode()) {
@@ -167,7 +167,7 @@
     });
   }
 
-  function colourAllCode() {
+  function colorAllCode() {
     var langs = settings().code;
     langs.forEach(function (lang) {
       // "*": every code block Quarto highlighted (class sourceCode), so
@@ -177,7 +177,7 @@
       document.querySelectorAll(sel).forEach(function (code) {
         if (!code.hasAttribute("data-rainbow-parens")) {
           code.setAttribute("data-rainbow-parens", "");
-          colourCode(code);
+          colorCode(code);
         }
       });
     });
@@ -185,11 +185,11 @@
 
   installMathJax();
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", colourAllCode);
+    document.addEventListener("DOMContentLoaded", colorAllCode);
   } else {
-    colourAllCode();
+    colorAllCode();
   }
 
   // Exposed for tests.
-  window.rainbowParens = { colourCode: colourCode, colourMath: colourMath };
+  window.rainbowParens = { colorCode: colorCode, colorMath: colorMath };
 })();

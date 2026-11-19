@@ -1,13 +1,13 @@
 --[[
-rainbow-parens filter: colour matching brackets by nesting depth in HTML output.
+rainbow-parens filter: color matching brackets by nesting depth in HTML output.
 
 The filter only attaches a script and a stylesheet to HTML pages; the
-colouring happens in the browser, in two places:
+coloring happens in the browser, in two places:
 
-- math: a MathJax render action colours each ( [ { and its partner after
+- math: a MathJax render action colors each ( [ { and its partner after
   MathJax parses the TeX, so \left( ... \right) and plain ( ... ) both count;
 - code: brackets in highlighted code blocks (R, Python, Racket, any language
-  Quarto highlights) are wrapped in coloured spans, skipping strings,
+  Quarto highlights) are wrapped in colored spans, skipping strings,
   comments and character literals.
 
 PDF, Word and every other non-HTML format are untouched, so they stay black.
@@ -15,7 +15,7 @@ PDF, Word and every other non-HTML format are untouched, so they stay black.
 Settings, in document or project metadata (all optional):
 
   rainbow-parens:
-    math: true           # colour brackets in math (default true)
+    math: true           # color brackets in math (default true)
     code: true           # true: every highlighted code block (default);
                          # false: none; a list such as [r, racket]: only
                          # code blocks in those languages
@@ -33,19 +33,37 @@ local function fail(message)
   os.exit(1)
 end
 
-local function as_strings(value)
-  local out = {}
-  if value == nil then
-    return out
+local KEYS = { math = true, code = true }
+
+-- A language name as Pandoc writes it into a code block's class.
+local function language(item)
+  local name = pandoc.utils.stringify(item)
+  if not name:match("^[%w_+#.-]+$") then
+    fail("`code` languages must be single words such as r or racket, got '"
+      .. name .. "'")
   end
-  if pandoc.utils.type(value) == "List" or type(value) == "table" then
+  return name
+end
+
+local function code_setting(value)
+  if value == nil or value == true then
+    return ALL
+  end
+  if value == false then
+    return {}
+  end
+  local kind = pandoc.utils.type(value)
+  if kind == "List" then
+    local out = {}
     for _, item in ipairs(value) do
-      out[#out + 1] = pandoc.utils.stringify(item)
+      out[#out + 1] = language(item)
     end
     return out
   end
-  out[1] = pandoc.utils.stringify(value)
-  return out
+  if kind == "Inlines" or kind == "string" then
+    return { language(value) }
+  end
+  fail("`code` must be true, false or a list of languages")
 end
 
 local function settings(meta)
@@ -53,27 +71,42 @@ local function settings(meta)
   if raw == false then
     return nil
   end
-  local math, code = true, ALL
+  if raw == nil or raw == true then
+    return { math = true, code = ALL }
+  end
   -- A metadata map has pandoc type "table"; a bare word is "Inlines".
-  if pandoc.utils.type(raw) == "table" then
-    if raw.math == false then
-      math = false
-    elseif raw.math ~= nil and raw.math ~= true then
-      fail("`math` must be true or false, got "
-        .. pandoc.utils.stringify(raw.math))
-    end
-    if raw.code == false then
-      code = {}
-    elseif raw.code == true then
-      code = ALL
-    elseif raw.code ~= nil then
-      code = as_strings(raw.code)
-    end
-  elseif raw ~= nil and raw ~= true then
+  if pandoc.utils.type(raw) ~= "table" then
     fail("expected true, false or a table of settings, got "
       .. pandoc.utils.stringify(raw))
   end
-  return { math = math, code = code }
+  for key in pairs(raw) do
+    if not KEYS[key] then
+      fail("unknown setting `" .. tostring(key) .. "`; expected math or code")
+    end
+  end
+  if raw.math ~= nil and raw.math ~= true and raw.math ~= false then
+    fail("`math` must be true or false, got " .. pandoc.utils.stringify(raw.math))
+  end
+  return { math = raw.math ~= false, code = code_setting(raw.code) }
+end
+
+-- The version in _extension.yml, so the dependency's folder name follows
+-- each release without a second copy of the number here.
+local function extension_version()
+  local path = pandoc.path.join({
+    pandoc.path.directory(PANDOC_SCRIPT_FILE), "_extension.yml",
+  })
+  local file = io.open(path, "r")
+  if not file then
+    fail("cannot read " .. path)
+  end
+  local text = "\n" .. file:read("a")
+  file:close()
+  local version = text:match("\nversion:%s*([%w.+-]+)")
+  if not version then
+    fail("no version in " .. path)
+  end
+  return version
 end
 
 local function escape_attr(text)
@@ -81,11 +114,9 @@ local function escape_attr(text)
 end
 
 function Meta(meta)
-  if not quarto.doc.is_format("html") then
-    return nil
-  end
+  -- Validate in every format, so a bad value fails a PDF render too.
   local s = settings(meta)
-  if s == nil then
+  if s == nil or not quarto.doc.is_format("html") then
     return nil
   end
   -- The settings travel as <meta> tags, which the script reads when MathJax
@@ -97,7 +128,7 @@ function Meta(meta)
   ))
   quarto.doc.add_html_dependency({
     name = "rainbow-parens",
-    version = "0.1.0",
+    version = extension_version(),
     -- A classic (non-module, non-deferred) script, so it runs before the
     -- deferred MathJax script and can register its render action.
     scripts = { "rainbow-parens.js" },

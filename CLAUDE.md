@@ -25,8 +25,9 @@ Authoritative style guides:
 - `_quarto.yml`, `_quarto-website.yml` --- Quarto project + website config
 - `_extensions/` --- vendored Quarto extensions (including `code-language-labels`, which labels each code block with its language in HTML and revealjs output;
   vendored from [`d-morrison/code-language-labels`](https://github.com/d-morrison/code-language-labels)),
-  and `Morrison-Lab/rainbow-parens`, which colours matching brackets by nesting depth in HTML math and code
-  (from [`Morrison-Lab/rainbow-parens`](https://github.com/Morrison-Lab/rainbow-parens); update it with `quarto add Morrison-Lab/rainbow-parens`, not by hand)
+  and `Morrison-Lab/rainbow-parens`, which colors matching brackets by nesting depth in HTML math and code
+  (from [`Morrison-Lab/rainbow-parens`](https://github.com/Morrison-Lab/rainbow-parens);
+  update it with `quarto add Morrison-Lab/rainbow-parens`, not by hand)
 - `latex-macros/` --- git submodule for shortcode/macro definitions (see `.gitmodules`)
 - `mds/` --- git submodule of [`Morrison-Lab/mds`](https://github.com/Morrison-Lab/mds), whose definition fragments the chapters include;
   excluded from the render (`!mds/`), with `mds/references.bib` in the bibliography
