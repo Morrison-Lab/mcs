@@ -16,7 +16,7 @@ When two propositions say the same thing, and how to say the opposite
 
 Published
 
-Last modified: 2026-11-19 15:50:22 (PST)
+Last modified: 2026-11-19 18:27:49 (PST)
 
 > **NOTE:**
 >
