@@ -1,0 +1,7 @@
+title: rainbow-parens
+author: Morrison-Lab
+version: 0.1.0
+quarto-required: ">=1.6.0"
+contributes:
+  filters:
+    - rainbow-parens.lua
