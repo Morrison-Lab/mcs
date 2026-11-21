@@ -35,7 +35,8 @@ This holds in each case:
   and $\le$ means $<$ or $=$ ([strict](algebra.qmd#def-strict-inequality) and [non-strict inequalities](algebra.qmd#def-non-strict-inequality)).
   A case with an $=$ is covered by the previous bullet, and the remaining case is $a < b$ and $b < c$,
   which gives $a < c$ because $<$ is transitive on the real numbers.
-  So two steps that are each $\le$ or $<$ give $<$ if either is $<$, and they give $\le$ otherwise.
+  So two steps that are each $\le$ or $<$ give $<$ if either is $<$,
+  and they give $\le$ otherwise.
 
 Now let $T_j$ be the relation named by the same rule applied to the first $j$ steps of the chain,
 with $T_0$ being $=$.
