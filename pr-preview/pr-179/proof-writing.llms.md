@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-16 08:48:33 (PST)
+Last modified: 2026-11-23 11:02:02 (PST)
 
 This page collects general advice on how to write [proofs](#def-proof) and [derivations](#def-derivation). The goal of a proof is not just to convince yourself that a [result](#def-result) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for [logical entailment](#def-logical-entailment) are listed under [Definitions for proofs](#sec-proof-definitions) below.
 
@@ -599,7 +599,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](https://morrison-la
 >
 > - If $R$ and $S$ are both $=$, then $a = c$ ([equalities are transitive](https://morrison-lab.github.io/mds/algebra.html#thm-equal-trans)).
 > - If exactly one of $R$ and $S$ is $=$, replace $b$ by the equal expression in the other relation ([substitution](https://morrison-lab.github.io/mds/algebra.html#thm-substitution)). This gives the other relation between $a$ and $c$.
-> - If neither is $=$, then each of $a \mathrel{R} b$ and $b \mathrel{S} c$ is $\le$ or $<$, and $\le$ means $<$ or $=$ ([strict](https://morrison-lab.github.io/mds/algebra.html#def-strict-inequality) and [non-strict inequalities](https://morrison-lab.github.io/mds/algebra.html#def-non-strict-inequality)). A case with an $=$ is covered by the previous bullet, and the remaining case is $a < b$ and $b < c$, which gives $a < c$ because $<$ is transitive on the real numbers. So two steps that are each $\le$ or $<$ give $<$ if either is $<$, and otherwise $\le$.
+> - If neither is $=$, then each of $a \mathrel{R} b$ and $b \mathrel{S} c$ is $\le$ or $<$, and $\le$ means $<$ or $=$ ([strict](https://morrison-lab.github.io/mds/algebra.html#def-strict-inequality) and [non-strict inequalities](https://morrison-lab.github.io/mds/algebra.html#def-non-strict-inequality)). A case with an $=$ is covered by the previous bullet, and the remaining case is $a < b$ and $b < c$, which gives $a < c$ because $<$ is transitive on the real numbers. So two steps that are each $\le$ or $<$ give $<$ if either is $<$, and they give $\le$ otherwise.
 >
 > Now let $T_j$ be the relation named by the same rule applied to the first $j$ steps of the chain, with $T_0$ being $=$. We show $E_0 \mathrel{T_j} E_j$ by induction on $j$. For $j = 0$, $E_0 = E_0$. If $E_0 \mathrel{T_j} E_j$, then the step from $E_j$ to $E_{j+1}$ and the fact above give $E_0 \mathrel{T_{j+1}} E_{j+1}$. At $j = n$, $T_n$ is $=$ when every step is $=$, which is part 1. It is $\le$ or $=$ when every step is $=$ or $\le$, and $=$ implies $\le$, which is part 2. It is $<$ when some step is $<$, which is part 3.
 >
@@ -1141,7 +1141,7 @@ The following example uses [summation notation](https://morrison-lab.github.io/m
 Free course materials on formal logic:
 
 - Thomas Icard’s [Phil 150/250, Mathematical Logic course notes](https://web.stanford.edu/~icard/phil150) (Stanford) review sets, relations and functions, then cover propositional, modal and first-order logic.
-- John Wilcox’s [logic handouts](https://www.johnwilcox.org/logic.html) supplement the same Stanford course, with a handout per week on the syntax and semantics of propositional and first-order logic, natural deduction and metalogic.
+- John Wilcox’s [logic handouts (archived copy)](http://web.archive.org/web/20260919135840/https://www.johnwilcox.org/logic.html) supplement the same Stanford course, with a handout per week on the syntax and semantics of propositional and first-order logic, natural deduction and metalogic.
 - Eric Pacuit’s [Phil 151: First Order Logic](https://cs.stanford.edu/~epacuit/classes/phil151winter09.html) (Stanford, Winter 2009) posts a syllabus, a modal logic study guide and problem sets.
 
 # Definitions on this page

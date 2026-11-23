@@ -6,7 +6,7 @@ Winter 2027
 
 Published
 
-Last modified: 2026-11-16 08:48:33 (PST)
+Last modified: 2026-11-23 11:02:02 (PST)
 
 The CSCI 201 syllabus now lives with the rest of the course logistics. Read it at the [CSCI 201 syllabus](https://morrison-lab.github.io/csci201/chapters/syllabus.html).
 

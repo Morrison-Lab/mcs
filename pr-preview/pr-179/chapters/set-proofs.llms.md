@@ -6,7 +6,7 @@ Membership, subsets and set equality
 
 Published
 
-Last modified: 2026-11-16 08:48:33 (PST)
+Last modified: 2026-11-23 11:02:02 (PST)
 
 > **NOTE:**
 >
@@ -184,7 +184,7 @@ Last modified: 2026-11-16 08:48:33 (PST)
 
 > **NOTE:**
 >
-> **Theorem 4 (Cancelling a factor of a Cartesian product)** Let $A$, $B$ and $C$ be sets with $C \ne \emptyset$. If $A \times C = B \times C$, then $A = B$ ([Definition: Cartesian product](../chapters/sets.llms.md#def-cartesian-product)).
+> **Theorem 4 (Canceling a factor of a Cartesian product)** Let $A$, $B$ and $C$ be sets with $C \ne \emptyset$. If $A \times C = B \times C$, then $A = B$ ([Definition: Cartesian product](../chapters/sets.llms.md#def-cartesian-product)).
 
 > **NOTE:**
 >
