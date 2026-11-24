@@ -6,7 +6,7 @@ Winter 2027
 
 Published
 
-Last modified: 2026-11-21 13:44:04 (PST)
+Last modified: 2026-11-24 08:35:34 (PST)
 
 The CSCI 201 calendar now lives with the rest of the course logistics. Read it at the [CSCI 201 calendar](https://morrison-lab.github.io/csci201/chapters/calendar.html).
 
