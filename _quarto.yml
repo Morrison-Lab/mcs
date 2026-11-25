@@ -30,6 +30,9 @@ filters:
   - code-language-labels
   - revealjs-level1-slide-breaks.lua
   - revealjs-html-links.lua
+  # Colors matching brackets by nesting depth in HTML math and code;
+  # PDF output is unchanged.
+  - Morrison-Lab/rainbow-parens
 
 format:
   pdf:
