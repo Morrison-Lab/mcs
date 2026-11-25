@@ -1,6 +1,11 @@
 project:
   type: website
   output-dir: _site
+  # Writes _site/anchor-index.json, which page holds each id, so that
+  # anchor-landing.html sends a link to an id that moved to another page on to
+  # the page that holds it now.
+  post-render:
+    - anchor-index.py
   # A third-party extension with no license is fetched, not vendored.
   # See tools/install-extensions.py.
   # Then writes dependency-graph.json: the prerequisite graph of the

@@ -61,7 +61,9 @@ Authoritative style guides:
 - `page-navigation.html` --- HTML include (`format.html.include-after-body`) that adds floating previous/next arrows in the page margins and fixes navbar highlighting now that Home is in the sidebar;
   vendored from `Morrison-Lab/lbt` (a private repo, so not linked)
 - `anchor-landing.html` --- HTML include (`format.html.include-after-body`) that keeps the reader's place while equations and images change the page height
-  (the same file as in `Morrison-Lab/lds`)
+  (vendored from `Morrison-Lab/qwt` by `.github/workflows/sync-site-scaffolding.yml`; do not edit it here).
+  It also sends a link to an id that moved to another page on to that page, using `_site/anchor-index.json`
+- `anchor-index.py` --- `post-render` step, vendored from qwt the same way, that writes `_site/anchor-index.json`, which page holds each id
 - `styles.css` --- website styling;
   `styles-reveal.scss`, `qwt-reveal-toggle.html` (the same four-theme dropdown for slides), and the `revealjs-*.lua` filters drive the reveal.js slide output
 - `images/` --- figures for the pages (create it with the first figure)
