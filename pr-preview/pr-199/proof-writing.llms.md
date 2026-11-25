@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 08:57:56 (PST)
+Last modified: 2026-11-25 07:15:45 (PST)
 
 This page collects general advice on how to write [proofs](#def-proof) and [derivations](#def-derivation). The goal of a proof is not just to convince yourself that a [result](#def-result) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for [logical entailment](#def-logical-entailment) are listed under [Definitions for proofs](#sec-proof-definitions) below.
 
@@ -599,7 +599,7 @@ Let’s save $\rightarrow$ (`\rightarrow`) for [convergence](https://morrison-la
 >
 > - If $R$ and $S$ are both $=$, then $a = c$ ([equalities are transitive](https://morrison-lab.github.io/mds/algebra.html#thm-equal-trans)).
 > - If exactly one of $R$ and $S$ is $=$, replace $b$ by the equal expression in the other relation ([substitution](https://morrison-lab.github.io/mds/algebra.html#thm-substitution)). This gives the other relation between $a$ and $c$.
-> - If neither is $=$, then each of $a \mathrel{R} b$ and $b \mathrel{S} c$ is $\le$ or $<$, and $\le$ means $<$ or $=$ ([strict](https://morrison-lab.github.io/mds/algebra.html#def-strict-inequality) and [non-strict inequalities](https://morrison-lab.github.io/mds/algebra.html#def-non-strict-inequality)). A case with an $=$ is covered by the previous bullet, and the remaining case is $a < b$ and $b < c$, which gives $a < c$ because $<$ is transitive on the real numbers. So two steps that are each $\le$ or $<$ give $<$ if either is $<$, and otherwise $\le$.
+> - If neither is $=$, then each of $a \mathrel{R} b$ and $b \mathrel{S} c$ is $\le$ or $<$, and $\le$ means $<$ or $=$ ([strict](https://morrison-lab.github.io/mds/algebra.html#def-strict-inequality) and [non-strict inequalities](https://morrison-lab.github.io/mds/algebra.html#def-non-strict-inequality)). A case with an $=$ is covered by the previous bullet, and the remaining case is $a < b$ and $b < c$, which gives $a < c$ because $<$ is transitive on the real numbers. So two steps that are each $\le$ or $<$ give $<$ if either is $<$, and they give $\le$ otherwise.
 >
 > Now let $T_j$ be the relation named by the same rule applied to the first $j$ steps of the chain, with $T_0$ being $=$. We show $E_0 \mathrel{T_j} E_j$ by induction on $j$. For $j = 0$, $E_0 = E_0$. If $E_0 \mathrel{T_j} E_j$, then the step from $E_j$ to $E_{j+1}$ and the fact above give $E_0 \mathrel{T_{j+1}} E_{j+1}$. At $j = n$, $T_n$ is $=$ when every step is $=$, which is part 1. It is $\le$ or $=$ when every step is $=$ or $\le$, and $=$ implies $\le$, which is part 2. It is $<$ when some step is $<$, which is part 3.
 >
