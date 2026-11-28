@@ -6,7 +6,7 @@ Elements, subsets, products and operations
 
 Published
 
-Last modified: 2026-11-27 23:50:07 (PST)
+Last modified: 2026-11-28 01:35:29 (PST)
 
 > **NOTE:**
 >
@@ -391,7 +391,9 @@ Last modified: 2026-11-27 23:50:07 (PST)
 
 > **NOTE:**
 >
-> **Definition 24 (Venn diagram)** A **Venn diagram** draws sets as overlapping circles inside a rectangle, which stands for the set $S$ that the sets are subsets of, as in [Definition 23](#def-complement). Each region of the picture stands for the elements that are in some of the sets and not in the others.
+> **Definition 24 (Venn diagram)**  
+>
+> A **Venn diagram** draws sets as overlapping circles inside a rectangle ([Wikipedia contributors 2026s](#ref-wikipedia_venn_diagram)), which stands for the set $S$ that the sets are subsets of, as in [Definition 23](#def-complement). Each region of the picture stands for the elements that are in some of the sets and not in the others.
 
 > **NOTE:**
 >
@@ -571,5 +573,7 @@ Wikipedia contributors. 2026p. *Subset — Wikipedia, the Free Encyclopedia*. <h
 Wikipedia contributors. 2026q. *Tuple — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Tuple>.
 
 Wikipedia contributors. 2026r. *Union (Set Theory) — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Union_(set_theory)>.
+
+Wikipedia contributors. 2026s. *Venn Diagram — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Venn_diagram>.
 
 Back to top
