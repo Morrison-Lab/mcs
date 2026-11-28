@@ -1,5 +1,6 @@
 ::: {#def-venn-diagram}
 #### Venn diagram
+<!-- no-figure: @fig-venn-letters in @exm-venn-diagram, right after this definition, draws one -->
 
 A **Venn diagram** draws sets as overlapping circles inside a rectangle
 [@wikipedia_venn_diagram],
